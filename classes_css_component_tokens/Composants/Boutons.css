@@ -1,18 +1,18 @@
 button {
 	border: solid;
 	border-radius:var(--rcn-semantic-borderradius-200);
-	padding:var(--rcn-semantic-padding-vertical-100 ) var(--rcn-semantic-padding-horizontal-200);
+	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
 	line-height:var(--rcn-semantic-typography-text-component-default-body-lineheight);
 	cursor:pointer;
 	font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily);
 	font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
-	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize)
+	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
 }
 
 .rcn-boutons-primaire-default {
 	background-color:var(--rcn-semantic-color-interaction-background-default-primary);
 	border-color:var(--rcn-semantic-color-interaction-border-default-primary);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary)
 }
 
 .rcn-boutons-primaire-default-icon {
