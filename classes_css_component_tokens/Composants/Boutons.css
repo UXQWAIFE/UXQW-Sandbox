@@ -7,6 +7,7 @@ button, *[role="button"] {
 	font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily);
 	font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
 	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+	
 }
 
 .rcn-boutons-primaire-default {
@@ -28,6 +29,32 @@ button, *[role="button"] {
 
 .rcn-boutons-primaire-disable {
 	background-color:var(--rcn-semantic-color-interaction-background-disabled-primary);
+	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+	border-color:var(--rcn-semantic-color-interaction-border-disabled-standard);
+	cursor: not-allowed;
+}
+
+.rcn-boutons-secondaire-default {
+	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+	border-color: var(--rcn-semantic-color-interaction-border-default-primary);
+}
+
+.rcn-boutons-secondaire-default-icon {
+	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
+	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+	gap: var(--rcn-semantic-gap-horizontal-300);
+}
+
+.rcn-boutons-secondaire-hover, .rcn-boutons-secondaire-default:hover {
+	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+	border-color:var(--rcn-semantic-color-interaction-border-hover-primary);
+	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+}
+
+.rcn-boutons-secondaire-disable {
+	background-color:var(--rcn-semantic-color-interaction-background-disabled-button_secondaire);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
 	border-color:var(--rcn-semantic-color-interaction-border-disabled-standard);
 	cursor: not-allowed;
