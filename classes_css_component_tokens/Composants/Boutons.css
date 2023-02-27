@@ -1,5 +1,5 @@
-button {
-	border: solid;
+button, *[role="button"] {
+	border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-background-default-primary);
 	border-radius:var(--rcn-semantic-borderradius-200);
 	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
 	line-height:var(--rcn-semantic-typography-text-component-default-body-lineheight);
@@ -11,14 +11,12 @@ button {
 
 .rcn-boutons-primaire-default {
 	background-color:var(--rcn-semantic-color-interaction-background-default-primary);
-	border-color:var(--rcn-semantic-color-interaction-border-default-primary);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary)
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
 
 .rcn-boutons-primaire-default-icon {
 	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
 	background-color:var(--rcn-semantic-color-interaction-background-default-primary);
-	border-color:var(--rcn-semantic-color-interaction-border-default-primary);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
 
