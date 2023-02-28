@@ -44,8 +44,8 @@
         <div class="BoutonEnLigne">
           <p>Actif</p>
           
-          <button value="Off" aria-pressed="false" title="Nom de l'action effectué" class='Toggle'>
-            <span class="Toggle__display" hidden>
+          <button value="Off" aria-pressed="false" title="Nom de l'action effectué" class='Toggle rcn-boutons-toggle-default'>
+            <span class="rcn-boutons-toggleoff-default" hidden>
               <span class="Toggle-Text-On" hidden>
                 On
               </span>
@@ -54,16 +54,16 @@
               </span>
             </span>
           </button>
-          <button value="Off" aria-pressed="false" title="Nom de l'action effectué" class='Toggle' >
-            <span class="Toggle__display" hidden>
+          <button value="On" aria-pressed="true" title="Nom de l'action effectué" class='Toggle rcn-boutons-toggle-default' >
+            <span class="rcn-boutons-toggleon-default" hidden>
             </span>
           </button>
           </div>
               <!-- -->
           <div class="BoutonEnLigne">
             <p>Inactif</p>
-            <button value="Off" aria-pressed="false" title="Nom de l'action effectué" disabled class='Toggle'>
-            <span class="Toggle__display" hidden>
+            <button value="Off" aria-pressed="false" title="Nom de l'action effectué" disabled class='Toggle rcn-boutons-toggle-default'>
+            <span class="rcn-boutons-toggleoff-default" hidden>
               <span class="Toggle-Text-On" hidden>
                 On
               </span>
@@ -72,17 +72,59 @@
               </span>
             </span>
           </button>
-            <button value="Off" aria-pressed="false" title="Nom de l'action effectué" disabled class='Toggle'>
-              <span class="Toggle__display" hidden>
-                
+          <button value="Off" aria-pressed="true" title="Nom de l'action effectué" disabled class='Toggle rcn-boutons-toggle-default'>
+            <span class="rcn-boutons-toggleon-default" hidden>
+              <span class="Toggle-Text-On">
+                On
               </span>
-            </button>
+              <span class="Toggle-Text-Off" hidden>
+                Off
+              </span>
+            </span>
+          </button>
+           
         </div>
-        <div class="BoutonEnLigne TextToShow">
-          <p>Hello je suis la div déplier</p>
-        </div>
+        
       </section>
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+      <script>
+        jQuery(window).ready(function($) {
+
+$('button.Toggle').each(function(){
+  var ButtonToggleTitle = $(this).attr('title');//Variable engagé avant le click pour la garder la valeur primaire
+
+  $(this).on('click', function(){
+    
+    var ButtonToggleActive = $(this).attr('aria-pressed');//On détecte la valeur du aria-pressed
+    
+    if (ButtonToggleActive === 'true') {
+      $(this).attr('aria-pressed', 'false');
+      $(this).attr('value', 'off');
+      $(this).attr('title', ButtonToggleTitle);
+      $('.TextToShow').toggleClass('ShowTexte');
+      $('.rcn-boutons-toggle-default span').toggleClass('rcn-boutons-toggleoff-default');
+      $('.rcn-boutons-toggle-default span').toggleClass('rcn-boutons-toggleon-default');
+    }else{
+      $(this).attr('aria-pressed', 'true');
+      $(this).attr('value', 'on');
+      $(this).attr('title', ''+ ButtonToggleTitle + ' déplier');
+      $('.TextToShow').toggleClass('ShowTexte');
+      $('.rcn-boutons-toggle-default span').toggleClass('rcn-boutons-toggleoff-default');
+      $('.rcn-boutons-toggle-default span').toggleClass('rcn-boutons-toggleon-default');
+    }
+  })
+})
+});
+      </script>   
+
+      <!--Groupe de bouton-->
+    
+      <div role="group" class="rcn-Boutons-groupeDeBouton-default"></div>
+      <button onClick="" Title="Nom de l'action" aria-pressed="true">Bouton 1</button>
+      <button onClick="" Title="Nom de l'action" aria-pressed="false">Bouton 2</button>
+      <button onClick="" Title="Nom de l'action" aria-pressed="false">Bouton 3</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 
 </body>
 </html>
