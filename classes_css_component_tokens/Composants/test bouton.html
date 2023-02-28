@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../Variables/stylesheet.css" rel="stylesheet">
+    
     <!--Télécharger bibliothèque de composants-->
     <title>Document</title>
 </head>
@@ -18,10 +19,70 @@
 
         <button value="Bouton hover" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons-primaire-hover">Bouton hover</button>
 
-        <button value="Bouton icone" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons-primaire-default-icon">Bouton icone <i class="mdi mdi-arrow-up"></i></button>
+        <button value="Bouton icone" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons-primaire-default-icon">Bouton icone <span class="icon-close"> </span></button>
+
+        <button value="Bouton par défaut" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons-secondaire-default">Bouton par défaut</button>
+        
+        <button value="Bouton inactif" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons-secondaire-disable" disabled>Bouton inactif</button>
+
+        <button value="Bouton hover" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons-secondaire-hover">Bouton hover</button>
+
+        <button value="Bouton icone" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons-secondaire-default-icon"> Bouton icone <span class="icon-close"> </span></button>
+
+        <button onClick="FonctionAExecuter" title="Sauvegarder" class="rcn-boutons-icônes-default"> <span class="icon-close"> </span></button>
+
+        <button onClick="FonctionAExecuter" title="Sauvegarder" class="rcn-boutons-icônes-disable" disabled><span class="icon-close"> </span></button>
+
+        <button onClick="FonctionAExecuter" title="Sauvegarder" class="rcn-boutons-icônes-hover"><span class="icon-close"> </span></button>
 
       </div>
     </section>
-    
+
+<!--Bouton toggle-->
+
+    <section class="BTN-Primaire">
+        <div class="BoutonEnLigne">
+          <p>Actif</p>
+          
+          <button value="Off" aria-pressed="false" title="Nom de l'action effectué" class='Toggle'>
+            <span class="Toggle__display" hidden>
+              <span class="Toggle-Text-On" hidden>
+                On
+              </span>
+              <span class="Toggle-Text-Off">
+                Off
+              </span>
+            </span>
+          </button>
+          <button value="Off" aria-pressed="false" title="Nom de l'action effectué" class='Toggle' >
+            <span class="Toggle__display" hidden>
+            </span>
+          </button>
+          </div>
+              <!-- -->
+          <div class="BoutonEnLigne">
+            <p>Inactif</p>
+            <button value="Off" aria-pressed="false" title="Nom de l'action effectué" disabled class='Toggle'>
+            <span class="Toggle__display" hidden>
+              <span class="Toggle-Text-On" hidden>
+                On
+              </span>
+              <span class="Toggle-Text-Off">
+                Off
+              </span>
+            </span>
+          </button>
+            <button value="Off" aria-pressed="false" title="Nom de l'action effectué" disabled class='Toggle'>
+              <span class="Toggle__display" hidden>
+                
+              </span>
+            </button>
+        </div>
+        <div class="BoutonEnLigne TextToShow">
+          <p>Hello je suis la div déplier</p>
+        </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
 </body>
 </html>

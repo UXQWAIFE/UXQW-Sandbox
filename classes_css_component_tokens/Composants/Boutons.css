@@ -16,7 +16,6 @@ button, *[role="button"] {
 }
 
 .rcn-boutons-primaire-default-icon {
-	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
 	background-color:var(--rcn-semantic-color-interaction-background-default-primary);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
@@ -41,10 +40,14 @@ button, *[role="button"] {
 }
 
 .rcn-boutons-secondaire-default-icon {
-	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
 	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
 	gap: var(--rcn-semantic-gap-horizontal-300);
+}
+
+.icon-close:before {
+    content: "\e91e";
+    font-family: 'RCNicon';
 }
 
 .rcn-boutons-secondaire-hover, .rcn-boutons-secondaire-default:hover {
@@ -59,3 +62,121 @@ button, *[role="button"] {
 	border-color:var(--rcn-semantic-color-interaction-border-disabled-standard);
 	cursor: not-allowed;
 }
+
+.rcn-boutons-icônes-default {
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
+}
+
+.icon-close:before {
+    content: "\e91e";
+    font-family: 'RCNicon';
+}
+
+.rcn-boutons-icônes-hover, .rcn-boutons-icônes-default:hover {
+	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
+}
+
+.rcn-boutons-icônes-disable {
+	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
+	cursor: not-allowed;
+}
+
+
+  
+  button.Toggle {
+	  border: 0;
+	  padding: 0;
+	  background-color: transparent;
+	  font: inherit;
+	  font-size: 1rem;
+  }
+  
+  
+  .Toggle__display {
+	width:60px;
+	--offset: 0.25rem;
+	--diameter: 1.625rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-around;
+	box-sizing: content-box;
+	width: calc(var(--diameter) * 2.3 + var(--offset) * 1.5);
+	height: calc(var(--diameter) + var(--offset) * 1.2);
+	position: relative;
+	border-radius: 50rem;
+	background-color: #6A6A6A;
+	transition: 50ms;
+	cursor: pointer;
+  }
+  
+  .Toggle__display::before {
+	content: "";
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	left: var(--offset);
+	box-sizing: border-box;
+	width: var(--diameter);
+	height: var(--diameter);
+	border-radius: 50%;
+	background-color: white;
+	transform: translate(-5%, -50%);
+	will-change: transform;
+	transition: inherit;
+  }
+  
+  
+  .Toggle:focus .Toggle__display,
+  .Toggle__input:focus + .Toggle__display {
+	outline: 1px dotted #212121;
+	outline: 1px auto -webkit-focus-ring-color;
+	outline-offset: 2px;
+  }
+  
+  .Toggle:focus,
+  .Toggle:focus:not(:focus-visible) .Toggle__display,
+  .Toggle__input:focus:not(:focus-visible) + .Toggle__display {
+	outline: 0;
+  }
+  
+  .Toggle[aria-pressed="true"] .Toggle__display,
+  .Toggle__input:checked + .Toggle__display {
+	background-color: #5770be;
+  }
+  
+  .Toggle[aria-pressed="true"] .Toggle__display::before,
+  .Toggle__input:checked + .Toggle__display::before {
+	transform: translate(130%, -50%);
+  }
+  
+  .Toggle[disabled] .Toggle__display,
+  .Toggle__input[disabled] + .Toggle__display {
+	opacity: 0.6;
+	filter: grayscale(40%);
+	cursor: not-allowed;
+  }
+  button.Toggle .Toggle-Text-Off {
+	color:#fff;
+  }
+  button.Toggle .Toggle-Text-On {
+	visibility: hidden;
+  }
+  button.Toggle[aria-pressed="true"] .Toggle-Text-On {
+	visibility: visible;
+  }
+  button.Toggle[aria-pressed="true"] .Toggle-Text-Off {
+	visibility: hidden;
+  }
+  .Toggle-Text-On, .Toggle-Text-Off {
+	display:flex;
+  }
+  
+  .TextToShow.ShowTexte {
+	display:inline-grid;
+  }
+  .TextToShow {
+	display:none;
+  }
