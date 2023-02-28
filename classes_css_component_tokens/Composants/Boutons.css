@@ -1,4 +1,4 @@
-button, *[role="button"] {
+.rcn-boutons {
 	border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-background-default-primary);
 	border-radius:var(--rcn-semantic-borderradius-200);
 	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
@@ -10,7 +10,7 @@ button, *[role="button"] {
 	
 }
 
-.rcn-boutons-primaire-default {
+.rcn-boutons-primaire {
 	background-color:var(--rcn-semantic-color-interaction-background-default-primary);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
@@ -20,20 +20,20 @@ button, *[role="button"] {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
 
-.rcn-boutons-primaire-hover, .rcn-boutons-primaire-default:hover {
+.rcn-boutons-primaire:hover {
 	background-color:var(--rcn-semantic-color-interaction-background-hover-primary);
 	border-color:var(--rcn-semantic-color-interaction-border-hover-primary);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
 
-.rcn-boutons-primaire-disable {
+.rcn-boutons-primaire:disabled {
 	background-color:var(--rcn-semantic-color-interaction-background-disabled-primary);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
 	border-color:var(--rcn-semantic-color-interaction-border-disabled-standard);
 	cursor: not-allowed;
 }
 
-.rcn-boutons-secondaire-default {
+.rcn-boutons-secondaire {
 	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
 	border-color: var(--rcn-semantic-color-interaction-border-default-primary);
@@ -50,7 +50,7 @@ button, *[role="button"] {
     font-family: 'RCNicon';
 }
 
-.rcn-boutons-secondaire-hover, .rcn-boutons-secondaire-default:hover {
+.rcn-boutons-secondaire:hover {
 	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
 	border-color:var(--rcn-semantic-color-interaction-border-hover-primary);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
@@ -66,6 +66,7 @@ button, *[role="button"] {
 .rcn-boutons-icônes-default {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
 	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
+	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
 	padding: 0 ;
 	border-color: transparent ;
 	background-color: transparent ;
@@ -79,6 +80,7 @@ button, *[role="button"] {
 .rcn-boutons-icônes-hover, .rcn-boutons-icônes-default:hover {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
 	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
+	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
 	padding: 0 ;
 	border-color: transparent ;
 	background-color: transparent ;
@@ -87,124 +89,13 @@ button, *[role="button"] {
 .rcn-boutons-icônes-disable {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
 	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
+	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
 	cursor: not-allowed;
 	padding: 0 ;
 	border-color: transparent ;
 	background-color: transparent ;
 }
   
-  button.rcn-boutons-toggle-default {
-	  border: 0;
-	  padding: 0;
-	  background-color: var(--rcn-semantic-color-interaction-background-transparent);
-	  font: inherit;
-	  font-size: 1rem;
-  }
-  
-  
-  .rcn-boutons-toggleoff-default{
-	width:60px;
-	--offset: 0.25rem;
-	--diameter: 1.625rem;
-	display: inline-flex;
-	align-items: center;
-	justify-content: space-around;
-	box-sizing: content-box;
-	width: calc(var(--diameter) * 2.3 + var(--offset) * 1.5);
-	height: calc(var(--diameter) + var(--offset) * 1.2);
-	position: relative;
-	border-radius: 50rem;
-	background-color: var(--rcn-semantic-color-interaction-background-default-button_toggle_off);
-	transition: 50ms;
-	cursor: pointer;
-  }
-
-  .rcn-boutons-toggleoff-default:hover{
-	background-color: var(--rcn-semantic-color-interaction-background-hover-button_toggle_off);
-  }
-  
-  .rcn-boutons-toggleoff-default::before {
-	content: "";
-	z-index: 2;
-	position: absolute;
-	top: 50%;
-	left: var(--offset);
-	box-sizing: border-box;
-	width: var(--diameter);
-	height: var(--diameter);
-	border-radius: 50%;
-	background-color: var(--rcn-semantic-color-interaction-background-default-standard);
-	transform: translate(-5%, -50%);
-	will-change: transform;
-	transition: inherit;
-	border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
-  }
-
-  .rcn-boutons-toggleon-default{
-	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
-  }
-
-  .rcn-boutons-toggleon-default:hover{
-	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
-  }
-  
-  .Toggle[aria-pressed="true"] .rcn-boutons-toggleoff-default,
-  .Toggle__input:checked + .rcn-boutons-toggleoff-default {
-	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
-  }
-
-  .Toggle[aria-pressed="true"] .rcn-boutons-toggleoff-default:hover,
-  .Toggle__input:checked + .rcn-boutons-toggleoff-default:hover {
-	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
-  }
-
-  .Toggle[aria-pressed="true"][disabled] .rcn-boutons-toggleoff-default,
-  .Toggle__input:checked + .rcn-boutons-toggleoff-default {
-	background-color: var(--rcn-semantic-color-interaction-background-disabled-button_toggle_on);
-	border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
-  }
-
-  .rcn-boutons-toggleon-default[disabled]{
-	background-color: var(--rcn-semantic-color-interaction-background-disabled-button_toggle_on);
-	border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
-  }
-  
-  .Toggle[aria-pressed="true"] .rcn-boutons-toggleoff-default::before,
-  .Toggle__input:checked + .rcn-boutons-toggleoff-default::before {
-	transform: translate(130%, -50%);
-  }
-  
-  .Toggle[disabled] .rcn-boutons-toggleoff-default,
-  .Toggle__input[disabled] + .rcn-boutons-toggleoff-default {
-	opacity: 0.6;
-	filter: grayscale(40%);
-	cursor: not-allowed;
-	background-color: var(--rcn-semantic-color-interaction-background-disabled-button_toggle_off);
-	border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
-	color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
-  }
-  button.Toggle .Toggle-Text-Off, button.Toggle .Toggle-Text-On {
-	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-  }
-  button.Toggle .Toggle-Text-On {
-	visibility: hidden;
-  }
-  button.Toggle[aria-pressed="true"] .Toggle-Text-On {
-	visibility: visible;
-  }
-  button.Toggle[aria-pressed="true"] .Toggle-Text-Off {
-	visibility: hidden;
-  }
-  .Toggle-Text-On, .Toggle-Text-Off {
-	display:flex;
-  }
-  
-  .TextToShow.ShowTexte {
-	display:inline-grid;
-  }
-  .TextToShow {
-	display:none;
-  }
 
   /*groupe de boutons*/
 
