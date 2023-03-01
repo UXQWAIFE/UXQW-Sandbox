@@ -48,6 +48,7 @@
 }
 
 .rcn-boutons-secondaire:hover {
+	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
 	border-color:var(--rcn-semantic-color-interaction-border-hover-primary);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
 }
@@ -85,9 +86,9 @@
   div.rcn-Boutons-groupeDeBouton {
 	display: inline-flex;
 	margin: 1rem 0.5rem;
-  }
-  
-  .rcn-Boutons-groupeDeBouton > button {
+	}
+	
+	.rcn-Boutons-groupeDeBouton > button {
 	margin: 0;
 	font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
 	line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
@@ -100,55 +101,54 @@
 	background-color: var(--rcn-semantic-color-interaction-background-default-standard);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
 	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
-   }
-  
-  .rcn-Boutons-groupeDeBouton-premier {
+	 }
+	
+	.rcn-Boutons-groupeDeBouton-premier {
 	border-top-left-radius: var(--rcn-semantic-borderradius-200);
 	border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
 	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
-  }
-  
-  .rcn-Boutons-groupeDeBouton-premier:hover {
-	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
+	}
+	
+	.rcn-Boutons-groupeDeBouton-premier:hover {
+	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+	}
+	
+	.rcn-Boutons-groupeDeBouton-premier:active {
+	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-  }
-  
-  .rcn-Boutons-groupeDeBouton-premier:active {
-	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
-	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-  }
-  
-  .rcn-Boutons-groupeDeBouton-dernier {
-  border-top-right-radius:var(--rcn-semantic-borderradius-200);
-  border-bottom-right-radius:var(--rcn-semantic-borderradius-200);
-  border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
-  }
-  
-  .rcn-Boutons-groupeDeBouton-dernier:hover {
-  background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
-   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-  }
-  .rcn-Boutons-groupeDeBouton-dernier:active {
-  background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
-   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-  }
-  
-  .rcn-Boutons-groupeDeBouton-milieu {
-  border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
-  margin-left: -1px;
-  margin-right: -1px;
-  }
-  
-  .rcn-Boutons-groupeDeBouton-milieu:hover {
-	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
-	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-  }
-  
-  .rcn-Boutons-groupeDeBouton-milieu:active > button[aria-pressed="true"] {
+	}
+	
+	.rcn-Boutons-groupeDeBouton-dernier {
+	border-top-right-radius:var(--rcn-semantic-borderradius-200);
+	border-bottom-right-radius:var(--rcn-semantic-borderradius-200);
+	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
+	}
+	
+	.rcn-Boutons-groupeDeBouton-dernier:hover {
+	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+	 color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+	}
+	.rcn-Boutons-groupeDeBouton-dernier:active {
+	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	 color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	}
+	
+	.rcn-Boutons-groupeDeBouton-milieu {
+	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
+	margin-left: -1px;
+	margin-right: -1px;
+	}
+	
+	.rcn-Boutons-groupeDeBouton-milieu:hover {
+	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+	}
+	
+	.rcn-Boutons-groupeDeBouton-milieu:active > button[aria-pressed="true"] {
 	border-left-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
 	border-right-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
+	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
 	z-index:3;
-  }
-  
+	}
