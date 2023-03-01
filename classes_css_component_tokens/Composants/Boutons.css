@@ -82,7 +82,9 @@
 
   /*groupe de boutons*/
 
-  div.rcn-Boutons-groupeDeBouton {
+ 
+
+div.rcn-Boutons-groupeDeBouton {
 	display: inline-flex;
 	margin: 1rem 0.5rem;
   }
@@ -93,6 +95,7 @@
 	line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
 	font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily);
 	text-decoration:var(--rcn-semantic-typography-text-component-default-body-textdecoration);
+	font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
 	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
 	border: none;
 	cursor:pointer;
@@ -112,6 +115,11 @@
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
   }
   
+  .rcn-Boutons-groupeDeBouton-premier:active {
+	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+  }
+  
   .rcn-Boutons-groupeDeBouton-dernier {
   border-top-right-radius:var(--rcn-semantic-borderradius-200);
   border-bottom-right-radius:var(--rcn-semantic-borderradius-200);
@@ -121,8 +129,13 @@
   .rcn-Boutons-groupeDeBouton-dernier:hover {
   background-color: var(--rcn-semantic-color-interaction-background-default-primary);
    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-  
   }
+  .rcn-Boutons-groupeDeBouton-dernier:active {
+  background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+  }
+  
+  
   .rcn-Boutons-groupeDeBouton-milieu {
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
   margin-left: -1px;
@@ -130,15 +143,13 @@
   }
   
   .rcn-Boutons-groupeDeBouton-milieu:hover {
-	  background-color: var(--rcn-semantic-color-interaction-background-default-primary);
-	  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
   }
   
   .rcn-Boutons-groupeDeBouton-milieu:active > button[aria-pressed="true"] {
-	  border-left-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
-	  border-right-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
-	  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-	  z-index:3;
+	border-left-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
+	border-right-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	z-index:3;
   }
-  
-  
