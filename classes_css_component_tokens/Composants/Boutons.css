@@ -1,5 +1,5 @@
 .rcn-boutons {
-	border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-background-default-primary);
+	border: var(--rcn-semantic-borderwidth-100) solid ;
 	border-radius:var(--rcn-semantic-borderradius-200);
 	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
 	line-height:var(--rcn-semantic-typography-text-component-default-body-lineheight);
@@ -13,17 +13,16 @@
 .rcn-boutons-primaire {
 	background-color:var(--rcn-semantic-color-interaction-background-default-primary);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	border-color: var(--rcn-semantic-color-interaction-background-default-primary);
 }
 
-.rcn-boutons-primaire-default-icon {
-	background-color:var(--rcn-semantic-color-interaction-background-default-primary);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+.rcn-boutons-primaire-icon {
+	gap: var(--rcn-semantic-gap-horizontal-300);
 }
 
 .rcn-boutons-primaire:hover {
 	background-color:var(--rcn-semantic-color-interaction-background-hover-primary);
 	border-color:var(--rcn-semantic-color-interaction-border-hover-primary);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
 
 .rcn-boutons-primaire:disabled {
@@ -39,9 +38,7 @@
 	border-color: var(--rcn-semantic-color-interaction-border-default-primary);
 }
 
-.rcn-boutons-secondaire-default-icon {
-	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+.rcn-boutons-secondaire-icon {
 	gap: var(--rcn-semantic-gap-horizontal-300);
 }
 
@@ -51,21 +48,19 @@
 }
 
 .rcn-boutons-secondaire:hover {
-	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
 	border-color:var(--rcn-semantic-color-interaction-border-hover-primary);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
 }
 
-.rcn-boutons-secondaire-disable {
+.rcn-boutons-secondaire:disabled {
 	background-color:var(--rcn-semantic-color-interaction-background-disabled-button_secondaire);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
 	border-color:var(--rcn-semantic-color-interaction-border-disabled-standard);
 	cursor: not-allowed;
 }
 
-.rcn-boutons-icônes-default {
+.rcn-boutons-icônes {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
-	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
 	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
 	padding: 0 ;
 	border-color: transparent ;
@@ -77,75 +72,73 @@
     font-family: 'RCNicon';
 }
 
-.rcn-boutons-icônes-hover, .rcn-boutons-icônes-default:hover {
+.rcn-boutons-icônes:hover {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
-	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
-	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
-	padding: 0 ;
-	border-color: transparent ;
-	background-color: transparent ;
 }
 
-.rcn-boutons-icônes-disable {
+.rcn-boutons-icônes:disabled {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
-	font-family:var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
-	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
-	cursor: not-allowed;
-	padding: 0 ;
-	border-color: transparent ;
-	background-color: transparent ;
 }
-  
 
   /*groupe de boutons*/
 
-
-  button.rcn-Boutons-groupeDeBouton-default {
-    border: 0;
-    padding: 0;
-    background-color: transparent;
-    font: inherit;
-    font-size: 1rem;
+  div.rcn-Boutons-groupeDeBouton {
+	display: inline-flex;
+	margin: 1rem 0.5rem;
   }
-
-div.rcn-Boutons-groupeDeBouton-default {
-  display: inline-flex;
-  margin: 1rem 0.5rem;
-}
-
-.rcn-Boutons-groupeDeBouton-default > button {
-  display: inline-flex;
-  margin: 0;
-  font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
-  line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
-  padding: var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
-  border: none;
-  cursor:pointer;
-  background-color: var(--rcn-semantic-color-interaction-background-default-standard);
-  color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
-}
-div.rcn-Boutons-groupeDeBouton-default > button:nth-of-type(1) {
-  border-top-left-radius: var(--rcn-semantic-borderradius-200);
-  border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
+  
+  .rcn-Boutons-groupeDeBouton > button {
+	margin: 0;
+	font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
+	line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+	font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+	text-decoration:var(--rcn-semantic-typography-text-component-default-body-textdecoration);
+	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
+	border: none;
+	cursor:pointer;
+	background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
+   }
+  
+  .rcn-Boutons-groupeDeBouton-premier {
+	border-top-left-radius: var(--rcn-semantic-borderradius-200);
+	border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
+	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
+  }
+  
+  .rcn-Boutons-groupeDeBouton-premier:hover {
+	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+  }
+  
+  .rcn-Boutons-groupeDeBouton-dernier {
+  border-top-right-radius:var(--rcn-semantic-borderradius-200);
+  border-bottom-right-radius:var(--rcn-semantic-borderradius-200);
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
-}
-div.rcn-Boutons-groupeDeBouton-default > button:nth-of-type(2) {
+  }
+  
+  .rcn-Boutons-groupeDeBouton-dernier:hover {
+  background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+  
+  }
+  .rcn-Boutons-groupeDeBouton-milieu {
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
   margin-left: -1px;
   margin-right: -1px;
-}
-div.rcn-Boutons-groupeDeBouton-default > button:nth-of-type(3) {
-  border-top-right-radius: var(--rcn-semantic-borderradius-200);
-  border-bottom-right-radius: var(--rcn-semantic-borderradius-200);
-  border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);;
-}
-
-div.rcn-Boutons-groupeDeBouton-default > button:hover, div.rcn-Boutons-groupeDeBouton-default > button[aria-pressed="true"] {
-  background-color: var(--rcn-semantic-color-interaction-background-default-primary);
-  color: #fff;
-}
-div.rcn-Boutons-groupeDeBouton-default > button:nth-of-type(2):hover, div.rcn-Boutons-groupeDeBouton-default > button[aria-pressed="true"]:nth-of-type(2) {
-  border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-onprimary);
-  border-right: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-onprimary);
-  z-index:3;
-}
+  }
+  
+  .rcn-Boutons-groupeDeBouton-milieu:hover {
+	  background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+  }
+  
+  .rcn-Boutons-groupeDeBouton-milieu:active > button[aria-pressed="true"] {
+	  border-left-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
+	  border-right-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
+	  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	  z-index:3;
+  }
+  
+  
