@@ -82,9 +82,7 @@
 
   /*groupe de boutons*/
 
- 
-
-div.rcn-Boutons-groupeDeBouton {
+  div.rcn-Boutons-groupeDeBouton {
 	display: inline-flex;
 	margin: 1rem 0.5rem;
   }
@@ -111,12 +109,12 @@ div.rcn-Boutons-groupeDeBouton {
   }
   
   .rcn-Boutons-groupeDeBouton-premier:hover {
-	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
   }
   
   .rcn-Boutons-groupeDeBouton-premier:active {
-	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
   }
   
@@ -127,14 +125,13 @@ div.rcn-Boutons-groupeDeBouton {
   }
   
   .rcn-Boutons-groupeDeBouton-dernier:hover {
-  background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+  background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
   }
   .rcn-Boutons-groupeDeBouton-dernier:active {
-  background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+  background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
   }
-  
   
   .rcn-Boutons-groupeDeBouton-milieu {
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
@@ -143,7 +140,7 @@ div.rcn-Boutons-groupeDeBouton {
   }
   
   .rcn-Boutons-groupeDeBouton-milieu:hover {
-	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
   }
   
@@ -151,5 +148,7 @@ div.rcn-Boutons-groupeDeBouton {
 	border-left-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
 	border-right-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
 	z-index:3;
   }
+  
