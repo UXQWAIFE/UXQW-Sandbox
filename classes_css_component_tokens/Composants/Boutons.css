@@ -16,8 +16,8 @@
 	border-color: var(--rcn-semantic-color-interaction-background-default-primary);
 }
 
-.rcn-boutons-primaire-icon {
-	gap: var(--rcn-semantic-gap-horizontal-300);
+.rcn-boutons-iconRight {
+	padding-left: var(--rcn-semantic-padding-horizontal-50);
 }
 
 .rcn-boutons-primaire:hover {
@@ -38,13 +38,9 @@
 	border-color: var(--rcn-semantic-color-interaction-border-default-primary);
 }
 
-.rcn-boutons-secondaire-icon {
-	gap: var(--rcn-semantic-gap-horizontal-300);
-}
-
 .icon-close:before {
     content: "\e91e";
-    font-family: 'RCNicon';
+    font-family: var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
 }
 
 .rcn-boutons-secondaire:hover {
@@ -68,11 +64,6 @@
 	background-color: transparent ;
 }
 
-.icon-close:before {
-    content: "\e91e";
-    font-family: 'RCNicon';
-}
-
 .rcn-boutons-icônes:hover {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
 }
@@ -83,72 +74,59 @@
 
   /*groupe de boutons*/
 
-  div.rcn-Boutons-groupeDeBouton {
+  .rcn-boutons-groupeDeBouton {
 	display: inline-flex;
-	margin: 1rem 0.5rem;
 	}
-	
-	.rcn-Boutons-groupeDeBouton > button {
-	margin: 0;
+
+	.rcn-boutons-groupeDeBouton-bouton {
 	font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
 	line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
 	font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily);
 	text-decoration:var(--rcn-semantic-typography-text-component-default-body-textdecoration);
 	font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
-	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
 	border: none;
 	cursor:pointer;
 	background-color: var(--rcn-semantic-color-interaction-background-default-standard);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
-	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
-	 }
+	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
+	}
+
+	.rcn-boutons-groupeDeBouton-sélectionné {
+	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	}
 	
-	.rcn-Boutons-groupeDeBouton-premier {
+	
+	.rcn-boutons-groupeDeBouton-premier {
 	border-top-left-radius: var(--rcn-semantic-borderradius-200);
 	border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
 	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
 	}
 	
-	.rcn-Boutons-groupeDeBouton-premier:hover {
+	.rcn-boutons-groupeDeBouton-premier:hover {
 	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
 	}
 	
-	.rcn-Boutons-groupeDeBouton-premier:active {
-	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
-	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-	}
-	
-	.rcn-Boutons-groupeDeBouton-dernier {
+	.rcn-boutons-groupeDeBouton-dernier {
 	border-top-right-radius:var(--rcn-semantic-borderradius-200);
 	border-bottom-right-radius:var(--rcn-semantic-borderradius-200);
 	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
 	}
 	
-	.rcn-Boutons-groupeDeBouton-dernier:hover {
+	.rcn-boutons-groupeDeBouton-dernier:hover {
 	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
 	 color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
 	}
-	.rcn-Boutons-groupeDeBouton-dernier:active {
-	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
-	 color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-	}
 	
-	.rcn-Boutons-groupeDeBouton-milieu {
+	.rcn-boutons-groupeDeBouton-milieu {
 	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
 	margin-left: -1px;
 	margin-right: -1px;
 	}
 	
-	.rcn-Boutons-groupeDeBouton-milieu:hover {
+	.rcn-boutons-groupeDeBouton-milieu:hover {
 	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
 	}
 	
-	.rcn-Boutons-groupeDeBouton-milieu:active > button[aria-pressed="true"] {
-	border-left-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
-	border-right-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
-	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
-	z-index:3;
-	}
