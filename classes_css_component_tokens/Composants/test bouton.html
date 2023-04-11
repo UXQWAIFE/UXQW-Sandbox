@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Variables/stylesheet.css" rel="stylesheet">
+    
+    <!--Télécharger bibliothèque de composants-->
+    <title>Document</title>
+</head>
+<body>
+    <section class="Sans-Fond">
+        <div class="BoutonEnLigne">
+        
+        <button value="Bouton par défaut" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons-primaire rcn-boutons" >Bouton par défaut </button>
+        
+        <button value="Bouton inactif" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons rcn-boutons-primaire" disabled>Bouton inactif</button>
+
+        <button value="Bouton hover" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons rcn-boutons-primaire" >Bouton hover</button>
+
+        <button value="Bouton icone" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons rcn-boutons-primaire" >Bouton icone <span class="rcn-boutons-iconRight icon-close"> </span></button>
+
+        <button value="Bouton par défaut" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons rcn-boutons-secondaire">Bouton par défaut</button>
+        
+        <button value="Bouton inactif" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons rcn-boutons-secondaire" disabled>Bouton inactif</button>
+
+        <button value="Bouton hover" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons rcn-boutons-secondaire">Bouton hover</button>
+
+        <button value="Bouton icone" onClick="FonctionAExecuter" title="Action à définir" class="rcn-boutons rcn-boutons-secondaire"> Bouton icone <span class="rcn-boutons-iconRight icon-close"> </span></button>
+
+        <button onClick="FonctionAExecuter" title="Sauvegarder" class="rcn-boutons-icônes icon-close"> </button>
+
+        <button onClick="FonctionAExecuter" title="Sauvegarder" class="rcn-boutons-icônes icon-close" disabled></button>
+
+        <button onClick="FonctionAExecuter" title="Sauvegarder" class="rcn-boutons-icônes icon-close"></button>
+
+      </div>
+    </section>
+    <div role="group" class="rcn-boutons-groupeDeBouton">
+        <button onClick="" Title="Nom de l'action" aria-pressed="true" class="rcn-boutons-groupeDeBouton-bouton  rcn-boutons-groupeDeBouton-premier rcn-boutons-groupeDeBouton-sélectionné">Bouton 1</button>
+        <button onClick="" Title="Nom de l'action" aria-pressed="false" class="rcn-boutons-groupeDeBouton-bouton rcn-boutons-groupeDeBouton-milieu">Bouton 2</button>
+        <button onClick="" Title="Nom de l'action" aria-pressed="false" class="rcn-boutons-groupeDeBouton-bouton rcn-boutons-groupeDeBouton-dernier">Bouton 3</button>
+      </div>
+   
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+</body>
+</html>
