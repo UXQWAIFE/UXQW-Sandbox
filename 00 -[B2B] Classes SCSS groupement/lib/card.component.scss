@@ -1,0 +1,126 @@
+@use "../scss/breakpoints" as breakpoints;
+
+// Carte horizontale par défaut
+.lib-card {
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+    border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+    border-radius: var(--rcn-semantic-borderradius-200);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+    width: 100%;
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: var(--rcn-semantic-typography-text-editorial-default-body-fontweight); 
+    font-size: var(--rcn-semantic-typography-text-editorial-default-body-fontsize);
+    line-height: var(--rcn-semantic-typography-text-editorial-default-body-lineheight);
+}
+
+.lib-card__image-container {
+    --lib-card-background-url: "";
+    border-radius: var(--rcn-semantic-borderradius-200) 0 0 var(--rcn-semantic-borderradius-200);
+    background-image: var(--lib-card-background-url);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.lib-card__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--rcn-semantic-gap-vertical-200) var(--rcn-semantic-gap-horizontal-200);
+}
+
+.lib-card__content {
+    padding: var(--rcn-semantic-padding-vertical-500) var(--rcn-semantic-padding-horizontal-500);
+    text-align: left;
+}
+
+.lib-card__description {
+    font: var(--aife-font-body);
+}
+
+.lib-card__link {
+    display: flex;
+    justify-content: flex-end;
+}
+
+// Modifier : Carte avec image
+.lib-card--with-image {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    grid-template-rows: auto;
+}
+
+// Carte verticale
+.lib-card--vertical {
+    grid-template-columns: auto;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 3fr);
+    
+    .lib-card__image-container {
+        border-radius: var(--rcn-semantic-borderradius-200) var(--rcn-semantic-borderradius-200) 0 0;
+    }
+}
+
+// Modifier : Carte avec balise HTML <image> : Horizontale
+.lib-card.lib-card--with-image-entirely {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+    grid-template-rows: auto;
+
+    .lib-card__image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 150/300;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .lib-card__image-container img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
+
+    &.lib-card--vertical {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &.lib-card--vertical .lib-card__image-container {
+        aspect-ratio: 300/150;
+    }
+
+    &.lib-card--vertical .lib-card__image-container img {
+        height: 100%;
+        display: block;
+    }
+}
+
+// Carte cliquable
+.lib-card--is-clickable {
+    cursor: pointer;
+    box-shadow: (0 2px 2px var(--rcn-semantic-dropshadow-static-elevated-color));
+    padding: 0;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        box-shadow: (0 4px 2px var(--rcn-semantic-dropshadow-static-elevated-color));
+    }
+}
+
+// Responsive
+// Mobile - tablette
+@media (max-width: breakpoints.$screen-medium) {
+    .lib-card,
+    .lib-card--vertical {
+        grid-template-columns: auto;
+        grid-template-rows: minmax(0, 1fr) minmax(0, 3fr);
+    }
+
+    .lib-card__image-container {
+        border-radius: var(--rcn-semantic-borderradius-200) var(--rcn-semantic-borderradius-200) 0 0;
+    }
+}

@@ -1,0 +1,14 @@
+// Button custom component
+.lib-button .mat-icon {
+    font-size: var(--rcn-core-fontsize-1000);
+    height: 1em;
+    width: 1em;
+
+    &.icon-left {
+        margin-right: var(--rcn-semantic-padding-horizontal-50);
+    }
+
+    &.icon-right {
+        margin-left: var(--rcn-semantic-padding-horizontal-50);
+    }
+}

@@ -1,0 +1,54 @@
+.mat-checkbox {
+    transition: none;
+}
+
+// l'auréole du hover à enlever
+.mat-checkbox .mat-checkbox-ripple {
+    display: none;
+}
+
+.mat-checkbox .mat-checkbox-inner-container {
+    margin-right: var(--rcn-semantic-gap-horizontal-200);
+}
+
+.mat-checkbox-layout .mat-checkbox-label {
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
+    font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
+    line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+
+.mat-checkbox-disabled .mat-checkbox-layout {
+    cursor: not-allowed;
+}
+
+.mat-checkbox .mat-checkbox-inner-container {
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+}
+
+.mat-checkbox-disabled .mat-checkbox-layout .mat-checkbox-label {
+    color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+}
+
+// Carré de la checkbox
+.mat-checkbox .mat-checkbox-background {
+    border: var(--rcn-semantic-borderwidth-100)px solid var(--rcn-semantic-color-interaction-border-default-standard);
+    border-radius: var(--rcn-semantic-borderradius-100);
+}
+
+.mat-checkbox-checked .mat-checkbox-label {
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+}
+
+// Milieu de la checkbox
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, 
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element, 
+.mat-checkbox:active:not(.mat-checkbox-disabled).mat-accent .mat-ripple-element {
+    background: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+}
+
+.mat-checkbox .mat-checkbox-input:disabled {
+    border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
+}

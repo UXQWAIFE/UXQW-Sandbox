@@ -1,0 +1,66 @@
+.lib-input__input-container {
+  .mat-icon {
+    background-color: var(
+      --rcn-semantic-color-interaction-background-disabled-standard
+    );
+    border: var(--rcn-semantic-borderwidth-100) solid
+      var(--rcn-semantic-color-interaction-border-default-standard);
+    border-right: none;
+    border-radius: var(--rcn-semantic-borderradius-100) 0 0
+      var(--rcn-semantic-borderradius-100);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--rcn-semantic-padding-vertical-100)
+      var(--rcn-semantic-padding-horizontal-100);
+    font-weight: var(--rcn-semantic-typography-icon-rcn_icon-body-fontweight);
+    font-size: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
+    line-height: var(--rcn-semantic-typography-icon-rcn_icon-body-lineheight);
+  }
+}
+
+.lib-input__btn-password {
+  .mat-icon {
+    color: var(
+      --rcn-semantic-color-interaction-text_and_icon-default-onstandard
+    );
+    height: auto;
+    width: auto;
+    font-weight: var(--rcn-semantic-typography-icon-rcn_icon-body-fontweight);
+    font-size: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
+    line-height: var(--rcn-semantic-typography-icon-rcn_icon-body-lineheight);
+  }
+}
+
+// Comment interner les erreurs messages au scope du composant
+.lib-input-error .lib-input .lib-input__input,
+.lib-input-error .lib-input .mat-icon,
+.lib-input-error .lib-input.ng-invalid .lib-input__password-container .lib-input__btn-password {
+  border-color: var(--rcn-semantic-color-feedback-text_and_icon-error);
+}
+
+.lib-input__error-message {
+  display: flex;
+  color: var(--rcn-semantic-color-interaction-border-default-error);
+  margin-top: 0.5rem;
+  align-items: center;
+  gap: var(--rcn-semantic-gap-horizontal-100);
+
+  .mat-icon {
+    display: none;
+    font-size: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
+    height: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
+    width: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
+  }
+}
+
+.lib-input-error .lib-input__error-message .mat-icon {
+  display: flex;
+}
+
+.lib-input__red-text {
+  color: var(--rcn-semantic-color-interaction-border-default-error);
+}

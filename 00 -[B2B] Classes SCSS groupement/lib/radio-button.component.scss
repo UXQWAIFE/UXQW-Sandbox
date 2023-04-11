@@ -1,0 +1,10 @@
+.lib-radio-button.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rcn-semantic-gap-vertical-100) 0;
+}
+
+.lib-radio-button.horizontal {
+    display: flex;
+    gap: var(--rcn-semantic-gap-vertical-100) var(--rcn-semantic-gap-vertical-300);
+}

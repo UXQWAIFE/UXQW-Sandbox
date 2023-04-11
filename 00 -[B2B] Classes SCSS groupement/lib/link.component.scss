@@ -1,0 +1,39 @@
+// Les tokens ont été utilisés
+.lib-link {
+    display: flex;
+    align-items: baseline;
+    text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: var(--rcn-semantic-typography-text-component-default-label-fontweight);
+    font-size: var(--rcn-semantic-typography-text-component-default-label-fontsize);
+
+    .mat-icon {
+        font-size: 0.85rem;
+        height: auto;
+        width: auto;
+    }
+
+    &:focus-visible {
+        outline: var(--rcn-core-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-error);
+    }
+
+    &:focus,
+    &:hover,
+    &:active {
+        text-decoration: none;
+    }
+
+    &:visited {
+        color: var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
+    }
+}
+
+.lib-link--disabled{
+    color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+    cursor: not-allowed;
+
+    &:visited {
+        color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+    }
+}

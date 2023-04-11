@@ -1,0 +1,55 @@
+.lib-chip {
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
+    font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
+    line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+    background-color: var(--rcn-semantic-color-interaction-background-default-chips);
+    padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-100);
+    border-radius: var(--rcn-semantic-borderradius-300);
+    display: inline-flex;
+    align-items: center;
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+
+.lib-chip--is-clickable {
+    cursor: pointer;
+    text-decoration: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+        background-color: var(--rcn-semantic-color-interaction-background-hover-chips);
+        text-decoration: none;
+    }
+}
+
+.lib-chip--with-button {
+    gap: 0 var(--rcn-semantic-padding-horizontal-100);
+}
+
+.lib-chip__button {
+    display: flex;
+    align-items: center;
+    height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+    background-color: transparent;
+    border: none;
+}
+
+.lib-chip--is-disabled {
+    cursor: not-allowed;
+    background-color: var(--rcn-semantic-color-static-background-chips);
+
+    &:focus,
+    &:hover {
+        cursor: not-allowed;
+        background-color: var(--rcn-semantic-color-static-background-chips);
+    }
+
+    .lib-chip__button {
+        &:focus,
+        &:hover {
+            cursor: not-allowed;
+            background-color: var(--rcn-semantic-color-static-background-chips);
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.lib-radio-button .mat-radio-outer-circle {
+    border-color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+
+.lib-radio-button .mat-radio-label-content {
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: var(--rcn-semantic-typography-icon-rcn_icon-body-fontweight);
+    font-size: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
+    line-height: var(rcn-semantic-typography-icon-rcn_icon-body-lineheight);
+}
+
+.lib-radio-button .mat-radio-button .mat-radio-outer-circle {
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+}
+
+// Cercle animation au focus et hover à ne pas afficher
+.mat-radio-button .mat-radio-ripple {
+    display: none;
+}
+
+// Bouton radio sélectionné
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    border-color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+}
+
+.mat-radio-checked .mat-radio-label .mat-radio-inner-circle {
+    background-color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+}
+
+.lib-radio-button .mat-radio-checked .mat-radio-label-content {
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+}
+
+// Bouton désactivé
+.mat-radio-group .mat-radio-disabled,
+.mat-radio-group .mat-radio-disabled .mat-radio-label {
+    cursor: not-allowed;
+}
+
+.mat-radio-button.mat-radio-disabled .mat-radio-label-content {
+    color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+}
+
+.mat-radio-button.mat-radio-disabled.mat-radio-checked .mat-radio-outer-circle, 
+.mat-radio-button.mat-radio-disabled .mat-radio-outer-circle {
+    border-color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+}
+
+.mat-radio-button.mat-radio-disabled .mat-radio-ripple .mat-ripple-element, 
+.mat-radio-button.mat-radio-disabled .mat-radio-inner-circle {
+    background-color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+}

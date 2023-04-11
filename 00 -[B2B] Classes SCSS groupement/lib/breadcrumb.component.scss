@@ -1,0 +1,121 @@
+@use "../scss/breakpoints" as breakpoints;
+
+.lib-breadcrumb {
+    padding: 80px;
+    padding-top: var(--rcn-semantic-padding-vertical-200);
+    padding-bottom: var(--rcn-semantic-padding-vertical-200);
+    border-bottom: solid var(--rcn-semantic-borderwidth-100) var(--rcn-semantic-color-static-border-divider_regular);
+    font: var(--aife-font-body);
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lib-breadcrumb .lib-breadcrumb__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.lib-breadcrumb__item {
+    display: flex;
+
+    a {
+        font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+        font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
+        font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
+        line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+        text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration);
+        text-transform: capitalize;
+        color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
+
+        &:visited {
+            color: var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
+            text-decoration: var(--rcn-semantic-typography-text-component-default-body-textdecoration);
+        }
+
+        &:active {
+            color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
+        }
+    }
+
+    .lib-breadcrumb__active-path {
+        font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+        font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
+        font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
+        line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+        color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+        display: inline-block;
+        margin-bottom: 0;
+        text-transform: capitalize;
+    }
+}
+
+.lib-breadcrumb__button {
+    cursor: pointer;
+    display: none;
+    font-size: 16px;
+    text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration);
+    color: var(--rcn-core-color-dsfr_france-500);
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+    border: none;
+
+    &:hover {
+        text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration);
+    }
+}
+
+.lib-breadcrumb__chevron-link {
+    padding: 0 var(--rcn-core-padding-horizontal-100);
+    display: flex;
+    align-items: center;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px var(--rcn-semantic-color-static-text_and_icon-onstandard);
+        border-right: solid 2px var(--rcn-semantic-color-static-text_and_icon-onstandard);   
+        transform: rotate(45deg);
+    }
+}
+
+// 1023px et mobile
+@media screen and (max-width: calc(breakpoints.$screen-ml - 1px)) {
+    .lib-breadcrumb {
+        padding-left: var(--rcn-semantic-gap-horizontal-400);
+    }
+
+    .lib-breadcrumb .lib-breadcrumb__list {
+        display: none;
+        flex-wrap: wrap;
+    }
+
+    .lib-breadcrumb__item {
+        flex-shrink: 0;
+    }
+
+    .lib-breadcrumb__button {
+        display: inline-block;
+    }
+
+    .showBreadcrumb.lib-breadcrumb {
+        .lib-breadcrumb__list {
+            display: flex;
+        }
+
+        .lib-breadcrumb__button {
+            display: none
+        } 
+    }
+}

@@ -1,0 +1,97 @@
+.lib-input {
+    margin-bottom: 1.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.lib-input__label {
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: 700;
+    font-size: var(--rcn-semantic-typography-text-component-default-label-fontsize);
+    line-height: var(--rcn-semantic-typography-text-component-default-label-lineheight);
+    text-decoration: var(--rcn-semantic-typography-text-component-default-label-textdecoration);
+    margin-bottom: 0.5rem;
+}
+
+.lib-input__input-container {
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    grid-template-rows: auto;
+
+    .lib-input__input {
+        border-left: none;
+        margin: 0;
+    }
+}
+
+.lib-input__password-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-rows: auto;
+
+    .lib-input__input {
+        border-radius: var(--rcn-semantic-borderradius-100) 0 0 var(--rcn-semantic-borderradius-100);
+        border-right: none;
+        margin: 0;
+    }
+
+    .lib-input__btn-password {
+        background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+        border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+        border-left: none;
+        border-radius: 0 var(--rcn-semantic-borderradius-100) var(--rcn-semantic-borderradius-100) 0;
+        color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+        cursor: pointer;
+        height: auto;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-100);
+        font-weight: var(--rcn-semantic-typography-icon-rcn_icon-body-fontweight); 
+        font-size: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
+        line-height: var(--rcn-semantic-typography-icon-rcn_icon-body-lineheight);
+        margin: 0;
+    }
+}
+
+.lib-input__input {
+    border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+    border-radius: var(--rcn-semantic-borderradius-100);
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
+    font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
+    line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+    text-decoration: var(--rcn-semantic-typography-text-component-default-body-textdecoration);
+    padding: var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-100);
+}
+
+.lib-input__container .lib-input__input {
+        border-left: none;
+        border-radius: 0 var(--rcn-semantic-borderradius-100) var(--rcn-semantic-borderradius-100) 0;
+
+}
+
+.lib-input__list {
+    list-style: none;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+}
+
+.lib-input__hint,
+.lib-input__item {
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
+    font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
+    line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+    text-decoration: var(--rcn-semantic-typography-text-component-default-body-textdecoration);
+}
+
+.lib-input__hint,
+.lib-input__list {
+    margin-bottom: 0.5rem;
+}
+
+.lib-input__required {
+    color: var(--rcn-semantic-color-interaction-border-default-error);
+}

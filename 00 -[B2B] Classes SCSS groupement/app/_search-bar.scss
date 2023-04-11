@@ -1,0 +1,42 @@
+.lib-search-bar {
+    .mat-form-field {
+        padding: 0;
+    }
+
+    .mat-form-field-wrapper {
+        min-width: 20.625rem; // 330px
+        margin: 0;
+        padding: 0;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-outline {
+        color: var(rcn-semantic-color-interaction-border-default-standard);
+
+        &:focus-visible {
+            outline-color: var(--rcn-semantic-color-interaction-border-default-primary);
+        }
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+        padding: 0;
+        border-top: 0;
+    }
+
+    .mat-form-field.label-outline .mat-form-field-infix input.mat-input-element {
+        font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+        font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
+        font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
+        line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-wrapper .mat-form-field-flex {
+        padding-right: 0;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+    }
+
+    .mat-icon {
+        color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+    }
+}

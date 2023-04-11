@@ -1,0 +1,50 @@
+.lib-tuile {
+    border-radius: var(--rcn-semantic-borderradius-200);
+    border: var(--rcn-semantic-borderwidth-200) solid var(--rcn-semantic-color-interaction-border-transparent);
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.875rem;
+    margin-bottom: 1rem;
+    gap: 0 1rem;
+    min-height: 3.125rem; // 50px
+}
+
+.lib-tuile--primary {
+    background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+    border-color: var(--rcn-semantic-color-interaction-background-default-primary);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+}
+
+.lib-tuile--secondary {
+    background-color: var(--rcn-semantic-color-interaction-background-hover-chips);
+    border-color: var(--rcn-semantic-color-interaction-background-hover-chips);
+    color: var(--rcn-semantic-color-static-text_and_icon-onstandard);
+}
+
+.lib-tuile--is-clickable {
+    cursor: pointer;
+    box-shadow: (0 2px 2px var(--rcn-semantic-dropshadow-static-elevated-color));
+    text-decoration: var(--rcn-semantic-typography-text-component-default-body-textdecoration);
+
+    &:hover,
+    &:focus {
+        box-shadow: (0 4px 2px var(--rcn-semantic-dropshadow-static-elevated-color));
+        background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+        border-color: var(--rcn-semantic-color-interaction-background-default-primary);
+        color: var(--rcn-semantic-color-static-text_and_icon-onstandard);
+    }
+}
+
+.lib-tuile__text {
+    margin: 0;
+    font-size: var(--rcn-semantic-typography-lien-component-default-h6-fontsize);
+}
+
+.lib-tuile__text-right,
+.lib-tuile__text-right .mat-icon {
+    margin: 0;
+    font-size: var(--rcn-semantic-typography-text-component-default-h2-fontsize);
+}

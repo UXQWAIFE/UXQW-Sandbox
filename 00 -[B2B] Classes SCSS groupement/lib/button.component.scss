@@ -1,0 +1,68 @@
+.lib-button {
+    border: var(--rcn-core-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-transparent);
+    border-radius: var(--rcn-semantic-borderradius-200);
+    color: var(--rcn-core-color-black);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+    min-height: 2.625rem;
+    min-width: 5rem;
+    padding: var(--rcn-semantic-padding-vertical-50) var(--rcn-semantic-padding-vertical-200);
+    line-height: 1;
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: var(--rcn-semantic-typography-text-component-default-label-fontweight);
+    font-size: var(--rcn-semantic-typography-text-component-default-label-fontsize);
+}
+
+.lib-button--primary {
+    background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+    border-color: var(--rcn-semantic-color-static-border-primary);
+    color: var(--rcn-semantic-color-static-text_and_icon-onprimary);
+
+    &:focus-visible {
+        outline: 1px solid var(--rcn-semantic-color-feedback-text_and_icon-error);
+        filter: brightness(0.9);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        filter: brightness(0.9);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background-color: var(--rcn-semantic-color-interaction-background-disabled-primary);
+        border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
+        color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+        filter: brightness(1);
+    }
+}
+
+.lib-button--secondary {
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+    border-color: var(--rcn-semantic-color-interaction-border-default-primary);
+    color: var(--rcn-semantic-color-static-text_and_icon-primary);
+
+        &:focus-visible {
+        outline: var(--rcn-core-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-error);
+        border-color: var(--rcn-semantic-color-interaction-border-focus-standard);
+        color: var(--rcn-semantic-color-interaction-border-focus-standard);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: var(--rcn-semantic-color-interaction-background-hover-primary);
+        color: var(--rcn-semantic-color-interaction-border-hover-primary);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        background-color: var(--rcn-semantic-color-interaction-background-disabled-button_secondaire);
+        border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
+        color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+    }
+}

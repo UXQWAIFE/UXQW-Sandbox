@@ -1,0 +1,25 @@
+
+.lib-search-bar__icon-button {
+    background-color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+    border: none;
+    margin-right: 2px;
+}
+
+.lib-search-bar__icon-button.lib-search-bar__clear-btn {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 2px;
+        height: 12px;
+        background-color: var(--rcn-semantic-color-static-border-footer_element_divider);
+    }
+}
+
+.lib-search-bar__icon-button.lib-search-bar__clear-btn.hide {
+    display: none;
+}

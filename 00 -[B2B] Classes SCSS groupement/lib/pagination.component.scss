@@ -1,0 +1,161 @@
+@use "../scss/breakpoints" as breakpoints;
+
+.lib-pagination {
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: var(--rcn-semantic-typography-text-editorial-default-body-fontweight); 
+    font-size: var(--rcn-semantic-typography-text-editorial-default-body-fontsize);
+    line-height: var(--rcn-semantic-typography-text-editorial-default-body-lineheight);
+    font: var(--lib-font-body);
+
+    p {
+        margin: 0;
+    }
+}
+
+.lib-pagination__header,
+.lib-pagination__footer {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.lib-pagination__footer {
+    justify-content: space-between;
+}
+
+p.lib-pagination__row-space-between {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.lib-pagination__container,
+.lib-pagination__list {
+    display: flex;
+    gap: 0 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+.lib-pagination__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:disabled {
+        color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+        cursor: not-allowed;
+    }
+
+    .mat-icon {
+        font-size: 26px;
+    }
+}
+
+.lib-pagination__link {
+    font: var(--lib-font-body);
+    background-color: transparent;
+    border: none;
+    text-decoration: var(--rcn-semantic-typography-text-component-default-body-textdecoration);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+    cursor: pointer;
+}
+
+.lib-pagination__link--current {
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 3px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+    }
+}
+
+.lib-pagination__select {
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+    border-radius: 2px;
+    border: 1px solid var(--rcn-semantic-color-static-border-standard);
+    text-align: center;
+}
+
+.lib-pagination__is-hidden-on-small {
+    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-weight: var(--rcn-semantic-typography-text-editorial-default-body-fontweight); 
+    font-size: var(--rcn-semantic-typography-text-editorial-default-body-fontsize);
+    line-height: var(--rcn-semantic-typography-text-editorial-default-body-lineheight);
+}
+
+// Small version
+.lib-pagination--small {
+    .lib-pagination__is-hidden-on-small {
+        display: none;
+    }
+
+    .lib-pagination__footer {
+        justify-content: flex-end;
+    }
+
+    .lib-pagination__container {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: auto;
+        grid-template-areas: ". pagination-nav pagination-select";
+        width: 100%;
+    }
+
+    .lib-pagination__container .lib-pagination__label {
+        margin-right: 6px;
+    }
+
+    .lib-pagination__list {
+        grid-area: pagination-nav;
+    }
+
+    .lib-pagination__cmp-select {
+        grid-area: pagination-select;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .lib-pagination__row-space-between {
+        justify-content: flex-start;
+    }
+}
+
+// Version mobile
+@media (max-width: breakpoints.$screen-medium)  {
+    .lib-pagination--small {
+        .lib-pagination__container {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .lib-pagination__header-group {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .lib-pagination__footer {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+
+    .lib-pagination__is-hidden-on-mobile,
+    .lib-pagination__is-hidden-on-small,
+    .lib-pagination--small .lib-pagination__is-hidden-on-mobile {
+        display: none;
+    }
+}
