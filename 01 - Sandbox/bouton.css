@@ -1,0 +1,129 @@
+@import url('./Core/Core_vars.css');
+@import url('./Semantic/SemanticTokensColor.min.css');
+@import url('./Semantic/SemanticTokensShadow.min.css');
+@import url('./Semantic/SemanticTokensLayout.min.css');
+@import url('./Semantic/SemanticTokensTypography.min.css');
+@import url('ComponentTokensButtonPrimary.min.css');
+@import url('./Assets/Marianne-Regular.otf');
+
+  @font-face {
+   font-family: 'Marianne';
+   src: url('./Assets/Marianne-Regular.woff') format('woff');
+ }
+
+  body {
+  margin: 0;
+  font-family: Marianne;
+}
+
+.myDiv
+{
+  margin : 50px 50px;
+  border: 1px solid #333;
+  width: 100px;
+  height: 100px;
+  box-shadow: 10px 0 5px -2px #888;
+}
+
+
+  .h1 {
+      font-size:2.5rem;
+      line-height:2.2rem;
+      font-family: 'Marianne';
+    }
+
+  .h2 {
+    font-size:1.8rem;
+    line-height:1.8rem;
+    font-family: 'Marianne';
+  }
+
+  .h3 {
+    font-size:1.6rem;
+    line-height:1.6rem;
+    font-family: 'Marianne';
+  }
+
+  .h4 {
+    font-size:1.4rem;
+    line-height:1.4rem;
+    font-family: 'Marianne';
+  }
+
+  .h5 {
+    font-size:1.2rem;
+    line-height:1.2rem;
+    font-family: 'Marianne';
+  }
+
+
+  .inline{
+    display:flex;
+    flex-direction:row;
+    gap: 20px;
+  }
+
+  .flextest{
+    height : 400px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .alignself{
+    background-color: blue;
+    align-self: flex-end;
+    height : 100%;
+    
+  }
+
+  .button--primary {
+    background-color:var(--rcn-semantic-color-interaction-background-default-primary)/*Couleur de l'applicatif*/;
+    font-size:1rem;
+    line-height:1rem;
+    padding:12px 24px;
+    border: 2px solid var(--rcn-semantic-color-interaction-border-default-primary);
+    border-radius:0.375rem;
+    color:white;
+    font-family: 'Marianne';
+  }
+  
+  .button--primary:hover {
+    color: white;
+    background-color:var(--rcn-semantic-color-interaction-background-hover-primary);
+     border: 2px solid var(--rcn-semantic-color-interaction-border-hover-primary);
+  }
+
+  .button--primary:disabled {
+    color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+    background-color:var(--rcn-semantic-color-interaction-background-disabled-primary);
+    cursor: not-allowed;
+    border-color: var(--rcn-semantic-color-interaction-background-disabled-primary);
+  }
+
+
+  .button--secondary {
+    background-color:var(--rcn-semantic-color-interaction-background-default-secondary)/*Couleur de l'applicatif*/;
+    font-size:1rem;
+    line-height:1rem;
+    padding:12px 24px;
+    border-radius:0.375rem;
+    border: 2px solid;
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+    font-family: 'Marianne';
+  }
+  
+  .button--secondary:hover {
+    color:var(--rcn-semantic-color-interaction-text_and_icon-hover-onsecondary);
+    background-color:var(--rcn-semantic-color-interaction-background-hover-secondary);
+    border-color: var(--rcn-semantic-color-interaction-border-hover-primary);
+    color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+  }
+
+  .button--secondary:disabled {
+    color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+    background-color:var(--rcn-semantic-color-interaction-background-disabled-secondary);
+    border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
+    cursor: not-allowed;
+  }

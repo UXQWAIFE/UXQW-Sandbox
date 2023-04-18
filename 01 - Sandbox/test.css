@@ -1,0 +1,47 @@
+@import url('./Core/Core_vars.css');
+@import url('./Semantic/SemanticTokensColor.min.css');
+@import url('./Semantic/SemanticTokensShadow.min.css');
+@import url('./Semantic/SemanticTokensLayout.min.css');
+@import url('./Semantic/SemanticTokensTypography.min.css');
+@import url('ComponentTokensButtonPrimary.min.css');
+@import url('./Assets/Marianne-Regular.otf');
+
+
+.box1{
+	
+	background-color: blue;
+	color : white;
+}
+
+.column{
+	width: 100%;
+	display: flex;
+	gap : 0px;
+	background-color: grey;
+	flex-direction: column;	
+	align-items : center;
+	color : white;
+}
+
+.box2{
+	width: 100%;
+	background-color: green;
+	color : white;
+	margin:0px;
+}
+
+.box3{
+	align-self: flex-start;
+	background-color: blue;
+	color : white;
+}
+
+.bigbox{
+	display: flex;
+	max-width:100%;
+	gap : 50px;
+	background-color: grey;
+	flex-direction: row;	
+	align-items : center;
+	color : white;
+}
