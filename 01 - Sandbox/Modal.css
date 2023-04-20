@@ -1,0 +1,49 @@
+ @import url('./Core/Core_vars.css');
+@import url('./Semantic/SemanticTokensColor.min.css');
+@import url('./Semantic/SemanticTokensShadow.min.css');
+@import url('./Semantic/SemanticTokensLayout.min.css');
+@import url('./Semantic/SemanticTokensTypography.min.css');
+@import url('ComponentTokensButtonPrimary.min.css');
+@import url('./Assets/Marianne-Regular.otf');
+
+
+.box1{
+.box{
+	
+	background-color: blue;
+	background-color: #ffffff;
+	color : white;
+}
+
+@ -44,4 +44,31 @@
+	flex-direction: row;	
+	align-items : center;
+	color : white;
+}
+}
+
+
+.paragraph {
+	display:flex;
+	padding:24px;
+	height: 200px;
+	color:#000000;
+	margin-top:-16px;
+	margin-bottom:-16px;
+}
+
+.ombretop {
+	height: 16px;
+	display:block;
+	background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0));
+	border-top:1px solid;
+	border-top-color:var(--rcn-semantic-color-static-border-divider_regular);
+}
+.ombrebottom {
+	height: 16px;
+	display:block;
+	background-image: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0));
+	border-bottom:1px solid;
+	border-bottom-color:var(--rcn-semantic-color-static-border-divider_regular);
+
+}
