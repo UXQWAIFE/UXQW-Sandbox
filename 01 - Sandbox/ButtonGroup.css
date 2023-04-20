@@ -1,0 +1,44 @@
+@import url('./Core/Core_vars.css');
+@import url('./Semantic/SemanticTokensColor.min.css');
+@import url('./Semantic/SemanticTokensShadow.min.css');
+@import url('./Semantic/SemanticTokensLayout.min.css');
+@import url('./Semantic/SemanticTokensTypography.min.css');
+@import url('ComponentTokensButtonPrimary.min.css');
+@import url('./Assets/Marianne-Regular.otf');
+
+
+.buttonGroup{
+	padding: 2px;
+	display: flex;
+	align-items: center;
+	background-color: blue;
+	color: black;
+	border-color: grey
+
+}
+
+.button{
+	padding-left:	;
+	padding-right:	6px;
+}
+
+.butleft{	
+	border-top-left-radius : 6px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius : 6px; 
+}
+.butmiddle{	
+	border-top-left-radius : 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius : 0px; 
+}
+.butright{	
+	border-top-left-radius : 0px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius : 0px; 
+}
+
+
