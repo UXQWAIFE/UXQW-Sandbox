@@ -13,20 +13,28 @@
 	align-items: center;
 	background-color: blue;
 	color: black;
-	border-color: grey
+	border-color: grey;
+	border-radius:24px;
+	width:fit-content;
+	
+
 
 }
 
 .toggletextzone{
 	padding-left:	;
 	padding-right:	6px;
+	padding-left: 6px;
 }
 
 .toggleindicator{
 	background-color: white;
-	border: 1px grey;
-	height : 0.750rem;
-	width : 0.750rem;
+	border: 1px;
+	height : 18px;
+	width : 18px;
 	border-radius: 50%;
+	border-color :aquamarine;
+	border:1px solid
+
 }
 
