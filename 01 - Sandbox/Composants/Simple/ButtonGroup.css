@@ -6,39 +6,71 @@
 @import url('ComponentTokensButtonPrimary.min.css');
 @import url('./Assets/Marianne-Regular.otf');
 
+.contain{
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.buttonGroupBorder{
+	border-top: 1px solid blue;
+	border-bottom :1px solid blue;
+	height : 31px;
+}
 
 .buttonGroup{
-	padding: 2px;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
-	background-color: blue;
-	color: black;
-	border-color: grey
-
+	background-color: white;
+	color: black;	
+	margin-bottom: -33px;
 }
 
 .button{
-	padding-left:	;
-	padding-right:	6px;
+	padding: 8px 12px;
+	border-radius : 6px;
+	background-color: white;
+	border: 1px solid blue;
+	color: blue;
+	margin-right:-1px;
 }
 
 .butleft{	
-	border-top-left-radius : 6px;
+	order: -1;
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
-	border-bottom-left-radius : 6px; 
+	
 }
 .butmiddle{	
 	border-top-left-radius : 0px;
 	border-top-right-radius: 0px;
 	border-bottom-right-radius: 0px;
 	border-bottom-left-radius : 0px; 
+	
 }
 .butright{	
+	order: 10;
 	border-top-left-radius : 0px;
-	border-top-right-radius: 6px;
-	border-bottom-right-radius: 6px;
 	border-bottom-left-radius : 0px; 
+	margin-right:0px;
+	
+}
+.selected{
+	background-color: blue;
+	color:white;
+}
+
+.butleft.selected{
+
+	border-right-color:white;
+}
+.butmiddle.selected{
+	border-left-color:white;
+	border-right-color:white;
+}
+.butright.selected{
+	border-left-color:white;
 }
 
 
