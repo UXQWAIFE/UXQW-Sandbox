@@ -15,8 +15,8 @@
 display:flex;
 flex-direction:row;
 align-items:flex-start;
-gap:16px;
-padding-left:32px;
+gap:8px;
+padding-left:16px;
 border-bottom:1px solid blue;
 background-color: yellow;
 
@@ -43,7 +43,7 @@ flex-grow:1;
     float: left;
     outline: none;
     cursor: pointer;
-    padding: 14px 16px;
+    padding: 8px 12px;
     transition: 0.3s;
     font-size: 17px;
     margin-bottom:-1px;
