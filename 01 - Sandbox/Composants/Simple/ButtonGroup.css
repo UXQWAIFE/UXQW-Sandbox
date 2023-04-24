@@ -11,7 +11,11 @@
 	flex-direction: column;
 	align-items: stretch;
 }
-
+.flex{
+	display: flex;
+	flex-direction: column;
+	gap : 30px;
+}
 .buttonGroupBorder{
 	border-top: 1px solid blue;
 	border-bottom :1px solid blue;
@@ -21,10 +25,10 @@
 .buttonGroup{
 	display: flex;
 	flex-direction: row;
+	gap:0px;
 	align-items: center;
 	background-color: white;
 	color: black;	
-	margin-bottom: -33px;
 }
 
 .button{
@@ -33,44 +37,42 @@
 	background-color: white;
 	border: 1px solid blue;
 	color: blue;
+}
+.button:hover{
+	border-color: darkblue;
+	color: darkblue;
+	background-color: rgb(216, 216, 255);
+}
+
+.buttonGroup__button{
+	border-radius : 0px;
 	margin-right:-1px;
 }
-
-.butleft{	
-	order: -1;
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-	
+.buttonGroup__button:first-of-type{
+	border-top-left-radius: 6px;
+	border-bottom-left-radius: 6px;
 }
-.butmiddle{	
-	border-top-left-radius : 0px;
-	border-top-right-radius: 0px;
-	border-bottom-right-radius: 0px;
-	border-bottom-left-radius : 0px; 
-	
-}
-.butright{	
-	order: 10;
-	border-top-left-radius : 0px;
-	border-bottom-left-radius : 0px; 
+.buttonGroup__button:last-of-type{
 	margin-right:0px;
-	
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
 }
-.selected{
+.buttonGroup__button:is([selected]){
 	background-color: blue;
+	border-left-color: white;
 	color:white;
 }
-
-.butleft.selected{
-
-	border-right-color:white;
+.buttonGroup__button:is([selected]):hover{
+	background-color: darkblue;
+	border-top-color : darkblue;
+	border-bottom-color : darkblue;
 }
-.butmiddle.selected{
-	border-left-color:white;
-	border-right-color:white;
+
+.buttonGroup__button:first-of-type:is([selected]){
+	border-left-color : blue;
 }
-.butright.selected{
-	border-left-color:white;
+.buttonGroup__button:first-of-type:is([selected]):hover {
+	border-left-color : darkblue;
 }
 
 
