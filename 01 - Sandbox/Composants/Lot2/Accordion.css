@@ -1,0 +1,60 @@
+@import url('./Core/Core_vars.css');
+@import url('./Semantic/SemanticTokensColor.min.css');
+@import url('./Semantic/SemanticTokensShadow.min.css');
+@import url('./Semantic/SemanticTokensLayout.min.css');
+@import url('./Semantic/SemanticTokensTypography.min.css');
+@import url('ComponentTokensButtonPrimary.min.css');
+@import url('./Assets/Marianne-Regular.otf');
+
+
+.boxAccordionTCO {
+	display:flex;
+	flex-direction:column;
+	width:100%;
+	align-items:stretch;
+	background-color:white;
+	border-bottom: 3px solid pink;;
+}
+
+.heading {
+	border: none;
+	padding-top:16px;
+	padding-bottom:24px;
+	padding-left:16px;
+	padding-right:16px;
+	display:flex;
+	flex-direction: row;
+	align-items	:center;
+	justify-content	: space-between;
+	background-color: white;
+	color: black;
+	border-top: 3px solid pink;
+}
+.heading:hover {
+background-color:#FFF0F0;
+}
+.heading[aria-expanded='true']{
+	border-top: 6px solid red;
+	font-weight:bold;
+	color : red;
+}
+.heading[aria-expanded='true']:hover{
+	border-top: 6px solid darkred;
+	font-weight:bold;
+	color : darkred;
+}
+
+.content{
+padding-top	:16px;
+padding-left:16px;
+padding-right:16px;
+padding-bottom:24px;
+background-color: #FFFAFA
+}
+
+.content[hidden]{
+height :0px;
+} 
+
+
+

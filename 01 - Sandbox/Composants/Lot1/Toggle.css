@@ -6,6 +6,14 @@
 @import url('ComponentTokensButtonPrimary.min.css');
 @import url('./Assets/Marianne-Regular.otf');
 
+.flex{
+	display: flex;
+	flex-direction: row;	
+	justify-content: flex-start;	
+}
+.text{
+	flex-grow: 	1;
+}
 
 .toggle{
 	padding: 2px;
@@ -14,15 +22,16 @@
 	background-color: blue;
 	color: black;
 	border-color: grey;
-	border-radius:24px;
-	width:fit-content;
-	
+	border-style: solid;
+	border-radius:24px;	
+	flex-basis:	fit-content;
+}
 
-
+.toggle:is([selected]) .toggleindicator{
+	order:2;
 }
 
 .toggletextzone{
-	padding-left:	;
 	padding-right:	6px;
 	padding-left: 6px;
 }
@@ -34,7 +43,7 @@
 	width : 18px;
 	border-radius: 50%;
 	border-color :aquamarine;
-	border:1px solid
+	border:1px solid;
 
 }
 
