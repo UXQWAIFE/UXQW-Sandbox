@@ -6,34 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="form.css" rel="stylesheet">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 </head>
 <body>
-	
-	<div class="input">
+    <div class="input-zone">
 
-		<span class="toggletextzone">Off</span>
-        
-        <label for=""></label>
-        <input type="text" class="inpu__zone">
-		<div class="toggleindicator"></div>
+           <!--imput obligatoire avec texte descriptif et message d'erreur -->
 
+        <div class="rcn-input">
+            <div class="mandoryZone">
+                <label for="x" class="rcn-input__label">Je suis l'input</label>
+                <div class="asterix">*</div> 
+            </div> 
+            <div class="TextZone">texte explicatif (si besoin)</div> 
+            <div class="input__content">
+                <button>
+                    <p class="sr-only"></p>
+                    <i class="mdi mdi-eye-outline"></i>
+                </button>
+                <input id="x" type="text" col="5" row="5" class="input__input">
+                <button>
+                    <p class="sr-only"></p>
+                    <i class="mdi mdi-eye-outline"></i>
+                </button>
 
-		
-	</div>
-
-    <div class="input">
-        <span class="toggletextzone"></span>
-        <label for="x"></label>
-        <div class="input__content">
-            <input id="x" type="textarea" col="5" row="5" class="input__zone">
-            <button>
-                <p class="sr-only">Afficher/Masquer</p>
+            </div>
+            <div class="messageZone">erreur machin machin
+                <p class="sr-only"></p>
                 <i class="mdi mdi-eye-outline"></i>
-            </button>
+            </div> 
         </div>
-        
-        <div class="toggleindicator"></div>
+
+           <!--imput normal avec une icon à droite-->
+
+        <div class="rcn-input">
+                <label for="x" class="rcn-input__label">Je suis l'input</label>
+            <div class="input__content">
+                <button>
+                    <p class="sr-only"></p>
+                    <i class="mdi mdi-eye-outline"></i>
+                </button>
+                <input id="x" type="text" col="5" row="5" class="input__input">
+        </div>
+
+        <!--datepicker-->
+        <div class="rcn-input">
+            <label for="RCN_InputDatepicker-input">Choissiser la date</label>
+            <div class="RCN_InputDatepicker-block">
+                <input id="RCN_InputDatepicker-input" value="" pattern="\d{4}/-\d{2}/-\d{2}" class="mdi mdi-calendar-blank-outline" placeholder="jj/mm/YYYY" type="date">
+                <i aria-hidden="true" class="mdi mdi-calendar-blank-outline"></i>
+            </div>
+        </div>
+            
     </div>
+
+        
 
 </body>
 </html>
