@@ -151,12 +151,10 @@ gap:3rem;
 }
 
 
-
 .footer__secondaryPartnersZone {
 display:flex;
 flex-direction:row;
 align-items: flex-end;
-flex-direction:row;
 flex-wrap:wrap;
 gap:8rem;
 }
@@ -167,6 +165,3 @@ height:auto;
 max-height:90px;
 max-width:160px;
 }
-
-
-
