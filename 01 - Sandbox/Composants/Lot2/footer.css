@@ -1,0 +1,161 @@
+@import url('./Core/Core_vars.css');
+@import url('./Semantic/SemanticTokensColor.min.css');
+@import url('./Semantic/SemanticTokensShadow.min.css');
+@import url('./Semantic/SemanticTokensLayout.min.css');
+@import url('./Semantic/SemanticTokensTypography.min.css');
+@import url('./Assets/Marianne-Regular.otf');
+
+
+.containerGLobal {
+width:100%;
+padding-right:80px;
+padding-left:80px;
+}
+
+
+.footer {
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:stretch;
+background-color:white;
+}
+
+.footer__socialMediaBanner {
+order:0;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+align-items:center;
+width:100%;
+padding-top:16px;
+padding-bottom:16px;
+padding-left:80px;
+padding-right:80px;
+background-color:pink;
+color:black;
+}
+
+.footer__socialMediaTextZone {
+display:flex;
+flex-direction:column;
+order:0;
+
+}
+.footer__socialMediaText {
+font-weight:bold;
+}
+
+.footer__socialMediaIconZone {
+order:2;
+gap:18px;
+flex-direction:row;
+display:flex;
+}
+
+.footer__mainBanner {
+order:0;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+align-items:flex-start;
+padding-top:16px;
+padding-bottom:16px;
+border-top:2px solid blue;
+gap:120px;
+
+}
+
+.footer__mainBannerleftZone {
+
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+gap:16px;
+}
+
+.footer__versionLanguageZone {
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+gap:8px;
+}
+
+.image {
+	width:378px;
+	height:109px;
+	background-color:yellow;
+}
+
+.footer__rightZone {
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.footer__descriptionZone {
+order:1;
+}
+.footer__governmentLinksZone {
+display:flex;
+flex-direction:row;
+gap:8px;
+order:2;
+color:blue;
+}
+
+.footer__siteInfoBanner {
+order:2;
+display:flex;
+flex-direction:row;
+width:100%;
+justify-content:flex-start;
+border-top:2px solid grey;
+padding-top:16px;
+padding-bottom:96px;
+gap:12px;
+}
+
+.footer__siteInfoLink {
+padding-right:12px;
+border-right:1px solid grey;
+}
+
+
+.footer__partnersBanner {
+display:flex;
+flex-direction:row;
+width:100%;
+justify-content:flex-start;
+padding-top:16px;
+order:1;
+padding-bottom:16px;
+border-top:2px solid grey;
+gap:434px;
+}
+
+.footer__firstPartnerZone{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.partnerImage {
+height:90px;
+width:160px;
+background-color:pink;
+}
+
+.footer__secondaryPartnersZone {
+gap:16px;
+display:flex;
+flex-direction:column;
+}
+
+.footer__secondaryPartnersImageZone {
+display:flex;
+flex-direction:row;
+gap:134px;
+
+}
+

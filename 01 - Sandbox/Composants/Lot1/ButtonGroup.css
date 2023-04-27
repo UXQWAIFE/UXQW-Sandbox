@@ -16,11 +16,7 @@
 	flex-direction: column;
 	gap : 30px;
 }
-.buttonGroupBorder{
-	border-top: 1px solid blue;
-	border-bottom :1px solid blue;
-	height : 31px;
-}
+
 
 .buttonGroup{
 	display: flex;
@@ -57,21 +53,21 @@
 	border-top-right-radius: 6px;
 	border-bottom-right-radius: 6px;
 }
-.buttonGroup__button:is([selected]){
+.buttonGroup__button[selected]{
 	background-color: blue;
 	border-left-color: white;
 	color:white;
 }
-.buttonGroup__button:is([selected]):hover{
+.buttonGroup__button[selected]:hover{
 	background-color: darkblue;
 	border-top-color : darkblue;
 	border-bottom-color : darkblue;
 }
 
-.buttonGroup__button:first-of-type:is([selected]){
+.buttonGroup__button:first-of-type[selected]{
 	border-left-color : blue;
 }
-.buttonGroup__button:first-of-type:is([selected]):hover {
+.buttonGroup__button:first-of-type[selected]:hover {
 	border-left-color : darkblue;
 }
 
