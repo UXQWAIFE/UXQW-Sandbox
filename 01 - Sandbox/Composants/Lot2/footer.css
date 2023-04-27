@@ -6,20 +6,26 @@
 @import url('./Assets/Marianne-Regular.otf');
 
 
-.containerGLobal {
-width:100%;
+.containerGlobal {
 padding-right:80px;
 padding-left:80px;
 }
 
 
 .footer {
-width:100%;
 display:flex;
 flex-direction:column;
 align-items:stretch;
 background-color:white;
 }
+
+
+
+.footer__backgroundBanner{
+border-top:2px solid blue;
+border-bottom:1px solid grey;
+}
+
 
 .footer__socialMediaBanner {
 order:0;
@@ -27,11 +33,8 @@ display:flex;
 flex-direction:row;
 justify-content:space-between;
 align-items:center;
-width:100%;
 padding-top:16px;
 padding-bottom:16px;
-padding-left:80px;
-padding-right:80px;
 background-color:pink;
 color:black;
 }
@@ -53,17 +56,18 @@ flex-direction:row;
 display:flex;
 }
 
+
+
 .footer__mainBanner {
 order:0;
-display:flex;
+display:grid;
+grid-template-columns:1fr 1fr;
 flex-direction:row;
 justify-content:space-between;
 align-items:flex-start;
 padding-top:16px;
 padding-bottom:16px;
-border-top:2px solid blue;
-gap:120px;
-
+gap:1rem;
 }
 
 .footer__mainBannerleftZone {
@@ -82,15 +86,17 @@ gap:8px;
 }
 
 .image {
-	width:378px;
-	height:109px;
-	background-color:yellow;
+width:100%;
+height:auto;
+background-color:yellow;
 }
+
 
 .footer__rightZone {
 display:flex;
 flex-direction:column;
 gap:16px;
+grid-column-start:2;
 }
 
 .footer__descriptionZone {
@@ -105,14 +111,19 @@ color:blue;
 }
 
 .footer__siteInfoBanner {
-order:2;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+border-top:1px solid grey;
+padding-top:16px;
+padding-bottom:16px;
+gap:12px;
+}
+
+.footer__siteInfoBannerLinkZone {
 display:flex;
 flex-direction:row;
-width:100%;
 justify-content:flex-start;
-border-top:2px solid grey;
-padding-top:16px;
-padding-bottom:96px;
 gap:12px;
 }
 
@@ -123,39 +134,39 @@ border-right:1px solid grey;
 
 
 .footer__partnersBanner {
-display:flex;
-flex-direction:row;
-width:100%;
-justify-content:flex-start;
-padding-top:16px;
-order:1;
-padding-bottom:16px;
-border-top:2px solid grey;
-gap:434px;
-}
-
-.footer__firstPartnerZone{
+order:3;
 display:flex;
 flex-direction:column;
+padding-top:16px;
+padding-bottom:16px;
+border-top:1px solid grey;
 gap:16px;
+}
+
+.footer__partnersBannerImagesZone {
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+gap:3rem;
+}
+
+
+
+.footer__secondaryPartnersZone {
+display:flex;
+flex-direction:row;
+align-items: flex-end;
+flex-direction:row;
+flex-wrap:wrap;
+gap:8rem;
 }
 
 .partnerImage {
-height:90px;
-width:160px;
-background-color:pink;
+width:100%;
+height:auto;
+max-height:90px;
+max-width:160px;
 }
 
-.footer__secondaryPartnersZone {
-gap:16px;
-display:flex;
-flex-direction:column;
-}
 
-.footer__secondaryPartnersImageZone {
-display:flex;
-flex-direction:row;
-gap:134px;
-
-}
 
