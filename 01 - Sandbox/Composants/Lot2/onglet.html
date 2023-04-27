@@ -12,52 +12,30 @@
     <title>Onglets Cliquables</title>
 </head>
 <body>
+
     <div class="tab">
+
+
         <div class="ongletGroup">
-            <button class="tablinks" onclick="openTab(event, 'Tab1')">Onglet 1</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab2')">Onglet 2</button>
-            <button class="tablinks" onclick="openTab(event, 'Tab3')">Onglet 3</button>
+            <button aria-selected='true' role=tab > Onglet 1 </button>
+            <button aria-selected='false' role=tab > Onglet 2</button>
+            <button aria-selected='false' role=tab > Onglet 3 </button>
         </div>
-    <div class="contentZone">
-        <p>Contenu de l'onglet 1.</p>
-    </div>
-    </div>
 
-    <div id="Tab1" class="tabcontent">
-        <h3>Onglet 1</h3>
-        <p>Contenu de l'onglet 1.</p>
-    </div>
+        <div class="contentZone">
+            <p>Contenu de l'onglet 1.</p>
+        </div>
 
-    <div id="Tab2" class="tabcontent">
-        <h3>Onglet 2</h3>
-        <p>Contenu de l'onglet 2.</p>
-    </div>
+        <div class="contentZone" hidden>
+            <p>Contenu de l'onglet 2.</p>
+        </div>
 
-    <div id="Tab3" class="tabcontent">
-        <h3>Onglet 3</h3>
-        <p>Contenu de l'onglet 3.</p>
+        <div class="contentZone" hidden>
+            <p>Contenu de l'onglet 3.</p>
+        </div>
+
     </div>
 
-    <script>
-        function openTab(evt, tabName) {
-            // Déclaration des variables
-            var i, tabcontent, tablinks;
 
-            // Cacher tous les contenus d'onglets
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
 
-            // Désactiver tous les boutons d'onglets
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Afficher le contenu de l'onglet actuel et marquer le bouton d'onglet correspondant comme actif
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
 </body>

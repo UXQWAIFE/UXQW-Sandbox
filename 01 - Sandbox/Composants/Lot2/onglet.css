@@ -1,63 +1,77 @@
 /* Styles pour les onglets */
 .tab {
-    overflow: hidden;
-    border: 1px solid red;
+    /* juste pour les tests */
+    border: 1px solid none;
     background-color: white;
+     /* à mettre dans le excel */
     display:flex;
     flex-direction:column;
     align-items:stretch;
-
-
-
+    width:100%;
 }
 
 .ongletGroup{
 display:flex;
 flex-direction:row;
-align-items:flex-start;
+align-items:flex-end;
 gap:8px;
 padding-left:16px;
-border-bottom:1px solid blue;
-background-color: yellow;
-
-
-
+border-bottom:1px solid grey;
+background-color: none;
 }
+
 
 .contentZone{
 padding:16px;
-border:1px solid blue;
-border-right:1px solid blue;
-border-left:1px solid blue;
-border-bottom:1px solid blue;
+border:1px solid grey;
+border-right:1px solid grey;
+border-left:1px solid grey;
+border-bottom:1px solid grey;
 border-top:none;
 flex-grow:1;
 
-
-
 }
+
 /* Styles pour les boutons d'onglets */
 .tab button {
-    background-color: pink;
-    border:1px solid GREEN;
-    float: left;
-    outline: none;
-    cursor: pointer;
+    background-color: white;
+    border: 1px solid grey;
     padding: 8px 12px;
-    transition: 0.3s;
     font-size: 17px;
     margin-bottom:-1px;
+    align-items:center;
+    display:flex;
+    flex-direction:row;
+}
 
 
+
+.tab button[aria-selected='true']{
+    border-top: 3px solid #5770BE;
+    border-bottom:1px solid white;
+    color:#5770BE;
+    font-weight: bold;
 }
-/* Style pour les boutons d'onglets actifs */
-.tab button.active {
-    background-color: #ccc;
+
+
+
+.tab button[aria-selected='false']{
+     background-color: white;
+     padding-top:10px;
+    
 }
-/* Style pour le contenu de chaque onglet */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
+
+.tab button[aria-selected='true']:hover {
+    border-bottom-color:white;
+    border-top-color : rgb(255, 0, 187);
+    color:rgb(255, 0, 187);
 }
+
+.tab button:hover{
+    background-color: peachpuff;
+}
+
+.contentZone [hidden]{
+    height:0px;
+}
+
