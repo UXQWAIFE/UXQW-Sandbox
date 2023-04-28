@@ -6,11 +6,15 @@
 @import url('./Assets/Marianne-Regular.otf');
 
 
-.containerGlobal {
+.containerGLobal {
 padding-right:80px;
 padding-left:80px;
 }
 
+p{
+	padding :0;
+	margin : 0;
+}
 
 .footer {
 display:flex;
@@ -18,8 +22,6 @@ flex-direction:column;
 align-items:stretch;
 background-color:white;
 }
-
-
 
 .footer__socialMediaBanner {
 order:0;
@@ -29,56 +31,50 @@ justify-content:space-between;
 align-items:center;
 padding-top:16px;
 padding-bottom:16px;
+padding-left:80px;
+padding-right:80px;
 background-color:pink;
 color:black;
-flex-wrap: wrap;
-gap:32px;
 }
 
 .footer__socialMediaTextZone {
 display:flex;
 flex-direction:column;
 order:0;
-}
-
-.footer__socialMediaText {
 font-weight:bold;
 }
 
+/*
+.footer__socialMediaText {
+font-weight:bold;
+}*/
+
 .footer__socialMediaIconZone {
-order:1;
-gap:32px;
+order:2;
+gap:18px;
 flex-direction:row;
 display:flex;
-flex-wrap: wrap;
 }
 
-
-
-.footer__mainBanners{
-border-top:2px solid blue;
-border-bottom:1px solid grey;
-display: flex;
-flex-direction: column;
-align-items: stretch;
-}
-
-
-.footer__productBanner {
+.footer__mainBanner {
 order:0;
-display:grid;
-grid-template-columns:1fr 1fr;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+align-items:flex-start;
 padding-top:16px;
 padding-bottom:16px;
-gap:1rem;
-} 
+border-top:2px solid blue;
+gap:120px;
 
+}
 
-.footer__productBannerleftZone {
+.footer__mainBannerleftZone {
+
 display:flex;
 flex-direction:column;
+justify-content:flex-start;
 gap:16px;
-align-items: flex-start;
 }
 
 .footer__versionLanguageZone {
@@ -89,17 +85,15 @@ gap:8px;
 }
 
 .image {
-width:100%;
-height:auto;
-background-color:yellow;
+	width:378px;
+	height:109px;
+	background-color:yellow;
 }
-
 
 .footer__rightZone {
 display:flex;
 flex-direction:column;
 gap:16px;
-grid-column-start:2;
 }
 
 .footer__descriptionZone {
@@ -108,28 +102,20 @@ order:1;
 .footer__governmentLinksZone {
 display:flex;
 flex-direction:row;
-justify-content: flex-start;
-flex-wrap: wrap;
 gap:8px;
 order:2;
 color:blue;
 }
 
 .footer__siteInfoBanner {
-order : 2;
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-border-top:1px solid grey;
-padding-top:16px;
-padding-bottom:16px;
-gap:12px;
-}
-
-.footer__siteInfoBannerLinkZone {
+order:2;
 display:flex;
 flex-direction:row;
+width:100%;
 justify-content:flex-start;
+border-top:2px solid grey;
+padding-top:16px;
+padding-bottom:96px;
 gap:12px;
 }
 
@@ -140,34 +126,39 @@ border-right:1px solid grey;
 
 
 .footer__partnersBanner {
+display:flex;
+flex-direction:row;
+width:100%;
+justify-content:flex-start;
+padding-top:16px;
 order:1;
+padding-bottom:16px;
+border-top:2px solid grey;
+gap:434px;
+}
+
+.footer__firstPartnerZone{
 display:flex;
 flex-direction:column;
-padding-top:16px;
-padding-bottom:16px;
-border-top:1px solid grey;
 gap:16px;
 }
 
-.footer__partnersBannerImagesZone {
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-gap:3rem;
+.partnerImage {
+height:90px;
+width:160px;
+background-color:pink;
 }
-
 
 .footer__secondaryPartnersZone {
+gap:16px;
 display:flex;
-flex-direction:row;
-align-items: flex-end;
-flex-wrap:wrap;
-gap:8rem;
+flex-direction:column;
 }
 
-.partnerImage {
-width:100%;
-height:auto;
-max-height:90px;
-max-width:160px;
+.footer__secondaryPartnersImageZone {
+display:flex;
+flex-direction:row;
+gap:134px;
+
 }
+
