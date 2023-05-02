@@ -1,16 +1,16 @@
 /* Styles pour les onglets */
 .tab {
-    /* juste pour les tests */
+    /* juste pour les tests:
     border: 1px solid none;
-    background-color: white;
+    background-color: white; */
+
      /* à mettre dans le excel */
     display:flex;
     flex-direction:column;
     align-items:stretch;
-    width:100%;
 }
 
-.ongletGroup{
+.tabLabels{
 display:flex;
 flex-direction:row;
 align-items:flex-end;
@@ -28,7 +28,6 @@ border-right:1px solid grey;
 border-left:1px solid grey;
 border-bottom:1px solid grey;
 border-top:none;
-flex-grow:1;
 
 }
 
@@ -39,27 +38,20 @@ flex-grow:1;
     padding: 8px 12px;
     font-size: 17px;
     margin-bottom:-1px;
+    display: flex;
+    flex-direction: row;
+    gap : 8px;
     align-items:center;
-    display:flex;
-    flex-direction:row;
 }
 
-
-
 .tab button[aria-selected='true']{
+    padding-top:6px;
     border-top: 3px solid #5770BE;
     border-bottom:1px solid white;
     color:#5770BE;
     font-weight: bold;
 }
 
-
-
-.tab button[aria-selected='false']{
-     background-color: white;
-     padding-top:10px;
-    
-}
 
 .tab button[aria-selected='true']:hover {
     border-bottom-color:white;
@@ -69,6 +61,12 @@ flex-grow:1;
 
 .tab button:hover{
     background-color: peachpuff;
+}
+
+.tab button[disabled]{
+    color : darkgrey;
+    background-color: grey;
+    border-color : grey;
 }
 
 .contentZone [hidden]{
