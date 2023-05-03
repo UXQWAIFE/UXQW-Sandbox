@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="onglet.css" rel="stylesheet">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 </head>
 
 <head>
@@ -16,10 +17,10 @@
     <div class="tab">
 
 
-        <div class="ongletGroup">
-            <button aria-selected='true' role=tab  > Onglet 1 </button>
-            <button aria-selected='false' role=tab > Onglet 2</button>
-            <button aria-selected='false' role=tab > Onglet 3 </button>
+        <div class="tabLabels">
+            <button class="buttonn" aria-selected='false' role=tab > Onglet 1 <i class=" icon buttonn__iconn">yo</i></button>
+            <button aria-selected='true' role=tab > Onglet 2</button>
+            <button class="buttonn" aria-selected='false' role=tab disabled> Onglet 3 </button>
         </div>
 
         <div class="contentZone">
@@ -34,6 +35,11 @@
             <p>Contenu de l'onglet 3.</p>
         </div>
 
+    </div>
+
+    <div class="notif">
+        <div class="notiftext">Lorem ipsum sit dolor amet Lorem ipsum sit dolor ametLorem ipsum sit dolor ametLorem ipsum sit dolor amet</div>
+        <button class="notificon"> X</button>
     </div>
 
 
