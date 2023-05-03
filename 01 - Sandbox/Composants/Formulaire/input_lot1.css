@@ -3,6 +3,10 @@
     src: url(../../Asset/Font_icon/RCNicon.ttf);
 }
 
+i{
+    font-style:normal;
+}
+
 .form-icon::before{
     font-family: 'RCNicon';
     content: "\e938";
@@ -93,6 +97,8 @@ i {
     color:black;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
+    display: flex;
+    align-items: center;
 }
 
 .rcn-input__icon[disabled]{
@@ -201,6 +207,11 @@ textarea:focus {
     background-color:aqua;
     justify-content:space-between;
 
+}
+
+.input--middle{
+    display: flex;
+    flex-grow: 1;
 }
  
   /* Style pour les options sélectionnées (ce sont les seules que j'arrive à changer sachant que l'on garde le natif) */
