@@ -1,5 +1,22 @@
+@font-face {
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
+}
+
+.form-icon::before{
+    font-family: 'RCNicon';
+    content: "\e938";
+    color: BLACK;
+    text-decoration:none;
+
+}
+
+i {
+    font-style:normal;
+}
+
 /* la zone globale qui encadre tous les input*/
-.rcn-input-zone{
+.rcn-input-lotGlobal{
     display:flex;
     flex-direction:column;
     gap:32px;
@@ -10,7 +27,7 @@
 }
 
 /* la zone d'un input avec label etc.*/
-.rcn-input{
+.rcn-input-zone{
     display:flex;
     flex-direction:column;
     gap: 8px;
@@ -21,7 +38,7 @@
 
 /* la zone label obligatoire.*/
 
-.mandoryZone{
+.rcn-input__mandatoryZone{
     display:flex;
     flex-direction:row;
     gap:8px;
@@ -35,21 +52,30 @@
     width:auto;
 }
 
-.asterix{
+.rcn-input__asterix{
     font-size:23px;
     color:red;
 }
 
-/* la zone du texte descriptif sous le label*/
+/* la zone du texte descriptif sous le label - pas à mettre dans le excel ça sera le body*/
 
-.TextZone{
+.rcn-input-textZone{
     font-size:16px;
     color:purple;
 }
 
-/* la d'input qui contient input+icones*/
+.input-test-cle::after{
 
-.input__content {
+    font-family: 'RCNicon';
+    content: "\e938";
+    color: BLACK;
+    text-decoration:none;
+
+}
+
+/* la d'input qui contient input+icones */
+
+.rcn-input{
     display:flex;
     flex-direction:row;
     gap:0px;
@@ -57,61 +83,112 @@
     border-color:black;
     border-radius:2px;
     justify-content:space-between;
+    width:100%;
+}
+.rcn-input:has( .rcn-input__content[disabled]){
+    border-color:mediumturquoise;
 }
 
-.input__icon{
+
+.rcn-imput--error{
+    border-color:red;
+}
+
+/* la zone icon (toujours placée à droite de l'input) */
+
+.rcn-input__icon{
     background:white;
     border:none;
     color:black;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 
-.input__input{
+.rcn-input__icon[disabled]{
+    background-color: #bbbbbb;
+
+}
+
+/* l'input"natif" > (dans le excel: rcn-inputs__content)*/
+
+.rcn-input__content{
     border:none;
     flex-grow:1;
     padding:8px;
+    border-radius: 2px;
 }
+
+.rcn-input__content[disabled] {
+    background-color:#bbbbbb;
+    border-color:grey;
+    color:green;
+    border-radius: 2px ;
+}
+
+.rcn-input__content--withicon{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.rcn-input__content--withunit{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
 
 input::placeholder{
     color:gray;
 }
 
-input:focus{
+.rcn-input__content::placeholder{
+    color:palevioletred;
+}
+
+.rcn-input__content:focus{
     outline:2px solid orange;
 }
 
 /* message d'erreur si l'input est en erreur*/
 
-.messageZone{
+.rcn-input__informationZone{
     display: flex;
     flex-direction:row;
     gap:8px;
 }
 
-.messageZone--error{
+.rcn-input__informationZone--error{
     color:red;
 }
 
-.messageZone--success{
+.rcn-input__informationZone--success{
     color:greenyellow;
 }
 
-/* pour l'input price picker*/
+/* pour l'input price picker : la zone unit (toujours placée à gauche de l'input) */
 
 
-.input__icon--price{
+.input__unit{
     display: flex;
     flex-direction: row;
     gap:8px;
     align-items: center;
+    order:0;
     background-color:gainsboro;
-    border-color:grey;
     color:rgb(80, 79, 78);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border:none;
+    padding-left:16px;
+    padding-right:16px;
 }
 
-.input--price {
-    padding-right:16px;
-    padding-left: 16px;
+.input__unit--selected{
+    flex-grow: 0;
+    padding-right:2rem;
 }
+
 
 /* pour l'input selected*/
 
@@ -135,6 +212,10 @@ input:focus{
 
 textarea:focus {
     outline:2px solid orange;
+}
+
+.rcn-input__label--textArea{
+    height: 40px;
 }
 
 /* pour la date multi-champs*/
@@ -293,16 +374,16 @@ input[type="file"] {
     flex-direction: column;
     align-items: flex-start;
     gap:8px;
-    background-color: white;
+    background-color: pink;
 }
 
 .choix{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.RCN-Input_radio_btn{
+.RCN-Input_checkbox_btn{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -311,6 +392,29 @@ input[type="file"] {
 
 .choix:active{
     color:blue;
+}
+
+input[type="checkbox"]:checked + .label-check{
+    color:blue;
+}
+
+
+input[type="checkbox"]::before{
+
+    font-family:'RCNicon';
+    content: "\e939";
+    color:black;
+
+}
+
+
+
+input[type="checkbox"]:checked::before{
+
+    font-family:'RCNicon';
+    content: "\e938";
+    color:blue;
+
 }
 
 /* Input liste déroulante*/
@@ -356,3 +460,47 @@ p{
 .list-last{
     margin-bottom: 0px;
 }
+
+/* Input liste déroulante-test*/
+
+/* Style pour le select */
+select {
+    appearance: none;
+    padding: 8px 30px 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%23999' d='M12.6 5.6L8 10.2 3.4 5.6l-.8.8L8 11.8l5.4-5.4-.8-.8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+  }
+  
+  /* Style pour les options */
+  select option {
+    padding: 30px 30px;
+    background-color: greenyellow;
+    border-left: 4px solid palevioletred;
+  }
+  
+  /* Style pour les options au survol */
+  select option:hover {
+    background-color: yellow;
+    cursor: pointer;
+    outline: #AAB7DE;
+    color: violet;
+  }
+  
+  /* Style pour les options sélectionnées */
+  select option:checked {
+    border-left: 4px solid palevioletred;
+    color: blue;
+    font-weight: bold;
+    background-color: aqua;
+    padding: 30px 30px;
+  }
+
+
+
+
+  /* exemple */

@@ -51,15 +51,11 @@ flex-grow:1;
     border-bottom:1px solid white;
     color:#5770BE;
     font-weight: bold;
+    padding-top: 6px;
 }
 
 
 
-.tab button[aria-selected='false']{
-     background-color: white;
-     padding-top:10px;
-    
-}
 
 .tab button[aria-selected='true']:hover {
     border-bottom-color:white;

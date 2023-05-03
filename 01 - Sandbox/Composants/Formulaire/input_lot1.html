@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="input.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <div class="rcn-input-lotGlobal">
+
+           <!--imput obligatoire avec texte descriptif et message d'erreur -->
+
+        <div class="rcn-input-zone">
+            <div class="rcn-input__mandatoryZone">
+                <label for="x" class="rcn-input__label">Label input</label>
+                <div class="rcn-input__asterix">*</div> 
+            </div> 
+            <div class="rcn-input-textZone">texte explicatif (si besoin)</div> 
+            <div class="rcn-input rcn-imput--error">
+                <input id="x" type="text" col="5" row="5" class="rcn-input__content rcn-input__content--withicon">
+                <button class="rcn-input__icon input__icon--right">
+                    <p class="sr-only"></p>
+                    <i class="form-icon"></i>
+                </button>
+
+            </div>
+            <div class="rcn-input__informationZone rcn-input__informationZone--error">
+                <p class="sr-only"></p>
+                <i class="mdi mdi-close-outline"></i>
+                erreur machin machin
+            </div> 
+        </div>
+
+        <!--imput non-obligatoire avec message succes -->
+
+        <div class="rcn-input-zone">        
+            <label for="x" class="rcn-input__label">Label input</label>
+            <div class="rcn-input" >
+                <input id="x" type="text" col="5" row="5" disabled class="rcn-input__content rcn-input__content--withicon" placeholder="chalu">
+                <button disabled class="rcn-input__icon input__icon--right">
+                    <p class="sr-only"></p>
+                    <i class="mdi mdi-heart"></i>
+                </button>
+
+            </div>
+            <div class="rcn-input__informationZone rcn-input__informationZone--success">
+                <p class="sr-only"></p>
+                <i class="mdi mdi-check-outline"></i>
+                bravo clarou t'es la meilleur dev
+            </div> 
+        </div>
+
+          <!--imput password-->
+
+          <div class="rcn-input-zone">        
+            <label for="x" class="rcn-input__label">Rentre ton mot de passe plzz</label>
+            <div class="rcn-input">
+                <input id="x" placeholder="aIfe4eveR" type="password" col="5" row="5" class="rcn-input__content rcn-input__content--withicon">
+                <button class="rcn-input__icon input__icon--right">
+                    <p class="sr-only"></p>
+                    <i class="mdi mdi-eye-outline"></i>
+                </button>
+            </div>
+        </div>
+
+        <!--imput date picker -->
+
+        <div class="rcn-input-zone">        
+            <label for="x" class="rcn-input__label">Choisi la date wsh!</label>
+            <div class="rcn-input">
+                <input id="x" placeholder="jj/mm/YYYY" type="date" col="5" row="5" class="rcn-input__content">
+            </div>
+        </div>
+
+
+        <!--imput price -->
+
+        <div class="rcn-input-zone">        
+            <label for="x" class="rcn-input__label">Label input</label>
+            <div class="rcn-input">
+                <button class="input__unit">
+                    <p class="sr-only">€</p>
+                </button>
+                <input id="x" type="number" col="5" row="5" class="rcn-input__content rcn-input__content--withunit">
+
+
+            </div>
+        </div>
+
+        <!--imput price-select-test -->
+
+        <div class="rcn-input-zone">        
+            <label for="x" class="rcn-input__label">Label input</label>
+            <div class="rcn-input">
+                <select name="" id="x" class="rcn-input__content input__unit input__unit--selected">
+                    <option value="">£</option>
+                    <option value="">$</option>
+                    <option value="" selected>€</option>
+                </select>
+                <input id="x" type="number" col="5" row="5" class="rcn-input__content rcn-input__content--withunit">
+
+
+            </div>
+        </div>
+
+
+
+        <!--imput sélection unique -->
+
+        <div class="rcn-input-zone">        
+        <label for="x" class="rcn-input__label">Faites un choix</label>
+            <div class="rcn-input">
+                <select name="" id="x" class="rcn-input__content">
+                    <option class="rcn-input__option" value="">- Séléctionner une option -</option>
+                    <option class="rcn-input__option" value="">Choix 1</option>
+                    <option class="rcn-input__option" value="">Choix 2</option>
+                    <option class="rcn-input__option" value="" selected>Choix 3</option>
+                </select>
+            </div>
+        </div>
+
+        <!--imput text-area-->
+
+        <div class="rcn-input-zone">        
+            <label class="rcn-input__label rcn-input__label--textArea" for="inLabel">
+                Label input text area 
+            </label>
+            <textarea rows="5"  id="inLabel" placeholder="Votre texte" type="text"></textarea>
+          
+        </div>
+
+                <!--imput date multi-champs-->
+
+                <div class="multi-champs-date"> 
+                    <div class="rcn-input-zone">        
+                        <label for="x" class="rcn-input__label">Jours</label>
+                            <div class="rcn-input">
+                                <select name="" id="SelectList" class="rcn-input__content">
+                                    <option value="">- Séléctionner un jour -</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="" selected>3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                </select>
+                            </div>
+                        </div>
+        
+                <div class="rcn-input-zone input--middle">        
+                    <label for="x" class="rcn-input__label">Mois</label>
+                        <div class="rcn-input">
+                            <select name="" id="SelectList" class="rcn-input__content">
+                                <option value="">- Séléctionner un mois -</option>
+                                <option value="">janvier</option>
+                                <option value="">février</option>
+                                <option value="" selected>mars</option>
+                            </select>
+                        </div>
+                    </div>
+        
+                <div class="rcn-input-zone">        
+                    <label for="x" class="rcn-input__label">Année</label>
+                        <div class="rcn-input">
+                            <select name="" id="SelectList" class="rcn-input__content">
+                                <option value="">- Séléctionner une année -</option>
+                                <option value="">1995</option>
+                                <option value="">1997</option>
+                                <option value="" selected>1998</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
