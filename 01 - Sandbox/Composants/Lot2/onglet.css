@@ -1,3 +1,13 @@
+@font-face {
+
+    font-family: 'RCNicon';
+
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
+
+}
+
+
+
 /* Styles pour les onglets */
 .tab {
     /* juste pour les tests:
@@ -73,3 +83,66 @@ border-top:none;
     height:0px;
 }
 
+.icon{
+     /*font-family:;*/
+}
+
+.buttonn__iconn::before{
+    content:'hey';
+}
+
+.buttonn:hover .buttonn__iconn::before{
+    content:'yo';
+}
+
+
+.buttonn::after{
+    /*font-family:;*/
+    content:'hey';
+}
+
+.buttonn:hover::after{
+    /*font-family:;*/
+    content:'yo';
+}
+
+
+.buttonn{
+    color:red;
+}
+
+.buttonn:hover{
+    color:green;
+}
+
+.notif{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap : 20px;
+    background-color: blue;
+    margin-top:50px;
+    padding :10px;
+}
+
+.notif::before{
+    font-family: 'RCNicon';
+    content: "\e938";
+    color : red;
+    font-size: 1,3rem;
+}
+
+.notiftext{
+    flex-grow: 1;
+}
+
+.notificon{
+    align-self:flex-start;
+}
+
+.testicon::before{
+    font-family: 'RCNicon';
+    content: "\e938";
+    color:black;
+}
