@@ -158,6 +158,53 @@
     gap:8px;
 }
 
+.rcn-input__errorZone{
+    display: flex;
+    flex-direction:row;
+    gap:8px;
+    color:red;
+
+}
+
+.rcn-input__errorIcon::before{
+    font-family: 'RCNicon';
+    content: "\e921";
+    text-decoration:none;
+    font-style:normal;
+
+}
+
+.rcn-input__errorZone[hidden]{
+    height:0px;
+    display: none;
+    width:0px;
+}
+
+
+.rcn-input__successZone{
+    display: flex;
+    flex-direction:row;
+    gap:8px;
+    color:green;
+
+}
+
+.rcn-input__successIcon::before{
+    font-family: 'RCNicon';
+    content: "\e920";
+    text-decoration:none;
+    font-style:normal;
+
+}
+
+.rcn-input__successZone[hidden]{
+    height: 0px;
+    display: none;
+    width:0px;
+}
+
+
+
 .rcn-input__informationZone--error{
     color:red;
 }
