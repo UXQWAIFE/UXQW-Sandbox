@@ -30,7 +30,7 @@
             </div>
             <div class="rcn-input__informationZone rcn-input__informationZone--error">
                 <p class="sr-only"></p>
-                <i class="mdi mdi-close-outline"></i>
+                <i class="mdi mdi-close-outline rcn-input__informationZoneIcon--error"></i>
                 erreur machin machin
             </div> 
         </div>
@@ -82,26 +82,26 @@
         <div class="rcn-input-zone">        
             <label for="x" class="rcn-input__label">Label input</label>
             <div class="rcn-input">
-                <button class="input__unit">
+                <div class="input__unit">
                     <div>€</div>
-                </button>
+                </div>
                 <input id="x" type="number" col="5" row="2" class="rcn-input__content rcn-input__content--withunit">
 
 
             </div>
         </div>
 
-        <!--imput price-select-test -->
+        <!--imput price-select-->
 
         <div class="rcn-input-zone">        
             <label for="x" class="rcn-input__label">Label input</label>
             <div class="rcn-input">
                 <select name="" id="x" class="rcn-input__content input__unit input__unit--selected">
-                    <option value="">£</option>
-                    <option value="">$</option>
-                    <option value="" selected>€</option>
+                    <option class="rcn-input__option" value="">£</option>
+                    <option class="rcn-input__option" value="">$</option>
+                    <option class="rcn-input__option" value="" selected>€</option>
                 </select>
-                <input id="x" type="number" col="5" row="5" class="rcn-input__content rcn-input__content--withunit">
+                <input id="x" type="number" col="5" row="5" class="rcn-input__content rcn-input__content--withunit rcn-input__content--select">
 
 
             </div>

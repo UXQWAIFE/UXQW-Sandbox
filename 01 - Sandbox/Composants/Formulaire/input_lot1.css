@@ -22,8 +22,8 @@
     gap:32px;
     /* à ne pas prendre en compte, juste pour l'exemple*/
     padding:32px;
-    background-color: blueviolet;
-    width:800px;
+    background-color: white;
+    width:480px;
 }
 
 /* la zone d'un input avec label etc.*/
@@ -32,7 +32,7 @@
     flex-direction:column;
     gap: 8px;
     /* à ne pas prendre en compte, juste pour l'exemple*/
-    background-color: rgb(197, 166, 226);
+    background-color: white;
 
 }
 
@@ -70,17 +70,19 @@
 .rcn-input{
     display:flex;
     flex-direction:row;
-    gap:0px;
+    gap:2px;
     border: 1px solid;
     border-color:black;
     border-radius:2px;
     justify-content:space-between;
+    background-color: white
 
 }
 
 
 .rcn-input:has( .rcn-input__content[disabled]){
     border-color:mediumturquoise;
+    background-color: #bbbbbb;
 }
 
 
@@ -100,6 +102,7 @@
     align-items: center;
 }
 
+
 .rcn-input__icon[disabled]{
     background-color: #bbbbbb;
     color:purple;
@@ -113,6 +116,11 @@
     flex-grow:1;
     padding:8px;
     border-radius: 2px;
+}
+
+.rcn-input__content--select{
+
+    border-left: 1px solid black;
 }
 
 .rcn-input__content[disabled] {
@@ -140,9 +148,7 @@
     outline:2px solid orange;
 }
 
-.rcn-input__content--withicon:focus{
-  margin-right:2px;
-}
+
 
 /* message d'erreur si l'input est en erreur ou success*/
 
@@ -188,19 +194,23 @@
     gap:8px;
     align-items: center;
     order:0;
-    background-color:gainsboro;
+    background-color:#f0F0F0;
     color:rgb(80, 79, 78);
-    border-top-left-radius: 2px;
-    border-bottom-left-radius: 2px;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border:none;
-    padding-left:16px;
-    padding-right:16px;
+    padding-left:8px;
+    padding-right:8px;
 }
 
 .input__unit--selected{
     flex-grow: 0;
+    background-color: white;
+    padding-left: 6px;
+    border-right: 6px solid white;
+    color: black;
 }
 
 /* pour le textarea - pas utile dans le excel */
