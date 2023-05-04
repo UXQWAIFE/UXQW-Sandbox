@@ -60,9 +60,9 @@
             <label for="x" class="rcn-input__label">Rentre ton mot de passe plzz</label>
             <div class="rcn-input">
                 <input id="x" placeholder="aIfe4eveR" type="password" col="5" row="5" class="rcn-input__content rcn-input__content--withicon">
-                <button class="rcn-input__icon input__icon--right">
+                <button aria-pressed="true" class="rcn-input__icon input__icon--right">
                     <p class="sr-only"></p>
-                    <i class="mdi mdi-eye-outline"></i>
+                    <i class=" rcn-input__icon--password "></i>
                 </button>
             </div>
         </div>
@@ -83,9 +83,9 @@
             <label for="x" class="rcn-input__label">Label input</label>
             <div class="rcn-input">
                 <button class="input__unit">
-                    <p class="sr-only">€</p>
+                    <div>€</div>
                 </button>
-                <input id="x" type="number" col="5" row="5" class="rcn-input__content rcn-input__content--withunit">
+                <input id="x" type="number" col="5" row="2" class="rcn-input__content rcn-input__content--withunit">
 
 
             </div>
@@ -133,19 +133,19 @@
           
         </div>
 
-                <!--imput date multi-champs-->
+      <!--imput date multi-champs-->
 
                 <div class="multi-champs-date"> 
                     <div class="rcn-input-zone">        
                         <label for="x" class="rcn-input__label">Jours</label>
                             <div class="rcn-input">
                                 <select name="" id="SelectList" class="rcn-input__content">
-                                    <option value="">- Séléctionner un jour -</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="" selected>3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
+                                    <option class="rcn-input__option"value="">- Séléctionner un jour -</option>
+                                    <option class="rcn-input__option"value="">1</option>
+                                    <option class="rcn-input__option"value="">2</option>
+                                    <option class="rcn-input__option"value="" selected>3</option>
+                                    <option class="rcn-input__option"value="">4</option>
+                                    <option class="rcn-input__option"value="">5</option>
                                 </select>
                             </div>
                         </div>
@@ -154,10 +154,10 @@
                     <label for="x" class="rcn-input__label">Mois</label>
                         <div class="rcn-input">
                             <select name="" id="SelectList" class="rcn-input__content">
-                                <option value="">- Séléctionner un mois -</option>
-                                <option value="">janvier</option>
-                                <option value="">février</option>
-                                <option value="" selected>mars</option>
+                                <option class="rcn-input__option"value="">- Séléctionner un mois -</option>
+                                <option class="rcn-input__option"value="">janvier</option>
+                                <option class="rcn-input__option"value="">février</option>
+                                <option class="rcn-input__option"value="" selected>mars</option>
                             </select>
                         </div>
                     </div>
@@ -166,10 +166,10 @@
                     <label for="x" class="rcn-input__label">Année</label>
                         <div class="rcn-input">
                             <select name="" id="SelectList" class="rcn-input__content">
-                                <option value="">- Séléctionner une année -</option>
-                                <option value="">1995</option>
-                                <option value="">1997</option>
-                                <option value="" selected>1998</option>
+                                <option class="rcn-input__option"value="">- Séléctionner une année -</option>
+                                <option class="rcn-input__option"value="">1995</option>
+                                <option class="rcn-input__option"value="">1997</option>
+                                <option class="rcn-input__option"value="" selected>1998</option>
                             </select>
                         </div>
                     </div>

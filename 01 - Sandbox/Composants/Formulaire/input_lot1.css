@@ -3,21 +3,17 @@
     src: url(../../Asset/Font_icon/RCNicon.ttf);
 }
 
-i{
-    font-style:normal;
-}
+
 
 .form-icon::before{
     font-family: 'RCNicon';
     content: "\e938";
     color: BLACK;
     text-decoration:none;
-
-}
-
-i {
     font-style:normal;
+
 }
+
 
 /* la zone globale qui encadre tous les input*/
 .rcn-input-lotGlobal{
@@ -54,6 +50,7 @@ i {
     font-size: 20px;
     color:blue;
     width:auto;
+    font-weight:bold;
 }
 
 .rcn-input__asterix{
@@ -78,8 +75,10 @@ i {
     border-color:black;
     border-radius:2px;
     justify-content:space-between;
-    width:100%;
+
 }
+
+
 .rcn-input:has( .rcn-input__content[disabled]){
     border-color:mediumturquoise;
 }
@@ -119,8 +118,6 @@ i {
 .rcn-input__content[disabled] {
     background-color:#bbbbbb;
     border-color:grey;
-    color:green;
-    border-radius: 2px ;
 }
 
 .rcn-input__content--withicon{
@@ -134,9 +131,6 @@ i {
 }
 
 
-input::placeholder{
-    color:gray;
-}
 
 .rcn-input__content::placeholder{
     color:palevioletred;
@@ -144,6 +138,10 @@ input::placeholder{
 
 .rcn-input__content:focus{
     outline:2px solid orange;
+}
+
+.rcn-input__content--withicon:focus{
+  margin-right:2px;
 }
 
 /* message d'erreur si l'input est en erreur ou success*/
@@ -160,6 +158,25 @@ input::placeholder{
 
 .rcn-input__informationZone--success{
     color:greenyellow;
+}
+
+/* Pour l'input password */
+
+.rcn-input__icon--password::before{
+    font-family: 'RCNicon';
+    content: "\e92a";
+    color: BLACK;
+    text-decoration:none;
+    font-style:normal;
+}
+
+
+.rcn-input__icon[aria-pressed="true"] .rcn-input__icon--password::before{
+    font-family: 'RCNicon';
+    content: "\e92b";
+    color: BLACK;
+    text-decoration:none;
+    font-style:normal;
 }
 
 /* pour l'input price picker : la zone unit (toujours placée à gauche de l'input) */
@@ -184,17 +201,12 @@ input::placeholder{
 
 .input__unit--selected{
     flex-grow: 0;
-    padding-right:2rem;
 }
 
-/* pour le textarea*/
+/* pour le textarea - pas utile dans le excel */
 
 textarea:focus {
     outline:2px solid orange;
-}
-
-.rcn-input__label--textArea{
-    height: 40px;
 }
 
 /* pour la date multi-champs*/
