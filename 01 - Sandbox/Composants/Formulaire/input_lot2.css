@@ -192,27 +192,44 @@ fieldset {
   legend {
     padding-inline-start: 0; padding-inline-end: 0;
   }
+
+
+  /*Fieldset*/ 
+    .RCN-input__fieldset {
+    background-color:white;
+    border:1px solid grey;
+    padding:48px 48px;
+    margin-bottom:16px;
+}
+
+    .RCN-input__fieldset-legend {
+    font-family: mariane;
+    font-size:40px;
+    color:black;
+    background-color:white;
+}
+
+
 /* Design Input type file*/
 
-fieldset {
-    appearance:none;
+.rcn-input__fieldset--as-inputFile {
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='2' ry='2' stroke='%23333' stroke-width='1' stroke-dasharray='10%2c10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
     border-radius: 2px;
     border:none;
 }
 
-fieldset legend {
+.rcn-input__fieldset-legend--as-inputFile {
     color:#000;
     font-size: 1rem;
-    display:block;
+    
     font-weight: bold;
-    width:100%;
     margin-bottom:1rem;
-    padding:0;
+    
+    
     /* reset des éléments du navigateur > faudrait lui créer une classe appart*/
-    position:initial;
+    
     padding-block-end: 3rem;
-    padding-inline-start: 0rem;
+    
 }
 
 .RCN_Input-file{
@@ -299,6 +316,23 @@ input[type="file"] {
     line-height: 1rem;
     vertical-align: inherit;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Input checkbox*/
 
@@ -432,6 +466,7 @@ select {
     background-color: aqua;
     padding: 30px 30px;
   }
+
 
 
 

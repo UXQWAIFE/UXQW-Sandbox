@@ -8,6 +8,8 @@ i {
     font-style:normal;
 }
 
+
+/*CSS du lot 1 pour faire marcher le test*/
 /* la zone globale qui encadre tous les input*/
 .rcn-input-lotGlobal{
     display:flex;
@@ -15,87 +17,409 @@ i {
     gap:32px;
     /* à ne pas prendre en compte, juste pour l'exemple*/
     padding:32px;
-    background-color: blueviolet;
+   
     width:800px;
 }
 
 /* la zone d'un input avec label etc.*/
-.rcn-input-zone{
+.rcn-input--as-inputGroup{
     display:flex;
     flex-direction:column;
     gap: 8px;
     /* à ne pas prendre en compte, juste pour l'exemple*/
     background-color: rgb(197, 166, 226);
+    margin-bottom:16px ;
 
 }
 
-/* la zone label */
+/* la zone label obligatoire.*/
 
-.rcn-input__label {
+.rcn-mandatoryZone{
+    display:flex;
+    flex-direction:row;
+    gap:8px;
+    background-color: rgb(120, 172, 224);
+    justify-content: flex-start;
+}
+
+.rcn-label {
     font-size: 20px;
     color:blue;
     width:auto;
-    font-weight: bold;
+}
+
+.rcn-asterix{
+    font-size:23px;
+    color:red;
+}
+
+/* la zone du texte descriptif sous le label - pas à mettre dans le excel ça sera le body*/
+
+.rcn-input-textZone{
+    font-size:16px;
+    color:purple;
+}
+
+.input-test-cle::after{
+
+    font-family: 'RCNicon';
+    content: "\e938";
+    color: BLACK;
+    text-decoration:none;
+
+}
+
+/* la d'input qui contient input+icones */
+
+.rcn-input{
+    display:flex;
+    flex-direction:row;
+    gap:0px;
+    border: 1px solid;
+    border-color:black;
+    border-radius:2px;
+    justify-content:space-between;
+    width:100%;
+}
+.rcn-input:has( .rcn-content[disabled]){
+    border-color:mediumturquoise;
 }
 
 
-/* Input checkbox*/
-
-.checkbox__content{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap:8px;
-    background-color: pink;
+.rcn-imput--error{
+    border-color:red;
 }
 
-/* box qui content label + icon checkbox*/
-.rcn-input__btnboxZone{
+/* la zone icon (toujours placée à droite de l'input) */
+
+.rcn-icon{
+    background:white;
+    border:none;
+    color:black;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.rcn-icon[disabled]{
+    background-color: #bbbbbb;
+
+}
+
+/* l'input"natif" > (dans le excel: rcn-inputs__content)*/
+
+.rcn-content{
+    border:none;
+    flex-grow:1;
+    padding:8px;
+    border-radius: 2px;
+}
+
+.rcn-content[disabled] {
+    background-color:#bbbbbb;
+    border-color:grey;
+    color:green;
+    border-radius: 2px ;
+}
+
+.rcn-content--withicon{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+
+
+input::placeholder{
+    color:gray;
+}
+
+.rcn-content::placeholder{
+    color:palevioletred;
+}
+
+.rcn-content:focus{
+    outline:2px solid orange;
+}
+
+
+/* pour l'input price picker : la zone unit (toujours placée à gauche de l'input) */
+
+.unit{
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    gap:8px;
+    align-items: center;
+    order:0;
+    background-color:gainsboro;
+    color:rgb(80, 79, 78);
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border:none;
+    padding-left:16px;
+    padding-right:16px;
+}
+
+.unit--selected{
+    flex-grow: 0;
+    padding-right:2rem;
+}
+
+
+
+/*FIN DU CSS du lot 1 pour faire marcher le test*/
+
+
+
+/* reset fieldset*/
+fieldset {
+    display: block;
+    margin-inline-start: 0 ;
+    margin-inline-end: 0px;
+    border: none;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    min-inline-size: min-content;
+  }
+  
+  legend {
+    padding-inline-start: 0; padding-inline-end: 0;
+  }
+
+
+  /*Fieldset*/ 
+    .RCN-fieldset {
+    background-color:white; /*à ne pas mettre, juste pour l'exemple*/
+    border:1px solid grey;
+    padding:48px 48px;
+    margin-bottom:16px;
+}
+
+    .RCN-fieldset-legend {
+    font-family: mariane; /*à ne pas mettre, juste pour l'exemple*/
+    font-size:40px; /*à ne pas mettre, juste pour l'exemple*/
+    color:black; /*à ne pas mettre, juste pour l'exemple*/
+   
+}
+
+/* Design Fieldset price piker + checkboxes et radioboxes*/
+.rcn-fieldset--as-multipleInputs {
+    display:flex;
+    flex-direction:column;
+    border:none;
+    padding: 8px 0px 0px 0px;
+    margin-bottom:0px;
+    gap:4px;
+}
+
+.rcn-fieldsetLegend--as-multipleInputs {
+    
+    font-family: mariane; /*à ne pas mettre, juste pour l'exemple*/
+    font-size:16px; /*à ne pas mettre, juste pour l'exemple*/
+    color:black; /*à ne pas mettre, juste pour l'exemple*/
+    font-weight:bold;/*à ne pas mettre, juste pour l'exemple*/
+}
+
+.sr-only /* pour que le label du price picker n'apparaisse pas, mais soit lisible au lecteur d'écran*/
+{   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+}
+
+
+
+/* Design Input type file*/
+
+.rcn-fieldset--as-inputFile {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='2' ry='2' stroke='%23333' stroke-width='1' stroke-dasharray='10%2c10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+    border-radius: 2px;
+    border:none;
+    background-color:white;/*à ne pas mettre, juste pour l'exemple*/
+    padding:0px;
+}
+
+.rcn-fieldsetLegend--as-inputFile {
+    color:#000;/*à ne pas mettre, juste pour l'exemple*/
+    font-size: 1rem;/*à ne pas mettre, juste pour l'exemple*/
+    font-weight: bold;/*à ne pas mettre, juste pour l'exemple*/
+    
+    
+    /* reset des éléments du navigateur > faudrait lui créer une classe appart*/
+    padding-block-end: 3rem;
+
+}
+
+
+
+label {
+    color:#000;
+    font-size: 1rem;
+    display:block;
+    font-weight: bold;
+    width:100%;
+    margin:0 1rem 0 0;
+    padding:0;
+    border:none;
+    cursor:pointer;
+}
+label * {
+    display:block;
+    width:100%;
+    text-align: center;
+}
+label > i {
+    font-size:3rem;
+}
+.RCN_Btn_secoondary {
+    display: block;
+    width:fit-content;
+    border:1px solid #5770be;
+    padding:0.5rem 0.75rem;
+    color:#5770be;
+    font-size: 1rem;;
+    margin:1rem auto 1rem auto;
+    border-radius: 5px;
+    position:relative;
+}
+.RCN_Btn_secoondary:hover {
+    background:#ffffffcc;
+    color:#4662A6;
+    border-color:#4662A6;
+}
+
+/* pour que l'input type file existe encore mais qu'il soit pas accessible*/
+input[type="file"] {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 1px;
+    height: 1px;
+}
+
+.RCN_ListTlv-container {
+    display:flex;
+    flex-direction: row;
+    margin: 1rem auto 0 auto;
+    padding:0;
+    list-style: none;
+    width:100%;
+    text-align: center;
+    
+}
+
+.RCN_ListTlv-container li {
+    display:inline-block;
+    margin:0.25rem 1rem;
+    min-width: 12%;
+}
+
+.RCN_ListTlv-chips {
+    color:#000;
+    font-size: 1rem;
+    border-radius: 1.25rem;
+    padding:0.5rem 0.75rem;
+    background:#E6EAF5;
+    cursor:pointer;
+    border:none;
+    vertical-align: middle;
+}
+.RCN_ListTlv-chips:hover, .RCN_ListTlv-chips:focus {
+    background: #AAB7DE;
+}
+.RCN_ListTlv-chips i {
+    display: inline;
+    line-height: 1rem;
+    vertical-align: inherit;
+}
+
+
+
+
+
+
+
+/* Input checkbox et radiobox*/
+
+
+/* box qui contient label + icon checkbox*/
+.rcn-fieldset__checkboxRadioboxZone{
+    display: flex;
+    flex-direction: row;
     gap:8px;
 }
 
 /* Permet de faire en sorte que l'icon checkbox ou radiobox natif n'apparaisse pas*/
-.rcn-input__btnboxIcon{
+.rcn-btnboxIcon{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     appearance: none;
 }
 
-
-input[type="checkbox"]:checked + .label-check{
-    color:blue;
+/* Test pour checkbox*/
+.rcn-input__label--as-checkbox {
+    font-weight:normal;
 }
 
-/*ça c'est un test mais ça fonctionne pas*/
-
-.input-btnbox[type="checkbox"]:checked + .label-check{
-    color:blue;
+.rcn-input--as-checkbox:checked + .rcn-input__label--as-checkbox{
+    color:#5770be;
+    font-weight:bold;
 }
 
-/*fin du test*/
-
-
-input[type="checkbox"]::before{
-
+.rcn-input--as-checkbox::before{
     font-family:'RCNicon';
     content: "\e939";
     color:black;
-
 }
 
-input[type="checkbox"]:checked::before{
-
+.rcn-input--as-checkbox:checked::before{
     font-family:'RCNicon';
     content: "\e938";
-    color:blue;
-
+    color:#5770BE;
 }
 
+
 /* Test pour l'input radio*/
+
+.rcn-input__label--as-radiobox {
+    font-weight:normal;
+}
+
+.rcn-input--as-radiobox:checked + .rcn-input__label--as-radiobox {
+    color:#5770be;
+    font-weight:bold;
+}
+
+.rcn-input--as-radiobox::before{
+    font-family:'RCNicon';
+    content: "\e93b";
+    color:black;
+}
+
+.rcn-input--as-radiobox:checked::before{
+    font-family:'RCNicon';
+    content: "\e93a";
+    color:#5770BE;
+}
+
+
+
+
+
+
+
+
+
+
+/* box qui contient label + icon checkbox*/
+
+
 
 input[type="radio"]:checked + .label-check{
     color:blue;
@@ -119,6 +443,7 @@ input[type="radio"]:checked::before{
     color:blue;
 
 }
+
 
 
 

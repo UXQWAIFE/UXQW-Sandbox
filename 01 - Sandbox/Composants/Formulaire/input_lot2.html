@@ -13,11 +13,56 @@
     <div class="rcn-input-lotGlobal">
 
        
+         <!--Fieldset 1-->
+
+ <fieldset class="RCN-input__fieldset">
+    <legend class="RCN-input__fieldset-legend">Titre du fieldset</legend>
+
+        <div class="rcn-input-zone">
+            <div class="rcn-input__mandatoryZone">
+                <label for="x" class="rcn-input__label">Label input</label>
+                <div class="rcn-input__asterix">*</div> 
+            </div> 
+            <div class="rcn-input-textZone">texte explicatif (si besoin)</div> 
+            <div class="rcn-input rcn-imput--error">
+                <input id="x" type="text" col="5" row="5" class="rcn-input__content rcn-input__content--withicon">
+                <button class="rcn-input__icon input__icon--right">
+                    <p class="sr-only"></p>
+                    <i class="form-icon"></i>
+                </button>
+
+            </div>
+            <div class="rcn-input__informationZone rcn-input__informationZone--error">
+                <p class="sr-only"></p>
+                <i class="mdi mdi-close-outline"></i>
+                erreur machin machin
+            </div> 
+        </div>
+
+        <div class="rcn-input-zone">        
+            <label for="x" class="rcn-input__label">Label input</label>
+            <div class="rcn-input" >
+                <input id="x" type="text" col="5" row="5" disabled class="rcn-input__content rcn-input__content--withicon" placeholder="chalu">
+                <button disabled class="rcn-input__icon input__icon--right">
+                    <p class="sr-only"></p>
+                    <i class="mdi mdi-heart"></i>
+                </button>
+
+            </div>
+            <div class="rcn-input__informationZone rcn-input__informationZone--success">
+                <p class="sr-only"></p>
+                <i class="mdi mdi-check-outline"></i>
+                bravo clarou t'es la meilleur dev
+            </div> 
+        </div>
+    </fieldset>
+
+
 
           <!--imput import de fichier-->
         
-        <fieldset class="RCN_Input-file">
-            <legend class="rcn-input__label">Importers votre/vos fichier(s)</legend>
+        <fieldset class="RCN_Input-file rcn-input__fieldset--as-inputFile">
+            <legend class="rcn-input__label rcn-input__fieldset-legend--as-inputFile">Importers votre/vos fichier(s)</legend>
 
             <label for="FileZone">
                 <i class="mdi mdi-tray-arrow-up"></i>
@@ -120,6 +165,7 @@
             <option selected value="option3">Option 3</option>
         </select>
     </div>
+
 
 
     </div>
