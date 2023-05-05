@@ -1,10 +1,7 @@
 @font-face {
-
-    font-family: 'RCNicon';
-
-    src: url(../../Asset/Font_icon/RCNicon.ttf);
-
-}
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
+    }
 
 
 
@@ -125,10 +122,9 @@ border-top:none;
     margin-top:50px;
     padding :10px;
 }
-
 .notif::before{
     font-family: 'RCNicon';
-    content: "\e938";
+    content: "\e938";
     color : red;
     font-size: 1,3rem;
 }
@@ -140,9 +136,9 @@ border-top:none;
 .notificon{
     align-self:flex-start;
 }
-
-.testicon::before{
+.notificon::before{
     font-family: 'RCNicon';
-    content: "\e938";
-    color:black;
+    content: "\e939";
+    color : red;
+    font-size: 1,3rem;
 }
