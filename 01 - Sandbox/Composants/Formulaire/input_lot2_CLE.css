@@ -417,34 +417,3 @@ input[type="file"] {
 
 
 
-/* box qui contient label + icon checkbox*/
-
-
-
-input[type="radio"]:checked + .label-check{
-    color:blue;
-}
-
-
-.icon-radio::before{
-
-    font-family:'RCNicon';
-    content: "\e93b";
-    color:black;
-
-}
-
-
-
-input[type="radio"]:checked::before{
-
-    font-family:'RCNicon';
-    content: "\e93a";
-    color:blue;
-
-}
-
-
-
-
-

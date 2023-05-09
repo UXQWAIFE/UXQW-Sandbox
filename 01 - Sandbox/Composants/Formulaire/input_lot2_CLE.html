@@ -90,7 +90,7 @@
 
         <div class="rcn-input--as-inputGroup">
             <div class="rcn-mandatoryZone">
-                <label for="x" class="rcn-label">Label input</label>
+                <label for="x" class="rcn-input__label">Label input</label>
                 <div class="rcn-asterix">*</div> 
             </div> 
             <div class="rcn-input-textZone">texte explicatif (si besoin)</div> 
@@ -110,7 +110,7 @@
         </div>
 
         <div class="rcn-input--as-inputGroup">        
-            <label for="x" class="rcn-label">Label input</label>
+            <label for="x" class="rcn-input__label">Label input</label>
             <div class="rcn-input" >
                 <input id="x" type="text" col="5" row="5" disabled class="rcn-content rcn-content--withicon" placeholder="chalu">
                 <button disabled class="rcn-icon icon--right">
@@ -133,7 +133,7 @@
         
         <div class="rcn-input--as-inputGroup">
         <fieldset class="RCN-fieldset rcn-fieldset--as-inputFile">
-            <legend class="rcn-label rcn-fieldsetLegend--as-inputFile">Importer votre/vos fichier(s)</legend>
+            <legend class="rcn-input__label rcn-fieldsetLegend--as-inputFile">Importer votre/vos fichier(s)</legend>
             <label for="FileZone">
                 <i class="mdi mdi-tray-arrow-up"></i>
                 <p class="text-Info">Glisser - déposer un fichier ou</p>
@@ -184,10 +184,21 @@
             </div>
         </fieldset>
     </div>
+   
 
+   <!--imput sélection unique -->
 
-
-    </div>
+        <div class="rcn-input--as-inputGroup">        
+        <label for="x" class="rcn-input__label">Faites un choix</label>
+            <div class="rcn-input">
+                <select name="" id="x" class="rcn-content rcn-input__content">
+                    <option class="rcn-input__option" value="">- Séléctionner une option -</option>
+                    <option class="rcn-input__option" value="">Choix 1</option>
+                    <option class="rcn-input__option" value="">Choix 2</option>
+                    <option class="rcn-input__option" value="" selected>Choix 3</option>
+                </select>
+            </div>
+        </div>
 
     </div>
 </body>       
