@@ -1,0 +1,505 @@
+@font-face {
+    font-family: 'RCNicon';
+    src: url(../Bureau/RCNicon.ttf);
+}
+
+
+i {
+    font-style:normal;
+}
+
+
+
+.form-icon::before{
+    font-family: 'RCNicon';
+    content: "\e938";
+    color: BLACK;
+    text-decoration:none;
+    font-style:normal;
+
+}
+
+
+/* la zone globale qui encadre tous les input*/
+.rcn-input-lotGlobal{
+    display:flex;
+    flex-direction:column;
+    gap:32px;
+    /* à ne pas prendre en compte, juste pour l'exemple*/
+    padding:32px;
+    background-color: white;
+    width:480px;
+}
+
+
+
+
+/* la zone d'un input avec label etc.*/
+.rcn-inputGroup{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    /* à ne pas prendre en compte, juste pour l'exemple*/
+    background-color: white;
+
+}
+
+
+
+
+/* la zone label obligatoire.*/
+
+.rcn-input__mandatoryZone{
+    display:flex;
+    flex-direction:row;
+    gap:8px;
+    background-color: rgb(120, 172, 224);
+    justify-content:flex-start;
+}
+
+.rcn-input__label {
+    font-size: 20px;
+    color:black;
+    width:auto;
+    font-weight:bold;
+}
+
+.rcn-input__asterix{
+    font-size:23px;
+    color:red;
+}
+
+/* la zone du texte descriptif sous le label - pas à mettre dans le excel ça sera le body*/
+
+.rcn-input-textZone{
+    font-size:16px;
+    color:purple;
+}
+
+/* la d'input qui contient input+icones */
+
+
+.rcn-input{
+    display:flex;
+    flex-direction:row;
+    gap:0px;
+    border: 1px solid;
+    border-color:black;
+    border-radius:2px;
+    justify-content:space-between;
+    width:100%;
+}
+
+
+
+
+
+.rcn-input:has( .rcn-input__content[disabled]){
+    border-color:mediumturquoise;
+    background-color: #bbbbbb;
+}
+
+
+.rcn-imput--error{
+    border-color:red;
+}
+
+/* la zone icon (toujours placée à droite de l'input) */
+
+.rcn-input__icon{
+    background:white;
+    border:none;
+    color:black;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+
+.rcn-input__icon[disabled]{
+    background-color: #bbbbbb;
+    color:purple;
+    
+}
+
+/* l'input"natif" > (dans le excel: rcn-inputs__content)*/
+
+.rcn-input__content{
+    border:none;
+    flex-grow:1;
+    padding:8px;
+    border-radius: 2px;
+}
+
+.rcn-input__content--select{
+
+    border-left: 1px solid black;
+}
+
+.rcn-input__content[disabled] {
+    background-color:#bbbbbb;
+    border-color:grey;
+}
+
+.rcn-input__content--withicon{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.rcn-input__content--withunit{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+
+
+.rcn-input__content::placeholder{
+    color:palevioletred;
+}
+
+.rcn-input__content:focus{
+    outline:2px solid orange;
+}
+
+
+
+/* message d'erreur si l'input est en erreur ou success*/
+
+.rcn-input__informationZone{
+    display: flex;
+    flex-direction:row;
+    gap:8px;
+}
+
+.rcn-input__errorZone{
+    display: flex;
+    flex-direction:row;
+    gap:8px;
+    color:red;
+
+}
+
+.rcn-input__errorIcon::before{
+    font-family: 'RCNicon';
+    content: "\e921";
+    text-decoration:none;
+    font-style:normal;
+
+}
+
+.rcn-input__errorZone[hidden]{
+    height:0px;
+    display: none;
+    width:0px;
+}
+
+
+.rcn-input__successZone{
+    display: flex;
+    flex-direction:row;
+    gap:8px;
+    color:green;
+
+}
+
+.rcn-input__successIcon::before{
+    font-family: 'RCNicon';
+    content: "\e920";
+    text-decoration:none;
+    font-style:normal;
+
+}
+
+.rcn-input__successZone[hidden]{
+    height: 0px;
+    display: none;
+    width:0px;
+}
+
+
+
+.rcn-input__informationZone--error{
+    color:red;
+}
+
+.rcn-input__informationZone--success{
+    color:greenyellow;
+}
+
+/* Pour l'input password */
+
+.rcn-input__icon--password::before{
+    font-family: 'RCNicon';
+    content: "\e92a";
+    color: BLACK;
+    text-decoration:none;
+    font-style:normal;
+}
+
+
+.rcn-input__icon[aria-pressed="true"] .rcn-input__icon--password::before{
+    font-family: 'RCNicon';
+    content: "\e92b";
+    color: BLACK;
+    text-decoration:none;
+    font-style:normal;
+}
+
+/* pour l'input price picker : la zone unit (toujours placée à gauche de l'input) */
+
+
+.input__unit{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    align-items: center;
+    order:0;
+    background-color:#f0F0F0;
+    color:rgb(80, 79, 78);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border:none;
+    padding-left:8px;
+    padding-right:8px;
+}
+
+.input__unit--selected{
+    flex-grow: 0;
+    background-color: white;
+    padding-left: 6px;
+    border-right: 6px solid white;
+    color: black;
+}
+
+/* pour le textarea - pas utile dans le excel */
+
+textarea:focus {
+    outline:2px solid orange;
+}
+
+/* pour la date multi-champs*/
+
+.multi-champs-date{
+    display: flex;
+    flex-direction:row;
+    gap: 16px;
+    align-items: center;
+    background-color:aqua;
+    justify-content:space-between;
+
+}
+
+.input--middle{
+    display: flex;
+    flex-grow: 1;
+}
+ 
+  /* Style pour les options sélectionnées (ce sont les seules que j'arrive à changer sachant que l'on garde le natif) */
+
+  .rcn-input__option:checked {
+    color: blue;
+    font-weight: bold;
+
+  }
+
+/*FIN DU CSS LOT 1/*
+
+/* reset fieldset*/
+fieldset {
+    display: block;
+    margin-inline-start: 0 ;
+    margin-inline-end: 0px;
+    border: none;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    min-inline-size: min-content;
+  }
+  
+  legend {
+    padding-inline-start: 0; padding-inline-end: 0;
+  }
+
+
+  /*Fieldset*/ 
+    .RCN-fieldset {
+    background-color:white; /*à ne pas mettre, juste pour l'exemple*/
+    border:1px solid grey;
+    padding:48px 48px;
+    margin-bottom:16px;
+}
+
+    .RCN-fieldset-legend {
+    font-family: mariane; /*à ne pas mettre, juste pour l'exemple*/
+    font-size:40px; /*à ne pas mettre, juste pour l'exemple*/
+    color:black; /*à ne pas mettre, juste pour l'exemple*/
+   
+}
+
+/* Design Fieldset price piker + checkboxes et radioboxes*/
+.rcn-fieldset--as-multipleInputs {
+    display:flex;
+    flex-direction:column;
+    border:none;
+    padding: 8px 0px 0px 0px;
+    margin-bottom:0px;
+    gap:4px;
+}
+
+.rcn-fieldsetLegend--as-multipleInputs {
+    
+    font-family: mariane; /*à ne pas mettre, juste pour l'exemple*/
+    font-size:16px; /*à ne pas mettre, juste pour l'exemple*/
+    color:black; /*à ne pas mettre, juste pour l'exemple*/
+    font-weight:bold;/*à ne pas mettre, juste pour l'exemple*/
+}
+
+.sr-only /* pour que le label du price picker n'apparaisse pas, mais soit lisible au lecteur d'écran*/
+{   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+}
+
+
+
+/* Design Input type file*/
+
+.rcn-fieldset--as-inputFile {
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='2' ry='2' stroke='%23333' stroke-width='1' stroke-dasharray='10%2c10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+    border-radius: 2px;
+    border:none;
+    background-color:white;/*à ne pas mettre, juste pour l'exemple*/
+    padding:0px;
+}
+
+.rcn-fieldsetLegend--as-inputFile {
+    color:#000;/*à ne pas mettre, juste pour l'exemple*/
+    font-size: 1rem;/*à ne pas mettre, juste pour l'exemple*/
+    font-weight: bold;/*à ne pas mettre, juste pour l'exemple*/
+    
+    
+    /* reset des éléments du navigateur > faudrait lui créer une classe appart*/
+    padding-block-end: 3rem;
+
+}
+
+label {
+    color:#000;
+    font-size: 1rem;
+    display:block;
+    font-weight: bold;
+    width:100%;
+    margin:0 1rem 0 0;
+    padding:0;
+    border:none;
+    cursor:pointer;
+}
+label * {
+    display:block;
+    width:100%;
+    text-align: center;
+}
+label > i {
+    font-size:3rem;
+}
+
+
+.RCN_Btn_secoondary {
+    display: block;
+    width:fit-content;
+    border:1px solid #5770be;
+    padding:0.5rem 0.75rem;
+    color:#5770be;
+    font-size: 1rem;;
+    margin:1rem auto 1rem auto;
+    border-radius: 5px;
+    position:relative;
+}
+.RCN_Btn_secoondary:hover {
+    background:#ffffffcc;
+    color:#4662A6;
+    border-color:#4662A6;
+}
+
+/* pour que l'input type file existe encore mais qu'il soit pas accessible*/
+input[type="file"] {
+    position:absolute;
+    top:0;
+    left:0;
+    width: 1px;
+    height: 1px;
+}
+
+
+/* Input checkbox et radiobox*/
+
+
+/* box qui contient label + icon checkbox*/
+.rcn-fieldset__checkboxRadioboxZone{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+}
+
+/* Permet de faire en sorte que l'icon checkbox ou radiobox natif n'apparaisse pas*/
+.rcn-btnboxIcon{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    appearance: none;
+}
+
+
+/* Test pour checkbox*/
+.rcn-input__label--as-checkbox {
+    font-weight:normal;
+}
+
+.rcn-input--as-checkbox:checked + .rcn-input__label--as-checkbox{
+    color:#5770be;
+    font-weight:bold;
+}
+
+.rcn-input--as-checkbox::before{
+    font-family:'RCNicon';
+    content: "\e939";
+    color:black;
+}
+
+.rcn-input--as-checkbox:checked::before{
+    font-family:'RCNicon';
+    content: "\e938";
+    color:#5770BE;
+}
+
+
+/* Test pour l'input radio*/
+
+.rcn-input__label--as-radiobox {
+    font-weight:normal;
+}
+
+.rcn-input--as-radiobox:checked + .rcn-input__label--as-radiobox {
+    color:#5770BE;
+    font-weight:bold;
+}
+
+.rcn-input--as-radiobox::before{
+    font-family:'RCNicon';
+    content: "\e93b";
+    color:black;
+}
+
+.rcn-input--as-radiobox:checked::before{
+    font-family:'RCNicon';
+    content: "\e93a";
+    color:#5770BE;
+}

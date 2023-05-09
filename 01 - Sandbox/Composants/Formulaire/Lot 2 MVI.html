@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Lot 2 MVI.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <div class="rcn-input-lotGlobal">
+
+       
+
+  <!--imput selection checkbox -->
+
+    <div class="rcn-inputGroup">
+        <fieldset class="RCN-fieldset rcn-fieldset--as-multipleInputs">
+            <legend class="RCN-fieldset-legend rcn-fieldsetLegend--as-multipleInputs">C'est qui vos préférés ?</legend>
+            <label for="checkbox" class="sr-only">C'est qui vos préféré?</label>
+
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="checkbox" id="checkbox" class=" rcn-btnboxIcon rcn-input--as-checkbox">
+                    <label class="rcn-input__label--as-checkbox" for="Choix1">Mathilde</label>
+                </div>
+
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="checkbox" id="checkbox" class="  rcn-btnboxIcon rcn-input--as-checkbox">
+                    <label class="rcn-input__label--as-checkbox" for="Choix1">Thibault</label>
+                </div>
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="checkbox" id="checkbox" class=" rcn-btnboxIcon rcn-input--as-checkbox">
+                    <label class="rcn-input__label--as-checkbox" for="Choix1">Clara</label>
+                </div>
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-btnboxIcon rcn-input--as-checkbox">
+                    <label class="rcn-input__label--as-checkbox" for="Choix1">JCKing</label>
+                </div>
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="checkbox" id="checkbox" class=" rcn-btnboxIcon rcn-input--as-checkbox">
+                    <label class="rcn-input__label--as-checkbox" for="Choix1">Hugo</label>
+                </div>
+            
+        </fiedset>
+    </div>
+
+    <!--imput selection radiobox-->
+
+    <div class="rcn-inputGroup">
+        <fieldset class="RCN-fieldset rcn-fieldset--as-multipleInputs">
+            <legend class="RCN-fieldset-legend rcn-fieldsetLegend--as-multipleInputs">C'est qui vos préférés ?</legend>
+            <label for="radiobox" class="sr-only">C'est qui le best collègue ?</label>
+
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="radio" id="radio" class=" rcn-btnboxIcon rcn-input--as-radiobox">
+                    <label class="rcn-input__label--as-radiobox" for="Choix1">Mathilde</label>
+                </div>
+
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="radio" id="radio" class="  rcn-btnboxIcon rcn-input--as-radiobox">
+                    <label class="rcn-input__label--as-radiobox" for="Choix1">Thibault</label>
+                </div>
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="radio" id="radio" class=" rcn-btnboxIcon rcn-input--as-radiobox">
+                    <label class="rcn-input__label--as-radiobox" for="Choix1">Clara</label>
+                </div>
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="radio" id="radio" class="rcn-btnboxIcon rcn-input--as-radiobox">
+                    <label class="rcn-input__label--as-radiobox" for="Choix1">JCKing</label>
+                </div>
+                <div class="rcn-fieldset__checkboxRadioboxZone">
+                    <input name="choix" type="radio" id="radio" class=" rcn-btnboxIcon rcn-input--as-radiobox">
+                    <label class="rcn-input__label--as-radiobox" for="Choix1">Hugo</label>
+                </div>
+            
+        </fiedset>
+    </div>
+
+
+
+
+
+    <!--Fieldset 1-->
+
+<div class="rcn-inputGroup"> 
+ <fieldset class="RCN-fieldset">
+    <legend class="RCN-fieldset-legend">Titre du fieldset</legend>
+
+        <div class="rcn-inputGroup">
+            <div class="rcn-input__mandatoryZone">
+                <label for="x" class="rcn-input__label">Label input</label>
+                <div class="rcn-input__asterix">*</div> 
+            </div> 
+            <div class="rcn-input-textZone">texte explicatif (si besoin)</div> 
+            <div class="rcn-input rcn-imput--error">
+                <input id="x" type="text" col="5" row="5" class="rcn-content rcn-content--withicon rcn-input__content">
+                <button class="rcn-icon icon--right">
+                    <p class="sr-only"></p>
+                    <i class="form-icon"></i>
+                </button>
+
+            </div>
+            <div class="rcn-informationZone rcn-informationZone--error">
+                <p class="sr-only"></p>
+                <i class="mdi mdi-close-outline"></i>
+                erreur machin machin
+            </div> 
+        </div>
+
+        <div class="rcn-inputGroup">  
+            <div class="rcn-input__mandatoryZone">      
+            <label for="x" class="rcn-input__label">Label input</label>
+            </div>
+            <div class="rcn-input" >
+                <input id="x" type="text" col="5" row="5" disabled class="rcn-content rcn-content--withicon rcn-input__content" placeholder="chalu">
+                <button disabled class="rcn-icon icon--right">
+                    <p class="sr-only"></p>
+                    <i class="mdi mdi-heart"></i>
+                </button>
+
+            </div>
+            <div class="rcn-informationZone rcn-informationZone--success">
+                <p class="sr-only"></p>
+                <i class="mdi mdi-check-outline"></i>
+                bravo clarou t'es la meilleur dev
+            </div> 
+        </div>
+    </fieldset>
+</div>
+
+
+          <!--imput import de fichier-->
+        
+        <div class="rcn-inputGroup">
+        <fieldset class="RCN-fieldset rcn-fieldset--as-inputFile">
+            <legend class="rcn-input__label rcn-fieldsetLegend--as-inputFile">Importer votre/vos fichier(s)</legend>
+            <label for="FileZone">
+                <i class="mdi mdi-tray-arrow-up"></i>
+                <p class="text-Info">Glisser - déposer un fichier ou</p>
+                <p class="RCN_Btn_secoondary">
+                    Importer un fichier
+                    <input type="file" accept="image/gif, image/jpeg, image/png" id="FileZone" name="" multiple>
+                </p>
+            </label>
+        </fieldset>
+        </div>
+
+
+        
+
+
+
+        <!--imput price-select-->
+        <div class="rcn-inputGroup">
+        <fieldset class="RCN-fieldset rcn-fieldset--as-multipleInputs">
+            <legend class="RCN-fieldset-legend rcn-fieldsetLegend--as-multipleInputs rcn-input__label">Label input</legend>       
+            <label for="x" class="sr-only">Label input</label>
+            <div class="rcn-input">
+                <select name="" id="x" class="rcn-content input__unit input__unit--selected">
+                    <option class="rcn-option" value="">£</option>
+                    <option class="rcn-option" value="">$</option>
+                    <option class="rcn-option" value="" selected>€</option>
+                </select>
+                <input id="x" type="number" col="5" row="5" class="rcn-content rcn-content--withunit rcn-content--select rcn-input__content">
+            </div>
+        </fieldset>
+    </div>
+   
+
+   <!--imput sélection unique -->
+
+        <div class="rcn-inputGroup">        
+        <label for="x" class="rcn-input__label">Faites un choix</label>
+            <div class="rcn-input">
+                <select name="" id="x" class="rcn-content rcn-input__content">
+                    <option class="rcn-input__option" value="">- Séléctionner une option -</option>
+                    <option class="rcn-input__option" value="">Choix 1</option>
+                    <option class="rcn-input__option" value="">Choix 2</option>
+                    <option class="rcn-input__option" value="" selected>Choix 3</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+</body>       
