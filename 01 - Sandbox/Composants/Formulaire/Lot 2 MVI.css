@@ -12,8 +12,8 @@ i {
 
 .form-icon::before{
     font-family: 'RCNicon';
-    content: "\e938";
-    color: BLACK;
+    content: "\e92f";
+    color:black;
     text-decoration:none;
     font-style:normal;
 
@@ -79,7 +79,7 @@ i {
 /* la d'input qui contient input+icones */
 
 
-.rcn-input{
+.rcn-input {
     display:flex;
     flex-direction:row;
     gap:0px;
@@ -463,7 +463,7 @@ input[type="file"] {
     font-weight:normal;
 }
 
-.rcn-input--as-checkbox:checked + .rcn-input__label--as-checkbox{
+.rcn-input--as-checkbox:checked + .rcn-input__label--as-checkbox {
     color:#5770be;
     font-weight:bold;
 }
@@ -502,4 +502,46 @@ input[type="file"] {
     font-family:'RCNicon';
     content: "\e93a";
     color:#5770BE;
+}
+
+
+
+
+
+/*Input combobox sélection multiple*/
+
+button {
+	background-color:transparent;
+	border-color:transparent;
+}
+
+
+.rcn-input--as-combobox {
+	display:flex;
+	flex-direction:column;
+}
+
+li {
+	list-style-type: none;
+}
+
+ul {
+	padding:0px;
+}
+
+.rcn-paragraph--as-input {
+	margin:0;
+	display:flex;
+    flex-direction:row;
+    gap:0px;
+    border: 1px solid;
+    border-color:black;
+    border-radius:2px;
+    justify-content:space-between;
+    width:100%;
+    border:none;
+    flex-grow:1;
+    padding:8px;
+    border-radius: 2px;
+    
 }
