@@ -17,9 +17,8 @@
   <!--imput selection checkbox -->
 
     <div class="rcn-inputGroup">
-        <fieldset class="RCN-fieldset rcn-fieldset--as-multipleInputs">
-            <legend class="RCN-fieldset-legend rcn-fieldsetLegend--as-multipleInputs">C'est qui vos préférés ?</legend>
-
+        <fieldset class="rcn-fieldset rcn-fieldset--as-multipleInputs">
+            <legend class="rcn-input__label rcn-fieldsetLegend--as-multipleInputs">C'est qui vos préférés ?</legend>
                 <div class="rcn-fieldset__checkboxRadioboxZone">
                     <input name="choix" type="checkbox" id="checkbox" class=" rcn-btnboxIcon rcn-input--as-checkbox">
                     <label class="rcn-input__label--as-checkbox" for="Choix1">Mathilde</label>
@@ -29,14 +28,17 @@
                     <input name="choix" type="checkbox" id="checkbox" class="  rcn-btnboxIcon rcn-input--as-checkbox">
                     <label class="rcn-input__label--as-checkbox" for="Choix1">Thibault</label>
                 </div>
+
                 <div class="rcn-fieldset__checkboxRadioboxZone">
                     <input name="choix" type="checkbox" id="checkbox" class=" rcn-btnboxIcon rcn-input--as-checkbox">
                     <label class="rcn-input__label--as-checkbox" for="Choix1">Clara</label>
                 </div>
+
                 <div class="rcn-fieldset__checkboxRadioboxZone">
                     <input name="choix" type="checkbox" id="checkbox" class="rcn-btnboxIcon rcn-input--as-checkbox">
                     <label class="rcn-input__label--as-checkbox" for="Choix1">JCKing</label>
                 </div>
+
                 <div class="rcn-fieldset__checkboxRadioboxZone">
                     <input name="choix" type="checkbox" id="checkbox" class=" rcn-btnboxIcon rcn-input--as-checkbox">
                     <label class="rcn-input__label--as-checkbox" for="Choix1">Hugo</label>
@@ -48,8 +50,8 @@
     <!--imput selection radiobox-->
 
     <div class="rcn-inputGroup">
-        <fieldset class="RCN-fieldset rcn-fieldset--as-multipleInputs">
-            <legend class="RCN-fieldset-legend rcn-fieldsetLegend--as-multipleInputs">C'est qui vos préférés ?</legend>
+        <fieldset class="rcn-fieldset rcn-fieldset--as-multipleInputs">
+            <legend class="rcn-fieldsetLegend--as-multipleInputs rcn-input__label">C'est qui vos préférés ?</legend>
 
                 <div class="rcn-fieldset__checkboxRadioboxZone">
                     <input name="choix" type="radio" id="radio" class=" rcn-btnboxIcon rcn-input--as-radiobox">
@@ -82,9 +84,9 @@
 
     <!--Fieldset 1-->
 
-<div class="rcn-inputGroup"> 
- <fieldset class="RCN-fieldset">
-    <legend class="RCN-fieldset-legend">Titre du fieldset</legend>
+
+ <fieldset class="rcn-fieldset">
+    <legend class="h1">Titre du fieldset</legend>
 
         <div class="rcn-inputGroup">
             <div class="rcn-input__mandatoryZone">
@@ -94,9 +96,8 @@
             <div class="rcn-input-textZone">texte explicatif (si besoin)</div> 
             <div class="rcn-input rcn-imput--error">
                 <input id="x" type="text"  class="rcn-content rcn-content--withicon rcn-input__content">
-                <button class="rcn-icon icon--right">
+                <button class="rcn-input__button rcn-input__button--as-chevron">
                     <p class="sr-only"></p>
-                    <i class="form-icon"></i>
                 </button>
 
             </div>
@@ -113,7 +114,7 @@
             </div>
             <div class="rcn-input" >
                 <input id="x" type="text"  disabled class="rcn-content rcn-content--withicon rcn-input__content" placeholder="chalu">
-                <button disabled class="rcn-icon icon--right">
+                <button disabled >
                     <p class="sr-only"></p>
                     <i class="mdi mdi-heart"></i>
                 </button>
@@ -126,20 +127,20 @@
             </div> 
         </div>
     </fieldset>
-</div>
+
 
 
           <!--imput import de fichier-->
         
         <div class="rcn-inputGroup">
-        <fieldset class="RCN-fieldset rcn-fieldset--as-inputFile">
+        <fieldset class="rcn-fieldset rcn-fieldset--as-inputFile">
             <legend class="rcn-input__label rcn-fieldsetLegend--as-inputFile">Importer votre/vos fichier(s)</legend>
             <label for="FileZone">
                 <i class="mdi mdi-tray-arrow-up"></i>
-                <p class="text-Info">Glisser - déposer un fichier ou</p>
-                <p class="RCN_Btn_secoondary">
+                <span class="text-Info">Glisser - déposer un fichier ou</span>
+                <p class="button--secondary">
                     Importer un fichier
-                    <input type="file" accept="image/gif, image/jpeg, image/png" id="FileZone" name="" multiple>
+                    <input class="rcn-input--as-file" type="file" accept="image/gif, image/jpeg, image/png" id="FileZone" name="" multiple>
                 </p>
             </label>
         </fieldset>
@@ -152,8 +153,8 @@
 
         <!--imput price-select-->
         <div class="rcn-inputGroup">
-        <fieldset class="RCN-fieldset rcn-fieldset--as-multipleInputs">
-            <legend class="RCN-fieldset-legend rcn-fieldsetLegend--as-multipleInputs rcn-input__label">Label input</legend>       
+        <fieldset class="rcn-fieldset rcn-fieldset--as-multipleInputs">
+            <legend class="h1 rcn-fieldsetLegend--as-multipleInputs rcn-input__label">Label input</legend>       
             <label for="x" class="sr-only">Label input</label>
             <div class="rcn-input">
                 <select name="" id="x" class="rcn-content input__unit input__unit--selected">
@@ -185,25 +186,34 @@
 
     <!--Input combobox sélection multiple -->  
     <div class="rcn-inputGroup">
-        <fieldset class="RCN-fieldset rcn-fieldset--as-multipleInputs">  
-            <legend class="RCN-fieldset-legend rcn-fieldsetLegend--as-multipleInputs rcn-input__label">
+        <fieldset class="rcn-fieldset rcn-fieldset--as-multipleInputs">  
+            <legend class="rcn-fieldsetLegend--as-multipleInputs rcn-input__label">
                 Choisissez votre préféré
             </legend>
-            <label for="x" class="sr-only">
-                Label input
-            </label>
             
-            <div class="rcn-input rcn-input--as-combobox">
+            <div class="rcn-input--as-combobox">
                 <div class="rcn-input">
-                <p id="x" class="rcn-paragraph--as-input">Choisissez parmi la liste</p>
-                <button class="rcn-icon icon--right">
-                        <p class="sr-only">
-                            déplier
-                        </p>
-                        <i class="form-icon"></i>
-                </button>
+                    <span id="x" class="rcn-input__content rcn-input__content--as-combobox">
+                        0 item(s) sélectionnés
+                    </span>
+                    <button class="rcn-input__button rcn-input__button--as-chevron" aria-expanded='true'>
+                            <span class="sr-only">
+                                Déplier la liste d'options
+                            </span>
+                    </button>
                 </div>
-                <ul>
+
+                <ul id="list" class="rcn-input__dropDownList" >
+                    <li>
+                        <label for="sx" class="rcn-input__label">Recherchez</label>
+                        <div class="rcn-input">
+                        <input id="sx" type="text" class="rcn-content rcn-content--withicon rcn-input__content">
+                            <button class=" rcn-input__button rcn-form-icon--as-searchBar">
+                                <p class="sr-only">Déplier la liste d'options</p>
+                            </button>
+                        </div>
+                    </li>
+                    
                     <li>
                     <div class="rcn-fieldset__checkboxRadioboxZone">
                         <input name="choix" type="checkbox" id="checkbox" class=" rcn-btnboxIcon rcn-input--as-checkbox">
@@ -213,7 +223,7 @@
                     <li>
                     <div class="rcn-fieldset__checkboxRadioboxZone">
                         <input name="choix" type="checkbox" id="checkbox" class="  rcn-btnboxIcon rcn-input--as-checkbox">
-                        <label class="rcn-input__label--as-checkbox" for="Choix1">Thibault</label>
+                        <label class="rcn-input__label--as-checkbox" for="Choix1">Thibault-Pepito</label>
                     </div>
                     </li>
                     <li>
@@ -231,7 +241,7 @@
                     <li>  
                     <div class="rcn-fieldset__checkboxRadioboxZone">
                         <input name="choix" type="checkbox" id="checkbox" class=" rcn-btnboxIcon rcn-input--as-checkbox">
-                        <label class="rcn-input__label--as-checkbox" for="Choix1">Daddy Hugo</label>
+                        <label class="rcn-input__label--as-checkbox" for="Choix1">ProudDaddy Hugo</label>
                     </div>
                     </li>
                 </ul>
