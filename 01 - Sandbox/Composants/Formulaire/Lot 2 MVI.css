@@ -47,7 +47,7 @@ i {
 
 
 /* la zone d'un input avec label etc.*/
-.rcn-inputGroup{
+.rcn-inputFieldBloc{
     display:flex;
     flex-direction:column;
     gap:var(--rcn-semantic-gap-vertical-200);
@@ -369,7 +369,7 @@ fieldset {
 
 
 /* Design Fieldset price piker + checkboxes et radioboxes*/
-.rcn-fieldset--as-multipleInputs {
+.rcn-fieldset--as-inputFieldBloc {
     display:flex;
     flex-direction:column;
     border:none;
@@ -400,6 +400,7 @@ fieldset {
     border:none;
     background-color:white;/*à ne pas mettre, juste pour l'exemple*/
     padding:var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
+
 }
 
 .rcn-fieldsetLegend--as-inputFile {
@@ -433,7 +434,7 @@ fieldset {
 }
 
 /* pour que l'input type file existe encore mais qu'il soit pas accessible*/
-.rcn-input--as-file{
+.rcn-inputField--as-inputFile {
     position:absolute;
     top:0;
     left:0;
@@ -446,16 +447,16 @@ fieldset {
 
 
 /* box qui contient label + icon checkbox*/
-.rcn-fieldset__checkboxRadioboxZone {
+.rcn-fieldset__checkboxRadioboxGroup {
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     gap:var(--rcn-semantic-gap-horizontal-200);
 }
 
 
 
 /* Permet de faire en sorte que l'icon checkbox ou radiobox natif n'apparaisse pas*/
-.rcn-btnboxIcon{
+.RESET-btnboxIcon {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -464,22 +465,22 @@ fieldset {
 
 
 /* Test pour checkbox*/
-.rcn-input__label--as-checkbox {
+.rcn-checkbox__label {
     font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
 }
 
-.rcn-input--as-checkbox:checked + .rcn-input__label--as-checkbox {
+.rcn-checkbox__input:checked + .rcn-checkbox__label {
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
     font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
 }
 
-.rcn-input--as-checkbox::before{
+.rcn-checkbox__input::before{
     font-family:'rcnicon';
     content: "\e939";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 }
 
-.rcn-input--as-checkbox:checked::before{
+.rcn-checkbox__input:checked::before{
     font-family:'rcnicon';
     content: "\e938";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
@@ -488,27 +489,26 @@ fieldset {
 
 /* Test pour l'input radio*/
 
-.rcn-input__label--as-radiobox {
+.rcn-radiobox__label {
     font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
 }
 
-.rcn-input--as-radiobox:checked + .rcn-input__label--as-radiobox {
+.rcn-radiobox__input:checked + .rcn-radiobox__label {
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
     font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
 }
 
-.rcn-input--as-radiobox::before{
+.rcn-radiobox__input::before{
     font-family:'rcnicon';
     content: "\e93b";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 }
 
-.rcn-input--as-radiobox:checked::before{
+.rcn-radiobox__input:checked::before{
     font-family:'rcnicon';
     content: "\e93a";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
 }
-
 
 
 
@@ -520,18 +520,25 @@ fieldset {
 	border-color:transparent;
 }
 
-.rcn-input--as-combobox {
+
+.rcn-combobox__blocAsInput {
 	display:flex;
 	flex-direction:column;
 	position:relative;
 }
+
 
 /*reset des balises li et ul*/
 li {
 	list-style-type: none;
 }
 
-.rcn-input__dropDownList {
+ul {
+    padding:0px;
+}
+
+
+.rcn-combobox__dropDownList {
 	position: absolute;
 	top: 100%;
 	border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
@@ -541,61 +548,60 @@ li {
 	width: auto;
 	padding:var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-200);
     gap:var(--rcn-semantic-gap-vertical-200);
+    background-color:white;
 }
 
-.rcn-input__dropDownList [hidden] {
+
+.rcn-combobox__dropDownList [hidden] {
     height :0px;
 }
 
 
 
-.rcn-form-icon--as-searchBar::before {
+..rcn-inputField__searchButton::before {
 	font-family:'rcnicon';
     content: "\e91d";
-    color:black;
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
     text-decoration:none;
     font-style:normal;
-
 }
 
 
-.rcn-input__button--as-chevron::before {
+.rcn-inputField__foldoutButton::before {
 	
 	content: "\e92f";
 	font-family:'rcnicon';
-    color:black;
-    text-decoration:none;
-    font-style:normal;
-
-}
-
-.rcn-input__button--as-chevron[aria-expanded='true']::before {
-	content: "\e92c";
-	font-family:'rcnicon';
-    color:black;
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
     text-decoration:none;
     font-style:normal;
 }
 
 
-.rcn-input__content--as-combobox {
+
+
+.rcn-combobox__inputContent--as-placeholder {
 	background-color:transparent;
 	border-color:transparent;
-	color:var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
+	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
 }
 
+.rcn-combobox__inputContent {
+    background-color:transparent;
+    border-color:transparent;
+    color:var(--rcn-semantic-color-interaction-text_and_icon-onstandard);
+}
 
 
 /*module de langue*/
-.rcn-inputGroup--as-languageModul {
+.rcn-inputFieldBloc--as-languageModule {
     display:flex;
     flex-direction:row;
     gap:var(--rcn-semantic-gap-horizontal-200);
     align-items:center;
-
 }
 
-.rcn-input__label--as-languageModul { 
+
+.rcn-inputFieldBloc__label--as-languageModule { 
     font-weight:normal;
     padding:0px;
     color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
