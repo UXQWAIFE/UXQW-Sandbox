@@ -12,63 +12,122 @@
 <body>
     <main class="container-globaux">
 
-        <div class="rcn-form__grid">
+        <div class="espacements-test">
+
+            <div class="rcn-form__grid">
 
 
-            <h1 class=" rcn-title rcn-form__title"> Titre du formulaire </h1>            
-            
-                <div class="rcn-stepper--vertical">
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur molestias! Sapiente, a corrupti tempora ad, suscipit dignissimos consectetur nobis id perferendis quae explicabo. Tempore adipisci fuga porro consectetur fugiat?</li>
-                        <li>xx</li>
-                        <li>xx</li>
-                        <li>xx</li>
-                        <li>xx</li>
-                    </ul>
-                </div>
-            
-                <form class="rcn-form">
+                <h1 class=" rcn-title rcn-form__titleZone"> Titre du formulaire </h1>            
                 
-                    <p class="rcn-form__mandatoryInputs"> 
-                        Les champs suivi d'un  
-                            <span class="rcn-input__asterix"> *  </span> 
-                            sont obligatoires
-                    </p>
+                    <div class="rcn-stepper--vertical">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, consequuntur molestias! Sapiente, a corrupti tempora ad, suscipit dignissimos consectetur nobis id perferendis quae explicabo. Tempore adipisci fuga porro consectetur fugiat?</li>
+                            <li>xx</li>
+                            <li>xx</li>
+                            <li>xx</li>
+                            <li>xx</li>
+                        </ul>
+                    </div>
+                
+                    <form class="rcn-form__verticalStepperContainer">
+                    
+                        <p class="rcn-form__instruction"> 
+                            Les champs suivi d'un  
+                                <span class="rcn-input__asterix"> *  </span> 
+                                sont obligatoires
+                        </p>
 
-                    <div class="rcn-form__input">
+                        <div class="rcn-form__content">
 
-                        <!--imput non-obligatoire avec message succes -->
+                            <!--imput non-obligatoire avec message succes -->
 
-                        <div class="rcn-input-zone">        
-                            <label for="x" class="rcn-input__label">Label input</label>
-                            <div class="rcn-input" >
-                                <input id="x" type="text" col="5" row="5" class="rcn-input__content " placeholder="placeholder">
-                            </div>
-                        </div>
-
-                        <!--imput obligatoire avec texte descriptif et message d'erreur -->
-
-                        <div class="rcn-input-zone">
-                            <div class="rcn-input__mandatoryZone">
+                            <div class="rcn-input-zone">        
                                 <label for="x" class="rcn-input__label">Label input</label>
-                                <div class="rcn-input__asterix">*</div> 
-                            </div> 
-                            <div class="rcn-input">
-                                <input id="x" type="text" col="5" row="5" class="rcn-input__content">
+                                <div class="rcn-input" >
+                                    <input id="x" type="text" col="5" row="5" class="rcn-input__content " placeholder="placeholder">
+                                </div>
+                            </div>
+
+                            <!--imput obligatoire avec texte descriptif et message d'erreur -->
+
+                            <div class="rcn-input-zone">
+                                <div class="rcn-input__mandatoryZone">
+                                    <label for="x" class="rcn-input__label">Label input</label>
+                                    <div class="rcn-input__asterix">*</div> 
+                                </div> 
+                                <div class="rcn-input">
+                                    <input id="x" type="text" col="5" row="5" class="rcn-input__content">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="rcn-navZone" >
+                            <button class="button--secondary">Enregistrer</button>
+                            <div class="rcn-navZone__rightZone"> 
+                                <button class="button--secondary">Précédent</button>
+                                <button class="button--primary">Suivant</button>
                             </div>
                         </div>
-                        
-                    </div>
-                    <div class="rcn-navZone" >
-                        <button class="button--secondary">Enregistrer</button>
-                        <div class="rcn-form-navZoneRight"> 
-                            <button class="button--secondary">Précédent</button>
-                            <button class="button--primary">Suivant</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
             </div>
-        </div>
+
+
+       
+
+
+
+
+
+            <form class="rcn-form__horizontalStepperContainer">
+
+                <h1 class=" rcn-title rcn-form__titleZone"> Titre du formulaire </h1>            
+                
+                <div class="stepper--horizontal">
+                </div>
+                
+                    
+                        <p class="rcn-form__instruction"> 
+                            Les champs suivi d'un  
+                                <span class="rcn-input__asterix"> *  </span> 
+                                sont obligatoires
+                        </p>
+
+                        <div class="rcn-form__content">
+
+                            <!--imput non-obligatoire avec message succes -->
+
+                            <div class="rcn-input-zone">        
+                                <label for="x" class="rcn-input__label">Label input</label>
+                                <div class="rcn-input" >
+                                    <input id="x" type="text"  class="rcn-input__content " placeholder="placeholder">
+                                </div>
+                            </div>
+
+                            <!--imput obligatoire avec texte descriptif et message d'erreur -->
+
+                            <div class="rcn-input-zone">
+                                <div class="rcn-input__mandatoryZone">
+                                    <label for="x" class="rcn-input__label">Label input</label>
+                                    <div class="rcn-input__asterix">*</div> 
+                                </div> 
+                                <div class="rcn-input">
+                                    <input id="x" type="text"  class="rcn-input__content">
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="rcn-navZone" >
+                            <button class="button--secondary">Enregistrer</button>
+                            <div class="rcn-navZone__rightZone"> 
+                                <button class="button--secondary">Précédent</button>
+                                <button class="button--primary">Suivant</button>
+                            </div>
+                        </div>
+                    
+                </form>
+
+            </div>
+   
     </main>
 </body>
 </html>

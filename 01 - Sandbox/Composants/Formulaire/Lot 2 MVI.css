@@ -558,7 +558,7 @@ ul {
 
 
 
-..rcn-inputField__searchButton::before {
+.rcn-inputField__searchButton::before {
 	font-family:'rcnicon';
     content: "\e91d";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);

@@ -1,8 +1,8 @@
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Core/CoreTokens-CHORUS.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Core/CoreTokens-CHORUS.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
 @import url('/ComponentTokensButtonPrimary.min.css');
 @import url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
 
@@ -21,6 +21,12 @@
 .container-globaux {
     display: flex;
     margin:0 5rem;
+}
+
+.espacements-test {
+    display:flex;
+    flex-direction:column;
+    gap:50px;
 }
 
 @font-face {
@@ -42,7 +48,7 @@ body, legend {
 }
 
 
-.rcn-form{
+.rcn-form__verticalStepperContainer{
 display: flex;
 flex-direction: column;
 align-items: stretch;
@@ -54,7 +60,7 @@ grid-column-start: 2;
 grid-row-start: 2;
 }
 
-.rcn-form__mandatoryInputs{
+.rcn-form__instruction{
 display: flex;
 flex-direction: row;
 width:auto;
@@ -62,7 +68,7 @@ justify-content: center;
 margin:0;
 }
 
-.rcn-form__title{
+.rcn-form__titleZone{
 display: flex;
 justify-content: center;
 grid-column-start: 2;
@@ -70,16 +76,22 @@ grid-row-start: 1;
 }
 
 
-.rcn-form__input{
+.rcn-form__content{
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
 gap:var(--rcn-semantic-gap-vertical-400);
-/* ici est ce que on met un margin-bottom;1rem?*/
 align-items: stretch;
 }
 
+.rcn-form__horizontalStepperContainer {
+    display: flex;
+    flex-direction: column;
+    gap:var(--rcn-semantic-gap-vertical-700);
+    align-items: stretch;
+}
 
+/*Nouveau composant de navigation à porter à part*/
 .rcn-navZone{
 display: flex;
 flex-direction: row;
@@ -91,7 +103,7 @@ border-bottom:none;
 padding: var(--rcn-semantic-padding-horizontal-400) 0;
 }
 
-.rcn-form-navZoneRight{
+.rcn-navZone__rightZone {
 display:flex;
 flex-direction: row;
 gap: var(--rcn-semantic-gap-horizontal-200);
@@ -105,6 +117,13 @@ background-color: aquamarine;
 display: grid;
 grid-column-start: 1;
 grid-row-start: 2;
+}
+
+
+.stepper--horizontal {
+    background-color:hotpink;
+    width:100%;
+    height:40px;
 }
 
 .rcn-title{
