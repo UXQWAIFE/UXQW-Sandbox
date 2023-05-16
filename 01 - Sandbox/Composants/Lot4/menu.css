@@ -1,4 +1,5 @@
 @import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Core/CoreTokens-ChorusPRO.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Core/CoreTokensShadow.min.css');
 @import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
 @import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
 @import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
@@ -30,40 +31,100 @@ i {
     font-style:normal;
 }
 
+
+ul {
+	list-style-type: none;
+	padding-left:0px;
+	margin:0px;
+}
+
 .containerGlobal {
-padding-right:80px;
-padding-left:80px;
+	padding-right:80px;
+	padding-left:80px;
 }
 
 .rcn-header__mainNavBanner {
-order:1;
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-gap:var(--rcn-semantic-gap-horizontal-600);
-padding-top:var(--rcn-semantic-padding-vertical-300);
-padding-bottom:var(--rcn-semantic-padding-vertical-300);
-background-color:var(--rcn-semantic-color-static-background-primary);
-align-items:center;
+	order:1;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	gap:var(--rcn-semantic-gap-horizontal-600);
+	padding-top:var(--rcn-semantic-padding-vertical-300);
+	padding-bottom:var(--rcn-semantic-padding-vertical-300);
+	background-color:var(--rcn-semantic-color-static-background-primary);
+	align-items:center;
 }
 
 .rcn-menu {
 	display:flex;
+	position:relative;
 	flex-direction:row;
 	gap:var(--rcn-semantic-gap-horizontal-600);
-	list-style-type: none;
+	padding:var(--rcn-semantic-padding-horizontal-0);
 }
 	
 .rcn-menu__entry {
+	display:flex;
+	flex-direction:row;
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-	display:box;
 	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
+	border-top:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
 	text-decoration:none;
-	font-weight:bold;
+	font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
+	gap:var(--rcn-semantic-gap-horizontal-200); /*sémantique marche pas*/
+}
+
+.rcn-menu__entry--dropDown::after {
+	font-family:'rcnicon';
+	content:'\e92f';
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+    text-decoration:none;
+    font-style:normal;
 }
 
 .rcn-menu__entry:hover {
-	border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-onprimary);
+	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+}
+
+.rcn-menu__entry[aria-current='page'] {
+	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
 
 
+.rcn-menu__dropDownList {
+	position:absolute;
+	display:flex;
+	flex-direction:column;
+	top:125%;
+	width:auto;
+	gap:1px;
+    background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+    box-shadow:var(--rcn-semantic-dropshadow-static-overlayed);
+}
+
+.rcn-menu__dropDownList[aria-hidden='true'] {
+    visibility:hidden;
+}
+
+.rcn-menu__subentry{
+	display:block;
+	border-left:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
+	border-right:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
+	padding:var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-vertical-400); /*sémantique marche pas*/
+	
+}
+
+.rcn-menu__subentry:hover {
+	display:block;
+	border-left:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
+	border-right:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-background-hover-standard);
+	background-color:var(--rcn-semantic-color-interaction-background-hover-standard);
+}
+
+.rcn-menu__subentry[aria-current='page'] {
+	display:block;
+	border-left:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
+	border-right:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
+	color:#5770BE;
+	font-weight:bold;
+}

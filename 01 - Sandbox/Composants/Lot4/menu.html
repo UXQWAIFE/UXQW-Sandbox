@@ -11,12 +11,24 @@
 <body>
  <nav class="rcn-header__mainNavBanner containerGlobal">
     <ul class="rcn-menu">
-      <li><a class="rcn-menu__entry" href="#home">Accueil <i class="mdi mdi-chevron-down"></i></a></li>
-      <li><a class="rcn-menu__entry" href="#about">Section 1</a></li>
+      <li><a class="rcn-menu__entry rcn-menu__entry--dropDown" aria-current='page' href="#home">Accueil</a>
+          <ul class="rcn-menu__dropDownList">
+            <li class="rcn-menu__subentry" aria-current='page'><a> Option 1 </a></li>
+            <li class="rcn-menu__subentry"><a> Option 2 </a></li>
+            <li class="rcn-menu__subentry"><a> Option 3 </a></li>
+          </ul>
+      </li>
+
+      <li><a class="rcn-menu__entry rcn-menu__entry--dropDown" href="#about">Section 1</a>
+          <ul class="rcn-menu__dropDownList" aria-hidden='true'>
+            <li class="rcn-menu__subentry" aria-current='page'><a> Option 1 </a></li>
+            <li class="rcn-menu__subentry"><a> Option 2 </a></li>
+            <li class="rcn-menu__subentry"><a> Option 3 </a></li>
+          </ul>
+      </li>
       <li><a class="rcn-menu__entry" href="#services">Section 2</a></li>
       <li><a class="rcn-menu__entry" href="#contact">Section 3</a></li>
     </ul>
-
     <input></input>
   </nav>
 </body>
