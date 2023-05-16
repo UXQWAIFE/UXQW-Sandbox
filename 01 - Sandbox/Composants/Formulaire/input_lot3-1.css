@@ -1,8 +1,8 @@
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Core/CoreTokens-CHORUS.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Core/CoreTokens-CHORUS.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
 @import url('/ComponentTokensButtonPrimary.min.css');
 @import url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
 
@@ -92,6 +92,7 @@ align-items: stretch;
 }
 
 /*Nouveau composant de navigation à porter à part*/
+
 .rcn-navZone{
 display: flex;
 flex-direction: row;
@@ -110,7 +111,7 @@ gap: var(--rcn-semantic-gap-horizontal-200);
 width:auto;
 }
 
-/* Class à ne pas re-use servant pour l'exemple*/
+/* Class à ne pas re-use servant pour l'exemple (à reprendre pour stepper)*/
 
 .rcn-stepper--vertical{
 background-color: aquamarine;

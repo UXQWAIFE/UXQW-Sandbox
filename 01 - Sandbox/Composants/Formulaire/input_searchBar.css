@@ -33,7 +33,7 @@ body, legend {
     clip: rect(0, 0, 0, 0); border: 0;
 }
 
-.rcn-input-zone{
+.rcn-inputFieldBloc{
     display:flex;
     flex-direction:column;
     gap: 8px;
@@ -42,14 +42,14 @@ body, legend {
 
 }
 
-.rcn-input__label {
+.rcn-inputFieldBloc__label {
     font-size: 20px;
     color:blue;
     width:auto;
     font-weight:bold;
 }
 
-.rcn-input{
+.rcn-inputField{
     display:flex;
     flex-direction:row;
     gap:2px;
@@ -57,20 +57,19 @@ body, legend {
     border-color:black;
     border-radius:2px;
     justify-content:space-between;
-    background-color: white
+    background-color: white;
+    align-items: center;
+
 
 }
-.rcn-input__content{
+.rcn-inputField__input{
     border:none;
     flex-grow:1;
     padding:8px;
     border-radius: 2px;
+    background-color: none;
 }
 
-.rcn-input__content--withicon{
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
 
 .rcn-input__icon{
     background:white;
@@ -82,6 +81,79 @@ body, legend {
     align-items: center;
 }
 
+/* Nouvelles class vues avec TCO et MVI pour input searchBar*/
+
+.rcn-input__button{
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.rcn-inputField--searchBarLarge{
+    min-width: 540px;
+
+}
+
+.rcn-input__buttonZone {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rcn-inputField__deleteButton::before{
+    content:"\e91e";
+    font-family:'RCNicon';
+    text-decoration:none;
+    font-style:normal;
+ 
+}
+
+.rcn-inputField__deleteButton{
+    border-right:1px solid gray;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.rcn-inputField__resetButton{
+    border-right:1px solid gray;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.rcn-inputField__resetButton::before{
+    content:"\e91c";
+    font-family:'RCNicon';
+    text-decoration:none;
+    font-style:normal;
+
+
+}
+
+.rcn-inputField__primaryButton--search::before{
+    content:"\e91d";
+    font-family:'RCNicon';
+    text-decoration:none;
+    font-style:normal;
+
+}
+
+.rcn-inputField__primaryButton{
+    padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-300);
+}
+
+.rcn-inputField__primaryButton--largeSearch{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+
+}
+
+
 /* Class spécifiques à l'input searchBar*/
 
 .rcn-input__button--as-magnify::before{
@@ -92,17 +164,13 @@ body, legend {
 
 }
 
-.rcn-input__button{
-    background-color: transparent;
-    border-color: transparent;
 
-}
 
 .rcn-searchBar__button{
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
     display: flex;
     flex-direction: row;
-    gap:45px;
+    gap:8px;
 }
 
 .rcn-serachBar__buttonZone{
