@@ -1,0 +1,66 @@
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Core/CoreTokens-CHORUS.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+
+
+
+@font-face {
+    font-family: 'rcnicon';
+    src: url(../Assets/rcnicon.ttf);
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+}
+
+
+body, legend {
+    font-family:'Marianne',Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}
+
+
+i {
+    font-style:normal;
+}
+
+.containerGlobal {
+padding-right:80px;
+padding-left:80px;
+}
+
+.navigation {
+	background-color:#5770BE;
+	padding-top:12px;
+	padding-bottom:12px;
+	justify-content:space-between;
+	display:flex;
+	flex-direction:row;
+}
+
+.liste {
+	display:flex;
+	flex-direction:row;
+	gap:32px;
+	list-style-type: none;
+}
+	
+
+
+a {
+	color:white;
+	display:box;
+	border-bottom: :3px solid #5770BE;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+a:hover {
+	border-bottom: 3px solid white;
+}

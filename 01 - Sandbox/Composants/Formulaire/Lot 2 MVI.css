@@ -4,7 +4,7 @@
 @import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
 @import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
 @import url('/ComponentTokensButtonPrimary.min.css');
-@import url(C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css')
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
 @import url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
 
 
@@ -575,8 +575,6 @@ ul {
     text-decoration:none;
     font-style:normal;
 }
-
-
 
 
 .rcn-combobox__inputContent--as-placeholder {
