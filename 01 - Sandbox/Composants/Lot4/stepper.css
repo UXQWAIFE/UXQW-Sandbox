@@ -1,0 +1,94 @@
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Core/CoreTokens-ChorusPRO.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Core/CoreTokensShadow.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+
+
+
+@font-face {
+    font-family: 'rcnicon';
+    src: url(../Assets/rcnicon.ttf);
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+}
+
+
+body, legend {
+    font-family:'Marianne',Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}
+
+
+
+
+.rcn-stepper {
+  display: flex;
+  flex-direction: column;
+  gap:var(--rcn-semantic-gap-vertical-500);}
+
+
+.rcn-stepper__step {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap:var(--rcn-semantic-gap-horizontal-400);
+}
+
+.rcn-stepper__number {
+  width: 32px;
+  height: 32px;
+  border-radius:50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rcn-stepper__number--uncompletedNavigable {
+background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+
+.rcn-stepper__number--uncompletedNonNavigable {
+background-color:var(--rcn-semantic-color-static-background-standard);
+border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
+}
+
+.rcn-stepper__number--disabled {
+background-color:var(--rcn-semantic-color-static-background-stepper_step_unreachable);
+border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-stepper_step_unreachable);
+color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
+}
+
+
+
+
+.rcn-stepper__sectionTitle {
+color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+
+.rcn-stepper__sectionTitle--uncompletedNonNavigable {
+color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
+text-decoration:none;
+}
+
+.rcn-stepper__sectionTitle--uncompletedNavigable {
+color:var(--rcn-semantic-color-interaction-text_and_icon-onstandard);
+}
+
+
+
+
+
+
+
+
