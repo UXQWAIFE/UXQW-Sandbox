@@ -10,167 +10,208 @@
 </head>
 
 <body>
-    <div class="rcn-input-lotGlobal">
+    <div class="rcn-formLot1">
 
            <!--imput obligatoire avec texte descriptif et message d'erreur -->
 
-        <div class="rcn-input-zone">
-            <div class="rcn-input__mandatoryZone">
-                <label for="x" class="rcn-input__label">Label input</label>
-                <div class="rcn-input__asterix">*</div> 
-            </div> 
-            <div class="rcn-input-textZone">texte explicatif (si besoin)</div> 
-            <div class="rcn-input rcn-imput--error">
-                <input id="x" type="text" col="5" row="5" class="rcn-input__content rcn-input__content--withicon">
-                <button class="rcn-input__icon input__icon--right">
-                    <p class="sr-only"></p>
-                    <i class="form-icon"></i>
-                </button>
+        <div class="rcn-inputFieldBloc">
+            <label class="rcn-inputFieldBloc__label">
+                Champ en erreur
+            </label>
+       
+            <div>texte explicatif (si besoin)</div> 
+
+            <div class="rcn-inputField rcn-inputField--error">
+                <input type="text" class="rcn-inputField__input" required>
 
             </div>
-            <div hidden class="rcn-input__errorZone" >
-                <p class="sr-only"></p>
-                <i class="rcn-input__errorIcon"></i>
+            <div  class="rcn-inputFieldBloc__errorZone" >
+                <i class="rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
                 erreur machin machin
             </div> 
         </div>
 
-        <!--imput non-obligatoire avec message succes -->
+        <!--imput obligatoire avec message succes -->
 
-        <div class="rcn-input-zone">        
-            <label for="x" class="rcn-input__label">Label input</label>
-            <div class="rcn-input" >
-                <input id="x" type="text" col="5" row="5" disabled class="rcn-input__content rcn-input__content--withicon" placeholder="chalu">
-                <button disabled class="rcn-input__icon input__icon--right">
-                    <p class="sr-only"></p>
+        <div class="rcn-inputFieldBloc">        
+            <label class="rcn-inputFieldBloc__label">Champ obligatoire désactivé avec bouton désactivé<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
+            <div class="rcn-inputField" >
+                <input type="text" disabled value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="chalu">
+
+                <button disabled class="rcn-iconButton rcn-inputField__button">
+                    <span class="sr-only"></span>
                     <i class="mdi mdi-heart"></i>
                 </button>
 
             </div>
-            <div hidden class="rcn-input__successZone">
-                <p class="sr-only"></p>
-                <i class="rcn-input__successIcon"></i>
+            <div  class="rcn-inputFieldBloc__successZone">
+                <i class="rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
                 bravo clarou t'es la meilleur dev
             </div> 
         </div>
 
-          <!--imput password-->
 
-          <div class="rcn-input-zone">        
-            <label for="x" class="rcn-input__label">Rentre ton mot de passe plzz</label>
-            <div class="rcn-input">
-                <input id="x" placeholder="aIfe4eveR" type="password" col="5" row="5" class="rcn-input__content rcn-input__content--withicon">
-                <button aria-pressed="true" class="rcn-input__icon input__icon--right">
-                    <p class="sr-only"></p>
-                    <i class=" rcn-input__icon--password "></i>
+        <!-- input avec deux boutons -->
+
+        <div class="rcn-inputFieldBloc">       
+
+            <label class="rcn-inputFieldBloc__label">2 buttons</label>
+
+            <div class="rcn-inputField">
+
+                <input placeholder="aIfe4eveR" class="rcn-inputField__input">
+
+                <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--hidePassword">
+                    <span class="sr-only"></span>
                 </button>
+
+                <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--showPassword">
+                    <span class="sr-only"></span>
+                </button>
+                
             </div>
         </div>
+
+
+        <!-- input password -->
+
+        <div class="rcn-inputFieldBloc">       
+
+            <label class="rcn-inputFieldBloc__label">Password - show button</label>
+
+            <div class="rcn-inputField">
+
+                <input placeholder="aIfe4eveR" type="password" class="rcn-inputField__input">
+
+                <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--showPassword">
+                    <span class="sr-only"></span>
+                </button>
+                
+            </div>
+        </div>
+
+        <div class="rcn-inputFieldBloc">       
+
+            <label class="rcn-inputFieldBloc__label">Password - hide button</label>
+
+            <div class="rcn-inputField">
+
+                <input placeholder="aIfe4eveR" class="rcn-inputField__input">
+
+                <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--hidePassword">
+                    <span class="sr-only"></span>
+                </button>
+                
+            </div>
+        </div>
+
 
         <!--imput date picker -->
 
-        <div class="rcn-input-zone">        
-            <label for="x" class="rcn-input__label">Choisi la date wsh!</label>
-            <div class="rcn-input">
-                <input id="x" placeholder="jj/mm/YYYY" type="date" col="5" row="5" class="rcn-input__content">
+        <div class="rcn-inputFieldBloc">        
+            <label class="rcn-inputFieldBloc__label">Datepicker</label>
+            <div class="rcn-inputField">
+                <input type="date" class="rcn-inputField__input rcn-inputField__input--datepicker">
             </div>
         </div>
-
 
         <!--imput price -->
 
-        <div class="rcn-input-zone">        
-            <label for="x" class="rcn-input__label">Label input</label>
-            <div class="rcn-input">
-                <div class="input__unit">
+        <div class="rcn-inputFieldBloc">        
+            <label class="rcn-inputFieldBloc__label">Number w/unit</label>
+            <div class="rcn-inputField">
+                <div class="rcn-inputField__unit">
                     <div>€</div>
                 </div>
-                <input id="x" type="number" col="5" row="2" class="rcn-input__content rcn-input__content--withunit">
-
-
+                <input type="number" class="rcn-inputField__input rcn-inputField__input--number">
             </div>
         </div>
 
-        <!--imput price-select-->
-
-        <div class="rcn-input-zone">        
-            <label for="x" class="rcn-input__label">Label input</label>
-            <div class="rcn-input">
-                <select name="" id="x" class="rcn-input__content input__unit input__unit--selected">
-                    <option class="rcn-input__option" value="">£</option>
-                    <option class="rcn-input__option" value="">$</option>
-                    <option class="rcn-input__option" value="" selected>€</option>
-                </select>
-                <input id="x" type="number" col="5" row="5" class="rcn-input__content rcn-input__content--withunit rcn-input__content--select">
-
-
-            </div>
-        </div>
-
-
-
+      
         <!--imput sélection unique -->
 
-        <div class="rcn-input-zone">        
-        <label for="x" class="rcn-input__label">Faites un choix</label>
-            <div class="rcn-input">
-                <select name="" id="x" class="rcn-input__content">
-                    <option class="rcn-input__option" value="">- Séléctionner une option -</option>
-                    <option class="rcn-input__option" value="">Choix 1</option>
-                    <option class="rcn-input__option" value="">Choix 2</option>
-                    <option class="rcn-input__option" value="" selected>Choix 3</option>
+        <div class="rcn-inputFieldBloc">        
+        <label class="rcn-inputFieldBloc__label">Select</label>
+            <div class="rcn-inputField">
+                <select name="" class="rcn-inputField__input rcn-inputField__input--select">
+                    <option class="rcn-inputField__option" value="">- Séléctionner une option -</option>
+                    <option class="rcn-inputField__option" value="">Choix 1</option>
+                    <option class="rcn-inputField__option" value="">Choix 2</option>
+                    <option class="rcn-inputField__option" value="" selected>Choix 3</option>
                 </select>
             </div>
         </div>
 
         <!--imput text-area-->
 
-        <div class="rcn-input-zone">        
-            <label class="rcn-input__label rcn-input__label--textArea" for="inLabel">
-                Label input text area 
+        <div class="rcn-inputFieldBloc">        
+            <label class="rcn-inputFieldBloc__label">
+                Text area 
             </label>
-            <textarea rows="5"  id="inLabel" placeholder="Votre texte" type="text"></textarea>
-          
+            <div class="rcn-inputField">
+                <textarea rows="3" placeholder="Votre texte" type="text" class="rcn-inputField__input rcn-inputField__input--textArea"></textarea>
+            </div>
         </div>
 
       <!--imput date multi-champs-->
 
-                <div class="multi-champs-date"> 
-                    <div class="rcn-input-zone">        
-                        <label for="x" class="rcn-input__label">Jours</label>
-                            <div class="rcn-input">
-                                <select name="" id="SelectList" class="rcn-input__content">
-                                    <option class="rcn-input__option"value="">- Séléctionner un jour -</option>
-                                    <option class="rcn-input__option"value="">1</option>
-                                    <option class="rcn-input__option"value="">2</option>
-                                    <option class="rcn-input__option"value="" selected>3</option>
-                                    <option class="rcn-input__option"value="">4</option>
-                                    <option class="rcn-input__option"value="">5</option>
-                                </select>
-                            </div>
-                        </div>
-        
-                <div class="rcn-input-zone input--middle">        
-                    <label for="x" class="rcn-input__label">Mois</label>
-                        <div class="rcn-input">
-                            <select name="" id="SelectList" class="rcn-input__content">
-                                <option class="rcn-input__option"value="">- Séléctionner un mois -</option>
-                                <option class="rcn-input__option"value="">janvier</option>
-                                <option class="rcn-input__option"value="">février</option>
-                                <option class="rcn-input__option"value="" selected>mars</option>
-                            </select>
-                        </div>
-                    </div>
-        
-                <div class="rcn-input-zone">        
-                    <label for="x" class="rcn-input__label">Année</label>
-                        <div class="rcn-input">
-                            <select name="" id="SelectList" class="rcn-input__content">
-                                <option class="rcn-input__option"value="">- Séléctionner une année -</option>
-                                <option class="rcn-input__option"value="">1995</option>
-                                <option class="rcn-input__option"value="">1997</option>
-                                <option class="rcn-input__option"value="" selected>1998</option>
-                            </select>
-                        </div>
+        <div class="rcn-fieldset--as-inputFieldBloc "> 
+            <legend class="rcn-fieldset__legend--as-inputLabel">Date de naissance</legend>
+            <div class="rcn-fieldset__horizontalInputs">
+                <div class="rcn-inputFieldBloc">        
+                    <label class="rcn-inputFieldBloc__label">Jours</label>
+                    <div class="rcn-inputField">
+                        <select class="rcn-inputField__input">
+                            <option class="rcn-inputField__option"value="">- Séléctionner un jour -</option>
+                            <option class="rcn-inputField__option"value="">1</option>
+                            <option class="rcn-inputField__option"value="">2</option>
+                            <option class="rcn-inputField__option"value="" selected>3</option>
+                            <option class="rcn-inputField__option"value="">4</option>
+                            <option class="rcn-inputField__option"value="">5</option>
+                        </select>
                     </div>
                 </div>
+
+                <div class="rcn-inputFieldBloc">        
+                    <label class="rcn-inputFieldBloc__label">Mois</label>
+                    <div class="rcn-inputField">
+                         <select class="rcn-inputField__input">
+                            <option class="rcn-inputField__option"value="">- Séléctionner un mois -</option>
+                            <option class="rcn-inputField__option"value="">janvier</option>
+                            <option class="rcn-inputField__option"value="">février</option>
+                            <option class="rcn-inputField__option"value="" selected>mars</option>
+                          </select>
+                    </div>
+                </div>
+
+                <div class="rcn-inputFieldBloc">        
+                    <label class="rcn-inputFieldBloc__label">Année</label>
+                    <div class="rcn-inputField">
+                        <select class="rcn-inputField__input">
+                            <option class="rcn-inputField__option"value="">- Séléctionner une année -</option>
+                            <option class="rcn-inputField__option"value="">1995</option>
+                            <option class="rcn-inputField__option"value="">1997</option>
+                            <option class="rcn-inputField__option"value="" selected>1998</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <!--imput price-select-->
+
+        <div class="rcn-inputFieldBloc">        
+            <label class="rcn-inputFieldBloc__label">Label du champ</label>
+            <div class="rcn-inputField">
+                <select name="" class="rcn-inputField__input rcn-inputField__input--unit">
+                    <option class="rcn-inputField__option" value="">£</option>
+                    <option class="rcn-inputField__option" value="">$</option>
+                    <option class="rcn-inputField__option" value="" selected>€</option>
+                </select>
+                <input type="number" class="rcn-inputField__input">
+            </div>
+        </div>
+
+
+    </div>
+</body>
