@@ -56,6 +56,8 @@ body, legend {
   gap:var(--rcn-semantic-gap-vertical-300);
 }
 
+
+
 .rcn-stepper__number {
   width: 32px;
   height: 32px;
