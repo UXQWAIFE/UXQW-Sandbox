@@ -98,17 +98,16 @@ body, legend {
 
 .rcn-pagination__pageNumber[aria-current="page"]:hover{
     background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
-    color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
-    border-bottom: var(--rcn-semantic-borderwidth-300) solid ;
+    color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
+    border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
 
 
 }
 
 .rcn-pagination__pageNumber[aria-current="page"]{
-	background: white;
-    color: var(--rcn-semantic-color-static-text_and_icon-primary);
-    font-weight: bold;
-    border-bottom: 3px solid var(--rcn-semantic-color-static-text_and_icon-primary);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+    font-weight: var(--rcn-semantic-typography-text-component-default-selected-fontweight);
+    border-bottom:  var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-static-text_and_icon-primary);
 
 }
 
