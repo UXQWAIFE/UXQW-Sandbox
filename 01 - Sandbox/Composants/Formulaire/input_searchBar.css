@@ -1,0 +1,194 @@
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Core/CoreTokens-chorusPRO.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+    }
+
+body, legend {
+        font-family:'Marianne',Arial;
+        font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+    }
+
+/* Class importées du lot 1*/
+
+.sr-only /* pour que certains labels n'apparaissent pas, mais soit lisible au lecteur d'écran -> à intégrer dans un fichier reset*/
+{   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+}
+
+.rcn-inputFieldBloc{
+    display:flex;
+    flex-direction:column;
+    gap: 8px;
+    /* à ne pas prendre en compte, juste pour l'exemple*/
+    background-color: white;
+
+}
+
+.rcn-inputFieldBloc__label {
+    font-size: 20px;
+    color:blue;
+    width:auto;
+    font-weight:bold;
+}
+
+.rcn-inputField{
+    display:flex;
+    flex-direction:row;
+    gap:2px;
+    border: 1px solid;
+    border-color:black;
+    border-radius:2px;
+    justify-content:space-between;
+    background-color: white;
+    align-items: center;
+
+
+}
+.rcn-inputField__input{
+    border:none;
+    flex-grow:1;
+    padding:8px;
+    border-radius: 2px;
+    background-color: none;
+}
+
+
+.rcn-input__icon{
+    background:white;
+    border:none;
+    color:black;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+/* Nouvelles class vues avec TCO et MVI pour input searchBar*/
+
+.rcn-input__button{
+    background-color: transparent;
+    border-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.rcn-inputField--searchBarLarge{
+    min-width: 540px;
+
+}
+
+.rcn-input__buttonZone {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rcn-inputField__deleteButton::before{
+    content:"\e91e";
+    font-family:'RCNicon';
+    text-decoration:none;
+    font-style:normal;
+ 
+}
+
+.rcn-inputField__deleteButton{
+    border-right:1px solid gray;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+}
+
+.rcn-inputField__resetButton{
+    border-right:1px solid gray;
+    padding: 2px 8px;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.rcn-inputField__resetButton::before{
+    content:"\e91c";
+    font-family:'RCNicon';
+    text-decoration:none;
+    font-style:normal;
+
+
+}
+
+.rcn-inputField__primaryButton--search::before{
+    content:"\e91d";
+    font-family:'RCNicon';
+    text-decoration:none;
+    font-style:normal;
+
+}
+
+.rcn-inputField__primaryButton{
+    padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-300);
+}
+
+.rcn-inputField__primaryButton--largeSearch{
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+
+}
+
+
+/* Class spécifiques à l'input searchBar*/
+
+.rcn-input__button--as-magnify::before{
+    content: "\e91d";
+    font-family:'RCNicon';
+    text-decoration:none;
+    font-style:normal;
+
+}
+
+
+
+.rcn-searchBar__button{
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+}
+
+.rcn-serachBar__buttonZone{
+    display: flex;
+    flex-direction: row;
+    gap:45px;
+}
+
+.rcn-searchBar{
+    max-width: 540px;
+    border-color: var(--rcn-semantic-color-interaction-border-default-primary);
+    display: flex;
+    align-items: center;
+}
+
+/* Class spécifiques à l'input searchBar global large*/
+
+
+.rcn-input__content-searchGlobal{
+    padding: var(--rcn-semantic-padding-horizontal-200) var(--rcn-semantic-padding-vertical-200);
+}

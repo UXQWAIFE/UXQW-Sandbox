@@ -1,0 +1,207 @@
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Core/CoreTokens-CHORUS.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
+}
+
+@media (max-width:900px) {
+    .gridrcn {
+        grid-template-columns: 100%;
+    }
+}
+
+
+.container-globaux {
+    display: flex;
+    margin:0 5rem;
+}
+
+.espacements-test {
+    display:flex;
+    flex-direction:column;
+    gap:50px;
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+    }
+
+body, legend {
+        font-family:'Marianne',Arial;
+        font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+    }
+
+.rcn-form__grid {
+    display:grid;
+    grid-template-columns: 25% auto;
+    grid-template-rows: auto;
+    gap: var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-700);
+    width: 100%;
+}
+
+
+.rcn-form__verticalStepperContainer{
+display: flex;
+flex-direction: column;
+align-items: stretch;
+gap: var(--rcn-semantic-gap-horizontal-700);
+min-width: 380px;
+margin : 0 auto;
+width:60%;
+grid-column-start: 2;
+grid-row-start: 2;
+}
+
+.rcn-form__instruction{
+display: flex;
+flex-direction: row;
+width:auto;
+justify-content: center;
+margin:0;
+}
+
+.rcn-form__titleZone{
+display: flex;
+justify-content: center;
+grid-column-start: 2;
+grid-row-start: 1;
+}
+
+
+.rcn-form__content{
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+gap:var(--rcn-semantic-gap-vertical-400);
+align-items: stretch;
+}
+
+.rcn-form__horizontalStepperContainer {
+    display: flex;
+    flex-direction: column;
+    gap:var(--rcn-semantic-gap-vertical-700);
+    align-items: stretch;
+}
+
+/*Nouveau composant de navigation à porter à part*/
+
+.rcn-navZone{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+border-top : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+border-right : none;
+border-left: none;
+border-bottom:none;
+padding: var(--rcn-semantic-padding-horizontal-400) 0;
+}
+
+.rcn-navZone__rightZone {
+display:flex;
+flex-direction: row;
+gap: var(--rcn-semantic-gap-horizontal-200);
+width:auto;
+}
+
+/* Class à ne pas re-use servant pour l'exemple (à reprendre pour stepper)*/
+
+.rcn-stepper--vertical{
+background-color: aquamarine;
+display: grid;
+grid-column-start: 1;
+grid-row-start: 2;
+}
+
+
+.stepper--horizontal {
+    background-color:hotpink;
+    width:100%;
+    height:40px;
+}
+
+.rcn-title{
+font-size: 40px;
+margin-bottom: 16px;
+color: black;
+font-weight: bold;
+}
+
+/* Class reprises du lot1 pour l'exemple*/
+
+.rcn-input-zone{
+display:flex;
+flex-direction:column;
+gap: 8px;
+/* à ne pas prendre en compte, juste pour l'exemple*/
+background-color: white;
+
+}
+
+.rcn-input__mandatoryZone{
+display:flex;
+flex-direction:row;
+gap:8px;
+justify-content: flex-start;
+}
+
+.rcn-input__label {
+font-size: 20px;
+color:blue;
+width:auto;
+font-weight:bold;
+}
+
+.rcn-input__asterix{
+font-size:23px;
+color:red;
+}
+
+.rcn-input{
+display:flex;
+flex-direction:row;
+gap:2px;
+border: 1px solid;
+border-color:black;
+border-radius:2px;
+justify-content:space-between;
+background-color: white
+
+}
+
+.rcn-input__content{
+border:none;
+flex-grow:1;
+padding:8px;
+border-radius: 2px;
+}
+
+/* Class reprises des boutons pour l'exemple*/
+
+.button--primary {
+background-color: blue;
+font-size:1rem;
+line-height:1rem;
+padding:12px 24px;
+border: 2px solid blue;
+border-radius:0.375rem;
+color:white;
+}
+
+.button--secondary {
+background-color: white;
+font-size:1rem;
+line-height:1rem;
+padding:12px 24px;
+border-radius:0.375rem;
+border: 2px solid blue;
+color:blue;
+
+}

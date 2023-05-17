@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="Lot 2 MVI.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+</head>
+
+<body>
+    <div class="rcn-input-lotGlobal">
+
+       
+
+  <!--imput selection checkbox -->
+
+    
+        <fieldset class="rcn-fieldset rcn-fieldset--as-inputFieldBloc">
+            <legend class="rcn-input__label rcn-fieldsetLegend--as-multipleInputs">C'est qui vos préférés ?</legend>
+                
+            <ul id="list">
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="checkbox" id="checkbox" class=" RESET-btnboxIcon rcn-checkbox__input">
+                    <label class="rcn-checkbox__label" for="Choix1">Mathilde</label>
+                </div>
+                </li>
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="checkbox" id="checkbox" class="  RESET-btnboxIcon rcn-checkbox__input">
+                    <label class="rcn-checkbox__label" for="Choix1">Thibault</label>
+                </div>
+                </li>
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="checkbox" id="checkbox" class=" RESET-btnboxIcon rcn-checkbox__input">
+                    <label class="rcn-checkbox__label" for="Choix1">Clara</label>
+                </div>
+                </li>
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="checkbox" id="checkbox" class="RESET-btnboxIcon rcn-checkbox__input">
+                    <label class="rcn-checkbox__label" for="Choix1">JCKing</label>
+                </div>
+                </li>
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="checkbox" id="checkbox" class=" RESET-btnboxIcon rcn-checkbox__input">
+                    <label class="rcn-checkbox__label" for="Choix1">Hugo</label>
+                </div>
+                </li>
+            </ul>
+        </fieldset>
+    
+
+    <!--imput selection radiobox-->
+
+    
+        <fieldset class="rcn-fieldset rcn-fieldset--as-inputFieldBloc">
+            <legend class="rcn-fieldsetLegend--as-multipleInputs rcn-input__label">C'est qui vos préférés ?</legend>
+            <ul id="list">
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="radio" id="radio" class=" RESET-btnboxIcon rcn-radiobox__input">
+                    <label class="rcn-radiobox__label" for="Choix1">Mathilde</label>
+                </div>
+                </li>
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="radio" id="radio" class="  RESET-btnboxIcon rcn-radiobox__input">
+                    <label class="rcn-radiobox__label" for="Choix1">Thibault</label>
+                </div>
+                </li>
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="radio" id="radio" class=" RESET-btnboxIcon rcn-radiobox__input">
+                    <label class="rcn-radiobox__label" for="Choix1">Clara</label>
+                </div>
+                </li>
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="radio" id="radio" class="RESET-btnboxIcon rcn-radiobox__input">
+                    <label class="rcn-radiobox__label" for="Choix1">JCKing</label>
+                </div>
+                </li>
+                <li>
+                <div class="rcn-fieldset__checkboxRadioboxGroup">
+                    <input name="choix" type="radio" id="radio" class=" RESET-btnboxIcon rcn-radiobox__input">
+                    <label class="rcn-radiobox__label" for="Choix1">Hugo</label>
+                </div>
+                </li>
+            </ul>
+        </fieldset>
+    
+
+
+
+
+
+    <!--Fieldset 1-->
+
+
+ <fieldset class="rcn-fieldset">
+    <legend class="h1">Titre du fieldset</legend>
+
+        <div class="rcn-inputFieldBloc">
+            <div class="rcn-input__mandatoryZone">
+                <label for="x" class="rcn-input__label">Label input</label>
+                <div class="rcn-input__asterix">*</div> 
+            </div> 
+            <div class="rcn-input-textZone">texte explicatif (si besoin)</div> 
+            <div class="rcn-input rcn-imput--error">
+                <input id="x" type="text"  class="rcn-content rcn-content--withicon rcn-input__content">
+                <button class="rcn-input__button rcn-inputField__foldoutButton">
+                    <p class="sr-only"></p>
+                </button>
+
+            </div>
+            <div class="rcn-informationZone rcn-informationZone--error">
+                <p class="sr-only"></p>
+                <i class="mdi mdi-close-outline"></i>
+                erreur machin machin
+            </div> 
+        </div>
+
+        <div class="rcn-inputFieldBloc">  
+            <div class="rcn-input__mandatoryZone">      
+            <label for="x" class="rcn-input__label">Label input</label>
+            </div>
+            <div class="rcn-input" >
+                <input id="x" type="text"  disabled class="rcn-content rcn-content--withicon rcn-input__content" placeholder="chalu">
+                <button disabled >
+                    <p class="sr-only"></p>
+                    <i class="mdi mdi-heart"></i>
+                </button>
+
+            </div>
+            <div class="rcn-informationZone rcn-informationZone--success">
+                <p class="sr-only"></p>
+                <i class="mdi mdi-check-outline"></i>
+                bravo clarou t'es la meilleur dev
+            </div> 
+        </div>
+    </fieldset>
+
+
+
+          <!--imput import de fichier-->
+        
+        <div class="rcn-inputFieldBloc">
+        <fieldset class="rcn-fieldset rcn-fieldset--as-inputFile">
+            <legend class="rcn-input__label rcn-fieldsetLegend--as-inputFile">Importer votre/vos fichier(s)</legend>
+            <label for="FileZone">
+                <i class="mdi mdi-tray-arrow-up"></i>
+                <span class="text-Info">Glisser - déposer un fichier ou</span>
+                <p class="button--secondary">
+                    Importer un fichier
+                    <input class="rcn-inputField--as-inputFile" type="file" accept="image/gif, image/jpeg, image/png" id="FileZone" name="" multiple>
+                </p>
+            </label>
+        </fieldset>
+        </div>
+
+
+        
+
+
+
+        <!--imput price-select-->
+        <div class="rcn-inputFieldBloc">
+        <fieldset class="rcn-fieldset rcn-fieldset--as-inputFieldBloc">
+            <legend class="h1 rcn-fieldsetLegend--as-multipleInputs rcn-input__label">Label input</legend>       
+            <label for="x" class="sr-only">Label input</label>
+            <div class="rcn-input">
+                <select name="" id="x" class="rcn-content input__unit input__unit--selected">
+                    <option class="rcn-option" value="">£</option>
+                    <option class="rcn-option" value="">$</option>
+                    <option class="rcn-option" value="" selected>€</option>
+                </select>
+                <input id="x" type="number"  class="rcn-content rcn-content--withunit rcn-content--select rcn-input__content">
+            </div>
+        </fieldset>
+    </div>
+   
+
+   <!--imput sélection unique -->
+
+        <div class="rcn-inputFieldBloc">        
+        <label for="x" class="rcn-input__label">Faites un choix</label>
+            <div class="rcn-input">
+                <select name="" id="x" class="rcn-content rcn-input__content">
+                    <option class="rcn-input__option" value="">- Séléctionner une option -</option>
+                    <option class="rcn-input__option" value="">Choix 1</option>
+                    <option class="rcn-input__option" value="">Choix 2</option>
+                    <option class="rcn-input__option" value="" selected>Choix 3</option>
+                </select>
+            </div>
+        </div>
+
+
+
+    <!--Input combobox sélection multiple -->  
+    <div class="rcn-inputFieldBloc">
+        <fieldset class="rcn-fieldset rcn-fieldset--as-inputFieldBloc">  
+            <legend class="rcn-fieldsetLegend--as-multipleInputs rcn-input__label">
+                Choisissez votre préféré
+            </legend>
+            
+            <div class="rcn-combobox__blocAsInput">
+                <div class="rcn-input">
+                    <span id="x" class="rcn-input__content rcn-combobox__inputContent--as-placeholder">
+                        0 item(s) sélectionnés
+                    </span>
+                    <button class="rcn-input__button rcn-inputField__foldoutButton">
+                            <span class="sr-only">
+                                Déplier la liste d'options
+                            </span>
+                    </button>
+                </div>
+
+                <ul id="list" class="rcn-combobox__dropDownList">
+                    <li>
+                        <label for="sx" class="rcn-input__label sr-only">Recherchez</label>
+                        <div class="rcn-input">
+                        <input id="sx" type="text" class="rcn-content rcn-content--withicon rcn-input__content">
+                            <button class="rcn-input__button rcn-inputField__searchButton">
+                                <p class="sr-only">Déplier la liste d'options</p>
+                            </button>
+                        </div>
+                    </li>
+                    
+                    <li>
+                    <div class="rcn-fieldset__checkboxRadioboxGroup">
+                        <input name="choix" type="checkbox" id="checkbox" class=" RESET-btnboxIcon rcn-checkbox__input">
+                        <label class="rcn-checkbox__label" for="Choix1">Mathilde</label>
+                    </div>
+                    </li>   
+                    <li>
+                    <div class="rcn-fieldset__checkboxRadioboxGroup">
+                        <input name="choix" type="checkbox" id="checkbox" class="  RESET-btnboxIcon rcn-checkbox__input">
+                        <label class="rcn-checkbox__label" for="Choix1">Thibault-Pepito</label>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="rcn-fieldset__checkboxRadioboxGroup">
+                        <input name="choix" type="checkbox" id="checkbox" class=" RESET-btnboxIcon rcn-checkbox__input">
+                        <label class="rcn-checkbox__label" for="Choix1">Clara</label>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="rcn-fieldset__checkboxRadioboxGroup">
+                        <input name="choix" type="checkbox" id="checkbox" class="RESET-btnboxIcon rcn-checkbox__input">
+                        <label class="rcn-checkbox__label" for="Choix1">JCKing</label>
+                    </div>
+                    </li> 
+                    <li>  
+                    <div class="rcn-fieldset__checkboxRadioboxGroup">
+                        <input name="choix" type="checkbox" id="checkbox" class=" RESET-btnboxIcon rcn-checkbox__input">
+                        <label class="rcn-checkbox__label" for="Choix1">ProudDaddy Hugo</label>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+        </fieldset>
+    </div>
+
+    <!--module de langue -->
+
+        <div class="rcn-inputFieldBloc--as-languageModule">        
+        <label for="x" class="rcn-inputFieldBloc__label--as-languageModule">Langue</label>
+            <div class="rcn-input">
+                <select name="" id="x" class="rcn-content rcn-input__content">
+                    <option class="rcn-input__option" value="">- Séléctionner une option -</option>
+                    <option class="rcn-input__option" value="">Choix 1</option>
+                    <option class="rcn-input__option" value="">Choix 2</option>
+                    <option class="rcn-input__option" value="" selected>Choix 3</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+</body>       
