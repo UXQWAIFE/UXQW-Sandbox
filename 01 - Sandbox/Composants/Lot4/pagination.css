@@ -1,0 +1,165 @@
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Core/CoreTokens-chorusPRO.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+}
+
+
+body, legend {
+    font-family:'Marianne',Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}
+
+/* Pagination*/
+
+.rcn-pagination {
+	display: flex;
+    flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+}
+.rcn-pagination__navZone {
+	width: 40%;
+}
+
+.rcn-pagination__navList{
+	display: flex;
+    align-items: center;
+    gap:var(--rcn-semantic-gap-vertical-400);
+	list-style: none;
+	margin: 0;
+    text-decoration: none;
+
+}
+
+.rcn-pagination__navButton{
+    display: flex;
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+	text-decoration: none;
+	justify-content: center;
+    gap: var(--rcn-semantic-gap-horizontal-100);
+}
+
+.rcn-pagination__chooseNumberElement{
+    display: flex;
+    flex-direction: row;
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    align-items: center;
+}
+
+.rcn-pagination__rapidAccess{
+    display: flex;
+    flex-direction: row;
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    align-items: center;
+}
+
+.rcn-pagination__previous::before{
+    font-family: 'rcnicon';
+    content: "\e92e";
+    text-decoration:none;
+    font-style:normal;
+    order:1;
+}
+
+.rcn-pagination_iconNext::before{
+    font-family: 'rcnicon';
+    content: "\e92d";
+    text-decoration:none;
+    font-style:normal;
+    order:2;
+}
+
+.rcn-pagination__pageNumber{
+    display: flex;
+	padding: var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+	text-decoration: none;
+	justify-content: center;
+}
+
+.rcn-pagination__pageNumber:hover{
+    background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+
+}
+
+.rcn-pagination__pageNumber[aria-current="page"]:hover{
+    background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+    border-bottom: var(--rcn-semantic-borderwidth-300) solid ;
+
+
+}
+
+.rcn-pagination__pageNumber[aria-current="page"]{
+	background: white;
+    color: var(--rcn-semantic-color-static-text_and_icon-primary);
+    font-weight: bold;
+    border-bottom: 3px solid var(--rcn-semantic-color-static-text_and_icon-primary);
+
+}
+
+
+/* importé de forms*/
+
+.sr-only /* pour que certains labels n'apparaissent pas, mais soit lisible au lecteur d'écran -> à intégrer dans un fichier reset*/
+{   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+}
+
+.rcn-inputFieldBloc{
+    display:flex;
+    flex-direction:column;
+    gap:var(--rcn-semantic-gap-vertical-200);
+    border: 1px solid grey;
+    border-radius: 2px;
+    /* à ne pas prendre en compte, juste pour l'exemple*/
+    background-color: white;
+}
+
+.rcn-input__label {
+    font-size: var(--rcn-semantic-typography-text-component-default-label-fontsize);
+    color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
+    width:auto;
+    display:block;
+    font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
+    padding:0 0 var(--rcn-semantic-padding-vertical-200) 0;
+    border:none;
+    cursor:pointer;
+}
+
+.rcn-input__content{
+    border:none;
+    flex-grow:1;
+    padding:8px;
+    border-radius: 2px;
+}
+
+.rcn-input__option {
+    border-color:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+    border-radius:var(--rcn-semantic-borderradius-100);
+  }
+
+
+
+
+
+
