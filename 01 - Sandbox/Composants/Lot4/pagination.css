@@ -42,6 +42,7 @@ body, legend {
 	list-style: none;
 	margin: 0;
     text-decoration: none;
+    flex-direction: row;
 
 }
 
@@ -67,7 +68,7 @@ body, legend {
     align-items: center;
 }
 
-.rcn-pagination__previous::before{
+.rcn-pagination__previousButton::before{
     font-family: 'rcnicon';
     content: "\e92e";
     text-decoration:none;
@@ -75,7 +76,7 @@ body, legend {
     order:1;
 }
 
-.rcn-pagination_iconNext::before{
+.rcn-pagination_nextButton::before{
     font-family: 'rcnicon';
     content: "\e92d";
     text-decoration:none;
@@ -89,6 +90,7 @@ body, legend {
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 	text-decoration: none;
 	justify-content: center;
+    border-bottom : var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent); 
 }
 
 .rcn-pagination__pageNumber:hover{
