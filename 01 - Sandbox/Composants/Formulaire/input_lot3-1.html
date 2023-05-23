@@ -89,7 +89,7 @@
                 
                     </div>
                 
-                    <form class="rcn-form__verticalStepperContainer">
+                    <form class="rcn-form__stepperVerticalContainerInputBlock">
                     
                         <p class="rcn-form__instruction"> 
                             Les champs suivi d'un  
@@ -145,11 +145,53 @@
 
 
 
-            <form class="rcn-form__horizontalStepperContainer">
+            <form class="rcn-form__stepperHorizontalContainerInputBlock">
 
                 <h1 class=" rcn-title rcn-form__titleZone"> Titre du formulaire </h1>            
                 
-                <div class="stepper--horizontal">
+                <div>
+
+                    <nav>
+
+                        <ol class="rcn-stepperHorizontal">
+                
+                            <li class="rcn-stepperHorizontal__step">
+                                <div class="rcn-stepper__number rcn-stepperNavigable__number--uncompleted">1</div>
+                                <div>
+                                <a class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Etape non complétée navigable </a>
+                                </div>
+                            </li>
+                            <li class="rcn-stepperHorizontal__step">
+                                <div class="rcn-stepper__number rcn-stepperNavigable__number--uncompleted">2</div>
+                                <div>
+                                <p class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Etape non complétée non navigable </p>
+                                </div>
+                            </li>
+                            <li class="rcn-stepperHorizontal__step">
+                                <div class="rcn-stepper__number rcn-stepper__number--disabled">3</div>
+                                <div>
+                                <p class="rcn-stepperHorizontal__sectionTitle rcn-stepper__sectionTitle--disabled" href="section1"> Etape désactivée </p>
+                                </div>
+                            </li>
+                
+                            <li class="rcn-stepperHorizontal__step">
+                                <div class="rcn-stepper__number rcn-stepperNavigable__number--current">4</div>
+                                <div>
+                                <a class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--current" href="section1"> Etape en cours navigable </a>
+                                </div>
+                            </li>
+                            <li class="rcn-stepperHorizontal__step">
+                                <div class="rcn-stepper__number rcn-stepperNavigable__number--completed">6</div>
+                                <div>
+                                <a class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--completed" href="section1"> Etape complétée navigable </a>
+                                </div>
+                            </li>
+                
+                        </ol>
+                
+                
+                    </nav>
+
                 </div>
                 
                     
@@ -163,23 +205,30 @@
 
                             <!--imput non-obligatoire avec message succes -->
 
-                            <div class="rcn-input-zone">        
-                                <label for="x" class="rcn-input__label">Label input</label>
-                                <div class="rcn-input" >
-                                    <input id="x" type="text"  class="rcn-input__content " placeholder="placeholder">
+                            <div class="rcn-inputFieldBloc">        
+                                <label for="x" class="rcn-inputFieldBloc__label">Label input</label>
+                                <div class="rcn-inputField" >
+                                    <input id="x" type="text" col="5" row="5" class="rcn-inputField__input" placeholder="placeholder">
                                 </div>
                             </div>
 
                             <!--imput obligatoire avec texte descriptif et message d'erreur -->
 
-                            <div class="rcn-input-zone">
-                                <div class="rcn-input__mandatoryZone">
-                                    <label for="x" class="rcn-input__label">Label input</label>
-                                    <div class="rcn-input__asterix">*</div> 
-                                </div> 
-                                <div class="rcn-input">
-                                    <input id="x" type="text"  class="rcn-input__content">
+                            <div class="rcn-inputFieldBloc">
+                                <label class="rcn-inputFieldBloc__label">
+                                    Champ en erreur
+                                </label>
+                           
+                                <div>texte explicatif (si besoin)</div> 
+                    
+                                <div class="rcn-inputField rcn-inputField--error">
+                                    <input type="text" class="rcn-inputField__input" required>
+                    
                                 </div>
+                                <div  class="rcn-inputFieldBloc__errorZone" >
+                                    <i class="rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+                                    erreur machin machin
+                                </div> 
                             </div>
                             
                         </div>

@@ -1,8 +1,9 @@
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Core/CoreTokens-chorusPRO.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
+@import url('../../Asset/Cores et semantiques/Core/CoreTokens-ChorusPRO.min.css');
+@import url('../../Asset/Cores et semantiques/Core/CoreTokensShadow.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensColor.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensShadow.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensLayout.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
 @import url('/ComponentTokensButtonPrimary.min.css');
 @import url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
 
