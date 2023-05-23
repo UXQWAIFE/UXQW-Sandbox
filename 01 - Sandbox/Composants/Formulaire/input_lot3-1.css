@@ -1,8 +1,9 @@
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Core/CoreTokens-CHORUS.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
-@import url('C:/Users/clara.lecume/Documents/GitHub/RCN-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
+@import url('../../Asset/Cores et semantiques/Core/CoreTokens-ChorusPRO.min.css');
+@import url('../../Asset/Cores et semantiques/Core/CoreTokensShadow.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensColor.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensShadow.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensLayout.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
 @import url('/ComponentTokensButtonPrimary.min.css');
 @import url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
 
@@ -17,17 +18,121 @@
     }
 }
 
+/*ne pas prendre dans l'Excel*/
+.sr-only{
+    height :0px;
+    margin : 0;
+}
+
+input {
+    /* Reset styles for inputs */
+    padding: 0;
+    border: unset;
+    background: transparent;
+    font-size:unset;
+    appearance: unset;
+    -webkit-appearance: unset;
+    -moz-appearance: unset;
+    -ms-appearance: unset;
+    min-width:unset;
+  }
+  
+  
+  option {
+    /* Reset styles for inputs */
+    padding: 0;
+    border: unset;
+    background: transparent;
+    font-size:unset;
+    appearance: unset;
+    -webkit-appearance: unset;
+    -moz-appearance: unset;
+    -ms-appearance: unset;
+  }
+  
+  select {
+    padding: 0;
+    border: unset;
+    background: transparent;
+    font-size:unset;
+  }
 
 .container-globaux {
     display: flex;
     margin:0 5rem;
+    width:auto;
 }
 
 .espacements-test {
     display:flex;
+    width:100%;
     flex-direction:column;
     gap:50px;
 }
+
+
+/* Reprise du lot1 */
+
+.rcn-inputFieldBloc{
+    display:flex;
+    flex-direction:column;
+    align-items: stretch;
+    gap: 8px;
+    background-color: white;
+    flex-grow: 1;
+}
+
+.rcn-inputFieldBloc__label {
+    display:flex;
+    flex-direction:row;
+    gap:4px;
+    justify-content: flex-start;
+    font-weight:bold;
+}
+
+.rcn-inputField{
+    display:flex;
+    flex-direction:row;
+    border: 1px solid;
+    border-color:#6A6A6A;
+    align-items:center;
+    border-radius:2px;
+    background-color: white;
+}
+
+.rcn-inputField--error{
+    border-color:red;
+}
+
+.rcn-inputField__input{
+    border:none;
+    flex-grow:1;
+    padding:8px;
+    border-radius: 1px;
+    background:none;
+    line-height: 1rem;
+    font-size: 1rem;
+    font-family : "Marianne";
+}
+
+.rcn-inputFieldBloc__errorZone{
+    display: flex;
+    flex-direction:row;
+    gap:8px;
+    color:red;
+}
+
+.rcn-inputFieldBloc__errorIcon::before{
+    font-family: 'RCNicon';
+    content: "\e921";
+    text-decoration:none;
+    font-style:normal;
+}
+
+/*FORMULAIRE LOT3*/
+
+
+
 
 @font-face {
     font-family: 'Marianne';
@@ -113,8 +218,8 @@ width:auto;
 
 /* Class à ne pas re-use servant pour l'exemple (à reprendre pour stepper)*/
 
-.rcn-stepper--vertical{
-background-color: aquamarine;
+.rcn-form__stepperVerticalContainer{
+background-color:transparent;
 display: grid;
 grid-column-start: 1;
 grid-row-start: 2;
@@ -133,6 +238,146 @@ margin-bottom: 16px;
 color: black;
 font-weight: bold;
 }
+
+/* Class reprises pour le stepper*/
+
+.rcn-stepperVertical::before{
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: var(--rcn-semantic-color-static-border-divider_strong);
+    position: absolute;
+    left: calc((2rem / 2) + var(--rcn-semantic-borderwidth-100));
+    z-index: -1;
+  }
+  
+  .rcn-stepperVertical{
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap:var(--rcn-semantic-gap-vertical-500);
+    position: relative;
+    margin: 0px;
+  
+  }
+  
+  .rcn-stepperVertical__substepZone{
+    display: flex;
+    flex-direction:column;
+    padding-left: 0px;
+    margin: 0px;
+    gap:var(--rcn-semantic-gap-horizontal-500);
+    position: relative;
+    justify-content: space-between;
+  
+  }
+
+  
+  .rcn-stepperVertical__step {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:var(--rcn-semantic-gap-horizontal-400);
+    box-sizing: border-box;
+  
+  
+  }
+  
+  
+  .rcn-stepper__number {
+    width: var(--rcn-semantic-width-pellet);
+    height: var(--rcn-semantic-height-pellet);
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    border: 1px solid
+  }
+  
+  .rcn-stepper__number--substep{
+    width: calc(var(--rcn-semantic-width-pellet) / 2);
+    height: calc(var(--rcn-semantic-height-pellet) / 2);
+    margin-left:calc(((var(--rcn-semantic-width-pellet) / 2) / 2));
+    margin-right:calc(((var(--rcn-semantic-width-pellet) / 2) / 2)) ;
+    border:1px solid transparent;
+    border-radius:50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+  
+  }
+  
+  .rcn-stepperNavigable__number--uncompleted {
+  background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+  border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+  color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+  
+  }
+  
+  
+  .rcn-stepper__number--disabled {
+  background-color:var(--rcn-semantic-color-static-background-stepper_step_unreachable);
+  border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-stepper_step_unreachable);
+  color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
+  }
+  
+  
+  .rcn-stepperNavigable__number--current {
+  background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+  color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+  font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
+  width: calc(var(--rcn-semantic-width-pellet) - calc((var(--rcn-semantic-borderwidth-300) * 2) - ((var(--rcn-semantic-borderwidth-100)) * 2)));
+  height:  calc(var(--rcn-semantic-height-pellet) - calc((var(--rcn-semantic-borderwidth-300) * 2) - ((var(--rcn-semantic-borderwidth-100)) * 2)));
+  border:var(--rcn-semantic-borderwidth-300)  solid var(--rcn-semantic-color-interaction-border-default-primary);
+  }
+  
+  .rcn-stepperNavigable__number--subStepCurrent{
+  background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+  color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+  font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
+  width: calc((var(--rcn-semantic-width-pellet) / 2) - calc((var(--rcn-semantic-borderwidth-300) * 2) - ((var(--rcn-semantic-borderwidth-100)) * 2)));
+  height:  calc((var(--rcn-semantic-height-pellet) / 2) - calc((var(--rcn-semantic-borderwidth-300) * 2) - ((var(--rcn-semantic-borderwidth-100)) * 2)));
+  border:var(--rcn-semantic-borderwidth-300)  solid var(--rcn-semantic-color-interaction-border-default-primary);
+  
+  }
+  
+  .rcn-stepperNavigable__number--completed {
+  background-color:var(--rcn-semantic-color-interaction-background-default-primary);
+  border:var(--rcn-semantic-borderwidth-100) solid transparent;
+  color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+  }
+  
+  .rcn-stepperVertical__sectionTitle {
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+    display: block;
+    text-align:left
+    }
+  
+ 
+  
+  .rcn-stepperNavigable__sectionTitle--uncompleted {
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+  }
+  
+  
+  .rcn-stepper__sectionTitle--disabled {
+  color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
+  text-decoration: none;
+  }
+  
+  .rcn-stepperNavigable__sectionTitle--current {
+  color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+  font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
+  text-decoration:none;
+  }
+  
+  
+  .rcn-stepperNavigable__sectionTitle--completed {
+  color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+  }
+
+                
 
 /* Class reprises du lot1 pour l'exemple*/
 
