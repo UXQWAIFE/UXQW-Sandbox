@@ -1,14 +1,18 @@
-@import url('../../Asset/Cores et semantiques/Core/CoreTokens-CHORUS.min.css');
+@import url('../../Asset/Cores et semantiques/Core/CoreTokens-ChorusPRO.min.css');
+@import url('../../Asset/Cores et semantiques/Core/CoreTokensShadow.min.css');
 @import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensColor.min.css');
 @import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensShadow.min.css');
 @import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensLayout.min.css');
-@import url('../../Asset/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
 @import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+
+
 
 @font-face {
-    font-family: 'rcnicon';
-    src: url(../Assets/rcnicon.ttf);
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
 }
 
 @font-face {
@@ -71,7 +75,7 @@ ul {
 }
 
 .rcn-menu__entry--dropDown::after {
-	font-family:'rcnicon';
+	font-family:'RCNicon';
 	content:'\e92f';
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
     text-decoration:none;
