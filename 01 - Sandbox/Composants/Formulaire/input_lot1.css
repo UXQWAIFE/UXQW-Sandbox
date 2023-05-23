@@ -133,7 +133,7 @@ textarea:focus {
     display:flex;
     flex-direction:row;
     border: 1px solid;
-    border-color:#6A6A6A;
+    border-color:#949494;
     align-items:center;
     border-radius:2px;
     background-color: white;

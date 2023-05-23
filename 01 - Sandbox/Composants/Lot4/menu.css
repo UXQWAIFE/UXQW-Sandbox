@@ -1,14 +1,10 @@
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Core/CoreTokens-ChorusPRO.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Core/CoreTokensShadow.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
-@import url('/ComponentTokensButtonPrimary.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
-
-
+@import url('../../Asset/Cores et semantiques/Core/CoreTokens-CHORUS.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensColor.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensShadow.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensLayout.min.css');
+@import url('../../Asset/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css');
 
 @font-face {
     font-family: 'rcnicon';
