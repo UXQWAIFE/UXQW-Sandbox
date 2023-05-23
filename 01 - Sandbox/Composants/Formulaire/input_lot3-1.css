@@ -225,7 +225,7 @@ align-items: stretch;
 
 /*Nouveau composant de navigation à porter à part*/
 
-.rcn-navZone{
+.rcn-actionZone{
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -236,7 +236,7 @@ border-bottom:none;
 padding: var(--rcn-semantic-padding-horizontal-400) 0;
 }
 
-.rcn-navZone__rightZone {
+.rcn-actionZone__navZone {
 display:flex;
 flex-direction: row;
 gap: var(--rcn-semantic-gap-horizontal-200);
