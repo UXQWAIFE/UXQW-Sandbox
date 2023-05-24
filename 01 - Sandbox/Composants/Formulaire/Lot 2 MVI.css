@@ -1,18 +1,16 @@
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Core/CoreTokens-CHORUS.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensColor.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensShadow.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensLayout.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/rcn-Tokens/TokensCSS/Semantic/SemanticTokensTypography.min.css');
-@import url('/ComponentTokensButtonPrimary.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
-
-
-
+@import url('../../Asset/Cores et semantiques/Core/CoreTokens-CHORUSPRO.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensColor.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensShadow.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensLayout.min.css');
+@import url('../../Asset/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
+@import url('../../Asset/cssReset.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css');
+@import url('./input_lot1.css');
 
 @font-face {
-    font-family: 'rcnicon';
-    src: url(../Assets/rcnicon.ttf);
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
 }
 
 @font-face {
@@ -31,309 +29,15 @@ i {
     font-style:normal;
 }
 
-
-
-/* la zone globale qui encadre tous les input*/
-.rcn-input-lotGlobal{
-    display:flex;
-    flex-direction:column;
-    gap:var(--rcn-semantic-gap-vertical-600);
-    /* à ne pas prendre en compte, juste pour l'exemple*/
-    padding:32px;
-    background-color: white;
-    width:480px;
+/*reset des balises li et ul*/
+li {
+    list-style-type: none;
+    text-align: unset;
 }
 
-
-
-/* la zone d'un input avec label etc.*/
-.rcn-inputFieldBloc{
-    display:flex;
-    flex-direction:column;
-    gap:var(--rcn-semantic-gap-vertical-200);
-    /* à ne pas prendre en compte, juste pour l'exemple*/
-    background-color: white;
+ul {
+    padding:0px;
 }
-
-
-
-/* la zone label obligatoire.*/
-
-.rcn-input__mandatoryZone{
-    display:flex;
-    flex-direction:row;
-    gap:var(--rcn-semantic-gap-horizontal-200);
-    
-    justify-content:flex-start;
-}
-
-
-label * {
-    display:block;
-    width:100%;
-    text-align: center;
-}
-label > i {
-    font-size:3rem;
-}
-
-.rcn-input__label {
-    font-size: var(--rcn-semantic-typography-text-component-default-label-fontsize);
-    color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
-    width:auto;
-    display:block;
-    font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
-    padding:0 0 var(--rcn-semantic-padding-vertical-200) 0;
-    border:none;
-    cursor:pointer;
-}
-
-.rcn-input__asterix {
-    font-size:var(--rcn-semantic-typography-text-component-default-h6-fontsize);
-    color:var(--rcn-semantic-color-feedback-text_and_icon-error);
-}
-
-/* la zone du texte descriptif sous le label - pas à mettre dans le excel ça sera le body*/
-
-.rcn-input-textZone{
-    font-size:16px;
-    color:purple;
-}
-
-/* la d'input qui contient input+icones */
-
-
-.rcn-input {
-    display:flex;
-    flex-direction:row;
-    gap:0px;
-    border: 1px solid;
-    border-color:var(--rcn-semantic-color-interaction-border-default-standard);
-    border-radius:2px;
-    justify-content:space-between;
-    width:100%;
-}
-
-
-
-.rcn-input:has( .rcn-input__content[disabled]){
-    border-color:mediumturquoise;
-    background-color: #bbbbbb;
-}
-
-
-.rcn-imput--error{
-    border-color:red;
-}
-
-/* la zone icon (toujours placée à droite de l'input) */
-
-.rcn-input__icon{
-    background:white;
-    border:none;
-    color:black;
-    border-top-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-    display: flex;
-    align-items: center;
-}
-
-
-.rcn-input__icon[disabled]{
-    background-color: #bbbbbb;
-    color:purple;
-    
-}
-
-/* l'input"natif" > (dans le excel: rcn-inputs__content)*/
-
-.rcn-input__content{
-    border:none;
-    flex-grow:1;
-    padding:8px;
-    border-radius: 2px;
-}
-
-.rcn-input__content--select{
-
-    border-left: 1px solid black;
-}
-
-.rcn-input__content[disabled] {
-    background-color:#bbbbbb;
-    border-color:grey;
-}
-
-.rcn-input__content--withicon{
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.rcn-input__content--withunit{
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-}
-
-
-
-.rcn-input__content::placeholder{
-    color:palevioletred;
-}
-
-.rcn-input__content:focus{
-    outline:2px solid orange;
-}
-
-
-
-/* message d'erreur si l'input est en erreur ou success*/
-
-.rcn-input__informationZone{
-    display: flex;
-    flex-direction:row;
-    gap:8px;
-}
-
-.rcn-input__errorZone{
-    display: flex;
-    flex-direction:row;
-    gap:8px;
-    color:red;
-
-}
-
-.rcn-input__errorIcon::before{
-    font-family: 'rcnicon';
-    content: "\e921";
-    text-decoration:none;
-    font-style:normal;
-
-}
-
-.rcn-input__errorZone[hidden]{
-    height:0px;
-    display: none;
-    width:0px;
-}
-
-
-.rcn-input__successZone{
-    display: flex;
-    flex-direction:row;
-    gap:8px;
-    color:green;
-
-}
-
-.rcn-input__successIcon::before{
-    font-family: 'rcnicon';
-    content: "\e920";
-    text-decoration:none;
-    font-style:normal;
-
-}
-
-.rcn-input__successZone[hidden]{
-    height: 0px;
-    display: none;
-    width:0px;
-}
-
-
-
-.rcn-input__informationZone--error{
-    color:red;
-}
-
-.rcn-input__informationZone--success{
-    color:greenyellow;
-}
-
-/* Pour l'input password */
-
-.rcn-input__icon--password::before{
-    font-family: 'rcnicon';
-    content: "\e92a";
-    color: BLACK;
-    text-decoration:none;
-    font-style:normal;
-}
-
-
-.rcn-input__icon[aria-pressed="true"] .rcn-input__icon--password::before{
-    font-family: 'rcnicon';
-    content: "\e92b";
-    color: BLACK;
-    text-decoration:none;
-    font-style:normal;
-}
-
-/* pour l'input price picker : la zone unit (toujours placée à gauche de l'input) */
-
-
-.input__unit{
-    display: flex;
-    flex-direction: row;
-    gap:8px;
-    align-items: center;
-    order:0;
-    background-color:#f0F0F0;
-    color:rgb(80, 79, 78);
-    border-top-left-radius: 1px;
-    border-bottom-left-radius: 1px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    border:none;
-    padding-left:8px;
-    padding-right:8px;
-}
-
-.input__unit--selected{
-    flex-grow: 0;
-    background-color: white;
-    padding-left: 6px;
-    border-right: 6px solid white;
-    color: black;
-}
-
-/* pour le textarea - pas utile dans le excel */
-
-textarea:focus {
-    outline:2px solid orange;
-}
-
-/* pour la date multi-champs*/
-
-.multi-champs-date{
-    display: flex;
-    flex-direction:row;
-    gap: 16px;
-    align-items: center;
-    background-color:aqua;
-    justify-content:space-between;
-
-}
-
-.input--middle{
-    display: flex;
-    flex-grow: 1;
-}
- 
-  /* Style pour les options sélectionnées (ce sont les seules que j'arrive à changer sachant que l'on garde le natif) */
-
-  .rcn-input__option {
-    border-color:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
-    border-radius:var(--rcn-semantic-borderradius-100);
-  }
-
-  .rcn-input__option:checked {
-    font-weight:var(--rcn-semantic-typography-text-component-default-selected-fontweight);
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
-  }
-
-
-
-/*FIN DU CSS LOT 1/*
 
 
 /* reset fieldset*/
@@ -353,109 +57,43 @@ fieldset {
     padding-inline-start: 0; padding-inline-end: 0;
   }
 
-
-  /*Fieldset*/ 
-    .rcn-fieldset {
-    border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
-    padding:var(--rcn-semantic-padding-vertical-700);/*Fichier semantiques pas à jour :(*/
-    margin-bottom:var(--rcn-semantic-margin-vertical-fieldset);/*Fichier semantiques pas à jour :(*/
-
+input[type="checkbox" i] {
+    margin: unset;
 }
 
-    .h1 {
-    font-size:40px; /*à ne pas mettre, juste pour l'exemple*/
+input[type="radio" i] {
+    margin: unset;
+}
+
+.h1 {
+    font-size: 2rem; /*à ne pas mettre, juste pour l'exemple*/
+    line-height: 2rem;
     color:black; /*à ne pas mettre, juste pour l'exemple*/
 }
 
 
-/* Design Fieldset price piker + checkboxes et radioboxes*/
-.rcn-fieldset--as-inputFieldBloc {
+
+.rcn-formLot2{
     display:flex;
     flex-direction:column;
-    border:none;
-    padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-0) var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
-    margin-bottom:0px;
-    gap:var(--rcn-semantic-gap-vertical-100);
+    align-items:stretch;
+    gap:32px;
+    /* à ne pas prendre en compte, juste pour l'exemple*/
+    padding:64px;
+    background-color: white;
+    line-height: 1rem;
+    font-size: 1rem;
+    font-family : "Marianne";
 }
 
-
-
-.sr-only /* pour que certains labels n'apparaissent pas, mais soit lisible au lecteur d'écran -> à intégrer dans un fichier reset*/
-{   position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0); border: 0;
-}
+/* ===================== LOT 2 ======================= */
 
 
 
-/* Design Input type file*/
-
-.rcn-fieldset--as-inputFile {
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='2' ry='2' stroke='%23333' stroke-width='1' stroke-dasharray='10%2c10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
-    border-radius: var(--rcn-semantic-borderradius-200);
-    border:none;
-    background-color:white;/*à ne pas mettre, juste pour l'exemple*/
-    padding:var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
-
-}
-
-.rcn-fieldsetLegend--as-inputFile {
-    color:#000;/*à ne pas mettre, juste pour l'exemple*/
-    font-size: 1rem;/*à ne pas mettre, juste pour l'exemple*/
-    font-weight: bold;/*à ne pas mettre, juste pour l'exemple*/
-    
-    
-    /* reset des éléments du navigateur > faudrait lui créer une classe à part*/
-    padding-block-end: 3rem;
-
-}
+/*-----------------RADIO et CHECKBOXES----------------*/
 
 
-
-.rcn_Btn_secoondary {
-    display: block;
-    width:fit-content;
-    border:1px solid #5770be;
-    padding:0.5rem 0.75rem;
-    color:#5770be;
-    font-size: 1rem;;
-    margin:1rem auto 1rem auto;
-    border-radius: 5px;
-    position:relative;
-}
-.rcn_Btn_secoondary:hover {
-    background:#ffffffcc;
-    color:#4662A6;
-    border-color:#4662A6;
-}
-
-/* pour que l'input type file existe encore mais qu'il soit pas accessible*/
-.rcn-inputField--as-inputFile {
-    position:absolute;
-    top:0;
-    left:0;
-    width: 1px;
-    height: 1px;
-}
-
-
-/* Input checkbox et radiobox*/
-
-
-/* box qui contient label + icon checkbox*/
-.rcn-fieldset__checkboxRadioboxGroup {
-    display: flex;
-    flex-direction:row;
-    gap:var(--rcn-semantic-gap-horizontal-200);
-}
-
-
-
-/* Permet de faire en sorte que l'icon checkbox ou radiobox natif n'apparaisse pas*/
+/* Permet de faire en sorte que l'icon checkbox ou radiobox natif n'apparaisse pas
 .RESET-btnboxIcon {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -464,30 +102,76 @@ fieldset {
 }
 
 
-/* Test pour checkbox*/
-.rcn-checkbox__label {
+/* CHECKBOX */
+
+.rcn-fieldset__checkboxOrRadioList{
+    display: flex;
+    flex-direction: column;
+    gap :var(--rcn-semantic-gap-vertical-200);
+    padding-top :var(--rcn-semantic-padding-vertical-100);
+}
+
+.rcn-inputFieldBloc--checkboxOrRadio {
+    flex-direction:row;
+    align-items: center;
+}
+
+.rcn-inputFieldBloc__label--checkboxOrRadio{
     font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
 }
 
-.rcn-checkbox__input:checked + .rcn-checkbox__label {
+.rcn-inputFieldBloc__label--checkboxOrRadio:has(.rcn-inputField__input:checked){
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
     font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
+} 
+
+.rcn-inputField__input--checkbox{
+    padding : unset;
+    order:-1;
+    font-size: calc(1.25 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
+    line-height: calc(1.125 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
 }
 
-.rcn-checkbox__input::before{
+
+.rcn-inputField__input--checkbox::before{
     font-family:'rcnicon';
     content: "\e939";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 }
 
-.rcn-checkbox__input:checked::before{
+.rcn-inputField__input--checkbox:checked::before{
     font-family:'rcnicon';
     content: "\e938";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
 }
 
 
-/* Test pour l'input radio*/
+.rcn-inputField__input--radio{
+    padding : unset;
+    order:-1;
+    font-size: calc(1.25 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
+    line-height: calc(1.125 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
+}
+
+
+.rcn-inputField__input--radio::before{
+    font-family:'rcnicon';
+    content: "\e93b";
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+
+.rcn-inputField__input--radio:checked::before{
+    font-family:'rcnicon';
+    content: "\e93a";
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+}
+
+
+
+
+
+
+/* RADIO BUTTON */
 
 .rcn-radiobox__label {
     font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
@@ -511,6 +195,149 @@ fieldset {
 }
 
 
+/* box qui contient label + icon checkbox*/
+.rcn-fieldset__checkboxOrRadioboxGroup {
+    display: flex;
+    flex-direction:row;
+    gap:var(--rcn-semantic-gap-horizontal-200);
+}
+
+
+
+
+  /* --------------------FIELDSET-----------------------*/ 
+
+
+.rcn-fieldset {
+    border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+    padding:var(--rcn-semantic-padding-vertical-600);/*Fichier semantiques pas à jour :(*/
+    margin-bottom:var(--rcn-semantic-margin-vertical-fieldset);/*Fichier semantiques pas à jour :(*/
+    display:flex;
+    flex-direction: column;
+    gap : 16px;
+    align-items: stretch;
+}
+
+/* Design Fieldset price piker + checkboxes et radioboxes*/
+.rcn-fieldset--as-inputFieldBloc {
+    display:flex;
+    flex-direction:column;
+    border:none;
+    padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-0) var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
+    margin-bottom:0px;
+    gap:var(--rcn-semantic-gap-vertical-100);
+}
+
+
+.sr-only /* pour que certains labels n'apparaissent pas, mais soit lisible au lecteur d'écran -> à intégrer dans un fichier reset*/
+{   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+}
+
+
+
+/*---------Provenant de BOUTONS (ne pas réprendre dans l'Excel)------------ */
+
+.rcn-button--secondary {
+    background-color:var(--rcn-semantic-color-interaction-background-default-secondary);
+    font-size:1rem;
+    line-height:1rem;
+    padding: 8px 12px;
+    border-radius:0.375rem;
+    border: 1px solid var(--rcn-semantic-color-interaction-border-default-primary);
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+    font-family: 'Marianne';
+  }
+
+.rcn-button--secondary:hover{
+    background-color:var(--rcn-semantic-color-interaction-background-hover-standard);
+    color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+    border-color:var(--rcn-semantic-color-interaction-border-hover-primary);
+}
+
+
+
+/* -----------------INPUT FILE--------------------*/
+
+.rcn-inputField--file{
+    display:flex;
+    flex-direction: column;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='2' ry='2' stroke='%23949494' stroke-width='2px' stroke-dasharray='10%2c10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
+    border-radius: var(--rcn-semantic-borderradius-200);
+    border: none;
+    background-color:white;
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    align-items: stretch;
+    text-align: center;
+    padding: var(--rcn-semantic-padding-horizontal-200) var(--rcn-semantic-padding-vertical-200);
+    position : relative;
+    cursor:pointer;
+}
+
+
+.rcn-inputField__uploadIcon{
+    line-height: 3rem;
+    font-size: 3rem;
+}
+
+/* pour que l'input type file existe encore mais qu'il soit pas accessible*/
+/*.rcn-inputField__input--file {
+    position:absolute;
+    clip-path:content-box;
+    top:0;
+    left:0;
+    width: calc(100% - (2 * var(--rcn-semantic-padding-horizontal-200)));
+    height: calc(100% - (2 * var(--rcn-semantic-padding-horizontal-200)));
+    text-indent:-999999px;
+    cursor: pointer;
+}*/
+
+.rcn-inputField__input--file {
+    position:absolute;
+    clip-path:content-box;
+    bottom: var(--rcn-semantic-padding-horizontal-200);
+    left:var(--rcn-semantic-padding-horizontal-200);
+    width: calc(100% - (4 * var(--rcn-semantic-padding-horizontal-200)));
+    height: var(--rcn-semantic-padding-vertical-400);
+    text-indent:-999999px;
+    cursor: pointer;
+}
+
+
+/*----------------- NUMBER w/ UNIT SELECT --------------------*/
+
+.rcn-inputField__input--unitSelect{
+    border-right : 1px solid #949494;
+    flex-grow: 0;
+}
+
+
+
+/* ----------------module de LANGUE--------------------*/
+
+
+.rcn-inputFieldBloc--language {
+    display:flex;
+    flex-direction:row;
+    gap:var(--rcn-semantic-gap-horizontal-200);
+    align-items:center;
+}
+
+
+.rcn-inputFieldBloc__label--language { 
+    font-weight:normal;
+    padding:0px;
+    color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+ }
+
+
+
+/*----------------COMBOBOX SELECT MULTIPLE------------------*/
 
 
 /*Input combobox sélection multiple*/
@@ -521,21 +348,16 @@ fieldset {
 }
 
 
-.rcn-combobox__blocAsInput {
+.rcn-combobox{
 	display:flex;
 	flex-direction:column;
 	position:relative;
 }
 
-
-/*reset des balises li et ul*/
-li {
-	list-style-type: none;
+.rcn-combobox__placeholder{
+    padding: 11px 8px;
 }
 
-ul {
-    padding:0px;
-}
 
 
 .rcn-combobox__dropDownList {
@@ -556,7 +378,10 @@ ul {
     height :0px;
 }
 
+.rcn-combobox .rcn-fieldset--as-inputFIeldBloc{
+    padding:unset;
 
+}
 
 .rcn-inputField__searchButton::before {
 	font-family:'rcnicon';
@@ -566,14 +391,19 @@ ul {
     font-style:normal;
 }
 
-
-.rcn-inputField__foldoutButton::before {
-	
-	content: "\e92f";
-	font-family:'rcnicon';
+.rcn-inputField__comboboxButton::before {
+    font-family:'rcnicon';
+    content: "\e92f";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
     text-decoration:none;
     font-style:normal;
+}
+
+
+
+.rcn-inputField__button--foldoutButton::before {
+	content: "\e92f";
+	font-family:'rcnicon';
 }
 
 
@@ -590,17 +420,3 @@ ul {
 }
 
 
-/*module de langue*/
-.rcn-inputFieldBloc--as-languageModule {
-    display:flex;
-    flex-direction:row;
-    gap:var(--rcn-semantic-gap-horizontal-200);
-    align-items:center;
-}
-
-
-.rcn-inputFieldBloc__label--as-languageModule { 
-    font-weight:normal;
-    padding:0px;
-    color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
- }
