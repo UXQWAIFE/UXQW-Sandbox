@@ -5,41 +5,35 @@
 @import url('../../Asset/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
 @import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
 @import url('../../Asset/cssReset.css');
-@import url('./input_lot1.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css');
+@import url('./Formulaire.css');
+
+
+
+/*=========== RESETS ET DEFINITIONS GLOBALES ============*/
 
 @font-face {
     font-family: 'RCNicon';
     src: url(../../Asset/Font_icon/RCNicon.ttf);
 }
-
 @font-face {
     font-family: 'Marianne';
     src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
 }
-
-
 body, legend {
     font-family:'Marianne',Arial;
     font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
 }
-
-
 i {
     font-style:normal;
 }
-
-/*reset des balises li et ul*/
 li {
     list-style-type: none;
     text-align: unset;
 }
-
 ul {
     padding:0px;
 }
-
-
-/* reset fieldset*/
 fieldset {
     display: block;
     margin-inline-start: 0 ;
@@ -51,9 +45,46 @@ fieldset {
     padding-inline-start: 0;
     min-inline-size: min-content;
   }
-
-
-.sr-only /* pour que certains labels n'apparaissent pas, mais soit lisible au lecteur d'écran -> à intégrer dans un fichier reset*/
+legend {
+    padding-inline-start: 0; padding-inline-end: 0;
+}
+input[type="checkbox" i] {
+    margin: unset;
+}
+input[type="radio" i] {
+    margin: unset;
+}
+input {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+  min-width:unset;
+}
+option {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+}
+select {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+}
+select option {
+    line-height:1rem;
+}
+.sr-only
 {   position: absolute;
     width: 1px;
     height: 1px;
@@ -62,33 +93,36 @@ fieldset {
     overflow: hidden;
     clip: rect(0, 0, 0, 0); border: 0;
 }
-  
-legend {
-    padding-inline-start: 0; padding-inline-end: 0;
-  }
-
-input[type="checkbox" i] {
-    margin: unset;
-}
-
-input[type="radio" i] {
-    margin: unset;
-}
-
+/*ne pas prendre dans l'Excel*/
+/*.sr-only{
+    height :0px;
+    margin : 0;
+}*/
 .h1 {
-    font-size: 2rem; /*à ne pas mettre, juste pour l'exemple*/
-    line-height: 2rem;
-    color:black; /*à ne pas mettre, juste pour l'exemple*/
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 24px;
 }
-
-
-
-.rcn-formLot2{
+.h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 24px;
+}
+.h3 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 24px;
+}
+.body{
     display:flex;
     flex-direction:column;
     align-items:stretch;
-    gap:32px;
-    /* à ne pas prendre en compte, juste pour l'exemple*/
     padding:64px;
     background-color: white;
     line-height: 1rem;
@@ -96,32 +130,271 @@ input[type="radio" i] {
     font-family : "Marianne";
     margin-bottom :200px;
 }
-
-/* ===================== LOT 2 ======================= */
-
-
-
-/*-----------------RADIO et CHECKBOXES----------------*/
-
-
-/* Permet de faire en sorte que l'icon checkbox ou radiobox natif n'apparaisse pas
-.RESET-btnboxIcon {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    appearance: none;
+/*Classes de l'onglet Button, ne pas reprendre*/
+.rcn-iconButton{
+    border : none;
+    background : transparent;
+    padding : 0;
+    margin : 0;
+}
+.rcn-iconButton:hover{
+    color: #4662A6;
 }
 
 
-/* CHECKBOX */
 
-.rcn-fieldset__checkboxOrRadioList{
+/*============= FORMULAIRE - Champs simples =================*/
+
+
+.rcn-inputFieldBloc{
+    display:flex;
+    flex-direction:column;
+    align-items: stretch;
+    gap: 8px;
+    background-color: white;
+    flex-grow: 1;
+    margin-bottom : var(--rcn-semantic-margin-vertical-inputfieldblock);
+}
+
+
+.rcn-inputFieldBloc__label {
+    display:flex;
+    flex-direction:row;
+    gap:4px;
+    justify-content: flex-start;
+    font-weight:bold;
+}
+
+
+.rcn-inputFieldBloc__mandatoryAsterisk::before{
+    content:'*';
+    font-size:1.2rem; /*à mettre en H6*/
+    color:red;
+}
+
+
+/* la classe d'input qui contient input+icones */
+
+.rcn-inputField{
+    display:flex;
+    flex-direction:row;
+    border: 1px solid;
+    border-color:#949494;
+    align-items:center;
+    border-radius:2px;
+    background-color: white;
+}
+
+.rcn-inputField:has(.rcn-inputField__input[disabled]){
+    border-color:#CECECE;
+    background-color : #F0F0F0;
+    color: #6A6A6A;
+}
+
+.rcn-inputField--error{
+    border-color:red;
+}
+
+/* l'input"natif" */
+
+.rcn-inputField__input{
+    border:none;
+    flex-grow:1;
+    padding:8px;
+    border-radius: 1px;
+    background:none;
+    line-height: 1rem;
+    font-size: 1rem;
+    font-family : "Marianne";
+}
+
+.rcn-inputField__input--select{
+    padding: 7px 8px;
+}
+
+.rcn-inputField__input--datepicker{
+    padding: 9px 8px;
+}
+
+.rcn-inputField__input--textarea{
+    resize: vertical;
+}
+.rcn-inputField__input--number{
+    text-align: right;
+}
+
+.rcn-inputField__input[disabled]{
+    cursor: not-allowed;
+}
+
+
+.rcn-inputField__input::placeholder{
+    color:#6A6A6A;
+}
+
+
+/* message d'erreur si l'input est en erreur ou success*/
+
+.rcn-inputFieldBloc__errorZone{
+    display: flex;
+    flex-direction:row;
+    gap:8px;
+    color:red;
+}
+
+.rcn-inputFieldBloc__errorIcon::before{
+    font-family: 'RCNicon';
+    content: "\e921";
+    text-decoration:none;
+    font-style:normal;
+}
+
+.rcn-inputFieldBloc__errorZone[hidden]{
+    height:0px;
+    display: none;
+    width:0px;
+}
+
+
+.rcn-inputFieldBloc__successZone{
+    display: flex;
+    flex-direction:row;
+    gap:8px;
+    color:green;
+
+}
+
+.rcn-inputFieldBloc__successIcon::before{
+    font-family: 'RCNicon';
+    content: "\e920";
+    text-decoration:none;
+    font-style:normal;
+
+}
+
+.rcn-inputFieldBloc__successZone[hidden]{
+    height: 0px;
+    display: none;
+    width:0px;
+}
+
+
+/* pour l'input price picker : la zone unit (toujours placée à gauche de l'input) */
+
+
+.rcn-inputField__unit{
+    display: flex;
+    flex-direction: row;
+    align-self:stretch;
+    align-items: center;
+    order:0;
+    background-color:#F0F0F0;
+    color: #6A6A6A;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding:8px;
+}
+
+
+
+/* Style pour les options sélectionnées  */
+
+.rcn-inputField__option:checked {
+    color: blue;
+    font-weight: bold;
+  }
+
+
+/*Styles pour les boutons des inputField */
+
+
+.rcn-inputField__button{
+    display: flex;
+    align-items:center;
+    order : 5;
+    padding : 2px 8px;
+    cursor : pointer;    
+    font-size: 1rem;
+    align-self: stretch;
+}
+
+.rcn-inputField__button[disabled]{
+    cursor:not-allowed;
+    color:#6A6A6A;
+}
+
+.rcn-inputField__button--secondary{
+    order : 3;
+ }
+
+ .rcn-inputField:has(.rcn-inputField__button--secondary)::before{
+    order: 4;
+    content:"";
+    border-right: 1px solid #CECECE;
+    padding: 8px 0px;
+ }
+
+.rcn-inputField__button--hidePassword::before{
+    font-family: 'RCNicon';
+    content: "\e92a";
+}
+.rcn-inputField__button--showPassword::before{
+    font-family: 'RCNicon';
+    content: "\e92b";
+}
+
+.rcn-inputField__button--search::before{
+    font-family: 'RCNicon';
+    content: "\e91d";
+}
+
+.rcn-inputField__button--largeSearch{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding-right:16px;
+}
+
+.rcn-inputField__input--largeSearch{
+    padding: 16px;
+}
+
+.rcn-inputField__button--largeSearch::before{
+    font-family: 'RCNicon';
+    content: "\e91d";
+}
+
+.rcn-inputField__button--reset::before{
+    font-family: 'RCNicon';
+    content: "\e91c";
+}
+
+.rcn-inputField__button--delete::before{
+    font-family: 'RCNicon';
+    content: "\e91e";
+}
+
+.rcn-inputField__button--combobox::before {
+    font-family:'rcnicon';
+    content: "\e92f";
+}
+
+
+
+/*============== FORMULAIRE - Champs complexes ===============*/
+
+
+
+/* CHECKBOX & RADIO BUTTONS */
+
+.rcn-fieldset__checkboxOrRadioList {
     display: flex;
     flex-direction: column;
     gap :var(--rcn-semantic-gap-vertical-200);
     padding-top :var(--rcn-semantic-padding-vertical-100);
 }
-
 .rcn-inputFieldBloc--checkboxOrRadio {
     flex-direction:row;
     align-items: center;
@@ -138,13 +411,15 @@ input[type="radio" i] {
     font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
 } 
 
+
+/* CHECKBOX */
+
 .rcn-inputField__input--checkbox{
     padding : unset;
     order:-1;
     font-size: calc(1.25 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
     line-height: calc(1.125 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
 }
-
 
 .rcn-inputField__input--checkbox::before{
     font-family:'rcnicon';
@@ -158,14 +433,12 @@ input[type="radio" i] {
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
 }
 
-
 .rcn-inputField__input--radio{
     padding : unset;
     order:-1;
     font-size: calc(1.25 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
     line-height: calc(1.125 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
 }
-
 
 .rcn-inputField__input--radio::before{
     font-family:'rcnicon';
@@ -178,9 +451,6 @@ input[type="radio" i] {
     content: "\e93a";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
 }
-
-
-
 
 
 
@@ -208,29 +478,24 @@ input[type="radio" i] {
 }
 
 
-/* box qui contient label + icon checkbox*/
-.rcn-fieldset__checkboxOrRadioboxGroup {
-    display: flex;
-    flex-direction:row;
-    gap:var(--rcn-semantic-gap-horizontal-200);
-}
-
-
-
 
   /* --------------------FIELDSET-----------------------*/ 
 
 
 .rcn-fieldset {
     border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
-    padding:var(--rcn-semantic-padding-vertical-600);/*Fichier semantiques pas à jour :(*/
-    margin-bottom:var(--rcn-semantic-margin-vertical-fieldset);/*Fichier semantiques pas à jour :(*/
+    padding:var(--rcn-semantic-padding-vertical-600);
+    margin-bottom:var(--rcn-semantic-margin-vertical-fieldset);
     display:flex;
     flex-direction: column;
     align-items: stretch;
 }
+.rcn-fieldset__legend{
+	margin-bottom: unset;
+	font-weight: var(--rcn-semantic-typography-text-component-default-label-fontweight);
+}
 
-/* Design Fieldset price piker + checkboxes et radioboxes*/
+/* Design Fieldset price piker + checkboxes et radioboxes + etc. */
 .rcn-fieldset--as-inputFieldBloc {
     display:flex;
     flex-direction:column;
@@ -239,6 +504,7 @@ input[type="radio" i] {
     flex-grow:1;
     background-color: var(--rcn-semantic-color-static-background-standard);
     padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-0) var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
+    margin-bottom : var(--rcn-semantic-margin-vertical-inputfieldblock);
     /*gap:var(--rcn-semantic-gap-vertical-100);*/
 }
 
@@ -303,18 +569,6 @@ input[type="radio" i] {
     font-size: 3rem;
 }
 
-/* pour que l'input type file existe encore mais qu'il soit pas accessible*/
-/*.rcn-inputField__input--file {
-    position:absolute;
-    clip-path:content-box;
-    top:0;
-    left:0;
-    width: calc(100% - (2 * var(--rcn-semantic-padding-horizontal-200)));
-    height: calc(100% - (2 * var(--rcn-semantic-padding-horizontal-200)));
-    text-indent:-999999px;
-    cursor: pointer;
-}*/
-
 .rcn-inputField__input--file {
     position:absolute;
     clip-path:content-box;
@@ -368,7 +622,6 @@ input[type="radio" i] {
     padding: 11px 8px;
 }
 
-
 .rcn-combobox__dropDownList {
 	position: absolute;
 	top: calc(100% - 1px);
@@ -382,7 +635,6 @@ input[type="radio" i] {
     background-color:white;
 }
 
-
 .rcn-combobox__dropDownList [hidden] {
     height :0px;
 }
@@ -390,6 +642,4 @@ input[type="radio" i] {
 .rcn-combobox .rcn-fieldset--as-inputFieldBloc{
     margin-bottom: unset;
 }
-
-
 

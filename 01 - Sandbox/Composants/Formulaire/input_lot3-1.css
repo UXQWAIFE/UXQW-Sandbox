@@ -74,84 +74,43 @@ input {
     display:flex;
     width:100%;
     flex-direction:column;
-    gap:50px;
+    padding: 50px 0;
+    gap:100px;
 }
 
 .rcn-title{
     font-size: 40px;
+    line-height : 60px;
     margin-bottom: 24px;
     color: black;
     font-weight: bold;
     }
 
 
-/* Reprise du lot1 */
+/* Class reprises des boutons pour l'exemple*/
 
-.rcn-inputFieldBloc{
-    display:flex;
-    flex-direction:column;
-    align-items: stretch;
-    gap: 8px;
-    background-color: white;
-    flex-grow: 1;
-    margin-bottom:var(--rcn-semantic-margin-vertical-inputfieldblock);
+.rcn-button--primary {
+background-color:#5770BE;
+font-size:1rem;
+line-height:1rem;
+padding:12px 24px;
+border: 2px solid #5770BE;
+border-radius:0.375rem;
+color:white;
 }
 
-.rcn-inputFieldBloc__label {
-    display:flex;
-    flex-direction:row;
-    gap:4px;
-    justify-content: flex-start;
-    font-weight:bold;
+.rcn-button--secondary {
+background-color: white;
+font-size:1rem;
+line-height:1rem;
+padding:12px 24px;
+border-radius:0.375rem;
+border: 2px solid #5770BE;
+color:#5770BE;
+
 }
 
-.rcn-inputField{
-    display:flex;
-    flex-direction:row;
-    border: 1px solid;
-    border-color:#6A6A6A;
-    align-items:center;
-    border-radius:2px;
-    background-color: white;
-}
-
-.rcn-inputField--error{
-    border-color:red;
-}
-
-.rcn-inputField__input{
-    border:none;
-    flex-grow:1;
-    padding:8px;
-    border-radius: 1px;
-    background:none;
-    line-height: 1rem;
-    font-size: 1rem;
-    font-family : "Marianne";
-}
-
-.rcn-inputFieldBloc__errorZone{
-    display: flex;
-    flex-direction:row;
-    gap:8px;
-    color:red;
-}
-
-.rcn-inputFieldBloc__errorIcon::before{
-    font-family: 'RCNicon';
-    content: "\e921";
-    text-decoration:none;
-    font-style:normal;
-}
-
-.rcn-input__asterix{
-    font-size:23px;
-    color:red;
-    }
-
-
-
-/*FORMULAIRE LOT3*/
+/* =============== FORMULAIRE LOT3 =================*/
 
 @font-face {
     font-family: 'Marianne';
@@ -167,10 +126,16 @@ body, legend {
     display:grid;
     grid-template-columns: 25% auto;
     grid-template-rows: auto;
-    gap: 0 var(--rcn-semantic-gap-horizontal-700);
+    gap: 0 var(--rcn-semantic-gap-horizontal-500);
     width: 100%;
 }
 
+.rcn-form__titleZone{
+display: flex;
+justify-content: center;
+grid-column-start: 2;
+grid-row-start: 1;
+}
 
 .rcn-form__stepperVerticalContainerInputBlock{
 display: flex;
@@ -194,12 +159,7 @@ align-items: center;
 margin-bottom: 16px;
 }
 
-.rcn-form__titleZone{
-display: flex;
-justify-content: center;
-grid-column-start: 2;
-grid-row-start: 1;
-}
+
 
 
 .rcn-form__content{
@@ -224,28 +184,44 @@ margin-bottom: var(--rcn-semantic-margin-vertical-section);
     grid-row-start: 2;
     }
     
-
+/*------------- Bottom Actions Banner ---------------*/
 /*Nouveau composant de navigation à porter à part*/
 
-.rcn-actionZone{
+
+.rcn-bottomActionsBanner{
 display: flex;
 flex-direction: row;
-justify-content: space-between;
-border-top : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+gap: var(--rcn-semantic-gap-horizontal-300);
+border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
 border-right : none;
 border-left: none;
 border-bottom:none;
 padding: var(--rcn-semantic-padding-horizontal-400) 0;
+flex-wrap: wrap;
 }
 
-.rcn-actionZone__navZone {
+.rcn-bottomActionsBanner__primaryActions {
+order: 2;
+flex-grow: 1;
+display:flex;
+flex-direction: row;
+justify-content: flex-end;
+gap: var(--rcn-semantic-gap-horizontal-200);
+width:auto;
+}
+
+.rcn-bottomActionsBanner__secondaryActions {
+order: 1;
+justify-content: flex-start;
 display:flex;
 flex-direction: row;
 gap: var(--rcn-semantic-gap-horizontal-200);
 width:auto;
 }
 
-
+.rcn-bottomActionsBanner .rcn-button--primary{
+    order:2;
+}
 
 
 /* Class reprises pour le stepper*/
@@ -485,25 +461,3 @@ width:auto;
   color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
   }
 
-/* Class reprises des boutons pour l'exemple*/
-
-.button--primary {
-background-color:#5770BE;
-font-size:1rem;
-line-height:1rem;
-padding:12px 24px;
-border: 2px solid #5770BE;
-border-radius:0.375rem;
-color:white;
-}
-
-.button--secondary {
-background-color: white;
-font-size:1rem;
-line-height:1rem;
-padding:12px 24px;
-border-radius:0.375rem;
-border: 2px solid #5770BE;
-color:#5770BE;
-
-}
