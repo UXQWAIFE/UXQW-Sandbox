@@ -52,8 +52,19 @@ fieldset {
     padding-inline-start: 0;
     min-inline-size: min-content;
   }
+
+
+.sr-only /* pour que certains labels n'apparaissent pas, mais soit lisible au lecteur d'écran -> à intégrer dans un fichier reset*/
+{   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+}
   
-  legend {
+legend {
     padding-inline-start: 0; padding-inline-end: 0;
   }
 
@@ -108,13 +119,14 @@ input[type="radio" i] {
 .rcn-fieldset__checkboxOrRadioList{
     display: flex;
     flex-direction: column;
-    gap :var(--rcn-semantic-gap-vertical-300);
+    gap :var(--rcn-semantic-gap-vertical-200);
     padding-top :var(--rcn-semantic-padding-vertical-100);
 }
 
 .rcn-inputFieldBloc--checkboxOrRadio {
     flex-direction:row;
     align-items: center;
+    margin-bottom:unset;
 }
 
 .rcn-inputFieldBloc__label--checkboxOrRadio{
@@ -216,7 +228,6 @@ input[type="radio" i] {
     margin-bottom:var(--rcn-semantic-margin-vertical-fieldset);/*Fichier semantiques pas à jour :(*/
     display:flex;
     flex-direction: column;
-    gap : var(--rcn-semantic-gap-vertical-400);
     align-items: stretch;
 }
 
@@ -224,20 +235,27 @@ input[type="radio" i] {
 .rcn-fieldset--as-inputFieldBloc {
     display:flex;
     flex-direction:column;
+    align-items: stretch;
     border:none;
+    flex-grow:1;
+    background-color: var(--rcn-semantic-color-static-background-standard);
     padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-0) var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
-    gap:var(--rcn-semantic-gap-vertical-100);
+    /*gap:var(--rcn-semantic-gap-vertical-100);*/
 }
 
+.rcn-fieldset--as-inputFieldBloc:has(.rcn-fieldset__horizontalInputs){
+    gap: var(--rcn-semantic-gap-vertical-400);
+}
 
-.sr-only /* pour que certains labels n'apparaissent pas, mais soit lisible au lecteur d'écran -> à intégrer dans un fichier reset*/
-{   position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0); border: 0;
+.rcn-fieldset__horizontalInputs .rcn-inputFieldBloc{
+    margin-bottom:unset;
+}
+
+.rcn-fieldset__horizontalInputs{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:row;
+    gap: 16px;
 }
 
 

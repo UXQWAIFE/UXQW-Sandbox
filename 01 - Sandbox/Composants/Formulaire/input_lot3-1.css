@@ -6,6 +6,8 @@
 @import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
 @import url('/ComponentTokensButtonPrimary.min.css');
 @import url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+@import url('./input_lot1.css');
+@import url('./Lot 2 MVI.css');
 
 @font-face {
     font-family: 'RCNicon';

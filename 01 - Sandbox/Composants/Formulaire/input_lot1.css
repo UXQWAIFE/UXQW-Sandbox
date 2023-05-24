@@ -1,3 +1,13 @@
+@import url('../../Asset/Cores et semantiques/Core/CoreTokens-CHORUSPRO.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensColor.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensShadow.min.css');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensLayout.min.css');
+@import url('../../Asset/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
+@import url('../../Asset/cssReset.css');
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css');
+@import url('./Lot 2 MVI.css');
+
 @font-face {
     font-family: 'RCNicon';
     src: url(../../Asset/Font_icon/RCNicon.ttf);
@@ -67,11 +77,9 @@ textarea:focus {
     display:flex;
     flex-direction:column;
     align-items:stretch;
-    gap:24px;
     /* à ne pas prendre en compte, juste pour l'exemple*/
     padding:64px;
     background-color: white;
-    line-height: 1rem;
     font-size: 1rem;
     font-family : "Marianne";
 }
@@ -86,6 +94,7 @@ textarea:focus {
     gap: 8px;
     background-color: white;
     flex-grow: 1;
+    margin-bottom : var(--rcn-semantic-margin-vertical-inputfieldblock);
 }
 
 /* la zone label obligatoire.*/
@@ -311,31 +320,8 @@ input[type="date"]{
 }*/
 
 
-/* pour la date multi-champs*/
 
-.rcn-fieldset--as-inputFieldBloc{
-    display:flex;
-    flex-direction:column;
-    align-items: stretch;
-    gap: 8px;
-    /* à ne pas prendre en compte, juste pour l'exemple*/
-    background-color: white;
-    flex-grow: 1;
-}
-
-.rcn-fieldset__horizontalInputs{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
-    gap: 16px;
-}
-
-.rcn-fieldset__legend--as-inputLabel{
-    font-weight: bold;
-    margin-bottom: 4px;
-}
- 
-  /* Style pour les options sélectionnées (ce sont les seules que j'arrive à changer sachant que l'on garde le natif) */
+/* Style pour les options sélectionnées (ce sont les seules que j'arrive à changer sachant que l'on garde le natif) */
 
 .rcn-inputField__option:checked {
     color: blue;
@@ -368,7 +354,6 @@ input[type="date"]{
 .rcn-iconButton:hover{
     color: #4662A6;
 }
-
 
 
 /*NEW*/
@@ -439,7 +424,7 @@ input[type="date"]{
     font-family: 'RCNicon';
     content: "\e91e";
 }
-
+/*NEW*/
 .rcn-inputField__button--combobox::before {
     font-family:'rcnicon';
     content: "\e92f";
