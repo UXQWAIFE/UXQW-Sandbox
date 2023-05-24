@@ -84,6 +84,7 @@ input[type="radio" i] {
     line-height: 1rem;
     font-size: 1rem;
     font-family : "Marianne";
+    margin-bottom :200px;
 }
 
 /* ===================== LOT 2 ======================= */
@@ -225,7 +226,6 @@ input[type="radio" i] {
     flex-direction:column;
     border:none;
     padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-0) var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
-   
     gap:var(--rcn-semantic-gap-vertical-100);
 }
 
@@ -341,14 +341,6 @@ input[type="radio" i] {
 /*----------------COMBOBOX SELECT MULTIPLE------------------*/
 
 
-/*Input combobox sélection multiple*/
-
-.rcn-input__button {
-	background-color:transparent;
-	border-color:transparent;
-}
-
-
 .rcn-combobox{
 	display:flex;
 	flex-direction:column;
@@ -360,10 +352,9 @@ input[type="radio" i] {
 }
 
 
-
 .rcn-combobox__dropDownList {
 	position: absolute;
-	top: 100%;
+	top: calc(100% - 1px);
 	border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
 	right: 0;
 	left: 0;
@@ -379,45 +370,9 @@ input[type="radio" i] {
     height :0px;
 }
 
-.rcn-combobox .rcn-fieldset--as-inputFIeldBloc{
-    padding:unset;
-
+.rcn-combobox .rcn-fieldset--as-inputFieldBloc{
+    margin-bottom: unset;
 }
 
-.rcn-inputField__searchButton::before {
-	font-family:'rcnicon';
-    content: "\e91d";
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-    text-decoration:none;
-    font-style:normal;
-}
-
-.rcn-inputField__comboboxButton::before {
-    font-family:'rcnicon';
-    content: "\e92f";
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-    text-decoration:none;
-    font-style:normal;
-}
-
-
-
-.rcn-inputField__button--foldoutButton::before {
-	content: "\e92f";
-	font-family:'rcnicon';
-}
-
-
-.rcn-combobox__inputContent--as-placeholder {
-	background-color:transparent;
-	border-color:transparent;
-	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
-}
-
-.rcn-combobox__inputContent {
-    background-color:transparent;
-    border-color:transparent;
-    color:var(--rcn-semantic-color-interaction-text_and_icon-onstandard);
-}
 
 

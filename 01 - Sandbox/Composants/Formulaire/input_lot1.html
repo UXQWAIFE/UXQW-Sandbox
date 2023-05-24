@@ -16,13 +16,13 @@
 
         <div class="rcn-inputFieldBloc">
             <label class="rcn-inputFieldBloc__label">
-                Champ en erreur
+                Error
             </label>
        
             <div>texte explicatif (si besoin)</div> 
 
             <div class="rcn-inputField rcn-inputField--error">
-                <input type="text" class="rcn-inputField__input" required>
+                <input type="text" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit" required>
 
             </div>
             <div  class="rcn-inputFieldBloc__errorZone" >
@@ -31,18 +31,12 @@
             </div> 
         </div>
 
-        <!--imput obligatoire avec message succes -->
+        <!--input obligatoire + succes  -->
 
         <div class="rcn-inputFieldBloc">        
-            <label class="rcn-inputFieldBloc__label">Champ obligatoire désactivé avec bouton désactivé<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
+            <label class="rcn-inputFieldBloc__label">Success<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
             <div class="rcn-inputField" >
-                <input type="text" disabled value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="chalu">
-
-                <button disabled class="rcn-iconButton rcn-inputField__button">
-                    <span class="sr-only"></span>
-                    <i class="mdi mdi-heart"></i>
-                </button>
-
+                <input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
             </div>
             <div  class="rcn-inputFieldBloc__successZone">
                 <i class="rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
@@ -50,6 +44,21 @@
             </div> 
         </div>
 
+        <!--imput désactivé -->
+
+        <div class="rcn-inputFieldBloc">        
+            <label class="rcn-inputFieldBloc__label">Désactivé</label>
+            <div class="rcn-inputField" >
+                <input type="text" disabled value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+
+                <button disabled class="rcn-iconButton rcn-inputField__button">
+                    <span class="sr-only"></span>
+                    <i class="mdi mdi-heart"></i>
+                </button>
+
+            </div>
+            
+        </div>
 
         <!-- inputs Search-->
 
@@ -59,7 +68,7 @@
 
             <div class="rcn-inputField">
 
-                <input placeholder="aIfe4eveR" class="rcn-inputField__input">
+                <input placeholder="Rechercher..." class="rcn-inputField__input">
 
                 <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                     <span class="sr-only"></span>
@@ -75,15 +84,16 @@
 
             <div class="rcn-inputField">
 
-                <input placeholder="aIfe4eveR" class="rcn-inputField__input">
+                <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+                    <span class="sr-only"></span>
+                </button>
 
                 <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                     <span class="sr-only"></span>
                 </button>
 
-                <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
-                    <span class="sr-only"></span>
-                </button>
                 
             </div>
         </div>
@@ -94,15 +104,16 @@
 
             <div class="rcn-inputField">
 
-                <input placeholder="aIfe4eveR" class="rcn-inputField__input">
+                <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
+                    <span class="sr-only"></span>
+                </button>
 
                 <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                     <span class="sr-only"></span>
                 </button>
 
-                <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
-                    <span class="sr-only"></span>
-                </button>
                 
             </div>
         </div>
@@ -113,7 +124,7 @@
 
             <div class="rcn-inputField" >
 
-                <input placeholder="aIfe4eveR" class="rcn-inputField__input rcn-inputField__input--largeSearch">
+                <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
 
                 <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--largeSearch">
                     <span class="">Rechercher</span>
@@ -128,15 +139,16 @@
 
             <div class="rcn-inputField" >
 
-                <input placeholder="aIfe4eveR" class="rcn-inputField__input rcn-inputField__input--largeSearch">
+                <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
+
+                <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+                    <span class="sr-only"></span>
+                </button>
 
                 <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--largeSearch">
                     <span class="">Rechercher</span>
                 </button>
 
-                <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
-                    <span class="sr-only"></span>
-                </button>
                 
             </div>
         </div>
@@ -147,15 +159,16 @@
 
             <div class="rcn-inputField" >
 
-                <input placeholder="aIfe4eveR" class="rcn-inputField__input rcn-inputField__input--largeSearch">
+                <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
+
+                <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
+                    <span class="sr-only"></span>
+                </button>
 
                 <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--largeSearch">
                     <span class="">Rechercher</span>
                 </button>
                 
-                <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
-                    <span class="sr-only"></span>
-                </button>
 
             </div>
         </div>
@@ -169,7 +182,7 @@
 
             <div class="rcn-inputField">
 
-                <input placeholder="aIfe4eveR" type="password" class="rcn-inputField__input">
+                <input placeholder="Ex : Lorem ipsum sit" type="password" class="rcn-inputField__input">
 
                 <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--showPassword">
                     <span class="sr-only"></span>
@@ -184,7 +197,7 @@
 
             <div class="rcn-inputField">
 
-                <input placeholder="aIfe4eveR" class="rcn-inputField__input">
+                <input placeholder="Ex : Lorem ipsum sit" class="rcn-inputField__input">
 
                 <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--hidePassword">
                     <span class="sr-only"></span>
@@ -211,7 +224,7 @@
                 <div class="rcn-inputField__unit">
                     <div>€</div>
                 </div>
-                <input type="number" class="rcn-inputField__input rcn-inputField__input--number">
+                <input type="number" class="rcn-inputField__input rcn-inputField__input--number" placeholder="Ex : 12 450">
             </div>
         </div>
 
@@ -237,7 +250,7 @@
                 Text area 
             </label>
             <div class="rcn-inputField">
-                <textarea rows="3" placeholder="Votre texte" type="text" class="rcn-inputField__input rcn-inputField__input--textArea"></textarea>
+                <textarea rows="3" placeholder="Ex : Lorem ipsum sit dolor amet" type="text" class="rcn-inputField__input rcn-inputField__input--textArea"></textarea>
             </div>
         </div>
 

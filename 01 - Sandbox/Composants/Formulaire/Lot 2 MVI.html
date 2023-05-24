@@ -102,45 +102,40 @@
     <!--Fieldset 1-->
 
 
- <fieldset class="rcn-fieldset">
+<fieldset class="rcn-fieldset">
     <legend class="h1">Titre du fieldset</legend>
+     <!--imput obligatoire avec texte descriptif et message d'erreur -->
 
         <div class="rcn-inputFieldBloc">
-            <div class="rcn-input__mandatoryZone">
-                <label class="rcn-inputFieldBloc__label">Label input<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
-                 
-            </div> 
-            <div class="">texte explicatif (si besoin)</div> 
+            <label class="rcn-inputFieldBloc__label">
+                Error
+            </label>
+       
+            <div>texte explicatif (si besoin)</div> 
+
             <div class="rcn-inputField rcn-inputField--error">
-                <input type="text"  class="rcn-inputField__input">
-                <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--foldoutButton">
-                    <p class="sr-only"></p>
-                </button>
+                <input type="text" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit" required>
 
             </div>
-            <div class="rcn-inputFieldBloc__errorZone">
-                <p class="sr-only"></p>
-                <i class="mdi mdi-close"></i>
+            <div  class="rcn-inputFieldBloc__errorZone" >
+                <i class="rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
                 erreur machin machin
             </div> 
         </div>
 
-        <div class="rcn-inputFieldBloc">       
-            <label class="rcn-inputFieldBloc__label">Label input</label>
-           
-            <div class="rcn-inputField" >
-                <input type="text"  disabled class="rcn-inputField__input" placeholder="chalu">
-                <button disabled class="rcn-iconButton rcn-inputField__button mdi mdi-heart">
-                </button>
+        <!--input obligatoire + succes  -->
 
+        <div class="rcn-inputFieldBloc">        
+            <label class="rcn-inputFieldBloc__label">Success<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
+            <div class="rcn-inputField" >
+                <input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
             </div>
-            <div class="rcn-inputFieldBloc__successZone">
-                <p class="sr-only"></p>
-                <i class="mdi mdi-check"></i>
+            <div  class="rcn-inputFieldBloc__successZone">
+                <i class="rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
                 bravo clarou t'es la meilleur dev
             </div> 
         </div>
-    </fieldset>
+</fieldset>
 
 
 
@@ -212,7 +207,7 @@
                 <p class="rcn-inputField__input rcn-combobox__placeholder">
                     0 option(s) sélectionnés
                 </p>
-                <button class="rcn-iconButton rcn-inputField__button rcn-inputField__comboboxButton">
+                <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--combobox">
                         <span class="sr-only">
                             Déplier la liste d'options
                         </span>
@@ -223,8 +218,13 @@
                 <div>
                     <label for="sx" class="sr-only">Recherchez</label>
                     <div class="rcn-inputField">
-                        <input id="sx" type="text" class="rcn-inputField__input">
-                        <button class="rcn-iconButton rcn-inputField__button rcn-inputField__searchButton">
+                        <input id="sx" type="text" class="rcn-inputField__input" placeholder="Filtrer la liste d'option..." value="Opt">
+                        
+                        <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+                            <p class="sr-only">Déplier la liste d'options</p>
+                        </button>
+                        
+                        <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                             <p class="sr-only">Déplier la liste d'options</p>
                         </button>
                     </div>

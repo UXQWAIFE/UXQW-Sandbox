@@ -440,4 +440,9 @@ input[type="date"]{
     content: "\e91e";
 }
 
+.rcn-inputField__button--combobox::before {
+    font-family:'rcnicon';
+    content: "\e92f";
+}
+
 
