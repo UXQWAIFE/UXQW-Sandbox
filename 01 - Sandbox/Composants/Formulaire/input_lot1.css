@@ -371,14 +371,15 @@ input[type="date"]{
 
 
 
-
+/*NEW*/
 .rcn-inputField__button{
     display: flex;
     align-items:center;
-    order : 4;
+    order : 5;
     padding : 2px 8px;
     cursor : pointer;    
     font-size: 1rem;
+    align-self: stretch;
 }
 
 .rcn-inputField__button[disabled]{
@@ -386,9 +387,16 @@ input[type="date"]{
     color:#6A6A6A;
 }
 
+/*NEW*/
 .rcn-inputField__button--secondary{
     order : 3;
+ }
+/*NEW*/
+ .rcn-inputField:has(.rcn-inputField__button--secondary)::before{
+    order: 4;
+    content:"";
     border-right: 1px solid #CECECE;
+    padding: 8px 0px;
  }
 
 .rcn-inputField__button--hidePassword::before{
@@ -399,4 +407,37 @@ input[type="date"]{
     font-family: 'RCNicon';
     content: "\e92b";
 }
+
+/*NEW*/
+.rcn-inputField__button--search::before{
+    font-family: 'RCNicon';
+    content: "\e91d";
+}
+/*NEW*/
+.rcn-inputField__button--largeSearch{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    padding-right:16px;
+}
+/*NEW*/
+.rcn-inputField__input--largeSearch{
+    padding: 16px;
+}
+/*NEW*/
+.rcn-inputField__button--largeSearch::before{
+    font-family: 'RCNicon';
+    content: "\e91d";
+}
+/*NEW*/
+.rcn-inputField__button--reset::before{
+    font-family: 'RCNicon';
+    content: "\e91c";
+}
+/*NEW*/
+.rcn-inputField__button--delete::before{
+    font-family: 'RCNicon';
+    content: "\e91e";
+}
+
 

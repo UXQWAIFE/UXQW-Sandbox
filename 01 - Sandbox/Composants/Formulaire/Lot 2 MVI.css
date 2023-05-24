@@ -107,7 +107,7 @@ input[type="radio" i] {
 .rcn-fieldset__checkboxOrRadioList{
     display: flex;
     flex-direction: column;
-    gap :var(--rcn-semantic-gap-vertical-200);
+    gap :var(--rcn-semantic-gap-vertical-300);
     padding-top :var(--rcn-semantic-padding-vertical-100);
 }
 
@@ -118,6 +118,7 @@ input[type="radio" i] {
 
 .rcn-inputFieldBloc__label--checkboxOrRadio{
     font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
+    align-items: flex-start;
 }
 
 .rcn-inputFieldBloc__label--checkboxOrRadio:has(.rcn-inputField__input:checked){
@@ -214,7 +215,7 @@ input[type="radio" i] {
     margin-bottom:var(--rcn-semantic-margin-vertical-fieldset);/*Fichier semantiques pas à jour :(*/
     display:flex;
     flex-direction: column;
-    gap : 16px;
+    gap : var(--rcn-semantic-gap-vertical-400);
     align-items: stretch;
 }
 
@@ -224,7 +225,7 @@ input[type="radio" i] {
     flex-direction:column;
     border:none;
     padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-0) var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
-    margin-bottom:0px;
+   
     gap:var(--rcn-semantic-gap-vertical-100);
 }
 
@@ -312,7 +313,7 @@ input[type="radio" i] {
 /*----------------- NUMBER w/ UNIT SELECT --------------------*/
 
 .rcn-inputField__input--unitSelect{
-    border-right : 1px solid #949494;
+    border-right : 1px solid var(--rcn-semantic-color-interaction-border-default-standard);
     flex-grow: 0;
 }
 
