@@ -1,0 +1,57 @@
+.item-a {
+    grid-area: header;
+    display: grid;
+    background-color: aqua;
+
+}
+
+.item-b {
+    grid-area: main;
+    display: grid;
+    background-color: blue;
+    
+}
+
+.item-c {
+    grid-area: sidebar;
+    display: grid;
+    background-color: aquamarine;
+    
+}
+
+.item-d {
+    grid-area: footer;
+    display: grid;
+    background-color: red;
+    
+}
+
+.container{
+    display: grid;
+    /*test
+    grid-template-columns: calc(100% / 12)  calc(100% / 12)  calc(100% / 12)  calc(100% / 12)  calc(100% / 12)  calc(100% / 12)  calc(100% / 12)  calc(100% / 12)  calc(100% / 12)  calc(100% / 12)  calc(100% / 12)  calc(100% / 12);
+    */
+    grid-template-columns: repeat(12, 8%);
+    grid-template-rows:auto;
+    /*test
+    grid-template-areas: 
+    "header header header header header header hearder header header header header header"
+    "main main . . . . . . . . . ."
+    "sidebar . . . . . . . . . . . "
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    */
+    column-gap: 24px;
+    grid-column-gap:80px;
+}
+
+
+.grid{
+
+    display: grid;
+    grid-template-columns: repeat(12, calc((100% / 12) - 24px * 10 - 80px * 2));
+    grid-template-rows:auto;
+    column-gap: 24px;
+    grid-column-gap:80px;
+    background-color: cornsilk;
+    max-width: 100%;
+}
