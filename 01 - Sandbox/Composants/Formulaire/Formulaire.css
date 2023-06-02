@@ -336,6 +336,7 @@ select option {
     padding: 8px 0px;
  }
 
+
 .rcn-inputField__button--hidePassword::before{
     font-family: 'RCNicon';
     content: "\e92a";
