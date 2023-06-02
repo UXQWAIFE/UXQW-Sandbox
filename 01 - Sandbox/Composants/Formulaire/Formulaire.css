@@ -552,6 +552,28 @@ select option {
 .rcn-inputField--file{
     display:flex;
     flex-direction: column;
+    background-position:  0 0, 0 0, 100% 0, 0 100%;
+    background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
+    background-repeat: no-repeat;
+    background-image:
+    repeating-linear-gradient(0deg, #949494, #949494 10px, transparent 10px, transparent 20px),
+    repeating-linear-gradient(90deg, #949494, #949494 10px, transparent 10px, transparent 20px),
+    repeating-linear-gradient(180deg, #949494, #949494 10px, transparent 10px, transparent 20px),
+    repeating-linear-gradient(270deg, #949494, #949494 10px, transparent 10px, transparent 20px);
+    border-radius: var(--rcn-semantic-borderradius-200);
+    border: none;
+    background-color:white;
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    align-items: stretch;
+    text-align: center;
+    padding: var(--rcn-semantic-padding-horizontal-200) var(--rcn-semantic-padding-vertical-200);
+    position : relative;
+    cursor:pointer;
+}
+/*
+.rcn-inputField--file{
+    display:flex;
+    flex-direction: column;
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='2' ry='2' stroke='%23949494' stroke-width='2px' stroke-dasharray='10%2c10' stroke-dashoffset='10' stroke-linecap='butt'/%3e%3c/svg%3e");
     border-radius: var(--rcn-semantic-borderradius-200);
     border: none;
@@ -563,8 +585,7 @@ select option {
     position : relative;
     cursor:pointer;
 }
-
-
+*/
 .rcn-inputField__uploadIcon{
     line-height: 3rem;
     font-size: 3rem;
