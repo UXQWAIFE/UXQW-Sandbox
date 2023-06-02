@@ -1,4 +1,73 @@
-.item-a {
+
+.rcn-gridTemplate--???{
+
+}
+
+.rcn-gridItem--center{
+	align-self:center;
+}
+
+
+.rcn-gridItem--stepper{
+	 grid-area: header;
+}
+.rcn-gridTemplate--FormNavVertical{
+	 grid-template-areas: 
+    " header header header header "
+    ". main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar ."
+    ". footer footer footer footer footer footer footer footer footer footer footer footer .";
+}
+.rcn-gridTemplate--FormNavVertical .rcn-gridItem--stepper{
+	align-self:end;
+}
+
+
+.rcn-gridItem-stepper{
+	 grid-area: header;
+}
+.rcn-gridTemplate-Form--NavVertical{
+	 grid-template-areas: 
+    " header header header header "
+    ". main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar ."
+    ". footer footer footer footer footer footer footer footer footer footer footer footer .";
+}
+.rcn-gridTemplate-Form--NavVertical .rcn-gridItem-stepper{
+	align-self:end;
+}
+
+
+
+.rcn-gridTemplate{
+   display: grid;
+  grid-template-columns: 1fr 1fr ;
+  grid-column-gap : 1rem;
+  grid-template-rows: auto;
+}
+
+.rcn-gridTemplate--formNavVertical{
+	grid-template-areas: 
+    ". title title title "
+    "stepper main main main";
+}
+
+.rcn-gridTemplate__formHeading{
+	justify-content :center;
+}
+
+
+.rcn-gridTemplate--formNavVertical .rcn-gridTemplate__heading{
+	justify-content :center;
+}
+
+
+
+
+
+
+
+
+
+.rcn-area--stepper{
   grid-area: header;
   background-color: #FFD700;
   height: 100px;
@@ -27,7 +96,7 @@
   background-color: #FFD700;
 }
 
-
+/*Grid globale*/
 .container {
   display: grid;
   grid-template-columns: 4rem 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4rem;
@@ -40,10 +109,43 @@
   background-color: #F0F0F0;
 }
 
+/*Template*/
+
+.container {
+  grid-template-areas: 
+    " header header header header "
+    ". main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar ."
+    ". footer footer footer footer footer footer footer footer footer footer footer footer .";
+}
+
+
 .container--primary{
 	padding: 0px 80px;
 }
 
 body{
 	margin:0;
+}
+
+
+
+
+
+
+
+
+
+
+ width:950px).col1{
+	border-color:blue;
+}
+media-query(max-width:950px).col2{
+	border-color:blue;
+}
+
+media-query(max-width:450px).col1{
+	border-color:blue;
+}
+media-query(max-width:450px).col2{
+	border-color:blue;
 }
