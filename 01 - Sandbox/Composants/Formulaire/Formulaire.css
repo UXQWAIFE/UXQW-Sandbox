@@ -201,7 +201,7 @@ select option {
     border:none;
     flex-grow:1;
     padding:8px;
-    border-radius: 1px;
+    border-radius: 2px;
     background:none;
     line-height: 1rem;
     font-size: 1rem;
