@@ -55,11 +55,6 @@ select option {
 }
 
 
-textarea:focus {
-    outline:2px solid orange;
-}
-
-
 /*
 .form-icon::before{
     font-family: 'RCNicon';

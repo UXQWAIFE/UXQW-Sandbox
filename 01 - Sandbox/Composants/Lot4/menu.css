@@ -5,9 +5,8 @@
 @import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensLayout.min.css');
 @import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
 @import url('/ComponentTokensButtonPrimary.min.css');
-@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
+@import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css');
 @import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
-
 
 
 @font-face {
@@ -53,6 +52,22 @@ ul {
 	padding-bottom:var(--rcn-semantic-padding-vertical-300);
 	background-color:var(--rcn-semantic-color-static-background-primary);
 	align-items:center;
+}
+
+.rcn-header__mainNavBanner{
+	order :1;
+	display :flex;
+	flex-direction :row;
+	justify-content : flex-start;
+	gap: var(--rcn-semantic-gap-horizontal-600);
+	padding-top : var(--rcn-semantic-padding-vertical-300);
+	padding-bottom : var(--rcn-semantic-padding-vertical-300);
+	background-color : var(--rcn-semantic-color-static-background-primary);
+	align-items :center;
+}
+.rcn-header__menu{
+	order:0;
+	flex-grow: 1;
 }
 
 .rcn-menu {
