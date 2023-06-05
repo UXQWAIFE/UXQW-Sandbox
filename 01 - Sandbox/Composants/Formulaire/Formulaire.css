@@ -141,6 +141,11 @@ select option {
     color: #4662A6;
 }
 
+/*Classes de l'onglet Icon, ne pas reprendre*/
+
+.rcn-icon{
+    font-family: 'RCNicon';
+ }
 
 
 /*============= FORMULAIRE - Champs simples =================*/
@@ -167,7 +172,7 @@ select option {
 
 
 .rcn-inputFieldBloc__mandatoryAsterisk::before{
-    content:'*';
+    content:"*";
     font-size:1.2rem; /*à mettre en H6*/
     color:red;
 }
@@ -185,7 +190,19 @@ select option {
     background-color: white;
 }
 
+/* lclass avec :has à ne plus prendre en compe
+
 .rcn-inputField:has(.rcn-inputField__input[disabled]){
+    border-color:#CECECE;
+    background-color : #F0F0F0;
+    color: #6A6A6A;
+}
+
+Est ce qu'il faudrait aussi mettre la box avec l'icon en disabled ?
+*/
+
+.rcn-inputField--disabled {
+
     border-color:#CECECE;
     background-color : #F0F0F0;
     color: #6A6A6A;
@@ -329,19 +346,31 @@ select option {
     order : 3;
  }
 
+ /*
+
  .rcn-inputField:has(.rcn-inputField__button--secondary)::before{
     order: 4;
     content:"";
-    border-right: 1px solid #CECECE;
+    border-right: 1px solid #ca2020;
     padding: 8px 0px;
  }
 
+ mettre buttonSeparator
+ */
+
+ .rcn-inputField__buttonSeparator{
+    width : 1px;
+    height: var(--rcn-semantic-typography-text-component-default-body-fontsize);
+    background-color:#CECECE;
+    order:4;
+
+ }
+
+
 .rcn-inputField__button--hidePassword::before{
-    font-family: 'RCNicon';
     content: "\e92a";
 }
 .rcn-inputField__button--showPassword::before{
-    font-family: 'RCNicon';
     content: "\e92b";
 }
 
@@ -406,10 +435,23 @@ select option {
     align-items: flex-start;
 }
 
+/*
+
 .rcn-inputFieldBloc__label--checkboxOrRadio:has(.rcn-inputField__input:checked){
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
     font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
 } 
+
+*/
+
+
+
+.rcn-inputFieldBloc__label--checkboxOrRadio-checked{
+
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+    font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
+} 
+
 
 
 /* CHECKBOX */
@@ -460,11 +502,6 @@ select option {
     font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
 }
 
-.rcn-radiobox__input:checked + .rcn-radiobox__label {
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
-    font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
-}
-
 .rcn-radiobox__input::before{
     font-family:'rcnicon';
     content: "\e93b";
@@ -505,12 +542,23 @@ select option {
     background-color: var(--rcn-semantic-color-static-background-standard);
     padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-0) var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
     margin-bottom : var(--rcn-semantic-margin-vertical-inputfieldblock);
-    /*gap:var(--rcn-semantic-gap-vertical-100);*/
+   /* gap:var(--rcn-semantic-gap-vertical-100);*/
 }
 
+
+/*
 .rcn-fieldset--as-inputFieldBloc:has(.rcn-fieldset__horizontalInputs){
     gap: var(--rcn-semantic-gap-vertical-400);
+  
 }
+*/
+
+.rcn-fieldset--as-inputFieldBloc-has-horizontalInputs{
+    gap: var(--rcn-semantic-gap-vertical-400);
+   
+}
+
+
 
 .rcn-fieldset__horizontalInputs .rcn-inputFieldBloc{
     margin-bottom:unset;
@@ -558,23 +606,23 @@ select option {
     gap: var(--rcn-semantic-gap-horizontal-200);
     align-items: stretch;
     text-align: center;
-    padding: var(--rcn-semantic-padding-horizontal-200) var(--rcn-semantic-padding-vertical-200);
+    padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-400);
     position : relative;
     cursor:pointer;
 }
 
 
 .rcn-inputField__uploadIcon{
-    line-height: 3rem;
-    font-size: 3rem;
+    line-height: 2.5rem;
+    font-size: 2.5rem;
 }
 
 .rcn-inputField__input--file {
     position:absolute;
     clip-path:content-box;
-    bottom: var(--rcn-semantic-padding-horizontal-200);
-    left:var(--rcn-semantic-padding-horizontal-200);
-    width: calc(100% - (4 * var(--rcn-semantic-padding-horizontal-200)));
+    bottom: var(--rcn-semantic-padding-horizontal-400);
+    left:var(--rcn-semantic-padding-horizontal-400);
+    width: calc(100% - (3 * var(--rcn-semantic-padding-horizontal-400)));
     height: var(--rcn-semantic-padding-vertical-400);
     text-indent:-999999px;
     cursor: pointer;
