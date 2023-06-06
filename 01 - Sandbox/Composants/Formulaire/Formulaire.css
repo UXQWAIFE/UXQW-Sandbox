@@ -1,9 +1,5 @@
-@import url('../../Asset/Cores et semantiques/Core/CoreTokens-CHORUSPRO.min.css');
-@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensColor.min.css');
-@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensShadow.min.css');
-@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensLayout.min.css');
 @import url('../../Asset/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
-@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.min.css');
+@import url("../../Asset/Cores et semantiques/styles-ChorusPro.css");
 @import url('../../Asset/cssReset.css');
 @import url('C:/Users/mathilde.vidal/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css');
 @import url('./Formulaire.css');
