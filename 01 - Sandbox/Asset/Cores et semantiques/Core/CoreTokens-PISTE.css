@@ -68,9 +68,9 @@
 --rcn-core-spacing-800:var(--rcn-core-fontsize-4000r);
 --rcn-core-spacing-900:var(--rcn-core-fontsize-5000r);
 --rcn-core-spacing-1000:var(--rcn-core-fontsize-6000r);
---rcn-core-borderwidth-100:1;
---rcn-core-borderwidth-200:2;
---rcn-core-borderwidth-300:3;
+--rcn-core-borderwidth-100:1px;
+--rcn-core-borderwidth-200:2px;
+--rcn-core-borderwidth-300:3px;
 --rcn-core-borderradius-50:var(--rcn-core-fontsize-00625r);
 --rcn-core-borderradius-100:var(--rcn-core-fontsize-0125r);
 --rcn-core-borderradius-200:var(--rcn-core-fontsize-0375r);
