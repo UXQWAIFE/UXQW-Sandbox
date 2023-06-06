@@ -1,9 +1,4 @@
-@import url('../../Asset/Cores et semantiques/Core/CoreTokens-ChorusPRO.css');
-@import url('../../Asset/Cores et semantiques/Core/CoreTokensShadow.css');
-@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensColor.css');
-@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensShadow.css');
-@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensLayout.css');
-@import url('../../Asset/Cores et semantiques/Semantic/SemanticTokensTypography.css');
+@import url('../../Asset/Cores et semantiques/styles-ChorusPro.css');
 @import url('/ComponentTokensButtonPrimary.min.css');
 @import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
 @import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');

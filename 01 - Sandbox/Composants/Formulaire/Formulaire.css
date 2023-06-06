@@ -351,7 +351,6 @@ Est ce qu'il faudrait aussi mettre la box avec l'icon en disabled ?
     padding: 8px 0px;
  }
 
-<<<<<<< HEAD
  mettre buttonSeparator
  */
 
@@ -363,8 +362,6 @@ Est ce qu'il faudrait aussi mettre la box avec l'icon en disabled ?
 
  }
 
-=======
->>>>>>> bbdeb3bdd8fc7051da2193e8fa0d7dcb4727dcef
 
 .rcn-inputField__button--hidePassword::before{
     content: "\e92a";

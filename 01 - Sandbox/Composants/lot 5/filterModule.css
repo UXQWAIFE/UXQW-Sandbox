@@ -1,0 +1,311 @@
+@import url('../../Asset/Cores et semantiques/styles-ChorusPro.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
+@import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+
+
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url(../Asset/Font_icon/RCNicon.ttf);
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url(../Asset/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf);
+}
+
+body, legend {
+    font-family:'Marianne',Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}
+i {
+    font-style:normal;
+}
+li {
+    list-style-type: none;
+    text-align: unset;
+}
+ul {
+    padding:0px;
+}
+fieldset {
+    display: block;
+    margin-inline-start: 0 ;
+    margin-inline-end: 0px;
+    border: none;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    min-inline-size: min-content;
+  }
+legend {
+    padding-inline-start: 0; padding-inline-end: 0;
+}
+input[type="checkbox" i] {
+    margin: unset;
+}
+input[type="radio" i] {
+    margin: unset;
+}
+input {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+  min-width:unset;
+}
+option {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+}
+select {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+}
+select option {
+    line-height:1rem;
+}
+.sr-only
+{   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+}
+
+/*ne pas prendre dans l'Excel*/
+
+/*.sr-only{
+    height :0px;
+    margin : 0;
+}*/
+
+.h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 24px;
+}
+.h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 24px;
+}
+.h3 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 24px;
+}
+.body{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    padding:64px;
+    background-color: white;
+    line-height: 1rem;
+    font-size: 1rem;
+    font-family : "Marianne";
+    margin-bottom :200px;
+}
+
+/*Class associées au composant chips*/
+
+.rcn-chips {
+    padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-300);
+    border-radius: var(--rcn-semantic-borderradius-300);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    display: flex;
+    align-items: center;
+    background-color: var(--rcn-semantic-color-static-background-chips);
+
+}
+
+.rcn-chips--interactive{
+    background-color: var(--rcn-semantic-color-interaction-background-default-chips);
+    border: none ;
+}
+
+.rcn-chips--interactive:hover{
+    background-color: var(--rcn-semantic-color-interaction-background-hover-chips);
+}
+
+.rcn-chips__icon{
+    order:2
+}
+
+.rcn-chips__icon::before{
+   content:var(--rcn-semantic-typography-icon-rcn_icon-close_chips-content) ;
+}
+
+/*Classes de l'onglet Icon, ne pas reprendre*/
+
+.rcn-icon{
+    font-family: 'RCNicon';
+ }
+
+ /*Classes de l'onglet formulaire*/
+
+ .rcn-fieldset {
+    border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+    padding:var(--rcn-semantic-padding-vertical-600);
+    margin-bottom:var(--rcn-semantic-margin-vertical-fieldset);
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.rcn-fieldset--as-inputFieldBloc {
+    display:flex;
+    flex-direction:column;
+    align-items: stretch;
+    border:none;
+    flex-grow:1;
+    background-color: var(--rcn-semantic-color-static-background-standard);
+    padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-0) var(--rcn-semantic-padding-vertical-0) var(--rcn-semantic-padding-horizontal-0);
+    margin-bottom : var(--rcn-semantic-margin-vertical-inputfieldblock);
+   /* gap:var(--rcn-semantic-gap-vertical-100);*/
+}
+
+.rcn-inputFieldBloc__label {
+    display:flex;
+    flex-direction:row;
+    gap:4px;
+    justify-content: flex-start;
+    font-weight:bold;
+}
+
+.rcn-fieldset__checkboxOrRadioList {
+    display: flex;
+    flex-direction: column;
+    gap :var(--rcn-semantic-gap-vertical-200);
+    padding-top :var(--rcn-semantic-padding-vertical-100);
+}
+
+.rcn-inputFieldBloc{
+    display:flex;
+    flex-direction:column;
+    align-items: stretch;
+    gap: 8px;
+    background-color: white;
+    flex-grow: 1;
+    margin-bottom : var(--rcn-semantic-margin-vertical-inputfieldblock);
+}
+
+.rcn-inputFieldBloc--checkboxOrRadio {
+    flex-direction:row;
+    align-items: center;
+    margin-bottom:unset;
+}
+
+.rcn-inputFieldBloc__label--checkboxOrRadio{
+    font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
+    align-items: flex-start;
+}
+
+.rcn-inputFieldBloc__label--checkboxOrRadio-checked{
+
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+    font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
+} 
+
+.rcn-inputField__input{
+    border:none;
+    flex-grow:1;
+    padding:8px;
+    border-radius: 2px;
+    background:none;
+    line-height: 1rem;
+    font-size: 1rem;
+    font-family : "Marianne";
+}
+
+.rcn-inputField__input--checkbox{
+    padding : unset;
+    order:-1;
+    font-size: calc(1.25 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
+    line-height: calc(1.125 * var(--rcn-semantic-typography-text-component-default-body-fontsize) );
+}
+
+/*------------- Bottom Actions Banner ---------------*/
+/*Nouveau composant de navigation à porter à part*/
+
+
+.rcn-bottomActionsBanner{
+    display: flex;
+    flex-direction: row;
+    gap: var(--rcn-semantic-gap-horizontal-300);
+    border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+    border-right : none;
+    border-left: none;
+    border-bottom:none;
+    padding: var(--rcn-semantic-padding-horizontal-400) 0;
+    flex-wrap: wrap;
+    }
+    
+    .rcn-bottomActionsBanner__primaryActions {
+    order: 2;
+    flex-grow: 1;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    width:auto;
+    }
+    
+    .rcn-bottomActionsBanner__secondaryActions {
+    order: 1;
+    justify-content: flex-start;
+    display:flex;
+    flex-direction: row;
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    width:auto;
+    }
+    
+    .rcn-bottomActionsBanner .rcn-button--primary{
+        order:2;
+    }
+
+    /* Class reprises des boutons pour l'exemple*/
+
+.rcn-button--primary {
+    background-color:#5770BE;
+    font-size:1rem;
+    line-height:1rem;
+    padding:12px 24px;
+    border: 2px solid #5770BE;
+    border-radius:0.375rem;
+    color:white;
+    }
+    
+    .rcn-button--secondary {
+    background-color: white;
+    font-size:1rem;
+    line-height:1rem;
+    padding:12px 24px;
+    border-radius:0.375rem;
+    border: 2px solid #5770BE;
+    color:#5770BE;
+    
+    }
