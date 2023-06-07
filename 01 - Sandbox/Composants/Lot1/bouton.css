@@ -16,6 +16,30 @@
   font-family: Marianne;
 }
 
+button{
+  border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: 1rem;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
 .myDiv
 {
   margin : 50px 50px;
@@ -78,6 +102,10 @@
     
   }
 
+  .button{
+    line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+  }
+
   .button--primary {
     background-color:var(--rcn-semantic-color-interaction-background-default-primary)/*Couleur de l'applicatif*/;
     font-size:1rem;
@@ -126,4 +154,9 @@
     background-color:var(--rcn-semantic-color-interaction-background-disabled-secondary);
     border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
     cursor: not-allowed;
+  }
+
+  .rcn-iconButton{/*
+    line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);*/
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
   }

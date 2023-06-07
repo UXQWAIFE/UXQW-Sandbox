@@ -1,132 +1,162 @@
-.rcn-boutons {
-	border: var(--rcn-semantic-borderwidth-100) solid ;
-	border-radius:var(--rcn-semantic-borderradius-200);
-	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
-	line-height:var(--rcn-semantic-typography-text-component-default-body-lineheight);
-	cursor:pointer;
-	font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily);
-	font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
-	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
-	
-}
-
-.rcn-boutons-primaire {
-	background-color:var(--rcn-semantic-color-interaction-background-default-primary);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-	border-color: var(--rcn-semantic-color-interaction-background-default-primary);
-}
-
-.rcn-boutons-iconRight {
-	padding-left: var(--rcn-semantic-padding-horizontal-50);
-}
-
-.rcn-boutons-primaire:hover {
-	background-color:var(--rcn-semantic-color-interaction-background-hover-primary);
-	border-color:var(--rcn-semantic-color-interaction-border-hover-primary);
-}
-
-.rcn-boutons-primaire:disabled {
-	background-color:var(--rcn-semantic-color-interaction-background-disabled-primary);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
-	border-color:var(--rcn-semantic-color-interaction-border-disabled-standard);
-	cursor: not-allowed;
-}
-
-.rcn-boutons-secondaire {
-	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
-	border-color: var(--rcn-semantic-color-interaction-border-default-primary);
-}
-
-.icon-close:before {
-    content: "\e91e";
-    font-family: var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
-}
-
-.rcn-boutons-secondaire:hover {
-	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
-	border-color:var(--rcn-semantic-color-interaction-border-hover-primary);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
-}
-
-.rcn-boutons-secondaire:disabled {
-	background-color:var(--rcn-semantic-color-interaction-background-disabled-button_secondaire);
-	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
-	border-color:var(--rcn-semantic-color-interaction-border-disabled-standard);
-	cursor: not-allowed;
-}
-
-.rcn-boutons-icônes {
-	color:var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
-	font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
-	padding: 0 ;
-	border-color: transparent ;
-	background-color: transparent ;
-}
-
-.rcn-boutons-icônes:hover {
-	color:var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
-}
-
-.rcn-boutons-icônes:disabled {
-	color:var(--rcn-semantic-color-interaction-text_and_icon-disabled);
-}
-
-  /*groupe de boutons*/
-
-  .rcn-boutons-groupeDeBouton {
-	display: inline-flex;
-	}
-
-	.rcn-boutons-groupeDeBouton-bouton {
-	font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
-	line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
-	font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily);
-	text-decoration:var(--rcn-semantic-typography-text-component-default-body-textdecoration);
-	font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
-	border: none;
-	cursor:pointer;
-	background-color: var(--rcn-semantic-color-interaction-background-default-standard);
-	color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
-	padding:var(--rcn-semantic-padding-vertical-100) var(--rcn-semantic-padding-horizontal-200);
-	}
-
-	.rcn-boutons-groupeDeBouton-sélectionné {
-	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+.rcn-button {
+	padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-300);
+	border-radius: var(--rcn-semantic-borderradius-200);
+	border: var(--rcn-semantic-borderwidth-100) solid;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--rcn-semantic-gap-horizontal-200);
+  }
+  
+  .rcn-button--primary {
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-	}
-	
-	
-	.rcn-boutons-groupeDeBouton-premier {
+	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+	border-color: var(--rcn-semantic-color-interaction-border-default-primary);
+  }
+  
+  .rcn-button--primary:hover {
+	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
+	border-color: var(--rcn-semantic-color-interaction-border-hover-primary);
+  }
+  
+  .rcn-button--primary[disabled]  {
+	background-color: var(--rcn-semantic-color-interaction-background-disabled-primary);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+	border-color: var(--rcn-semantic-color-interaction-border-disabled);
+  }
+  
+  .rcn-button--secondary {
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+	background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+	border-color: var(--rcn-semantic-color-interaction-border-default-primary);
+  }
+  
+  .rcn-button--secondary:hover {
+	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+	border-color: var(--rcn-semantic-color-interaction-border-hover-primary);
+  }
+  
+  .rcn-button--secondary[disabled]  {
+	border-color: var(--rcn-semantic-color-interaction-border-disabled);
+	background-color: var(--rcn-semantic-color-interaction-background-disabled-button_secondary);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+  }
+  
+  .rcn-iconButton {
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+  }
+  
+  .rcn-iconButton:hover {
+	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
+  }
+  
+  .rcn-iconButton[disabled]  {
+	color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+  }
+  
+  .rcn-toggle {
+	display: flex;
+	align-items: center;
+	padding: var(--rcn-semantic-padding-horizontal-50);
+	background-color: var(--rcn-semantic-color-interaction-background-default-button_toggle_off);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-button_toggle_off);
+	border-radius: var(--rcn-semantic-borderradius-300);
+  }
+  
+  .rcn-toggle__text {
+	padding-right: var(--rcn-semantic-padding-horizontal-150);
+	padding-left: var(--rcn-semantic-padding-horizontal-150);
+  }
+  
+  .rcn-toggle__indicator {
+	order: 0;
+	background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+	border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-button_toggle_off);
+	height: 18px;
+	width: 18px;
+	border-radius: 50%;
+  }
+  
+  .rcn-toggle:hover {
+	background-color: var(--rcn-semantic-color-interaction-background-hover-button_toggle_off);
+  }
+  
+  .rcn-toggle[selected] {
+	background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+  }
+  
+  .rcn-toggle[selected]:hover {
+	background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
+	border-color: var(--rcn-semantic-color-interaction-border-hover-primary);
+  }
+  
+  .rcn-toggle[selected] .rcn-toggle__indicator {
+	order: 2;
+  }
+  
+  .rcn-toggle[disabled]  {
+	background-color: var(--rcn-semantic-color-interaction-background-disabled-button_toggle_off);
+	border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+  }
+  
+  .rcn-toggle[disabled]  .rcn-toggle__indicator {
+	background-color: var(--rcn-semantic-color-interaction-background-disabled-standard);
+	border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
+  }
+  
+  .rcn-toggle--on[disabled]  {
+	background-color: var(--rcn-semantic-color-interaction-background-disabled-button_toggle_on);
+	border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+  }
+  
+  .rcn-toggle--on[disabled]  .rcn-toggle__indicator {
+	background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+	border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
+  }
+  
+  .rcn-buttonGroup {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+  }
+  
+  .rcn-buttonGroup__button {
+	border-radius: 0px;
+	margin-right: -1px;
+  }
+  
+  .rcn-buttonGroup__button:first-of-type {
 	border-top-left-radius: var(--rcn-semantic-borderradius-200);
 	border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
-	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
-	}
-	
-	.rcn-boutons-groupeDeBouton-premier:hover {
-	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
-	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
-	}
-	
-	.rcn-boutons-groupeDeBouton-dernier {
-	border-top-right-radius:var(--rcn-semantic-borderradius-200);
-	border-bottom-right-radius:var(--rcn-semantic-borderradius-200);
-	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
-	}
-	
-	.rcn-boutons-groupeDeBouton-dernier:hover {
-	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
-	 color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
-	}
-	
-	.rcn-boutons-groupeDeBouton-milieu {
-	border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
-	margin-left: -1px;
-	margin-right: -1px;
-	}
-	
-	.rcn-boutons-groupeDeBouton-milieu:hover {
-	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
-	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary);
-	}
-	
+  }
+  
+  .rcn-buttonGroup__button:last-of-type {
+	margin-right: 0px;
+	border-top-right-radius: var(--rcn-semantic-borderradius-200);
+	border-bottom-right-radius: var(--rcn-semantic-borderradius-200);
+  }
+  
+  .rcn-buttonGroup__button[selected] {
+	background-color: var(--rcn-semantic-color-interaction-background-default-buttongroup_button_selected);
+	border-left-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
+	color: var(--rcn-semantic-color-interaction-border-default-onprimary);
+  }
+  
+  .rcn-buttonGroup__button[selected]:hover {
+	background-color: var(--rcn-semantic-color-interaction-background-hover-buttongroup_button_selected);
+	border-top-color: var(--rcn-semantic-color-interaction-background-hover-buttongroup_button_selected);
+	border-bottom-color: var(--rcn-semantic-color-interaction-background-hover-buttongroup_button_selected);
+  }
+  
+  .rcn-buttonGroup__button:first-of-type[selected] {
+	border-left-color: var(--rcn-semantic-color-interaction-background-default-buttongroup_button_selected);
+  }
+  
+  .rcn-buttonGroup__button:first-of-type[selected]:hover {
+	border-left-color: var(--rcn-semantic-color-interaction-background-hover-buttongroup_button_selected);
+  }
