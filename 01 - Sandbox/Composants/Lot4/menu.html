@@ -11,28 +11,49 @@
 <body>
  <nav class="rcn-header__mainNavBanner containerGlobal">
 
+  <ul class="rcn-menu rcn-header__menu">
 
-    <ul class="rcn-menu rcn-header__menu">
-      <li><a class="rcn-menu__entry rcn-menu__entry--dropDown" aria-current='page' href="#home">Accueil</a>
-          <ul class="rcn-menu__dropDownList">
-            <li class="rcn-menu__subentry" aria-current='page'><a> Option 1 </a></li>
-            <li class="rcn-menu__subentry"><a> Option 2 </a></li>
-            <li class="rcn-menu__subentry"><a> Option 3 </a></li>
-          </ul>
-      </li>
+<!-- Entrée Accueil  -->
+    <li><a class="rcn-menu__entry" href="#home" aria-current='page'>Accueil</a></li>
 
-      <li><a class="rcn-menu__entry rcn-menu__entry--dropDown" href="#about">Section 1</a>
-          <ul class="rcn-menu__dropDownList" aria-hidden='true'>
-            <li class="rcn-menu__subentry" aria-current='page'><a> Option 1 </a></li>
-            <li class="rcn-menu__subentry"><a> Option 2 </a></li>
-            <li class="rcn-menu__subentry"><a> Option 3 </a></li>
-          </ul>
-      </li>
-      <li><a class="rcn-menu__entry" href="#services">Section 2</a></li>
-      <li><a class="rcn-menu__entry" href="#contact">Section 3</a></li>
-    </ul>
+<!-- Entrée sans sous menu  -->
+    <li class="rcn-menu__entryGroup">
+        <a href="#home" aria-current="true" class="rcn-menu__entry ">Sans sous-menu</a>
+    </li>
+
+<!-- Entrée avec sous-menu  -->
+    <li class="rcn-menu__entryGroup">
+
+      <div class="rcn-menu__entry">
+        <a href="#services" aria-current="true" class="rcn-link rcn-menu__entryLink">Avec sous-menu</a>
+        <button class="rcn-icon rcn-iconButton rcn-menu__entryButton"></button>
+      </div>
+
+      <ul class="rcn-menu__submenu" aria-hidden="true">
+        <li class="rcn-menu__subentry" ><a> Page trop cool </a></li>
+        <li class="rcn-menu__subentry"><a> Ceci est une autre page </a></li>
+        <li class="rcn-menu__subentry"><a> Méthodologie est perspectives</a></li>
+      </ul>
+
+    </li>
+
+<!-- Entrée lien externe  -->
+     <li class="rcn-menu__entryGroup">
+        <a href="#home" aria-current="true" class="rcn-menu__entry ">Externe<i class="rcn-icon rcn-link__icon--external"></i></a>
+    </li>
 
 
-    <input></input>
+  </ul>
+  
+  <!-- Barre de rceherche  -->
+    <div class="rcn-inputField">
+
+            <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                <span class="sr-only"></span>
+            </button> 
+    </div>
+
   </nav>
 </body>

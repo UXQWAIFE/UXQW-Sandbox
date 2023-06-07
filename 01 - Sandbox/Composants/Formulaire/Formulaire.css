@@ -134,7 +134,7 @@ select option {
     margin : 0;
 }
 .rcn-iconButton:hover{
-    color: #4662A6;
+    color: black;
 }
 
 /*Classes de l'onglet Icon, ne pas reprendre*/
