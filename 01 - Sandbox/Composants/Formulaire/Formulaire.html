@@ -51,8 +51,8 @@
 
     <div class="rcn-inputFieldBloc">        
         <label class="rcn-inputFieldBloc__label">Désactivé</label>
-        <div class="rcn-inputField" >
-            <input type="text" disabled value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+        <div class="rcn-inputField rcn-inputField--disabled" >
+            <input type="text"  value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
 
             <button disabled class="rcn-iconButton rcn-inputField__button">
                 <span class="sr-only"></span>
@@ -93,6 +93,8 @@
                 <span class="sr-only"></span>
             </button>
 
+            <div class="rcn-inputField__buttonSeparator"></div>
+
             <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                 <span class="sr-only"></span>
             </button>
@@ -112,6 +114,8 @@
             <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
                 <span class="sr-only"></span>
             </button>
+
+            <div class="rcn-inputField__buttonSeparator"></div>
 
             <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                 <span class="sr-only"></span>
@@ -148,6 +152,8 @@
                 <span class="sr-only"></span>
             </button>
 
+            <div class="rcn-inputField__buttonSeparator"></div>
+
             <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--largeSearch">
                 <span class="">Rechercher</span>
             </button>
@@ -168,6 +174,8 @@
                 <span class="sr-only"></span>
             </button>
 
+            <div class="rcn-inputField__buttonSeparator"></div>
+
             <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--largeSearch">
                 <span class="">Rechercher</span>
             </button>
@@ -187,7 +195,7 @@
 
             <input placeholder="Ex : Lorem ipsum sit" type="password" class="rcn-inputField__input">
 
-            <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--showPassword">
+            <button class="rcn-iconButton rcn-inputField__button rcn-icon rcn-inputField__button--showPassword">
                 <span class="sr-only"></span>
             </button>
             
@@ -202,8 +210,8 @@
 
             <input placeholder="Ex : Lorem ipsum sit" class="rcn-inputField__input">
 
-            <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--hidePassword">
-            	 <span class="sr-only"></span>
+            <button class="rcn-iconButton rcn-inputField__button  rcn-icon rcn-inputField__button--hidePassword">
+                <span class="sr-only"></span>
             </button>
             
         </div>
@@ -259,7 +267,7 @@
 
   <!--imput date multi-champs-->
 
-    <div class="rcn-fieldset--as-inputFieldBloc "> 
+    <div class="rcn-fieldset--as-inputFieldBloc rcn-fieldset--as-inputFieldBloc-has-horizontalInputs "> 
         <legend class="rcn-inputFieldBloc__label">Date de naissance</legend>
         <div class="rcn-fieldset__horizontalInputs">
             <div class="rcn-inputFieldBloc">        
@@ -314,7 +322,7 @@
 	    <ul id="list" class="rcn-fieldset__checkboxOrRadioList">
 	        
 	        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
-	            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked">
 	                <input name="choix" type="checkbox" id="checkbox" class="rcn-inputField__input rcn-inputField__input--checkbox">
 	                Checkbox 1
 	            </label>
@@ -357,7 +365,7 @@
         <ul id="list" class="rcn-fieldset__checkboxOrRadioList">
             
             <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
-                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
                     <input name="choix" type="radio" id="radio" class="rcn-inputField__input rcn-inputField__input--radio">
                     Radio 1
                 </label>
