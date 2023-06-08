@@ -41,6 +41,7 @@ body{
   grid-area: main;
   background-color: #00FF00;
   height: 550px;
+  position:relative;
 }
 .item-c {
   grid-area: sidebar;
@@ -78,16 +79,23 @@ body{
 */
 
 .gridTemplate--sideSuperposedFilter {
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-areas: 
-    "Filters Filters Filters contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide ";
-    height: 300px;
+  display: flex;
+  width:calc(100% / 2 - 8px); /*équivaut à 3 colonnes*/
+  /* grid-template-columns: repeat(12, 1fr); */
+  /* grid-template-areas:  */
+  /* "Filters Filters Filters contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide "; */
+  height: 300px;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
 .sideSuperposedFilter {
     grid-area: Filters;
     align-self: stretch;
     height : 150px;
+    display: flex;
+    width:100%;
     background-color: hotpink;
 }
 
