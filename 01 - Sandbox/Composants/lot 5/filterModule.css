@@ -286,51 +286,44 @@ select option {
         order:2;
     }
 
-    /* Class reprises des boutons pour l'exemple*/
 
-  
+/*--------------Module de filtres--------------*/
 
-
-/*ca fonctionne pas le lien devrait être justifié à droite*/
-
-   .rcn-link{
-    display: flex;
-    align-self:flex-end;
-   }
-
-/*Module de filtres*/
-
-.rcn-filter__topZone{
+.rcn-filter__activeItems{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap:var(--rcn-semantic-gap-vertical-400);
 }
 
-    .rcn-filter__chipsZone{
+.rcn-filter__chipsZone{
 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: var(--rcn-semantic-gap-vertical-200);
-    }
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--rcn-semantic-gap-vertical-200) var(--rcn-semantic-gap-horizontal-200);
+}
 
-   .rcn-filter__zone{
+   .rcn-filter{
     display: flex;
     flex-direction: column;
     gap:var(--rcn-semantic-gap-vertical-500);
     max-width: 300px;
+    /* Est ce que je le mets ici ou avec un modifier rcn-filter--completed */
+    padding : var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-600);
+    border-right: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
    }
 
    .rcn-filterPartiel__zone{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-top: 1px solid grey;
+    border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
     border-right: none;
     border-left : none;
-    border-bottom : 1px solid grey;
-    padding : 16px 0px;
+    border-bottom : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+    padding : var(--rcn-semantic-padding-vertical-400) 0px;
    }
 
    .rcn-filter__chipsZone--partiel{
@@ -346,3 +339,19 @@ select option {
 
    }
 
+   .rcn-filter_link{
+    display: flex;
+    align-self:flex-end;
+   }
+
+   .rcn-filter__separator{
+    height: var(--rcn-semantic-borderwidth-100);
+    background-color: var(--rcn-semantic-color-static-border-divider_regular);
+    width : auto;
+   }
+
+   .rcn-filter_citeriaZone{
+    display: flex;
+    flex-direction: column;
+    gap: var(--rcn-semantic-gap-vertical-500)
+   }

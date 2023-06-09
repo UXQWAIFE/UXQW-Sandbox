@@ -1,96 +1,291 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../../RCN-DesignSystem/assets/styles-ChorusPro.css" rel="stylesheet">
-    <link href="grid.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
-    <title>Document</title>
+	<link href="../../RCN-DesignSystem/assets/styles-ChorusPro.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="Testgrids.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="item-a ">Header</div>
-        <div class="item-e ">HeaderGutters</div>
-        <div class="item-f ">HeaderGutters</div>
-        <div class="item-b ">Main</div>
-        <div class="item-c ">Sidebar
 
-            <button class="rcn-button rcn-button--secondary">Bouton test
-            </button>
-        </div>
+	<div class="containermain">
+		<div class="grid main">
+			<div class="item-a ">Header</div>
+			<div class="item-b "> Main
+				<div class="grid gridTemplate--sideSuperposedFilter"> 
+					<div class="sideSuperposedFilter">Ceci est le module de filtres</div>
+					<!-- <div class="item-e ">contenu vide j</div> -->
+				</div>
+			</div>
+			<div class="item-c ">Sidebar</div>
+			<div class="item-d ">Footer</div>
+		</div>
 
-        
-        <div class="item-d ">Footer
+		<div class="grid-positionAbsolute">
+		</div>
+	</div>
 
-            <footer class="footer">
-                <div class="footer__socialMediaBanner containerGlobal">
-                    <div class="footer__socialMediaTextZone">
-                        <span class="footer__socialMediaText">Suivez-nous</span>
-                        <span class="footer__socialMediaText">sur les réseaux sociaux</span>
-                    </div>
-                    <div class="footer__socialMediaIconZone">
-                        <div> Icon1 </div>
-                        <div> Icon2 </div>
-                        <div> Icon2 </div>
-                        <div> Icon2 </div>
-                        <div> Icon2 </div>
-                    </div>	
-                </div>
-        
-                <div class="footer__mainBanners containerGlobal">	
-                    <div class="footer__productBanner">
-                        <div class="footer__productBannerleftZone">
-                            <img class="image" src="https://placehold.co/378x140">
-                            <div class="footer__versionLanguageZone">
-                                <div>Meileure version de toi même</div>
-                                <div>Langue</div>
-                            </div>
-                        </div> 	
-                        <div class="footer__rightZone">
-                            <div class="footer__descriptionZone"> 
-                                lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend egestas ex et eleifend. Etiam id metus sed libero eleifend pretium in at ligula. Vivamus egestas fermentum orci, id posuere orci condimentum a. Duis laoreet auctor rhoncus. Aliquam pretium, enim sed accumsan ultricies, augue lorem aliquam urna, quis cursus magna urna id quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce venenatis, turpis at gravida dignissim, justo lectus porta felis, at auctor dolor lorem ac nisi.
-                            </div>
-                            <div class="footer__governmentLinksZone">
-                                <a>Link1</a>
-                                <a>Link2</a>
-                                <a> Jusqu'à l'infini </a>
-                                <a> Et l'au delà </a>
-                                <a>Link2</a>
-                                <a>Link2</a>
-                            </div>		
-                        </div>	    
-                    </div>
-        
-                    <div class="footer__partnersBanner">
-                        <div> 
-                        Titre 
-                        </div> 
-                        <div class="footer__partnersBannerImagesZone">
-                            <img class="partnerImage" src="https://placehold.co/160x90">
-        
-                            <div class="footer__secondaryPartnersZone">	
-                                <img class="partnerImage" src="https://placehold.co/160x90">
-                                <img class="partnerImage" src="https://placehold.co/160x90">
-                                <img class="partnerImage" src="https://placehold.co/160x90">
-                                <img class="partnerImage" src="https://placehold.co/160x90">
-                            </div>
-                        </div>	
-                    </div>
-        
-                    <div class="footer__siteInfoBanner">
-                        <div class="footer__siteInfoBannerLinkZone">
-                            <a class="footer__siteInfoLink"> Link </a>
-                            <a class="footer__siteInfoLink"> Link </a>
-                            <a class="footer__siteInfoLink"> Link </a>
-                        </div>
-                        <div> Sauf mention contrainte... </div>
-                    </div>	
-                </div>
-            </footer>
 
-        </div>
-      </div>
+	<!-- Template formulaire avec stepper vertical -->
+
+ <div class="item-a ">Header</div>
+
+	<div class="containermain">
+		<div class="grid gridTemplate--formStepperVertical">
+			
+			<div class="item-z">title 
+				<h1 class=" rcn-title rcn-form__titleZone"> Titre du formulaire </h1>   
+
+			</div> 
+
+			<div class="item-x">stepper 
+				
+			<nav >
+
+				<ol class="rcn-stepperVertical">
+
+					<li class="rcn-stepperVertical__step">
+						<div class="rcn-stepper__number rcn-stepperNavigable__number--completed">1</div>
+						<div>
+						<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--completed" href="section1"> Etape complétée </a>
+						</div>
+					</li>
+					<li class="rcn-stepperVertical__step">
+						<div class="rcn-stepper__number rcn-stepperNavigable__number--current">2</div>
+						<div>
+						<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--current" href="section1"> Etape en cours </a>
+						</div>
+					</li>
+
+					<ol class="rcn-stepperVertical__substepZone">
+
+						<li class="rcn-stepperVertical__step">
+							<div class="rcn-stepper__number--substep rcn-stepperNavigable__number--completed"></div>
+							<div>
+							<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--completed" href="section1"> Sous étape complétée </a>
+							</div>
+						</li>
+
+						<li class="rcn-stepperVertical__step">
+							<div class="rcn-stepper__number--substep rcn-stepperNavigable__number--subStepCurrent"></div>
+							<div>
+							<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--current" href="section1"> Sous étape en cours </a>
+							</div>
+						</li>
+
+						<li class="rcn-stepperVertical__step">
+							<div class="rcn-stepper__number--substep rcn-stepperNavigable__number--uncompleted"></div>
+							<div>
+							<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Sous-étape non complétée </a>
+							</div>
+						</li>
+
+						<li class="rcn-stepperVertical__step">
+							<div class="rcn-stepper__number--substep rcn-stepper__number--disabled"></div>
+							<div>
+							<a class="rcn-stepperVertical__sectionTitle  rcn-stepper__sectionTitle--disabled" href="section1"> Sous-étape désactivée </a>
+							</div>
+						</li>
+
+					</ol>
+
+					<li class="rcn-stepperVertical__step">
+						<div class="rcn-stepper__number rcn-stepperNavigable__number--uncompleted">3</div>
+						<div>
+						<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Etape non complétée</a>
+						</div>
+					</li>
+
+					<li class="rcn-stepperVertical__step">
+						<div class="rcn-stepper__number rcn-stepper__number--disabled">4</div>
+						<div>
+						<a class="rcn-stepperVertical__sectionTitle rcn-stepper__sectionTitle--disabled" href="section1"> Etape désactivée </a>
+						</div>
+					</li>
+
+				</ol>
+
+			</nav>
+
+
+			</div> 
+
+			<div class="item-y ">form
+
+				<form class="rcn-form__stepperVerticalContainerInputBlock">
+						
+					<p class="rcn-form__instruction"> 
+						Les champs suivi d'un  
+							<span class="rcn-inputFieldBloc__mandatoryAsterisk"> </span> 
+							sont obligatoires
+					</p>
+
+					<div class="rcn-form__content">
+
+						<!--imput non-obligatoire avec message succes -->
+
+						<div class="rcn-inputFieldBloc">        
+							<label for="x" class="rcn-inputFieldBloc__label">Label input</label>
+							<div class="rcn-inputField" >
+								<input id="x" type="text" col="5" row="5" class="rcn-inputField__input" placeholder="placeholder">
+							</div>
+						</div>
+
+						<!--imput obligatoire avec texte descriptif et message d'erreur -->
+
+						<div class="rcn-inputFieldBloc">
+							<label class="rcn-inputFieldBloc__label">
+								Champ en erreur
+							</label>
+					
+							<div>texte explicatif (si besoin)</div> 
+				
+							<div class="rcn-inputField rcn-inputField--error">
+								<input type="text" class="rcn-inputField__input" required>
+				
+							</div>
+							<div  class="rcn-inputFieldBloc__errorZone" >
+								<i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+								erreur machin machin
+							</div> 
+						</div>
+						
+					</div>
+					<div class="rcn-bottomActionsBanner" >
+						<div class="rcn-bottomActionsBanner__secondaryActions">
+							<button class="rcn-button rcn-button--secondary">Enregistrer</button>
+						</div>
+						<div class="rcn-bottomActionsBanner__primaryActions"> 
+							<button class="rcn-button rcn-button--primary">Suivant</button>
+							<button class="rcn-button rcn-button--secondary">Précédent</button>
+							
+						</div>
+					</div>
+				</form>
+			</div>
+
+
+		</div>
+	</div>
+
+ <div class="item-d ">Footer</div>
+
+
+ <!-- Template formulaire avec stepper horizontal -->
+
+ <div class="item-a ">Header</div>
+
+ <div class="containermain">
+	 <div class="grid gridTemplate--formStepperHorizontal">
+		 
+		 <div class="item-z">title 
+			 <h1 class=" rcn-title rcn-form__titleZone"> Titre du formulaire </h1>   
+
+		 </div> 
+
+		 <div class="item-x">stepper 
+			 
+			<nav>
+
+				<ol class="rcn-stepperHorizontal">
+		
+					<li class="rcn-stepperHorizontal__step">
+						<div class="rcn-stepper__number rcn-stepperNavigable__number--uncompleted">1</div>
+						<div>
+						<a class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Etape non complétée navigable </a>
+						</div>
+					</li>
+					<li class="rcn-stepperHorizontal__step">
+						<div class="rcn-stepper__number rcn-stepperNavigable__number--uncompleted">2</div>
+						<div>
+						<p class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Etape non complétée non navigable </p>
+						</div>
+					</li>
+					<li class="rcn-stepperHorizontal__step">
+						<div class="rcn-stepper__number rcn-stepper__number--disabled">3</div>
+						<div>
+						<p class="rcn-stepperHorizontal__sectionTitle rcn-stepper__sectionTitle--disabled" href="section1"> Etape désactivée </p>
+						</div>
+					</li>
+		
+					<li class="rcn-stepperHorizontal__step">
+						<div class="rcn-stepper__number rcn-stepperNavigable__number--current">4</div>
+						<div>
+						<a class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--current" href="section1"> Etape en cours navigable </a>
+						</div>
+					</li>
+					<li class="rcn-stepperHorizontal__step">
+						<div class="rcn-stepper__number rcn-stepperNavigable__number--completed">6</div>
+						<div>
+						<a class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--completed" href="section1"> Etape complétée navigable </a>
+						</div>
+					</li>
+		
+				</ol>
+		
+		
+			</nav>
+
+
+		 </div> 
+
+		 <div class="item-y ">form
+
+			 <form class="rcn-form__stepperVerticalContainerInputBlock">
+					 
+				 <p class="rcn-form__instruction"> 
+					 Les champs suivi d'un  
+						 <span class="rcn-inputFieldBloc__mandatoryAsterisk"> </span> 
+						 sont obligatoires
+				 </p>
+
+				 <div class="rcn-form__content">
+
+					 <!--imput non-obligatoire avec message succes -->
+
+					 <div class="rcn-inputFieldBloc">        
+						 <label for="x" class="rcn-inputFieldBloc__label">Label input</label>
+						 <div class="rcn-inputField" >
+							 <input id="x" type="text" col="5" row="5" class="rcn-inputField__input" placeholder="placeholder">
+						 </div>
+					 </div>
+
+					 <!--imput obligatoire avec texte descriptif et message d'erreur -->
+
+					 <div class="rcn-inputFieldBloc">
+						 <label class="rcn-inputFieldBloc__label">
+							 Champ en erreur
+						 </label>
+				 
+						 <div>texte explicatif (si besoin)</div> 
+			 
+						 <div class="rcn-inputField rcn-inputField--error">
+							 <input type="text" class="rcn-inputField__input" required>
+			 
+						 </div>
+						 <div  class="rcn-inputFieldBloc__errorZone" >
+							 <i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+							 erreur machin machin
+						 </div> 
+					 </div>
+					 
+				 </div>
+				 <div class="rcn-bottomActionsBanner" >
+					 <div class="rcn-bottomActionsBanner__secondaryActions">
+						 <button class="rcn-button rcn-button--secondary">Enregistrer</button>
+					 </div>
+					 <div class="rcn-bottomActionsBanner__primaryActions"> 
+						 <button class="rcn-button rcn-button--primary">Suivant</button>
+						 <button class="rcn-button rcn-button--secondary">Précédent</button>
+						 
+					 </div>
+				 </div>
+			 </form>
+		 </div>
+
+
+	 </div>
+ </div>
+
+<div class="item-d ">Footer</div>
+
 </body>
+</html>
