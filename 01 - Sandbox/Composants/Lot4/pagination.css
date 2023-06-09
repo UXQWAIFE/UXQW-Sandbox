@@ -18,6 +18,66 @@
 }
 
 
+@font-face {
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+}
+
+
+body, legend {
+    font-family:'Marianne',Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}
+i {
+    font-style:normal;
+}
+ul {
+    list-style-type: none;
+    padding-left:0px;
+    margin:0px;
+}
+body{
+    margin:unset;
+    padding-top:100px;
+}
+a{
+    color: none;
+    text-decoration:none;
+}
+
+li{
+    /*padding:0px;*/
+}
+
+button{
+  border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: 1rem;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
 body, legend {
     font-family:'Marianne',Arial;
     font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
