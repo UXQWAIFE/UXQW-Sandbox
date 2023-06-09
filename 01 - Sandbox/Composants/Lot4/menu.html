@@ -9,37 +9,37 @@
     <title>Document</title>
 </head>
 <body>
- <nav class="rcn-header__mainNavBanner containerGlobal">
+ <nav class="rcn-header__mainNavBanner rcn-container--primary">
 
   <ul class="rcn-menu rcn-header__menu">
 
 <!-- Entrée Accueil  -->
-    <li><a class="rcn-menu__entry" href="#home" aria-current='page'>Accueil</a></li>
+    <li class="rcn-menu__entry rcn-menu__entry--current"><a class="rcn-menu__entryLink" href="#home" aria-current='page'>Accueil</a></li>
 
 <!-- Entrée sans sous menu  -->
-    <li class="rcn-menu__entryGroup">
-        <a href="#home" aria-current="true" class="rcn-menu__entry ">Sans sous-menu</a>
+    <li class="rcn-menu__entry">
+        <a href="#home" class="rcn-link rcn-menu__entryLink">Sans sous-menu</a>
     </li>
 
 <!-- Entrée avec sous-menu  -->
-    <li class="rcn-menu__entryGroup">
+    <li>
 
       <div class="rcn-menu__entry">
-        <a href="#services" aria-current="true" class="rcn-link rcn-menu__entryLink">Avec sous-menu</a>
+        <a href="#services" class="rcn-link rcn-menu__entryLink">Avec sous-menu</a>
         <button class="rcn-icon rcn-iconButton rcn-menu__entryButton"></button>
       </div>
 
-      <ul class="rcn-menu__submenu" aria-hidden="true">
+      <ul class="rcn-menu__submenu" aria-hidden="false">
         <li class="rcn-menu__subentry" ><a> Page trop cool </a></li>
         <li class="rcn-menu__subentry"><a> Ceci est une autre page </a></li>
-        <li class="rcn-menu__subentry"><a> Méthodologie est perspectives</a></li>
+        <li class="rcn-menu__subentry rcn-menu__subentry__current" ><a aria-current='page'> Méthodologie est perspectives</a></li>
       </ul>
 
     </li>
 
 <!-- Entrée lien externe  -->
-     <li class="rcn-menu__entryGroup">
-        <a href="#home" aria-current="true" class="rcn-menu__entry ">Externe<i class="rcn-icon rcn-link__icon--external"></i></a>
+     <li class="rcn-menu__entry">
+        <a href="#home" class="rcn-link rcn-menu__entryLink">Externe<i class="rcn-icon rcn-link__icon--external"></i></a>
     </li>
 
 
