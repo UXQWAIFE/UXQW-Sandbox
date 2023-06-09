@@ -8,6 +8,30 @@ body{
 
 
 
+
+
+/*Grid globale*/
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap : 1rem;
+  grid-template-rows: auto;
+  background-color: transparent;
+}
+
+/*Template*/
+
+.main {
+  grid-template-areas: 
+    "header header header header header header header header header header header header  "
+    "main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+.containermain{
+  position:relative;
+}
+
 .item-a {
   grid-area: header;
   background-color: pink;
@@ -17,6 +41,7 @@ body{
   grid-area: main;
   background-color: #00FF00;
   height: 550px;
+  position:relative;
 }
 .item-c {
   grid-area: sidebar;
@@ -42,42 +67,50 @@ body{
   color:white;
 }
 
-/*Grid globale*/
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-column-gap : 1rem;
-  grid-template-rows: auto;
-  background-color: transparent;
-}
+/* .grid-positionAbsolute {
+  display:flex;
+  box-sizing: border-box;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
 
-/*Template*/
-
-.main {
-  grid-template-areas: 
-    "header header header header header header header header header header header header  "
-    "main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar"
-    "footer footer footer footer footer footer footer footer footer footer footer footer";
 }
-
-.containermain{
-  position:relative;
-}
+*/
 
 .gridTemplate--sideSuperposedFilter {
-  grid-template-areas: 
-    "Filters Filters Filters contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide ";
+  display: flex;
+  width:calc(100% / 2 - 8px); /*équivaut à 3 colonnes*/
+  /* grid-template-columns: repeat(12, 1fr); */
+  /* grid-template-areas:  */
+  /* "Filters Filters Filters contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide contenuvide "; */
+  height: 300px;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
 .sideSuperposedFilter {
-    /*position: absolute;
-    top:0;
-    left:0;*/
     grid-area: Filters;
-    justify-self: stretch;
+    align-self: stretch;
     height : 150px;
+    display: flex;
+    width:100%;
     background-color: hotpink;
 }
+
+/* .sideSuperposedFilter {
+  position: absolute;
+  top:0;
+  left:0;
+  grid-area: Filters;
+  grid-column: 1 / span 3;
+  height : 150px;
+  background-color: hotpink;
+}
+*/
+
+
 
 
 

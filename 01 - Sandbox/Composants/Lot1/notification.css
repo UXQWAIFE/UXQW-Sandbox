@@ -1,0 +1,55 @@
+@import url('../../Asset/Cores et semantiques/styles-ChorusPro.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
+@import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+
+
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url("../../Asset/Font_icon/RCNicon.ttf");
+
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url(../Asset/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf);
+}
+
+.rcn-notification{
+    padding : var(--rcn-semantic-padding-vertical-300);
+    display: flex;
+    align-items: center;
+    gap: var(--rcn-semantic-gap-horizontal-300);
+    width: 100%;
+    border-radius: var(--rcn-semantic-borderradius-200) ;
+}
+
+.rcn-notification--error{
+    background-color: var(--rcn-semantic-color-feedback-background-error);
+    color: var(--rcn-semantic-color-feedback-text_and_icon-onerror) ;
+}
+
+.rcn-notification--informative{
+    background-color:var(--rcn-semantic-color-feedback-background-information) ;
+    color: var(--rcn-semantic-color-feedback-text_and_icon-oninformation);
+}
+
+.rcn-notification--success{
+    background-color:var(--rcn-semantic-color-feedback-background-success) ;
+    color: var(--rcn-semantic-color-feedback-text_and_icon-onsuccess);
+}
+
+.rcn-notification--warning{
+    background-color:var(--rcn-semantic-color-feedback-background-warning) ;
+    color: var(--rcn-semantic-color-feedback-text_and_icon-onwarning);
+}
+
+.rcn-notification__typeIcon{
+    font-size: var(--rcn-semantic-typography-icon-rcn_icon-h4-fontsize);
+}
+
+.rcn-notification--error .rcn-notification__typeIcon::before{
+    content:var(--rcn-semantic-typography-icon-rcn_icon-alert-content)
+
+}
