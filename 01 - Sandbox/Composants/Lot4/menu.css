@@ -95,10 +95,10 @@ button{
 	gap:var(--rcn-semantic-gap-horizontal-200);
 }
 .rcn-menu__entry:hover{
-	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-menu_entry);
 }
 .rcn-menu__entry--current {
-	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-menu_entry);
 }
 
 /*--------Entry Link --------*/
