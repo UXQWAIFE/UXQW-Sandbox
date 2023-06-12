@@ -1,0 +1,127 @@
+@import url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
+  }
+  @font-face {
+    font-family: 'Marianne';
+    src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+  }
+  
+  /* reset  */
+  
+  body, legend {
+    font-family:'Marianne',Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+  }
+  i {
+    font-style:normal;
+  }
+  li {
+    list-style-type: none;
+    text-align: unset;
+  }
+  ul {
+    padding:0px;
+  }
+  fieldset {
+    display: block;
+    margin-inline-start: 0 ;
+    margin-inline-end: 0px;
+    border: none;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    min-inline-size: min-content;
+  }
+  legend {
+    padding-inline-start: 0; padding-inline-end: 0;
+  }
+  input[type="checkbox" i] {
+    margin: unset;
+  }
+  input[type="radio" i] {
+    margin: unset;
+  }
+  input {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+  min-width:unset;
+  }
+  option {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+  }
+  select {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  }
+  select option {
+    line-height:1rem;
+  }
+  .sr-only
+  {   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+  }
+  /*ne pas prendre dans l'Excel*/
+  /*.sr-only{
+    height :0px;
+    margin : 0;
+  }*/
+  .h1 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 24px;
+  }
+  .h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 24px;
+  }
+  .h3 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 24px;
+  }
+
+  body{
+    margin:0;
+  }
+  
+  p {
+    margin:0;
+  }
+
+
+/*------------- Ajouter au Excel ---------------*/
+
+  .rcn-card__test{
+    border-style:solid;
+  }

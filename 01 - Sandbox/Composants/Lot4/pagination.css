@@ -22,6 +22,42 @@ body, legend {
     font-family:'Marianne',Arial;
     font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
 }
+legend {
+    padding-inline-start: 0; padding-inline-end: 0;
+  }
+  input[type="checkbox" i] {
+    margin: unset;
+  }
+  input[type="radio" i] {
+    margin: unset;
+  }
+  input {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+  min-width:unset;
+  }
+  option {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+  }
+  select {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  }
 
 /* Pagination*/
 
@@ -30,7 +66,7 @@ body, legend {
     flex-direction: row;
 	width: 100%;
 	justify-content: space-between;
-	align-items: center;
+	align-items: baseline;
 }
 .rcn-pagination__navZone {
 	width: 40%;
@@ -59,14 +95,14 @@ body, legend {
     display: flex;
     flex-direction: row;
     gap: var(--rcn-semantic-gap-horizontal-200);
-    align-items: center;
+    align-items: baseline;
 }
 
 .rcn-pagination__rapidAccess{
     display: flex;
     flex-direction: row;
     gap: var(--rcn-semantic-gap-horizontal-200);
-    align-items: center;
+    align-items: baseline;
 }
 
 .rcn-pagination__previousButton::before{
