@@ -125,3 +125,10 @@
   .rcn-card__test{
     border-style:solid;
   }
+
+/*------------- Module de résultat de recherche ---------------*/
+
+  .rcn-searchResultModule__cardZone{
+    display: flex;
+    flex-wrap: wrap;
+  }

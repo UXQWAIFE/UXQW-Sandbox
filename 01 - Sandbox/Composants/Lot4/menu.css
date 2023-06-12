@@ -32,10 +32,7 @@ a{
 	color: none;
 	text-decoration:none;
 }
-.rcn-link{
-	color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
-	text-decoration:var(--rcn-semantic-typography-text-component-default-body-textdecoration);
-}
+
 li{
 	/*padding:0px;*/
 }
@@ -98,16 +95,17 @@ button{
 	gap:var(--rcn-semantic-gap-horizontal-200);
 }
 .rcn-menu__entry:hover{
-	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-menu_entry);
 }
 .rcn-menu__entry--current {
-	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	border-bottom:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-menu_entry);
 }
 
 /*--------Entry Link --------*/
 
 .rcn-menu__entryLink{
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration-menu);
 }
 .rcn-menu__entryLink:visited {
  	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
