@@ -119,18 +119,6 @@
     margin:0;
   }
 
-    /*------------- Classes reprises de module de résultat de recherche---------------*/
-
-    /*------------- Ajouter au Excel ---------------*/
-
-  .rcn-card__test{
-    border-style:solid;
-    /* max-width:calc( 50% - 10px); */
-    flex-grow:1;
-    flex-basis: 35%;
-   
-  }
-
 
 /*------------- Test en attendant pagination ---------------*/
 
@@ -185,26 +173,33 @@
     gap : var(--rcn-semantic-gap-horizontal-400);
 }
 
+/*------------- Module de collection de cards  ---------------*/
 
+.rcn-cardCollection{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap : var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
+  grid-template-rows: auto;
+  background-color: transparent;
+}
 
 /*------------- Module de résultat de recherche ---------------*/
-
-  .rcn-searchResultModule__cardZone{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap : var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
-    /* padding : var(--rcn-semantic-padding-vertical-700) 0px; */
-  }
 
   .rcn-searchResultModule{
     display: flex;
     flex-direction: column;
     gap: var(--rcn-semantic-gap-vertical-700);
+    grid-area: searchResultModule;
+  }
+  
+  .rcn-searchResult__title{
+    grid-area: searchHeading;
+    height: auto;
+
   }
 
+/*------------- Ajout du module de filtre en supperposé ---------------*/
 
-  
 /*------------- Bottom Actions Banner ---------------*/
 /*Nouveau composant de navigation à porter à part*/
 
@@ -272,11 +267,7 @@
     background-color: var(--rcn-semantic-color-interaction-background-default-standard);
    }
 
-   .rcn-filter--overlay{
-    grid-area: filter;
-    overflow: auto;
-
-   }
+  
    .rcn-filterPartiel__zone{
     display: flex;
     flex-direction: row;
@@ -353,30 +344,25 @@
     margin-top: 16px;
   }
 
-  .rcn-gridTemplate--searchResult {
+  .rcn-grid--searchResultTemplate {
     grid-template-areas:
-     "title title title title title title title title . . . ."
+     "searchHeading searchHeading searchHeading searchHeading searchHeading searchHeading searchHeading searchHeading . . . ."
     "searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule";
   }
 
-  .rcn-itemSearchResult--title {
-    grid-area: title;
-    height: auto;
-  }
+  /*TEST en ajoutant le module de filtres - class à ajouter aux grilles et au module de filtre?*/
 
-  .rcn-itemSearchResult--searchResultModule{
-    grid-area: searchResultModule;
-    height: auto;
-
-  }
-
-  /*TEST en ajoutant le module de filtres*/
-
-  .rcn-contenuPrincipal{
+  .rcn-grid--mainContentOverlayed{
     position : relative;
   }
 
-  .rcn-filter--onOverlay {
+  .rcn-filter--overlay{
+    grid-area: filter;
+    overflow: auto;
+   
+   }
+
+  .rcn-grid--sideOverlayFilterTemplate {
     position:absolute;
     top:0;
     left:0;
@@ -386,8 +372,3 @@
     margin: 0;
     
   }
-
-  .rcn-sideSuperposedFilter {
-    
-
-}

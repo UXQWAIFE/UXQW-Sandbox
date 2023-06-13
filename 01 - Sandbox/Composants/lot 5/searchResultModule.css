@@ -89,27 +89,6 @@
     height :0px;
     margin : 0;
   }*/
-  .h1 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    font-weight: bold;
-    color:black;
-    margin-bottom: 24px;
-  }
-  .h2 {
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: bold;
-    color:black;
-    margin-bottom: 24px;
-  }
-  .h3 {
-    font-size: 1.8rem;
-    line-height: 2rem;
-    font-weight: bold;
-    color:black;
-    margin-bottom: 24px;
-  }
 
   body{
     margin:0;
@@ -120,15 +99,7 @@
   }
 
 
-/*------------- Ajouter au Excel ---------------*/
-
-  .rcn-card__test{
-    border-style:solid;
-    max-width: 700px;
-  }
-
-
-/*------------- Test en attendant pagination ---------------*/
+/*------------- Test pagination ---------------*/
 
 .rectangle-1{
     background-color: aquamarine;
@@ -181,20 +152,23 @@
     gap : var(--rcn-semantic-gap-horizontal-400);
 }
 
+/*------------- Module de collection de cards  ---------------*/
+
+.rcn-cardCollection{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap : var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
+  grid-template-rows: auto;
+  background-color: transparent;
+}
 
 
 /*------------- Module de résultat de recherche ---------------*/
 
-  .rcn-searchResultModule__cardZone{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap : var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
-    /* padding : var(--rcn-semantic-padding-vertical-700) 0px; */
-  }
 
-  .rcn-searchResultModule{
-    display: flex;
-    flex-direction: column;
-    gap: var(--rcn-semantic-gap-vertical-700);
-  }
+.rcn-searchResultModule{
+  display: flex;
+  flex-direction: column;
+  gap: var(--rcn-semantic-gap-vertical-700);
+}
+
