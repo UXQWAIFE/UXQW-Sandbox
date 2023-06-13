@@ -145,6 +145,35 @@ select option {
     flex-wrap: wrap;
 }
 
+
+.rcn-chips {
+  padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-300);
+  border-radius: var(--rcn-semantic-borderradius-300);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+  gap: var(--rcn-semantic-gap-horizontal-200);
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--rcn-semantic-color-static-background-chips);
+}
+
+.rcn-chips--interactive {
+  background-color: var(--rcn-semantic-color-interaction-background-default-chips);
+  border: none;
+}
+
+.rcn-chips--interactive:hover {
+  background-color: var(--rcn-semantic-color-interaction-background-hover-chips);
+}
+
+.rcn-chips__icon::before {
+  content: var(--rcn-semantic-typography-icon-rcn_icon-close_chips-content);
+}
+
+.rcn-chips__icon {
+  order: 2;
+}
+
+
 /*Classes de l'onglet Icon, ne pas reprendre*/
 
 .rcn-icon{
@@ -308,7 +337,7 @@ select option {
     display: flex;
     flex-direction: column;
     gap:var(--rcn-semantic-gap-vertical-500);
-    max-width: 300px;
+    max-width300px;
     /* Est ce que je le mets ici ou avec un modifier rcn-filter--completed */
     padding : var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-600);
     border-right: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
@@ -323,7 +352,7 @@ select option {
     border-right: none;
     border-left : none;
     border-bottom : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
-    padding : var(--rcn-semantic-padding-vertical-400) 0px;
+    padding : var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-0);
    }
 
    .rcn-filter__chipsZone--partiel{
