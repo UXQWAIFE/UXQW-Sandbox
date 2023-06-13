@@ -425,12 +425,14 @@
     grid-area: header;
     background-color: pink;
     height: 80px;
+    margin-bottom: 24px;
   }
   .item-d {
     display: flex;
     grid-area: footer;
     background-color: #FF4500;
     height: 100px;
+    margin-top: 24px;
   }
   
   /*Composants du template formulaire*/
@@ -465,6 +467,8 @@
     "stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper"
     "form form form form form form form form form form form form";
   }
+
+
   
 
   
