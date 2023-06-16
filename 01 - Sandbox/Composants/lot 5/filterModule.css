@@ -18,6 +18,8 @@
 
 button{
     font-family: unset;
+    background-color: transparent;
+    appearance: none;
 }
 
 *, body, legend {
@@ -321,7 +323,6 @@ select option {
 .rcn-filter__activeItems{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     gap:var(--rcn-semantic-gap-vertical-400);
 }
 
@@ -333,15 +334,23 @@ select option {
     gap: var(--rcn-semantic-gap-vertical-200) var(--rcn-semantic-gap-horizontal-200);
 }
 
-   .rcn-filter{
+.rcn-filter{
     display: flex;
     flex-direction: column;
     gap:var(--rcn-semantic-gap-vertical-500);
-    max-width300px;
-    /* Est ce que je le mets ici ou avec un modifier rcn-filter--completed */
     padding : var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-600);
-    border-right: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
+    border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
+    border-right: var(--rcn-semantic-borderwidth-100) solid transparent;
     background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+    width: 100%;
+    /* grid-area : filter;  > si mise au sein d'une grille sans overlay */
+   }
+
+   /*Modifier si le module de filtre se position à gauche du contenu de la page (moins courant)*/
+
+   .rcn-filter--leftZone{
+    border-left:none;
+    border-right : border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
    }
 
    .rcn-filterPartiel__zone{
@@ -379,8 +388,44 @@ select option {
     width : auto;
    }
 
-   .rcn-filter_citeriaZone{
+   .rcn-filter_criteriaZone{
     display: flex;
     flex-direction: column;
-    gap: var(--rcn-semantic-gap-vertical-500)
+    gap: var(--rcn-semantic-gap-vertical-500);
+   }
+
+   .rcn-filter__closeButton{
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    align-self : flex-end;
+    /* sera porté dans le fichier de reset */
+    background-color: none;
+    border:none;
+
+   }
+
+   .rcn-filter__icon::before{
+    content: var(--rcn-semantic-typography-icon-rcn_icon-close-content);
+  }
+
+  .rcn-filter__icon{
+   order:2;
+
+  }
+
+   /*Modifier au module de filtre lorsqu'il est supperposé*/
+
+   .rcn-filter--overlay{
+    grid-area: filter;
+    overflow: auto;
+   
+   }
+
+   .rcn-filter--overlayLeft{
+    grid-area: filter;
+    overflow: auto;
+    border-left:var(--rcn-semantic-borderwidth-100) solid transparent;
+    border-right:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
    }

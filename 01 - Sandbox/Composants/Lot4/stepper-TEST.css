@@ -46,30 +46,93 @@ body, legend {
   z-index: -1;
 }
 
-.rcn-stepperVertical{
-  padding-left: 0px;
-  display: flex;
-  flex-direction: column;
-  gap:var(--rcn-semantic-gap-vertical-500);
-  position: relative;
-  margin: 0px;
+  .rcn-stepperHorizontal::before{
+    content: "";
+    width: calc(100% - (15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)));
+    left: calc(calc(15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)) / 2);
+    height: 1px;
+    background-color: gray;
+    position: absolute;
+    top:19px;
+    z-index: -1;
+    display: flex;
+    align-self: center;
+  }
+
+  /* .rcn-stepperVertical{
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap:var(--rcn-semantic-gap-vertical-500);
+    position: relative;
+    margin: 0px;
+  
+  }
+  
+  .rcn-stepperHorizontal {
+      display: flex;
+      flex-direction:row;
+      gap:var(--rcn-semantic-gap-horizontal-500);
+      position: relative;
+      justify-content: space-between;
+      padding-left: 0px;
+      margin: 0px;
+      padding-inline-start: 0px;
+      margin-block-end: 0px;
+      margin-block-start: 0px;
+    }
+   */
+
+.rcn-stepper{
+    margin:0px;
+    padding-left: 0px;
+    position: relative;
+}
+
+.rcn-stepper--vertical{
+    display: flex;
+    flex-direction: column;
+    gap:var(--rcn-semantic-gap-vertical-500);
+}
+
+.rcn-stepper--horizontal{
+    display: flex;
+    flex-direction:row;
+    gap:var(--rcn-semantic-gap-horizontal-500);
+    justify-content: space-between;
+    padding-inline-start: 0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;    
+}
+
+.rcn-stepper--vertical::before{
+    content: "";
+    width: 1px;
+    height: 100%;
+    background-color: var(--rcn-semantic-color-static-border-divider_strong);
+    position: absolute;
+    left: calc(calc(2rem / 2) + var(--rcn-semantic-borderwidth-100));
+    z-index: -1;
 
 }
 
-.rcn-stepperHorizontal {
-  display: flex;
-  flex-direction:row;
-  gap:var(--rcn-semantic-gap-horizontal-500);
-  position: relative;
-  justify-content: space-between;
-  padding-left: 0px;
-  margin: 0px;
-  padding-inline-start: 0px;
-  margin-block-end: 0px;
-  margin-block-start: 0px;
+.rcn-stepper--horizontal::before{
+    content: "";
+    width: calc(100% - (15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)));
+    left: calc(calc(15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)) / 2);
+    height: 1px;
+    background-color: gray;
+    position: absolute;
+    top:19px;
+    z-index: -1;
+    display: flex;
+    align-self: center;
+
 }
 
-.rcn-stepperVertical__substepZone{
+
+
+/* .rcn-stepperVertical__substepZone{
   display: flex;
   flex-direction:column;
   padding-left: 0px;
@@ -78,23 +141,24 @@ body, legend {
   position: relative;
   justify-content: space-between;
 
+} */
+
+/* Ici la sous-étape n'existe dans tous les cas que sur le stepper vertical mais c'est un sous-élément de stepper */
+
+.rcn-stepper__substepZone{
+    display: flex;
+    flex-direction:column;
+    padding-left: 0px;
+    margin: 0px;
+    gap:var(--rcn-semantic-gap-horizontal-500);
+    position: relative;
+    justify-content: space-between;
+
 }
 
-.rcn-stepperHorizontal::before{
-  content: "";
-  width: calc(100% - (15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)));
-  left: calc(calc(15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)) / 2);
-  height: 1px;
-  background-color: gray;
-  position: absolute;
-  top:19px;
-  z-index: -1;
-  display: flex;
-  align-self: center;
-}
 
 
-.rcn-stepperVertical__step {
+/* .rcn-stepperVertical__step {
   display:flex;
   flex-direction:row;
   align-items:center;
@@ -113,6 +177,24 @@ body, legend {
   flex-grow: 1;
   max-width:calc(15 * (var(--rcn-semantic-height-stepper_stepcircle) / 2));
 
+} */
+
+.rcn-stepper__step{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.rcn-stepper--vertical .rcn-stepper__step{
+    flex-direction:row;
+    gap:var(--rcn-semantic-gap-horizontal-400);
+}
+
+.rcn-stepper--horizontal .rcn-stepper__step{
+    flex-direction:column;
+    gap:var(--rcn-semantic-gap-vertical-300);
+    flex-grow: 1;
+    max-width:calc(15 * (var(--rcn-semantic-height-stepper_stepcircle) / 2));
 }
 
 .rcn-stepper__number {
@@ -131,10 +213,10 @@ body, legend {
   height: calc(var(--rcn-semantic-height-stepper_stepcircle) / 2);
   margin-left:calc(calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 2) / 2));
   margin-right:calc(calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 2) / 2)) ;
-  border-radius:50%;
+  /* border-radius:50%;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center; */
 
 }
 
@@ -145,6 +227,24 @@ color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 
 }
 
+rcn-stepper--navigable .rcn-stepper__number-uncompleted
+
+rcn-stepper .rcn-stepper__number-uncompleted
+
+rcn-stepper--horizontal-navigable .rcn-stepper__number-uncompleted
+
+rcn-stepperHorizontal
+
+rcn-stepper--Navigable
+
+rcn-stepperVertical
+
+
+
+.rcn-stepper--navigable .rcn-stepper__number--uncompleted{
+
+}
+
 
 .rcn-stepper__number--uncompleted{
 background-color:var(--rcn-semantic-color-static-background-standard);
@@ -152,7 +252,7 @@ border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-intera
 color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
 }
 
-.rcn-stepper__number--disabled{
+.rcn-stepper__number[disabled]{
   background-color:var(--rcn-semantic-color-static-background-stepper_step_unreachable);
 border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-stepper_step_unreachable);
 color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
