@@ -471,6 +471,8 @@ Est ce qu'il faudrait aussi mettre la box avec l'icon en disabled ?
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
 }
 
+/* RADIO BUTTON */
+
 .rcn-inputField__input--radio{
     padding : unset;
     order:-1;
@@ -489,27 +491,6 @@ Est ce qu'il faudrait aussi mettre la box avec l'icon en disabled ?
     content: "\e93a";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
 }
-
-
-
-/* RADIO BUTTON */
-
-.rcn-radiobox__label {
-    font-weight:var(--rcn-semantic-typography-text-component-default-body-fontweight);
-}
-
-.rcn-radiobox__input::before{
-    font-family:'rcnicon';
-    content: "\e93b";
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-}
-
-.rcn-radiobox__input:checked::before{
-    font-family:'rcnicon';
-    content: "\e93a";
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
-}
-
 
 
   /* --------------------FIELDSET-----------------------*/ 

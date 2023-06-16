@@ -10,112 +10,128 @@
   
 </head>
 
-<body>
+<body class="pageAvecPagination rcn-container--primary">
 
-    <div class="rcn-pagination">
-				
-            <div class="rcn-pagination__chooseNumberElement">
-                1-4 sur 23 résultats, afficher 
-                <div class="rcn-inputFieldBloc">        
-                    <label for="x" class="rcn-input__label sr-only">4</label>
-                        <div class="rcn-input">
-                            <select name="" id="x" class="rcn-content rcn-input__content">
-                                <option class="rcn-input__option" value="">4</option>
-                                <option class="rcn-input__option" value="">8</option>
-                                <option class="rcn-input__option" value="">12</option>
-                                <option class="rcn-input__option" value="" selected>5</option>
-                            </select>
-                        </div>
-                </div>
-                résultats par pages
+<!-- -------Première ligne du module ------------>
+
+    <div class="rcn-pagination__sortLine">
+
+        <div class="rcn-inputFieldBloc rcn-inputFieldBloc--horizontal rcn-pagination__resultsPerPage">        
+            <label class="rcn-inputFieldBloc__label rcn-pagination__label">1-4 sur 23 résultats, afficher
+            <div class="rcn-inputField">
+                <select name="" id="x" class="rcn-inputField__input rcn-inputField__input--select">
+                    <option class="rcn-input__option" value="">4</option>
+                    <option class="rcn-input__option" value="">8</option>
+                    <option class="rcn-input__option" value="">12</option>
+                    <option class="rcn-input__option" value="" selected>5</option>
+                </select>
             </div>
-
-    
-   <!--module de navigation réduit -->
-
-        <div class="rcn-pagination__navZone">
-            <nav>
-                <ol class="rcn-pagination__navList">
-                    <li >
-                        <a title="Retour à la page précédente " class="rcn-pagination__navButton" href="#">
-                            <i class="rcn-pagination__previousButton"></i>
-                            Précédent
-                        </a>
-                    </li>
-                    <li >
-                        <a aria-current="page" class="rcn-pagination__pageNumber" title="Naviguer à la page 1" href="#">1</a>
-                    </li>
-                    <li >
-                        <a title="Naviguer à la page 2" class="rcn-pagination__pageNumber" href="#">2</a>
-                    </li>
-                    <li class="rcn-pagination__navElement" >
-                        <a title="Naviguer à la page 3" class="rcn-pagination__pageNumber" href="#">3</a>
-                    </li>
-                    <li >
-                        <p>...</p>
-                    </li>
-                    <li>
-                        <a title="Naviguer à la page 4" class="rcn-pagination__pageNumber" href="#">4</a>
-                    </li>
-                    <li>
-                        <a title="Naviguer à la page 5" class="rcn-pagination__pageNumber" href="#">5</a>
-                    </li>
-                    <li>
-                        <a title="Aller à la page suivante" href="#" class="rcn-pagination__navButton"> 
-                            Suivant 
-                            <i class="rcn-pagination_nextButton">
-                             </i>
-                        </a>
-                    </li>
-                </ol>
-            </nav>
+            résultats par pages</label>
         </div>
-        <div class="rcn-pagination__rapidAccess">
-            Aller à la page 
-            <div class="rcn-inputFieldBloc">        
-                <label for="x" class="rcn-input__label sr-only">4</label>
-                    <div class="rcn-input"> 
-                        <select name="" id="x" class="rcn-content rcn-input__content">
-                            <option class="rcn-input__option" value="">4</option>
-                            <option class="rcn-input__option" value="">8</option>
-                            <option class="rcn-input__option" value="">12</option>
-                            <option class="rcn-input__option" value="" selected>5</option>
-                        </select>
-                    </div> 
+
+        <div class="rcn-inputFieldBloc rcn-inputFieldBloc--horizontal">        
+            <label class="rcn-inputFieldBloc__label rcn-pagination__label">Trier par :
+            <div class="rcn-inputField">
+                <select name="" class="rcn-inputField__input rcn-inputField__input--select">
+                    <option class="rcn-inputField__option" value="">Popularité</option>
+                    <option class="rcn-inputField__option" value="">Ordre alphabétique</option>
+                    <option class="rcn-inputField__option" value="">Date de publication</option>
+                </select>
+            </div>
+            </label>
+        </div>
+
+    </div>
+
+
+<!-- -------Seconde ligne du module ------------>
+
+    <div class="rcn-pagination__navLine">
+
+        <div>
+             1-4 sur 23 résultats
+        </div>
+
+        <nav>
+            <ol class="rcn-pagination__navList">
+                <li >
+                    <a title="Retour à la page précédente " class="rcn-link rcn-pagination__navLinks" href="#">
+                        <i class="rcn-icon rcn-pagination__previousIcon"></i>
+                        Précédent
+                    </a>
+                </li>
+                <li >
+                    <a aria-current="page" class="rcn-link rcn-pagination__navLinks" title="Naviguer à la page 1" href="#">1</a>
+                </li>
+                <li >
+                    <a title="Naviguer à la page 2" class="rcn-link rcn-pagination__navLinks" href="#">2</a>
+                </li>
+                <li >
+                    <p>...</p>
+                </li>
+                <li>
+                    <a title="Naviguer à la page 4" class="rcn-link rcn-pagination__navLinks" href="#">4</a>
+                </li>
+                <li>
+                    <a title="Naviguer à la page 5" class="rcn-link rcn-pagination__navLinks" href="#">5</a>
+                </li>
+                <li>
+                    <a title="Aller à la page suivante" href="#" class="rcn-link rcn-pagination__navLinks"> 
+                        Suivant 
+                        <i class="rcn-icon rcn-pagination_nextIcon">
+                         </i>
+                    </a>
+                </li>
+            </ol>
+        </nav>
+
+        <div class="rcn-inputFieldBloc rcn-inputFieldBloc--horizontal">        
+            <label for="goToPage" class="rcn-inputFieldBloc__label rcn-pagination__label">Aller à la page</label>
+            <div class="rcn-inputField">
+                <select name="goToPage" class="rcn-inputField__input rcn-inputField__input--select">
+                    <option class="rcn-inputField__option" value=""><a>1</a></option>
+                    <option class="rcn-inputField__option" value=""><a>2</a></option>
+                    <option class="rcn-inputField__option" value=""><a>3</a></option>
+                    <option class="rcn-inputField__option" value=""><a>4</a></option>
+                    <option class="rcn-inputField__option" value=""><a>5</a></option>
+                </select>
+                <button  type="submit" class="rcn-iconButton rcn-icon rcn-pagination__goToPageButton"></button>
             </div>
         </div>
 
     </div>
 
+
+        
+<!-- ----- Version réduite ------- -->
+
     <div class="rcn-pagination__navZone">
+
         <nav>
             <ol class="rcn-pagination__navList">
                 <li >
-                    <a title="Retour à la page précédente " class="rcn-pagination__navButton" href="#">
-                        <i class="rcn-pagination__previousButton"></i>
+                    <a title="Retour à la page précédente " class="rcn-link rcn-pagination__navLinks" href="#">
+                        <i class="rcn-icon rcn-pagination__previousIcon"></i>
                     </a>
                 </li>
-                <li class="rcn-pagination__navElement" >
-                    <a aria-current="page" class="rcn-pagination__pageNumber" title="Naviguer à la page 1" href="#">1</a>
+                <li >
+                    <a aria-current="page" class="rcn-link rcn-pagination__navLinks" title="Naviguer à la page 1" href="#">1</a>
                 </li>
-                <li class="rcn-pagination__navElement" >
-                    <a title="Naviguer à la page 2" class="rcn-pagination__pageNumber" href="#">2</a>
+                <li >
+                    <a title="Naviguer à la page 2" class="rcn-link rcn-pagination__navLinks" href="#">2</a>
                 </li>
-                <li class="rcn-pagination__navElement" >
-                    <a title="Naviguer à la page 3" class="rcn-pagination__pageNumber" href="#">3</a>
-                </li>
-                <li class="rcn-pagination__navElement" >
+                <li >
                     <p>...</p>
                 </li>
-                <li class="rcn-pagination__navElement" >
-                    <a title="Naviguer à la page 4" class="rcn-pagination__pageNumber" href="#">4</a>
+                <li>
+                    <a title="Naviguer à la page 4" class="rcn-link rcn-pagination__navLinks" href="#">4</a>
                 </li>
-                <li class="rcn-pagination__navElement" >
-                    <a title="Naviguer à la page 5" class="rcn-pagination__pageNumber" href="#">5</a>
+                <li>
+                    <a title="Naviguer à la page 5" class="rcn-link rcn-pagination__navLinks" href="#">5</a>
                 </li>
-                <li class="rcn-pagination__navElement" >
-                    <a title="Aller à la page suivante" href="#" class="rcn-pagination__navButton">
-                        <i class="rcn-pagination_nextButton">
+                <li>
+                    <a title="Aller à la page suivante" href="#" class="rcn-link rcn-pagination__navLinks">
+                        <i class="rcn-icon rcn-pagination_nextIcon">
                          </i>
                     </a>
                 </li>
@@ -123,6 +139,36 @@
         </nav>
     </div>
 
+
+
+    <!-- Version très réduite -->
+
+    <nav>
+            <ol class="rcn-pagination__navList">
+                <li >
+                    <a title="Retour à la page précédente " class="rcn-link rcn-pagination__navLinks" href="#">
+                        <i class="rcn-icon rcn-pagination__previousIcon"></i>
+                    </a>
+                </li>
+                <li >
+                    <div class="rcn-inputField">
+                        <select name="" class="rcn-inputField__input rcn-inputField__input--select">
+                            <option class="rcn-inputField__option" value=""><a>1</a></option>
+                            <option class="rcn-inputField__option" value=""><a>2</a></option>
+                            <option class="rcn-inputField__option" value=""><a>3</a></option>
+                            <option class="rcn-inputField__option" value=""><a>4</a></option>
+                            <option class="rcn-inputField__option" value=""><a>5</a></option>
+                        </select>
+                    </div>
+                </li>
+                <li>
+                    <a title="Aller à la page suivante" href="#" class="rcn-link rcn-pagination__navLinks"> 
+                        <i class="rcn-icon rcn-pagination_nextIcon">
+                         </i>
+                    </a>
+                </li>
+            </ol>
+        </nav>
 
 
 </body>
