@@ -16,3 +16,83 @@
     src: url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
 }
 
+body, legend {
+    font-family:'Marianne',Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}
+
+.rcn-link {
+    /* gap: var(--rcn-semantic-gap-horizontal-100); */
+    /* modifier le gap dans le excel si on veut que ça soit souligner  */
+    gap:0;
+    display: flex;
+    align-items: baseline;
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
+    width:fit-content;
+    /* text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration-default); */
+  }
+  
+  .rcn-link:visited {
+    color: var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
+  }
+  
+  .rcn-link:disabled {
+    color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+  }
+  
+  .rcn-link__icon {
+    text-decoration: var(--rcn-semantic-typography-icon-rcn_icon-body-textdecoration);
+    font-family: var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
+  }
+  
+  .rcn-link__icon--external::before {
+    content: "\e910";
+  }
+  
+  .rcn-link__icon--external {
+    order: 2;
+  }
+  
+  .rcn-link__icon--download::before {
+    content: "\e918";
+  }
+  
+  .rcn-link__icon--download {
+    order: -1;
+  }
+  
+  .rcn-link:hover {
+    text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration-hover);
+  }
+
+  .rcn-link--external{
+    content: "\e910";
+    text-decoration: none;
+
+  }
+
+  .rcn-link--external::before{
+    content: "\e910";
+    text-decoration: none;
+
+
+  }
+  .rcn-links--external::after {
+    content: "\e910";
+    font-family: var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
+    text-decoration: none;
+  }
+
+ .rcn-link__withIcon{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+ }
+
+ .rcn-icon{
+    font-size: 1rem;
+    
+ }
+ .rcn-icon::before{
+    font-size: 0.875em;
+ }
