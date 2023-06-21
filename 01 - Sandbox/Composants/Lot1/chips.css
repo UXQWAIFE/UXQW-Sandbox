@@ -1,0 +1,135 @@
+@import url('../../Asset/Cores et semantiques/styles-ChorusPro.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
+@import url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
+
+
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url("../../Asset/Font_icon/RCNicon.ttf");
+
+}
+
+@font-face {
+    font-family: "Marianne";
+    src: url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
+}
+
+button{
+    font-family: unset;
+    background-color: transparent;
+    appearance: none;
+}
+
+*, body, legend {
+    font-family:"Marianne",Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}
+
+i {
+    font-style:normal;
+}
+li {
+    list-style-type: none;
+    text-align: unset;
+}
+ul {
+    padding:0px;
+}
+fieldset {
+    display: block;
+    margin-inline-start: 0 ;
+    margin-inline-end: 0px;
+    border: none;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    min-inline-size: min-content;
+  }
+legend {
+    padding-inline-start: 0; padding-inline-end: 0;
+}
+input[type="checkbox" i] {
+    margin: unset;
+}
+input[type="radio" i] {
+    margin: unset;
+}
+input {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+  min-width:unset;
+}
+option {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+  appearance: unset;
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+}
+select {
+  padding: 0;
+  border: unset;
+  background: transparent;
+  font-size:unset;
+}
+select option {
+    line-height:1rem;
+}
+.sr-only
+{   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); border: 0;
+}
+
+.rcn-chips__textZone{
+    display:flex;
+    flex-direction:column;
+    gap: var(--rcn-semantic-gap-horizontal-100);
+    flex-grow: 1;
+    flex-wrap: wrap;
+}
+
+
+.rcn-chips {
+  padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-300);
+  border-radius: var(--rcn-semantic-borderradius-300);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+  gap: var(--rcn-semantic-gap-horizontal-200);
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--rcn-semantic-color-static-background-chips);
+  width:fit-content;
+}
+
+.rcn-chips--interactive {
+  background-color: var(--rcn-semantic-color-interaction-background-default-chips);
+  border: none;
+}
+
+.rcn-chips--interactive:hover {
+  background-color: var(--rcn-semantic-color-interaction-background-hover-chips);
+}
+
+.rcn-chips__icon::before {
+  content: var(--rcn-semantic-typography-icon-rcn_icon-close_chips-content);
+}
+
+.rcn-chips__icon {
+  order: 2;
+}

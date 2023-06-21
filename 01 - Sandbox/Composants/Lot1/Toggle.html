@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Toggle.css" rel="stylesheet">
+	<link href="../../RCN-DesignSystem/assets/styles-ChorusPro.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="Toggle.css">
     <title>Document</title>
 </head>
 <body>
-	<div class="flex">
-		<span class="text"> This is teh label of my button</span>
-		<button class="toggle" selected>
-			<div class="toggleindicator"></div>
-			<span class="toggletextzone">Off</span>
-		</button>
-	</div>
+
+	<button class="rcn-toggle"> 
+		<div class="rcn-toggle__text">Off</div>
+		<div class="rcn-toggle__indicator"></div>
+
+	</button>
+
+	<button class="rcn-toggle rcn-toggle--on" selected> 
+		<div class="rcn-toggle__text">On</div>
+		<div class="rcn-toggle__indicator"></div>
+
+	</button>
 
 </body>
 </html>

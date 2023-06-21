@@ -1,7 +1,7 @@
 @import url('../../Asset/Cores et semantiques/styles-ChorusPro.css');
 @import url('/ComponentTokensButtonPrimary.min.css');
 @import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
-@import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+@import url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
 
 
 
@@ -12,9 +12,42 @@
 }
 
 @font-face {
-    font-family: 'Marianne';
-    src: url(../Asset/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf);
+    font-family: "Marianne";
+    src: url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
 }
+
+button{
+    font-family: unset;
+    background-color: transparent;
+    appearance: none;
+}
+
+*, body, legend {
+    font-family:"Marianne",Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}
+
+i {
+    font-style:normal;
+}
+li {
+    list-style-type: none;
+    text-align: unset;
+}
+ul {
+    padding:0px;
+}
+fieldset {
+    display: block;
+    margin-inline-start: 0 ;
+    margin-inline-end: 0px;
+    border: none;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    min-inline-size: min-content;
+  }
 
 .rcn-notification{
     padding : var(--rcn-semantic-padding-vertical-300);

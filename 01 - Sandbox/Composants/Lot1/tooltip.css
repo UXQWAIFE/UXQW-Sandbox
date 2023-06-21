@@ -31,11 +31,3 @@ button{
 	font: inherit;
 	vertical-align: baseline;
 }
-
-.rcn-toggle__text{
-padding-right: var(--rcn-semantic-padding-horizontal-150);
-padding-left: var(--rcn-semantic-padding-horizontal-150);
-order:1;
-
-
-}
