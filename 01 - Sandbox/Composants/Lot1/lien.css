@@ -83,11 +83,6 @@ body, legend {
     text-decoration: none;
   }
 
- .rcn-link__withIcon{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
- }
 
  .rcn-icon{
     font-size: 1rem;
@@ -95,4 +90,8 @@ body, legend {
  }
  .rcn-icon::before{
     font-size: 0.875em;
+ }
+
+ .rcn-link--withIcon{
+  text-decoration: none;
  }
