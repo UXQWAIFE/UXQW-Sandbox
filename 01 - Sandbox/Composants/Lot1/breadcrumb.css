@@ -120,24 +120,11 @@ table {
     border: 0;
 }
 
+.rcn-breadcrumb__chevron {
+  transform: none;
+} /* class supprimée dans le Excel */
 
-
-.rcn-accordions__heading[aria-expanded='true']:hover {
-	border-top : var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
+.rcn-breadcrumb__list {
+  padding-left: var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux*/
+  padding-right: var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux*/
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

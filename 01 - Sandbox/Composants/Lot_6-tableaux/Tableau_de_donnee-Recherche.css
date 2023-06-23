@@ -1,0 +1,318 @@
+a {
+	color: #000091;
+}
+.container-table {
+	max-width: 1366px;
+	margin:0 auto;
+	display: block;
+	position: relative;
+}
+
+/* Gestion du tableau en grille */
+table {
+	display:grid;
+	border-spacing:0;
+	grid-template-rows: auto ;
+	gap:0 0;
+	margin: 0 0 1rem 0;
+	table-layout: fixed;
+	line-height: 1rem;
+	font-size: 1rem;
+	max-width: 1366px;
+	border-left:1px solid #e6e6e6;
+}
+thead, tbody, tfoot {
+	display:grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: minmax(16px, 1fr);
+	height:fit-content;
+	width: 100%;
+}
+tr {
+	display: grid;
+	grid-template-columns:repeat(2, calc(3rem + 1rem)) calc(10rem + 1rem) calc(40rem + 1rem) repeat(4, calc(15rem + 1rem)) calc(8rem + 1rem) calc(6rem + 1rem);
+}
+td, th {
+	border-style: solid ;
+	border-color:#e6e6e6;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1rem;
+	font-size: 1rem;
+
+}
+
+
+
+/* Gestion du caption */
+div.preTable {
+	display:grid;
+	grid-template-columns: 1fr;
+	border:0;
+	align-items: baseline;
+	max-width: 1366px;
+	overflow: hidden;
+	width: 100%;
+	min-height: 2.75rem;
+	
+}
+div.preTable .details {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	line-height: 2rem;
+	margin-bottom: 1rem;
+	width: 100%;
+}
+div.preTable h1 {
+	text-align: left;
+	margin:0;
+}
+div.preTable a {
+	text-align: right;
+}
+div.preTable .fonctionnalite {
+	display: grid;
+	grid-template-columns: 20% 80%;
+	border:0;
+	align-items: center;
+	text-align: left;
+	border: solid #e6e6e6;
+	border-width: 1px 1px 0 1px;
+	padding: 0.5rem 0.5rem;
+}
+div.preTable .fonctionnalite p {
+	margin: 0;
+}
+div.preTable .fonctionnalite #tableRecherche {
+	justify-content: end;
+	display: flex;
+	align-items: center;
+}
+#tableRecherche form {
+	border: 1px solid #9B9B9B;
+	padding: 0.5rem 0.75rem;
+	background: #fff;
+	border-radius: 5px;
+	line-height: 1;
+	margin: 0;
+}
+#tableRecherche form input {
+	border: none;
+	font-size: 1rem;
+	padding: 0;
+	line-height: 1;
+}
+#tableRecherche form button[type="submit"] {
+	border-left: 1px solid #9B9B9B ;
+	padding-left: 0.5rem;
+	font-size: 1rem;
+	line-height: 1;
+	color: #5770be;
+} 
+#tableRecherche form button[type="submit"]:focus, #tableRecherche form button[type="submit"]:focus-visible {
+	outline-offset: 2px;
+}
+
+/* gestion du Thead */
+thead {
+	border-top:1px solid #e6e6e6;
+}
+
+th {
+	display:flex;
+	text-align: left;
+	min-width: fit-content;
+	padding:1rem 0.5rem;
+}
+thead th button {
+	border: none;
+	background: none;
+	margin-left: auto;
+	justify-content: flex-end;
+	display: flex;
+	cursor: pointer;
+}
+/* Gestion du Tbody */
+tbody {
+	border-bottom:1px solid #e6e6e6;
+}
+tbody tr:nth-of-type(odd) td {
+	background:#f8f8f8;
+}
+tbody tr:nth-of-type(even) td, thead tr th {
+	background:#fff;
+}
+
+td {
+	display: block;
+	padding:0.75rem 0.5rem;
+	font-weight: normal;
+	white-space: nowrap;
+	line-height: 1rem;
+}
+td.showTitle {
+	cursor: help;
+}
+td.cell-nbr {
+	text-align: right;
+}
+td.cell-chips {
+
+	height: 1rem;
+	overflow: hidden;
+}
+td .chips-contain {
+	margin: -0.25rem auto;
+	display: block;
+	justify-content: center;
+	border-radius: 10rem;
+	width: fit-content;
+	min-width: 4rem;
+	padding: 0.25rem 0.5rem;
+	max-height: 1.5rem;
+	text-align: center;
+}
+td .chips-succes {background: #8ACCB0;}
+td .chips-information {background: #ABB8DF;}
+td .chips-attention {background: #FFDF66;}
+td .chips-danger {background: #FFB7A5;}
+
+/*Gestion des bordures des cellules */
+th {
+	border-width: 0 1px 2px 0;
+}
+td {
+	border-width: 0 1px 0 0;	
+}
+td:first-child  {
+	border-width: 0 1px 0 0;
+}
+th:first-child  {
+	border-width: 0 1px 2px 0;
+}
+td:last-child {
+	border-width:0 1px 0 1px;
+}
+th:last-child {
+	border-width:0 1px 2px 1px;
+}
+/* Button d'action */
+td.cell-action {
+	text-align: center;
+	color: #000;
+	cursor: pointer;
+}
+button {
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+td button i {
+	font-size: 1.25rem;
+	color: #000;
+	background: none;
+	line-height: 1;
+}
+
+td button.btn-action {
+	display: inline-flex;
+	margin: 0 .5rem;
+}
+/* Gestion du scroll */
+table:not(caption) {
+	overflow: auto;
+	width: 1366px;
+}
+
+.sticked {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+.sticked-col-1 {
+	width: 3rem;
+	left:0;
+	border-left: 1px solid #e6e6e6!important;
+}
+.sticked-col-2 {
+	width: 3rem;
+	left: calc(3rem + (0.5rem*2));
+}
+.sticked-col-3 {
+	width: 10rem;
+	left: calc((3rem + (0.5rem*2))*2 + 1px);
+	border-right: 2px solid #e6e6e6!important;
+}
+.sticked-col-End {
+	width: 6rem;
+	right: 0;
+	border-left: 2px solid #e6e6e6!important;
+}
+/* Pied du tableau */
+#RetourBTable {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+/* Pagination */
+.pagination-controle {
+	display: inline-flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	line-height: 2;
+}
+.pagination-controle .pagination-Nav {
+	width: 40%;
+	text-align: right;
+}
+.pagination-controle .pagination-Nav nav ol {
+	display: flex;
+	list-style: none;
+	justify-content: end;
+	margin: 0;
+}
+.pagination-controle .pagination-Nav nav ol li a {
+	display: flex;
+	padding: 0.5rem;
+	color: #000;
+	text-decoration: none;
+	margin-right: 1rem;
+	border-radius: 2px;
+	line-height: 1;
+	min-width: 1rem;
+	min-height: 1rem;
+	justify-content: center;
+}
+.pagination-controle .pagination-Nav nav ol li a:hover {
+	background: #f0f0f0;
+}
+.pagination-controle .pagination-Nav nav ol li a[aria-current] {
+	background: #f0f0f0;
+	color: #6a6a6a;
+}
+.pagination-controle .pagination-Nav nav ol li a i {
+	margin: 0 0.5rem;
+}
+.pagination-controle div label select {
+	padding: 0.25rem 0.5rem;
+	font-size: 1rem;
+}
+
+/*
+* Class supérieur
+*/
+
+/*Retouche champs input */
+input[type="checkbox"] {
+	appearance: none;
+	}
+	.sr-only {
+		display: block;
+		visibility: hidden;
+		width: 0px;
+		height: 0px;
+	}
+	

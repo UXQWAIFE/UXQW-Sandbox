@@ -1,4 +1,3 @@
-
 /* Reset global */
 body, p, button, input, option, select, input[type="checkbox" i], 
 input[type="radio" i], body, div, span, applet, object, iframe,
@@ -14,58 +13,53 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin:0;
-    padding:0;
-    border: 0;
-	font: inherit;
-	vertical-align: baseline;
- }
+  margin:0;
+  padding:0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
 
 body, legend {
-  	font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily), Arial;
-    font-size:1rem;
-    line-height: 1;
- }
+  font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily), Arial;
+  font-size:1rem;
+  line-height: 1;
+}
 
 i {
- 	font-style:normal;
- }
+  font-style:normal;
+}
 
 a {
-	background-color: transparent;
- }
+  background-color: transparent;
+}
 
 button {
-    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-    line-height: 1rem;
- }
+  line-height: 1rem;
+}
 
-select, option {
-    line-height:1rem;
+select, option {
+  line-height:1rem;
 }
 
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-family: monospace;
+  font-size: 1em;
 }
 
-b,
-strong {
+b, strong {
   font-weight: var(--rcn-semantic-typography-text-editorial-default-reset-fontweight); 
 }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
-
 sub {
   bottom: -0.25em;
 }
-
 sup {
   top: -0.5em;
 }
@@ -75,16 +69,15 @@ img {
 }
 
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote::before, blockquote::after, q::before, q::after {
+  content: '';
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 [hidden] {
@@ -92,13 +85,13 @@ table {
   visibility: hidden;
 }
 
-.sr-only
-{   position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0); 
-    border: 0;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); 
+  border: 0;
 }

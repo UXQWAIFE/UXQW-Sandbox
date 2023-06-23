@@ -119,25 +119,3 @@ table {
     clip: rect(0, 0, 0, 0); 
     border: 0;
 }
-
-
-
-.rcn-accordions__heading[aria-expanded='true']:hover {
-	border-top : var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

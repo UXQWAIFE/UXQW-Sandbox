@@ -121,23 +121,17 @@ table {
 }
 
 
-
-.rcn-accordions__heading[aria-expanded='true']:hover {
-	border-top : var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
+.rcn-backToTop {
+  padding: var(--rcn-semantic-padding-horizontal-400) var(--rcn-semantic-padding-vertical-400);
+  border-radius: var(--rcn-semantic-borderradius-300);
+  background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+  /*border-width: var(--rcn-semantic-borderwidth-100);supprimé*/
+  /*border-color: var(--rcn-semantic-color-interaction-border-back_to_top); supprimé*/
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-back_to_top); /*à ajouter dans l'excel pour remplacer deux précédents*/
+  text-align: center;
+  position: fixed;
+  /*bottom: 1,5vw; --> supprimé dans excel --> OK*/
+  /*right: 1,5vw;-->supprimé dans excel --> OK*/
+  width: 3rem;
+  height: 3rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

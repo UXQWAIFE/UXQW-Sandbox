@@ -1,0 +1,467 @@
+a {
+    color: #000091;
+}
+.container-table {
+    max-width: 1366px;
+    margin:0 auto;
+    display: block;
+    position: relative;
+}
+
+/* Gestion du tableau en grille */
+table {
+    display:grid;
+    border-spacing:0;
+    grid-template-rows: auto ;
+    gap:0 0;
+    margin: 1rem 0;
+    table-layout: fixed;
+    line-height: 1rem;
+    font-size: 1rem;
+  border-left:1px solid #e6e6e6;
+    max-width: 1366px;
+}
+thead, tbody, tfoot {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(16px, 1fr);
+    height:fit-content;
+    width: 100%;
+}
+tr {
+    display: grid;
+    grid-template-columns:
+    calc(3rem + 1rem)
+    calc(40rem + 1rem) 
+    calc(10rem + 1rem) 
+    repeat(3, calc(15rem + 1rem)) 
+    calc(8rem + 1rem)
+    calc(6rem + 1rem);
+}
+td, th {
+    border-style: solid ;
+    border-color:#e6e6e6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1rem;
+    font-size: 1rem;
+
+}
+
+
+
+/* Gestion du caption */
+div.preTable {
+    display:grid;
+    grid-template-columns: 80% 20% ;
+    border:0;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    max-width: 1366px;
+    overflow: hidden;
+    line-height: 2rem;
+}
+div.preTable h1 {
+    text-align: left;
+    margin:0;
+}
+div.preTable a {
+    text-align: right;
+}
+
+
+/* gestion du Thead */
+thead {
+    border-top:1px solid #e6e6e6;
+}
+
+th {
+    display:flex;
+    text-align: left;
+    min-width: fit-content;
+    padding:1rem 0.5rem;
+}
+thead th button {
+    border: none;
+    background: none;
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+/* Gestion du Tbody */
+tbody {
+    border-bottom:1px solid #e6e6e6;
+}
+tbody tr:nth-of-type(odd) td {
+    background:#f8f8f8;
+}
+tbody tr:nth-of-type(even) td, thead tr th {
+    background:#fff;
+}
+
+td {
+    display: block;
+    padding:0.75rem 0.5rem;
+    font-weight: normal;
+    white-space: nowrap;
+    line-height: 1rem;
+}
+td.showTitle {
+    cursor: help;
+}
+td.cell-nbr {
+    text-align: right;
+}
+td.cell-chips {
+
+    height: 1rem;
+    overflow: hidden;
+}
+td .chips-contain {
+    margin: -0.25rem auto;
+    display: block;
+    justify-content: center;
+    border-radius: 10rem;
+    width: fit-content;
+    min-width: 4rem;
+    padding: 0.25rem 0.5rem;
+    max-height: 1.5rem;
+    text-align: center;
+}
+td .chips-succes {background: #8ACCB0;}
+td .chips-information {background: #ABB8DF;}
+td .chips-attention {background: #FFDF66;}
+td .chips-danger {background: #FFB7A5;}
+
+/*Gestion des bordures des cellules */
+th {
+    border-width: 0 1px 2px 0;
+}
+td {
+    border-width: 0 1px 0 0;	
+}
+td:first-child  {
+    border-width: 0 1px 0 0;
+}
+th:first-child  {
+    border-width: 0 1px 2px 0;
+}
+td:last-child {
+    border-width:0 1px 0 1px;
+}
+th:last-child {
+    border-width:0 1px 2px 1px;
+}
+/* Button d'action */
+td.cell-action {
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+}
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+td button i {
+    font-size: 1.25rem;
+    color: #000;
+    background: none;
+    line-height: 1;
+}
+
+td button.btn-action {
+    display: inline-flex;
+    margin: 0 .5rem;
+}
+/* Gestion du scroll */
+table:not(caption) {
+    overflow: auto;
+    width: 1366px;
+}
+
+.sticked {
+    position: sticky;
+    top: 0;
+    left:0;
+    z-index: 10;
+}
+.sticked-col-1 {
+    width: 3rem;
+    left: 0px;
+    border-left: 1px solid #e6e6e6!important;
+}
+.sticked-col-2 {
+    width: 3rem;
+    left: calc(3rem + (0.5rem*2) + 0px);
+    border-left: 1px solid #e6e6e6!important;
+}
+.sticked-col-3 {
+    width: 10rem;
+    left: calc((3rem + (0.5rem*2))*2 + 2px);
+    border-right: 2px solid #e6e6e6!important;
+}
+.sticked-col-End {
+    width: 6rem;
+    right: 0;
+    border-left: 2px solid #e6e6e6!important;
+}
+/* Pied du tableau */
+#RetourBTable {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/*
+* Class supérieur
+*/
+
+/*Retouche champs input */
+input[type="checkbox"] {
+	appearance: none;
+}
+
+.show {
+	display: block!important;
+}
+.showed {
+	display: grid!important;
+}
+.sr-only {
+	display: none;
+	visibility: hidden;
+	width: 0px;
+	height: 0px;
+}
+a {
+    color: #000091;
+}
+.container-table {
+    max-width: 1366px;
+    margin:0 auto;
+    display: block;
+    position: relative;
+}
+
+/* Gestion du tableau en grille */
+table {
+    display:grid;
+    border-spacing:0;
+    grid-template-rows: auto ;
+    gap:0 0;
+    margin: 1rem 0;
+    table-layout: fixed;
+    line-height: 1rem;
+    font-size: 1rem;
+  border-left:1px solid #e6e6e6;
+    max-width: 1366px;
+}
+thead, tbody, tfoot {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(16px, 1fr);
+    height:fit-content;
+    width: 100%;
+}
+
+td, th {
+    border-style: solid ;
+    border-color:#e6e6e6;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1rem;
+    font-size: 1rem;
+
+}
+
+
+
+/* Gestion du caption */
+div.preTable {
+    display:grid;
+    grid-template-columns: 80% 20% ;
+    border:0;
+    align-items: baseline;
+    margin-bottom: 1rem;
+    max-width: 1366px;
+    overflow: hidden;
+    line-height: 2rem;
+}
+div.preTable h1 {
+    text-align: left;
+    margin:0;
+}
+div.preTable a {
+    text-align: right;
+}
+
+
+/* gestion du Thead */
+thead {
+    border-top:1px solid #e6e6e6;
+}
+
+th {
+    display:flex;
+    text-align: left;
+    min-width: fit-content;
+    padding:1rem 0.5rem;
+}
+thead th button {
+    border: none;
+    background: none;
+    justify-content: flex-end;
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+}
+/* Gestion du Tbody */
+tbody {
+    border-bottom:1px solid #e6e6e6;
+}
+tbody tr:nth-of-type(odd) td {
+    background:#f8f8f8;
+}
+tbody tr:nth-of-type(even) td, thead tr th {
+    background:#fff;
+}
+
+td {
+    display: block;
+    padding:0.75rem 0.5rem;
+    font-weight: normal;
+    white-space: nowrap;
+    line-height: 1rem;
+}
+td.showTitle {
+    cursor: help;
+}
+td.cell-nbr {
+    text-align: right;
+}
+td.cell-chips {
+
+    height: 1rem;
+    overflow: hidden;
+}
+td .chips-contain {
+    margin: -0.25rem auto;
+    display: block;
+    justify-content: center;
+    border-radius: 10rem;
+    width: fit-content;
+    min-width: 4rem;
+    padding: 0.25rem 0.5rem;
+    max-height: 1.5rem;
+    text-align: center;
+}
+td .chips-succes {background: #8ACCB0;}
+td .chips-information {background: #ABB8DF;}
+td .chips-attention {background: #FFDF66;}
+td .chips-danger {background: #FFB7A5;}
+
+/*Gestion des bordures des cellules */
+th {
+    border-width: 0 1px 2px 0;
+}
+td {
+    border-width: 0 1px 0 0;	
+}
+td:first-child  {
+    border-width: 0 1px 0 0;
+}
+th:first-child  {
+    border-width: 0 1px 2px 0;
+}
+td:last-child {
+    border-width:0 1px 0 1px;
+}
+th:last-child {
+    border-width:0 1px 2px 1px;
+}
+/* Button d'action */
+td.cell-action {
+    text-align: center;
+    color: #000;
+    cursor: pointer;
+}
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+td button i {
+    font-size: 1.25rem;
+    color: #000;
+    background: none;
+    line-height: 1;
+}
+
+td button.btn-action {
+    display: inline-flex;
+    margin: 0 .5rem;
+}
+/* Gestion du scroll */
+table:not(caption) {
+    overflow: auto;
+    width: 1366px;
+}
+
+.sticked {
+    position: sticky;
+    top: 0;
+    left:0;
+    z-index: 10;
+}
+.sticked-col-1 {
+    width: 3rem;
+    left: 0px;
+    border-left: 1px solid #e6e6e6!important;
+}
+.sticked-col-2 {
+    width: 3rem;
+    left: calc(3rem + (0.5rem*2) + 0px);
+    border-left: 1px solid #e6e6e6!important;
+}
+.sticked-col-3 {
+    width: 10rem;
+    left: calc((3rem + (0.5rem*2))*2 + 2px);
+    border-right: 2px solid #e6e6e6!important;
+}
+.sticked-col-End {
+    width: 6rem;
+    right: 0;
+    border-left: 2px solid #e6e6e6!important;
+}
+/* Pied du tableau */
+#RetourBTable {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/*
+* Class supérieur
+*/
+
+/*Retouche champs input */
+input[type="checkbox"] {
+	appearance: none;
+}
+
+.show {
+	display: block!important;
+}
+.showed {
+	display: grid!important;
+}
+.sr-only {
+	display: none;
+	visibility: hidden;
+	width: 0px;
+	height: 0px;
+}

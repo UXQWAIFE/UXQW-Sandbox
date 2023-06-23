@@ -1,11 +1,124 @@
-@import url('./Core/Core_vars.css');
-@import url('./Semantic/SemanticTokensColor.min.css');
-@import url('./Semantic/SemanticTokensShadow.min.css');
-@import url('./Semantic/SemanticTokensLayout.min.css');
-@import url('./Semantic/SemanticTokensTypography.min.css');
-@import url('ComponentTokensButtonPrimary.min.css');
-@import url('./Assets/Marianne-Regular.otf');
+@import url('../../Asset/Cores et semantiques/styles-ChorusPro.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
+@import url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
 
+
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url("../../Asset/Font_icon/RCNicon.ttf");
+
+}
+
+@font-face {
+    font-family: "Marianne";
+    src: url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
+}
+
+/* Reset global */
+body, p, button, input, option, select, input[type="checkbox" i], 
+input[type="radio" i], body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border: 0;
+	font: inherit;
+	vertical-align: baseline;
+ }
+
+body, legend {
+  	font-family:var(--rcn-semantic-typography-text-component-default-body-fontfamily), Arial;
+    font-size:1rem;
+    line-height: 1;
+ }
+
+i {
+ 	font-style:normal;
+ }
+
+a {
+	background-color: transparent;
+ }
+
+button {
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: 1rem;
+ }
+
+select, option {
+    line-height:1rem;
+}
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+b,
+strong {
+  font-weight: var(--rcn-semantic-typography-text-editorial-default-reset-fontweight); 
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+
+.sr-only
+{   position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); 
+    border: 0;
+}
 
 .header{
 	width: 100%;
@@ -256,4 +369,72 @@
     transform: scale(1);
     opacity: 1;
   }
+}
+
+
+
+
+
+
+.rcn-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.rcn-header__productBanner {
+  order: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--rcn-semantic-gap-horizontal-600);
+  padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900) ;
+  background-color: var(--rcn-semantic-color-static-background-standard);
+  align-items: center;
+}
+
+.rcn-header__logo {
+  order: 0;
+}
+
+.rcn-header__connexionModule {
+  order: 2;
+  justify-content: flex-end;
+}
+
+.rcn-header__menu--portailDeServices {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+  order: 1;
+}
+
+.rcn-header__mainNavBanner {
+  order: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--rcn-semantic-gap-horizontal-600);
+ padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900);
+  background-color: var(--rcn-semantic-color-static-background-primary);
+  align-items: center;
+}
+
+.rcn-header__menu {
+  order: 0;
+  flex-grow: 1;
+}
+
+.rcn-header__toolsButtonsZone {
+  order: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--rcn-semantic-gap-horizontal-400);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h3-fontsize);
+}
+
+.rcn-header__searchbar {
+  order: 2;
 }
