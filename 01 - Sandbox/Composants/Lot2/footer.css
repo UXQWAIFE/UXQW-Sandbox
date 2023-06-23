@@ -130,6 +130,45 @@ table {
 	padding-right:var(--rcn-semantic-padding-horizontal-900); /*ajouter au excel*/
 }
 
+.rcn-footer__mainBanners {
+	padding-left:var(--rcn-semantic-padding-horizontal-900);/*ajouter au excel*/
+	padding-right:var(--rcn-semantic-padding-horizontal-900);/*ajouter au excel*/
+}
+
+.rcn-footer__versionLanguageZone {
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+gap:var(--rcn-semantic-gap-vertical-200);
+} /*ajouter toute la class au excel*/
+
+.rcn-footer__link {
+	text-decoration:none; /*ajouter toute la class au excel*/
+}
+
+.rcn-footer__link:hover {
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+  text-decoration: underline;
+  font-weight: bold;
+} /* ajouter la class dans l'excel*/
+
+
+.rcn-footer__institutionalEcosystemLinks {
+  text-decoration: none; /*supprimer la property dans excel*/
+  font-weight: bold; 
+  order: 2;
+  display: flex;
+  flex-direction: row;
+  gap: var(--rcn-semantic-gap-horizontal-200);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/*.rcn-footer__institutionalEcosystemLinks:hover {
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+  text-decoration: underline;
+  font-weight: bold;
+} ==> supprimer la class dans excel*/
 
 
 
