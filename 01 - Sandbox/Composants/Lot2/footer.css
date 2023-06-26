@@ -123,38 +123,21 @@ table {
 
 
 .rcn-footer__socialMediasTextZone {
-	padding-left:var(--rcn-semantic-padding-horizontal-900); /*ajouter au excel*/
+	padding-left:var(--rcn-semantic-padding-horizontal-900); /*ajouter au excel ==> OK*/
 }
 
 .rcn-footer__socialMediasIconsZone {
-	padding-right:var(--rcn-semantic-padding-horizontal-900); /*ajouter au excel*/
+	padding-right:var(--rcn-semantic-padding-horizontal-900); /*ajouter au excel ==> OK */
 }
 
 .rcn-footer__mainBanners {
-	padding-left:var(--rcn-semantic-padding-horizontal-900);/*ajouter au excel*/
-	padding-right:var(--rcn-semantic-padding-horizontal-900);/*ajouter au excel*/
+	padding-left:var(--rcn-semantic-padding-horizontal-900);/*ajouter au excel ==> OK */
+	padding-right:var(--rcn-semantic-padding-horizontal-900);/*ajouter au excel ==> OK */
 }
-
-.rcn-footer__versionLanguageZone {
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-gap:var(--rcn-semantic-gap-vertical-200);
-} /*ajouter toute la class au excel*/
-
-.rcn-footer__link {
-	text-decoration:none; /*ajouter toute la class au excel*/
-}
-
-.rcn-footer__link:hover {
-  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
-  text-decoration: underline;
-  font-weight: bold;
-} /* ajouter la class dans l'excel*/
 
 
 .rcn-footer__institutionalEcosystemLinks {
-  text-decoration: none; /*supprimer la property dans excel*/
+  /*text-decoration: none; /*supprimer la property dans excel*/
   font-weight: bold; 
   order: 2;
   display: flex;
@@ -164,196 +147,24 @@ gap:var(--rcn-semantic-gap-vertical-200);
   flex-wrap: wrap;
 }
 
+.rcn-footer__institutionalEcosystemLink {
+text-decoration: none;
+font-weight:bold;
+color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium); /* créer class dans l'excel ==> OK */
+}
+
+.rcn-footer__institutionalEcosystemLink:hover {
+text-decoration: underline;
+font-weight:bold;
+color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+} /* créer class dans l'excel ==> OK */
+}
+
 /*.rcn-footer__institutionalEcosystemLinks:hover {
   color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
   text-decoration: underline;
   font-weight: bold;
-} ==> supprimer la class dans excel*/
+} ==> supprimer la class dans excel
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.containerGlobal {
-padding-right:80px;
-padding-left:80px;
-}
-
-
-.footer {
-display:flex;
-flex-direction:column;
-align-items:stretch;
-background-color:white;
-}
-
-
-
-.footer__socialMediaBanner {
-order:0;
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-align-items:center;
-padding-top:16px;
-padding-bottom:16px;
-background-color:pink;
-color:black;
-flex-wrap: wrap;
-gap:32px;
-}
-
-.footer__socialMediaTextZone {
-display:flex;
-flex-direction:column;
-order:0;
-}
-
-.footer__socialMediaText {
-font-weight:bold;
-}
-
-.footer__socialMediaIconZone {
-order:1;
-gap:32px;
-flex-direction:row;
-display:flex;
-flex-wrap: wrap;
-}
-
-
-
-.footer__mainBanners{
-border-top:2px solid blue;
-border-bottom:1px solid grey;
-display: flex;
-flex-direction: column;
-align-items: stretch;
-}
-
-
-.footer__productBanner {
-order:0;
-display:grid;
-grid-template-columns:1fr 1fr;
-padding-top:16px;
-padding-bottom:16px;
-gap:1rem;
-background-color: cornsilk;
-} 
-
-
-.footer__productBannerleftZone {
-display:flex;
-flex-direction:column;
-gap:16px;
-align-items: flex-start;
-}
-
-.footer__versionLanguageZone {
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-gap:8px;
-}
-
-.image {
-background-color:yellow;
-}
-
-
-.footer__rightZone {
-display:flex;
-flex-direction:column;
-gap:16px;
-grid-column-start:2;
-}
-
-.footer__descriptionZone {
-order:1;
-}
-.footer__governmentLinksZone {
-display:flex;
-flex-direction:row;
-justify-content: flex-start;
-flex-wrap: wrap;
-gap:8px;
-order:2;
-color:blue;
-}
-
-.footer__siteInfoBanner {
-order : 2;
-display:flex;
-flex-direction:column;
-justify-content:flex-start;
-border-top:1px solid grey;
-padding-top:16px;
-padding-bottom:16px;
-gap:12px;
-}
-
-.footer__siteInfoBannerLinkZone {
-display:flex;
-flex-direction:row;
-justify-content:flex-start;
-gap:12px;
-}
-
-.footer__siteInfoLink {
-padding-right:12px;
-border-right:1px solid grey;
-}
-
-
-.footer__partnersBanner {
-order:1;
-display:flex;
-flex-direction:column;
-padding-top:16px;
-padding-bottom:16px;
-border-top:1px solid grey;
-gap:16px;
-}
-
-.footer__partnersBannerImagesZone {
-display:flex;
-flex-direction:row;
-justify-content:space-between;
-gap:3rem;
-}
-
-
-.footer__secondaryPartnersZone {
-display:flex;
-flex-direction:row;
-align-items: flex-end;
-flex-wrap:wrap;
-gap:2rem;
-}
-
-.partnerImage {
-width:100%;
-height:auto;
-max-height:90px;
-max-width:160px;
-}
