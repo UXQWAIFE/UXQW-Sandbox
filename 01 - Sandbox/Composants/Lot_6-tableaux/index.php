@@ -8,7 +8,7 @@
 	* {
 		box-sizing: border-box;
 	}
-    section:first-child {
+    section:first-child:not(main section) {
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -32,8 +32,12 @@
 		gap:1.5rem;
 		width:100%;
 		padding:0;
-		padding: 2rem 2rem 1rem 2rem;
+		padding: 1rem 2rem;
 		border-top: 1px solid grey;
+		list-style: none;
+	}
+	.list-file {
+		overflow-x: scroll;
 	}
 	.list-folder li {
 		display: flex;
@@ -157,5 +161,24 @@
 		?>
 
 	</section>
+	<main>
+		<section id="include">
+
+		</section>
+	</main>
+	<footer>
+		<script>
+			fetch('Tableau_de_donnee-General.html')
+			.then(response => response.text())
+			.then(html => {
+				// Insérer le contenu HTML dans un élément de la page
+				const container = document.getElementById('include');
+				container.innerHTML = html;
+			})
+			.catch(error => {
+				console.error('Erreur lors du chargement du fichier HTML', error);
+			});
+		</script>
+	</footer>
 </body>
 </html>
