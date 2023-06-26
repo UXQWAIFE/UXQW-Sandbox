@@ -17,128 +17,14 @@
     align-items:stretch;
 }
 
-.tabLabels{
-display:flex;
-flex-direction:row;
-align-items:flex-end;
-gap:8px;
-padding-left:16px;
-border-bottom:1px solid grey;
-background-color: none;
-}
 
 
-.contentZone{
-padding:16px;
-border:1px solid grey;
-border-right:1px solid grey;
-border-left:1px solid grey;
-border-bottom:1px solid grey;
-border-top:none;
+.rcn-tabs__label:[aria-selected='true']:hover{
+
+border-top-color: var(--rcn-semantic-color-interaction-border-hover-selected);
+border-bottom-color:white;
+color:var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
+
 
 }
 
-/* Styles pour les boutons d'onglets */
-.tab button {
-    background-color: white;
-    border: 1px solid grey;
-    padding: 8px 12px;
-    font-size: 17px;
-    margin-bottom:-1px;
-    display: flex;
-    flex-direction: row;
-    gap : 8px;
-    align-items:center;
-}
-
-.tab button[aria-selected='true']{
-    padding-top:6px;
-    border-top: 3px solid #5770BE;
-    border-bottom:1px solid white;
-    color:#5770BE;
-    font-weight: bold;
-}
-
-
-.tab button[aria-selected='true']:hover {
-    border-bottom-color:white;
-    border-top-color : rgb(255, 0, 187);
-    color:rgb(255, 0, 187);
-}
-
-.tab button:hover{
-    background-color: peachpuff;
-}
-
-.tab button[disabled]{
-    color : darkgrey;
-    background-color: grey;
-    border-color : grey;
-}
-
-.contentZone [hidden]{
-    height:0px;
-}
-
-.icon{
-     /*font-family:;*/
-}
-
-.buttonn__iconn::before{
-    content:'hey';
-}
-
-.buttonn:hover .buttonn__iconn::before{
-    content:'yo';
-}
-
-
-.buttonn::after{
-    /*font-family:;*/
-    content:'hey';
-}
-
-.buttonn:hover::after{
-    /*font-family:;*/
-    content:'yo';
-}
-
-
-.buttonn{
-    color:red;
-}
-
-.buttonn:hover{
-    color:green;
-}
-
-.notif{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    gap : 20px;
-    background-color: blue;
-    margin-top:50px;
-    padding :10px;
-}
-.notif::before{
-    font-family: 'RCNicon';
-    content: "\e938";
-    color : red;
-    font-size: 1,3rem;
-}
-
-.notiftext{
-    flex-grow: 1;
-}
-
-.notificon{
-    align-self:flex-start;
-}
-.notificon::before{
-    font-family: 'RCNicon';
-    content: "\e939";
-    color : red;
-    font-size: 1,3rem;
-}
