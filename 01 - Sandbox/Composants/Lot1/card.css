@@ -147,12 +147,42 @@ background-color:var(--rcn-semantic-color-static-background-standard);
     background-color: orange;
 }
 
+.rcn-card--vertical .rcn-card__imgHolder {
+    padding-bottom: calc( 0.66 * 100% );
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    display:flex;
+    overflow:hidden;
+}
 .rcn-card--vertical .rcn-card__image{
+    height: auto;
+    position: absolute;
+    top: calc(50% + 1px);
+    left: calc(50% + 1px);
+    transform: scale(1.01) translate(-50%,-50%);
     min-height: 25%;
 
 }
+.rcn-card--horizontal .rcn-card__imgHolder {
+    padding-right: calc( 0.33 * 100% );
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+    display:flex;
+    overflow:hidden;
+}
 
 .rcn-card--horizontal .rcn-card__image{
+    height: auto;
+    position: absolute;
+    top: calc(50% + 1px);
+    left: calc(50% + 1px);
+    transform: scale(1.01) translate(-50%,-50%);
     min-width: 25%;
 }
 
