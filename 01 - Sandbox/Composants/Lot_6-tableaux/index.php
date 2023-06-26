@@ -162,22 +162,60 @@
 
 	</section>
 	<main>
+		<div>
+			<h1>Tableau de donnée</h1>
+			<button class="ChooseWhatToAdd" attr-path="include/tableGeneral.html" id="addTable">Ajout du tableau</button>
+		</div>
+		<div>
+			<h3>Structure</h3>
+			<button class="ChooseWhatToAdd" attr-path="include/title_tableau.html" id="addTable">+ Titre</button>
+			<button class="ChooseWhatToAdd">add</button>
+			<button class="ChooseWhatToAdd">add</button>
+			<button class="ChooseWhatToAdd">add</button>
+		</div>
+
 		<section id="include">
 
 		</section>
 	</main>
 	<footer>
 		<script>
-			fetch('Tableau_de_donnee-General.html')
-			.then(response => response.text())
-			.then(html => {
-				// Insérer le contenu HTML dans un élément de la page
-				const container = document.getElementById('include');
-				container.innerHTML = html;
-			})
-			.catch(error => {
-				console.error('Erreur lors du chargement du fichier HTML', error);
+			const boutons = document.querySelectorAll('.ChooseWhatToAdd');
+			let currentPath = null; // Variable pour stocker le chemin actuellement affiché
+
+			boutons.forEach(bouton => {
+				bouton.addEventListener('click', toggleContent);
 			});
+
+			function toggleContent(event) {
+				const container = document.getElementById('include');
+				const path = event.target.getAttribute('attr-path');
+
+				// Vérifier si le bouton actuel est déjà sélectionné
+				if (path === currentPath) {
+					// Le bouton est déjà sélectionné, nous le désélectionnons
+					container.prependChild( '' ); // Supprimer le contenu du conteneur
+					currentPath = null; // Réinitialiser le chemin actuel
+				} else {
+					// Le bouton n'est pas sélectionné, nous chargeons le contenu correspondant
+					fetch(path)
+					.then(response => response.text())
+					.then(html => {
+						console.log(html);
+						const newElement = document.createElement('div');
+						newElement.innerHTML = html;
+						console.log(newElement);
+						container.prependChild( newElement ); // Ajouter le contenu au conteneur
+						currentPath = path; // Mettre à jour le chemin actuel
+					})
+					.catch(error => {
+						console.error('Erreur lors du chargement du fichier HTML', error);
+					});
+				}
+			}
+			
+
+
 		</script>
 	</footer>
 </body>
