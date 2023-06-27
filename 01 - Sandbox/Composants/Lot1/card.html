@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="../../RCN-DesignSystem/assets/styles-ChorusPro.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="card.css">
+    <link rel="stylesheet" href="../../Asset/Resets.css">
+    <link href="../../RCN-DesignSystem/assets/styles-ChorusPro.css" rel="stylesheet">   
+    <link rel="stylesheet" type="text/css" href="card.css">
   <style>
     .rcn-card {
         margin: 2rem 0;
@@ -31,7 +32,7 @@
 
             </div>
 
-            <h4 class="rcn-h4"> Titre de la card </h4>
+            <h4 class="rcn-h4 rcn-card__title"> Titre de la card </h4>
             <label class="rcn-card__subTitle"> X juillet 20XX </label>
             <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
             </div>
@@ -63,7 +64,7 @@
 
             </div>
 
-            <h4 class="rcn-h4"> Titre de la card </h4>
+            <h4 class="rcn-h4 rcn-card__title"> Titre de la card </h4>
             <label class="rcn-card__subTitle"> X juillet 20XX </label>
             <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
             </div>
@@ -80,7 +81,7 @@
 
     <div class="rcn-card rcn-card--horizontal ">
         <div class="rcn-card__imgHolder">
-            <img class="rcn-card__image" src="https://placehold.jp/800x800.png" alt="">
+            <img class="rcn-card__image" src="https://placehold.jp/1400x900.png" alt="">
         </div>
         <div class="rcn-card__contentZone">
 
@@ -97,7 +98,7 @@
 
             </div>
 
-            <div class="rcn-h4"> Titre de la card </div>
+            <div class="rcn-h4 rcn-card__title"> Titre de la card </div>
             <div> X juillet 20XX </div>
             <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
             </div>
@@ -133,7 +134,7 @@
     
                 </div>
     
-                <div class="rcn-h4"> Titre de la card </div>
+                <div class="rcn-h4 rcn-card__title"> Titre de la card </div>
                 <div> X juillet 20XX </div>
                 <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
                 </div>
@@ -150,8 +151,8 @@
 
     <div class="rcn-card rcn-card--horizontal rcn-card--interactive">
 
-        <div class="rcn-card__image">je suis l'image 
-
+        <div class="rcn-card__imgHolder">
+            <img class="rcn-card__image" src="https://placehold.jp/1400x900.png" alt="">
         </div>
 
         <div class="rcn-card__contentZone">
@@ -169,7 +170,7 @@
 
             </div>
 
-            <div class="rcn-h4"> Titre de la card </div>
+            <div class="rcn-h4 rcn-link rcn-card__title"> Titre de la card </div>
             <div> X juillet 20XX </div>
             <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
             </div>
@@ -186,8 +187,8 @@
         
     <div class="rcn-card rcn-card--vertical rcn-card--interactive">
 
-        <div class="rcn-card__image">je suis l'image 
-
+        <div class="rcn-card__imgHolder">
+            <img class="rcn-card__image" src="https://placehold.jp/1400x900.png" alt="">
         </div>
 
         <div class="rcn-card__contentZone">
@@ -205,7 +206,7 @@
 
             </div>
 
-            <div class="rcn-h4"> Titre de la card </div>
+            <div class="rcn-h4 rcn-link rcn-card__title "> Titre de la card </div>
             <div> X juillet 20XX </div>
             <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
             </div>
@@ -222,8 +223,8 @@
 
     <div class="rcn-card rcn-card--horizontal rcn-card--interactive rcn-card--selected">
 
-        <div class="rcn-card__image">je suis l'image 
-
+        <div class="rcn-card__imgHolder">
+            <img class="rcn-card__image" src="https://placehold.jp/237x248.png" alt="">
         </div>
 
         <div class="rcn-card__contentZone">
@@ -247,7 +248,7 @@
 
             </div>
 
-            <div class="rcn-h4"> Titre de la card </div>
+            <div class="rcn-h4 rcn-link rcn-card__title"> Titre de la card </div>
             <div> X juillet 20XX </div>
             <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
             </div>
@@ -260,7 +261,139 @@
 
     </div>
 
-    <!-- Card non-cliquable à sélection unique  -->
+    <!-- Card verticale intéractive a sélection multiple -->
+        
+    <div class="rcn-card rcn-card--vertical rcn-card--interactive rcn-card--selected">
+
+        <div class="rcn-card__imgHolder">
+            <img class="rcn-card__image" src="https://placehold.jp/1400x900.png" alt="">
+
+            
+            <div class="rcn-card__input"> 
+           
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+
+                </label>
+            </div>
+
+        </div>
+
+        <div class="rcn-card__contentZone">
+
+            <div class="rcn-card__chipsZone">
+
+                <div class="rcn-chips rcn-chips--interactive">
+                    <div class="rcn-chips__textZone">Chips 1</div>
+                    <button class="rcn-icon rcn-iconButton rcn-chips__icon"></button>
+                </div>
+                <div class="rcn-chips rcn-chips--interactive">
+                    <div class="rcn-chips__textZone">Chips 1</div>
+                    <button class="rcn-icon rcn-iconButton rcn-chips__icon"></button>
+                </div>
+
+            </div>
+
+            <div class="rcn-link rcn-h4 rcn-card__title"> Titre de la card </div>
+            <div> X juillet 20XX </div>
+            <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
+            </div>
+
+            <div class="rcn-card__actionsZone"> 
+                <a href="rien" class="rcn-card__link rcn-link"> Lien card</a>
+            </div>            
+
+        </div>       
+
+    </div>
+
+    <!-- Card non-cliquable à sélection unique -->
+
+    <div class="rcn-card rcn-card--horizontal rcn-card--selected">
+
+        <div class="rcn-card__imgHolder">
+            <img class="rcn-card__image" src="https://placehold.jp/1400x900.png" alt="">
+        </div>
+
+        <div class="rcn-card__contentZone">
+
+            <div class="rcn-card__input"> 
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                <input name="choix" type="checkbox" id="checkbox" class=" rcn-icon rcn-inputField__input  rcn-inputField__input--checkbox">
+	            </label>
+            </div> 
+
+            <div class="rcn-card__chipsZone">
+
+                <div class="rcn-chips rcn-chips--interactive">
+                    <div class="rcn-chips__textZone">Chips 1</div>
+                    <button class="rcn-icon rcn-iconButton rcn-chips__icon"></button>
+                </div>
+                <div class="rcn-chips rcn-chips--interactive">
+                    <div class="rcn-chips__textZone">Chips 1</div>
+                    <button class="rcn-icon rcn-iconButton rcn-chips__icon"></button>
+                </div>
+
+            </div>
+
+            <div class="rcn-h4 rcn-card__title"> Titre de la card </div>
+            <div> X juillet 20XX </div>
+            <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
+            </div>
+
+            <div class="rcn-card__actionsZone"> 
+                <a href="rien" class="rcn-card__link rcn-link"> Lien card</a>
+            </div>            
+
+        </div>       
+
+    </div>
+
+        <!-- Card verticale non-cliquable a sélection multiple -->
+        
+        <div class="rcn-card rcn-card--vertical rcn-card--selected">
+
+            <div class="rcn-card__imgHolder">
+                <img class="rcn-card__image" src="https://placehold.jp/1400x900.png" alt="">
+    
+                
+                <div class="rcn-card__input"> 
+               
+                    <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                        <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+    
+                    </label>
+                </div>
+    
+            </div>
+    
+            <div class="rcn-card__contentZone">
+    
+                <div class="rcn-card__chipsZone">
+    
+                    <div class="rcn-chips rcn-chips--interactive">
+                        <div class="rcn-chips__textZone">Chips 1</div>
+                        <button class="rcn-icon rcn-iconButton rcn-chips__icon"></button>
+                    </div>
+                    <div class="rcn-chips rcn-chips--interactive">
+                        <div class="rcn-chips__textZone">Chips 1</div>
+                        <button class="rcn-icon rcn-iconButton rcn-chips__icon"></button>
+                    </div>
+    
+                </div>
+    
+                <div class="rcn-h4 rcn-card__title"> Titre de la card </div>
+                <div> X juillet 20XX </div>
+                <div> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
+                </div>
+    
+                <div class="rcn-card__actionsZone"> 
+                    <a href="rien" class="rcn-card__link rcn-link"> Lien card</a>
+                </div>            
+    
+            </div>       
+    
+        </div>
 
 
 </body>

@@ -91,7 +91,7 @@ ol{
 }
 
 
-.rcn-stepper--horizontal::before{
+.rcn-stepper--horizontal ol::before{
     content: "";
     width: calc(100% - (15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)));
     left: calc(calc(15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)) / 2);
@@ -132,7 +132,7 @@ ol{
     gap:var(--rcn-semantic-gap-vertical-300);
     box-sizing: border-box;
     flex-grow: 1;
-    max-width:calc(15 * (var(--rcn-semantic-height-stepper_stepcircle) / 2));
+    width:calc(15 * (var(--rcn-semantic-height-stepper_stepcircle) / 2));
 
 }
 
@@ -277,7 +277,50 @@ color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
 color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 }
 
+/* Zone de test */
 
+
+.rcn-stepper--horizontal .rcn-stepper__step::before{
+  content: "";
+  width: 100%;
+  left: calc(calc(15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)) / 2);
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  top:19px;
+  z-index: -1;
+  display: flex;
+  align-self: center;
+
+}
+
+.rcn-stepper--horizontal .rcn-stepper__step:first-of-type::before{
+  content: "";
+  width: 100%;
+  left: calc(100% / 2);
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  top:19px;
+  z-index: -1;
+  display: flex;
+  align-self: center;
+
+}
+
+.rcn-stepper--horizontal .rcn-stepper__step:last-of-type::before{
+  content: "";
+  width: 100%;
+  left: calc(100% / 2);
+  height: 1px;
+  background-color: gray;
+  position: absolute;
+  top:19px;
+  z-index: -1;
+  display: flex;
+  align-self: center;
+
+}
 
 
 
