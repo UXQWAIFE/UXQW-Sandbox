@@ -120,6 +120,10 @@ table {
     border: 0;
 }
 
+
+
+
+
 .rcn-header__productBanner {
   order: 0;
   display: flex;
@@ -156,3 +160,8 @@ table {
 .rcn-header__toolsButtonsZone {
 	text-decoration-color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
+
+.rcn-header__iconButton {
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary); 
+} /*ajouter au excel ? ==> OK*/
+
