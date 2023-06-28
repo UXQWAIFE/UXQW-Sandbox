@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../RCN-DesignSystem/assets/styles-ChorusPro.css">
 	<link href="../../RCN-DesignSystem/assets/styles-ChorusPro.css" rel="stylesheet">
-	<link href="../../Asset/Resets.css" rel="stylesheet">
-    <link href="stepper.css" rel="stylesheet">
+    <link href="stepper-test.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
     <title>Document</title>
 </head>
@@ -25,42 +24,42 @@
 
 				<li class="rcn-stepper__step">
 					<div class="rcn-stepper__number rcn-stepper__number--completed">1</div>
-					
+					<div>
 					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Etape complétée </a>
-					
+					</div>
 				</li>
 
 				<li class="rcn-stepper__step">
 					<div class="rcn-stepper__number rcn-stepper__number--current">2</div>
-					
+					<div>
 					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Etape en cours </a>
-					
+					</div>
 				</li>
 
 				<ol class="rcn-stepper__substepZone">
 
-					<li class="rcn-stepper__substep">
+					<li class="rcn-stepper__step">
 						<div class=" rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--completed"></div>
-						
+						<div>
 						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Sous étape complétée </a>
-						
+						</div>
 					</li>
 
-					<li class="rcn-stepper__substep">
+					<li class="rcn-stepper__step">
 						<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--subStepCurrent"></div>
-						
+						<div>
 						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Sous étape en cours </a>
-						
+						</div>
 					</li>
 
-					<li class="rcn-stepper__substep">
+					<li class="rcn-stepper__step">
 						<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--uncompleted"></div>
-						
+						<div>
 						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Sous-étape non complétée </a>
-						
+						</div>
 					</li>
 
-					<li class="rcn-stepper__substep">
+					<li class="rcn-stepper__step">
 						<div disabled class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--disabled"></div>
 						<a disabled class="rcn-link rcn-stepper__sectionTitle" href="section1"> Sous-étape désactivée </a>
 					</li>
@@ -89,7 +88,7 @@
 
 		<nav class="rcn-stepper">
 
-				<ol class="rcn-stepper__list rcn-stepper__list--vertical">
+				<ol class="rcn-stepper__list">
 		
 					<li class="rcn-stepper__step">
 						<div class="rcn-stepper__number rcn-stepper__number--completed">1</div>
@@ -106,21 +105,21 @@
 		
 					<ol class="rcn-stepper__substepZone">
 		
-						<li class="rcn-stepper__substep">
+						<li class="rcn-stepper__step">
 							<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--completed"></div>
 							
 							<p class="rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Sous-étape complétée non navigable </p>
 							
 						</li>
 		
-						<li class="rcn-stepper__substep">
+						<li class="rcn-stepper__step">
 							<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--subStepCurrent"></div>
 							
 							<p class="rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Sous-étape en cours non navigable </p>
 							
 						</li>
 		
-						<li class="rcn-stepper__substep">
+						<li class="rcn-stepper__step">
 							<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--uncompleted"></div>
 							
 							<p class="rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Sous-étape non complétée non navigable </p>
@@ -151,9 +150,9 @@
 	 <!--Stepper Horizontal navigable -->
 
 
-	<nav class="rcn-stepper  rcn-stepper--navigable">
+	<nav class="rcn-stepper rcn-stepper--horizontal  rcn-stepper--navigable">
 
-		<ol class="rcn-stepper__list rcn-stepper__list--horizontal">
+		<ol class="rcn-stepper__list">
 
 			<li class="rcn-stepper__step">
 				<div class="rcn-stepper__number rcn-stepper__number--uncompleted">1</div>
