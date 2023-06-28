@@ -95,3 +95,14 @@ table {
   clip: rect(0, 0, 0, 0); 
   border: 0;
 }
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url("../../Asset/Font_icon/RCNicon.ttf");
+
+}
+
+@font-face {
+    font-family: "Marianne";
+    src: url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
+}
