@@ -1,4 +1,16 @@
 /* Reset global */
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url("../../Asset/Font_icon/RCNicon.ttf");
+
+}
+
+@font-face {
+    font-family: "Marianne";
+    src: url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
+}
+
 body, p, button, input, option, select, input[type="checkbox" i], 
 input[type="radio" i], body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -96,13 +108,3 @@ table {
   border: 0;
 }
 
-@font-face {
-    font-family: 'RCNicon';
-    src: url("../../Asset/Font_icon/RCNicon.ttf");
-
-}
-
-@font-face {
-    font-family: "Marianne";
-    src: url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
-}
