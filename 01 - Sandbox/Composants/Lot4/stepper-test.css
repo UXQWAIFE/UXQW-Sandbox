@@ -1,3 +1,9 @@
+@import url('../../Asset/Cores et semantiques/styles-ChorusPro.css');
+@import url('/ComponentTokensButtonPrimary.min.css');
+@import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Composants/Lot1/bouton.css'); 
+@import url('C:/Users/clara.lecume/Documents/GitHub/UXQW-Sandbox/Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+
+
 
 @font-face {
     font-family: 'rcnicon';
@@ -9,6 +15,31 @@
     src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
 }
 
+/* A mettre au sein du fichier de reset*/
+
+p {
+  margin:0;
+}
+
+body, legend {
+    font-family:'Marianne',Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}
+
+
+i {
+    font-style:normal;
+}
+li {
+    list-style-type: none;
+    text-align: unset;
+}
+ul {
+    padding:0px;
+}
+ol{
+    list-style: none;
+}
 /* Juste pour la visualisation du composant:*/
 
 .espacement_exemple{
@@ -25,59 +56,21 @@
   position:relative;
 }
 
-  .rcn-stepper__list{
-    display:flex;
-  }
-
-.rcn-stepper__list--vertical{ 
-  flex-direction: column;
-  align-items: flex-start;
-
-}
-
-.rcn-stepper__list--horizontal{
-    flex-direction:row; 
-    justify-content: space-between;
-
-}
-
-  .rcn-stepper__substepZone{
+.rcn-stepper__list {
+    padding-left: 0px;
     display: flex;
-    flex-direction:column;
-    justify-content: space-between;
-  
-  }
-
-  .rcn-stepper__step{   
-    position: relative;
-    box-sizing: border-box;
-  }
-
-  
-.rcn-stepper__list--vertical .rcn-stepper__step{
-
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    gap:var(--rcn-semantic-gap-horizontal-400);
-    padding-bottom: var(--rcn-semantic-gap-vertical-500);
-    box-sizing: border-box;
+    flex-direction: column;
+    gap:var(--rcn-semantic-gap-vertical-500);
+    /* position: relative; */
+    margin: 0px;
+    align-items: flex-start;
 }
 
-.rcn-stepper__substep{
-  position: relative;
-  display:flex;
-  flex-direction:row;
-  align-items:center;
-  gap:var(--rcn-semantic-gap-horizontal-400);
-  padding-bottom: var(--rcn-semantic-gap-vertical-500);
-  box-sizing: border-box;
-}
 
-.rcn-stepper__substep::before{
 
+.rcn-stepper::before{
   content: "";
-  width: var(--rcn-semantic-borderwidth-100);
+  width: 1px;
   height: 100%;
   background-color: var(--rcn-semantic-color-static-border-divider_strong);
   position: absolute;
@@ -86,8 +79,60 @@
 
 }
 
+.rcn-stepper--horizontal .rcn-stepper__list{
+    display: flex;
+    flex-direction:row;
+    /* gap:var(--rcn-semantic-gap-horizontal-500); */
+    gap:0px;
+    /* position: relative; */
+    justify-content: space-between;
+    padding-left: 0px;
+    margin: 0px;
+    padding-inline-start: 0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
 
-.rcn-stepper__list--horizontal .rcn-stepper__step{
+}
+
+/* -----TEST----- */
+
+/* .rcn-stepper--horizontal ol::before{
+    content: "";
+    width: calc(100% - (15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)));
+    left: calc(calc(15 * calc(var(--rcn-semantic-height-stepper_stepcircle) / 2)) / 2);
+    height: 1px;
+    background-color: gray;
+    position: absolute;
+    top:19px;
+    z-index: -1;
+    display: flex;
+    align-self: center;
+} */
+
+  .rcn-stepper__substepZone{
+    display: flex;
+    flex-direction:column;
+    padding-left: 0px;
+    margin: 0px;
+    gap:var(--rcn-semantic-gap-horizontal-500);
+    /* position: relative; */
+    justify-content: space-between;
+  
+  }
+
+.rcn-stepper__step{
+
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:var(--rcn-semantic-gap-horizontal-400);
+    box-sizing: border-box;
+    /* test avec les before */
+    position: relative;
+
+}
+
+.rcn-stepper--horizontal .rcn-stepper__step{
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -97,12 +142,13 @@
     padding-right:var(--rcn-semantic-gap-horizontal-500);
     width:calc(15 * (var(--rcn-semantic-height-stepper_stepcircle) / 2));
 
-
 }
 
-.rcn-stepper__list--horizontal .rcn-stepper__step:last-of-type{
+.rcn-stepper--horizontal .rcn-stepper__step:last-of-type{
   padding-right:0px;
 }
+
+
 
 .rcn-stepper__number {
   width: var(--rcn-semantic-height-stepper_stepcircle);
@@ -111,7 +157,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: var(--rcn-semantic-borderwidth-100) solid;
+  /* position:relative; */
+  border: 1px solid
 }
 
 .rcn-stepper__number--substep{
@@ -193,24 +240,25 @@ color:var(--rcn-semantic-color-static-text_and_icon-onprimary);
 
 .rcn-stepper__sectionTitle {
 color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-display: flex;
+display: block;
 text-align:left;
-max-width: calc(100% - var(--rcn-semantic-height-stepper_stepcircle) - var(--rcn-semantic-gap-horizontal-400));
-flex-grow:1;
+max-width: calc(100% - var(--rcn-semantic-height-stepper_stepcircle) - var(--rcn-semantic-gap-horizontal-400))
 }
   
 .rcn-stepper__sectionTitle[disabled]{
 color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
+/*Vérifier si on fait porter cette propriété par le lien :*/
 text-decoration: none;
   
 }
 
-.rcn-stepper__list--horizontal .rcn-stepper__sectionTitle {
+.rcn-stepper--horizontal .rcn-stepper__sectionTitle {
 text-align: center;
 }
 
-.rcn-stepper__list--horizontal .rcn-stepper__sectionTitle[disabled]{
+.rcn-stepper--horizontal .rcn-stepper__sectionTitle[disabled]{
 color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
+/*Vérifier si on fait porter cette propriété par le lien :*/
 text-decoration: none; 
 
 }
@@ -244,11 +292,14 @@ color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
 color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 }
 
-.rcn-stepper__list--horizontal .rcn-stepper__step::before{
+/* Zone de test */
+
+
+.rcn-stepper--horizontal .rcn-stepper__step::before{
   content: "";
   width: 100%; 
-  height: var(--rcn-semantic-borderwidth-100);
-  background-color:var(--rcn-semantic-color-static-border-divider_strong);
+  height: 1px;
+  background-color: gray;
   position: absolute;
   top:19px;
   z-index: -1;
@@ -257,11 +308,11 @@ color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 
 }
 
-.rcn-stepper__list--horizontal .rcn-stepper__step:first-of-type::before{
+.rcn-stepper--horizontal .rcn-stepper__step:first-of-type::before{
   content: "";
   left: calc(100% / 2);
-  height: var(--rcn-semantic-borderwidth-100);
-  background-color: var(--rcn-semantic-color-static-border-divider_strong);
+  height: 1px;
+  background-color: gray;
   position: absolute;
   top:19px;
   z-index: -1;
@@ -270,50 +321,17 @@ color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 
 }
 
-.rcn-stepper__list--horizontal .rcn-stepper__step:last-of-type::before{
+.rcn-stepper--horizontal .rcn-stepper__step:last-of-type::before{
   content: "";
   right: calc(100% / 2);
-  height: var(--rcn-semantic-borderwidth-100);
-  background-color: var(--rcn-semantic-color-static-border-divider_strong);
+  height: 1px;
+  background-color: gray;
   position: absolute;
   top:19px;
   z-index: -1;
   display: flex;
   align-self: center;
 
-}
-
-.rcn-stepper__list--vertical .rcn-stepper__step::before{
-  content: "";
-  width: var(--rcn-semantic-borderwidth-100);
-  height: 100%;
-  background-color: var(--rcn-semantic-color-static-border-divider_strong);
-  position: absolute;
-  left: calc(calc(2rem / 2) + var(--rcn-semantic-borderwidth-100));
-  z-index: -1;
-}
-
-.rcn-stepper__list--vertical .rcn-stepper__step:first-of-type::before{
-  content: "";
-  width: var(--rcn-semantic-borderwidth-100);
-  height: 100%;
-  top: calc(100% / 2);
-  background-color: var(--rcn-semantic-color-static-border-divider_strong);
-  position: absolute;
-  left: calc(calc(2rem / 2) + var(--rcn-semantic-borderwidth-100));
-  z-index: -1;
-
-}
-
-.rcn-stepper__list--vertical .rcn-stepper__step:last-of-type::before{
-  content: "";
-  width: var(--rcn-semantic-borderwidth-100);
-  height: 100%;
-  bottom: calc(100% / 2);
-  background-color: var(--rcn-semantic-color-static-border-divider_strong);
-  position: absolute;
-  left: calc(calc(2rem / 2) + var(--rcn-semantic-borderwidth-100));
-  z-index: -1;
 }
 
 
