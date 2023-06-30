@@ -28,14 +28,11 @@
   align-items: center;
 }
 
-.rcn-iconButton {
-	background: none; /*intégré au excel*/
-}
 
-.rcn-header__toolsButtonsZone {
-	text-decoration-color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+/*.rcn-header__toolsButtonsZone {
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
-
-.rcn-header__iconButton {
+*/
+/*.rcn-header__iconButton {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary); 
 } /*ajouter au excel ? ==> OK*/

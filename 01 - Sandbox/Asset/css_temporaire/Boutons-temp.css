@@ -1,0 +1,27 @@
+
+
+
+
+
+  
+  .rcn-iconButton {
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary); /*ajouté au Excel ==> OK*/
+	background-color:transparent; /*ajouté au Excel ==> OK*/
+  }
+  
+  .rcn-iconButton:hover {
+	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-primary); /*ajouté au Excel ==> OK*/
+  }
+  
+  
+  .rcn-iconButton[disabled]  {
+	color: var(--rcn-semantic-color-interaction-text_and_icon-disabled); /*ajouté au Excel ==> OK*/
+  }
+  
+ 
+  .rcn-toggle__text {
+	padding-right: var(--rcn-semantic-padding-horizontal-150);
+	padding-left: var(--rcn-semantic-padding-horizontal-150);
+	order:1;
+  } /*ajouté au Excel ==> OK*/
+  
