@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
     font-family: 'RCNicon';
     src: url("../../Asset/Font_icon/RCNicon.ttf");
 
@@ -7,70 +7,6 @@
 @font-face {
     font-family: "Marianne";
     src: url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
-}
+}*/
 
   
-.rcn-link{
-  gap:0px
-}
-
-
-  .rcn-link--external::before{
-    content: "\e910";
-    text-decoration: none;
-
-
-  }
-  .rcn-links--external::after {
-    content: "\e910";
-    font-family: var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
-    text-decoration: none;
-  }
-
-
- .rcn-icon{
-    font-size: 1rem;
-    
- }
- .rcn-icon::before{
-    font-size: 0.875em;
- }
-
- .rcn-link--withIcon{
-  text-decoration: none;
- }
-
- .rcn-notification__typeIcon::before{
-  font-size: varr(--rcn-semantic-typography-icon-rcn_icon-h4-fontsize);
- }
-
- /* ----Zone de test idée TCO --- */
-
- .rcn-downloadLink--test{
-  display: flex;
-  flex-direction: row;
-  gap:var(--rcn-semantic-gap-horizontal-100);
-  width:fit-content;
-  color:var(--rcn-semantic-color-interaction-text_and_icon-default-link);
-
- }
-
- .rcn-downloadLink--test:visited{  
-  color:var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
- }
-
- .rcn-link--test{
-  text-decoration: underline;
-  color:var(--rcn-semantic-color-interaction-text_and_icon-default-link);
- }
-
- .rcn-link--test:visited{
-  
-  color:var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
- }
-
- /* Remarque : il faut surcoucher les couleurs sur les liens donc ici ça fera 2 classes à surcouché avec la couleur si on prend cette disposition */
-
- .rcn-downloadLink__icon--test::before{
-  content:var(--rcn-semantic-typography-icon-rcn_icon-download-content);
- }

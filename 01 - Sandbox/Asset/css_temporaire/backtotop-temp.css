@@ -1,0 +1,9 @@
+.rcn-backToTop {
+
+  /*border-width: var(--rcn-semantic-borderwidth-100);supprimé*/
+  /*border-color: var(--rcn-semantic-color-interaction-border-back_to_top); supprimé*/
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-back_to_top); /*à ajouter dans l'excel pour remplacer deux précédents*/
+  /*bottom: 1,5vw; --> supprimé dans excel --> OK*/
+  /*right: 1,5vw;-->supprimé dans excel --> OK*/
+}
+

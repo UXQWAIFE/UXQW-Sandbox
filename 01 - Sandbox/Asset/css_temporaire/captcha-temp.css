@@ -1,0 +1,28 @@
+
+/* A ajouter au excel */
+
+.rcn-captcha__title{
+  font-weight: var(--rcn-semantic-typography-text-component-default-label-fontweight);
+} /*ajouter à l'excel ==> OK */
+.rcn-captcha__image{
+  border: 3px solid purple; /*pour l'exemple*/
+
+}
+
+.rcn-captcha__inputZone{
+  width: auto;
+  justify-content: space-between;
+} /*ajouter à l'excel ==> OK*/
+
+.rcn-captcha{
+  max-width: 500px;
+} /*ajouter à l'excel ==> OK */
+
+.rcn-captcha__inputField{
+  flex-grow: 1;
+} /*ajouter à l'excel ==> OK */
+
+
+.rcn-captcha__button {
+	border-radius:0px;
+}

@@ -1,11 +1,8 @@
 
 
-
-
-
   
   .rcn-iconButton {
-	color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary); /*ajouté au Excel ==> OK*/
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard); /*ajouté au Excel ==> OK*/
 	background-color:transparent; /*ajouté au Excel ==> OK*/
   }
   
@@ -25,3 +22,4 @@
 	order:1;
   } /*ajouté au Excel ==> OK*/
   
+

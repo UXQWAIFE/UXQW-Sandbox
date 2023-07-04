@@ -1,18 +1,5 @@
 
-@font-face {
-    font-family: 'RCNicon';
-    src: url("../../Asset/Font_icon/RCNicon.ttf");
-
-}
-
-@font-face {
-    font-family: "Marianne";
-    src: url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
-}
-
-
-
-.rcn-chips {
+/*.rcn-chips {
   padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-300);
   border-radius: var(--rcn-semantic-borderradius-300);
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
@@ -51,7 +38,5 @@
 }
 
 .rcn-chips--link{
-
   text-decoration: none;
-
-}
+}*/

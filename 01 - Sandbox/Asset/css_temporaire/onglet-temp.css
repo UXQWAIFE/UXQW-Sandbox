@@ -1,0 +1,17 @@
+/* Styles pour les onglets */
+.rcn-tab {
+    /* à mettre dans le excel ==> OK */
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+}
+
+
+
+.rcn-tabs__label:[aria-selected='true']:hover{
+/*ajouté à l'excel ==> OK */
+border-top-color: var(--rcn-semantic-color-interaction-border-hover-selected);
+border-bottom-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
+color:var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
+
+}
