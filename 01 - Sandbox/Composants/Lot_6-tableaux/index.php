@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="asset/RCN-DesignSystem/assets/styles-ChorusPro.css">
+	<link rel="stylesheet" href="asset/data-form/data-form.css">
 	<style>
 	* {
 		box-sizing: border-box;
@@ -173,8 +175,13 @@
 	<main>
 		<form action="table_generative.php" method="POST">
 
-			<input type="number" name="nombreColonnes" placeholder="Nombre de colonnes">
-			<input type="number" name="nombreLignes" placeholder="Nombre de lignes">
+			<input type="number" id="nombreColonnes" name="nombreColonnes" placeholder="Nombre de colonnes">
+			<input type="number" id="nombreLignes" name="nombreLignes" placeholder="Nombre de lignes">
+			
+			<button type="button" onclick="genererListesDeroulantes()">Générer les listes déroulantes</button>
+
+			<div id="colonnesContainer"></div>
+
 			<fieldset>
 				<legend>En tête</legend>
 				
@@ -210,7 +217,9 @@
 				<input type="checkbox" name="Lig_select" id="Lig_select">
 			</Fieldset>
 
-			<button type="submit">Créer le tableau</button>
+
+
+			<button class="rcn-button rcn-button--primary" type="submit">Créer le tableau</button>
 		</form>
 		<?php
 			// Vérifier si le fichier du tableau existe
@@ -221,7 +230,48 @@
 		?>
 	</main>
 	<script>
+		function genererListesDeroulantes() {
+			var nombreColonnes = parseInt(document.getElementById("nombreColonnes").value);
+			var colonnesContainer = document.getElementById("colonnesContainer");
+				colonnesContainer.innerHTML = "";
 
+				for (var col = 1; col <= nombreColonnes; col++) {
+					var fieldset = document.createElement("fieldset");
+					var legend = document.createElement("legend");
+					legend.textContent = "Colonne " + col;
+					fieldset.appendChild(legend);
+
+					var label = document.createElement("label");
+					label.setAttribute("for", "typeDonnee" + col);
+					label.textContent = "Type de donnée : ";
+					fieldset.appendChild(label);
+
+					var select = document.createElement("select");
+					select.setAttribute("name", "typeDonnee" + col);
+					select.setAttribute("id", "typeDonnee" + col);
+
+					var options = [
+					{ value: "texte", text: "Texte" },
+					{ value: "nombre", text: "Nombre" },
+					{ value: "lien", text: "Lien" },
+					{ value: "telephone", text: "Numéro de téléphone" },
+					{ value: "icone", text: "Icône" },
+					{ value: "bouton_selection", text: "Bouton de sélection" },
+					{ value: "bouton_depliable", text: "Bouton dépliable" },
+					{ value: "bouton_action", text: "Bouton d'action" }
+					];
+
+					for (var i = 0; i < options.length; i++) {
+					var option = document.createElement("option");
+					option.value = options[i].value;
+					option.text = options[i].text;
+					select.appendChild(option);
+					}
+
+					fieldset.appendChild(select);
+					colonnesContainer.appendChild(fieldset);
+				}
+			}
 	</script>
 </body>
 </html>
