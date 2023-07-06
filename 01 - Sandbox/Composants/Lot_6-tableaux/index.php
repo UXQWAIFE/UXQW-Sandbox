@@ -98,6 +98,15 @@
 		flex-direction: row;
 	}
 
+	.show {
+		display:block;
+	}
+	.hide {
+		display:none;
+	}
+	#seeMore {
+		position:relative;
+	}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 </head>
@@ -105,7 +114,7 @@
     <section>
         <a href="../">Retour en arriere</a>
     </section>
-	<section>
+	<section id="seeMore" class="show">
 		<?php
 			$directory = './'; // Chemin du répertoire à afficher (ici, le répertoire courant)
 
@@ -159,64 +168,60 @@
 			echo '</ul>';
 			
 		?>
-
 	</section>
+	<button id="hideHeader">hide me</button>
 	<main>
-		<div>
-			<h1>Tableau de donnée</h1>
-			<button class="ChooseWhatToAdd" attr-path="include/tableGeneral.html" id="addTable">Ajout du tableau</button>
-		</div>
-		<div>
-			<h3>Structure</h3>
-			<button class="ChooseWhatToAdd" attr-path="include/title_tableau.html" id="addTable">+ Titre</button>
-			<button class="ChooseWhatToAdd">add</button>
-			<button class="ChooseWhatToAdd">add</button>
-			<button class="ChooseWhatToAdd">add</button>
-		</div>
+		<form action="table_generative.php" method="POST">
 
-		<section id="include">
+			<input type="number" name="nombreColonnes" placeholder="Nombre de colonnes">
+			<input type="number" name="nombreLignes" placeholder="Nombre de lignes">
+			<fieldset>
+				<legend>En tête</legend>
+				
+				<label for="ET_Searchable">Recherche ?</label>
+				<input type="checkbox" name="ET_Searchable" id="ET_Searchable">
 
-		</section>
-	</main>
-	<footer>
-		<script>
-			const boutons = document.querySelectorAll('.ChooseWhatToAdd');
-			let currentPath = null; // Variable pour stocker le chemin actuellement affiché
+				<label for="ET_Action">Actions globales (dont export) ?</label>
+				<input type="checkbox" name="ET_Action" id="ET_Action">
 
-			boutons.forEach(bouton => {
-				bouton.addEventListener('click', toggleContent);
-			});
+				<label for="ET_Pagination">Pagination ?</label>
+				<input type="checkbox" name="ET_Pagination" id="ET_Pagination">
+			</fieldset>
 
-			function toggleContent(event) {
-				const container = document.getElementById('include');
-				const path = event.target.getAttribute('attr-path');
+			<Fieldset>
+				<legend>Action de colonne</legend>
 
-				// Vérifier si le bouton actuel est déjà sélectionné
-				if (path === currentPath) {
-					// Le bouton est déjà sélectionné, nous le désélectionnons
-					container.prependChild( '' ); // Supprimer le contenu du conteneur
-					currentPath = null; // Réinitialiser le chemin actuel
-				} else {
-					// Le bouton n'est pas sélectionné, nous chargeons le contenu correspondant
-					fetch(path)
-					.then(response => response.text())
-					.then(html => {
-						console.log(html);
-						const newElement = document.createElement('div');
-						newElement.innerHTML = html;
-						console.log(newElement);
-						container.prependChild( newElement ); // Ajouter le contenu au conteneur
-						currentPath = path; // Mettre à jour le chemin actuel
-					})
-					.catch(error => {
-						console.error('Erreur lors du chargement du fichier HTML', error);
-					});
-				}
-			}
+				<label for="Col_fix">Colonne Fixe ?</label>
+				<input type="checkbox" name="Col_fix" id="Col_fix">
+
+				<label for="Col_filtre">Colonne Filtrable ?</label>
+				<input type="checkbox" name="Col_filtre" id="Col_filtre">
+
+				<label for="Col_action">Colonne Action ?</label>
+				<input type="checkbox" name="Col_action" id="Col_action">
+			</Fieldset>
 			
+			<Fieldset>
+				<legend>Action de ligne</legend>
+				<label for="Lig_depliable">Ligne dépliable ?</label>
+				<input type="checkbox" name="Lig_depliable" id="Lig_depliable">
 
+				<label for="Lig_select">Ligne Selectionnable</label>
+				<input type="checkbox" name="Lig_select" id="Lig_select">
+			</Fieldset>
 
-		</script>
-	</footer>
+			<button type="submit">Créer le tableau</button>
+		</form>
+		<?php
+			// Vérifier si le fichier du tableau existe
+			if (file_exists("tableau.html")) {
+				// Inclure le contenu du fichier
+				include "tableau.html";
+			}
+		?>
+	</main>
+	<script>
+
+	</script>
 </body>
 </html>
