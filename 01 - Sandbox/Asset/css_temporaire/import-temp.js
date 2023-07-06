@@ -26,7 +26,8 @@ var cssFiles = [
     'typography',
     'Accordion', 
     'footer', 
-    'onglet'
+    'onglet',
+    'Formulaire'
   ];
   
   var headElement = document.head;

@@ -23,3 +23,17 @@
   } /*ajouté au Excel ==> OK*/
   
 
+
+.rcn-toggle[selected] {
+  border-color: var(--rcn-semantic-color-interaction-border-default-primary); /*ajouter à l'excel ==> OK*/
+}
+
+
+.rcn-toggle--on[disabled] {
+  border-color: var(--rcn-semantic-color-interaction-border-disabled-standard); /*ajouter à l'excel ==> OK*/
+}
+
+.rcn-toggle--on[disabled]:hover {
+  background-color: var(--rcn-semantic-color-interaction-background-disabled-button_toggle_on); /*ajouter à l'excel ==> OK*/
+ border-color: var(--rcn-semantic-color-interaction-border-disabled-standard); /*ajouter à l'excel ==> OK*/
+}

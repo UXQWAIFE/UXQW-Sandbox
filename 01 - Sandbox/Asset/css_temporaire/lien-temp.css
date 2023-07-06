@@ -1,7 +1,7 @@
 
 .rcn-link{
   gap:0px
-}
+} /*à modifier dans l'excel*/
 
   .rcn-link--external::before{
     content: "\e910";
@@ -16,21 +16,12 @@
   }
 
 
- .rcn-icon{
-    font-size: 1rem;
-    
- }
- 
- .rcn-icon::before{
-    font-size: 0.875em;
- }
-
  .rcn-link--withIcon{
   text-decoration: none;
  }
 
  .rcn-notification__typeIcon::before{
-  font-size: varr(--rcn-semantic-typography-icon-rcn_icon-h4-fontsize);
+  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h4-fontsize);
  }
 
  /* ----Zone de test idée TCO --- */

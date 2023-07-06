@@ -42,8 +42,3 @@ color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
   text-decoration: none; /*ajouté dans l'excel ==> OK*/
 }
 
-/*.rcn-footer__institutionalEcosystemLinks:hover {
-  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
-  text-decoration: underline;
-  font-weight: bold;
-} ==> supprimer la class dans excel

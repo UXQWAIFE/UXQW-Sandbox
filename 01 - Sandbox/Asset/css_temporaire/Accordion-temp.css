@@ -1,4 +1,6 @@
-
+.rcn-accordions__headingIcon {
+	font-size: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
+} /*ajouter à l'excel ==> OK */
 
 .rcn-accordions__heading[aria-expanded='true']:hover {
 	border-top : var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected); /*ajouter à l'excel ==> OK*/

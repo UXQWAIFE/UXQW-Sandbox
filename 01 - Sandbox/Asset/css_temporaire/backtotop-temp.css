@@ -7,3 +7,7 @@
   /*right: 1,5vw;-->supprimé dans excel --> OK*/
 }
 
+
+.rcn-backToTop__icon {
+	font-size:var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize); /*ajouter à l'excel==> OK*/
+}

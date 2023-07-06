@@ -1,5 +1,5 @@
 
-.rcn-icon {
+/*.rcn-icon {
   font-family: var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
   font-weight: var(--rcn-semantic-typography-icon-rcn_icon-body-fontweight);
   font-size: var(--rcn-semantic-typography-icon-rcn_icon-default-fontsize);
@@ -273,3 +273,4 @@
 .rcn-icon--mdi-radiobox-blank::before {
   content: "\e93b";
 }
+*/
