@@ -30,7 +30,7 @@
 
         </div>
         <div  class="rcn-inputFieldBloc__errorZone" >
-            <i class="rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+            <i class="rcn-inputFieldBloc__errorIcon rcn-icon "><span class="sr-only"></span></i>
             erreur machin machin
         </div> 
     </div>
@@ -43,7 +43,7 @@
             <input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
         </div>
         <div  class="rcn-inputFieldBloc__successZone">
-            <i class="rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
+            <i class="rcn-icon rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
             bravo clarou t'es la meilleur dev
         </div> 
     </div>
@@ -66,7 +66,7 @@
 
     <!-- inputs Search-->
 
-    <div class="rcn-inputFieldBloc">       
+    <div class="rcn-inputFieldBloc rcn-inputFieldBloc--as-Search">       
 
         <label class="rcn-inputFieldBloc__label">Search</label>
 
@@ -74,7 +74,7 @@
 
             <input placeholder="Rechercher..." class="rcn-inputField__input">
 
-            <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                 <span class="sr-only"></span>
             </button>
             
@@ -82,7 +82,7 @@
     </div>
 
 
-    <div class="rcn-inputFieldBloc">       
+    <div class="rcn-inputFieldBloc rcn-inputFieldBloc--as-Search">       
 
         <label class="rcn-inputFieldBloc__label">Search and reset</label>
 
@@ -90,13 +90,13 @@
 
             <input placeholder="Rechercher..." class="rcn-inputField__input">
 
-            <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
                 <span class="sr-only"></span>
             </button>
 
             <div class="rcn-inputField__buttonSeparator"></div>
 
-            <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                 <span class="sr-only"></span>
             </button>
 
@@ -104,7 +104,7 @@
         </div>
     </div>
 
-    <div class="rcn-inputFieldBloc">       
+    <div class="rcn-inputFieldBloc rcn-inputFieldBloc--as-Search">       
 
         <label class="rcn-inputFieldBloc__label">Search and delete</label>
 
@@ -112,13 +112,13 @@
 
             <input placeholder="Rechercher..." class="rcn-inputField__input">
 
-            <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
                 <span class="sr-only"></span>
             </button>
 
             <div class="rcn-inputField__buttonSeparator"></div>
 
-            <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                 <span class="sr-only"></span>
             </button>
 
@@ -134,12 +134,31 @@
 
             <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
 
-            <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--largeSearch">
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--largeSearch">
+                <span class="rcn-html">Rechercher</span>
+            </button>
+            
+        </div>
+    </div>
+
+
+
+    <div class="rcn-inputFieldBloc">       
+
+        <label class="rcn-inputFieldBloc__label">Large search 2</label>
+
+        <div class="rcn-inputField" >
+
+            <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
+
+            <button class="rcn-iconButton rcn-inputField__button">
+                <i class="rcn-icon rcn-inputField__button--largeSearch"> </i>
                 <span class="">Rechercher</span>
             </button>
             
         </div>
     </div>
+
 
     <div class="rcn-inputFieldBloc">       
 
@@ -149,14 +168,14 @@
 
             <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
 
-            <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
                 <span class="sr-only"></span>
             </button>
 
             <div class="rcn-inputField__buttonSeparator"></div>
 
             <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--largeSearch">
-                <span class="">Rechercher</span>
+                <span>Rechercher</span>
             </button>
 
             
@@ -171,7 +190,7 @@
 
             <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
 
-            <button class=" rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
                 <span class="sr-only"></span>
             </button>
 
@@ -324,7 +343,7 @@
 	        
 	        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
 	            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked">
-	                <input name="choix" type="checkbox" id="checkbox" class="rcn-inputField__input rcn-inputField__input--checkbox">
+	                <input name="choix" type="checkbox" id="checkbox" class=" rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
 	                Checkbox 1
 	            </label>
 	        </li>
@@ -419,7 +438,7 @@
 
 	            </div>
 	            <div  class="rcn-inputFieldBloc__errorZone" >
-	                <i class="rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+	                <i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
 	                erreur machin machin
 	            </div> 
 	        </div>
@@ -432,7 +451,7 @@
 	                <input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
 	            </div>
 	            <div  class="rcn-inputFieldBloc__successZone">
-	                <i class="rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
+	                <i class="rcn-icon rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
 	                bravo clarou t'es la meilleur dev
 	            </div> 
 	        </div>
@@ -450,7 +469,7 @@
             <div class="rcn-inputField--file"> 
                 <i class="mdi mdi-tray-arrow-up rcn-inputField__uploadIcon"></i>
                 <p class="">Glisser - déposer un fichier ou</p>
-                <div class="rcn-button--secondary">
+                <div class="rcn-button rcn-button--secondary">
                     Importer un fichier
                     <input class="rcn-inputField__input rcn-inputField__input--file" type="file" accept="image/gif, image/jpeg, image/png" id="FileZone" name="" multiple>
                 </div>
@@ -508,7 +527,7 @@
 	                <p class="rcn-inputField__input rcn-combobox__placeholder">
 	                    0 option(s) sélectionnés
 	                </p>
-	                <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--combobox">
+	                <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--combobox">
 	                        <span class="sr-only">
 	                            Déplier la liste d'options
 	                        </span>
@@ -522,11 +541,11 @@
 	                    <div class="rcn-inputField">
 	                        <input id="sx" type="text" class="rcn-inputField__input" placeholder="Filtrer la liste d'option..." value="Opt">
 	                        
-	                        <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+	                        <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
 	                            <p class="sr-only">Déplier la liste d'options</p>
 	                        </button>
 
-	                        <button class="rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+	                        <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
 	                            <p class="sr-only">Déplier la liste d'options</p>
 	                        </button>
 	                    </div>
