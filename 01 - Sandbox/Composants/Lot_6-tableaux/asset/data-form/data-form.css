@@ -1,0 +1,51 @@
+table {
+    width:100%;
+    box-sizing: border-box;
+}
+
+/* Ligne de Cellule */
+.rcn-row__cell {
+    border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+    box-sizing: border-box;
+}
+.rcn-row__cell:nth-of-type(even) {
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+}
+.rcn-row__cell:nth-of-type(odd) {
+    background-color: var(--rcn-semantic-color-static-background-table_alternate_line);
+}
+
+/* Cellules de données */
+.rcn-cell {
+    box-sizing: border-box;
+    max-height: 1.5rem;
+    background-color: transparent;
+    padding:    var(--rcn-semantic-padding-vertical-300) 
+                var(--rcn-semantic-padding-vertical-200);
+    border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+}
+
+.rcn-cell__texte {
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: flex;
+}
+.rcn-cell__number {
+    text-align: right;
+    display: flex;
+}
+.rcn-cell__link {
+    text-align: left;
+    display: flex;
+}
+.rcn-cell__icon {
+    display: flex;
+}
+
+.rcn-cell__action, .rcn-cell__unfold, .rcn-cell__select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
