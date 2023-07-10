@@ -44,13 +44,25 @@
   color:var(--rcn-semantic-color-interaction-text_and_icon-default-link);
  }
 
+  /* Remarque : il faut surcoucher les couleurs sur les liens donc ici ça fera 2 classes à surcouché avec la couleur si on prend cette disposition */
+
+  .rcn-downloadLink__icon--test::before{
+    content:var(--rcn-semantic-typography-icon-rcn_icon-download-content);
+   }
+
  .rcn-link--test:visited{
   
   color:var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
  }
 
- /* Remarque : il faut surcoucher les couleurs sur les liens donc ici ça fera 2 classes à surcouché avec la couleur si on prend cette disposition */
+ .rcn-link--test:visited+.rcn-downloadLink__icon--test{
 
- .rcn-downloadLink__icon--test::before{
-  content:var(--rcn-semantic-typography-icon-rcn_icon-download-content);
+  color:var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
+
+ }
+
+
+
+ .rcn-link--CLE{
+  text-decoration: none;
  }
