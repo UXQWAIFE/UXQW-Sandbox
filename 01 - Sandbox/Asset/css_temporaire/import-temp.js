@@ -27,7 +27,8 @@ var cssFiles = [
     'Accordion', 
     'footer', 
     'onglet',
-    'Formulaire'
+    'Formulaire',
+    'connexion-module'
   ];
   
   var headElement = document.head;
