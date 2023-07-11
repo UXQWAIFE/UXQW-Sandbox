@@ -1,3 +1,12 @@
+.rcn-connexionModule {
+display:flex;
+flex-direction:row;
+align-items:center;
+gap:var(--rcn-semantic-gap-horizontal-500);
+}
+
 .rcn-connexionModule__separator {
-	
+border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+padding-top:var(--rcn-semantic-padding-horizontal-500);
+padding-bottom:var(--rcn-semantic-padding-horizontal-500);
 }
