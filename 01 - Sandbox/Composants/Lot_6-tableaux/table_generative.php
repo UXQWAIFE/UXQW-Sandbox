@@ -55,9 +55,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   // Variables pour les positions des fonctionnalités
 
   // Générer le code HTML du tableau avec les fonctionnalités sélectionnées et leurs positions
-  $tableHTML = "<table>\n";
-  $tableHTML .= "<thead>\n";
-  $tableHTML .= "<tr>\n";
+  $tableHTML = "<table class='rcn-table'>\n";
+  $tableHTML .= "<thead class='rcn-tableRow'>\n";
+  $tableHTML .= "<tr class='rcn-tableRow__head'>\n";
   for ($col = 1; $col <= $nombreColonnes; $col++) {
     $colHeader = "Colonne $col";
 
@@ -73,14 +73,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($Col_action && $Col_fix && $col === $nombreColonnes) {
       $colHeader .= " (Action)";
     }
+    if($Col_filtre) {
+      $FiltrableCol = "<button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class=''>Filtrer</span>
+                      </button>";
+    }else{
+      $FiltrableCol = "<button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class='sr-only'>Filtrer</span>
+                      </button>";
+    }
 
-    $tableHTML .= "<th>$colHeader</th>\n";
+    $tableHTML .= "<th class='rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>$colHeader</span>
+                      $FiltrableCol
+                    </div>
+                  </th>\n";
   }
   $tableHTML .= "</tr>\n";
   $tableHTML .= "</thead>\n";
-  $tableHTML .= "<tbody>\n";
+  $tableHTML .= "<tbody class='rcn-tableRow'>\n";
   for ($row = 1; $row <= $nombreLignes; $row++) {
-    $tableHTML .= "<tr class='rcn-row__cell'>\n";
+    $tableHTML .= "<tr class='rcn-tableRow__cell'>\n";
     for ($col = 1; $col <= $nombreColonnes; $col++) {
       $rowData = "Ligne $row, Colonne $col";
   
@@ -91,52 +105,54 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       switch ($typeDonnee) {
         case "texte":
           // Aucune fonctionnalité supplémentaire pour le texte
-          $rowData = "<div class='rcn-cell__texte'>$rowData</div>";
+          $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
           break;
         case "nombre":
           $rowData .= " (Nombre)";
-          $rowData = "<div class='rcn-cell__number'>$rowData</div>";
+          $rowData = "<div class='rcn-tableCell__number'>$rowData</div>";
           break;
         case "lien":
           $rowData .= " (Lien)";
-          $rowData = "<div class='rcn-cell__link'>$rowData</div>";
+          $rowData = "<div class='rcn-tableCell__link'>$rowData</div>";
           break;
         case "icone":
           $rowData .= " (Icône)";
-          $rowData = "<div class='rcn-cell__icon'>$rowData</div>";
+          $rowData = "<div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum $rowData</div>";
           break;
         case "bouton_selection":
           $rowData .= " (Bouton de sélection)";
-          $rowData = "<div class='rcn-cell__select'><input type='checkbox' class='rcn-input--checkbox'></div>";
+          $rowData = "<div class='rcn-tableCell__select'><input type='checkbox' class='rcn-input--checkbox'></div>";
           break;
         case "bouton_depliable":
           $rowData .= " (Bouton dépliable)";
-          $rowData = "<div class='rcn-cell__unfold'>$rowData</div>";
+          $rowData = "<div class='rcn-tableCell__unfold'>$rowData</div>";
           break;
         case "bouton_action":
           $rowData .= " (Bouton d'action)";
-          $rowData = "<div class='rcn-cell__action'><button class='rcn-button rcn-button--primary'>hola</button></div>";
+          $rowData = "<div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div>";
           break;
       }
       if (!$typeDonnee) {
-        $rowData = "<div class='rcn-cell__texte'>$rowData</div>";
+        $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
       }
   
-      $tableHTML .= "<td class='rcn-cell'>$rowData</td>\n";
+      $tableHTML .= "<td class='rcn-tableCell'>$rowData</td>\n";
     }
     $tableHTML .= "</tr>\n";
   }
   $tableHTML .= "</tbody>\n";
   $tableHTML .= "</table>\n";
 
-  $debug = var_dump($_POST);
+
 
   // Construire le résultat final avec les fonctionnalités sélectionnées
   $resultat = "<h2>Résultat du tableau :</h2>\n";
   $resultat .= "<p>Fonctionnalités de l'en-tête : $fonctionnalitesEnTete</p>\n";
   $resultat .= "<p>Fonctionnalités de colonne : $fonctionnalitesColonne</p>\n";
   $resultat .= "<p>Fonctionnalités de ligne : $fonctionnalitesLigne</p>\n";
+  $resultat .= "<div class='rcn-tableContainer'>";
   $resultat .= $tableHTML;
+  $resultat .= "</div>";
 
   // Enregistrer le résultat dans un fichier
   file_put_contents("tableau.html", $resultat);
