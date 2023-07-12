@@ -86,7 +86,16 @@
 } /*ajouté dans l'excel ==> Ok */
 
 
-.rcn-inputField__button--largeSearch::before {
+/*.rcn-inputField__button--largeSearch::before {
     content:var(--rcn-semantic-typography-icon-rcn_icon-search-content);
-}
+}*/ ==> Supprimer dans l'excel 
 
+
+.rcn-inputField__iconButton--largeSearch::before {
+    content:var(--rcn-semantic-typography-icon-rcn_icon-search-content);
+}  /*ajouter dans l'excel : OK */
+
+
+.rcn-inputField__button--largeSearch {
+    background-color: white;
+}

@@ -23,7 +23,8 @@ var cssFiles = [
     'Footer', 
     'Tabs',
     'FormInputs',
-    'connexion-module'
+    'connexion-module',
+    'cookie'
   ];
   
   var headElement = document.head;
