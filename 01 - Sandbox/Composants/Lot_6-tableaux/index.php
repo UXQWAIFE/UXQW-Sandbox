@@ -111,6 +111,7 @@
 	}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
+
 </head>
 <body>
     <section>
@@ -174,47 +175,60 @@
 	<button id="hideHeader">hide me</button>
 	<main>
 		<form action="table_generative.php" method="POST">
-
-			<input type="number" id="nombreColonnes" name="nombreColonnes" placeholder="Nombre de colonnes">
-			<input type="number" id="nombreLignes" name="nombreLignes" placeholder="Nombre de lignes">
+			<div class="rcn-inputFieldBloc rcn-inputFieldBloc--inline">
+				<div class="rcn-inputField">
+					<input class="rcn-inputField__input" type="number" id="nombreColonnes" name="nombreColonnes" placeholder="Nombre de colonnes">
+				</div>	
+				<div class="rcn-inputField">
+					<input class="rcn-inputField__input" type="number" id="nombreLignes" name="nombreLignes" placeholder="Nombre de lignes">
+				</div>
+				<button class="rcn-button rcn-button--secondary" type="button" onclick="genererListesDeroulantes()">Générer les listes déroulantes</button>
+			</div>
 			
-			<button type="button" onclick="genererListesDeroulantes()">Générer les listes déroulantes</button>
 
 			<div id="colonnesContainer"></div>
 
-			<fieldset>
+			<fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
 				<legend>En tête</legend>
 				
-				<label for="ET_Searchable">Recherche ?</label>
-				<input type="checkbox" name="ET_Searchable" id="ET_Searchable">
+				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="ET_Searchable">Recherche ?
+					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="ET_Searchable" id="ET_Searchable">
+				</label>
 
-				<label for="ET_Action">Actions globales (dont export) ?</label>
-				<input type="checkbox" name="ET_Action" id="ET_Action">
+				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="ET_Action">Actions globales (dont export) ?
+					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="ET_Action" id="ET_Action">
+				</label>
 
-				<label for="ET_Pagination">Pagination ?</label>
-				<input type="checkbox" name="ET_Pagination" id="ET_Pagination">
+				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="ET_Pagination" >Pagination ?
+					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="ET_Pagination" id="ET_Pagination">
+				</label>
 			</fieldset>
 
-			<Fieldset>
+			<Fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio" >
 				<legend>Action de colonne</legend>
 
-				<label for="Col_fix">Colonne Fixe ?</label>
-				<input type="checkbox" name="Col_fix" id="Col_fix">
+				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_fix">Colonne Fixe ?
+					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_fix" id="Col_fix">
+				</label>
 
-				<label for="Col_filtre">Colonne Filtrable ?</label>
-				<input type="checkbox" name="Col_filtre" id="Col_filtre">
+				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_filtre">Colonne Filtrable ?
+					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_filtre" id="Col_filtre">
+				</label>
 
-				<label for="Col_action">Colonne Action ?</label>
-				<input type="checkbox" name="Col_action" id="Col_action">
+				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_action">Colonne Action ?
+					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_action" id="Col_action">
+				</label>
 			</Fieldset>
 			
-			<Fieldset>
+			<Fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio" >
 				<legend>Action de ligne</legend>
-				<label for="Lig_depliable">Ligne dépliable ?</label>
-				<input type="checkbox" name="Lig_depliable" id="Lig_depliable">
+				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Lig_depliable">Ligne dépliable ?
+					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Lig_depliable" id="Lig_depliable">
+				</label>
 
-				<label for="Lig_select">Ligne Selectionnable</label>
-				<input type="checkbox" name="Lig_select" id="Lig_select">
+				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Lig_select">Ligne Selectionnable ?
+					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Lig_select" id="Lig_select">
+				</label>
 			</Fieldset>
 
 
@@ -246,9 +260,14 @@
 					label.textContent = "Type de donnée : ";
 					fieldset.appendChild(label);
 
+					var div = document.createElement("div");
+					div.classList.add("rcn-inputField"); 
+
 					var select = document.createElement("select");
+					select.classList.add("rcn-inputField__input", "rcn-inputField__input--select"); 
 					select.setAttribute("name", "typeDonnee" + col);
 					select.setAttribute("id", "typeDonnee" + col);
+
 
 					var options = [
 					{ value: "texte", text: "Texte" },
@@ -266,9 +285,10 @@
 					option.value = options[i].value;
 					option.text = options[i].text;
 					select.appendChild(option);
+					div.appendChild(select);
 					}
 
-					fieldset.appendChild(select);
+					fieldset.appendChild(div);
 					colonnesContainer.appendChild(fieldset);
 				}
 			}
