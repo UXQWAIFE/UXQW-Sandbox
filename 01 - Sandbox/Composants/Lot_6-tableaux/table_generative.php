@@ -150,7 +150,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $resultat .= "<p>Fonctionnalités de l'en-tête : $fonctionnalitesEnTete</p>\n";
   $resultat .= "<p>Fonctionnalités de colonne : $fonctionnalitesColonne</p>\n";
   $resultat .= "<p>Fonctionnalités de ligne : $fonctionnalitesLigne</p>\n";
-  $resultat .= "<div class='rcn-tableContainer'>";
+  $resultat .= "<div class='rcn-tableContainer'>"; 
+  $resultat .= "
+  <div class='rcn-preTable'>
+    <h1 id='TitreTable'>Tableau de donnée  - Général</h1> 
+    <a title='Aller au pied du tableau' id='#RetourHTable' href='#RetourBTable'>
+      Lien bas du tableau 
+      <i class='mdi mdi-arrow-down'></i>
+    </a>
+  </div>
+  ";
+  $searchInTable = "";
+  if($ET_Searchable || $ET_Action || $ET_Pagination) {
+    $resultat .= "
+    <div class='rcn-preTable__action'>
+      
+    </div>
+    ";
+  }
   $resultat .= $tableHTML;
   $resultat .= "</div>";
 
