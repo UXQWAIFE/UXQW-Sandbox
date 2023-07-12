@@ -3,12 +3,6 @@
   padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux*/
 }
 
-.rcn-header__connexionModule {
-	display:flex;
-	flex-direction:row;
-	align-items:center;
-	gap:var(--rcn-semantic-gap-horizontal-500);
-} /*ajouter au excel ==> OK*/
 
 .rcn-header__mainNavBanner {
   padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux ==> OK*/

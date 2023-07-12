@@ -31,7 +31,7 @@
 
 
 
-.rcn-inputField__button{
+.rcn-inputField__button {
     font-size: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
 } /*ajouter dans l'excel ==> OK*/
 
@@ -41,7 +41,7 @@
 
 .rcn-inputField__input--checkbox::before{
     font-family:'rcnicon'; /*voir ce qu'on fait pour la font-family*/
-/*    content: "\e939";
+/*  content: "\e939";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);*/
 }
 
@@ -77,14 +77,25 @@
     flex-grow:0;
 } /*ajouté à l'excel ==> OK */
 
-.rcn-inputFieldBloc--as-Search {
-    margin-bottom: 0px;
-} /*ajouté à l'excel ==> Ok*/
+
 
 /*----------------COMBOBOX SELECT MULTIPLE------------------*/
-
 
 .rcn-combobox .rcn-fieldset--as-inputFieldBloc{
     margin-bottom: unset;
 } /*ajouté dans l'excel ==> Ok */
 
+
+/*.rcn-inputField__button--largeSearch::before {
+    content:var(--rcn-semantic-typography-icon-rcn_icon-search-content);
+}*/ ==> Supprimer dans l'excel 
+
+
+.rcn-inputField__iconButton--largeSearch::before {
+    content:var(--rcn-semantic-typography-icon-rcn_icon-search-content);
+}  /*ajouter dans l'excel : OK */
+
+
+.rcn-inputField__button--largeSearch {
+    background-color: white;
+}
