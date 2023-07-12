@@ -91,7 +91,7 @@
 }*/ ==> Supprimer dans l'excel 
 
 
-.rcn-inputField__iconButton--largeSearch::before {
+.rcn-inputField__iconButton--largeSearch::before{
     content:var(--rcn-semantic-typography-icon-rcn_icon-search-content);
 }  /*ajouter dans l'excel : OK */
 
