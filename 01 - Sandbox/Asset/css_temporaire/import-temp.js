@@ -24,7 +24,8 @@ var cssFiles = [
     'Tabs',
     'FormInputs',
     'Connexion-module',
-    'Cookie'
+    'Cookie',
+    'ActionsBanner'
   ];
   
   var headElement = document.head;
