@@ -40,13 +40,13 @@
 
 
 .rcn-inputField__input--checkbox::before{
-    font-family:'rcnicon'; /*voir ce qu'on fait pour la font-family*/
+    /*font-family:'rcnicon'*/; /*voir ce qu'on fait pour la font-family*/
 /*  content: "\e939";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);*/
 }
 
 .rcn-inputField__input--checkbox:checked::before{
-    font-family:'rcnicon'; /*voir ce qu'on fait pour la font-family*/
+   /* font-family:'rcnicon'; *//*voir ce qu'on fait pour la font-family*/
 /*    content: "\e938";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected); */
 }
@@ -55,13 +55,13 @@
 /* RADIO BUTTON */
 
 .rcn-inputField__input--radio::before{
-    font-family:'rcnicon'; /*voir ce qu'on fait pour la font-family*/
+   /* font-family:'rcnicon';*/ /*voir ce qu'on fait pour la font-family*/
     /*content: "\e93b";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);*/
 }
 
 .rcn-inputField__input--radio:checked::before{
-    font-family:'rcnicon'; /*voir ce qu'on fait pour la font-family*/
+    /*font-family:'rcnicon'; *//*voir ce qu'on fait pour la font-family*/
     /*content: "\e93a";
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);*/
 }
@@ -86,16 +86,16 @@
 } /*ajouté dans l'excel ==> Ok */
 
 
-/*.rcn-inputField__button--largeSearch::before {
-    content:var(--rcn-semantic-typography-icon-rcn_icon-search-content);
-}*/ ==> Supprimer dans l'excel 
+.rcn-inputField__button--largeSearch::before {
+    content:'';
+} /*Supprimer la classe sur excel ==> OK*/
 
 
-.rcn-inputField__iconButton--largeSearch::before{
+.rcn-inputField__iconButton--largeSearch::before {
     content:var(--rcn-semantic-typography-icon-rcn_icon-search-content);
 }  /*ajouter dans l'excel : OK */
 
 
 .rcn-inputField__button--largeSearch {
-    background-color: white;
-}
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+} /*property à ajouter à l'excel ==> OK*/

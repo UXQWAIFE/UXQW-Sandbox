@@ -13,3 +13,18 @@
 .rcn-modal__closeButton {
 	background: none; /*property à ajouter dans l'excel -> OK*/
 }
+
+
+.rcn-modal__footer {
+  /*flex-direction: row;*/
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  padding:var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-700);
+  /*border-top-width: var(--rcn-semantic-borderwidth-100);
+  border-top-color: var(--rcn-semantic-color-static-border-divider_regular);
+  max-width: 100%;*/
+}
+
+.rcn-modal__footer .rcn-bottomActionsBanner {
+	border: unset; /*ajouter à l'excel*/
+}
