@@ -15,9 +15,11 @@
     box-shadow: var(--rcn-semantic-dropshadow-static-detached);
     background-color: var(--rcn-semantic-color-static-background-standard);
     flex-wrap: wrap;
-    z-index: 9999;
-    position: fixed;
+    /* z-index: 9999;
+    position: fixed; > à ajouter sur un modèle de page */
     bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 
@@ -26,7 +28,8 @@
     flex-direction: row;
     justify-content: space-between; 
     align-items: stretch;   
-    gap: 0px;
+    gap:var(--rcn-semantic-gap-horizontal-400);
+
 }
 
 
@@ -34,7 +37,7 @@
 .rcn-cookiePanel__actionZone{
     display: flex;
     flex-direction: row;
-    gap:var(--rcn-semantic-gap-horizontal-600);
+    gap:var(--rcn-semantic-gap-horizontal-400);
     flex-grow: 1;
     justify-content: flex-end;
     
@@ -47,7 +50,7 @@
     justify-content: flex-start;
     flex-direction: column;
     gap: var(--rcn-semantic-gap-vertical-400);
-    margin-bottom: 16px;
+   
 }
 
 .rcn-cookiePanel__section{
@@ -106,7 +109,7 @@
 .rcn-cookiePanel__linkZone {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: var(--rcn-semantic-gap-horizontal-400);
     flex-wrap: wrap;
 }
 
