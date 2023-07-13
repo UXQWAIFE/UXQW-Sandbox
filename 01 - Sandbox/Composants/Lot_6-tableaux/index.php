@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" href="asset/RCN-DesignSystem/assets/styles-ChorusPro.css">
-	<link rel="stylesheet" href="asset/data-form/data-form.css">
+	<link rel="stylesheet" href="asset/data-form/table_general.css">
+	<link rel="stylesheet" href="asset/data-form/table_structure.css">
 	<style>
 	* {
 		box-sizing: border-box;
@@ -28,6 +29,13 @@
 		display:block;
 		width:100%;
 		padding: 1rem;
+	}
+	.table_holder {
+		display:block;
+		margin:0;
+	}
+	.table_holder h2, .table_holder p {
+		margin:2rem 0;
 	}
 	.list-folder, .list-file {
 		display:flex;
@@ -235,6 +243,8 @@
 
 			<button class="rcn-button rcn-button--primary" type="submit">Créer le tableau</button>
 		</form>
+	<section class="table_holder">
+		
 		<?php
 			// Vérifier si le fichier du tableau existe
 			if (file_exists("tableau.html")) {
@@ -242,6 +252,7 @@
 				include "tableau.html";
 			}
 		?>
+	</section>
 	</main>
 	<script>
 		function genererListesDeroulantes() {

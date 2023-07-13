@@ -143,6 +143,46 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $tableHTML .= "</tbody>\n";
   $tableHTML .= "</table>\n";
 
+  // Construire l'entête en fonction des éléments cochés
+  $enteteTableau = '';
+  if($ET_Searchable || $ET_Action || $ET_Pagination) {
+    // Add Search
+    if($ET_Searchable) {
+      $enteteTableau .= '
+      <div id="tableRecherche" class="rcn-preTable__search ">
+					<form action="" role="search">
+            <label class="rcn-inputFieldBloc__label sr-only">Search and reset</label>
+            <div class="rcn-inputField">
+                <input placeholder="Rechercher..." class="rcn-inputField__input">
+                <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+                    <span class="sr-only"></span>
+                </button>
+                <div class="rcn-inputField__buttonSeparator"></div>
+                <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                    <span class="sr-only"></span>
+                </button>
+            </div>
+					</form>
+				</div>
+      ';
+    }
+    // Add Action
+    if($ET_Action) {
+      $enteteTableau .= '
+        <div class="rcn-preTable__ActionGlob">
+					<button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
+            <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
+            Réinitialiser les filtres
+          </button>
+					<button class="rcn-button rcn-button--primary" title="Exporter le tableau en format CSV" >
+            <i class="rcn-icon rcn-icon--mdi-arrowCollapseDown" aria-hidden="true"></i>
+            Exporter le tableau
+          </button>
+        </div>
+      '; 
+    }
+
+  }
 
 
   // Construire le résultat final avec les fonctionnalités sélectionnées
@@ -150,8 +190,30 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $resultat .= "<p>Fonctionnalités de l'en-tête : $fonctionnalitesEnTete</p>\n";
   $resultat .= "<p>Fonctionnalités de colonne : $fonctionnalitesColonne</p>\n";
   $resultat .= "<p>Fonctionnalités de ligne : $fonctionnalitesLigne</p>\n";
-  $resultat .= "<div class='rcn-tableContainer'>";
+  $resultat .= "<div class='rcn-tableContainer'>"; 
+  $resultat .= "
+  <div class='rcn-preTable'>
+    <h1 id='TitreTable'>Tableau de donnée  - Général</h1> 
+    <a title='Aller au pied du tableau' id='#RetourHTable' href='#RetourBTable'>
+      Lien bas du tableau 
+      <i class='rcn-icon rcn-icon--mdi-arrow-down'></i>
+    </a>
+  </div>
+  ";
+  if($ET_Searchable || $ET_Action || $ET_Pagination) {
+    $resultat .= "
+    <div class='rcn-preTable__action'>
+      $enteteTableau
+    </div>
+    ";
+  }
   $resultat .= $tableHTML;
+  $resultat .= "
+  <div id='RetourBTable'>
+    <a title='Retour en haut du tableau' href='#RetourHTable'>Aller au sommet du tableau 
+      <i class='rcn-icon rcn-icon--mdi-arrow-up'></i>
+    </a>
+  </div>";
   $resultat .= "</div>";
 
   // Enregistrer le résultat dans un fichier
