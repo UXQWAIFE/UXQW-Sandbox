@@ -412,3 +412,115 @@
     margin: 0;
     
   }
+
+
+
+
+
+
+/* ---------------------Ajout du bandeau de cookies pour tester ------------- */
+
+.rcn-cookiePanel{
+  display: flex;
+  flex-direction: column;
+  padding: var(--rcn-semantic-padding-vertical-700) 80px;
+  gap: var(--rcn-semantic-gap-vertical-600);
+  box-shadow: var(--rcn-semantic-dropshadow-static-detached);
+  background-color: var(--rcn-semantic-color-static-background-standard);
+  flex-wrap: wrap;
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+}
+
+
+.rcn-cookiePanel--banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+  align-items: stretch;   
+  gap: 0px;
+}
+
+
+
+.rcn-cookiePanel__actionZone{
+  display: flex;
+  flex-direction: row;
+  gap:var(--rcn-semantic-gap-horizontal-600);
+  flex-grow: 1;
+  justify-content: flex-end;
+  
+}
+
+
+.rcn-cookiePanel__textZone{
+  display: flex;
+  flex-grow:2;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: var(--rcn-semantic-gap-vertical-400);
+  margin-bottom: 16px;
+}
+
+.rcn-cookiePanel__section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom:  var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+  padding-bottom: var(--rcn-semantic-padding-vertical-600);
+  flex-wrap: wrap;
+  gap: var(--rcn-semantic-gap-horizontal-400);
+
+}
+
+.rcn-cookiePanel__subSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--rcn-semantic-gap-horizontal-400);
+  flex-wrap: wrap;  
+
+}
+
+.rcn-cookiePanel__section--cookieGroup{
+  flex-direction: column;
+
+}
+
+.rcn-cookiePanel__section--title {
+  border-bottom:  var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.rcn-cookiePanel__section--banner{
+
+  border-bottom: none;
+  flex-wrap: wrap;
+
+}
+
+.rcn-cookierPanel__section--last {
+  
+  border-bottom: none;
+  align-items: baseline;
+
+}
+
+.rcn-cookiePanel__button{
+  height: fit-content;
+  align-self: center;
+
+}
+
+
+.rcn-cookiePanel__linkZone {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
