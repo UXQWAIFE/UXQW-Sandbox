@@ -4,7 +4,6 @@
     width:fit-content;
     max-width:80vw;/* Temporaire */
     margin:0 auto;/*2rem temporaire*/
-    overflow-x: auto;
     box-sizing: border-box;
     position:relative;
 }
@@ -27,3 +26,14 @@
     justify-content: space-between;
 }
 
+.rcn-preTable__action {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    gap:var(--rcn-semantic-gap-vertical-200);
+    flex-direction: row;
+    padding: var(--rcn-semantic-gap-vertical-200);
+    border-width:var(--rcn-semantic-borderwidth-100) var(--rcn-semantic-borderwidth-100) 0 var(--rcn-semantic-borderwidth-100);
+    border-style: solid;
+    border-color: var(--rcn-semantic-color-static-border-standard);
+}
