@@ -1,8 +1,9 @@
 /* Structure de la table */
 .rcn-tableContainer {
     display:block;
-    width:fit-content;
+    width:100%;
     max-width:80vw;/* Temporaire */
+    min-width: 40vw;
     margin:0 auto;/*2rem temporaire*/
     box-sizing: border-box;
     position:relative;
@@ -16,6 +17,7 @@
     line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
     text-decoration: var(--rcn-semantic-typography-text-component-default-body-textdecoration);
     border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+    width:100%;
 }
 
 
@@ -26,9 +28,9 @@
     justify-content: space-between;
 }
 
-.rcn-preTable__action {
-    display: flex;
-    align-items: stretch;
+.rcn-preTable__fontcionnalite {
+    display: inline-flex;
+    align-items: center;
     width: 100%;
     gap:var(--rcn-semantic-gap-vertical-200);
     flex-direction: row;
@@ -37,3 +39,116 @@
     border-style: solid;
     border-color: var(--rcn-semantic-color-static-border-standard);
 }
+
+.rcn-preTable__ActionGlob, .rcn-preTable__ActionGlob {
+    display: flex;
+    gap:var(--rcn-semantic-gap-vertical-400);
+}
+
+/* post table */
+
+.rcn-postTable {
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+    margin-top: var(--rcn-semantic-gap-vertical-400);
+}
+
+
+
+/*=============== PAGINATION ================*/
+
+.rcn-pagination__sortLine {
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--rcn-semantic-margin-vertical-inputfieldblock);
+}
+.rcn-pagination__sortLine .rcn-inputFieldBloc{
+    margin:unset;
+}
+
+.rcn-pagination__navLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: var(--rcn-semantic-margin-vertical-inputfieldblock);
+}
+.rcn-pagination__navLine .rcn-inputFieldBloc{
+    margin:unset;
+}
+
+.rcn-pagination__navList{
+	display: flex;
+    align-items: center;
+    gap:var(--rcn-semantic-gap-vertical-400);
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.rcn-pagination__label{
+    font-weight :var(--rcn-semantic-typography-text-component-default-body-fontweight);
+    flex-wrap : wrap;
+    align-items: center;
+}
+
+
+.rcn-pagination__navLinks{
+    display:flex;
+    flex-direction: row;
+	padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-200);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+	text-decoration: var(--rcn-semantic-typography-text-component-default-body-textdecoration);
+    border-radius : var(--rcn-semantic-borderradius-100);
+    border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent); 
+    border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent); 
+}
+.rcn-pagination__navLinks:visited{
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+.rcn-pagination__navLinks:hover{
+    background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+}
+.rcn-pagination__navLinks[aria-current="page"]{
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+    font-weight: var(--rcn-semantic-typography-text-component-default-selected-fontweight);
+    border-bottom:  var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-static-text_and_icon-primary);
+}
+
+
+.rcn-pagination__previousIcon{
+    order:-1;
+}
+.rcn-pagination__previousIcon::before{
+    content: var(--rcn-semantic-typography-icon-rcn_icon-previous-content);
+    content:"\e92e"; /* LIGNE A NE PAS AJOUTER A L'EXCEL : temporaire le temps d'ajouter le semantic token*/
+}
+
+.rcn-pagination_nextIcon{
+    order:2;
+}
+.rcn-pagination_nextIcon::before{
+    content: var(--rcn-semantic-typography-icon-rcn_icon-next-content);
+    content:"\e92d" /* LIGNE A NE PAS AJOUTER A L'EXCEL : temporaire le temps d'ajouter le semantic token*/
+}
+
+
+.rcn-pagination__goToPageButton{
+    align-self: stretch;
+    padding-left: var(--rcn-semantic-padding-horizontal-200);
+    padding-right: var(--rcn-semantic-padding-horizontal-200);
+    border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard); 
+}
+.rcn-pagination__goToPageButton:hover{
+    background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+}
+.rcn-pagination__goToPageButton::before{
+    content:"\e92d"; /*A REMPLACER PAR ICONE FLECHE VERS LA DROITE (->) qui est à ajouter aux icônes avec pour nom "goto" */
+}
+

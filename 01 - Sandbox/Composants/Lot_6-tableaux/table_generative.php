@@ -143,9 +143,96 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $tableHTML .= "</tbody>\n";
   $tableHTML .= "</table>\n";
 
-  // Construire l'entête en fonction des éléments cochés
+  // Construire en fonction des éléments cochés
   $enteteTableau = '';
+  $footerTableau = '';
+
   if($ET_Searchable || $ET_Action || $ET_Pagination) {
+   
+    // Add Pagination
+    if($ET_Pagination) {
+      $enteteTableau .= '
+      <p class="rcn-preTable__paginationTop" aria-live="polite">
+        <span>1-3</span>
+        sur 
+        <span>32</span>
+        <span>entités</span> 
+        affichées
+      </p>
+      ';
+      $footerPagination .= '
+        <div class="rcn-pagination__navLine">
+
+          <div>
+              1-4 sur 23 résultats
+          </div>
+
+          <nav>
+              <ol class="rcn-pagination__navList">
+                  <li>
+                      <a title="Retour à la page précédente " class="rcn-link rcn-pagination__navLinks" href="#">
+                          <i class="rcn-icon rcn-pagination__previousIcon"></i>
+                          Précédent
+                      </a>
+                  </li>
+                  <li>
+                      <a aria-current="page" class="rcn-link rcn-pagination__navLinks" title="Naviguer à la page 1" href="#">1</a>
+                  </li>
+                  <li>
+                      <a title="Naviguer à la page 2" class="rcn-link rcn-pagination__navLinks" href="#">2</a>
+                  </li>
+                  <li>
+                      <p>...</p>
+                  </li>
+                  <li>
+                      <a title="Naviguer à la page 4" class="rcn-link rcn-pagination__navLinks" href="#">4</a>
+                  </li>
+                  <li>
+                      <a title="Naviguer à la page 5" class="rcn-link rcn-pagination__navLinks" href="#">5</a>
+                  </li>
+                  <li>
+                      <a title="Aller à la page suivante" href="#" class="rcn-link rcn-pagination__navLinks"> 
+                          Suivant 
+                          <i class="rcn-icon rcn-pagination_nextIcon">
+                          </i>
+                      </a>
+                  </li>
+              </ol>
+          </nav>
+
+          <div class="rcn-inputFieldBloc rcn-inputFieldBloc--horizontal">        
+              <label for="goToPage" class="rcn-inputFieldBloc__label rcn-pagination__label">Aller à la page</label>
+              <div class="rcn-inputField">
+                  <select name="goToPage" class="rcn-inputField__input rcn-inputField__input--select">
+                      <option class="rcn-inputField__option" value="">1</option>
+                      <option class="rcn-inputField__option" value="">2</option>
+                      <option class="rcn-inputField__option" value="">3</option>
+                      <option class="rcn-inputField__option" value="">4</option>
+                      <option class="rcn-inputField__option" value="">5</option>
+                  </select>
+                  <button type="submit" class="rcn-iconButton rcn-icon rcn-pagination__goToPageButton"></button>
+              </div>
+          </div>
+
+      </div>
+      ';
+    }
+    // Add Action
+    if($ET_Action) {
+      $enteteTableau .= '
+        <div class="rcn-preTable__ActionGlob">
+					<button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
+            <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
+            Réinitialiser les filtres
+          </button>
+					<button class="rcn-button rcn-button--primary" title="Exporter le tableau en format CSV" >
+            <i class="rcn-icon rcn-icon--mdi-arrowCollapseDown" aria-hidden="true"></i>
+            Exporter le tableau
+          </button>
+        </div>
+      '; 
+    }
+    
     // Add Search
     if($ET_Searchable) {
       $enteteTableau .= '
@@ -166,21 +253,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 				</div>
       ';
     }
-    // Add Action
-    if($ET_Action) {
-      $enteteTableau .= '
-        <div class="rcn-preTable__ActionGlob">
-					<button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
-            <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
-            Réinitialiser les filtres
-          </button>
-					<button class="rcn-button rcn-button--primary" title="Exporter le tableau en format CSV" >
-            <i class="rcn-icon rcn-icon--mdi-arrowCollapseDown" aria-hidden="true"></i>
-            Exporter le tableau
-          </button>
-        </div>
-      '; 
-    }
 
   }
 
@@ -195,21 +267,24 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   <div class='rcn-preTable'>
     <h1 id='TitreTable'>Tableau de donnée  - Général</h1> 
     <a title='Aller au pied du tableau' id='#RetourHTable' href='#RetourBTable'>
-      Lien bas du tableau 
+      Aller au bas du tableau 
       <i class='rcn-icon rcn-icon--mdi-arrow-down'></i>
     </a>
   </div>
   ";
-  if($ET_Searchable || $ET_Action || $ET_Pagination) {
+  if($ET_Searchable || $ET_Action ) {
     $resultat .= "
-    <div class='rcn-preTable__action'>
+    <div class='rcn-preTable__fontcionnalite'>
       $enteteTableau
     </div>
     ";
   }
+  // Injection du tableau
   $resultat .= $tableHTML;
+  // Injection du footer 
+  $resultat .= $footerPagination;
   $resultat .= "
-  <div id='RetourBTable'>
+  <div id='RetourBTable' class='rcn-postTable'>
     <a title='Retour en haut du tableau' href='#RetourHTable'>Aller au sommet du tableau 
       <i class='rcn-icon rcn-icon--mdi-arrow-up'></i>
     </a>
