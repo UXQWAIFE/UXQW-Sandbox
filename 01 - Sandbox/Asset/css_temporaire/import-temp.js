@@ -27,7 +27,8 @@ var cssFiles = [
     'Cookie',
     'Grid',
     'ActionsBanner',
-    'FilterModule'
+    'FilterModule' ,
+    'SearchResultTemplate'
   ];
   
   var headElement = document.head;
