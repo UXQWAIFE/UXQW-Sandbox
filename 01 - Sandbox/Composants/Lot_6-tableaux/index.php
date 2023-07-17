@@ -15,7 +15,7 @@
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
-    section div {
+    section:not(.table_holder) div {
         display: inline-flex;
         align-self: center;
     }
@@ -34,7 +34,7 @@
 		display:block;
 		margin:0;
 	}
-	.table_holder h2, .table_holder p {
+	.table_holder > h2, .table_holder > p {
 		margin:2rem 0;
 	}
 	.list-folder, .list-file {
