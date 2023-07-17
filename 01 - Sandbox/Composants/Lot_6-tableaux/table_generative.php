@@ -65,9 +65,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($Col_fix) {
       if ($Col_fix && $col === 1) {
         $colHeader .= " (Fixe - Première)";
+        $stickedClass = "rcn-tableData--sticked";
+      }else {
+        $stickedClass = "";
       }
       if ($Col_fix && $col === $nombreColonnes ) {
         $colHeader .= " (Fixe - Dernière)";
+        $stickedClass = "rcn-tableData--sticked";
       }
     }
     if ($Col_action && $Col_fix && $col === $nombreColonnes) {
@@ -83,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                       </button>";
     }
 
-    $tableHTML .= "<th class='rcn-tableHead' scope='col' aria-sort=''>
+    $tableHTML .= "<th class='". $stickedClass ." rcn-tableHead' scope='col' aria-sort=''>
                     <div class='rcn-tableHead__container'>
                       <span class=''>$colHeader</span>
                       $FiltrableCol
@@ -97,7 +101,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $tableHTML .= "<tr class='rcn-tableRow__cell'>\n";
     for ($col = 1; $col <= $nombreColonnes; $col++) {
       $rowData = "Ligne $row, Colonne $col";
-  
+      if($Col_fix && $col === 1) {
+        $stickedClass = "rcn-tableData--sticked";
+      }else{
+        $stickedClass = "";
+      }
       // Récupérer le type de donnée pour cette colonne
       $typeDonnee = $typesDonnees[$col];
   
@@ -121,7 +129,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           break;
         case "bouton_selection":
           $rowData .= " (Bouton de sélection)";
-          $rowData = "<div class='rcn-tableCell__select'><input type='checkbox' class='rcn-input--checkbox'></div>";
+          $rowData = "<div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div>";
           break;
         case "bouton_depliable":
           $rowData .= " (Bouton dépliable)";
@@ -136,7 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
       }
   
-      $tableHTML .= "<td class='rcn-tableCell'>$rowData</td>\n";
+      $tableHTML .= "<td class='rcn-tableCell ". $stickedClass ." '>$rowData</td>\n";
     }
     $tableHTML .= "</tr>\n";
   }
@@ -162,11 +170,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       ';
       $footerPagination .= '
         <div class="rcn-pagination__navLine">
-
           <div>
               1-4 sur 23 résultats
           </div>
-
           <nav>
               <ol class="rcn-pagination__navList">
                   <li>
@@ -199,7 +205,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                   </li>
               </ol>
           </nav>
-
           <div class="rcn-inputFieldBloc rcn-inputFieldBloc--horizontal">        
               <label for="goToPage" class="rcn-inputFieldBloc__label rcn-pagination__label">Aller à la page</label>
               <div class="rcn-inputField">
@@ -217,43 +222,46 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       </div>
       ';
     }
-    // Add Action
-    if($ET_Action) {
-      $enteteTableau .= '
-        <div class="rcn-preTable__ActionGlob">
-					<button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
-            <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
-            Réinitialiser les filtres
-          </button>
-					<button class="rcn-button rcn-button--primary" title="Exporter le tableau en format CSV" >
-            <i class="rcn-icon rcn-icon--mdi-arrowCollapseDown" aria-hidden="true"></i>
-            Exporter le tableau
-          </button>
-        </div>
-      '; 
+    if ($ET_Action || $ET_Searchable) {
+      $zoneAction = '';
+      // Add Action
+      if($ET_Action) {
+        $zoneAction .= '
+          <div class="rcn-preTable__ActionGlob">
+            <button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
+              <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
+              Réinitialiser les filtres
+            </button>
+            <button class="rcn-button rcn-button--primary" title="Exporter le tableau en format CSV" >
+              <i class="rcn-icon rcn-icon--mdi-arrowCollapseDown" aria-hidden="true"></i>
+              Exporter le tableau
+            </button>
+          </div>
+        '; 
+      }
+      
+      // Add Search
+      if($ET_Searchable) {
+        $zoneAction .= '
+        <div id="tableRecherche" class="rcn-preTable__search ">
+            <form action="" role="search">
+              <label class="rcn-inputFieldBloc__label sr-only">Search and reset</label>
+              <div class="rcn-inputField">
+                  <input placeholder="Rechercher..." class="rcn-inputField__input">
+                  <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+                      <span class="sr-only"></span>
+                  </button>
+                  <div class="rcn-inputField__buttonSeparator"></div>
+                  <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                      <span class="sr-only"></span>
+                  </button>
+              </div>
+            </form>
+          </div>
+        ';
+      }
     }
-    
-    // Add Search
-    if($ET_Searchable) {
-      $enteteTableau .= '
-      <div id="tableRecherche" class="rcn-preTable__search ">
-					<form action="" role="search">
-            <label class="rcn-inputFieldBloc__label sr-only">Search and reset</label>
-            <div class="rcn-inputField">
-                <input placeholder="Rechercher..." class="rcn-inputField__input">
-                <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
-                    <span class="sr-only"></span>
-                </button>
-                <div class="rcn-inputField__buttonSeparator"></div>
-                <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
-                    <span class="sr-only"></span>
-                </button>
-            </div>
-					</form>
-				</div>
-      ';
-    }
-
+    $enteteTableau .= '<div class="rcn-preTable__zoneAction">'. $zoneAction .'</div>';
   }
 
 
@@ -294,7 +302,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   // Enregistrer le résultat dans un fichier
   file_put_contents("tableau.html", $resultat);
 }
+// on renvoie les data pour plus de simplicité
 
+$_SESSION['ET_Searchable'] = isset($_POST["ET_Searchable"]);
+$_SESSION['ET_Action'] = isset($_POST["ET_Action"]);
+$_SESSION['ET_Pagination'] = isset($_POST["ET_Pagination"]);
+$_SESSION['Col_fix'] = isset($_POST["Col_fix"]);
+$_SESSION['Col_filtre'] = isset($_POST["Col_filtre"]);
+$_SESSION['Col_action'] = isset($_POST["Col_action"]);
+$_SESSION['Lig_depliable'] = isset($_POST["Lig_depliable"]);
+$_SESSION['Lig_select'] = isset($_POST["Lig_select"]);
 ?>
 
 <!-- Rediriger vers la page principale après le traitement du formulaire -->
