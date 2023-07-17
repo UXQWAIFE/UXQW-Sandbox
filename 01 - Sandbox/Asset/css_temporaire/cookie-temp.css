@@ -16,7 +16,7 @@
     background-color: var(--rcn-semantic-color-static-background-standard);
     flex-wrap: wrap;
     /* z-index: 9999;
-    position: fixed; > à ajouter sur un modèle de page */
+    position: fixed; > à toujours ajouter , juste pour la relecture de ce composant si on met ces propriétées ce n'est plus visible */
     bottom: 0;
     box-sizing: border-box;
     width: 100%;
@@ -31,7 +31,6 @@
     gap:var(--rcn-semantic-gap-horizontal-400);
 
 }
-
 
 
 .rcn-cookiePanel__actionZone{
