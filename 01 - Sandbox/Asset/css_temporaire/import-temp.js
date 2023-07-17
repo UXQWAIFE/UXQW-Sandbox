@@ -25,8 +25,9 @@ var cssFiles = [
     'FormInputs',
     'Connexion-module',
     'Cookie',
+    'Grid',
     'ActionsBanner',
-    'Grid'
+    'FilterModule'
   ];
   
   var headElement = document.head;

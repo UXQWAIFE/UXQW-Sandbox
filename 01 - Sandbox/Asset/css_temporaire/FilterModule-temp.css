@@ -1,0 +1,108 @@
+.rcn-filter__activeItems{
+    display: flex;
+    flex-direction: column;
+    gap:var(--rcn-semantic-gap-vertical-400);
+}
+
+.rcn-filter__chipsZone{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--rcn-semantic-gap-vertical-200) var(--rcn-semantic-gap-horizontal-200);
+}
+
+.rcn-filter{
+    display: flex;
+    flex-direction: column;
+    gap:var(--rcn-semantic-gap-vertical-500);
+    padding : var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-600);
+    border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
+    border-right: var(--rcn-semantic-borderwidth-100) solid transparent;
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+    width: 100%;
+    /* grid-area : filter;  > si mise au sein d'une grille sans overlay */
+   }
+
+   /*Modifier si le module de filtre se position à gauche du contenu de la page (moins courant)*/
+
+   .rcn-filter--leftZone{
+    border-left:none;
+    border-right : border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
+   }
+
+   .rcn-filterPartiel__zone{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+    border-right: none;
+    border-left : none;
+    border-bottom : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+    padding : var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-0);
+   }
+
+   .rcn-filter__chipsZone--partiel{
+    flex-wrap: none;
+   }
+
+   .rcn-filter__button{
+    order:-1;
+   }
+
+   .rcn-filter__button::before{
+    content:var(--rcn-semantic-typography-icon-rcn_icon-filter-content);
+
+   }
+
+   .rcn-filter_link{
+    display: flex;
+    align-self:flex-end;
+   }
+
+   .rcn-filter__separator{
+    height: var(--rcn-semantic-borderwidth-100);
+    background-color: var(--rcn-semantic-color-static-border-divider_regular);
+    width : auto;
+   }
+
+   .rcn-filter_criteriaZone{
+    display: flex;
+    flex-direction: column;
+    gap: var(--rcn-semantic-gap-vertical-500);
+   }
+
+   .rcn-filter__closeButton{
+    display:flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    align-self : flex-end;
+    background: none;
+    border:none;
+
+   }
+
+   .rcn-filter__icon::before{
+    content: var(--rcn-semantic-typography-icon-rcn_icon-close-content);
+  }
+
+  .rcn-filter__icon{
+   order:2;
+
+  }
+
+   /*Modifier au module de filtre lorsqu'il est supperposé*/
+
+   .rcn-filter--overlay{
+    grid-area: filter;
+    overflow: auto;
+   
+   }
+
+   .rcn-filter--overlayLeft{
+    grid-area: filter;
+    overflow: auto;
+    border-left:var(--rcn-semantic-borderwidth-100) solid transparent;
+    border-right:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
+   }
