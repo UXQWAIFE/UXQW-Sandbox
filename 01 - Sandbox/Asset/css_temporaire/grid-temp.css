@@ -1,6 +1,10 @@
 
+
+ /*------------- Grid ---------------*/
+  
+
 /*Grid globale*/
-/*.rcn-grid {
+.rcn-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
@@ -16,11 +20,11 @@
   grid-template-areas: 
     "title title title . . . . . . . . . "
     "main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar";
-}*/
+}
 
 /*Composants de la grille - TEST*/
 
-/*.item-a {
+.item-a {
   display: flex;
   background-color: pink;
   height: 80px;
@@ -54,4 +58,4 @@
   background-color: #FF4500;
   height: 100px;
 }
-*/
+
