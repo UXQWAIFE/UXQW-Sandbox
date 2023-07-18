@@ -101,7 +101,7 @@ text-overflow: ellipsis;
 display: -webkit-box;
   -webkit-line-clamp: 3; /* Limite le contenu à 3 lignes */
   -webkit-box-orient: vertical;
- flex-grow:100
+ flex-grow:100;
 } /*class à ajouter dans l'excel ==> OK*/
 
 

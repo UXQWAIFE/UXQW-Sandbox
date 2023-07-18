@@ -14,6 +14,16 @@
   height: 100%;
 }
 
+/*.rcn-container--primary {
+  padding-right:80px;
+  padding-left:80px;
+}*/
+
+.rcn-grid__margins {
+  padding-right:80px;
+  padding-left:80px;
+}
+
 /*Template*/
 
 .rcn-gridTemplateExample {

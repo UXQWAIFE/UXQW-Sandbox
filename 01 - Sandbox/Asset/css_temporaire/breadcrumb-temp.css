@@ -3,6 +3,6 @@
 } /* class supprimée dans le Excel */
 
 .rcn-breadcrumb__list {
-  padding-left: var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux dans l'excel ==> OK */
-  padding-right: var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux dans l'excel ==> OK */
+  /*padding-left: var(--rcn-semantic-padding-horizontal-900);*/ /*Ajout de paddings horizontaux dans l'excel ==> OK */
+ /* padding-right: var(--rcn-semantic-padding-horizontal-900); *//*Ajout de paddings horizontaux dans l'excel ==> OK */
 }

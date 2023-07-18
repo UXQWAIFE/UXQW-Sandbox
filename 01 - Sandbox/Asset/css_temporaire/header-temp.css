@@ -1,8 +1,8 @@
 
-.rcn-header__productBanner {
+/*.rcn-header__productBanner {
   padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux*/
 }
-
+*/
 
 .rcn-header__mainNavBanner {
   padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux ==> OK*/
