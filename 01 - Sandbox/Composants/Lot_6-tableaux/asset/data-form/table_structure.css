@@ -12,12 +12,11 @@
     box-sizing: border-box;
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
     font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
-    font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
-    font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
-    line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
-    text-decoration: var(--rcn-semantic-typography-text-component-default-body-textdecoration);
     border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
     width:100%;
+    margin-bottom: var(--rcn-semantic-gap-vertical-400);
+    overflow-y: hidden;
+    display: block;
 }
 
 
@@ -30,6 +29,7 @@
 
 .rcn-preTable__fontcionnalite {
     display: inline-flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     gap:var(--rcn-semantic-gap-vertical-200);
@@ -40,7 +40,7 @@
     border-color: var(--rcn-semantic-color-static-border-standard);
 }
 
-.rcn-preTable__ActionGlob, .rcn-preTable__ActionGlob {
+.rcn-preTable__zoneAction, .rcn-preTable__ActionGlob {
     display: flex;
     gap:var(--rcn-semantic-gap-vertical-400);
 }
@@ -51,7 +51,6 @@
     display: flex;
     width: 100%;
     flex-direction: row-reverse;
-    margin-top: var(--rcn-semantic-gap-vertical-400);
 }
 
 
@@ -98,7 +97,7 @@
 }
 
 
-.rcn-pagination__navLinks{
+.rcn-pagination__navLinks {
     display:flex;
     flex-direction: row;
 	padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-200);
@@ -150,5 +149,19 @@
 }
 .rcn-pagination__goToPageButton::before{
     content:"\e92d"; /*A REMPLACER PAR ICONE FLECHE VERS LA DROITE (->) qui est à ajouter aux icônes avec pour nom "goto" */
+}
+
+
+
+/* ==================== */
+/*      correction      */
+/* ==================== */
+
+/* Correction formulaire */
+.rcn-inputFieldBloc {
+    flex-direction: unset;
+}
+.rcn-inputFieldBloc--horizontal {
+    flex-grow: unset;
 }
 

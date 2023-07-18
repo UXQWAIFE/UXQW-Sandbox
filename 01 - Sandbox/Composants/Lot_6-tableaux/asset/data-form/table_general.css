@@ -1,15 +1,7 @@
-/* Correction spécifique input */
-.rcn-inputFieldBloc--inline {
-    flex-direction: row;
-}
-/* Correction Background bouton */
-.rcn-iconButton {
-    background-color: transparent;
-}
+
 
 /* Ligne Cellule Titre */
 .rcn-tableRow__head {
-    /* border-bottom:var(--rcn-semantic-borderwidth-200) solid var(--rcn-semantic-color-static-border-standard); */
     border-style: solid;
     border-width: 0 0 var(--rcn-semantic-borderwidth-200) 0;
     border-color: var(--rcn-semantic-color-static-border-standard);
@@ -20,11 +12,14 @@
 /* Ligne de Cellule Data */
 .rcn-tableRow__cell {
     box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
 }
-.rcn-tableRow__cell:nth-of-type(even) {
+.rcn-tableRow__cell:nth-of-type(even), .rcn-tableRow__cell:nth-of-type(even) .rcn-tableData--sticked {
     background-color: var(--rcn-semantic-color-interaction-background-default-standard);
 }
-.rcn-tableRow__cell:nth-of-type(odd) {
+.rcn-tableRow__cell:nth-of-type(odd), .rcn-tableRow__cell:nth-of-type(odd) .rcn-tableData--sticked {
     background-color: var(--rcn-semantic-color-static-background-table_alternate_line);
 }
 
@@ -34,6 +29,7 @@
     border-right:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
     padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-200);
 }
+
 .rcn-tableHead:last-child {
     border-left:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
     border-right:none;
@@ -46,7 +42,19 @@
     display: flex;
     justify-content: space-between;
 }
-
+.rcn-tableHead__container span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.rcn-tableData--sticked {
+    position: sticky;
+    top:0;
+    left:0;
+    z-index: 10;
+    border-right: 1px solid red;
+    background-color: #fff;
+}
 /* Cellules de données */
 .rcn-tableCell {
     box-sizing: border-box;
@@ -57,6 +65,8 @@
     border-width: 0 var(--rcn-semantic-borderwidth-100);
     border-color: var(--rcn-semantic-color-static-border-standard);
     overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .rcn-tableRow__cell .rcn-tableCell:first-child {
@@ -65,9 +75,9 @@
 .rcn-tableRow__cell .rcn-tableCell:last-child {
     border-right:none;
 }
+
+/* Contenu des cellules */
 .rcn-tableCell__texte {
-    white-space: nowrap;
-    text-overflow: ellipsis;
     display: flex;
 }
 .rcn-tableCell__number {
@@ -87,4 +97,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+/* ==================== */
+/*      correction      */
+/* ==================== */
+
+/* Correction formulaire */
+.rcn-inputFieldBloc--inline {
+    flex-direction: unset;
+}
+/* Correction spécifique input */
+.rcn-inputField__input {
+    flex-grow: unset;
+}
+/* Correction Background bouton */
+.rcn-iconButton {
+    background-color: transparent;
 }
