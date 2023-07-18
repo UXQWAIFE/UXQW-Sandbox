@@ -31,6 +31,7 @@
     background-color: var(--rcn-semantic-color-interaction-background-default-standard);
     width: 100%;
     /* grid-area : filter;  > si mise au sein d'une grille sans overlay */
+    padding:
    }
 
    .rcn-filter--leftZone{
@@ -39,7 +40,7 @@
    
    }
 
-   .rcn-filterPartiel__zone{
+   .rcn-filterPartiel{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
