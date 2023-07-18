@@ -29,7 +29,8 @@ var cssFiles = [
     'ActionsBanner',
     'FilterModule' ,
     'SearchResultTemplate',
-    'collectionCards'
+    'collectionCards',
+    'formTemplate'
   ];
   
   var headElement = document.head;

@@ -1,5 +1,5 @@
 
-   /*------------- Grid ---------------*/
+   /*------------- Grid > mettre via le fichier temp une fois que c'est good ---------------*/
     
   
   /*Grid globale*/
@@ -60,24 +60,8 @@
 
 
     /*avec module de filtre - TEST*/
-
-    .rcn-filter__activeItems{
-        display: flex;
-        flex-direction: column;
-        gap:var(--rcn-semantic-gap-vertical-400);
-    }
     
-    .rcn-filter__chipsZone{
-    
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: var(--rcn-semantic-gap-vertical-200) var(--rcn-semantic-gap-horizontal-200);
-    }
-    
-    .rcn-filter{
-       
-        grid-area : filter;
-      
-       }
+  .rcn-filter{       
+    grid-area : filter;      
+  }
     
