@@ -164,4 +164,7 @@
 .rcn-inputFieldBloc--horizontal {
     flex-grow: unset;
 }
-
+/* Correction Pagination */
+.rcn-pagination__navList {
+    list-style: none;
+}
