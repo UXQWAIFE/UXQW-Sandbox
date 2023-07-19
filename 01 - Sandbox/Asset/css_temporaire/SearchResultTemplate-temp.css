@@ -1,131 +1,3 @@
-@import url('../../Asset/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
-
-@font-face {
-    font-family: 'RCNicon';
-    src: url(../../Asset/Font_icon/RCNicon.ttf);
-  }
-  @font-face {
-    font-family: 'Marianne';
-    src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
-  }
-  
-  /* reset  */
-  
-  body, legend {
-    font-family:'Marianne',Arial;
-    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
-  }
-  i {
-    font-style:normal;
-  }
-  li {
-    list-style-type: none;
-    text-align: unset;
-  }
-  ul {
-    padding:0px;
-  }
-  fieldset {
-    display: block;
-    margin-inline-start: 0 ;
-    margin-inline-end: 0px;
-    border: none;
-    padding-block-start: 0;
-    padding-inline-end: 0;
-    padding-block-end: 0;
-    padding-inline-start: 0;
-    min-inline-size: min-content;
-  }
-  legend {
-    padding-inline-start: 0; padding-inline-end: 0;
-  }
-  input[type="checkbox" i] {
-    margin: unset;
-  }
-  input[type="radio" i] {
-    margin: unset;
-  }
-  input {
-  padding: 0;
-  border: unset;
-  background: transparent;
-  font-size:unset;
-  appearance: unset;
-  -webkit-appearance: unset;
-  -moz-appearance: unset;
-  -ms-appearance: unset;
-  min-width:unset;
-  }
-  button{
-    font-family: unset;
-    background-color: transparent;
-    appearance: none;
-}
-
-  option {
-  padding: 0;
-  border: unset;
-  background: transparent;
-  font-size:unset;
-  appearance: unset;
-  -webkit-appearance: unset;
-  -moz-appearance: unset;
-  -ms-appearance: unset;
-  }
-  select {
-  padding: 0;
-  border: unset;
-  background: transparent;
-  font-size:unset;
-  }
-  select option {
-    line-height:1rem;
-  }
-  .sr-only
-  {   position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0); border: 0;
-  }
-  /*ne pas prendre dans l'Excel*/
-  /*.sr-only{
-    height :0px;
-    margin : 0;
-  }*/
-  .h1 {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-    font-weight: bold;
-    color:black;
-    margin-bottom: 24px;
-  }
-  .h2 {
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: bold;
-    color:black;
-    margin-bottom: 24px;
-  }
-  .h3 {
-    font-size: 1.8rem;
-    line-height: 2rem;
-    font-weight: bold;
-    color:black;
-    margin-bottom: 24px;
-  }
-
-  body{
-    margin:0;
-  }
-  
-  p {
-    margin:0;
-  }
-
-
 /*------------- Test en attendant pagination ---------------*/
 
 .rectangle-1{
@@ -206,146 +78,10 @@
 
 /*------------- Ajout du module de filtre en supperposé ---------------*/
 
-/*------------- Bottom Actions Banner ---------------*/
-/*Nouveau composant de navigation à porter à part*/
-
-
-.rcn-bottomActionsBanner{
-    display: flex;
-    flex-direction: row;
-    gap: var(--rcn-semantic-gap-horizontal-300);
-    border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
-    border-right : none;
-    border-left: none;
-    border-bottom:none;
-    padding: var(--rcn-semantic-padding-horizontal-400) 0;
-    flex-wrap: wrap;
-    }
-    
-    .rcn-bottomActionsBanner__primaryActions {
-    order: 2;
-    flex-grow: 1;
-    display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: var(--rcn-semantic-gap-horizontal-200);
-    width:auto;
-    }
-    
-    .rcn-bottomActionsBanner__secondaryActions {
-    order: 1;
-    justify-content: flex-start;
-    display:flex;
-    flex-direction: row;
-    gap: var(--rcn-semantic-gap-horizontal-200);
-    width:auto;
-    }
-    
-    .rcn-bottomActionsBanner .rcn-button--primary{
-        order:2;
-    }
-  
-
-  /*------------- test avec le module de filtre ---------------*/
-
-
-  /* .rcn-filter__activeItems{
-    display: flex;
-    flex-direction: column;
-    gap:var(--rcn-semantic-gap-vertical-400);
-}
-
-.rcn-filter__chipsZone{
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--rcn-semantic-gap-vertical-200) var(--rcn-semantic-gap-horizontal-200);
-}
-
-   .rcn-filter{
-    display: flex;
-    flex-direction: column;
-    gap:var(--rcn-semantic-gap-vertical-500);
-    padding : var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-600);
-    border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
-    border-right: var(--rcn-semantic-borderwidth-100) solid transparent;
-    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
-    width: 100%;
-   } */
-
-   /*Modifier si le module de filtre se position à gauche du contenu de la page (moins courant)*/
-
-   /* .rcn-filter--leftZone{
-    border-left:var(--rcn-semantic-borderwidth-100) solid transparent;
-    border-right : border-left: var(--rcn-semantic-borderwidth-100) solid blue;
-   }
-
-   .rcn-filterPartiel__zone{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
-    border-right: none;
-    border-left : none;
-    border-bottom : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
-    padding : var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-0);
-   }
-
-   .rcn-filter__chipsZone--partiel{
-    flex-wrap: none;
-   }
-
-   .rcn-filter__button{
-    order:-1;
-   }
-
-   .rcn-filter__button::before{
-    content:var(--rcn-semantic-typography-icon-rcn_icon-filter-content);
-
-   }
-
-   .rcn-filter_link{
-    display: flex;
-    align-self:flex-end;
-   }
-
-   .rcn-filter__separator{
-    height: var(--rcn-semantic-borderwidth-100);
-    background-color: var(--rcn-semantic-color-static-border-divider_regular);
-    width : auto;
-   }
-
-   .rcn-filter_criteriaZone{
-    display: flex;
-    flex-direction: column;
-    gap: var(--rcn-semantic-gap-vertical-500);
-   }
-
-   .rcn-filter__closeButton{
-    display:flex;
-    flex-direction: row;
-    align-items: baseline;
-    gap: var(--rcn-semantic-gap-horizontal-200);
-    align-self : flex-end;
-    background-color: none;
-    border:none;
-
-   }
-
-   .rcn-filter__icon::before{
-    content: var(--rcn-semantic-typography-icon-rcn_icon-close-content);
-  }
-
-  .rcn-filter__icon{
-   order:2;
-
-  } */
-
 
    /*------------- Grid ---------------*/
      
-  /*Grid globale*/
+  /*Grid globale  > à supp pendant le clean*/
   .rcn-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -358,7 +94,7 @@
 
 
   
-  /*Composants de la grille - TEST*/
+  /*Composants de la grille (Header - Footer) - TEST*/
   
   .item-a {
     display: flex;
@@ -381,144 +117,26 @@
     "searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule";
   }
 
-  /*TEST en ajoutant le module de filtres - class à ajouter aux grilles et au module de filtre?*/
+  /*TEST en ajoutant le module de filtres - class à ajouter aux grilles?*/
 
-  /* .rcn-grid--mainContentOverlayed{
+  .rcn-grid--mainContentOverlayed{
     position : relative;
-  } */
+  }
 
-  /* .rcn-filter--overlay{
-    grid-area: filter;
-    overflow: auto;
-    border-right:var(--rcn-semantic-borderwidth-100) solid transparent;
-    border-left : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
-   }
-
-   .rcn-filter--overlayLeft{
-    grid-area: filter;
-    overflow: auto;
-    border-left:var(--rcn-semantic-borderwidth-100) solid transparent;
-    border-right:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
-   } */
-
-  /* .rcn-grid--sideOverlayFilterTemplate {
+  .rcn-grid--sideOverlayFilterTemplate {
     position:absolute;
     top:0;
     left:0;
     display: grid;
     grid-template-areas: "filter filter filter fiter . . . . . . . .";
-    /* overflow: auto; */
+    overflow: auto;
     margin: 0;
     
-  } */
-
-
+  }
 
 /* ---------------------Ajout du bandeau de cookies pour tester ------------- */
 
-.rcn-cookiePanel{
-  display: flex;
-  flex-direction: column;
-  padding: var(--rcn-semantic-padding-vertical-700) 80px;
-  gap: var(--rcn-semantic-gap-vertical-600);
-  box-shadow: var(--rcn-semantic-dropshadow-static-detached);
-  background-color: var(--rcn-semantic-color-static-background-standard);
-  flex-wrap: wrap;
+.rcn-cookiePanel{ 
   z-index: 9999;
-  position: fixed;
-  bottom: 0;
-  box-sizing: border-box;
-  width: 100%;
+  position: fixed; 
 }
-
-
-.rcn-cookiePanel--banner{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between; 
-  align-items: stretch;   
-  gap: 0px;
-}
-
-
-
-.rcn-cookiePanel__actionZone{
-  display: flex;
-  flex-direction: row;
-  gap:var(--rcn-semantic-gap-horizontal-600);
-  flex-grow: 1;
-  justify-content: flex-end;
-  
-}
-
-
-.rcn-cookiePanel__textZone{
-  display: flex;
-  flex-grow:2;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: var(--rcn-semantic-gap-vertical-400);
-  margin-bottom: 16px;
-}
-
-.rcn-cookiePanel__section{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-bottom:  var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
-  padding-bottom: var(--rcn-semantic-padding-vertical-600);
-  flex-wrap: wrap;
-  gap: var(--rcn-semantic-gap-horizontal-400);
-
-}
-
-.rcn-cookiePanel__subSection{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: var(--rcn-semantic-gap-horizontal-400);
-  flex-wrap: wrap;  
-
-}
-
-.rcn-cookiePanel__section--cookieGroup{
-  flex-direction: column;
-
-}
-
-.rcn-cookiePanel__section--title {
-  border-bottom:  var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
-  flex-direction: column;
-  align-items: flex-start;
-
-}
-
-.rcn-cookiePanel__section--banner{
-
-  border-bottom: none;
-  flex-wrap: wrap;
-
-}
-
-.rcn-cookierPanel__section--last {
-  
-  border-bottom: none;
-  align-items: baseline;
-
-}
-
-.rcn-cookiePanel__button{
-  height: fit-content;
-  align-self: center;
-
-}
-
-
-.rcn-cookiePanel__linkZone {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-

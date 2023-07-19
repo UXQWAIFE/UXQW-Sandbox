@@ -117,6 +117,10 @@
 	#seeMore {
 		position:relative;
 	}
+	#colonnesContainer {
+		display:flex;
+		gap:1.5rem;
+	}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 
@@ -142,7 +146,7 @@
 				if ($element === '.' || $element === '..') {
 					continue;
 				}
-			
+
 				$elementPath = $directory . $element;
 			
 				if (is_dir($elementPath)) {

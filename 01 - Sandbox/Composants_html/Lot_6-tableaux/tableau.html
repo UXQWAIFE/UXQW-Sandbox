@@ -1,0 +1,231 @@
+<h2>Résultat du tableau :</h2>
+<p>Fonctionnalités de l'en-tête :  Recherche Actions globales (dont export) Pagination</p>
+<p>Fonctionnalités de colonne :  Colonne Fixe Colonne Filtrable Colonne Action</p>
+<p>Fonctionnalités de ligne :  Ligne dépliable Ligne Sélectionnable</p>
+<div class='rcn-tableContainer'>
+  <div class='rcn-preTable'>
+    <h1 id='TitreTable'>Tableau de donnée  - Général</h1> 
+    <a title='Aller au pied du tableau' id='#RetourHTable' href='#RetourBTable'>
+      Aller au bas du tableau 
+      <i class='rcn-icon rcn-icon--mdi-arrow-down'></i>
+    </a>
+  </div>
+  
+    <div class='rcn-preTable__fontcionnalite'>
+      
+      <p class="rcn-preTable__paginationTop" aria-live="polite">
+        <span>1-3</span>
+        sur 
+        <span>32</span>
+        <span>entités</span> 
+        affichées
+      </p>
+      <div class="rcn-preTable__zoneAction">
+          <div class="rcn-preTable__ActionGlob">
+            <button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
+              <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
+              Réinitialiser les filtres
+            </button>
+            <button class="rcn-button rcn-button--primary" title="Exporter le tableau en format CSV" >
+              <i class="rcn-icon rcn-icon--mdi-arrowCollapseDown" aria-hidden="true"></i>
+              Exporter le tableau
+            </button>
+          </div>
+        
+        <div id="tableRecherche" class="rcn-preTable__search ">
+            <form action="" role="search">
+              <label class="rcn-inputFieldBloc__label sr-only">Search and reset</label>
+              <div class="rcn-inputField">
+                  <input placeholder="Rechercher..." class="rcn-inputField__input">
+                  <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+                      <span class="sr-only"></span>
+                  </button>
+                  <div class="rcn-inputField__buttonSeparator"></div>
+                  <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                      <span class="sr-only"></span>
+                  </button>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <table class='rcn-table'>
+<thead class='rcn-tableRow'>
+<tr class='rcn-tableRow__head'>
+<th class='rcn-tableData--sticked rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>Colonne 1 (Fixe - Première)</span>
+                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class=''>Filtrer</span>
+                      </button>
+                    </div>
+                  </th>
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>Colonne 2</span>
+                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class=''>Filtrer</span>
+                      </button>
+                    </div>
+                  </th>
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>Colonne 3</span>
+                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class=''>Filtrer</span>
+                      </button>
+                    </div>
+                  </th>
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>Colonne 4</span>
+                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class=''>Filtrer</span>
+                      </button>
+                    </div>
+                  </th>
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>Colonne 5</span>
+                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class=''>Filtrer</span>
+                      </button>
+                    </div>
+                  </th>
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>Colonne 6</span>
+                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class=''>Filtrer</span>
+                      </button>
+                    </div>
+                  </th>
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>Colonne 7</span>
+                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class=''>Filtrer</span>
+                      </button>
+                    </div>
+                  </th>
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>Colonne 8</span>
+                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                        <span class=''>Filtrer</span>
+                      </button>
+                    </div>
+                  </th>
+</tr>
+</thead>
+<tbody class='rcn-tableRow'>
+<tr class='rcn-tableRow__cell'>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__unfold'>Ligne 1, Colonne 2 (Bouton dépliable)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 1, Colonne 4 (Nombre)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__link'>Ligne 1, Colonne 5 (Lien)</div></td>
+<td class='rcn-tableCell  '>Ligne 1, Colonne 6</td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 1, Colonne 7 (Icône)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
+</tr>
+<tr class='rcn-tableRow__cell'>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__unfold'>Ligne 2, Colonne 2 (Bouton dépliable)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 2, Colonne 4 (Nombre)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__link'>Ligne 2, Colonne 5 (Lien)</div></td>
+<td class='rcn-tableCell  '>Ligne 2, Colonne 6</td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 2, Colonne 7 (Icône)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
+</tr>
+<tr class='rcn-tableRow__cell'>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__unfold'>Ligne 3, Colonne 2 (Bouton dépliable)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 3, Colonne 4 (Nombre)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__link'>Ligne 3, Colonne 5 (Lien)</div></td>
+<td class='rcn-tableCell  '>Ligne 3, Colonne 6</td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 3, Colonne 7 (Icône)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
+</tr>
+<tr class='rcn-tableRow__cell'>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__unfold'>Ligne 4, Colonne 2 (Bouton dépliable)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 4, Colonne 4 (Nombre)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__link'>Ligne 4, Colonne 5 (Lien)</div></td>
+<td class='rcn-tableCell  '>Ligne 4, Colonne 6</td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 4, Colonne 7 (Icône)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
+</tr>
+<tr class='rcn-tableRow__cell'>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__unfold'>Ligne 5, Colonne 2 (Bouton dépliable)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 5, Colonne 4 (Nombre)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__link'>Ligne 5, Colonne 5 (Lien)</div></td>
+<td class='rcn-tableCell  '>Ligne 5, Colonne 6</td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 5, Colonne 7 (Icône)</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
+</tr>
+</tbody>
+</table>
+
+        <div class="rcn-pagination__navLine">
+          <div>
+              1-4 sur 23 résultats
+          </div>
+          <nav>
+              <ol class="rcn-pagination__navList">
+                  <li>
+                      <a title="Retour à la page précédente " class="rcn-link rcn-pagination__navLinks" href="#">
+                          <i class="rcn-icon rcn-pagination__previousIcon"></i>
+                          Précédent
+                      </a>
+                  </li>
+                  <li>
+                      <a aria-current="page" class="rcn-link rcn-pagination__navLinks" title="Naviguer à la page 1" href="#">1</a>
+                  </li>
+                  <li>
+                      <a title="Naviguer à la page 2" class="rcn-link rcn-pagination__navLinks" href="#">2</a>
+                  </li>
+                  <li>
+                      <p>...</p>
+                  </li>
+                  <li>
+                      <a title="Naviguer à la page 4" class="rcn-link rcn-pagination__navLinks" href="#">4</a>
+                  </li>
+                  <li>
+                      <a title="Naviguer à la page 5" class="rcn-link rcn-pagination__navLinks" href="#">5</a>
+                  </li>
+                  <li>
+                      <a title="Aller à la page suivante" href="#" class="rcn-link rcn-pagination__navLinks"> 
+                          Suivant 
+                          <i class="rcn-icon rcn-pagination_nextIcon">
+                          </i>
+                      </a>
+                  </li>
+              </ol>
+          </nav>
+          <div class="rcn-inputFieldBloc rcn-inputFieldBloc--horizontal">        
+              <label for="goToPage" class="rcn-inputFieldBloc__label rcn-pagination__label">Aller à la page</label>
+              <div class="rcn-inputField">
+                  <select name="goToPage" class="rcn-inputField__input rcn-inputField__input--select">
+                      <option class="rcn-inputField__option" value="">1</option>
+                      <option class="rcn-inputField__option" value="">2</option>
+                      <option class="rcn-inputField__option" value="">3</option>
+                      <option class="rcn-inputField__option" value="">4</option>
+                      <option class="rcn-inputField__option" value="">5</option>
+                  </select>
+                  <button type="submit" class="rcn-iconButton rcn-icon rcn-pagination__goToPageButton"></button>
+              </div>
+          </div>
+
+      </div>
+      
+  <div id='RetourBTable' class='rcn-postTable'>
+    <a title='Retour en haut du tableau' href='#RetourHTable'>Aller au sommet du tableau 
+      <i class='rcn-icon rcn-icon--mdi-arrow-up'></i>
+    </a>
+  </div></div>
