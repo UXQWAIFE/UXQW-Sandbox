@@ -1,25 +1,5 @@
-/*----------- A ajouter selon moi aux boutons--------- */
-/* Cas d'usage : en responsive dans le bandeau de module de filtre le boutton s'élargie en hauteur */
-
-.rcn-button{
-    height: fit-content;
-}
-
 /*----------- Module de filtre--------- */
 
-.rcn-filter__activeItems{
-    display: flex;
-    flex-direction: column;
-    gap:var(--rcn-semantic-gap-vertical-400);
-}
-
-.rcn-filter__chipsZone{
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--rcn-semantic-gap-vertical-200) var(--rcn-semantic-gap-horizontal-200);
-}
 
 .rcn-filter{
     display: flex;
@@ -31,8 +11,7 @@
     background-color: var(--rcn-semantic-color-interaction-background-default-standard);
     width: 100%;
     /* grid-area : filter;  > si mise au sein d'une grille sans overlay */
-    padding:
-   }
+  }
 
    .rcn-filter--leftZone{
     border-left:none;
@@ -40,8 +19,9 @@
    
    }
 
-   .rcn-filterPartiel{
-    display: flex;
+
+   .rcn-filter--partiel{
+     /* Lié à la déclinaison module de filtre partiel */    
     flex-direction: row;
     justify-content: space-between;
     border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
@@ -49,23 +29,9 @@
     border-left : none;
     border-bottom : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
     padding : var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-0);
-   }
-
- 
-
-   .rcn-filter__button{
-    order:-1;
-   }
-
-   .rcn-filter__button::before{
-    content:var(--rcn-semantic-typography-icon-rcn_icon-filter-content);
-
-   }
-
-   .rcn-filter_link{
-    display: flex;
-    align-self:flex-end;
-   }
+    align-items: baseline;
+    flex-wrap: wrap;  
+   } 
 
    .rcn-filter__separator{
     height: var(--rcn-semantic-borderwidth-100);
@@ -79,6 +45,27 @@
     gap: var(--rcn-semantic-gap-vertical-500);
    }
 
+   .rcn-filter__activeItems{
+    display: flex;
+    flex-direction: column;
+    gap:var(--rcn-semantic-gap-vertical-400);
+}
+
+  .rcn-filter__activeItems--partiel{
+    
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: wrap;
+   
+   }
+
+   .rcn-filter__chipsZone{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--rcn-semantic-gap-vertical-200) var(--rcn-semantic-gap-horizontal-200);
+}
+
    .rcn-filter__closeButton{
     display:flex;
     flex-direction: row;
@@ -91,16 +78,36 @@
 
    }
 
-   .rcn-filter__icon::before{
+   .rcn-filter__iconClose::before{
     content: var(--rcn-semantic-typography-icon-rcn_icon-close-content);
   }
 
-  .rcn-filter__icon{
+  .rcn-filter__iconClose{
    order:2;
 
   }
 
-   /*Modifier au module de filtre lorsqu'il se supperpose au contenu de la page*/
+  .rcn-filter_actionZone{
+    border-left: solid var(--rcn-semantic-borderwidth-100) var(--rcn-semantic-color-static-border-divider_regular);
+    padding-left: var(--rcn-semantic-padding-horizontal-400);
+
+  }
+
+  .rcn-filter__icon{
+    order:-1;
+   }
+    
+   .rcn-filter__icon::before{
+    content:var(--rcn-semantic-typography-icon-rcn_icon-filter-content);
+
+   }
+
+   .rcn-filter_link{
+    display: flex;
+    align-self:flex-end;
+   }
+
+   /*------Cas pratique : le module de filtre se supperpose au contenu de la page------------*/
 
    .rcn-grid--mainContentOverlayed{
     position : relative;
@@ -109,6 +116,7 @@
   .rcn-filter--overlay{
     grid-area: filter;
     overflow: auto;
+    background-color: aliceblue;
     border-right:var(--rcn-semantic-borderwidth-100) solid transparent;
     border-left : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
    }
@@ -125,6 +133,5 @@
     display: grid;
     grid-template-areas: "filter filter filter fiter . . . . . . . .";
     overflow: auto;
-    margin: 0;
-    
+    margin: 0;    
   }

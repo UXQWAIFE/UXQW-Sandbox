@@ -1,5 +1,7 @@
 
-
+.rcn-button{
+  height: fit-content;
+}
   
   .rcn-iconButton {
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard); /*ajouté au Excel ==> OK*/

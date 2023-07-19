@@ -81,7 +81,7 @@
 
    /*------------- Grid ---------------*/
      
-  /*Grid globale  > à supp pendant le clean*/
+  /*Grid globale  > à supp quand grid sera  clean*/
   .rcn-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -91,8 +91,6 @@
     margin : 0 5rem;
     height: 100%;
   }
-
-
   
   /*Composants de la grille (Header - Footer) - TEST*/
   
@@ -119,9 +117,10 @@
 
   /*TEST en ajoutant le module de filtres - class à ajouter aux grilles?*/
 
-  .rcn-grid--mainContentOverlayed{
+  /* .rcn-grid--mainContentOverlayed{
     position : relative;
   }
+
 
   .rcn-grid--sideOverlayFilterTemplate {
     position:absolute;
@@ -132,7 +131,7 @@
     overflow: auto;
     margin: 0;
     
-  }
+  } */
 
 /* ---------------------Ajout du bandeau de cookies pour tester ------------- */
 
