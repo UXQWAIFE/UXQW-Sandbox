@@ -1,10 +1,12 @@
 <?php
   session_start();
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+  print_r($_SESSION);
   // Récupérer les données du formulaire
   $nombreColonnes = $_POST["nombreColonnes"];
   $nombreLignes = $_POST["nombreLignes"];
+  $Lig_depliable_nbr = $_POST["Lig_depliable_nbr"];
   
   // Récupérer les options des fonctionnalités
   $ET_Searchable = isset($_POST["ET_Searchable"]);
@@ -26,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $_SESSION['Col_filtre'] = $Col_filtre;
   $_SESSION['Col_action'] = $Col_action;
   $_SESSION['Lig_depliable'] = $Lig_depliable;
+  $_SESSION['Lig_depliable_nbr'] = $Lig_depliable_nbr;
   $_SESSION['Lig_select'] = $Lig_select;
   
   // Tableau de correspondance des types de données par colonne
@@ -95,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                       </button>";
       $classThead = 'rcn-tableHeads';
     }
-    $_SESSION["Dump"] = var_dump($col);
+    
     if ($Col_fix) {
       if ($Col_fix && $col === 1) {
         $colHeader .= " (Fixe - Première)";
@@ -118,61 +121,73 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $tableHTML .= "</tr>\n";
   $tableHTML .= "</thead>\n";
   $tableHTML .= "<tbody class='rcn-tableRow'>\n";
+  if($Lig_depliable && isset($Lig_depliable_nbr)) {
+
+    $Lig_depliable_nbrVal = $_POST['Lig_depliable_nbr'];
+    $nombreLignes = $nombreLignes + $Lig_depliable_nbr;
+  }
   for ($row = 1; $row <= $nombreLignes; $row++) {
-    $tableHTML .= "<tr class='rcn-tableRow__cell'>\n";
-    for ($col = 1; $col <= $nombreColonnes; $col++) {
-      $rowData = "Ligne $row, Colonne $col";
-      if($Col_fix && $col === 1) {
-        $stickedClass = "rcn-tableData--sticked";
-      }else{
-        $stickedClass = "";
-      }
-      // Récupérer le type de donnée pour cette colonne
-      $typeDonnee = $typesDonnees[$col];
-  
-      // Ajouter les fonctionnalités en fonction du type de donnée sélectionné
-      switch ($typeDonnee) {
-        case "texte":
-          // Aucune fonctionnalité supplémentaire pour le texte
-          $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
-          break;
-        case "nombre":
-          $rowData .= " (Nombre)";
-          $rowData = "<div class='rcn-tableCell__number'>$rowData</div>";
-          break;
-        case "lien":
-          $rowData .= " (Lien)";
-          $rowData = "<div class='rcn-tableCell__link'>$rowData</div>";
-          break;
-        case "icone":
-          $rowData .= " (Icône)";
-          $rowData = "<div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum $rowData</div>";
-          break;
-        case "bouton_selection":
-          $rowData .= " (Bouton de sélection)";
-          if($Col_fix) {
-            $stickedClass = "rcn-tableData--sticked";
-          }
-          $rowData = "<div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div>";
-          break;
-        case "bouton_depliable":
-          $rowData .= " (Bouton dépliable)";
-          $rowData = "<div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div>";
-          break;
-        case "bouton_action":
-          $rowData .= " (Bouton d'action)";
-          if($Col_fix) {
-            $stickedClass = "rcn-tableData--sticked";
-          }
-          $rowData = "<div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div>";
-          break;
-      }
-      if (!$typeDonnee) {
-        $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
-      }
-  
-      $tableHTML .= "<td class='rcn-tableCell ". $stickedClass ." '>$rowData</td>\n";
+    $foldedRow ='';
+    if ($row === 1) {
+      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--fold'>\n $foldedRow";
+      $folded = 0;
+    } else if ($row > 1 && $row <= $Lig_depliable_nbr + 1) {
+      $foldedRow .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded sr-only'>\n";
+      $folded = 1;
+    } else {
+      $tableHTML .= "<tr class='rcn-tableRow__cell'>\n";
+      $folded = 0;
     }
+      for ($col = 1; $col <= $nombreColonnes; $col++) {
+        $rowData = "Ligne $row, Colonne $col";
+        $stickedClass = "";
+        if($Col_fix && ($col === 1 || $col == $nombreColonnes)) {
+          $stickedClass .= "rcn-tableData--sticked";
+        }
+        // Récupérer le type de donnée pour cette colonne
+        $typeDonnee = $typesDonnees[$col];
+    
+        // Ajouter les fonctionnalités en fonction du type de donnée sélectionné
+        switch ($typeDonnee) {
+          case "texte":
+            // Aucune fonctionnalité supplémentaire pour le texte
+            $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
+            break;
+          case "nombre":
+            $rowData .= " (Nombre)";
+            $rowData = "<div class='rcn-tableCell__number'>$rowData</div>";
+            break;
+          case "lien":
+            $rowData .= " (Lien)";
+            $rowData = "<div class='rcn-tableCell__link'>$rowData</div>";
+            break;
+          case "icone":
+            $rowData .= " (Icône)";
+            $rowData = "<div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum $rowData</div>";
+            break;
+          case "bouton_selection":
+            $rowData .= " (Bouton de sélection)";
+            $rowData = "<div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div>";
+            break;
+          case "bouton_depliable":
+            $rowData .= " (Bouton dépliable)";
+            if($folded === 1){
+              $rowData = "";
+            }else{
+              $rowData = "<div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div>";
+            }
+            break;
+          case "bouton_action":
+            $rowData .= " (Bouton d'action)";
+            $rowData = "<div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div>";
+            break;
+        }
+        if (!$typeDonnee) {
+          $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
+        }
+        $tableHTML .= "<td class='rcn-tableCell ". $stickedClass ." '>$rowData</td>\n";
+      }
+    
     $tableHTML .= "</tr>\n";
   }
   $tableHTML .= "</tbody>\n";
@@ -195,7 +210,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         affichées
       </p>
       ';
-      $footerPagination .= '
+      $footerPagination = '
         <div class="rcn-pagination__navLine">
           <div>
               1-4 sur 23 résultats
@@ -297,7 +312,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $resultat .= "<p>Fonctionnalités de l'en-tête : $fonctionnalitesEnTete</p>\n";
   $resultat .= "<p>Fonctionnalités de colonne : $fonctionnalitesColonne</p>\n";
   $resultat .= "<p>Fonctionnalités de ligne : $fonctionnalitesLigne</p>\n";
-  $resultat .= $dump;
+
   $resultat .= "<div class='rcn-tableContainer'>"; 
   $resultat .= "
   <div class='rcn-preTable'>
@@ -334,5 +349,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <!-- Rediriger vers la page principale après le traitement du formulaire -->
 <script>
-  window.location.href = "index.php";
+   window.location.href = "index.php";
 </script>
