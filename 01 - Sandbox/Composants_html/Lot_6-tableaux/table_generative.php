@@ -1,9 +1,11 @@
 <?php
+  session_start();
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
   // Récupérer les données du formulaire
   $nombreColonnes = $_POST["nombreColonnes"];
   $nombreLignes = $_POST["nombreLignes"];
-
+  
   // Récupérer les options des fonctionnalités
   $ET_Searchable = isset($_POST["ET_Searchable"]);
   $ET_Action = isset($_POST["ET_Action"]);
@@ -13,14 +15,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $Col_action = isset($_POST["Col_action"]);
   $Lig_depliable = isset($_POST["Lig_depliable"]);
   $Lig_select = isset($_POST["Lig_select"]);
-
+  
+  // Enregistrer les valeurs dans la session
+  $_SESSION['nombreColonnes'] = $nombreColonnes;
+  $_SESSION['nombreLignes'] = $nombreLignes;
+  $_SESSION['ET_Searchable'] = $ET_Searchable;
+  $_SESSION['ET_Action'] = $ET_Action;
+  $_SESSION['ET_Pagination'] = $ET_Pagination;
+  $_SESSION['Col_fix'] = $Col_fix;
+  $_SESSION['Col_filtre'] = $Col_filtre;
+  $_SESSION['Col_action'] = $Col_action;
+  $_SESSION['Lig_depliable'] = $Lig_depliable;
+  $_SESSION['Lig_select'] = $Lig_select;
+  
   // Tableau de correspondance des types de données par colonne
   $typesDonnees = [];
+ 
 
   for ($col = 1; $col <= $nombreColonnes; $col++) {
     $typeDonnee = $_POST["typeDonnee".$col];
     $typesDonnees[$col] = $typeDonnee;
+    $_SESSION['typesDonnee'][$col] = $typesDonnees[$col];
   }
+  
   // Variables pour les fonctionnalités sélectionnées
   $fonctionnalitesEnTete = "";
   $fonctionnalitesColonne = "";
@@ -58,36 +75,40 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $tableHTML = "<table class='rcn-table'>\n";
   $tableHTML .= "<thead class='rcn-tableRow'>\n";
   $tableHTML .= "<tr class='rcn-tableRow__head'>\n";
+  
   for ($col = 1; $col <= $nombreColonnes; $col++) {
     $colHeader = "Colonne $col";
 
     // Ajouter les fonctionnalités sélectionnées aux en-têtes de colonne
-    if ($Col_fix) {
-      if ($Col_fix && $col === 1) {
-        $colHeader .= " (Fixe - Première)";
-        $stickedClass = "rcn-tableData--sticked";
-      }else {
-        $stickedClass = "";
-      }
-      if ($Col_fix && $col === $nombreColonnes ) {
-        $colHeader .= " (Fixe - Dernière)";
-        $stickedClass = "rcn-tableData--sticked";
-      }
-    }
     if ($Col_action && $Col_fix && $col === $nombreColonnes) {
       $colHeader .= " (Action)";
+      $classThead = 'rcn-tableHead';
     }
     if($Col_filtre) {
       $FiltrableCol = "<button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
                         <span class=''>Filtrer</span>
                       </button>";
+      $classThead = 'rcn-tableHead';
     }else{
       $FiltrableCol = "<button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
                         <span class='sr-only'>Filtrer</span>
                       </button>";
+      $classThead = 'rcn-tableHeads';
+    }
+    $_SESSION["Dump"] = var_dump($col);
+    if ($Col_fix) {
+      if ($Col_fix && $col === 1) {
+        $colHeader .= " (Fixe - Première)";
+        $classThead = 'rcn-tableHead rcn-tableHead--action rcn-tableData--sticked';
+      }
+      if ($Col_fix && $col == $nombreColonnes ) {
+        $colHeader .= " (Fixe - Dernière)";
+        $classThead = "rcn-tableHead rcn-tableHead--action rcn-tableData--sticked";
+      }
     }
 
-    $tableHTML .= "<th class='". $stickedClass ." rcn-tableHead' scope='col' aria-sort=''>
+
+    $tableHTML .= "<th class='". $classThead ."' scope='col' aria-sort=''>
                     <div class='rcn-tableHead__container'>
                       <span class=''>$colHeader</span>
                       $FiltrableCol
@@ -129,14 +150,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
           break;
         case "bouton_selection":
           $rowData .= " (Bouton de sélection)";
+          if($Col_fix) {
+            $stickedClass = "rcn-tableData--sticked";
+          }
           $rowData = "<div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div>";
           break;
         case "bouton_depliable":
           $rowData .= " (Bouton dépliable)";
-          $rowData = "<div class='rcn-tableCell__unfold'>$rowData</div>";
+          $rowData = "<div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div>";
           break;
         case "bouton_action":
           $rowData .= " (Bouton d'action)";
+          if($Col_fix) {
+            $stickedClass = "rcn-tableData--sticked";
+          }
           $rowData = "<div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div>";
           break;
       }
@@ -270,6 +297,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $resultat .= "<p>Fonctionnalités de l'en-tête : $fonctionnalitesEnTete</p>\n";
   $resultat .= "<p>Fonctionnalités de colonne : $fonctionnalitesColonne</p>\n";
   $resultat .= "<p>Fonctionnalités de ligne : $fonctionnalitesLigne</p>\n";
+  $resultat .= $dump;
   $resultat .= "<div class='rcn-tableContainer'>"; 
   $resultat .= "
   <div class='rcn-preTable'>
@@ -302,16 +330,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   // Enregistrer le résultat dans un fichier
   file_put_contents("tableau.html", $resultat);
 }
-// on renvoie les data pour plus de simplicité
-
-$_SESSION['ET_Searchable'] = isset($_POST["ET_Searchable"]);
-$_SESSION['ET_Action'] = isset($_POST["ET_Action"]);
-$_SESSION['ET_Pagination'] = isset($_POST["ET_Pagination"]);
-$_SESSION['Col_fix'] = isset($_POST["Col_fix"]);
-$_SESSION['Col_filtre'] = isset($_POST["Col_filtre"]);
-$_SESSION['Col_action'] = isset($_POST["Col_action"]);
-$_SESSION['Lig_depliable'] = isset($_POST["Lig_depliable"]);
-$_SESSION['Lig_select'] = isset($_POST["Lig_select"]);
 ?>
 
 <!-- Rediriger vers la page principale après le traitement du formulaire -->

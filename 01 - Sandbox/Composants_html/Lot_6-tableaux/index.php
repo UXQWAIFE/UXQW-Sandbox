@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<?php session_start(); ?>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="asset/RCN-DesignSystem/assets/reset.css">
 	<link rel="stylesheet" href="asset/RCN-DesignSystem/assets/styles-ChorusPro.css">
 	<link rel="stylesheet" href="asset/data-form/table_general.css">
 	<link rel="stylesheet" href="asset/data-form/table_structure.css">
@@ -118,14 +120,34 @@
 		position:relative;
 	}
 	#colonnesContainer {
-		display:flex;
-		gap:1.5rem;
+		display: flex;
+		gap: 1.5rem;
+		flex-wrap: wrap;
+		max-width: 80vw;
 	}
 </style>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css">
 
 </head>
 <body>
+<?php
+
+// Récupérer les valeurs depuis la session
+$nombreColonnes = isset($_SESSION['nombreColonnes']) ? $_SESSION['nombreColonnes'] : '';
+$nombreLignes = isset($_SESSION['nombreLignes']) ? $_SESSION['nombreLignes'] : '';
+$ET_Searchable = isset($_SESSION['ET_Searchable']) ? $_SESSION['ET_Searchable'] : '';
+$ET_Action = isset($_SESSION['ET_Action']) ? $_SESSION['ET_Action'] : '';
+$ET_Pagination = isset($_SESSION['ET_Pagination']) ? $_SESSION['ET_Pagination'] : '';
+$Col_fix = isset($_SESSION['Col_fix']) ? $_SESSION['Col_fix'] : '';
+$Col_filtre = isset($_SESSION['Col_filtre']) ? $_SESSION['Col_filtre'] : '';
+$Col_action = isset($_SESSION['Col_action']) ? $_SESSION['Col_action'] : '';
+$Lig_depliable = isset($_SESSION['Lig_depliable']) ? $_SESSION['Lig_depliable'] : '';
+$Lig_select = isset($_SESSION['Lig_select']) ? $_SESSION['Lig_select'] : '';
+
+// Supprimer les valeurs de la session une fois récupérées (facultatif)
+print_r($_SESSION);
+
+?>
     <section>
         <a href="../">Retour en arriere</a>
     </section>
@@ -186,67 +208,66 @@
 	</section>
 	<button id="hideHeader">hide me</button>
 	<main>
-		<form action="table_generative.php" method="POST">
-			<div class="rcn-inputFieldBloc rcn-inputFieldBloc--inline">
-				<div class="rcn-inputField">
-					<input class="rcn-inputField__input" type="number" id="nombreColonnes" name="nombreColonnes" placeholder="Nombre de colonnes">
-				</div>	
-				<div class="rcn-inputField">
-					<input class="rcn-inputField__input" type="number" id="nombreLignes" name="nombreLignes" placeholder="Nombre de lignes">
-				</div>
-				<button class="rcn-button rcn-button--secondary" type="button" onclick="genererListesDeroulantes()">Générer les listes déroulantes</button>
+	<form action="table_generative.php" method="POST">
+		<div class="rcn-inputFieldBloc rcn-inputFieldBloc--inline">
+			<div class="rcn-inputField">
+			<input value="<?php echo isset($_SESSION['nombreColonnes']) ? $_SESSION['nombreColonnes'] : ''; ?>" class="rcn-inputField__input" type="number" id="nombreColonnes" name="nombreColonnes" placeholder="Nombre de colonnes">
+			</div>  
+			<div class="rcn-inputField">
+			<input value="<?php echo isset($_SESSION['nombreLignes']) ? $_SESSION['nombreLignes'] : ''; ?>" class="rcn-inputField__input" type="number" id="nombreLignes" name="nombreLignes" placeholder="Nombre de lignes">
 			</div>
-			
+			<button class="rcn-button rcn-button--secondary" type="button" onclick="genererListesDeroulantes()">Générer les listes déroulantes</button>
+		</div>
 
-			<div id="colonnesContainer"></div>
+		<div id="colonnesContainer"></div>
 
-			<fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
-				<legend>En tête</legend>
-				
-				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="ET_Searchable">Recherche ?
-					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="ET_Searchable" id="ET_Searchable">
-				</label>
+		<fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+			<legend>En tête</legend>
 
-				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="ET_Action">Actions globales (dont export) ?
-					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="ET_Action" id="ET_Action">
-				</label>
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="ET_Searchable">Recherche ?
+			<input <?php echo isset($_SESSION['ET_Searchable']) && $_SESSION['ET_Searchable'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="ET_Searchable" id="ET_Searchable">
+			</label>
 
-				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="ET_Pagination" >Pagination ?
-					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="ET_Pagination" id="ET_Pagination">
-				</label>
-			</fieldset>
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="ET_Action">Actions globales (dont export) ?
+			<input <?php echo isset($_SESSION['ET_Action']) && $_SESSION['ET_Action'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="ET_Action" id="ET_Action">
+			</label>
 
-			<Fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio" >
-				<legend>Action de colonne</legend>
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="ET_Pagination" >Pagination ?
+			<input <?php echo isset($_SESSION['ET_Pagination']) && $_SESSION['ET_Pagination'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="ET_Pagination" id="ET_Pagination">
+			</label>
+		</fieldset>
 
-				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_fix">Colonne Fixe ?
-					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_fix" id="Col_fix">
-				</label>
+		<fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+			<legend>Action de colonne</legend>
 
-				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_filtre">Colonne Filtrable ?
-					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_filtre" id="Col_filtre">
-				</label>
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_fix">Colonne Fixe ?
+			<input <?php echo isset($_SESSION['Col_fix']) && $_SESSION['Col_fix'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_fix" id="Col_fix">
+			</label>
 
-				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_action">Colonne Action ?
-					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_action" id="Col_action">
-				</label>
-			</Fieldset>
-			
-			<Fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio" >
-				<legend>Action de ligne</legend>
-				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Lig_depliable">Ligne dépliable ?
-					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Lig_depliable" id="Lig_depliable">
-				</label>
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_filtre">Colonne Filtrable ?
+			<input <?php echo isset($_SESSION['Col_filtre']) && $_SESSION['Col_filtre'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_filtre" id="Col_filtre">
+			</label>
 
-				<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Lig_select">Ligne Selectionnable ?
-					<input class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Lig_select" id="Lig_select">
-				</label>
-			</Fieldset>
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_action">Colonne Action ?
+			<input <?php echo isset($_SESSION['Col_action']) && $_SESSION['Col_action'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_action" id="Col_action">
+			</label>
+		</fieldset>
 
+		<fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+			<legend>Action de ligne</legend>
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Lig_depliable">Ligne dépliable ?
+			<input <?php echo isset($_SESSION['Lig_depliable']) && $_SESSION['Lig_depliable'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Lig_depliable" id="Lig_depliable">
+			</label>
 
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Lig_select">Ligne Selectionnable ?
+			<input <?php echo isset($_SESSION['Lig_select']) && $_SESSION['Lig_select'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Lig_select" id="Lig_select">
+			</label>
+		</fieldset>
 
-			<button class="rcn-button rcn-button--primary" type="submit">Créer le tableau</button>
-		</form>
+		<button class="rcn-button rcn-button--primary" type="submit">Créer le tableau</button>
+	</form>
+
+		
 	<section class="table_holder">
 		
 		<?php
@@ -306,6 +327,7 @@
 					fieldset.appendChild(div);
 					colonnesContainer.appendChild(fieldset);
 				}
+
 			}
 	</script>
 </body>
