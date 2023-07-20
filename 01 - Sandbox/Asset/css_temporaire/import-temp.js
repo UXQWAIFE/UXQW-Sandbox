@@ -32,7 +32,8 @@ var cssFiles = [
     'collectionCards',
     'formTemplate',
     'searchResultModule',
-    'filterModulePage'
+    'filterModulePage',
+    'menu'
   ];
   
   var headElement = document.head;

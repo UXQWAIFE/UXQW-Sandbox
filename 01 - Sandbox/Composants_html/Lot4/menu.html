@@ -1,142 +1,74 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+    <meta charset ="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="menu.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="../../RCN-DesignSystem/assets/styles-ChorusPro.css" rel="stylesheet">
+    <link href="../../Asset/Resets.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../Asset/css_temporaire/*.css">
     <title>Document</title>
 </head>
+
 <body class="body">
- <nav class="rcn-header__mainNavBanner rcn-grid__margins">
 
-  <ul class="rcn-menu rcn-header__menu">
+  <nav class="rcn-header__mainNavBanner rcn-grid__margins">
 
-<!-- Entrée Accueil  -->
-    <li class="rcn-menu__entry rcn-menu__entry--current"><a class="rcn-link rcn-menu__entryLink" href="#home" aria-current='page'>Accueil</a></li>
-
-<!-- Entrée sans sous menu  -->
-    <li class="rcn-menu__entry">
-        <a href="#home" class="rcn-link rcn-menu__entryLink">Sans sous-menu</a>
-    </li>
-
-
-
-<!-- Entrée avec sous-menu  -->
-    <li>
-
-      <div class="rcn-menu__entry">
-        <a href="#services" class="rcn-link rcn-menu__entryLink">Avec sous-menu</a>
-        <button class="rcn-icon rcn-iconButton rcn-menu__entryButton"></button>
-      </div>
-
-      <ul class="rcn-menu__submenu" aria-hidden="false">
-        <li class="rcn-menu__subentry" ><a> Page trop cool </a></li>
-        <li class="rcn-menu__subentry"><a> Ceci est une autre page </a></li>
-        <li class="rcn-menu__subentry rcn-menu__subentry__current" ><a aria-current='page'> Méthodologie est perspectives</a></li>
-      </ul>
-
-    </li>
-
-<!-- Entrée lien externe  -->
-     <li class="rcn-menu__entry">
-        <a href="#home" class="rcn-link rcn-menu__entryLink">Externe<i class="rcn-icon rcn-link__icon--external"></i></a>
-    </li>
-
-
-  </ul>
-  
-  <!-- Barre de rceherche  -->
-    <div class="rcn-inputField">
-
-            <input placeholder="Rechercher..." class="rcn-inputField__input">
-
-            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
-                <span class="sr-only"></span>
-            </button> 
-    </div>
-
-  </nav>
-
-
-
-
-<!-- ================= TEST TCO ================= -->
-
-
-
-
-<nav class="rcn-header__mainNavBanner rcn-header__mainNavBannerTCO rcn-container--primary">
-
-  <ul class="rcn-menou">
-
-<!-- Entrée Accueil  -->
-    <li class="rcn-menu__Entree"><a class="rcn-link rcn-menu__entryName" href="#home" aria-current='page'>Accueil TCO</a></li>
-
-
-<!-- TEST Entrée avec sous-menu  -->
-    <li>
-
-      <div class="rcn-menu__Entree">
-        <a href="#services" class="rcn-link rcn-menu__entryName">Avec sous-menu</a>
-        <button class="rcn-icon rcn-menu__entryBouton"></button>
-      </div>
-
-      <ul class="rcn-menu__submenu" aria-hidden="false">
-        <li class="rcn-menu__subentry" ><a> Page trop cool </a></li>
-        <li class="rcn-menu__subentry"><a> Ceci est une autre page </a></li>
-        <li class="rcn-menu__subentry rcn-menu__subentry__current" ><a aria-current='page'> Méthodologie est perspectives</a></li>
-      </ul>
-      <div class="positionIndicator"></div>
-    </li>
-<!-- TEST Sans sous-menu  -->
-    <li>
-
-      <div class="rcn-menu__Entree">
-        <a href="#services" class="rcn-link rcn-menu__entryName">Sans sous-menu</a>
-      </div>
+    <ul class="rcn-menu">
       
-    </li>
+      <!-- Entrée Accueil  -->
+      <li>
+        <a class="rcn-menu__entry rcn-menu__entry--first" aria-current='page'  href="#" >
+          Accueil TCO
+        </a>
+      </li>
 
+      <!-- Entrée avec sous-menu  -->
+      <li>
+        <button class="rcn-menu__entry" aria-expanded="true" href="#" >
+          Avec sous-menu
+          <i class="rcn-icon rcn-menu__submenuIcon"></i>
+        </button>
+        <ul class="rcn-menu__submenu" aria-hidden="false">
+          <li><a class="rcn-menu__subentry">Subentry 1 </a></li>
+          <li><a class="rcn-menu__subentry">Subentry 2 </a></li>
+          <li><a class="rcn-menu__subentry">Subentry 3 with a long name, way too long</a></li>
+          <li><a class="rcn-menu__subentry" aria-current='page'> Méthodologie est perspectives</a></li>
+        </ul>
+        <div class="positionIndicator"></div>
+      </li>
 
-<!-- TEST Externe  -->
-    <li>
-      <div class="rcn-menu__Entree">
-        <a class="rcn-link rcn-menu__entryLink rcn-menu__entryName" href="#" >  Externe
+      <!-- Entrée Sans sous-menu  -->
+      <li>
+        <a class="rcn-menu__entry" aria-current="page" href="#" >
+          Sans sous-menu
+        </a>
+      </li>
+
+      <!-- Entrée Externe  -->
+      <li>
+        <a class="rcn-menu__entry" href="#" >
+          Externe
           <i class="rcn-icon rcn-link__icon--external"></i>
         </a>
-      </div>
-      <div class="positionIndicator"></div>
-    </li>
+      </li>
+    
+    </ul>
 
-    <li>
-      <a class="rcn-menu__entry-TCO" href="#" aria-current='page'>
-        Externe
-        <i class="rcn-icon rcn-link__icon--external"></i>
-      </a>
-      <!-- <div class="positionIndicator"></div> -->
-    </li>
-
-
-  </ul>
-  
-  <!-- Barre de rceherche  -->
+    <!-- Barre de rceherche  -->
     <div class="rcn-inputField">
-
             <input placeholder="Rechercher..." class="rcn-inputField__input">
-
             <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
                 <span class="sr-only"></span>
             </button> 
     </div>
 
   </nav>
-
-
-
-
-
-
-
 </body>
+
+  <footer>
+      <script src="../../Asset/css_temporaire/import-temp.js"></script>
+  </footer>
+</html>

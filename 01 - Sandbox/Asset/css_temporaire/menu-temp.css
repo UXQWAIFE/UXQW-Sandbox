@@ -1,0 +1,171 @@
+/* @import url('../../RCN-DesignSystem/assets/styles-ChorusPro.css'); */
+
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url(../../Asset/Font_icon/RCNicon.ttf);
+}
+
+@font-face {
+    font-family: 'Marianne';
+    src: url('./Assets/Font_Marianne/Marianne/fontes desktop/Marianne-Regular.otf');
+}
+
+/*
+body, legend {
+    font-family:'Marianne',Arial;
+    font-size:var(--rcn-semantic-typography-text-component-default-body-fontsize);
+}*/
+
+/*
+i {
+    font-style:normal;
+}
+
+ul {
+	list-style-type: none;
+	padding-left:0px;
+	margin:0px;
+}
+body{
+	margin:unset;
+	padding-top:100px;
+}
+a{
+	color: none;
+	text-decoration:none;
+}
+
+li{
+	padding:0px;
+}
+
+button{
+  border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+
+    background: transparent;
+
+    color: inherit;
+    font: inherit;
+
+   line-height: 1rem;
+
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    -webkit-appearance: none;
+}*/
+
+/*====  A SUPPRIMER APRES INTAGRATION AU DS  =====*/
+
+.body{
+	display: flex;
+	flex-direction: column;
+	gap: 200px;
+}
+.rcn-grid__margins{
+	padding-right:80px;
+	padding-left:80px;
+}
+
+
+/*============= MENU =============*/
+
+
+.rcn-menu {
+	position: relative;
+	display:flex;
+	flex-direction:row;
+	align-items: center;
+	flex-wrap: 	wrap;	
+	flex-grow: 	1;
+}
+
+
+/*------ Entry -------*/
+
+.rcn-menu__entry{
+	display:flex;
+	flex-direction:row;
+	position : relative;
+	align-items: baseline;
+	gap:var(--rcn-semantic-gap-horizontal-200);
+	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+	text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration-menu);
+	line-height:var(--rcn-semantic-typography-lien-component-default-body-lineheight);
+	padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-400);
+}
+
+.rcn-menu__entry--first{
+	padding-left: var(--rcn-semantic-padding-horizontal-0);
+}
+
+.rcn-menu__entry::after{
+	position:absolute;
+	height:0px;
+	left:var(--rcn-semantic-padding-horizontal-400);
+	bottom: var(--rcn-semantic-padding-vertical-200);
+	background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+	width: calc(100% - calc(2 * var(--rcn-semantic-padding-horizontal-400)));
+	content:"";
+}
+
+.rcn-menu__entry--first::after{
+	left:var(--rcn-semantic-padding-horizontal-0);
+	width: calc(100% - var(--rcn-semantic-padding-horizontal-400));
+}
+
+.rcn-menu__entry[aria-current="page"]::after{
+	height:var(--rcn-semantic-borderwidth-300);
+}
+.rcn-menu__entry:hover{
+	background-color : var(--rcn-semantic-color-interaction-background-hover-primary);
+}
+
+
+/*------- Submenu -------*/
+
+.rcn-menu__submenuIcon::before{
+	content: var(--rcn-semantic-typography-icon-rcn_icon-expand_vertical-content);
+}
+.rcn-menu__entry[aria-expanded="true"] .rcn-menu__submenuIcon{
+	transform: rotate(180deg);
+}
+
+.rcn-menu__submenu{
+	position:absolute;
+	display:flex;
+	flex-direction:column;
+	top: 100%;
+    background-color:var(--rcn-semantic-color-interaction-background-default-standard);
+    box-shadow:var(--rcn-semantic-dropshadow-static-overlayed);
+    cursor:pointer;
+}
+.rcn-menu__submenu[aria-hidden="true"]{
+	display:none;
+}
+.rcn-menu__submenu--hidden{
+	display: none;
+}
+
+/*--------Subentry --------*/
+
+.rcn-menu__subentry{
+	display:block;
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+	border-left:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
+	padding:var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-vertical-400);
+}
+.rcn-menu__subentry:hover {
+	background-color:var(--rcn-semantic-color-interaction-background-hover-standard);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard); /*Ne marche pas*/
+}
+.rcn-menu__subentry[aria-current="page"] {
+	border-left:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+	font-weight:var(--rcn-semantic-typography-text-component-default-selected-fontweight);
+}
