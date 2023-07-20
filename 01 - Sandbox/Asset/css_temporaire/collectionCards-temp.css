@@ -1,4 +1,4 @@
-.rcn-cardCollection{
+.rcn-cardCollection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap : var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
