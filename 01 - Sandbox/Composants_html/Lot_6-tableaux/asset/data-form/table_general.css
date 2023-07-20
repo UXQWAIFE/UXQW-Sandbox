@@ -117,7 +117,9 @@
 .rcn-tableRow__cell--folded {
     display: none;
 }
-
+.rcn-tableRow__cell--unfolded {
+    display:table-row;
+}
 /* ==================== */
 /*      correction      */
 /* ==================== */
