@@ -116,7 +116,7 @@
   .rcn-filter--overlay{
     grid-area: filter;
     overflow: auto;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
     border-right:var(--rcn-semantic-borderwidth-100) solid transparent;
     border-left : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
    }

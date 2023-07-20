@@ -76,8 +76,6 @@
 
   }
 
-/*------------- Ajout du module de filtre en supperposé ---------------*/
-
 
    /*------------- Grid ---------------*/
      
@@ -115,27 +113,38 @@
     "searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule";
   }
 
-  /*TEST en ajoutant le module de filtres - class à ajouter aux grilles?*/
-
-  /* .rcn-grid--mainContentOverlayed{
-    position : relative;
-  }
-
-
-  .rcn-grid--sideOverlayFilterTemplate {
-    position:absolute;
-    top:0;
-    left:0;
-    display: grid;
-    grid-template-areas: "filter filter filter fiter . . . . . . . .";
-    overflow: auto;
-    margin: 0;
-    
-  } */
-
 /* ---------------------Ajout du bandeau de cookies pour tester ------------- */
 
 .rcn-cookiePanel{ 
   z-index: 9999;
   position: fixed; 
+}
+
+/* ---------------------Module de filtres ------------- */
+
+.rcn-grid--mainContentOverlayed{
+  position : relative;
+}
+
+.rcn-filter--overlay{
+  grid-area: filter;
+  overflow: auto;
+  /* background-color: aliceblue; */
+  border-right:var(--rcn-semantic-borderwidth-100) solid transparent;
+  border-left : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
+ }
+
+ .rcn-filter--overlayLeft{
+  border-left:var(--rcn-semantic-borderwidth-100) solid transparent;
+  border-right:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
+ }
+
+.rcn-grid--sideOverlayFilterTemplate {
+  position:absolute;
+  top:0;
+  left:0;
+  display: grid;
+  grid-template-areas: "filter filter filter fiter . . . . . . . .";
+  overflow: auto;
+  margin: 0;    
 }
