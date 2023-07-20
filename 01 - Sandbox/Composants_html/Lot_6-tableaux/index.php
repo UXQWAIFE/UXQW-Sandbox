@@ -322,20 +322,27 @@ print_r($_SESSION);
 				}
 
 			}
-			var checkbox = document.getElementById("Lig_depliable");
-			var numberField = document.getElementById("Lig_depliable_nbr");
+			var btn = document.querySelectorAll(".rcn-tableCell__unfold");
+			// Sélectionner tous les boutons de dépliage/repliage
 
-			// Écouter l'événement de modification de la case à cocher
-			checkbox.addEventListener("change", function() {
-			// Vérifier si la case à cocher est cochée
-			if (checkbox.checked) {
-				// Afficher le champ de nombre
-				numberField.style.display = "block";
-			} else {
-				// Masquer le champ de nombre
-				numberField.style.display = "none";
-			}
+			// Parcourir chaque bouton
+			btn.forEach(function(button) {
+			// Ajouter un écouteur d'événement pour le clic sur le bouton
+				button.addEventListener('click', function() {
+					var toggleRows = document.querySelectorAll('.rcn-tableRow__cell--folded');
+					if (toggleRows.length === 0) {
+						var toggleRows = document.querySelectorAll('.rcn-tableRow__cell--unfolded');
+					} 
+					console.log(toggleRows);
+					// Parcourir chaque ligne
+					toggleRows.forEach(function(row) {
+						// Alterner la classe pour déplier/replier la ligne
+						row.classList.toggle('rcn-tableRow__cell--folded');
+						row.classList.toggle('rcn-tableRow__cell--unfolded');
+					});
+				});
 			});
+
 	</script>
 </body>
 </html>

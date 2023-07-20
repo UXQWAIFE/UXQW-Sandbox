@@ -8,15 +8,18 @@
     box-sizing: border-box;
     position:relative;
 }
+.rcn-tableContent {
+    display: flex;
+    overflow-x: auto;
+    border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+    margin-bottom: var(--rcn-semantic-gap-vertical-400);
+}
 .rcn-table {
     box-sizing: border-box;
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
     font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
-    border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
-    width:100%;
-    margin-bottom: var(--rcn-semantic-gap-vertical-400);
     overflow-y: hidden;
-    display: block;
+    table-layout: auto;
 }
 
 

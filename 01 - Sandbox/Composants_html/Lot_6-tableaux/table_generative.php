@@ -75,7 +75,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   // Variables pour les positions des fonctionnalités
 
   // Générer le code HTML du tableau avec les fonctionnalités sélectionnées et leurs positions
-  $tableHTML = "<table class='rcn-table'>\n";
+  $tableHTML = "<div class='rcn-tableContent'>\n";
+  $tableHTML .= "<table class='rcn-table'>\n";
   $tableHTML .= "<thead class='rcn-tableRow'>\n";
   $tableHTML .= "<tr class='rcn-tableRow__head'>\n";
   
@@ -129,10 +130,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   for ($row = 1; $row <= $nombreLignes; $row++) {
     $foldedRow ='';
     if ($row === 1) {
-      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--fold'>\n $foldedRow";
-      $folded = 0;
+      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--fold'>\n ";
+      $folded = 2;
     } else if ($row > 1 && $row <= $Lig_depliable_nbr + 1) {
-      $foldedRow .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded sr-only'>\n";
+      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded sr-only'>\n";
       $folded = 1;
     } else {
       $tableHTML .= "<tr class='rcn-tableRow__cell'>\n";
@@ -173,6 +174,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $rowData .= " (Bouton dépliable)";
             if($folded === 1){
               $rowData = "";
+            }else if ($folded === 2){
+              $rowData = "<div class='rcn-tableCell__unfold'><button id='Lig_depliable' class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div>";
             }else{
               $rowData = "<div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div>";
             }
@@ -192,6 +195,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   }
   $tableHTML .= "</tbody>\n";
   $tableHTML .= "</table>\n";
+  $tableHTML .= "</div>\n";
 
   // Construire en fonction des éléments cochés
   $enteteTableau = '';
@@ -332,6 +336,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   }
   // Injection du tableau
   $resultat .= $tableHTML;
+
   // Injection du footer 
   $resultat .= $footerPagination;
   $resultat .= "
