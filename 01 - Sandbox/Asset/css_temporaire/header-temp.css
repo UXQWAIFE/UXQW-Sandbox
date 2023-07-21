@@ -1,12 +1,15 @@
 
 /*.rcn-header__productBanner {
-  padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux*/
+  padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux
 }
+=> Supprimer dans le tableau (à confirmer avec Mathilde)
+
 */
 
 .rcn-header__mainNavBanner {
-  padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); /*Ajout de paddings horizontaux ==> OK*/
+  /*Supprimer les propriété PADDING pour tous les côtés*/
 }
+
 
 
 .rcn-header__iconButton {

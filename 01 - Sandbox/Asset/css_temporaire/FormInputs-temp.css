@@ -1,16 +1,4 @@
 
-
-.body{
-    display:flex;
-    flex-direction:column;
-    align-items:stretch;
-    padding:64px;
-    background-color: white;  
-    margin-bottom :200px;
-} /*checker avec max l'intérêt de cette classe*/
-
-
-
 /*============= FORMULAIRE - Champs simples =================*/
 
 
