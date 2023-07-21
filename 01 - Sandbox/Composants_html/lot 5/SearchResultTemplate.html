@@ -11,41 +11,40 @@
 </head>
 
 <body>
-
     <div class="rcn-header">
-    <div class="rcn-header__productBanner rcn-grid__margins"> 
-        <div class="rcn-header__logo"> LOGO 
+        <div class="rcn-header__productBanner rcn-grid__margins"> 
+            <div class="rcn-header__logo"> 
+                LOGO 
+            </div>
+            <div class="rcn-connexionModule"> 
+                <a class="rcn-link"> Créer un compte</a>
+                <div class="rcn-connexionModule__separator"> </div>
+                <button class="rcn-button rcn-button--primary"> 
+                    Se connecter
+                </button>
+            </div>
         </div>
-        <div class="rcn-connexionModule"> 
-            <a class="rcn-link"> Créer un compte</a>
-            <div class="rcn-connexionModule__separator"> </div>
-            <button class="rcn-button rcn-button--primary"> Se connecter
-            </button>
-        </div>
-    </div>
-    <div class="rcn-header__mainNavBanner rcn-grid__margins"> 
-        <div class="rcn-header__menu"> XXXXXXXXXX
-        </div>
-        <div class="rcn-header__toolsButtonsZone">
-            <button class="rcn-iconButton rcn-icon--mdi-check rcn-header__iconButton rcn-icon ">
-            </button>
-        </div>
-        
-        <div class="rcn-header__searchbar">
+        <div class="rcn-header__mainNavBanner rcn-grid__margins"> 
+            <div class="rcn-header__menu"> 
+                XXXXXXXXXX
+            </div>
+            <div class="rcn-header__toolsButtonsZone">
+                <button class="rcn-iconButton rcn-icon--mdi-check rcn-header__iconButton rcn-icon ">
+                </button>
+            </div>
+            
+            <div class="rcn-header__searchbar">
             <label class="rcn-inputFieldBloc__label sr-only">Search</label>
-
-        <div class="rcn-inputField">
-
-            <input placeholder="Rechercher..." class="rcn-inputField__input">
-
-            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
-                <span class="sr-only"></span>
-            </button>
+            <div class="rcn-inputField">
+                <input placeholder="Rechercher..." class="rcn-inputField__input">
+                <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                    <span class="sr-only"></span>
+                </button>
+            </div>
+        </div>
+            </div>
         </div>
     </div>
-        </div>
-    </div>
-</div>
 
 <main>
     <div class="rcn-grid rcn-grid--searchResultTemplate rcn-grid--mainContentOverlayed">
@@ -55,10 +54,10 @@
 
         <div class="rcn-searchResultModule"> 
 
-                <div class="rcn-pagination__topZone">
-                    <div class="rectangle-1"> </div>
-                    <div class="rectangle-2"> </div>
-                </div>
+            <div class="rcn-pagination__topZone">
+                <div class="rectangle-1"> </div>
+                <div class="rectangle-2"> </div>
+            </div>
         
         <div class="rcn-cardCollection rcn-cardCollection--vertical "> 
         
@@ -82,11 +81,14 @@
 
             <h4 class="rcn-h4 rcn-card__title"> Titre de la card </h4>
             <label class="rcn-card__subTitle"> X juillet 20XX </label>
-            <div class="rcn-card__content"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
+            <div class="rcn-card__content"> 
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ad quisquam delectus id eaque, commodi, ullam quae iusto consequatur ipsa facere blanditiis maxime distinctio pariatur quis quas rerum! Provident, nesciunt?
             </div>
 
             <div class="rcn-card__actionsZone"> 
-                <a href="rien" class="rcn-card__link rcn-link"> Lien card</a>
+                <a href="rien" class="rcn-card__link rcn-link"> 
+                    Lien card
+                </a>
             </div>            
 
         </div>       
@@ -94,7 +96,7 @@
     </div>
 
         <!-- card vertical 2 -->
-        <div class="rcn-card rcn-card--vertical">
+    <div class="rcn-card rcn-card--vertical">
         <div class="rcn-card__imgHolder">
             <img class="rcn-card__image" src="https://placehold.jp/1400x900.png" alt="">
         </div>
@@ -214,7 +216,7 @@
     
             </div>       
         </div>
-</div>
+    </div>
         
                     <div class="rcn-pagination__bottomZone">
                         <div class="rectangle-3"> </div>
@@ -473,4 +475,17 @@
 
 <footer>
     <script src="../../Asset/css_temporaire/import-temp.js"></script>
+    <script>
+        
+    
+    fetch('fichier_inclus.html')
+      .then(response => response.text()) // Récupère le contenu du fichier en tant que texte
+      .then(html => {
+        // Insère le contenu du fichier dans la div avec l'id "contenuInclus"
+        document.getElementById('contenuInclus').innerHTML = html;
+      })
+      .catch(error => {
+        console.error('Erreur lors du chargement du fichier HTML', error);
+      });
+    </script>
 </footer>
