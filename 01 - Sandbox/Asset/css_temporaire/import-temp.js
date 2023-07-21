@@ -29,7 +29,7 @@ var cssFiles = [
     'ActionsBanner',
     'FilterModule' ,
     'SearchResultTemplate',
-    'collectionCards',
+    'cardsCollection',
     'formTemplate',
     'searchResultModule',
     'filterModulePage',
