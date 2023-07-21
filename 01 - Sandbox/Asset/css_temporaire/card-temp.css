@@ -156,7 +156,7 @@ box-sizing:border-box; /*maj dans l'excel ==> OK*/
 
 
 /*Grille pour la collection de cards*/
-.rcn-cardCollection {
+/*.rcn-cardCollection {
     display: grid;
     gap: var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
     grid-template-rows: auto;
@@ -165,9 +165,9 @@ box-sizing:border-box; /*maj dans l'excel ==> OK*/
 
 .rcn-cardCollection--vertical {
     grid-template-columns: repeat(3, 1fr);
-}
+} ==> Porté par cardsCollection*/
 
 /*Grille pour la collection de cards horizontales*/
-.rcn-cardCollection--horizontal {
+/*.rcn-cardCollection--horizontal {
 grid-template-columns: repeat(2, 1fr);
-}
+} ==> Porté par cardsCollection*/
