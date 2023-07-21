@@ -124,10 +124,10 @@ main {
   position:relative;
   /* Pour que le module de filtre ce cale bien */
 }
-.rcn-grid--mainContentOverlayed{
+/* .rcn-grid--mainContentOverlayed{
   position : relative;
 
-}
+} */
 .rcn-searchResultModule{
   grid-area: searchResultModule;
 /* Pour que le module de résultat de recherche s'inclu dans la grille */
