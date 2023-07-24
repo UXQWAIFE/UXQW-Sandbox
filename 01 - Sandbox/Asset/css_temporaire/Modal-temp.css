@@ -1,5 +1,5 @@
 .rcn-modal__header {
-	flex-direction:row; /*remplacer column par row dans excel -> OK*/
+	flex-direction:column; /*remplacer dans l'excel*/
 	border-bottom:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular); /*remplacer les deux properties par celle là pour la border -> OK*/
 }
 
@@ -24,7 +24,7 @@
   border-top-color: var(--rcn-semantic-color-static-border-divider_regular);
   max-width: 100%;*/
 } 
-/*supprimer classes en commentaire dans l'exel + ajouter les paddins ==> OK*/
+/*supprimer classes en commentaire dans l'exel + ajouter les paddings ==> OK*/
 
 .rcn-modal__footer .rcn-bottomActionsBanner {
 	border: unset; /*ajouter à l'excel ==> OK*/
