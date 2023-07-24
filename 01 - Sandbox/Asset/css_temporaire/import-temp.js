@@ -33,7 +33,8 @@ var cssFiles = [
     'formTemplate',
     'searchResultModule',
     'filterModulePage',
-    'menu'
+    'menu',
+    'Typography'
   ];
   
   var headElement = document.head;
