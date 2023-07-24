@@ -8,16 +8,23 @@
 }
 
 /* Ligne de Cellule Data */
-.rcn-tableRow__cell {
+.rcn-tableRow__cell, .rcn-tableSubRow__cell {
     box-sizing: border-box;
     position: relative;
     width: 100%;
     overflow-x: auto;
 }
-.rcn-tableRow__cell:nth-of-type(even), .rcn-tableRow__cell:nth-of-type(even) .rcn-tableData--sticked {
+
+.rcn-tableRow__cell--even,
+.rcn-tableRow__cell--even .rcn-tableData--sticked,
+.rcn-tableSubRow__cell--even,
+.rcn-tableSubRow__cell--even .rcn-tableData--sticked  {
     background-color: var(--rcn-semantic-color-interaction-background-default-standard);
 }
-.rcn-tableRow__cell:nth-of-type(odd), .rcn-tableRow__cell:nth-of-type(odd) .rcn-tableData--sticked {
+.rcn-tableRow__cell--odd,
+.rcn-tableRow__cell--odd .rcn-tableData--sticked,
+.rcn-tableSubRow__cell--odd,
+.rcn-tableSubRow__cell--odd .rcn-tableData--sticked{
     background-color: var(--rcn-semantic-color-static-background-table_alternate_line);
 }
 
@@ -113,13 +120,49 @@
     border-style: solid;
     border-color: var(--rcn-semantic-color-static-border-standard);
 }
+
+/* Ligne Selectionnable & bandeau */
+
+.rcn-preTable__rowSelected {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
+    border-width: 0 var(--rcn-semantic-borderwidth-100);
+    border-style: solid;
+    border-color: var(--rcn-semantic-color-static-border-standard);
+    padding:var(--rcn-semantic-padding-vertical-200);
+}
+.rcn-preTable__rowSelected--action {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap:var(--rcn-semantic-gap-horizontal-200);
+}
+
 /* Ligne depliable */
-.rcn-tableRow__cell--folded {
-    display: none;
+.rcn-tableRow__cell--unfolded {
+    border-left:var(--rcn-semantic-borderwidth-300) solid #000;
+    border-bottom:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+
+}
+.rcn-tableSubRow__cell--unfolded {
+    border-left:var(--rcn-semantic-borderwidth-300) solid #949494;
 }
 .rcn-tableRow__cell--unfolded {
+}
+.rcn-tableSubRow__cell--folded {
+    display: none;
+}
+.rcn-tableSubRow__cell--unfolded {
     display:table-row;
 }
+
+
 /* ==================== */
 /*      correction      */
 /* ==================== */
