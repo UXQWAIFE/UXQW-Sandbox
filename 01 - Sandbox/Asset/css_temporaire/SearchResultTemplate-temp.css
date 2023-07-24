@@ -1,115 +1,12 @@
-/*------------- Test en attendant pagination ---------------*/
-
-/*.rectangle-1{
-    background-color: aquamarine;
-    width:200px;
-    height : 25px;
-}
-
-.rectangle-2{
-    background-color: rgb(229, 127, 255);
-    width:100px;
-    height : 25px;
-}
-
-.rectangle-3{
-    background-color: rgb(255, 127, 202);
-    width:100px;
-    height : 25px;
-}
-
-.rectangle-4{
-    background-color: rgb(255, 161, 127);
-    width:300px;
-    height : 25px;
-}
-
-.rectangle-5{
-    background-color: rgb(255, 242, 127);
-    width:100px;
-    height : 25px;
-}
-
-.rcn-pagination__topZone {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.rcn-pagination__bottomZone{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.rcn-pagination__actionZone{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap : var(--rcn-semantic-gap-horizontal-400);
-} ==> Porté par searchResultsmodule*/
-
-/*------------- Module de collection de cards  ---------------*/
-
-/*.rcn-cardCollection{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap : var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
-  grid-template-rows: auto;
-  background-color: transparent;
-} ==> Porté par cardsCollection*/
-
-/*------------- Module de résultat de recherche ---------------*/
-
-/*  .rcn-searchResultModule{
-    display: flex;
-    flex-direction: column;
-    gap: var(--rcn-semantic-gap-vertical-700);
-    grid-area: searchResultModule;
-  }
-  
-  .rcn-searchResult__title{
-    grid-area: searchHeading;
-    height: auto;
-  } ==> Porté par searchResultModule*/
-
-
-   /*------------- Grid ---------------*/
-     
-  /*Grid globale  > à supp quand grid sera  clean*/
-/*  .rcn-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-    grid-template-rows: auto;
-    background-color: transparent;
-    margin : 0 5rem;
-    height: 100%;
-  } ==> Porté par Grid*/
-  
-  /*Composants de la grille (Header - Footer) - TEST*/
-  
-  /*.item-a {
-    display: flex;
-    grid-area: header;
-    background-color: pink;
-    height: 80px;
-    margin-bottom: 16px;
-  }
-  .item-d {
-    display: flex;
-    grid-area: footer;
-    background-color: #FF4500;
-    height: 100px;
-    margin-top: 16px;
-  } ==> Footer et Header intégrés complètement */
-
   .rcn-grid--searchResultTemplate {
     grid-template-areas:
      "searchHeading searchHeading searchHeading searchHeading searchHeading searchHeading searchHeading searchHeading . . . ."
     "searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule searchResultModule";
+  }
+
+  .rcn-searchResultModule{
+    grid-area: searchResultModule;
+  /* Pour que le module de résultat de recherche s'inclu dans la grille */
   }
 
 /* ---------------------Ajout du bandeau de cookies pour tester ------------- */
@@ -120,17 +17,10 @@
 }
 
 /* ---------------------Module de filtres ------------- */
-main { 
-  position:relative;
-  /* Pour que le module de filtre ce cale bien */
-}
-/* .rcn-grid--mainContentOverlayed{
+
+.rcn-grid--mainContentOverlayed{
   position : relative;
 
-} */
-.rcn-searchResultModule{
-  grid-area: searchResultModule;
-/* Pour que le module de résultat de recherche s'inclu dans la grille */
 }
 .rcn-filter--overlay{
   grid-area: filter;

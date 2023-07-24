@@ -12,81 +12,115 @@
 <body>
 
 
+<!-- Template formulaire avec stepper vertical -->
 
-	<!-- Template formulaire avec stepper vertical -->
 
- <div class="item-a ">Header</div>
+
+	<div class="rcn-header">
+		<div class="rcn-header__productBanner rcn-grid__margins"> 
+			<div class="rcn-header__logo"> 
+				LOGO 
+			</div>
+			<div class="rcn-connexionModule"> 
+				<a class="rcn-link"> Créer un compte</a>
+				<div class="rcn-connexionModule__separator"> </div>
+				<button class="rcn-button rcn-button--primary"> 
+					Se connecter
+				</button>
+			</div>
+		</div>
+		<div class="rcn-header__mainNavBanner rcn-grid__margins"> 
+			<div class="rcn-header__menu"> 
+				XXXXXXXXXX
+			</div>
+			<div class="rcn-header__toolsButtonsZone">
+				<button class="rcn-iconButton rcn-icon--mdi-check rcn-header__iconButton rcn-icon ">
+				</button>
+			</div>
+			
+			<div class="rcn-header__searchbar">
+				<label class="rcn-inputFieldBloc__label sr-only">Search</label>
+				<div class="rcn-inputField">
+					<input placeholder="Rechercher..." class="rcn-inputField__input">
+					<button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+						<span class="sr-only"></span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	
 	<div class="rcn-grid rcn-grid--formStepperVerticalTemplate">
 			
 		<h1 class=" rcn-h1 rcn-h1--edito rcn-form__titleZone"> Titre du formulaire </h1>    
 				
-		<nav class="rcn-stepperVertical">
+		<nav class=" rcn-stepper rcn-stepper--navigable">
 
-			<ol class="rcn-stepperVertical__list">
+			<ol class="rcn-stepper__list rcn-stepper__list--vertical">
 
-				<li class="rcn-stepperVertical__step">
-					<div class="rcn-stepper__number rcn-stepperNavigable__number--completed">1</div>
-					<div>
-					<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--completed" href="section1"> Etape complétée </a>
-					</div>
-				</li>
-				<li class="rcn-stepperVertical__step">
-					<div class="rcn-stepper__number rcn-stepperNavigable__number--current">2</div>
-					<div>
-					<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--current" href="section1"> Etape en cours </a>
-					</div>
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__number rcn-stepper__number--completed">1</div>
+					
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Etape complétée </a>
+					
 				</li>
 
-				<ol class="rcn-stepperVertical__substepZone">
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__number rcn-stepper__number--current">2</div>
+					
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Etape en cours </a>
+					
+				</li>
 
-					<li class="rcn-stepperVertical__step">
-						<div class="rcn-stepper__number--substep rcn-stepperNavigable__number--completed"></div>
-						<div>
-						<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--completed" href="section1"> Sous étape complétée </a>
-						</div>
+				<ol class="rcn-stepper__substepZone">
+
+					<li class="rcn-stepper__substep">
+						<div class=" rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--completed"></div>
+						
+						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Sous étape complétée </a>
+						
 					</li>
 
-					<li class="rcn-stepperVertical__step">
-						<div class="rcn-stepper__number--substep rcn-stepperNavigable__number--subStepCurrent"></div>
-						<div>
-						<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--current" href="section1"> Sous étape en cours </a>
-						</div>
+					<li class="rcn-stepper__substep">
+						<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--subStepCurrent"></div>
+						
+						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Sous étape en cours </a>
+						
 					</li>
 
-					<li class="rcn-stepperVertical__step">
-						<div class="rcn-stepper__number--substep rcn-stepperNavigable__number--uncompleted"></div>
-						<div>
-						<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Sous-étape non complétée </a>
-						</div>
+					<li class="rcn-stepper__substep">
+						<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--uncompleted"></div>
+						
+						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Sous-étape non complétée </a>
+						
 					</li>
 
-					<li class="rcn-stepperVertical__step">
-						<div class="rcn-stepper__number--substep rcn-stepper__number--disabled"></div>
-						<div>
-						<a class="rcn-stepperVertical__sectionTitle  rcn-stepper__sectionTitle--disabled" href="section1"> Sous-étape désactivée </a>
-						</div>
+					<li class="rcn-stepper__substep">
+						<div disabled class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--disabled"></div>
+						<a disabled class="rcn-link rcn-stepper__sectionTitle" href="section1"> Sous-étape désactivée </a>
 					</li>
 
 				</ol>
 
-				<li class="rcn-stepperVertical__step">
-					<div class="rcn-stepper__number rcn-stepperNavigable__number--uncompleted">3</div>
-					<div>
-					<a class="rcn-stepperVertical__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Etape non complétée</a>
-					</div>
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__number rcn-stepper__number--uncompleted">3</div>
+					
+					<a class="rcn-link  rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto blanditiis incidunt voluptas quis ducimus recusandae, alias ad ea minus soluta quaerat facere eum aliquam libero modi fuga unde sit sint.</a>
+					
 				</li>
 
-				<li class="rcn-stepperVertical__step">
-					<div class="rcn-stepper__number rcn-stepper__number--disabled">4</div>
-					<div>
-					<a class="rcn-stepperVertical__sectionTitle rcn-stepper__sectionTitle--disabled" href="section1"> Etape désactivée </a>
-					</div>
+				<li class="rcn-stepper__step">
+					<div disabled class="rcn-stepper__number rcn-stepper__number--disabled">4</div>
+					
+					<a disabled class="rcn-link rcn-link rcn-stepper__sectionTitle" href="section1"> Etape désactivée Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eos, voluptatum illum quisquam autem distinctio aut beatae, eius temporibus aliquam laudantium assumenda voluptatibus cupiditate iure libero culpa, quod deserunt velit? </a>
+					
 				</li>
 
 			</ol>
 
 		</nav>
+
 
 
 		
@@ -149,12 +183,114 @@
 		
 	
 
- <div class="item-d ">Footer</div>
+		<footer class="rcn-footer">
+			<div class="rcn-footer__socialMediasBanner rcn-grid__margins">
+				<div class="rcn-footer__socialMediasTextZone">
+					<span class="rcn-footer__socialMediasText">Suivez-nous</span>
+					<span class="rcn-footer__socialMediasText">sur les réseaux sociaux</span>
+				</div>
+				<div class="rcn-footer__socialMediasIconsZone">
+					<a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-dailymotion"></a>
+					<a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-instagram"></a>
+					<a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-youtube"></a>
+				</div>  
+			</div>
+	
+			<div class="rcn-footer__mainBanners rcn-grid__margins"> 
+				<div class="rcn-footer__productBanner">
+					<div class="rcn-footer__productBanner-leftZone">
+						<img class="image rcn-footer__productLogo" src="https://placehold.co/378x140">
+						
+							<div>Meileure version de toi même</div>
+							<div class="rcn-inputFieldBloc rcn-inputFieldBloc--language">        
+								<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--language">Langue de l'applicatif :</label>
+								<div class="rcn-inputField">
+									<select name="" class="rcn-inputField__input rcn-inputField__input--select">
+										<option class="rcn-inputField__option" value="">- Séléctionner une option -</option>
+										<option class="rcn-inputField__option" value="">FR - Français</option>
+										<option class="rcn-inputField__option" value="">EN - English</option>
+										<option class="rcn-inputField__option" value="" selected>ES - Espanol</option>
+									</select>
+								</div>
+							</div>
+						
+					</div>  
+					<div class="rcn-footer__productBanner-rightZone">
+						<div class="rcn-footer__productDescription"> 
+							lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend egestas ex et eleifend. Etiam id metus sed libero eleifend pretium in at ligula. Vivamus egestas fermentum orci, id posuere orci condimentum a. Duis laoreet auctor rhoncus. Aliquam pretium, enim sed accumsan ultricies, augue lorem aliquam urna, quis cursus magna urna id quam.
+						</div>
+						<div class="rcn-footer__institutionalEcosystemLinks">
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink" href="coucou">Link1</a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink"> Jusqu'à l'infini </a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink"> Et l'au delà </a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+						</div>      
+					</div>      
+				</div>
+	
+				<div class="rcn-footer__partnersBanner">
+					<div> 
+					Titre 
+					</div> 
+					<div class="rcn-footer__partnersLogosZone">
+						<img class="partnerImage" src="https://placehold.co/160x90">
+	
+						<div class="rcn-footer__secondaryPartnersZone"> 
+							<img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+							<img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+							<img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+							<img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+						</div>
+					</div>  
+				</div>
+	
+				<div class="rcn-footer__mandatoryLegalLinks">
+					<a class="rcn-footer__mendatoryLegalLink"> Link </a>
+					<a class="rcn-footer__mendatoryLegalLink"> Link </a>
+					<a class="rcn-footer__mendatoryLegalLink"> Link </a>
+				</div>  
+				<div class="rcn-footer__licenseNotice"> Sauf mention contrainte... </div>
+			</div>
+		</footer>
 
 
  <!-- Template formulaire avec stepper horizontal -->
 
- <div class="item-a ">Header</div>
+ <div class="rcn-header">
+	<div class="rcn-header__productBanner rcn-grid__margins"> 
+		<div class="rcn-header__logo"> 
+			LOGO 
+		</div>
+		<div class="rcn-connexionModule"> 
+			<a class="rcn-link"> Créer un compte</a>
+			<div class="rcn-connexionModule__separator"> </div>
+			<button class="rcn-button rcn-button--primary"> 
+				Se connecter
+			</button>
+		</div>
+	</div>
+	<div class="rcn-header__mainNavBanner rcn-grid__margins"> 
+		<div class="rcn-header__menu"> 
+			XXXXXXXXXX
+		</div>
+		<div class="rcn-header__toolsButtonsZone">
+			<button class="rcn-iconButton rcn-icon--mdi-check rcn-header__iconButton rcn-icon ">
+			</button>
+		</div>
+		
+		<div class="rcn-header__searchbar">
+			<label class="rcn-inputFieldBloc__label sr-only">Search</label>
+			<div class="rcn-inputField">
+				<input placeholder="Rechercher..." class="rcn-inputField__input">
+				<button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+					<span class="sr-only"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
 
  
 	<div class="rcn-grid rcn-grid--formStepperHorizontalTemplate">
@@ -164,46 +300,42 @@
 
 	
 		
-			 
-		<nav class="rcn-stepperHorizontal">
+		<nav class="rcn-stepper  rcn-stepper--navigable">
 
-				<ol class="rcn-stepperHorizontal__list">
-		
-					<li class="rcn-stepperHorizontal__step">
-						<div class="rcn-stepper__number rcn-stepperNavigable__number--uncompleted">1</div>
-						<div>
-						<a class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Etape non complétée navigable </a>
-						</div>
-					</li>
-					<li class="rcn-stepperHorizontal__step">
-						<div class="rcn-stepper__number rcn-stepperNavigable__number--uncompleted">2</div>
-						<div>
-						<p class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--uncompleted" href="section1"> Etape non complétée non navigable </p>
-						</div>
-					</li>
-					<li class="rcn-stepperHorizontal__step">
-						<div class="rcn-stepper__number rcn-stepper__number--disabled">3</div>
-						<div>
-						<p class="rcn-stepperHorizontal__sectionTitle rcn-stepper__sectionTitle--disabled" href="section1"> Etape désactivée </p>
-						</div>
-					</li>
-		
-					<li class="rcn-stepperHorizontal__step">
-						<div class="rcn-stepper__number rcn-stepperNavigable__number--current">4</div>
-						<div>
-						<a class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--current" href="section1"> Etape en cours navigable </a>
-						</div>
-					</li>
-					<li class="rcn-stepperHorizontal__step">
-						<div class="rcn-stepper__number rcn-stepperNavigable__number--completed">6</div>
-						<div>
-						<a class="rcn-stepperHorizontal__sectionTitle rcn-stepperNavigable__sectionTitle--completed" href="section1"> Etape complétée navigable </a>
-						</div>
-					</li>
-		
-				</ol>
-		
-		
+			<ol class="rcn-stepper__list rcn-stepper__list--horizontal">
+	
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__number rcn-stepper__number--uncompleted">1</div>
+					
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée navigable </a>
+					
+				</li>
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__number rcn-stepper__number--uncompleted ">2</div>				
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée non navigable </a>
+					
+				</li>
+				<li class="rcn-stepper__step">
+					<div disabled class="rcn-stepper__number rcn-stepper__number--disabled">3</div>				
+					<a disabled class="rcn-link rcn-stepper__sectionTitle" href="section1"> Etape désactivée </a>
+					
+				</li>
+	
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__number rcn-stepper__number--current">4</div>				
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Etape en cours navigable </a>
+					
+				</li>
+				<li class="rcn-stepper__step">
+					
+					<div class="rcn-stepper__number rcn-stepper__number--completed">6</div>				
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Etape complétée navigable </a>
+					
+				</li>
+	
+			</ol>
+	
+	
 		</nav>
 
 
@@ -268,7 +400,77 @@
 	 </div>
  
 
-<div class="item-d ">Footer</div>
+	 <footer class="rcn-footer">
+        <div class="rcn-footer__socialMediasBanner rcn-grid__margins">
+            <div class="rcn-footer__socialMediasTextZone">
+                <span class="rcn-footer__socialMediasText">Suivez-nous</span>
+                <span class="rcn-footer__socialMediasText">sur les réseaux sociaux</span>
+            </div>
+            <div class="rcn-footer__socialMediasIconsZone">
+                <a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-dailymotion"></a>
+                <a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-instagram"></a>
+                <a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-youtube"></a>
+            </div>  
+        </div>
+
+        <div class="rcn-footer__mainBanners rcn-grid__margins"> 
+            <div class="rcn-footer__productBanner">
+                <div class="rcn-footer__productBanner-leftZone">
+                    <img class="image rcn-footer__productLogo" src="https://placehold.co/378x140">
+                    
+                        <div>Meileure version de toi même</div>
+                        <div class="rcn-inputFieldBloc rcn-inputFieldBloc--language">        
+                            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--language">Langue de l'applicatif :</label>
+                            <div class="rcn-inputField">
+                                <select name="" class="rcn-inputField__input rcn-inputField__input--select">
+                                    <option class="rcn-inputField__option" value="">- Séléctionner une option -</option>
+                                    <option class="rcn-inputField__option" value="">FR - Français</option>
+                                    <option class="rcn-inputField__option" value="">EN - English</option>
+                                    <option class="rcn-inputField__option" value="" selected>ES - Espanol</option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                </div>  
+                <div class="rcn-footer__productBanner-rightZone">
+                    <div class="rcn-footer__productDescription"> 
+                        lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend egestas ex et eleifend. Etiam id metus sed libero eleifend pretium in at ligula. Vivamus egestas fermentum orci, id posuere orci condimentum a. Duis laoreet auctor rhoncus. Aliquam pretium, enim sed accumsan ultricies, augue lorem aliquam urna, quis cursus magna urna id quam.
+                    </div>
+                    <div class="rcn-footer__institutionalEcosystemLinks">
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink" href="coucou">Link1</a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink"> Jusqu'à l'infini </a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink"> Et l'au delà </a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+                    </div>      
+                </div>      
+            </div>
+
+            <div class="rcn-footer__partnersBanner">
+                <div> 
+                Titre 
+                </div> 
+                <div class="rcn-footer__partnersLogosZone">
+                    <img class="partnerImage" src="https://placehold.co/160x90">
+
+                    <div class="rcn-footer__secondaryPartnersZone"> 
+                        <img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+                        <img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+                        <img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+                        <img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+                    </div>
+                </div>  
+            </div>
+
+            <div class="rcn-footer__mandatoryLegalLinks">
+                <a class="rcn-footer__mendatoryLegalLink"> Link </a>
+                <a class="rcn-footer__mendatoryLegalLink"> Link </a>
+                <a class="rcn-footer__mendatoryLegalLink"> Link </a>
+            </div>  
+            <div class="rcn-footer__licenseNotice"> Sauf mention contrainte... </div>
+        </div>
+    </footer>
 
 </body>
 </html>
