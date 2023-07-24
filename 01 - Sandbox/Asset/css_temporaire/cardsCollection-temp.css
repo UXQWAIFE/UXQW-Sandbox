@@ -1,7 +1,7 @@
 .rcn-cardCollection {
   display: grid;
   gap : var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
-  grid-template-columns: repeat(2, 1fr); /*supprimer de cette class*/
+  /*grid-template-columns: repeat(2, 1fr);*/ /*supprimer de cette class*/
   grid-template-rows: auto;
   background-color: transparent;
   justify-items:center; /*ajouter à l'excel*/
@@ -15,3 +15,4 @@ grid-template-columns: repeat(3, 1fr);
 .rcn-cardCollection--horizontal {
 grid-template-columns: repeat(2, 1fr);
 } /*ajouter à l'excel*/
+
