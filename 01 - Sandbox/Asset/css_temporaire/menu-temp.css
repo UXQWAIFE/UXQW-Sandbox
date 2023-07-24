@@ -62,11 +62,6 @@ button{
 
 /*====  A SUPPRIMER APRES INTAGRATION AU DS  =====*/
 
-.body{
-	display: flex;
-	flex-direction: column;
-	gap: 200px;
-}
 .rcn-grid__margins{
 	padding-right:80px;
 	padding-left:80px;

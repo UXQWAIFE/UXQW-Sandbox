@@ -1,11 +1,13 @@
 
 /*.rcn-header__productBanner {
-  padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); ==> A supprimer dans l'excel, porté par grid__margin*/
+  padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); ==> A supprimer dans l'excel, porté par grid__margin
 }
 */
 
 .rcn-header__mainNavBanner {
   /*padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); ==> à supprimer dans l'excel car porté par grids*/
+  padding-top : 0px; /* => Temporaire : ne pas mettre dans l'excel, à supprimer quand les padding auront été supprimés*/
+  padding-bottom : 0px;  /* => Temporaire : ne pas mettre dans l'excel, à supprimer quand les padding auront été supprimés */
 }
 
 
