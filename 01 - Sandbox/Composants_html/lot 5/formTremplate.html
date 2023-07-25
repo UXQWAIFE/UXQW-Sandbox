@@ -53,7 +53,7 @@
 	
 	<div class="rcn-grid rcn-grid--formStepperVerticalTemplate">
 			
-		<h1 class=" rcn-h1 rcn-h1--edito rcn-form__titleZone"> Titre du formulaire </h1>    
+		<h1 class=" rcn-h1 rcn-h1--edito rcn-form__headingZone"> Titre du formulaire je suis super super long comme titre pour le formulaire de l'état de la france </h1>    
 				
 		<nav class=" rcn-stepper rcn-stepper--navigable">
 
@@ -121,69 +121,115 @@
 
 		</nav>
 
-
-
 		
 
-			<form class="rcn-form__containerInputBlock">
-					
-				<p class="rcn-form__instruction"> 
-					Les champs suivi d'un  
-						<span class="rcn-inputFieldBloc__mandatoryAsterisk"> </span> 
-						sont obligatoires
-				</p>
-
-				<div class="rcn-form__content">
-
-					<!--imput non-obligatoire avec message succes -->
-
-					<div class="rcn-inputFieldBloc">        
-						<label for="x" class="rcn-inputFieldBloc__label">Label input</label>
-						<div class="rcn-inputField" >
-							<input id="x" type="text" col="5" row="5" class="rcn-inputField__input" placeholder="placeholder">
-						</div>
-					</div>
-
-					<!--imput obligatoire avec texte descriptif et message d'erreur -->
-
-					<div class="rcn-inputFieldBloc">
-						<label class="rcn-inputFieldBloc__label">
-							Champ en erreur
-						</label>
-				
-						<div>texte explicatif (si besoin)</div> 
-			
-						<div class="rcn-inputField rcn-inputField--error">
-							<input type="text" class="rcn-inputField__input" required>
-			
-						</div>
-						<div  class="rcn-inputFieldBloc__errorZone" >
-							<i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
-							erreur machin machin
-						</div> 
-					</div>
-					
-				</div>
-				<div class="rcn-bottomActionsBanner" >
-					<div class="rcn-bottomActionsBanner__secondaryActions">
-						<button class="rcn-button rcn-button--secondary">Enregistrer</button>
-					</div>
-					<div class="rcn-bottomActionsBanner__primaryActions"> 
-						<button class="rcn-button rcn-button--primary">Suivant</button>
-						<button class="rcn-button rcn-button--secondary">Précédent</button>
+		<form class="rcn-form__formZone">
 						
+			<p class="rcn-form__instructionZone"> 
+				Les champs suivi d'un  
+					<span class="rcn-inputFieldBloc__mandatoryAsterisk"> </span> 
+					sont obligatoires
+			</p>
+
+			<div class="rcn-form__content">
+
+				<!--imput non-obligatoire avec message succes -->
+
+				<div class="rcn-inputFieldBloc">        
+					<label for="x" class="rcn-inputFieldBloc__label">Label input</label>
+					<div class="rcn-inputField" >
+						<input id="x" type="text" col="5" row="5" class="rcn-inputField__input" placeholder="placeholder">
 					</div>
 				</div>
-			</form>
 
-		</div> 
+				<!--imput obligatoire avec texte descriptif et message d'erreur -->
+
+				<div class="rcn-inputFieldBloc">
+					<label class="rcn-inputFieldBloc__label">
+						Champ en erreur
+					</label>
+			
+					<div>texte explicatif (si besoin)</div> 
+		
+					<div class="rcn-inputField rcn-inputField--error">
+						<input type="text" class="rcn-inputField__input" required>
+		
+					</div>
+					<div  class="rcn-inputFieldBloc__errorZone" >
+						<i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+						erreur machin machin
+					</div> 
+				</div>
+
+				<!--imput obligatoire + erreur -->
+
+				<div class="rcn-inputFieldBloc">
+					<label class="rcn-inputFieldBloc__label">
+						Error<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span>
+					</label>
+			
+					<div>texte explicatif (si besoin)</div> 
+
+					<div class="rcn-inputField rcn-inputField--error">
+						<input type="text" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit" required>
+
+					</div>
+					<div  class="rcn-inputFieldBloc__errorZone" >
+						<i class="rcn-inputFieldBloc__errorIcon rcn-icon "><span class="sr-only"></span></i>
+						erreur machin machin
+					</div> 
+				</div>
+
+				<!--input obligatoire + succes  -->
+
+				<div class="rcn-inputFieldBloc">        
+					<label class="rcn-inputFieldBloc__label">Success<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
+					<div class="rcn-inputField" >
+						<input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+					</div>
+					<div  class="rcn-inputFieldBloc__successZone">
+						<i class="rcn-icon rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
+						bravo clarou t'es la meilleur dev
+					</div> 
+				</div>
+
+				<!--imput désactivé -->
+
+				<div class="rcn-inputFieldBloc">        
+					<label class="rcn-inputFieldBloc__label">Désactivé</label>
+					<div class="rcn-inputField rcn-inputField--disabled" >
+						<input type="text"  value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+
+						<button disabled class="rcn-iconButton rcn-inputField__button">
+							<span class="sr-only"></span>
+							<i class="mdi mdi-heart"></i>
+						</button>
+					</div>
+				</div>
+	
+			</div>
+
+			<div class="rcn-bottomActionsBanner" >
+				<div class="rcn-bottomActionsBanner__secondaryActions">
+					<button class="rcn-button rcn-button--secondary">Enregistrer</button>
+				</div>
+				<div class="rcn-bottomActionsBanner__primaryActions"> 
+					<button class="rcn-button rcn-button--primary">Suivant</button>
+					<button class="rcn-button rcn-button--secondary">Précédent</button>
+					
+				</div>
+			</div>
+
+		</form>
+
+	</div> 
 	
 		
 
 		
 	
 
-		<footer class="rcn-footer">
+	<footer class="rcn-footer">
 			<div class="rcn-footer__socialMediasBanner rcn-grid__margins">
 				<div class="rcn-footer__socialMediasTextZone">
 					<span class="rcn-footer__socialMediasText">Suivez-nous</span>
@@ -253,7 +299,7 @@
 				</div>  
 				<div class="rcn-footer__licenseNotice"> Sauf mention contrainte... </div>
 			</div>
-		</footer>
+	</footer>
 
 
  <!-- Template formulaire avec stepper horizontal -->
@@ -296,7 +342,7 @@
 	<div class="rcn-grid rcn-grid--formStepperHorizontalTemplate">
 		 
 		
-		<h1 class=" rcn-h1 rcn-h1--edito rcn-form__titleZone"> Titre du formulaire </h1>   
+		<h1 class=" rcn-h1 rcn-h1--edito rcn-form__headingZone"> Titre du formulaire </h1>   
 
 	
 		
@@ -342,9 +388,9 @@
 	
 
 
-		<form class="rcn-form__containerInputBlock">
+		<form class="rcn-form__formZone">
 						
-					<p class="rcn-form__instruction"> 
+					<p class="rcn-form__instructionZone"> 
 						Les champs suivi d'un  
 							<span class="rcn-inputFieldBloc__mandatoryAsterisk"> </span> 
 							sont obligatoires

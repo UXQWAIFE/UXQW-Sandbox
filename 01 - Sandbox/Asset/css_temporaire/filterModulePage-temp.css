@@ -1,18 +1,4 @@
 
-   /*------------- Grid > mettre via le fichier temp une fois que c'est good ---------------*/
-    
-  
-  /*Grid globale*/
-  .rcn-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-    grid-template-rows: auto;
-    background-color: transparent;
-    margin : 0 5rem;
-    height: 100%;
-  }
-  
   /*Template*/
   
   .rcn-gridTemplateExampleTest {

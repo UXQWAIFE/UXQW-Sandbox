@@ -1,6 +1,3 @@
-
-
-
   /*Template du formulaire */
   
   .rcn-grid--formStepperVerticalTemplate {
@@ -10,13 +7,41 @@
   }
   
   .rcn-grid--formStepperHorizontalTemplate {
+
     grid-template-areas:
     "formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading"
     "stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper"
     "form form form form form form form form form form form form";
+
   }
 
-    /*------------- Stepper [Porté par le composant stepper] ---------------*/
+  .rcn-form__headingZone{
+    display: flex;
+    justify-content: center;
+    grid-area: formHeading;
+    text-align: center;
+    }
+
+  .rcn-form__instructionZone{
+      display: flex;
+      flex-direction: row;
+      width:auto;
+      justify-content: center;
+      margin:0;
+      gap: var(--rcn-semantic-gap-horizontal-200);
+      align-items: center;
+      margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
+  }
+    
+  .rcn-form__formZone{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    grid-area: form;
+
+  }
+
+  /*------------- Stepper [Porté par le composant stepper quand il sera dans les fichiers temporaires ] ---------------*/
 
       
 .rcn-stepper{
@@ -317,32 +342,6 @@ color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 }
       
 
-  /* --------------------Classe pour le template formulaire --------------------*/
-  
-   .rcn-form__titleZone{
-      display: flex;
-      justify-content: center;
-      grid-area: formHeading;
-      }
-  
-    .rcn-form__instruction{
-        display: flex;
-        flex-direction: row;
-        width:auto;
-        justify-content: center;
-        margin:0;
-        gap: var(--rcn-semantic-gap-horizontal-200);
-        align-items: center;
-        margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
-    }
-      
-    .rcn-form__containerInputBlock{
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      grid-area: form;
-  
-      }
 
 
 
