@@ -28,6 +28,14 @@
     background-color: var(--rcn-semantic-color-static-background-table_alternate_line);
 }
 
+.rcn-tableRow__cell--selected {
+    background-color: var(--rcn-semantic-color-static-background-table_line_selected);
+    border-left: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
+}
+
+.rcn-tableRow__cell--selected .rcn-tableData--sticked {
+    background-color: var(--rcn-semantic-color-static-background-table_line_selected);
+}
 /* Cellules de titre */
 .rcn-tableHead {
     border-style: solid;
@@ -35,24 +43,27 @@
     border-color: var(--rcn-semantic-color-static-border-standard);
     padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-200);
 }
-.rcn-tableHead--action {
-    max-width: 5rem;
-}
+
 
 .rcn-tableHead:last-child {
     border-width: 0 0 var(--rcn-semantic-borderwidth-200) 0;
 }
-.rcn-tableHead:first-child {
-    border-width: 0 0 var(--rcn-semantic-borderwidth-200) 0;
-}
+
 .rcn-tableHead__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .rcn-tableHead__container span {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.rcn-tableHead__container--foldable,
+.rcn-tableHead__container--checkable {
+    justify-content: center;
+    width:3rem;
 }
 
 /* Cellules de données */
@@ -114,6 +125,11 @@
     border-style: solid;
     border-color: var(--rcn-semantic-color-static-border-standard);
 }
+.rcn-tableData--sticked:nth-of-type(2) {
+    left:var(--th__width--offsetLeft-0);
+
+}
+
 .rcn-tableData--sticked:last-child {
     right:0;
     border-left-width: 1px;
@@ -153,8 +169,7 @@
 .rcn-tableSubRow__cell--unfolded {
     border-left:var(--rcn-semantic-borderwidth-300) solid #949494;
 }
-.rcn-tableRow__cell--unfolded {
-}
+
 .rcn-tableSubRow__cell--folded {
     display: none;
 }

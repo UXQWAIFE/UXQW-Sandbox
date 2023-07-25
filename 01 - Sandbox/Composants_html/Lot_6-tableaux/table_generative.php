@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $nombreColonnes = $_POST["nombreColonnes"];
   $nombreLignes = $_POST["nombreLignes"];
   $Lig_depliable_nbr = $_POST["Lig_depliable_nbr"];
+  $Col_Fix_nbr = $_POST['Col_Fix_nbr'];
   
   // Récupérer les options des fonctionnalités
   $ET_Searchable = isset($_POST["ET_Searchable"]);
@@ -38,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   for ($col = 1; $col <= $nombreColonnes; $col++) {
     $typeDonnee = $_POST["typeDonnee".$col];
     $typesDonnees[$col] = $typeDonnee;
-    $_SESSION['typesDonnee'][$col] = $typesDonnees[$col];
   }
   
   // Variables pour les fonctionnalités sélectionnées
@@ -82,56 +82,63 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   
   for ($col = 1; $col <= $nombreColonnes; $col++) {
     $colHeader = "Colonne $col";
-
+    $classThead = ' rcn-tableHead';
     // Ajouter les fonctionnalités sélectionnées aux en-têtes de colonne
     if ($Col_action && $Col_fix && $col === $nombreColonnes) {
       $colHeader .= " (Action)";
-      $classThead = 'rcn-tableHead';
     }
     if($Col_filtre) {
       $FiltrableCol = "<button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
                         <span class=''>Filtrer</span>
                       </button>";
-      $classThead = 'rcn-tableHead';
     }else{
       $FiltrableCol = "<button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
                         <span class='sr-only'>Filtrer</span>
                       </button>";
-      $classThead = 'rcn-tableHeads';
     }
     
     if ($Col_fix) {
-      if ($Col_fix && $col === 1) {
+      if ( $col < $Col_Fix_nbr ) {
         $colHeader .= " (Fixe - Première)";
-        $classThead = 'rcn-tableHead rcn-tableHead--action rcn-tableData--sticked';
+        $classThead .= ' rcn-tableData--sticked';
       }
-      if ($Col_fix && $col == $nombreColonnes ) {
+
+      if ( $col == $nombreColonnes ) {
         $colHeader .= " (Fixe - Dernière)";
-        $classThead = "rcn-tableHead rcn-tableHead--action rcn-tableData--sticked";
+        $classThead .= ' rcn-tableData--sticked';
       }
     }
     if($Lig_depliable || $Lig_select) {
-      $colHeaderNone = '';
-      if ($Lig_select) {
-        $colHeaderNone .= "
-        <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
-        ";
+      
+      $typeDonnee = $typesDonnees[$col];
+
+      $modifierThContainer = '';
+      // Ajouter les fonctionnalités en fonction du type de donnée sélectionné
+      switch ($typeDonnee) {
+        case 'bouton_depliable':
+          $colHeader = '<p class="sr-only">Déplier</p>';
+          $FiltrableCol = '';
+          $classThead .= ' rcn-tableHead--action';          
+          $modifierThContainer .= 'rcn-tableHead__container--foldable';
+        break;
+        case 'bouton_selection':
+          $colHeader = "
+            <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          ";
+          $FiltrableCol = '';
+          $classThead .= ' rcn-tableHead--action';
+          $modifierThContainer .= ' rcn-tableHead__container--checkable';
+        break;
       }
     }
-    if ( $Lig_depliable || $Lig_select ) {
+    
       $tableHTML .= "<th class='". $classThead ."' scope='col' aria-sort=''>
-                  <div class='rcn-tableHead__container'>
-                    <span class=''>$colHeaderNone</span>
-                  </div>
-                </th>\n";
-    }else{
-      $tableHTML .= "<th class='". $classThead ."' scope='col' aria-sort=''>
-                  <div class='rcn-tableHead__container'>
+                  <div class='rcn-tableHead__container $modifierThContainer'>
                     <span class=''>$colHeader</span>
                     $FiltrableCol
                   </div>
                 </th>\n";
-    }
+    
   }
   $tableHTML .= "</tr>\n";
   $tableHTML .= "</thead>\n";
@@ -156,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       for ($col = 1; $col <= $nombreColonnes; $col++) {
         $rowData = "Ligne $row, Colonne $col";
         $stickedClass = "";
-        if($Col_fix && ($col === 1 || $col == $nombreColonnes)) {
+        if($Col_fix && ($col < $Col_Fix_nbr  || $col == $nombreColonnes)) {
           $stickedClass .= "rcn-tableData--sticked";
         }
         // Récupérer le type de donnée pour cette colonne
@@ -388,5 +395,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <!-- Rediriger vers la page principale après le traitement du formulaire -->
 <script>
-   window.location.href = "index.php";
+  window.location.href = "index.php";
 </script>
