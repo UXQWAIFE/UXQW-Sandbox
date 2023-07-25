@@ -327,21 +327,81 @@ print_r($_SESSION);
 
 			// Parcourir chaque bouton
 			btn.forEach(function(button) {
-			// Ajouter un écouteur d'événement pour le clic sur le bouton
+				// Ajouter un écouteur d'événement pour le clic sur le bouton
 				button.addEventListener('click', function() {
 					var toggleRows = document.querySelectorAll('.rcn-tableRow__cell--folded');
-					if (toggleRows.length === 0) {
-						var toggleRows = document.querySelectorAll('.rcn-tableRow__cell--unfolded');
+					var toggleSubRows = document.querySelectorAll('.rcn-tableSubRow__cell--folded');
+					if (toggleSubRows.length === 0) {
+						var toggleSubRows = document.querySelectorAll('.rcn-tableSubRow__cell--unfolded');
 					} 
-					console.log(toggleRows);
-					// Parcourir chaque ligne
 					toggleRows.forEach(function(row) {
-						// Alterner la classe pour déplier/replier la ligne
-						row.classList.toggle('rcn-tableRow__cell--folded');
+						
 						row.classList.toggle('rcn-tableRow__cell--unfolded');
+					});
+					// Parcourir chaque ligne
+					toggleSubRows.forEach(function(subrow) {
+						// Alterner la classe pour déplier/replier la ligne
+						subrow.classList.toggle('sr-only');
+						subrow.classList.toggle('rcn-tableSubRow__cell--folded');
+						subrow.classList.toggle('rcn-tableSubRow__cell--unfolded');
 					});
 				});
 			});
+
+			var rowBkg = document.querySelectorAll(".rcn-tableRow__cell");
+			var subRowBkg = document.querySelectorAll(".rcn-tableSubRow__cell");
+			var actualBkg = "";
+
+			for (var i = 0; i < rowBkg.length; i++) {
+				var actualBkg = "";
+				if (i % 2 === 0) {
+					rowBkg[i].classList.add("rcn-tableRow__cell--odd");
+					actualBkg = "rcn-tableRow__cell--odd";
+				} else {
+					rowBkg[i].classList.add("rcn-tableRow__cell--even");
+					actualBkg = "rcn-tableRow__cell--even";
+				}
+
+				if (subRowBkg.length) {
+					for (var y = 0; y < subRowBkg.length; y++) { // Changer i en y ici
+					if(actualBkg.includes("--odd")){
+						subRowBkg[y].classList.add("rcn-tableSubRow__cell--odd")
+					}else{
+						subRowBkg[y].classList.add("rcn-tableSubRow__cell--even")
+					}
+					}
+				}
+			}
+
+			// Récupérez toutes les cases cochables
+			const cochables = document.querySelectorAll('.rcn-tableCell__select .rcn-inputField__input--checkbox');
+
+			// Récupérez le bandeau
+			const bandeau = document.querySelector('.rcn-preTable__rowSelected');
+
+			// Fonction pour mettre à jour le nombre de cases cochées et afficher/masquer le bandeau
+			function updateBandeau() {
+			const nbCasesCoches = document.querySelectorAll('.rcn-tableCell__select .rcn-inputField__input--checkbox:checked').length;
+			const bandeauTexte = bandeau.querySelector('p');
+			
+			bandeauTexte.textContent = nbCasesCoches + ' cases cochées';
+			
+			if (nbCasesCoches > 0) {
+				bandeau.classList.remove("sr-only");
+			} else {
+				bandeau.classList.add("sr-only");
+			}
+			}
+
+			// Ajoutez des gestionnaires d'événements pour détecter les changements d'état des cases cochables
+			cochables.forEach(cochable => {
+			cochable.addEventListener('change', updateBandeau);
+			});
+
+			// Appelez la fonction updateBandeau une première fois pour initialiser l'état du bandeau
+			updateBandeau();
+			
+
 
 	</script>
 </body>

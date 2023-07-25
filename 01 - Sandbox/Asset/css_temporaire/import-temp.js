@@ -25,7 +25,7 @@ var cssFiles = [
     'FormInputs',
     'Connexion-module',
     'Cookie',
-    'Grid',
+    'grid',
     'ActionsBanner',
     'FilterModule' ,
     'SearchResultTemplate',
@@ -33,7 +33,8 @@ var cssFiles = [
     'formTemplate',
     'searchResultModule',
     'filterModulePage',
-    'menu'
+    'menu',
+    'Typography'
   ];
   
   var headElement = document.head;

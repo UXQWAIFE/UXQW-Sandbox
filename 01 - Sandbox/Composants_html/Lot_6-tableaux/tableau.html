@@ -49,13 +49,34 @@
           </div>
         </div>
     </div>
+    
+    <div class="rcn-preTable__rowSelected sr-only" aria-hidden="false">
+				<div class="rcn-preTable__rowSelected--count">
+					<p aria-owns=""><span>1</span> Ligne(s) séléctionnée(s)</p>				</div>
+				<div>
+					<div class="rcn-preTable__rowSelected--action">
+						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 1</button>
+						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 2</button>
+						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 3</button>
+					</div>
+				</div>
+			</div>
     <div class='rcn-tableContent'>
 <table class='rcn-table'>
 <thead class='rcn-tableRow'>
 <tr class='rcn-tableRow__head'>
 <th class='rcn-tableHead rcn-tableHead--action rcn-tableData--sticked' scope='col' aria-sort=''>
                     <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 1 (Fixe - Première)</span>
+                      <span class=''>
+          <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          </span>
+                    </div>
+                  </th>
+<th class='rcn-tableHead rcn-tableHead--action rcn-tableData--sticked' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>
+          <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          </span>
                       <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
                         <span class=''>Filtrer</span>
                       </button>
@@ -63,7 +84,16 @@
                   </th>
 <th class='rcn-tableHead' scope='col' aria-sort=''>
                     <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 2</span>
+                      <span class=''>
+          <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          </span>
+                    </div>
+                  </th>
+<th class='rcn-tableHead' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>
+          <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          </span>
                       <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
                         <span class=''>Filtrer</span>
                       </button>
@@ -71,71 +101,16 @@
                   </th>
 <th class='rcn-tableHead' scope='col' aria-sort=''>
                     <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 3</span>
-                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                      <span class=''>
+          <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          </span>
                     </div>
                   </th>
 <th class='rcn-tableHead' scope='col' aria-sort=''>
                     <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 4</span>
-                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
-                    </div>
-                  </th>
-<th class='rcn-tableHead' scope='col' aria-sort=''>
-                    <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 5</span>
-                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
-                    </div>
-                  </th>
-<th class='rcn-tableHead' scope='col' aria-sort=''>
-                    <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 6</span>
-                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
-                    </div>
-                  </th>
-<th class='rcn-tableHead' scope='col' aria-sort=''>
-                    <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 7</span>
-                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
-                    </div>
-                  </th>
-<th class='rcn-tableHead' scope='col' aria-sort=''>
-                    <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 8</span>
-                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
-                    </div>
-                  </th>
-<th class='rcn-tableHead' scope='col' aria-sort=''>
-                    <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 9</span>
-                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
-                    </div>
-                  </th>
-<th class='rcn-tableHead' scope='col' aria-sort=''>
-                    <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 10</span>
-                      <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
-                    </div>
-                  </th>
-<th class='rcn-tableHead' scope='col' aria-sort=''>
-                    <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 11</span>
+                      <span class=''>
+          <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          </span>
                       <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
                         <span class=''>Filtrer</span>
                       </button>
@@ -143,7 +118,16 @@
                   </th>
 <th class='rcn-tableHead rcn-tableHead--action rcn-tableData--sticked' scope='col' aria-sort=''>
                     <div class='rcn-tableHead__container'>
-                      <span class=''>Colonne 12 (Fixe - Dernière)</span>
+                      <span class=''>
+          <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          </span>
+                    </div>
+                  </th>
+<th class='rcn-tableHead rcn-tableHead--action rcn-tableData--sticked' scope='col' aria-sort=''>
+                    <div class='rcn-tableHead__container'>
+                      <span class=''>
+          <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          </span>
                       <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
                         <span class=''>Filtrer</span>
                       </button>
@@ -152,103 +136,53 @@
 </tr>
 </thead>
 <tbody class='rcn-tableRow'>
-<tr class='rcn-tableRow__cell rcn-tableRow__cell--fold'>
+<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded'>
  <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button id='Lig_depliable' class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 2</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 8</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 9</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 10</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 12</div></td>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 4</div></td>
 </tr>
-<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded sr-only'>
+<tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>
 <td class='rcn-tableCell rcn-tableData--sticked '></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 2</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 8</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 9</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 10</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 12</div></td>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 4</div></td>
 </tr>
-<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded sr-only'>
+<tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>
 <td class='rcn-tableCell rcn-tableData--sticked '></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 2</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 8</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 9</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 10</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 12</div></td>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 4</div></td>
 </tr>
-<tr class='rcn-tableRow__cell'>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 2</div></td>
+<tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>
+<td class='rcn-tableCell rcn-tableData--sticked '></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 8</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 9</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 10</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 12</div></td>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 4</div></td>
 </tr>
 <tr class='rcn-tableRow__cell'>
 <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 2</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 8</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 9</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 10</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 12</div></td>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 4</div></td>
 </tr>
 <tr class='rcn-tableRow__cell'>
 <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 2</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 8</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 9</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 10</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 12</div></td>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 4</div></td>
 </tr>
 <tr class='rcn-tableRow__cell'>
 <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 2</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 8</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 9</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 10</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 12</div></td>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 4</div></td>
+</tr>
+<tr class='rcn-tableRow__cell'>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 3</div></td>
+<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 4</div></td>
 </tr>
 </tbody>
 </table>

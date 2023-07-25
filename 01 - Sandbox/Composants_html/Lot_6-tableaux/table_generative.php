@@ -110,14 +110,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $classThead = "rcn-tableHead rcn-tableHead--action rcn-tableData--sticked";
       }
     }
-
-
-    $tableHTML .= "<th class='". $classThead ."' scope='col' aria-sort=''>
-                    <div class='rcn-tableHead__container'>
-                      <span class=''>$colHeader</span>
-                      $FiltrableCol
-                    </div>
-                  </th>\n";
+    if($Lig_depliable || $Lig_select) {
+      $colHeaderNone = '';
+      if ($Lig_select) {
+        $colHeaderNone .= "
+        <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+        ";
+      }
+    }
+    if ( $Lig_depliable || $Lig_select ) {
+      $tableHTML .= "<th class='". $classThead ."' scope='col' aria-sort=''>
+                  <div class='rcn-tableHead__container'>
+                    <span class=''>$colHeaderNone</span>
+                  </div>
+                </th>\n";
+    }else{
+      $tableHTML .= "<th class='". $classThead ."' scope='col' aria-sort=''>
+                  <div class='rcn-tableHead__container'>
+                    <span class=''>$colHeader</span>
+                    $FiltrableCol
+                  </div>
+                </th>\n";
+    }
   }
   $tableHTML .= "</tr>\n";
   $tableHTML .= "</thead>\n";
@@ -130,10 +144,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   for ($row = 1; $row <= $nombreLignes; $row++) {
     $foldedRow ='';
     if ($row === 1) {
-      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--fold'>\n ";
+      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded'>\n ";
       $folded = 2;
     } else if ($row > 1 && $row <= $Lig_depliable_nbr + 1) {
-      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded sr-only'>\n";
+      $tableHTML .= "<tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>\n";
       $folded = 1;
     } else {
       $tableHTML .= "<tr class='rcn-tableRow__cell'>\n";
@@ -308,6 +322,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       }
     }
     $enteteTableau .= '<div class="rcn-preTable__zoneAction">'. $zoneAction .'</div>';
+  
+  
+  
+  
   }
 
 
@@ -333,6 +351,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       $enteteTableau
     </div>
     ";
+  }
+  if($Lig_select) {
+    $resultat .= '
+    <div class="rcn-preTable__rowSelected sr-only" aria-hidden="false">
+				<div class="rcn-preTable__rowSelected--count">
+					<p aria-owns=""><span>1</span> Ligne(s) séléctionnée(s)</p>				</div>
+				<div>
+					<div class="rcn-preTable__rowSelected--action">
+						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 1</button>
+						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 2</button>
+						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 3</button>
+					</div>
+				</div>
+			</div>
+    ';
+
   }
   // Injection du tableau
   $resultat .= $tableHTML;
