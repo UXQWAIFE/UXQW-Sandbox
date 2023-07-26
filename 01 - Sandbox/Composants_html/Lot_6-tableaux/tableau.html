@@ -1,6 +1,6 @@
 <h2>Résultat du tableau :</h2>
 <p>Fonctionnalités de l'en-tête :  Recherche Actions globales (dont export) Pagination</p>
-<p>Fonctionnalités de colonne :  Colonne Fixe Colonne Filtrable Colonne Action</p>
+<p>Fonctionnalités de colonne :  Colonne Filtrable Colonne Action</p>
 <p>Fonctionnalités de ligne :  Ligne dépliable Ligne Sélectionnable</p>
 <div class='rcn-tableContainer'>
   <div class='rcn-preTable'>
@@ -65,106 +65,624 @@
 <table class='rcn-table'>
 <thead class='rcn-tableRow'>
 <tr class='rcn-tableRow__head'>
-<th class=' rcn-tableHead rcn-tableData--sticked rcn-tableHead--action' scope='col' aria-sort=''>
-                  <div class='rcn-tableHead__container rcn-tableHead__container--foldable'>
-                    <span class=''><p class="sr-only">Déplier</p></span>
-                    
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
+                  <div class='rcn-tableHead__container '>
+                    <span class=''>Colonne 1</span>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
-<th class=' rcn-tableHead rcn-tableData--sticked rcn-tableHead--action' scope='col' aria-sort=''>
-                  <div class='rcn-tableHead__container  rcn-tableHead__container--checkable'>
-                    <span class=''>
-            <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
-          </span>
-                    
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
+                  <div class='rcn-tableHead__container '>
+                    <span class=''>Colonne 2</span>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 <th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
                     <span class=''>Colonne 3</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 <th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
                     <span class=''>Colonne 4</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 <th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
                     <span class=''>Colonne 5</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 <th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
                     <span class=''>Colonne 6</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 <th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
                     <span class=''>Colonne 7</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 <th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
                     <span class=''>Colonne 8</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 <th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
                     <span class=''>Colonne 9</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 <th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
                     <span class=''>Colonne 10</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 <th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
                     <span class=''>Colonne 11</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
-<th class=' rcn-tableHead rcn-tableData--sticked' scope='col' aria-sort=''>
+<th class=' rcn-tableHead' scope='col' aria-sort=''>
                   <div class='rcn-tableHead__container '>
-                    <span class=''>Colonne 12 (Fixe - Dernière)</span>
-                    <button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>
+                    <span class=''>Colonne 12</span>
+                    <div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <span class="">Fermer</span>
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>
+                      </div>
+                      
                   </div>
                 </th>
 </tr>
 </thead>
 <tbody class='rcn-tableRow'>
 <tr class='rcn-tableRow__cell rcn-tableRow__cell--folded'>
- <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button id='Lig_depliable' class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+ <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 1</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 2</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 3</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 4</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 5</div></td>
@@ -174,11 +692,11 @@
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 9</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 10</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 12</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 12</div></td>
 </tr>
 <tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>
-<td class='rcn-tableCell rcn-tableData--sticked '></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 1</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 2</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 3</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 4</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 5</div></td>
@@ -188,11 +706,11 @@
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 9</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 10</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 12</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 12</div></td>
 </tr>
 <tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>
-<td class='rcn-tableCell rcn-tableData--sticked '></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 1</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 2</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 3</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 4</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 5</div></td>
@@ -202,11 +720,11 @@
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 9</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 10</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 12</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 12</div></td>
 </tr>
-<tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>
-<td class='rcn-tableCell rcn-tableData--sticked '></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<tr class='rcn-tableRow__cell'>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 1</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 2</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 3</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 4</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 5</div></td>
@@ -216,11 +734,11 @@
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 9</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 10</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 12</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 12</div></td>
 </tr>
 <tr class='rcn-tableRow__cell'>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 1</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 2</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 3</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 4</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 5</div></td>
@@ -230,11 +748,11 @@
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 9</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 10</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 12</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 12</div></td>
 </tr>
 <tr class='rcn-tableRow__cell'>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 1</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 2</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 3</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 4</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 5</div></td>
@@ -244,11 +762,11 @@
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 9</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 10</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 12</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 12</div></td>
 </tr>
 <tr class='rcn-tableRow__cell'>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 1</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 2</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 3</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 4</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 5</div></td>
@@ -258,21 +776,7 @@
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 9</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 10</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 12</div></td>
-</tr>
-<tr class='rcn-tableRow__cell'>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 8</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 9</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 10</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 11</div></td>
-<td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 12</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 12</div></td>
 </tr>
 </tbody>
 </table>

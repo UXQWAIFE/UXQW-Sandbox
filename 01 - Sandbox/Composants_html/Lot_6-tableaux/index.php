@@ -233,7 +233,7 @@ print_r($_SESSION);
 			</label>
 			<label class="rcn-inputFieldBloc__label sr-only" for="Col_Fix_nbr">Nombre ?</label>
 			<div class="rcn-inputField">
-				<input placeholder="Nombre gauche puis droite" value="<?php echo isset($_SESSION['Col_Fix_nbr']) ? $_SESSION['Col_Fix_nbr'] : ''; ?>" class='rcn-inputField__input' type="number" name="Col_Fix_nbr" id="Col_Fix_nbr">
+				<input min="2" placeholder="Nombre gauche puis droite" value="<?php echo isset($_SESSION['Col_Fix_nbr']) ? $_SESSION['Col_Fix_nbr'] : ''; ?>" class='rcn-inputField__input' type="number" name="Col_Fix_nbr" id="Col_Fix_nbr">
 			</div>	
 
 			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_filtre">Colonne Filtrable ?
@@ -407,21 +407,32 @@ print_r($_SESSION);
 
 		// Appelez la fonction updateBandeau une première fois pour initialiser l'état du bandeau
 		updateBandeau();
-
-		// Récupérer la largeur du premier <th> de sticky-thead-1
-		const header1Width = document.querySelector('.rcn-tableData--sticked:first-child').offsetWidth;
-		var headerCount = document.querySelectorAll('th.rcn-tableData--sticked').length;
-		
-		for( var i = 0; i < headerCount; i++ ) {
-			// if( i === 0) {
-			// 	document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${i}px`);
-			// }
-			document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${header1Width}px`);
+		if (document.querySelector('.rcn-tableData--sticked')) {
+			// Récupérer la largeur du premier <th> de sticky-thead-1
+			const header1Width = document.querySelector('.rcn-tableData--sticked:first-child').offsetWidth;
+			var headerCount = document.querySelectorAll('th.rcn-tableData--sticked').length;
+			
+			for( var i = 0; i < headerCount; i++ ) {
+				// if( i === 0) {
+				// 	document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${i}px`);
+				// }
+				document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${header1Width}px`);
+			}
+			// Appliquer la largeur comme une variable CSS personnalisée
 		}
-		// Appliquer la largeur comme une variable CSS personnalisée
 
+		const filterButtons = document.querySelectorAll('.rcn-tableHead__container--filter .rcn-iconButton');
 
-
+		filterButtons.forEach(buttonf => {
+			buttonf.addEventListener('click', () => {
+				console.log('allo');
+				const filterElement = buttonf.nextElementSibling;
+				console.log(filterElement.classList);
+				if (filterElement.classList.contains('rcn-tableFilter')) {
+					filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
+				}
+			});
+		});
 			
 
 
