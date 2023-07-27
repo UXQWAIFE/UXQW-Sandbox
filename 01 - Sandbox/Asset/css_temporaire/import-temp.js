@@ -34,7 +34,8 @@ var cssFiles = [
     'searchResultModule',
     'filterModulePage',
     'menu',
-    'Typography'
+    'Typography',
+    'Pagination'
   ];
   
   var headElement = document.head;
