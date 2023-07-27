@@ -14,13 +14,13 @@
 
 <body class="body">
 
-  <nav class="rcn-header__mainNavBanner rcn-grid__margins">
+  <nav class="rcn-header__mainNavBanner rcn-gridMargins--menu">
 
     <ul class="rcn-menu">
       
       <!-- Entrée Accueil  -->
       <li>
-        <a class="rcn-menu__entry rcn-menu__entry--first" aria-current='page'  href="#" >
+        <a class="rcn-menu__entry " aria-current='page'  href="#" >
           Accueil TCO
         </a>
       </li>
@@ -56,13 +56,16 @@
     
     </ul>
 
-    <!-- Barre de rceherche  -->
-    <div class="rcn-inputField">
-            <input placeholder="Rechercher..." class="rcn-inputField__input">
-            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
-                <span class="sr-only"></span>
-            </button> 
-    </div>
+    <!-- Barre de recherche  -->
+    
+      <div class="rcn-inputFieldBloc__label sr-only">Rechercher</div>
+      <div class="rcn-inputField">
+        <input placeholder="Rechercher..." class="rcn-inputField__input">
+        <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+          <span class="sr-only"></span>
+        </button> 
+      </div>
+
 
   </nav>
 </body>

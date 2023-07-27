@@ -62,9 +62,9 @@ button{
 
 /*====  A SUPPRIMER APRES INTAGRATION AU DS  =====*/
 
-.rcn-grid__margins{
+.rcn-gridMargins--menu{
 	padding-right:80px;
-	padding-left:80px;
+	padding-left:64px;
 }
 
 
@@ -90,7 +90,7 @@ button{
 	align-items: baseline;
 	gap:var(--rcn-semantic-gap-horizontal-200);
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
-	text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration-menu);
+	text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration-menu); */
 	line-height:var(--rcn-semantic-typography-lien-component-default-body-lineheight);
 	padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-400);
 }
