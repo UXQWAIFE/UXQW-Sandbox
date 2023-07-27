@@ -42,3 +42,7 @@ color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
   text-decoration: none; /*ajouté dans l'excel ==> OK*/
 }
 
+
+.rcn-inputFieldBloc--language{
+  flex-wrap: wrap;
+}
