@@ -15,6 +15,7 @@
     margin-bottom: var(--rcn-semantic-gap-vertical-400);
 }
 .rcn-table {
+    min-width: 100%;
     box-sizing: border-box;
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
     font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
@@ -49,7 +50,6 @@
 }
 
 /* post table */
-
 .rcn-postTable {
     display: flex;
     width: 100%;

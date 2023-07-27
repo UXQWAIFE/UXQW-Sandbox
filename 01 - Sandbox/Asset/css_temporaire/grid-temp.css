@@ -1,30 +1,19 @@
 
 
- /*------------- Grid ---------------*/
-  
-
-/*Grid globale*/
-.rcn-grid {
+/*------------- Grid ---------------*/
+  .rcn-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-  grid-template-rows: auto;
   background-color: transparent;
-  margin : 0 5rem;
-  height: 100%;
+  grid-template-rows: auto;
+  height:100%;
 }
 
-/*.rcn-container--primary {
-  padding-right:80px;
-  padding-left:80px;
-}*/
-
-.rcn-grid__margins {
-  padding-right:80px;
-  padding-left:80px;
+.rcn-gridMargins {
+  padding-right:var(--rcn-semantic-padding-horizontal-900);
+  padding-left:var(--rcn-semantic-padding-horizontal-900);
 }
-
-/*Template*/
 
 .rcn-gridTemplateExample {
   grid-template-areas: 
@@ -32,13 +21,118 @@
     "main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar";
 }
 
-/*Composants de la grille - TEST*/
-
-.item-a {
-  display: flex;
-  background-color: pink;
-  height: 80px;
+.rcn-gridMargins--menu {
+    padding-right:var(--rcn-semantic-padding-horizontal-900);
+    padding-left:var(--rcn-semantic-padding-horizontal-800);
 }
+
+/*-----Breakpoints-------*/
+/*--- Large Grid---*/
+
+@media (max-width: 1247px) /*semantic token à intégrer : var(--rcn-core-breakpoint-large)*/
+ {
+.rcn-grid {
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
+}
+
+.rcn-gridMargins {
+  padding-right:var(--rcn-semantic-padding-horizontal-700);
+  padding-left:var(--rcn-semantic-padding-horizontal-700);
+}
+
+.rcn-gridTemplateExample {
+  grid-template-areas: 
+    "title title title . . . . . . . . . "
+    "main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar";
+}
+
+.rcn-gridMargins--menu {
+    padding-right:var(--rcn-semantic-padding-horizontal-700);
+    padding-left:var(--rcn-semantic-padding-horizontal-600);
+}
+}
+
+
+
+/*--- Medium Grid---*/
+@media (max-width: 991px) /*semantic token à intégrer : var(--rcn-core-breakpoint-medium)*/ {
+  .rcn-grid {
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap:var(--rcn-semantic-gap-horizontal-500);
+
+}
+
+.rcn-gridMargins {
+  padding-right:var(--rcn-semantic-padding-horizontal-600);
+  padding-left:var(--rcn-semantic-padding-horizontal-600);
+
+}
+
+.rcn-gridTemplateExample {
+  grid-template-areas: 
+    "title title title . . . . . "
+    "main main main main sidebar sidebar sidebar sidebar";
+}
+
+.rcn-gridMargins--menu {
+    padding-right:var(--rcn-semantic-padding-horizontal-600);
+    padding-left:var(--rcn-semantic-padding-horizontal-400);
+}
+}
+
+/*--- Small Grid---*/
+
+@media (max-width: 767px) /*semantic token à intégrer : var(--rcn-core-breakpoint-small)*/ {
+
+.rcn-grid {
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
+}
+
+.rcn-gridMargins {
+  padding-right:var(--rcn-semantic-padding-horizontal-500);
+  padding-left:var(--rcn-semantic-padding-horizontal-500);
+
+}
+
+.rcn-gridTemplateExample {
+  grid-template-areas: 
+    "title title title . . . . . "
+    "main main main main sidebar sidebar sidebar sidebar";
+}
+
+.rcn-gridMargins--menu {
+    padding-right:var(--rcn-semantic-padding-horizontal-500);
+    padding-left:var(--rcn-semantic-padding-horizontal-200);
+}
+}
+
+/*--- xSmall Grid---*/
+@media (max-width: 575px) /*semantic token à intégrer : var(--rcn-core-breakpoint-xsmall)*/ {
+
+.rcn-grid {
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap : var(--rcn-semantic-gap-horizontal-400);
+}
+
+.rcn-gridMargins {
+  padding-right:var(--rcn-semantic-padding-horizontal-500);
+  padding-left:var(--rcn-semantic-padding-horizontal-500);
+}
+
+.rcn-gridTemplateExample {
+  grid-template-areas: 
+    "title title. . "
+    "main main sidebar sidebar";
+}
+}
+
+
+
+
+/*Composants de la grille - TEST ==> Ne pas prendre en compte dans l'excel*/
+
 
 .item-b {
   display: flex;
@@ -60,12 +154,6 @@
   grid-area: title;
   background-color: black;
   height: 60px;
-  color:white
-}
+  color:white;
 
-.item-d {
-  display: flex;
-  background-color: #FF4500;
-  height: 100px;
 }
-

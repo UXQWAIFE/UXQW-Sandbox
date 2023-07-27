@@ -7,6 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $nombreColonnes = $_POST["nombreColonnes"];
   $nombreLignes = $_POST["nombreLignes"];
   $Lig_depliable_nbr = $_POST["Lig_depliable_nbr"];
+  $Col_Fix_nbr = $_POST['Col_Fix_nbr'];
   
   // Récupérer les options des fonctionnalités
   $ET_Searchable = isset($_POST["ET_Searchable"]);
@@ -38,7 +39,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   for ($col = 1; $col <= $nombreColonnes; $col++) {
     $typeDonnee = $_POST["typeDonnee".$col];
     $typesDonnees[$col] = $typeDonnee;
-    $_SESSION['typesDonnee'][$col] = $typesDonnees[$col];
   }
   
   // Variables pour les fonctionnalités sélectionnées
@@ -82,42 +82,107 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   
   for ($col = 1; $col <= $nombreColonnes; $col++) {
     $colHeader = "Colonne $col";
-
+    $classThead = ' rcn-tableHead';
     // Ajouter les fonctionnalités sélectionnées aux en-têtes de colonne
     if ($Col_action && $Col_fix && $col === $nombreColonnes) {
       $colHeader .= " (Action)";
-      $classThead = 'rcn-tableHead';
     }
     if($Col_filtre) {
-      $FiltrableCol = "<button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
-                        <span class=''>Filtrer</span>
-                      </button>";
-      $classThead = 'rcn-tableHead';
+      $filterContainer = '
+      <div class="rcn-tableFilter" aria-hidden="true">
+        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+          <span class="">Fermer</span>
+        </button>
+        <form action="">
+            <div class="rcn-tableFilter__order">
+                <p>Trier</p>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de A à Z
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Trier de Z à A
+                </label>
+            </div>
+            <div class="rcn-tableFilter__filter">
+                <p>Filtrer</p>
+                <div class="rcn-inputField">
+
+                    <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                        <span class="sr-only"></span>
+                    </button>
+                </div>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Ville 2
+                </label>
+            </div>
+            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+        </form>
+      </div>';
+      $FiltrableCol = "<div class='rcn-tableHead__container--filter'>
+                        <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+                          <span class=''>Filtrer</span>
+                        </button>
+                        $filterContainer
+                      </div>
+                      ";
     }else{
-      $FiltrableCol = "<button class='rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
+      $FiltrableCol = "<button class='rcn-icon rcn-iconButton rcn-icon--mdi-sort-descending'>
                         <span class='sr-only'>Filtrer</span>
                       </button>";
-      $classThead = 'rcn-tableHeads';
     }
     
     if ($Col_fix) {
-      if ($Col_fix && $col === 1) {
+      if ( $col < $Col_Fix_nbr ) {
         $colHeader .= " (Fixe - Première)";
-        $classThead = 'rcn-tableHead rcn-tableHead--action rcn-tableData--sticked';
+        $classThead .= ' rcn-tableData--sticked';
       }
-      if ($Col_fix && $col == $nombreColonnes ) {
+
+      if ( $col == $nombreColonnes ) {
         $colHeader .= " (Fixe - Dernière)";
-        $classThead = "rcn-tableHead rcn-tableHead--action rcn-tableData--sticked";
+        $classThead .= ' rcn-tableData--sticked';
       }
     }
+    if($Lig_depliable || $Lig_select) {
+      
+      $typeDonnee = $typesDonnees[$col];
 
-
-    $tableHTML .= "<th class='". $classThead ."' scope='col' aria-sort=''>
-                    <div class='rcn-tableHead__container'>
-                      <span class=''>$colHeader</span>
-                      $FiltrableCol
-                    </div>
-                  </th>\n";
+      $modifierThContainer = '';
+      // Ajouter les fonctionnalités en fonction du type de donnée sélectionné
+      switch ($typeDonnee) {
+        case 'bouton_depliable':
+          $colHeader = '<p class="sr-only">Déplier</p>';
+          $FiltrableCol = '';
+          $classThead .= ' rcn-tableHead--action';          
+          $modifierThContainer .= 'rcn-tableHead__container--foldable';
+        break;
+        case 'bouton_selection':
+          $colHeader = "
+            <input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'>
+          ";
+          $FiltrableCol = '';
+          $classThead .= ' rcn-tableHead--action';
+          $modifierThContainer .= ' rcn-tableHead__container--checkable';
+        break;
+      }
+    }
+    
+      $tableHTML .= "<th class='". $classThead ."' scope='col' aria-sort=''>
+                  <div class='rcn-tableHead__container $modifierThContainer'>
+                    <span class=''>$colHeader</span>
+                    $FiltrableCol
+                  </div>
+                </th>\n";
+    
   }
   $tableHTML .= "</tr>\n";
   $tableHTML .= "</thead>\n";
@@ -130,10 +195,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   for ($row = 1; $row <= $nombreLignes; $row++) {
     $foldedRow ='';
     if ($row === 1) {
-      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--fold'>\n ";
+      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded'>\n ";
       $folded = 2;
     } else if ($row > 1 && $row <= $Lig_depliable_nbr + 1) {
-      $tableHTML .= "<tr class='rcn-tableRow__cell rcn-tableRow__cell--folded sr-only'>\n";
+      $tableHTML .= "<tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>\n";
       $folded = 1;
     } else {
       $tableHTML .= "<tr class='rcn-tableRow__cell'>\n";
@@ -142,7 +207,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       for ($col = 1; $col <= $nombreColonnes; $col++) {
         $rowData = "Ligne $row, Colonne $col";
         $stickedClass = "";
-        if($Col_fix && ($col === 1 || $col == $nombreColonnes)) {
+        if($Col_fix && ($col < $Col_Fix_nbr  || $col == $nombreColonnes)) {
           $stickedClass .= "rcn-tableData--sticked";
         }
         // Récupérer le type de donnée pour cette colonne
@@ -308,6 +373,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       }
     }
     $enteteTableau .= '<div class="rcn-preTable__zoneAction">'. $zoneAction .'</div>';
+  
+  
+  
+  
   }
 
 
@@ -334,6 +403,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
     ";
   }
+  if($Lig_select) {
+    $resultat .= '
+    <div class="rcn-preTable__rowSelected sr-only" aria-hidden="false">
+				<div class="rcn-preTable__rowSelected--count">
+					<p aria-owns=""><span>1</span> Ligne(s) séléctionnée(s)</p>				</div>
+				<div>
+					<div class="rcn-preTable__rowSelected--action">
+						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 1</button>
+						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 2</button>
+						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 3</button>
+					</div>
+				</div>
+			</div>
+    ';
+
+  }
   // Injection du tableau
   $resultat .= $tableHTML;
 
@@ -354,5 +439,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <!-- Rediriger vers la page principale après le traitement du formulaire -->
 <script>
-   window.location.href = "index.php";
+  window.location.href = "index.php";
 </script>

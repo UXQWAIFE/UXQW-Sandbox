@@ -231,6 +231,10 @@ print_r($_SESSION);
 			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_fix">Colonne Fixe ?
 			<input <?php echo isset($_SESSION['Col_fix']) && $_SESSION['Col_fix'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_fix" id="Col_fix">
 			</label>
+			<label class="rcn-inputFieldBloc__label sr-only" for="Col_Fix_nbr">Nombre ?</label>
+			<div class="rcn-inputField">
+				<input min="2" placeholder="Nombre gauche puis droite" value="<?php echo isset($_SESSION['Col_Fix_nbr']) ? $_SESSION['Col_Fix_nbr'] : ''; ?>" class='rcn-inputField__input' type="number" name="Col_Fix_nbr" id="Col_Fix_nbr">
+			</div>	
 
 			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_filtre">Colonne Filtrable ?
 			<input <?php echo isset($_SESSION['Col_filtre']) && $_SESSION['Col_filtre'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_filtre" id="Col_filtre">
@@ -276,72 +280,161 @@ print_r($_SESSION);
 		function genererListesDeroulantes() {
 			var nombreColonnes = parseInt(document.getElementById("nombreColonnes").value);
 			var colonnesContainer = document.getElementById("colonnesContainer");
-				colonnesContainer.innerHTML = "";
+			colonnesContainer.innerHTML = "";
 
-				for (var col = 1; col <= nombreColonnes; col++) {
-					var fieldset = document.createElement("fieldset");
-					var legend = document.createElement("legend");
-					legend.textContent = "Colonne " + col;
-					fieldset.appendChild(legend);
+			for (var col = 1; col <= nombreColonnes; col++) {
+				var fieldset = document.createElement("fieldset");
+				var legend = document.createElement("legend");
+				legend.textContent = "Colonne " + col;
+				fieldset.appendChild(legend);
 
-					var label = document.createElement("label");
-					label.setAttribute("for", "typeDonnee" + col);
-					label.textContent = "Type de donnée : ";
-					fieldset.appendChild(label);
+				var label = document.createElement("label");
+				label.setAttribute("for", "typeDonnee" + col);
+				label.textContent = "Type de donnée : ";
+				fieldset.appendChild(label);
 
-					var div = document.createElement("div");
-					div.classList.add("rcn-inputField"); 
+				var div = document.createElement("div");
+				div.classList.add("rcn-inputField"); 
 
-					var select = document.createElement("select");
-					select.classList.add("rcn-inputField__input", "rcn-inputField__input--select"); 
-					select.setAttribute("name", "typeDonnee" + col);
-					select.setAttribute("id", "typeDonnee" + col);
+				var select = document.createElement("select");
+				select.classList.add("rcn-inputField__input", "rcn-inputField__input--select"); 
+				select.setAttribute("name", "typeDonnee" + col);
+				select.setAttribute("id", "typeDonnee" + col);
 
 
-					var options = [
-					{ value: "texte", text: "Texte" },
-					{ value: "nombre", text: "Nombre" },
-					{ value: "lien", text: "Lien" },
-					{ value: "telephone", text: "Numéro de téléphone" },
-					{ value: "icone", text: "Icône" },
-					{ value: "bouton_selection", text: "Bouton de sélection" },
-					{ value: "bouton_depliable", text: "Bouton dépliable" },
-					{ value: "bouton_action", text: "Bouton d'action" }
-					];
+				var options = [
+				{ value: "texte", text: "Texte" },
+				{ value: "nombre", text: "Nombre" },
+				{ value: "lien", text: "Lien" },
+				{ value: "telephone", text: "Numéro de téléphone" },
+				{ value: "icone", text: "Icône" },
+				{ value: "bouton_selection", text: "Bouton de sélection" },
+				{ value: "bouton_depliable", text: "Bouton dépliable" },
+				{ value: "bouton_action", text: "Bouton d'action" }
+				];
 
-					for (var i = 0; i < options.length; i++) {
-					var option = document.createElement("option");
-					option.value = options[i].value;
-					option.text = options[i].text;
-					select.appendChild(option);
-					div.appendChild(select);
-					}
-
-					fieldset.appendChild(div);
-					colonnesContainer.appendChild(fieldset);
+				for (var i = 0; i < options.length; i++) {
+				var option = document.createElement("option");
+				option.value = options[i].value;
+				option.text = options[i].text;
+				select.appendChild(option);
+				div.appendChild(select);
 				}
 
+				fieldset.appendChild(div);
+				colonnesContainer.appendChild(fieldset);
 			}
-			var btn = document.querySelectorAll(".rcn-tableCell__unfold");
-			// Sélectionner tous les boutons de dépliage/repliage
 
-			// Parcourir chaque bouton
-			btn.forEach(function(button) {
+		}
+		var btn = document.querySelectorAll(".rcn-tableCell__unfold");
+		// Sélectionner tous les boutons de dépliage/repliage
+
+		// Parcourir chaque bouton
+		btn.forEach(function(button) {
 			// Ajouter un écouteur d'événement pour le clic sur le bouton
-				button.addEventListener('click', function() {
-					var toggleRows = document.querySelectorAll('.rcn-tableRow__cell--folded');
-					if (toggleRows.length === 0) {
-						var toggleRows = document.querySelectorAll('.rcn-tableRow__cell--unfolded');
-					} 
-					console.log(toggleRows);
-					// Parcourir chaque ligne
-					toggleRows.forEach(function(row) {
-						// Alterner la classe pour déplier/replier la ligne
-						row.classList.toggle('rcn-tableRow__cell--folded');
-						row.classList.toggle('rcn-tableRow__cell--unfolded');
-					});
+			button.addEventListener('click', function() {
+				var toggleRows = document.querySelectorAll('.rcn-tableRow__cell--folded');
+				var toggleSubRows = document.querySelectorAll('.rcn-tableSubRow__cell--folded');
+				if (toggleSubRows.length === 0) {
+					var toggleSubRows = document.querySelectorAll('.rcn-tableSubRow__cell--unfolded');
+				} 
+				toggleRows.forEach(function(row) {
+					
+					row.classList.toggle('rcn-tableRow__cell--unfolded');
+				});
+				// Parcourir chaque ligne
+				toggleSubRows.forEach(function(subrow) {
+					// Alterner la classe pour déplier/replier la ligne
+					subrow.classList.toggle('sr-only');
+					subrow.classList.toggle('rcn-tableSubRow__cell--folded');
+					subrow.classList.toggle('rcn-tableSubRow__cell--unfolded');
 				});
 			});
+		});
+
+		var rowBkg = document.querySelectorAll(".rcn-tableRow__cell");
+		var subRowBkg = document.querySelectorAll(".rcn-tableSubRow__cell");
+		var actualBkg = "";
+
+		for (var i = 0; i < rowBkg.length; i++) {
+			var actualBkg = "";
+			if (i % 2 === 0) {
+				rowBkg[i].classList.add("rcn-tableRow__cell--odd");
+				actualBkg = "rcn-tableRow__cell--odd";
+			} else {
+				rowBkg[i].classList.add("rcn-tableRow__cell--even");
+				actualBkg = "rcn-tableRow__cell--even";
+			}
+
+			if (subRowBkg.length) {
+				for (var y = 0; y < subRowBkg.length; y++) { // Changer i en y ici
+				if(actualBkg.includes("--odd")){
+					subRowBkg[y].classList.add("rcn-tableSubRow__cell--odd")
+				}else{
+					subRowBkg[y].classList.add("rcn-tableSubRow__cell--even")
+				}
+				}
+			}
+		}
+
+		// Récupérez toutes les cases cochables
+		const cochables = document.querySelectorAll('.rcn-tableCell__select .rcn-inputField__input--checkbox');
+
+		// Récupérez le bandeau
+		const bandeau = document.querySelector('.rcn-preTable__rowSelected');
+
+		// Fonction pour mettre à jour le nombre de cases cochées et afficher/masquer le bandeau
+		function updateBandeau() {
+			const nbCasesCoches = document.querySelectorAll('.rcn-tableCell__select .rcn-inputField__input--checkbox:checked').length;
+			const bandeauTexte = bandeau.querySelector('p');
+			
+			bandeauTexte.textContent = nbCasesCoches + ' cases cochées';
+			
+			if (nbCasesCoches > 0) {
+				bandeau.classList.remove("sr-only");
+			} else {
+				bandeau.classList.add("sr-only");
+			}
+		}
+		// Ajoutez des gestionnaires d'événements pour détecter les changements d'état des cases cochables
+		cochables.forEach(cochable => {
+			cochable.addEventListener('change', updateBandeau);
+			cochable.addEventListener('change', () => {
+				const trParent = cochable.closest('tr'); // Accéder au parent <tr> en utilisant closest()
+				trParent.classList.toggle('rcn-tableRow__cell--selected');
+			});
+		});
+
+		// Appelez la fonction updateBandeau une première fois pour initialiser l'état du bandeau
+		updateBandeau();
+		if (document.querySelector('.rcn-tableData--sticked')) {
+			// Récupérer la largeur du premier <th> de sticky-thead-1
+			const header1Width = document.querySelector('.rcn-tableData--sticked:first-child').offsetWidth;
+			var headerCount = document.querySelectorAll('th.rcn-tableData--sticked').length;
+			
+			for( var i = 0; i < headerCount; i++ ) {
+				// if( i === 0) {
+				// 	document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${i}px`);
+				// }
+				document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${header1Width}px`);
+			}
+			// Appliquer la largeur comme une variable CSS personnalisée
+		}
+
+		const filterButtons = document.querySelectorAll('.rcn-tableHead__container--filter .rcn-iconButton');
+
+		filterButtons.forEach(buttonf => {
+			buttonf.addEventListener('click', () => {
+				console.log('allo');
+				const filterElement = buttonf.nextElementSibling;
+				console.log(filterElement.classList);
+				if (filterElement.classList.contains('rcn-tableFilter')) {
+					filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
+				}
+			});
+		});
+			
+
 
 	</script>
 </body>

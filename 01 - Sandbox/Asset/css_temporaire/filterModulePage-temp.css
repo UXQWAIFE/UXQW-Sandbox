@@ -3,7 +3,7 @@
     
   
   /*Grid globale*/
-  .rcn-grid {
+ /* .rcn-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
@@ -11,7 +11,7 @@
     background-color: transparent;
     margin : 0 5rem;
     height: 100%;
-  }
+  } ==> Porté par Grid*/
   
   /*Template*/
   
