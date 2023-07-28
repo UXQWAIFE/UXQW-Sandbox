@@ -83,56 +83,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   for ($col = 1; $col <= $nombreColonnes; $col++) {
     $colHeader = "Colonne $col";
     $classThead = ' rcn-tableHead';
+
+     
+
     // Ajouter les fonctionnalités sélectionnées aux en-têtes de colonne
     if ($Col_action && $Col_fix && $col === $nombreColonnes) {
       $colHeader .= " (Action)";
     }
     if($Col_filtre) {
-      $filterContainer = '
-      <div class="rcn-tableFilter" aria-hidden="true">
-        <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
-          <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
-          <span class="">Fermer</span>
-        </button>
-        <form action="">
-            <div class="rcn-tableFilter__order">
-                <p>Trier</p>
-                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
-                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
-                    Trier de A à Z
-                </label>
-                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
-                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
-                    Trier de Z à A
-                </label>
-            </div>
-            <div class="rcn-tableFilter__filter">
-                <p>Filtrer</p>
-                <div class="rcn-inputField">
-
-                    <input placeholder="Rechercher..." class="rcn-inputField__input">
-
-                    <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
-                        <span class="sr-only"></span>
-                    </button>
-                </div>
-                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
-                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
-                    Ville 2
-                </label>
-                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
-                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
-                    Ville 2
-                </label>
-            </div>
-            <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
-        </form>
-      </div>';
+      
       $FiltrableCol = "<div class='rcn-tableHead__container--filter'>
                         <button class=' rcn-icon rcn-iconButton rcn-icon--mdi-filter'>
                           <span class=''>Filtrer</span>
                         </button>
-                        $filterContainer
                       </div>
                       ";
     }else{
@@ -380,6 +343,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   }
 
 
+
   // Construire le résultat final avec les fonctionnalités sélectionnées
   $resultat = "<h2>Résultat du tableau :</h2>\n";
   $resultat .= "<p>Fonctionnalités de l'en-tête : $fonctionnalitesEnTete</p>\n";
@@ -424,6 +388,69 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   // Injection du footer 
   $resultat .= $footerPagination;
+ // Gestion du menu de filtre de colonne
+ $filterContainer = '
+ <div class="rcn-tableFilter__content" aria-hidden="true">
+   
+   <form action="">
+       <div class="rcn-tableFilter__order">
+           <p>Trier</p>
+           <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+               <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+               Trier de A à Z
+           </label>
+           <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+               <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+               Trier de Z à A
+           </label>
+       </div>
+       <div class="rcn-tableFilter__filter">
+           <p>Filtrer</p>
+           <div class="rcn-inputField">
+
+               <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+               <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                   <span class="sr-only"></span>
+               </button>
+           </div>
+           <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+               <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+               Ville 2
+           </label>
+           <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+               <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+               Ville 2
+           </label>
+       </div>
+       <button class="rcn-button rcn-button--primary" type="submit">Appliquer</button>
+   </form>
+ </div>';
+  $sideFilter = '<div class="rcn-tableFilter" aria-hidden="true">
+  <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+    <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
+    <span class="">Fermer</span>
+  </button>
+  <div class="rcn-accordions">';
+  for ($col = 1; $col <= $nombreColonnes; $col++) {
+    $colHeader = "Colonne $col";
+    $sideFilter .= "
+      <button class='rcn-accordions__heading' aria-expanded='false'>
+        Filtre/Tri $colHeader
+        <div class='rcn-icon rcn-accordions__headingIcon'>
+        </div>
+      </button>
+      
+      <div class='rcn-accordions__content' hidden>
+        $filterContainer
+      </div>
+    ";
+  }
+  $sideFilter .= '</div></div>';
+
+  if($Col_fix) {
+    $resultat .= $sideFilter;
+  }
   $resultat .= "
   <div id='RetourBTable' class='rcn-postTable'>
     <a title='Retour en haut du tableau' href='#RetourHTable'>Aller au sommet du tableau 
