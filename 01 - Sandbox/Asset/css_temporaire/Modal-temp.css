@@ -29,3 +29,15 @@
 .rcn-modal__footer .rcn-bottomActionsBanner {
 	border: unset; /*ajouter à l'excel ==> OK*/
 }
+
+
+.rcn-modal__behind {
+  display:flex;
+  grid-column: span 12;
+  height:400px; /*remplacer par 100% dans l'excel*/
+} /*ajouter les properties à l'excel*/
+
+.rcn-modal--medium {
+  justify-self: center;
+  grid-column: span 6;
+}
