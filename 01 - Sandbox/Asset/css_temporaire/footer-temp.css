@@ -42,7 +42,47 @@ color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
   text-decoration: none; /*ajouté dans l'excel ==> OK*/
 }
 
+.rcn-footer__logoZone{
+  grid-area: logo;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--rcn-semantic-gap-vertical-200);
+
+
+}
+/* Remplace la class : rcn-footer__productBanner-leftZone  */
+/* créer class dans l'excel ==> TODO */
+
+.rcn-footer__descriptionZone{
+  grid-area: description;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--rcn-semantic-gap-vertical-400);
+
+}
+
+/* Remplace la class : rcn-footer__productBanner-rightZone  */
+/* créer class dans l'excel ==> TODO */
 
 .rcn-inputFieldBloc--language{
   flex-wrap: wrap;
 }
+
+.rcn-footer__productBanner{
+  display: flex;
+  grid-template-columns: none;
+  flex-wrap: wrap;
+}
+
+/* Le flex-wrap ne fonctionne pas voir les raison avec Max */
+
+.rcn-gridTemplateFooter{
+  grid-template-areas: 
+    "logo logo logo logo logo logo description description description description description description";
+
+
+}
+
+
