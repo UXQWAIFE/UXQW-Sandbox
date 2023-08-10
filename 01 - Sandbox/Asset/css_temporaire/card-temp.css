@@ -120,11 +120,13 @@ box-sizing:border-box; /*maj dans l'excel ==> OK*/
 }
 
 
-
-
 .rcn-card--interactive .rcn-card__title{
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard)
 }/*maj dans l'excel ==> OK*/
+
+.rcn-card__chipsZone {
+    flex-wrap:wrap;
+} /*property à ajouter dans l'excel*/
 
 
 

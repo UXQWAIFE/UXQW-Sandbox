@@ -186,20 +186,19 @@
     display:none;
 }
 .rcn-tableFilter[aria-hidden="false"] {
-    display:flex;
-    gap:var(--rcn-semantic-gap-horizontal-200);
-    flex-direction: column;
-    position:absolute;
-    top:1rem;
-    left:-50%;
-    width:fit-content;
-    z-index: 100;
-    background-color: #fff;
-    padding:var(--rcn-semantic-padding-horizontal-200);
-    border-radius: var(--rcn-semantic-borderradius-200);
-    border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: var(--rcn-semantic-padding-horizontal-200);
+    max-width: 25vw;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+    border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
     box-shadow: var(--rcn-semantic-dropshadow-static-detached);
-    text-align: left;
+    flex-direction: column;
 }
 .rcn-tableFilter__order,
 .rcn-tableFilter__filter {

@@ -422,19 +422,25 @@ print_r($_SESSION);
 		}
 
 		const filterButtons = document.querySelectorAll('.rcn-tableHead__container--filter .rcn-iconButton');
-
+		const tbody = document.querySelector('.rcn-table');
+		const filterElement = document.querySelector('.rcn-tableFilter');
 		filterButtons.forEach(buttonf => {
 			buttonf.addEventListener('click', () => {
 				console.log('allo');
-				const filterElement = buttonf.nextElementSibling;
-				console.log(filterElement.classList);
-				if (filterElement.classList.contains('rcn-tableFilter')) {
-					filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
-				}
+				// filterElement.classList.toggle('sr-only');
+				filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
 			});
 		});
-			
-
+		const accordBtn = document.querySelectorAll('.rcn-accordions__heading');
+		accordBtn.forEach(btnDepli => {
+			const accordNextElement = accordBtn.nextElementSibling;
+			console.log(accordNextElement);
+			btnDepli.addEventListener('click', () => {
+				console.log('allo');
+				// filterElement.classList.toggle('sr-only');
+				filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
+			});
+		});
 
 	</script>
 </body>
