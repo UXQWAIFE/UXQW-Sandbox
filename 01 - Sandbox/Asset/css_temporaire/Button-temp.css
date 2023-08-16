@@ -1,11 +1,11 @@
 
 .rcn-button{
-  height: fit-content;
+  height: fit-content; /*ajouté au Excel ==> OK*/
 }
   
   .rcn-iconButton {
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard); /*ajouté au Excel ==> OK*/
-	background-color:transparent; /*ajouté au Excel ==> OK*/
+	background-color: var(--rcn-semantic-color-interaction-background-transparent); /*ajouté au Excel ==> OK*/
   }
   
   .rcn-iconButton:hover {
@@ -35,7 +35,7 @@
 }
 
 .rcn-toggle[disabled] {
-border-color:#CECECE; /*var(--rcn-semantic-color-interaction-border-disabled-standard);*/
+border-color:#CECECE; /*var(--rcn-semantic-color-interaction-border-disabled-standard); ajouter à l'excel ==> OK*/
 }
 
 .rcn-toggle--on[disabled] {

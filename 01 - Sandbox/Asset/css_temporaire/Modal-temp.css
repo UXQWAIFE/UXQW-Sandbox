@@ -8,12 +8,17 @@
 }
 .rcn-modal__content {
 	padding:var(--rcn-semantic-padding-vertical-600) var(--rcn-semantic-padding-horizontal-700);
+  overflow: auto;
 } /*class à ajouter dans l'excel pour que ça fonctionne -> OK*/
 
 .rcn-modal__closeButton {
 	background: none; /*property à ajouter dans l'excel -> OK*/
 }
 
+.rcn-modal__behind{
+  width: auto;
+  height: auto;
+}
 
 .rcn-modal__footer {
   /*flex-direction: row;*/
@@ -31,13 +36,32 @@
 }
 
 
+.rcn-gridOverlayModal{
+   position:absolute;
+  top:0;
+  left:0;
+  display: grid;
+  grid-template-areas: ". . . . . . . . . . ."
+  ". . modal modal modal modal modal modal modal modal . .";
+  overflow: auto;
+  margin: 0;   
+}
+
+.rcn-modal{
+  grid-area: modal;
+  height: fit-content;
+}
+
+
 .rcn-modal__behind {
   display:flex;
-  grid-column: span 12;
-  height:400px; /*remplacer par 100% dans l'excel*/
+  grid-column: span 12; /*à enlever?*/
+  height:4000px; /*remplacer par 100% dans l'excel*/
+  position: relative;
 } /*ajouter les properties à l'excel*/
 
 .rcn-modal--medium {
   justify-self: center;
-  grid-column: span 6;
+  /* grid-column: span 6; */
+  width: unset;
 }
