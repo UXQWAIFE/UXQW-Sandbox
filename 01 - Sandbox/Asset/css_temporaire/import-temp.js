@@ -35,7 +35,8 @@ var cssFiles = [
     'filterModulePage',
     'menu',
     'Typography',
-    'Pagination'
+    'Pagination',
+    'Stepper'
   ];
   
   var headElement = document.head;

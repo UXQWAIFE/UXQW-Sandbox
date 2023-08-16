@@ -4,192 +4,228 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../../RCN-DesignSystem/assets/styles-ChorusPro.css">
-	<link href="../../RCN-DesignSystem/assets/styles-ChorusPro.css" rel="stylesheet">
-	<link href="../../Asset/Resets.css" rel="stylesheet">
-    <link href="stepper.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.2.96/css/materialdesignicons.min.css" rel="stylesheet">
-    <title>Document</title>
+    <link href="../../RCN-DesignSystem/assets/styles-ChorusPro.css" rel="stylesheet">
+    <link href="../../Asset/Resets.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../Asset/css_temporaire/*.css">
+    <title>Stepper</title>
 </head>
 
-<body>
+<body class="espacement_exemple rcn-gridMargins">
 
-	 <!--Stepper Vertical navigable -->
+	<h1 class="rcn-h1 rcn-h1--editorial">Stepper</h1>
+	<h2 class="rcn-h2 rcn-h2--editorial">Vertical</h2>
+	<h3 class="rcn-h3 rcn-h3--editorial">Navigable</h3>
 
-	 <div class="espacement_exemple">
+	<!--Stepper Vertical navigable -->
 
+	<nav class=" rcn-stepper rcn-stepper--navigable">
 
-		<nav class=" rcn-stepper rcn-stepper--navigable">
+		<ol class="rcn-stepper__list">
 
-			<ol class="rcn-stepper__list rcn-stepper__list--vertical">
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">1</div>
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape complétée </a>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--current">
+				<div class="rcn-stepper__number">2</div>
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape en cours </a>
+			</li>
 
-				<li class="rcn-stepper__step">
-					<div class="rcn-stepper__number rcn-stepper__number--completed">1</div>
-					
-					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Etape complétée </a>
-					
+			<ol class="rcn-stepper__subList">
+
+				<li class="rcn-stepper__step rcn-stepper__step--completed">
+					<div class=" rcn-stepper__indicator"></div>
+					<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous étape complétée </a>
 				</li>
-
-				<li class="rcn-stepper__step">
-					<div class="rcn-stepper__number rcn-stepper__number--current">2</div>
-					
-					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Etape en cours </a>
-					
+				<li class="rcn-stepper__step rcn-stepper__step--current">
+					<div class="rcn-stepper__indicator"></div>
+					<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous étape en cours </a>
 				</li>
-
-				<ol class="rcn-stepper__substepZone">
-
-					<li class="rcn-stepper__substep">
-						<div class=" rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--completed"></div>
-						
-						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Sous étape complétée </a>
-						
-					</li>
-
-					<li class="rcn-stepper__substep">
-						<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--subStepCurrent"></div>
-						
-						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Sous étape en cours </a>
-						
-					</li>
-
-					<li class="rcn-stepper__substep">
-						<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--uncompleted"></div>
-						
-						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Sous-étape non complétée </a>
-						
-					</li>
-
-					<li class="rcn-stepper__substep">
-						<div disabled class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--disabled"></div>
-						<a disabled class="rcn-link rcn-stepper__sectionTitle" href="section1"> Sous-étape désactivée </a>
-					</li>
-
-				</ol>
-
 				<li class="rcn-stepper__step">
-					<div class="rcn-stepper__number rcn-stepper__number--uncompleted">3</div>
-					
-					<a class="rcn-link  rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto blanditiis incidunt voluptas quis ducimus recusandae, alias ad ea minus soluta quaerat facere eum aliquam libero modi fuga unde sit sint.</a>
-					
+					<div class="rcn-stepper__indicator"></div>
+					<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous-étape non complétée </a>
 				</li>
-
-				<li class="rcn-stepper__step">
-					<div disabled class="rcn-stepper__number rcn-stepper__number--disabled">4</div>
-					
-					<a disabled class="rcn-link rcn-link rcn-stepper__sectionTitle" href="section1"> Etape désactivée Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eos, voluptatum illum quisquam autem distinctio aut beatae, eius temporibus aliquam laudantium assumenda voluptatibus cupiditate iure libero culpa, quod deserunt velit? </a>
-					
+				<li class="rcn-stepper__step rcn-stepper__step--disabled">
+					<div disabled class="rcn-stepper__indicator"></div>
+					<p disabled class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous-étape désactivée </p>
 				</li>
 
 			</ol>
 
-		</nav>
-
-			<!--Stepper Vertical non-navigable -->
-
-		<nav class="rcn-stepper">
-
-				<ol class="rcn-stepper__list rcn-stepper__list--vertical">
-		
-					<li class="rcn-stepper__step">
-						<div class="rcn-stepper__number rcn-stepper__number--completed">1</div>
-						
-						<p class="rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Etape complétée non navigable </p>
-					
-					</li>
-					<li class="rcn-stepper__step">
-						<div class="rcn-stepper__number rcn-stepper__number--current">2</div>
-						
-						<p class="rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Etape en cours non navigable </p>
-					
-					</li>
-		
-					<ol class="rcn-stepper__substepZone">
-		
-						<li class="rcn-stepper__substep">
-							<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--completed"></div>
-							
-							<p class="rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Sous-étape complétée non navigable </p>
-							
-						</li>
-		
-						<li class="rcn-stepper__substep">
-							<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--subStepCurrent"></div>
-							
-							<p class="rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Sous-étape en cours non navigable </p>
-							
-						</li>
-		
-						<li class="rcn-stepper__substep">
-							<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--uncompleted"></div>
-							
-							<p class="rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Sous-étape non complétée non navigable </p>
-							
-						</li>
-		
-					</ol>
-		
-					<li class="rcn-stepper__step">
-						<div class="rcn-stepper__number rcn-stepper__number--uncompleted">3</div>
-						
-						<p class="rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée non navigable </p>
-					
-					</li>
-		
-		
-					<li class="rcn-stepper__step">
-						<div disabled class="rcn-stepper__number rcn-stepper__number--disabled">4</div>
-					
-						<p disabled class="rcn-stepper__sectionTitle" href="section1"> Etape désactivée </p>
-					
-					</li>
-		
-				</ol>
-		
-		</nav>
-
-	 <!--Stepper Horizontal navigable -->
-
-
-	<nav class="rcn-stepper  rcn-stepper--navigable">
-
-		<ol class="rcn-stepper__list rcn-stepper__list--horizontal">
-
 			<li class="rcn-stepper__step">
-				<div class="rcn-stepper__number rcn-stepper__number--uncompleted">1</div>
-				
-				<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée navigable </a>
-				
+				<div class="rcn-stepper__number">3</div>
+				<a class="rcn-link  rcn-stepper__stepTitle" href="section1"> Etape non complétée. Lorem ipsum dolor sit, nt.</a>
 			</li>
-			<li class="rcn-stepper__step">
-				<div class="rcn-stepper__number rcn-stepper__number--uncompleted ">2</div>				
-                <a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée non navigable </a>
-				
-			</li>
-			<li class="rcn-stepper__step">
-				<div disabled class="rcn-stepper__number rcn-stepper__number--disabled">3</div>				
-				<a disabled class="rcn-link rcn-stepper__sectionTitle" href="section1"> Etape désactivée </a>
-				
-			</li>
-
-			<li class="rcn-stepper__step">
-				<div class="rcn-stepper__number rcn-stepper__number--current">4</div>				
-				<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Etape en cours navigable </a>
-				
-			</li>
-			<li class="rcn-stepper__step">
-				
-				<div class="rcn-stepper__number rcn-stepper__number--completed">6</div>				
-				<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Etape complétée navigable </a>
-				
+			<li class="rcn-stepper__step rcn-stepper__step--disabled">
+				<div disabled class="rcn-stepper__number">4</div>
+				<p disabled class="rcn-link rcn-stepper__stepTitle" href=""> TEST Etape désactivée Lorem ipsum dolor sit ameam autem distinctio aut beatae, eius temporibus aliquam laudantium assumenda voluptatibus cupiditate iure libero culpa, quod deserunt velit? </p>
 			</li>
 
 		</ol>
 
+	</nav>
+
+	<h3 class="rcn-h3 rcn-h3--editorial">Non Navigable</h3>
+
+		<!--Stepper Vertical non-navigable -->
+
+	<nav class=" rcn-stepper">
+
+		<ol class="rcn-stepper__list">
+
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">1</div>
+				<p class="rcn-stepper__stepTitle" href="section1"> Etape complétée </p>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--current">
+				<div class="rcn-stepper__number">2</div>
+				<p class="rcn-stepper__stepTitle" href="section1"> Etape en cours </p>
+			</li>
+
+			<ol class="rcn-stepper__subList">
+
+				<li class="rcn-stepper__step rcn-stepper__step--completed">
+					<div class=" rcn-stepper__indicator"></div>
+					<p class="rcn-stepper__stepTitle" href="section1"> Sous étape complétée </p>
+				</li>
+				<li class="rcn-stepper__step rcn-stepper__step--current">
+					<div class="rcn-stepper__indicator"></div>
+					<p class="rcn-stepper__stepTitle" href="section1"> Sous étape en cours </p>
+				</li>
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__indicator"></div>
+					<p class="rcn-stepper__stepTitle" href="section1"> Sous-étape non complétée </p>
+				</li>
+				<li class="rcn-stepper__step rcn-stepper__step--disabled">
+					<div disabled class="rcn-stepper__indicator"></div>
+					<p disabled class="rcn-stepper__stepTitle" href="section1"> Sous-étape désactivée </p>
+				</li>
+
+			</ol>
+
+			<li class="rcn-stepper__step">
+				<div class="rcn-stepper__number">3</div>
+				<p class="rcn-stepper__stepTitle" href="section1"> Etape non complétée. Lorem ipsum dolor sit, nt.</p>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--disabled">
+				<div disabled class="rcn-stepper__number">4</div>
+				<p disabled class="rcn-stepper__stepTitle" href=""> TEST Etape désactivée Lorem ipsum dolor sit ameam autem distinctio aut beatae, eius temporibus aliquam laudantium assumenda voluptatibus cupiditate iure libero culpa, quod deserunt velit? </p>
+			</li>
+
+		</ol>
 
 	</nav>
 
-</div>
+	<!--Stepper Horizontal-->
+
+	<h2 class="rcn-h2 rcn-h2--editorial">Horizontal</h2>
+	
+		<!--Navigable-->
+
+	<h3 class="rcn-h3 rcn-h3--editorial">Option 1 - sans variable à setup</h3>
+
+			<!--Option 1-->
+
+	<h4 class="rcn-h4 rcn-h4--editorial">Navigable</h4>
+
+	<nav class="rcn-form__horizontalStepper rcn-stepper">
+
+		<ol class="rcn-stepper__list rcn-stepper__list--horizontal">
+
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">1</div>
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape complétée navigable </a>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--current">
+				<div class="rcn-stepper__number">2</div>				
+                <a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape en cours </a>
+			</li>
+			<li class="rcn-stepper__step">
+				<div class="rcn-stepper__number">3</div>				
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape non complétée </a>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--disabled">
+				<div class="rcn-stepper__number">4</div>				
+				<p class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape désactivée </p>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">5</div>				
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape complétée navigable</a>
+			</li>
+
+		</ol>
+
+	</nav>
 
 
+			<!--Option 2-->
+
+	<h3 class="rcn-h3 rcn-h3--editorial">Option 2 - avec variable à setup</h3>
+	<h4 class="rcn-h4 rcn-h4--editorial">Navigable</h4>
+
+	 <nav class="rcn-form__horizontalStepper rcn-stepper">
+
+		<ol class="rcn-stepper__list rcn-stepper__list--horizontal2">
+
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">1</div>
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape complétée navigable </a>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--current">
+				<div class="rcn-stepper__number">2</div>				
+                <a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape en cours</a>
+			</li>
+			<li class="rcn-stepper__step">
+				<div class="rcn-stepper__number">3</div>				
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape non complétée </a>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--disabled">
+				<div class="rcn-stepper__number">4</div>				
+				<p class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape désactivée </p>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">5</div>				
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape complétée navigable</a>
+			</li>
+
+		</ol>
+
+	</nav>
+
+	<h4 class="rcn-h4 rcn-h4--editorial">Non navigable</h4>
+
+	<nav class="rcn-form__horizontalStepper rcn-stepper">
+
+		<ol class="rcn-stepper__list rcn-stepper__list--horizontal2">
+
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">1</div>
+				<p class="rcn-stepper__stepTitle" href="section1"> Etape complétée navigable </p>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--current">
+				<div class="rcn-stepper__number">2</div>				
+                <p class="rcn-stepper__stepTitle" href="section1"> Etape en cours</p>
+			</li>
+			<li class="rcn-stepper__step">
+				<div class="rcn-stepper__number">3</div>				
+				<p class="rcn-stepper__stepTitle" href="section1"> Etape non complétée </p>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--disabled">
+				<div class="rcn-stepper__number">4</div>				
+				<p class="rcn-stepper__stepTitle" href="section1"> Etape désactivée </p>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">5</div>				
+				<p class="rcn-stepper__stepTitle" href="section1"> Etape complétée navigable</p>
+			</li>
+
+		</ol>
+
+	</nav>
+
+
+
+	<footer>
+		<script src="../../Asset/css_temporaire/import-temp.js"></script>
+	</footer>
 </body>
