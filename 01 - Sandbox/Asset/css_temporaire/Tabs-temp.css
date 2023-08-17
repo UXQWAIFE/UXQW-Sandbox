@@ -15,3 +15,7 @@ border-bottom-color: var(--rcn-semantic-color-interaction-border-default-onprima
 color:var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
 
 }/* à mettre dans le excel ==> OK */
+
+/* .rcn-tabs__labelsGroup {
+    border-top: transparent;
+} */

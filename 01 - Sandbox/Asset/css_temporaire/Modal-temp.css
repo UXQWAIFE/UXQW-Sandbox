@@ -37,19 +37,21 @@
 
 
 .rcn-gridOverlayModal{
-   position:absolute;
+  position:absolute;
   top:0;
   left:0;
   display: grid;
-  grid-template-areas: ". . . . . . . . . . ."
-  ". . modal modal modal modal modal modal modal modal . .";
-  overflow: auto;
+  grid-template-areas:". . modal modal modal modal modal modal modal modal . .";
+  overflow: hidden;
+  height: auto;
+  align-items: center;
   margin: 0;   
 }
 
 .rcn-modal{
   grid-area: modal;
   height: fit-content;
+  
 }
 
 
