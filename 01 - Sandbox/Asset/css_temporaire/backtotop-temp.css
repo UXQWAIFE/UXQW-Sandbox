@@ -1,13 +1,11 @@
 .rcn-backToTop {
 
-  /*border-width: var(--rcn-semantic-borderwidth-100);supprimé*/
-  /*border-color: var(--rcn-semantic-color-interaction-border-back_to_top); supprimé*/
+  /*border-width: var(--rcn-semantic-borderwidth-100);--> supprimé dans excel --> OK*/
+  /*border-color: var(--rcn-semantic-color-interaction-border-back_to_top); --> supprimé dans excel --> OK*/
   border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-back_to_top); /*à ajouter dans l'excel pour remplacer deux précédents*/
   /*bottom: 1,5vw; --> supprimé dans excel --> OK*/
   /*right: 1,5vw;-->supprimé dans excel --> OK*/
 }
 
 
-.rcn-backToTop__icon {
-	font-size:var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize); /*ajouter à l'excel==> OK*/
-}
+

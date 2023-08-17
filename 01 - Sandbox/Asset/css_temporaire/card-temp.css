@@ -1,4 +1,4 @@
-/* Card */ ==> Presqe tout à reprendre sur l'excel 
+/* Card */ 
 
 .rcn-card {
 border-radius:var(--rcn-semantic-borderradius-200);
@@ -12,7 +12,7 @@ background-color:var(--rcn-semantic-color-static-background-standard);
 
 .rcn-card--vertical{
     flex-direction: column;
-    max-width:400px; /*pour l'exemple*/
+    max-width:400px; /*pour l'exemple à ne pas ajoutre au excel*/
 } /*maj dans l'excel ==> OK*/
 
 .rcn-card--horizontal{
@@ -43,8 +43,6 @@ background-color:var(--rcn-semantic-color-static-background-standard);
 
 .rcn-card--horizontal .rcn-card__imgHolder {
     padding-right: calc(0.33 * 100%);
-    border-top-left-radius: var(--rcn-semantic-borderradius-200);
-    border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
     border-top-left-radius: var(--rcn-semantic-borderradius-200);
     border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
 }/*maj dans l'excel ==> OK*/
@@ -126,7 +124,7 @@ box-sizing:border-box; /*maj dans l'excel ==> OK*/
 
 .rcn-card__chipsZone {
     flex-wrap:wrap;
-} /*property à ajouter dans l'excel*/
+} /*maj dans l'excel ==> OK*/
 
 
 

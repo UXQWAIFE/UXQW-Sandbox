@@ -55,13 +55,18 @@
 
 .rcn-modal__behind {
   display:flex;
-  grid-column: span 12; /*à enlever?*/
+  /*grid-column: span 12; /*à enlever?*/
   height:4000px; /*remplacer par 100% dans l'excel*/
-  position: relative;
+  /* position: relative; */
 } /*ajouter les properties à l'excel*/
 
 .rcn-modal--medium {
   justify-self: center;
   /* grid-column: span 6; */
   width: unset;
+}
+
+.rcn-grid--mainContentOverlayed{
+  position : relative;
+
 }

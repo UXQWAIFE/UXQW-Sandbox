@@ -1,8 +1,10 @@
 .rcn-breadcrumb__chevron {
   transform: none;
-} /* class supprimée dans le Excel */
+} /* class supprimée dans le Excel */ /*supprimé dans l'excel ==> OK*/
+
 
 .rcn-breadcrumb__list {
   /*padding-left: var(--rcn-semantic-padding-horizontal-900); supprimer de l'excel, porté par grid__margin*/
  /* padding-right: var(--rcn-semantic-padding-horizontal-900); supprimer de l'excel, porté par grid__margin */
 }
+/*supprimé dans l'excel ==> OK*/

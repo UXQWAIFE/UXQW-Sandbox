@@ -19,39 +19,40 @@
 
 
 
-.rcn-inputField__button {
+/* .rcn-inputField__button {
     font-size: var(--rcn-semantic-typography-icon-rcn_icon-body-fontsize);
-} /*ajouter dans l'excel ==> OK*/
+} Class à supprimer c'est porté au sein de rcn__icon >> Supprimé ok dans le excel*/
+
 
 
 /* CHECKBOX */
 
 
 .rcn-inputField__input--checkbox::before{
-    /*font-family:'rcnicon'*/; /*voir ce qu'on fait pour la font-family*/
-/*  content: "\e939";
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);*/
+    /*font-family:'rcnicon'*/; /*supp dans le excel >> OK*/
+/*  content: "\e939"; >> pas pris en compte dans le excel (CLE)
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard); >> pas pris en compte dans le excel (CLE)*/
 }
 
 .rcn-inputField__input--checkbox:checked::before{
-   /* font-family:'rcnicon'; *//*voir ce qu'on fait pour la font-family*/
-/*    content: "\e938";
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected); */
+   /* font-family:'rcnicon'; *//*supp dans le excel >> OK*/
+/*    content: "\e938"; >> pas pris en compte dans le excel (CLE)
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected); >> pas pris en compte dans le excel (CLE) */
 }
 
 
 /* RADIO BUTTON */
 
 .rcn-inputField__input--radio::before{
-   /* font-family:'rcnicon';*/ /*voir ce qu'on fait pour la font-family*/
-    /*content: "\e93b";
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);*/
+   /* font-family:'rcnicon';*/ /*vsupp dans le excel >> OK*/
+    /*content: "\e93b"; >> pas pris en compte dans le excel (CLE)
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard); >> pas pris en compte dans le excel (CLE)*/
 }
 
 .rcn-inputField__input--radio:checked::before{
     /*font-family:'rcnicon'; *//*voir ce qu'on fait pour la font-family*/
-    /*content: "\e93a";
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);*/
+    /*content: "\e93a" >> pas pris en compte dans le excel (CLE);
+    color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected); >> pas pris en compte dans le excel (CLE)*/
 }
 
 

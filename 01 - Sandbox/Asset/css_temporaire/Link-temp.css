@@ -2,12 +2,12 @@
 .rcn-link{
   gap:0px;
   width:fit-content;
-} /* à modifier dans l'excel > FAIT */
+} /*ajouter à l'excel ==> OK*/
 
 .rcn-link[disabled]{
   color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
   
-}/* à modifier dans l'excel > FAIT */
+}/*ajouter à l'excel ==> OK*/
 
 
 

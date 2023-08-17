@@ -2,10 +2,10 @@
 /*.rcn-header__productBanner {
   padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); ==> A supprimer dans l'excel, porté par grid__margin
 }
-*/
+*/ /*supprimé du Excel ==> OK*/
 
 .rcn-header__mainNavBanner {
-  /*padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); ==> à supprimer dans l'excel car porté par grids*/
+  /*padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-900); ==> à supprimer dans l'excel car porté par grids*/ /*supprimé du Excel ==> OK*/
   padding-top : 0px; /* => Temporaire : ne pas mettre dans l'excel, à supprimer quand les padding auront été supprimés*/
   padding-bottom : 0px;  /* => Temporaire : ne pas mettre dans l'excel, à supprimer quand les padding auront été supprimés */
 }
@@ -13,6 +13,6 @@
 
 .rcn-header__iconButton {
 	color:var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary); 
-} /*ajouter au excel ? ==> OK*/
+} /*ajouter au excel ==> OK*/
 
 
