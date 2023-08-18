@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="asset/RCN-DesignSystem/assets/reset.css">
-	<link rel="stylesheet" href="asset/RCN-DesignSystem/assets/styles-ChorusPro.css">
+	<link rel="stylesheet" href="asset/RCN-DesignSystem-Test/assets/reset.css">
+	<link rel="stylesheet" href="asset/RCN-DesignSystem-Test/assets/styles-ChorusPro.css">
 	<link rel="stylesheet" href="asset/data-form/table_general.css">
 	<link rel="stylesheet" href="asset/data-form/table_structure.css">
 	<style>
