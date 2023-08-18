@@ -29,7 +29,6 @@
 --rcn-semantic-margin-vertical-paragraph: var(--rcn-core-spacing-500);
 --rcn-semantic-margin-vertical-fieldset: var(--rcn-core-spacing-500);
 --rcn-semantic-margin-vertical-inputfieldblock: var(--rcn-core-spacing-500);
---rcn-semantic-margin-vertical-stepper_sublist: var(--rcn-core-spacing-200);
 --rcn-semantic-gap-vertical-0: var(--rcn-core-spacing-0);
 --rcn-semantic-gap-vertical-50: var(--rcn-core-spacing-50);
 --rcn-semantic-gap-vertical-100: var(--rcn-core-spacing-100);
@@ -174,7 +173,6 @@
 --rcn-semantic-typography-lineheight-body-editorial: var(--rcn-core-lineheight-150);
 --rcn-semantic-typography-lineheight-heading: var(--rcn-core-lineheight-100);
 --rcn-semantic-typography-lineheight-body-component: var(--rcn-core-lineheight-100);
---rcn-semantic-typography-textdecoration-pagination_navigationlinks: var(--rcn-core-textdecoration-none);
 --rcn-semantic-typography-textdecoration-link: var(--rcn-core-textdecoration-underline);
 --rcn-semantic-typography-textdecoration-link-hover: var(--rcn-core-textdecoration-none);
 --rcn-semantic-typography-textdecoration-menu_entry: var(--rcn-core-textdecoration-none);
@@ -241,4 +239,6 @@
 --rcn-semantic-dropshadow-static-elevated: var(--rcn-core-shadow-100);
 --rcn-semantic-dropshadow-static-overlayed: var(--rcn-core-shadow-200);
 --rcn-semantic-dropshadow-static-detached: var(--rcn-core-shadow-300);
+--rcn-semantic-typography-textdecoration-pagination_navigationlinks: var(--rcn-core-textdecoration-none);
+--rcn-semantic-margin-vertical-stepper_sublist: var(--rcn-core-spacing-200);
 }
