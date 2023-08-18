@@ -1,13 +1,15 @@
 
-.rcn-link{
+/* .rcn-link{
   gap:0px;
   width:fit-content;
-} /*ajouter à l'excel ==> OK*/
+} ajouter à l'excel ==> OK
 
 .rcn-link[disabled]{
   color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
   
-}/*ajouter à l'excel ==> OK*/
+} */
+
+/*ajouter à l'excel ==> OK*/
 
 
 
