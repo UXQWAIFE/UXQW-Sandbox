@@ -1,0 +1,16 @@
+.rcn-tooltip__textBox {
+  max-width: 352px;
+  color: var(--rcn-semantic-color-static-text_and_icon-ontooltip);
+  border-radius: var(--rcn-semantic-borderradius-200);
+  background-color: var(--rcn-semantic-color-static-background-tooltip);
+  padding: var(--rcn-semantic-padding-horizontal-200) var(--rcn-semantic-padding-horizontal-300);
+}
+
+.rcn-tooltip__button::before {
+  content: var(--rcn-semantic-typography-content-icon-information);
+}
+
+.rcn-tooltip__triangle {
+  background-color: var(--rcn-semantic-color-static-background-tooltip);
+}
+

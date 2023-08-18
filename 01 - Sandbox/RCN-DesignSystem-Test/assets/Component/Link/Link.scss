@@ -1,0 +1,33 @@
+.rcn-link {
+    gap: $rcn-semantic-gap-horizontal-0;
+    display: flex;
+    align-items: baseline;
+    color: $rcn-semantic-color-interaction-text_and_icon-default-link;
+    text-decoration: $rcn-semantic-typography-textdecoration-link;
+    width: fit-content;
+  &:visited {
+      color: $rcn-semantic-color-interaction-text_and_icon-visited-link;
+  }
+  &__icon {
+    &--external {
+      &::before {
+          content: $rcn-semantic-typography-content-icon-external_link;
+      }
+        order: 2;
+    }
+    &--download {
+      &::before {
+          content: $rcn-semantic-typography-content-icon-download;
+      }
+        order: -1;
+    }
+  }
+  &:hover {
+      text-decoration: $rcn-semantic-typography-textdecoration-link-hover;
+  }
+}
+
+.rcn-link[disabled] {
+    color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+}
+

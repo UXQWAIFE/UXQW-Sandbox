@@ -1,0 +1,79 @@
+/* 
+Voici les fichiers CSS des Composants du Design System du Référentiel de Conception Numérique
+Pour voir les règles d'intégrations des éléments <html> veuillez vous referrer au https://aife.economie.gouv.fr/referentiel/
+*/
+/*lot1*/
+@import url("BackToTop/BackToTop.css");
+@import url("Breadcrumb/Breadcrumb.css");
+@import url("Button/Button.css");
+@import url("Captcha/Captcha.css");
+@import url("Card/Card.css");
+@import url("Chips/Chips.css");
+@import url("GlobalContainers/GlobalContainers.css");
+@import url("Icon/Icon.css");
+@import url("Link/Link.css");
+@import url("Loader/Loader.css");
+@import url("Modal/Modal.css");
+@import url("Notification/Notification.css");
+@import url("Tooltip/Tooltip.css");
+@import url("Typography/Typography.css");
+/*lot2*/
+@import url("Accordions/Accordions.css");
+@import url("Animations/Animations.css");
+@import url("Header/Header.css");
+@import url("Footer/Footer.css");
+@import url("ContainersGlobaux/ContainersGlobaux.css");
+@import url("Tabs/Tabs.css");
+/*lot3*/
+@import url("FormInputs/FormInputs.css");
+/* Lot 4 */
+@import url("Menu/Menu.css");
+@import url("Pagination/Pagintion.css");
+@import url("Stepper/Stepper.css");
+
+
+
+
+
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

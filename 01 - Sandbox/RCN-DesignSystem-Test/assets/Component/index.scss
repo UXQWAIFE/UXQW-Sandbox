@@ -1,0 +1,75 @@
+/* 
+Voici les fichiers.scss des Composants du Design System du Référentiel de Conception Numérique
+Pour voir les règles d'intégrations des éléments <html> veuillez vous referrer au https://aife.economie.gouv.fr/referentiel/
+*/
+/*lot1*/
+@import "BackToTop/BackToTop.scss";
+@import "Breadcrumb/Breadcrumb.scss";
+@import "Button/Button.scss";
+@import "Captcha/Captcha.scss";
+@import "Card/Card.scss";
+@import "Chips/Chips.scss";
+@import "GlobalContainers/GlobalContainers.scss";
+@import "Icon/Icon.scss";
+@import "Link/Link.scss";
+@import "Loader/Loader.scss";
+@import "Modal/Modal.scss";
+@import "Notification/Notification.scss";
+@import "Tooltip/Tooltip.scss";
+@import "Typography/Typography.scss";
+/*lot2*/
+@import "Accordions/Accordions.scss";
+@import "Animations/Animations.scss";
+@import "Header/Header.scss";
+@import "Footer/Footer.scss";
+@import "Tabs/Tabs.scss";
+/*lot3*/
+@import "FormInputs/FormInputs.scss";
+
+/* Lot 4 */
+@import "Menu/Menu.scss";
+@import "Pagination/Pagintion.scss";
+@import "Stepper/Stepper.scss"; 
+
+
+/* Reset */ 
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

@@ -1,0 +1,78 @@
+.rcn-notification {
+  padding: var(--rcn-semantic-padding-vertical-300);
+  display: flex;
+  align-items: center;
+  gap: var(--rcn-semantic-gap-horizontal-300);
+  width: auto;
+  border-radius: var(--rcn-semantic-borderradius-200);
+}
+
+.rcn-notification--error {
+  background-color: var(--rcn-semantic-color-feedback-background-error);
+  color: var(--rcn-semantic-color-feedback-text_and_icon-onerror);
+}
+
+.rcn-notification--informative {
+  background-color: var(--rcn-semantic-color-feedback-background-information);
+  color: var(--rcn-semantic-color-feedback-text_and_icon-oninformation);
+}
+
+.rcn-notification--success {
+  background-color: var(--rcn-semantic-color-feedback-background-success);
+  color: var(--rcn-semantic-color-feedback-text_and_icon-onsuccess);
+}
+
+.rcn-notification--warning {
+  background-color: var(--rcn-semantic-color-feedback-background-warning);
+  color: var(--rcn-semantic-color-feedback-text_and_icon-onwarning);
+}
+
+.rcn-notification__typeIcon {
+  font-size: var(--rcn-semantic-typography-fontsize-h4);
+}
+
+.rcn-notification--error .rcn-notification__typeIcon::before {
+  content: var(--rcn-semantic-typography-content-icon-alert);
+}
+
+.rcn-notification--informative .rcn-notification__typeIcon::before {
+  content: var(--rcn-semantic-typography-content-icon-information);
+}
+
+.rcn-notification--success .rcn-notification__typeIcon::before {
+  content: var(--rcn-semantic-typography-content-icon-success);
+}
+
+.rcn-notification--warning .rcn-notification__typeIcon::before {
+  content: var(--rcn-semantic-typography-content-icon-warning);
+}
+
+.rcn-notification__textZone {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rcn-semantic-gap-horizontal-100);
+  flex-grow: 1;
+}
+
+.rcn-notification__title {
+  font-weight: var(--rcn-semantic-typography-fontweight-label);
+}
+
+.rcn-notification__closeIcon {
+  align-self: flex-start;
+}
+
+.rcn-notification__closeIcon::before {
+  content: var(--rcn-semantic-typography-content-icon-close);
+}
+
+.rcn-notification--banner {
+  border-radius: 0;
+}
+
+.rcn-notification--banner .rcn-notification__textZone {
+  flex-direction: row;
+  gap: var(--rcn-semantic-gap-horizontal-300);
+  flex-wrap: wrap;
+}
+
