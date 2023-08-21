@@ -2,10 +2,7 @@
 Voici les fichiers.scss des Composants du Design System du Référentiel de Conception Numérique pour le produit Chorus
 Pour voir les règles d'intégrations des éléments <html> veuillez vous referrer au https://aife.economie.gouv.fr/referentiel/
 */
-@import "Core/CoreTokens-ChorusPRO.css";
-@import "Core/CoreTokensShadow.css";
-@import "Semantic/SemanticTokensColor.css";
-@import "Semantic/SemanticTokensShadow.css";
-@import "Semantic/SemanticTokensLayout.css";
-@import "Semantic/SemanticTokensTypography.css";
+@import "Resets.css";
+@import "Core_chorusPro/Core_chorusPro.scss";
+@import "SemanticTokens/SemanticTokens.scss";
 @import "Component/index.scss";

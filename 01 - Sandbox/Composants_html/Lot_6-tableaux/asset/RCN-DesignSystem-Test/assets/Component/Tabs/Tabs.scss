@@ -1,0 +1,70 @@
+.rcn-tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  &__labelsGroup {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: flex-start;
+      gap: $rcn-semantic-gap-horizontal-200;
+      padding-left: $rcn-semantic-padding-horizontal-400;
+      border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+  }
+  &__label {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: $rcn-semantic-gap-horizontal-200;
+      padding: $rcn-semantic-padding-vertical-200 $rcn-semantic-padding-horizontal-300;
+      border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+      color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+      background-color: $rcn-semantic-color-interaction-background-default-standard;
+      margin-bottom: -1px;
+    &:hover {
+        background-color: $rcn-semantic-color-interaction-background-hover-standard;
+        color: $rcn-semantic-color-interaction-text_and_icon-hover-onstandard;
+    }
+  }
+  &__label[aria-selected='true'] {
+      color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+      padding-top: $rcn-semantic-padding-vertical-150;
+      border-top: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
+      border-bottom-color: $rcn-semantic-color-interaction-border-default-onprimary;
+      font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
+  }
+  &__label[aria-selected='true']:hover {
+      border-top-color: $rcn-semantic-color-interaction-border-hover-selected;
+      border-bottom-color: $rcn-semantic-color-interaction-border-default-onprimary;
+      color: $rcn-semantic-color-interaction-text_and_icon-hover-selected;
+  }
+  &__label[disabled] {
+      color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+      background-color: $rcn-semantic-color-interaction-background-disabled-standard;
+      border-color: $rcn-semantic-color-interaction-border-disabled;
+      border-bottom-color: $rcn-semantic-color-interaction-border-default-standard;
+  }
+  &__contentZone {
+      padding: $rcn-semantic-padding-vertical-600 $rcn-semantic-padding-horizontal-600;
+      border-top: none;
+      border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+      border-right: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+      border-left: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+  }
+  &__contentZone[hidden] {
+      height: 0px;
+  }
+  &--fullPage {
+    .rcn-tabs {
+      &__contentZone {
+          border-right: none;
+          border-left: none;
+          border-bottom: none;
+      }
+    }
+  }
+}
+

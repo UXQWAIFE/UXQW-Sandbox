@@ -1,0 +1,293 @@
+.rcn-icon {
+    font-family: $rcn-semantic-typography-fontfamily-icon;
+    font-weight: $rcn-semantic-typography-fontweight-body-component;
+    font-size: $rcn-semantic-typography-fontsize-body;
+    line-height: $rcn-semantic-typography-lineheight-body-component;
+  &--asH1 {
+      font-size: $rcn-semantic-typography-fontsize-h1;
+  }
+  &--asH1bis {
+      font-size: $rcn-semantic-typography-fontsize-h_alt-xs;
+  }
+  &--asH2 {
+      font-size: $rcn-semantic-typography-fontsize-h2;
+  }
+  &--asH3 {
+      font-size: $rcn-semantic-typography-fontsize-h3;
+  }
+  &--asH4 {
+      font-size: $rcn-semantic-typography-fontsize-h4;
+  }
+  &--asH5 {
+      font-size: $rcn-semantic-typography-fontsize-h5;
+  }
+  &--asH6 {
+      font-size: $rcn-semantic-typography-fontsize-h6;
+  }
+  &--mdi-dailymotion {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-dailymotion;
+    }
+  }
+  &--mdi-starOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-favorite;
+    }
+  }
+  &--mdi-volumeOff {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-volume_off;
+    }
+  }
+  &--mdi-volumeHigh {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-volume_on;
+    }
+  }
+  &--mdi-bellBadgeOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-notifaction_on;
+    }
+  }
+  &--mdi-bellOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-notification;
+    }
+  }
+  &--mdi-instagram {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-instagram;
+    }
+  }
+  &--mdi-youtube {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-youtube;
+    }
+  }
+  &--mdi-linkedin {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-twitter;
+    }
+  }
+  &--mdi-facebook {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-facebook;
+    }
+  }
+  &--mdi-twitter {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-twitter;
+    }
+  }
+  &--mdi-trashCanOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-delete;
+    }
+  }
+  &--mdi-calendarBlankOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-calendar;
+    }
+  }
+  &--mdi-openInNew {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-external_link;
+    }
+  }
+  &--mdi-cogOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-settings;
+    }
+  }
+  &--mdi-messageTextOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-message;
+    }
+  }
+  &--mdi-emailOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-email;
+    }
+  }
+  &--mdi-closeCircleOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-close_chips;
+    }
+  }
+  &--mdi-accountCircleOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-user;
+    }
+  }
+  &--mdi-trayArrowDown {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-download;
+    }
+  }
+  &--mdi-pencilOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-edit;
+    }
+  }
+  &--mdi-replay {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-reset;
+    }
+  }
+  &--mdi-magnify {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-search;
+    }
+  }
+  &--mdi-close {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-close;
+    }
+  }
+  &--mdi-alertOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-warning;
+    }
+  }
+  &--mdi-checkCircleOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-success;
+    }
+  }
+  &--mdi-alertCircleOutline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-alert;
+    }
+  }
+  &--mdi-information-outline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-information;
+    }
+  }
+  &--mdi-menu {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-menu;
+    }
+  }
+  &--mdi-dots-vertical {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-actions_menu;
+    }
+  }
+  &--mdi-minus {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-minus;
+    }
+  }
+  &--mdi-plus {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-plus;
+    }
+  }
+  &--mdi-arrow-up {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-up;
+    }
+  }
+  &--mdi-arrow-down {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-down;
+    }
+  }
+  &--mdi-eye-off-outline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-hide;
+    }
+  }
+  &--mdi-eye-outline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-show;
+    }
+  }
+  &--mdi-chevron-up {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-collapse_vertical;
+    }
+  }
+  &--mdi-chevron-right {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-expand_horizontal;
+    }
+  }
+  &--mdi-chevron-left {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-collapse-horizontal;
+    }
+  }
+  &--mdi-chevron-down {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-expand_vertical;
+    }
+  }
+  &--mdi-filter-remove {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-filter_remove;
+    }
+  }
+  &--mdi-filter {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-filter;
+    }
+  }
+  &--mdi-microphone {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-microphone;
+    }
+  }
+  &--mdi-sort-descending {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-sort_descending;
+    }
+  }
+  &--mdi-sort-ascending {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-sort_ascending;
+    }
+  }
+  &--mdi-sort {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-sort;
+    }
+  }
+  &--mdi-checkbox-marked {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-checkbox_checked;
+    }
+  }
+  &--mdi-checkbox-blank-outline {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-checkbox_blank;
+    }
+  }
+  &--mdi-radiobox-marked {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-radiobox_checked;
+    }
+  }
+  &--mdi-radiobox-blank {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-radiobox_blank;
+    }
+  }
+  &--mdi-backburger {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-expand_collapse_stepper;
+    }
+  }
+  &--mdi-arrow-collapse-vertical {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-collapse_all;
+    }
+  }
+  &--mdi-arrow-expand-vertical {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-expand_all;
+    }
+  }
+}
+

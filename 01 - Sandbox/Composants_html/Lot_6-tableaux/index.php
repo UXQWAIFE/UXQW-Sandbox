@@ -7,6 +7,9 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="asset/RCN-DesignSystem-Test/assets/reset.css">
 	<link rel="stylesheet" href="asset/RCN-DesignSystem-Test/assets/styles-ChorusPro.css">
+	<link rel="stylesheet" href="asset/Font_icon/RCNicon.woff">
+	<link rel="stylesheet" href="asset/Resets.css">
+
 	<link rel="stylesheet" href="asset/data-form/table_general.css">
 	<link rel="stylesheet" href="asset/data-form/table_structure.css">
 	<style>
@@ -409,14 +412,14 @@ print_r($_SESSION);
 		updateBandeau();
 		if (document.querySelector('.rcn-tableData--sticked')) {
 			// Récupérer la largeur du premier <th> de sticky-thead-1
-			const header1Width = document.querySelector('.rcn-tableData--sticked:first-child').offsetWidth;
+			const header1Width = document.querySelector('th.rcn-tableData--sticked:first-child').scrollWidth;
 			var headerCount = document.querySelectorAll('th.rcn-tableData--sticked').length;
-			
+			console.log(header1Width);
 			for( var i = 0; i < headerCount; i++ ) {
 				// if( i === 0) {
 				// 	document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${i}px`);
 				// }
-				document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${header1Width}px`);
+				document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `calc(${header1Width}px - 1px)`);
 			}
 			// Appliquer la largeur comme une variable CSS personnalisée
 		}
@@ -426,7 +429,7 @@ print_r($_SESSION);
 		const filterElement = document.querySelector('.rcn-tableFilter');
 		filterButtons.forEach(buttonf => {
 			buttonf.addEventListener('click', () => {
-				console.log('allo');
+				
 				// filterElement.classList.toggle('sr-only');
 				filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
 			});

@@ -1,0 +1,34 @@
+.rcn-captcha {
+  gap: var(--rcn-semantic-gap-vertical-500);
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.rcn-captcha__title {
+  font-weight: var(--rcn-semantic-typography-fontweight-label);
+}
+
+.rcn-captcha__image {
+  background-color: var(--rcn-semantic-color-static-background-standard);
+  min-width: 240px;
+  min-height: 80px;
+}
+
+.rcn-captcha__inputZone {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  width: auto;
+  justify-content: space-between;
+}
+
+.rcn-captcha__inputField {
+  flex-grow: 1;
+}
+
+.rcn-captcha__button {
+  border-radius: 0px;
+}
+

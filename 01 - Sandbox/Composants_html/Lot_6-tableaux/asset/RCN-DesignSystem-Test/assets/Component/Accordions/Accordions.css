@@ -1,0 +1,57 @@
+.rcn-accordions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: stretch;
+  border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+}
+
+.rcn-accordions__heading {
+  border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: var(--rcn-semantic-padding-horizontal-400);
+  padding-right: var(--rcn-semantic-padding-horizontal-400);
+  padding-top: var(--rcn-semantic-padding-vertical-300);
+  padding-bottom: var(--rcn-semantic-padding-vertical-400);
+  background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+}
+
+.rcn-accordions__heading:hover {
+  background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard);
+}
+
+.rcn-accordions__heading[aria-expanded='true'] {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+  font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
+  border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
+}
+
+.rcn-accordions__heading[aria-expanded='true']:hover {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
+  border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
+}
+
+.rcn-accordions__headingIcon::before {
+  content: var(--rcn-semantic-typography-content-icon-expand_vertical);
+}
+
+.rcn-accordions__heading[aria-expanded='true'] .rcn-accordionSystem__headingIcon::before {
+  content: var(--rcn-semantic-typography-content-icon-collapse_vertical);
+}
+
+.rcn-accordions__content {
+  padding-left: var(--rcn-semantic-padding-horizontal-400);
+  padding-right: var(--rcn-semantic-padding-horizontal-400);
+  padding-top: var(--rcn-semantic-padding-vertical-400);
+  padding-bottom: var(--rcn-semantic-padding-vertical-600);
+  background-color: var(--rcn-semantic-color-static-background-standard);
+}
+
+.rcn-accordions__content[hidden] {
+  height: 0px !important;
+}
+
