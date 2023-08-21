@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-  background-color: transparent;
+  /* background-color: transparent; > CLE : pour moi il faut enlever cette valeur ça empêche les fond d'apparaitre : par exemple sur modale le fond gris n'apparaît pas. De plus, je ne sais pas si cette valeur a une utilité ici. */
   grid-template-rows: auto;
   height:100%;
 }

@@ -1,11 +1,13 @@
 
-.rcn-accordions__heading[aria-expanded='true']:hover {
-	border-top : var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected); /*ajouter à l'excel ==> OK*/
-}
-
+/* .rcn-accordions__heading[aria-expanded='true']:hover {
+	border-top : var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
+} */
+/*ajouter à l'excel ==> OK*/
 .rcn-accordions__headingIcon::before {
 	content:var(--rcn-semantic-typography-icon-rcn_icon-expand_vertical-content);
-} /*ajouter à l'excel ==> OK*/
+}
+
+/*ajouter à l'excel ==> OK*/
 
 
 .rcn-accordions__heading:[aria-expanded='true'] .rcn-accordionSystem__headingIcon::before{
