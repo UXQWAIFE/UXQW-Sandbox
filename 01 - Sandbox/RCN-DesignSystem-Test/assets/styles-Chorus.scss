@@ -3,7 +3,7 @@ Voici les fichiers.scss des Composants du Design System du Référentiel de Conc
 Pour voir les règles d'intégrations des éléments <html> veuillez vous referrer au https://aife.economie.gouv.fr/referentiel/
 */
 @import "Resets.css";
-@import "Core_Chorus/Core_Chorus.scss";
-@import "SemanticTokens/SemanticTokens.scss";
+@import "Core/Core_Chorus.scss";
+@import "Semantic/SemanticTokens.scss";
 @import "Component/index.scss";
 

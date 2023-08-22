@@ -5,10 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="asset/RCN-DesignSystem-Test/assets/reset.css">
-	<link rel="stylesheet" href="asset/RCN-DesignSystem-Test/assets/styles-ChorusPro.css">
-	<link rel="stylesheet" href="asset/Font_icon/RCNicon.woff">
-	<link rel="stylesheet" href="asset/Resets.css">
+	
+	<link rel="stylesheet" href="asset/RCN-DesignSystem/assets/styles-ChorusPro.css">
 
 	<link rel="stylesheet" href="asset/data-form/table_general.css">
 	<link rel="stylesheet" href="asset/data-form/table_structure.css">
@@ -246,6 +244,9 @@ print_r($_SESSION);
 			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_action">Colonne Action ?
 			<input <?php echo isset($_SESSION['Col_action']) && $_SESSION['Col_action'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_action" id="Col_action">
 			</label>
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_action_menu">Colonne Action avec Menu
+			<input <?php echo isset($_SESSION['Col_action_menu']) && $_SESSION['Col_action_menu'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_action_menu" id="Col_action_menu">
+			</label>
 		</fieldset>
 
 		<fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
@@ -313,7 +314,8 @@ print_r($_SESSION);
 				{ value: "icone", text: "Icône" },
 				{ value: "bouton_selection", text: "Bouton de sélection" },
 				{ value: "bouton_depliable", text: "Bouton dépliable" },
-				{ value: "bouton_action", text: "Bouton d'action" }
+				{ value: "bouton_action", text: "Bouton d'action" },
+				{ value: "bouton_action--withMenu", text: "Bouton d'action avec Menu" }
 				];
 
 				for (var i = 0; i < options.length; i++) {
@@ -410,12 +412,13 @@ print_r($_SESSION);
 
 		// Appelez la fonction updateBandeau une première fois pour initialiser l'état du bandeau
 		updateBandeau();
-		if (document.querySelector('.rcn-tableData--sticked')) {
+		if (document.querySelector('.rcn-tableData--sticked').length > 1) {
 			// Récupérer la largeur du premier <th> de sticky-thead-1
-			const header1Width = document.querySelector('th.rcn-tableData--sticked:first-child').scrollWidth;
+			const thSelect = document.querySelector('th.rcn-tableData--sticked:first-child');
+			const header1Width = thSelect.scrollWidth;
 			var headerCount = document.querySelectorAll('th.rcn-tableData--sticked').length;
 			console.log(header1Width);
-			for( var i = 0; i < headerCount; i++ ) {
+			for( var i = 0; i < headerCount - 1; i++ ) {
 				// if( i === 0) {
 				// 	document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${i}px`);
 				// }
@@ -435,16 +438,41 @@ print_r($_SESSION);
 			});
 		});
 		const accordBtn = document.querySelectorAll('.rcn-accordions__heading');
+
 		accordBtn.forEach(btnDepli => {
-			const accordNextElement = accordBtn.nextElementSibling;
-			console.log(accordNextElement);
+		const accordNextElement = btnDepli.nextElementSibling; // Utilisez btnDepli au lieu de accordBtn ici
+		
 			btnDepli.addEventListener('click', () => {
 				console.log('allo');
-				// filterElement.classList.toggle('sr-only');
-				filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
+				
+				// Utilisez btnDepli et accordNextElement pour mettre en place les attributs d'accessibilité
+				btnDepli.setAttribute('aria-expanded', btnDepli.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+				accordNextElement.setAttribute('aria-hidden', accordNextElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
+				accordNextElement.hidden = !accordNextElement.hidden;
+
 			});
 		});
 
+		const closeFilterMenu = document.querySelector("#CloseTriMenu");
+
+		closeFilterMenu.addEventListener('click', () => {
+			filterElement.setAttribute('aria-hidden', 'true');
+		});
+
+		const menuContextRows = document.querySelectorAll('.rcn-tableCell__action--withMenu .rcn-iconButton');
+
+		menuContextRows.forEach(button => {
+			button.addEventListener('click', () => {
+				const targetId = button.getAttribute('aria-controls');
+				const targetElement = document.getElementById(targetId);
+				
+				if (targetElement && targetElement.classList.contains('rcn-contextMenu--closed')) {
+				targetElement.classList.remove('rcn-contextMenu--closed');
+				}
+			});
+		});
+
+
 	</script>
 </body>
-</html>
+</html> 

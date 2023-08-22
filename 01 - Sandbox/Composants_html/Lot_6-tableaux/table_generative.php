@@ -16,6 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $Col_fix = isset($_POST["Col_fix"]);
   $Col_filtre = isset($_POST["Col_filtre"]);
   $Col_action = isset($_POST["Col_action"]);
+  $Col_action_menu = isset($_POST["Col_action_menu"]);
   $Lig_depliable = isset($_POST["Lig_depliable"]);
   $Lig_select = isset($_POST["Lig_select"]);
   
@@ -28,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $_SESSION['Col_fix'] = $Col_fix;
   $_SESSION['Col_filtre'] = $Col_filtre;
   $_SESSION['Col_action'] = $Col_action;
+  $_SESSION['Col_action_menu'] = $Col_action_menu;
   $_SESSION['Lig_depliable'] = $Lig_depliable;
   $_SESSION['Lig_depliable_nbr'] = $Lig_depliable_nbr;
   $_SESSION['Lig_select'] = $Lig_select;
@@ -65,6 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if ($Col_action) {
     $fonctionnalitesColonne .= " Colonne Action";
   }
+  
   if ($Lig_depliable) {
     $fonctionnalitesLigne .= " Ligne dépliable";
   }
@@ -208,10 +211,41 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
               $rowData = "<div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div>";
             }
             break;
-          case "bouton_action":
-            $rowData .= " (Bouton d'action)";
-            $rowData = "<div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div>";
+            case "bouton_action":
+              $rowData .= " (Bouton d'action)";
+              $rowData = "<div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div>";
             break;
+            case "bouton_action--withMenu":
+              $rowData .= " (Bouton d'action)";
+              $rowData = "<div class='rcn-tableCell__action--withMenu'>
+
+                            <button class='rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical' aria-controls='contextMenu-$row-$col'>
+                              <span class='sr-only'>Ouvrir le menu contextuel</span>
+                            </button>
+                            <div id='contextMenu-$row-$col' class='rcn-contextMenu rcn-contextMenu--closed'>
+                              <button class='rcn-iconButton'>
+                                <i class='rcn-icon rcn-icon--mdi-close'></i>
+                                <p>Fermer</p>
+                              </button>
+                              <ul class'rcn-contextMenu__list'>
+                                <li>
+                                  <a href='#commande1'>Action 1</a>
+                                </li>
+                                <li>
+                                  <a href='#commande1'>Action 1</a>
+                                </li>
+                                <li>
+                                  <a href='#commande1'>Action 1</a>
+                                </li>
+                                <li>
+                                  <a href='#commande1'>Action 1</a>
+                                </li>
+                              </ul>
+                              <button>Supprimer la ligne</button>
+                            </div>
+                          </div>";
+              
+              break;
         }
         if (!$typeDonnee) {
           $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
@@ -406,7 +440,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
        </div>
        <div class="rcn-tableFilter__filter">
            <p>Filtrer</p>
-           <div class="rcn-inputField">
+           <div class="rcn-inputField rcn-tableFilter__Search">
 
                <input placeholder="Rechercher..." class="rcn-inputField__input">
 
@@ -427,7 +461,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
    </form>
  </div>';
   $sideFilter = '<div class="rcn-tableFilter" aria-hidden="true">
-  <button  id="CloseTriMenu" class="rcn-iconButton" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
+  <button  id="CloseTriMenu" class="rcn-iconButton rcn-tableFilter__closeMenu" title="Fermer le menu de filtre" aria-controls="#triMenu" onclick="toggle_visibility()">
     <i aria-hidden="true" class="rcn-icon rcn-icon--mdi-close"></i>
     <span class="">Fermer</span>
   </button>
