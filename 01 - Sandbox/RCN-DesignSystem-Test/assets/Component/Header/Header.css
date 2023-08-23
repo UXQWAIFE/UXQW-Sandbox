@@ -11,12 +11,19 @@
   flex-direction: row;
   justify-content: space-between;
   gap: var(--rcn-semantic-gap-horizontal-600);
+  padding-top: var(--rcn-semantic-padding-vertical-400);
+  padding-bottom: var(--rcn-semantic-padding-vertical-400);
   background-color: var(--rcn-semantic-color-static-background-standard);
   align-items: center;
 }
 
 .rcn-header__logo {
   order: 0;
+}
+
+.rcn-header__connexionModule {
+  order: 2;
+  justify-content: flex-end;
 }
 
 .rcn-header__menu--portailDeServices {
@@ -30,6 +37,8 @@
   flex-direction: row;
   justify-content: flex-start;
   gap: var(--rcn-semantic-gap-horizontal-600);
+  padding-top: var(--rcn-semantic-padding-vertical-300);
+  padding-bottom: var(--rcn-semantic-padding-vertical-300);
   background-color: var(--rcn-semantic-color-static-background-primary);
   align-items: center;
 }
@@ -46,11 +55,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: var(--rcn-semantic-gap-horizontal-400);
-  font-size: var(--rcn-semantic-typography-fontsize-h3);
-}
-
-.rcn-header__iconButton {
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h3-fontsize);
 }
 
 .rcn-header__searchbar {

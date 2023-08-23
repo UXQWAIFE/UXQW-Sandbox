@@ -11,25 +11,25 @@
       flex-direction: row;
       gap: $rcn-semantic-gap-horizontal-100;
       justify-content: flex-start;
-      font-weight: $rcn-semantic-typography-fontweight-label;
+      font-weight: $rcn-semantic-typography-text-component-default-label-fontweight;
     &--checkboxOrRadio {
-        font-weight: $rcn-semantic-typography-fontweight-body-component;
+        font-weight: $rcn-semantic-typography-text-component-default-body-fontweight;
         align-items: flex-start;
     }
     &--checkboxOrRadio-checked {
         color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
-        font-weight: $rcn-semantic-typography-fontweight-label;
+        font-weight: $rcn-semantic-typography-text-component-default-label-fontweight;
     }
     &--language {
-        font-weight: $rcn-semantic-typography-fontweight-body-component;
+        font-weight: $rcn-semantic-typography-text-component-default-body-fontweight;
         padding: 0px;
         color: $rcn-semantic-color-interaction-text_and_icon-disabled;
     }
   }
   &__mandatoryAsterisk {
     &::before {
-        content: "*";
-        font-size: $rcn-semantic-typography-fontsize-h6;
+        content: *;
+        font-size: $rcn-semantic-typography-text-component-default-h6-fontsize;
         color: $rcn-semantic-color-feedback-text_and_icon-error;
     }
   }
@@ -41,7 +41,7 @@
   }
   &__errorIcon {
     &::before {
-        content: $rcn-semantic-typography-content-icon-alert;
+        content: $rcn-semantic-typography-icon-rcn_icon-alert-content;
     }
   }
   &__errorZone[hidden] {
@@ -53,11 +53,11 @@
       display: flex;
       flex-direction: row;
       gap: $rcn-semantic-gap-horizontal-200;
-      color: $rcn-semantic-color-feedback-text_and_icon-success;
+      color: $rcn-semantic-color-feedback-text_and_icon-onsuccess;
   }
   &__successIcon {
     &::before {
-        content: $rcn-semantic-typography-content-icon-success;
+        content: $rcn-semantic-typography-icon-rcn_icon-success-content;
     }
   }
   &__successZone[hidden] {
@@ -65,20 +65,17 @@
       display: none;
       width: 0px;
   }
-  &--as-Search {
-      margin-bottom: 0px;
-  }
   &--checkboxOrRadio {
+      display: flex;
       flex-direction: row;
       align-items: center;
       margin-bottom: unset;
   }
-  &--horizontal {
+  &--language {
       display: flex;
       flex-direction: row;
       gap: $rcn-semantic-gap-horizontal-200;
       align-items: center;
-      flex-grow: 0;
   }
 }
 
@@ -110,10 +107,10 @@
         color: $rcn-semantic-color-interaction-text_and_icon-disabled;
     }
     &--select {
-        padding: calc($rcn-semantic-padding-vertical-200 - 1px) $rcn-semantic-padding-horizontal-200;
+        padding: 7px $rcn-semantic-padding-horizontal-200;
     }
     &--datepicker {
-        padding: calc($rcn-semantic-padding-vertical-200 + 1px) $rcn-semantic-padding-horizontal-200;
+        padding: 9px $rcn-semantic-padding-horizontal-200;
     }
     &--textarea {
         resize: vertical;
@@ -122,20 +119,20 @@
         text-align: right;
     }
     &--largeSearch {
-        padding: $rcn-semantic-padding-vertical-400 $rcn-semantic-padding-horizontal-400;
+        padding: $rcn-semantic-padding-vertical-400 $rcn-semantic-padding-horizontal-400 ;
     }
     &--checkbox {
         padding: unset;
         order: -1;
-        font-size: calc(1.25 * $rcn-semantic-typography-fontsize-body);
-        line-height: calc(1.125 * $rcn-semantic-typography-fontsize-body);
+        font-size: calc(1.25 * $rcn-semantic-typography-text-component-default-body-fontsize);
+        line-height: calc(1.125 * $rcn-semantic-typography-text-component-default-body-fontsize);
       &::before {
-          content: $rcn-semantic-typography-content-icon-checkbox_blank;
+          content: $rcn-semantic-typography-icon-rcn_icon-checkbox_blank-content;
           color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
       }
       &:checked {
         &::before {
-            content: $rcn-semantic-typography-content-icon-checkbox_checked;
+            content: $rcn-semantic-typography-icon-rcn_icon-checkbox_checked-content;
             color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
         }
       }
@@ -143,15 +140,15 @@
     &--radio {
         padding: unset;
         order: -1;
-        font-size: calc(1.25 * $rcn-semantic-typography-fontsize-body);
-        line-height: calc(1.125 * $rcn-semantic-typography-fontsize-body);
+        font-size: calc(1.25 * $rcn-semantic-typography-text-component-default-body-fontsize);
+        line-height: calc(1.125 * $rcn-semantic-typography-text-component-default-body-fontsize);
       &::before {
-          content: $rcn-semantic-typography-content-icon-radiobox_blank;
+          content: $rcn-semantic-typography-icon-rcn_icon-radiobox_blank-content;
           color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
       }
       &:checked {
         &::before {
-            content: $rcn-semantic-typography-content-icon-radiobox_checked;
+            content: $rcn-semantic-typography-icon-rcn_icon-radiobox_checked-content;
             color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
         }
       }
@@ -188,7 +185,7 @@
   &__option {
     &:checked {
         color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
-        font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
+        font-weight: $rcn-semantic-typography-text-component-default-selected-fontweight;
     }
   }
   &__button {
@@ -203,17 +200,17 @@
     }
     &--hidePassword {
       &::before {
-          content: $rcn-semantic-typography-content-icon-hide;
+          content: $rcn-semantic-typography-icon-rcn_icon-hide-content;
       }
     }
     &--showPassword {
       &::before {
-          content: $rcn-semantic-typography-content-icon-show;
+          content: $rcn-semantic-typography-icon-rcn_icon-show-content;
       }
     }
     &--search {
       &::before {
-          content: $rcn-semantic-typography-content-icon-search;
+          content: $rcn-semantic-typography-icon-rcn_icon-search-content;
       }
     }
     &--largeSearch {
@@ -221,21 +218,23 @@
         flex-direction: row;
         gap: $rcn-semantic-gap-horizontal-200;
         padding-right: $rcn-semantic-padding-horizontal-400;
-        background-color: $rcn-semantic-color-interaction-background-default-standard;
+      &::before {
+          content: $rcn-semantic-typography-icon-rcn_icon-search-content;
+      }
     }
     &--reset {
       &::before {
-          content: $rcn-semantic-typography-content-icon-reset;
+          content: $rcn-semantic-typography-icon-rcn_icon-reset-content;
       }
     }
     &--delete {
       &::before {
-          content: $rcn-semantic-typography-content-icon-close;
+          content: $rcn-semantic-typography-icon-rcn_icon-close-content;
       }
     }
     &--combobox {
       &::before {
-          content: $rcn-semantic-typography-content-icon-expand_vertical;
+          content: $rcn-semantic-typography-icon-rcn_icon-expand_vertical-content;
       }
     }
   }
@@ -245,16 +244,9 @@
   }
   &__buttonSeparator {
       width: 1px;
-      height: $rcn-semantic-typography-fontsize-body;
+      height: $rcn-semantic-typography-text-component-default-body-fontsize;
       background-color: $rcn-semantic-color-static-border-divider_regular;
       order: 4;
-  }
-  &__iconButton {
-    &--largeSearch {
-      &::before {
-          content: $rcn-semantic-typography-content-icon-search;
-      }
-    }
   }
   &--file {
       display: flex;
@@ -274,8 +266,8 @@
       cursor: pointer;
   }
   &__uploadIcon {
-      line-height: $rcn-semantic-typography-lineheight-heading;
-      font-size: $rcn-semantic-typography-fontsize-h1;
+      line-height: $rcn-semantic-typography-lien-component-default-h1-lineheight;
+      font-size: $rcn-semantic-typography-lien-component-default-h1-fontsize;
   }
 }
 
@@ -294,7 +286,7 @@
     align-items: stretch;
   &__legend {
       margin-bottom: unset;
-      font-weight: $rcn-semantic-typography-fontweight-label;
+      font-weight: $rcn-semantic-typography-text-component-default-label-fontweight;
   }
   &--as-inputFieldBloc {
       display: flex;
@@ -317,6 +309,24 @@
       flex-wrap: wrap;
       flex-direction: row;
       gap: $rcn-semantic-gap-horizontal-400;
+  }
+}
+
+.rcn-radiobox {
+  &__label {
+      font-weight: $rcn-semantic-typography-text-component-default-body-fontweight;
+  }
+  &__input {
+    &::before {
+        content: $rcn-semantic-typography-icon-rcn_icon-radiobox_blank-content;
+        color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+    }
+    &:checked {
+      &::before {
+          content: $rcn-semantic-typography-icon-rcn_icon-radiobox_checked-content;
+          color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+      }
+    }
   }
 }
 
@@ -344,7 +354,9 @@
   }
   .rcn-fieldset {
     &--as-inputFieldBloc {
-        margin-bottom: unset;
+      &--as-inputFieldBloc {
+          margin-bottom: unset;
+      }
     }
   }
 }

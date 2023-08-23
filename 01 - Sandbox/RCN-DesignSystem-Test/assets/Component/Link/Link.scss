@@ -1,33 +1,32 @@
 .rcn-link {
-    gap: $rcn-semantic-gap-horizontal-0;
+    gap: $rcn-semantic-gap-horizontal-100;
     display: flex;
     align-items: baseline;
     color: $rcn-semantic-color-interaction-text_and_icon-default-link;
-    text-decoration: $rcn-semantic-typography-textdecoration-link;
-    width: fit-content;
+    text-decoration: $rcn-semantic-typography-lien-component-default-body-textdecoration-default;
   &:visited {
       color: $rcn-semantic-color-interaction-text_and_icon-visited-link;
   }
+  &:disabled {
+      color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+  }
   &__icon {
+      text-decoration: $rcn-semantic-typography-icon-rcn_icon-body-textdecoration;
     &--external {
       &::before {
-          content: $rcn-semantic-typography-content-icon-external_link;
+          content: $rcn-semantic-typography-icon-rcn_icon-external_link-content;
       }
         order: 2;
     }
     &--download {
       &::before {
-          content: $rcn-semantic-typography-content-icon-download;
+          content: $rcn-semantic-typography-icon-rcn_icon-download-content;
       }
         order: -1;
     }
   }
   &:hover {
-      text-decoration: $rcn-semantic-typography-textdecoration-link-hover;
+      text-decoration: $rcn-semantic-typography-lien-component-default-body-textdecoration-hover;
   }
-}
-
-.rcn-link[disabled] {
-    color: $rcn-semantic-color-interaction-text_and_icon-disabled;
 }
 

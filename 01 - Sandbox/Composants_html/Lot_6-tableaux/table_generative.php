@@ -219,31 +219,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
               $rowData .= " (Bouton d'action)";
               $rowData = "<div class='rcn-tableCell__action--withMenu'>
 
-                            <button class='rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical' aria-controls='contextMenu-$row-$col'>
+                            <button class='rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical' aria-controls='contextMenu-$row'>
                               <span class='sr-only'>Ouvrir le menu contextuel</span>
-                            </button>
-                            <div id='contextMenu-$row-$col' class='rcn-contextMenu rcn-contextMenu--closed'>
-                              <button class='rcn-iconButton'>
-                                <i class='rcn-icon rcn-icon--mdi-close'></i>
-                                <p>Fermer</p>
-                              </button>
-                              <ul class'rcn-contextMenu__list'>
-                                <li>
-                                  <a href='#commande1'>Action 1</a>
-                                </li>
-                                <li>
-                                  <a href='#commande1'>Action 1</a>
-                                </li>
-                                <li>
-                                  <a href='#commande1'>Action 1</a>
-                                </li>
-                                <li>
-                                  <a href='#commande1'>Action 1</a>
-                                </li>
-                              </ul>
-                              <button>Supprimer la ligne</button>
-                            </div>
-                          </div>";
+                            </button>";
               
               break;
         }
@@ -485,6 +463,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if($Col_fix) {
     $resultat .= $sideFilter;
   }
+  if($Col_action_menu) {
+    for ($row = 1; $row <= $nombreLignes; $row++) {
+        $contextMenuContainer = "<div id='contextMenu-$row' class='rcn-contextMenu' aria-hidden='true'>
+                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                    <i class='rcn-icon rcn-icon--mdi-close'></i>
+                                    <p>Fermer</p>
+                                  </button>
+                                  <ul class='rcn-contextMenu__list'>
+                                    <li>
+                                      <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
+                                    </li>
+                                    <li>
+                                      <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
+                                    </li>
+                                    <li>
+                                      <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
+                                    </li>
+                                    <li>
+                                      <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
+                                    </li>
+                                  </ul>
+                                  <button>Supprimer la ligne</button>
+                                </div>";
+    
+        $resultat .= $contextMenuContainer;
+      
+    }
+  }
+
+
   $resultat .= "
   <div id='RetourBTable' class='rcn-postTable'>
     <a title='Retour en haut du tableau' href='#RetourHTable'>Aller au sommet du tableau 

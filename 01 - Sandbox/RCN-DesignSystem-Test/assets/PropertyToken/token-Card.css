@@ -1,0 +1,38 @@
+:root{
+--rcn-card-border-radius: var(--rcn-semantic-borderradius-200);
+--rcn-card-border-width: var(--rcn-semantic-borderwidth-100);
+--rcn-card-display: flex;
+--rcn-card-border-color: var(--rcn-semantic-color-static-border-standard);
+--rcn-card-background-color: var(--rcn-semantic-color-static-background-standard);
+--rcn-card--vertical-flex-direction: row;
+--rcn-card--horizontal-flex-direction: column;
+--rcn-card__image-background-color: var(--rcn-semantic-color-static-background-standard);
+--rcn-card--vertical___rcn-card__image-min-height: 25%;
+--rcn-card--horizontal___rcn-card__image-min-width: 25%;
+--rcn-card__contentZone-padding: var(--rcn-semantic-padding-vertical-500) var(--rcn-semantic-padding-horizontal-500);
+--rcn-card__contentZone-display: flex;
+--rcn-card__contentZone-flex-direction: column;
+--rcn-card__contentZone-gap: var(--rcn-semantic-gap-vertical-200);
+--rcn-card__contentZone-justify-content: flex-start;
+--rcn-card__chipsZone-display: flex;
+--rcn-card__chipsZone-flex-direction: row;
+--rcn-card__chipsZone-gap: var(--rcn-semantic-gap-horizontal-200);
+--rcn-card__subTitle-color: var(--rcn-semantic-color-static-text_and_icon-card_subTitle);
+--rcn-card__actionsZone-display: flex;
+--rcn-card__actionsZone-flex-direction: row;
+--rcn-card__actionsZone-justify-content: flex-end;
+--rcn-card__actionsZone-gap: var(--rcn-semantic-gap-vertical-200);
+--rcn-card__link-order: 1;
+--rcn-card__button-order: 2;
+--rcn-card--interactive-border-color: var(--rcn-semantic-color-interaction-border-default-standard);
+--rcn-card--interactive-background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+--rcn-card--interactive-box-shadow: var(--rcn-semantic-dropshadow-interaction-elevated);
+--rcn-card--interactive___rcn-title-text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration-default);
+--rcn-card--interactive-if_hover-box-shadow: var(--rcn-semantic-dropshadow-interaction-overlayed);
+--rcn-card--interactive-if_hover___rcn-title-text-decoration: var(--rcn-semantic-typography-lien-component-default-body-textdecoration-hover);
+--rcn-card__selectionButton-font-size: var(--rcn-semantic-typography-icon-rcn_icon-h4-fontsize);
+--rcn-card--selected-border-color: var(--rcn-semantic-color-interaction-border-default-selected);
+--rcn-card--selected-border-width: var(--rcn-semantic-borderwidth-300);
+--rcn-card--selected___rcn-card__title-color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
+
+}
