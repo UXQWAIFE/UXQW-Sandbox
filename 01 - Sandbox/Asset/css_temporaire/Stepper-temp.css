@@ -166,57 +166,10 @@
 
 
 
-/* ------- Stepper HORIZONTAL 1 ------- */
+/* ------- Stepper HORIZONTAL ------- */
 
 
 .rcn-stepper__list--horizontal{
-  display: flex;
-  flex-direction:row;
-  gap:var(--rcn-semantic-gap-horizontal-500);
-}/*class à ajouter dans l'excel ==> OK*/
-
-.rcn-stepper__list--horizontal::before{
-  content: "";
-  width: 100%;
-  height: var(--rcn-semantic-borderwidth-100);
-  background-color: var(--rcn-semantic-color-static-border-divider_strong);
-  position: absolute;
-  left:0;
-  top: calc(calc(var(--rcn-semantic-height-stepper_stepcircle)/ 2) + var(--rcn-semantic-borderwidth-100));
-  z-index: -1;
-}/*class à ajouter dans l'excel ==> OK*/
-
-.rcn-stepper__list--horizontal .rcn-stepper__step{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:var(--rcn-semantic-gap-vertical-300);
-  flex: 1 1 0px;
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__list--horizontal .rcn-stepper__step {
-  text-align: center;
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__list--horizontal .rcn-stepper__step:first-of-type{
-  align-items: flex-start;
-  text-align: left;
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__list--horizontal .rcn-stepper__step:last-of-type{
-  align-items: flex-end;
-  text-align: right;
-} /*class à ajouter dans l'excel ==> OK*/
-
-  
-.rcn-stepper__list--horizontal .rcn-stepper__stepTitle[disabled]{
-  color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
-  text-decoration: none; 
-} /*class à ajouter dans l'excel ==> OK*/
-
-
-
-/* ------- Stepper HORIZONTAL 2 ------- */
-
-
-.rcn-stepper__list--horizontal2{
   display: flex;
   flex-direction:row;
   gap:var(--rcn-semantic-gap-horizontal-500);
@@ -226,7 +179,7 @@
   --rcn-stepper-numberofsteps:5;
 } /*A mettre dans le excel ? Ou à la main des devs ? >> TODO*/
 
-.rcn-stepper__list--horizontal2::before{
+.rcn-stepper__list--horizontal::before{
   content: "";
   width: calc(100% - calc(calc(100% - calc(calc(var(--rcn-stepper-numberofsteps) - 1) * var(--rcn-semantic-gap-horizontal-500))) / var(--rcn-stepper-numberofsteps)));
   height: var(--rcn-semantic-borderwidth-100);
@@ -237,14 +190,11 @@
   z-index: -1;
 }/*class à ajouter dans l'excel ==> OK*/
 
-.rcn-stepper__list--horizontal2 .rcn-stepper__step{
+.rcn-stepper__list--horizontal .rcn-stepper__step{
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:var(--rcn-semantic-gap-vertical-300);
   flex: 1 1 0px;
-}
-.rcn-stepper__list--horizontal2 .rcn-stepper__step {
   text-align: center;
 }
-
