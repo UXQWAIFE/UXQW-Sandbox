@@ -1,0 +1,5 @@
+.rcn-container--primary {
+  padding-left: var(--rcn-semantic-padding-horizontal-900);
+  padding-right: var(--rcn-semantic-padding-horizontal-900);
+}
+

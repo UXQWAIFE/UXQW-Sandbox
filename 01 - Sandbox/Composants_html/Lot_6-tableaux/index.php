@@ -22,7 +22,7 @@
         display: inline-flex;
         align-self: center;
     }
-	section:last-child ul {
+	section:not(.table_holder):last-child ul {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		list-style: none;
@@ -437,19 +437,29 @@ print_r($_SESSION);
 				filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
 			});
 		});
-		const accordBtn = document.querySelectorAll('.rcn-accordions__heading');
 
-		accordBtn.forEach(btnDepli => {
-		const accordNextElement = btnDepli.nextElementSibling; // Utilisez btnDepli au lieu de accordBtn ici
-		
-			btnDepli.addEventListener('click', () => {
-				console.log('allo');
-				
-				// Utilisez btnDepli et accordNextElement pour mettre en place les attributs d'accessibilité
-				btnDepli.setAttribute('aria-expanded', btnDepli.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+		// Gestion de l'accordéon avec attributs d'accessibilité
+
+		// Sélectionner tous les boutons de dépliement d'accordéon
+		const accordBtns = document.querySelectorAll('.rcn-accordions__heading');
+
+		// Pour chaque bouton de dépliement d'accordéon sélectionné
+		accordBtns.forEach(accordBtn => {
+		// Récupérer l'élément suivant du bouton (le contenu de l'accordéon)
+		const accordNextElement = accordBtn.nextElementSibling;
+
+		// Ajouter un écouteur d'événement au clic du bouton
+			accordBtn.addEventListener('click', () => {
+				console.log('allo'); // Afficher un message dans la console (pour le débogage)
+
+				// Inverser la valeur de l'attribut aria-expanded (déplié ou non)
+				accordBtn.setAttribute('aria-expanded', accordBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+
+				// Inverser la valeur de l'attribut aria-hidden (visible ou non pour les technologies d'assistance)
 				accordNextElement.setAttribute('aria-hidden', accordNextElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
-				accordNextElement.hidden = !accordNextElement.hidden;
 
+				// Inverser la visibilité de l'élément en utilisant l'attribut hidden
+				accordNextElement.hidden = !accordNextElement.hidden;
 			});
 		});
 
@@ -459,19 +469,56 @@ print_r($_SESSION);
 			filterElement.setAttribute('aria-hidden', 'true');
 		});
 
+		// Gestion de l'ouverture du menu contextuel au clic sur un bouton
+
+		// Sélectionner tous les boutons ayant la classe .rcn-iconButton
+		// dans les cellules de tableau ayant la classe .rcn-tableCell__action--withMenu
 		const menuContextRows = document.querySelectorAll('.rcn-tableCell__action--withMenu .rcn-iconButton');
 
+		// Pour chaque bouton sélectionné, ajouter un écouteur d'événement au clic
 		menuContextRows.forEach(button => {
 			button.addEventListener('click', () => {
-				const targetId = button.getAttribute('aria-controls');
-				const targetElement = document.getElementById(targetId);
+				// Obtenir l'ID de l'élément cible du menu contextuel
+				var targetId = button.getAttribute('aria-controls');
 				
-				if (targetElement && targetElement.classList.contains('rcn-contextMenu--closed')) {
-				targetElement.classList.remove('rcn-contextMenu--closed');
+				// Rechercher l'élément cible par son ID
+				var targetElement = document.getElementById(targetId);
+				
+				// Vérifier si l'élément cible existe et possède la classe .rcn-contextMenu--closed
+				if (targetElement && targetElement.classList.contains('rcn-contextMenu')) {
+				// Supprimer la classe .rcn-contextMenu--closed pour ouvrir le menu contextuel
+
+				targetElement.setAttribute('aria-hidden', 'false');
 				}
 			});
 		});
 
+
+		// Gestion de la position du menu contextuel en fonction du bouton cliqué
+
+		// Sélectionner tous les boutons ayant la classe .rcn-iconButton
+		// dans les cellules de tableau ayant la classe .rcn-tableCell__action--withMenu
+		const buttonContexts = document.querySelectorAll('.rcn-tableCell__action--withMenu .rcn-iconButton');
+
+		// Pour chaque bouton sélectionné, ajouter un écouteur d'événement au clic
+		buttonContexts.forEach(buttonContext => {
+			buttonContext.addEventListener('click', () => {
+				// Obtenir les coordonnées de l'élément bouton par rapport à la fenêtre
+				const buttonContextMenuPos = buttonContext.getBoundingClientRect();
+
+				// Appliquer les coordonnées comme variables CSS personnalisées
+				document.documentElement.style.setProperty('--rcn-contextMenu-Position-offsetTop', buttonContextMenuPos.top + 'px');
+				document.documentElement.style.setProperty('--rcn-contextMenu-Position-offsetLeft', buttonContextMenuPos.left + 'px');
+			});
+		});
+
+		const CloseContexts = document.querySelectorAll('.rcn-contextMenu__close');
+		CloseContexts.forEach(CloseContext => {
+			CloseContext.addEventListener('click', () => {
+				CloseContext.parentElement.setAttribute('aria-hidden', 'true');
+			});
+		})
+		
 
 	</script>
 </body>

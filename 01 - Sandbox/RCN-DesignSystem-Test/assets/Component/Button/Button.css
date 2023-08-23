@@ -6,13 +6,10 @@
   align-items: center;
   justify-content: center;
   gap: var(--rcn-semantic-gap-horizontal-200);
-  line-height: var(--rcn-semantic-typography-lineheight-body-component);
-  flex-direction: row;
-  height: fit-content;
 }
 
 .rcn-button--primary {
-  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary) ;
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
   background-color: var(--rcn-semantic-color-interaction-background-default-primary);
   border-color: var(--rcn-semantic-color-interaction-border-default-primary);
 }
@@ -48,12 +45,6 @@
 
 .rcn-iconButton {
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-  line-height: var(--rcn-semantic-typography-lineheight-body-component);
-  background-color: var(--rcn-semantic-color-interaction-background-transparent);
-}
-
-.rcn-iconButton:hover {
-  color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard);
 }
 
 .rcn-iconButton[disabled] {
@@ -73,7 +64,6 @@
 .rcn-toggle__text {
   padding-right: var(--rcn-semantic-padding-horizontal-150);
   padding-left: var(--rcn-semantic-padding-horizontal-150);
-  order: 1;
 }
 
 .rcn-toggle__indicator {
@@ -91,12 +81,11 @@
 
 .rcn-toggle[selected] {
   background-color: var(--rcn-semantic-color-interaction-background-default-primary);
-  border-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
 }
 
 .rcn-toggle[selected]:hover {
   background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
-  border-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
+  border-color: var(--rcn-semantic-color-interaction-border-hover-primary);
 }
 
 .rcn-toggle[selected] .rcn-toggle__indicator {
@@ -105,29 +94,24 @@
 
 .rcn-toggle[disabled] {
   background-color: var(--rcn-semantic-color-interaction-background-disabled-button_toggle_off);
-  border-color: var(--rcn-semantic-color-interaction-border-disabled);
+  border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
   color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
 }
 
 .rcn-toggle[disabled].rcn-toggle__indicator {
   background-color: var(--rcn-semantic-color-interaction-background-disabled-standard);
-  border-color: var(--rcn-semantic-color-interaction-border-disabled);
+  border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
 }
 
 .rcn-toggle--on[disabled] {
   background-color: var(--rcn-semantic-color-interaction-background-disabled-button_toggle_on);
-  border-color: var(--rcn-semantic-color-interaction-border-disabled);
+  border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
   color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
-}
-
-.rcn-toggle--on[disabled]:hover {
-  border-color: var(--rcn-semantic-color-interaction-border-disabled);
-  background-color: var(--rcn-semantic-color-interaction-background-disabled-button_toggle_on);
 }
 
 .rcn-toggle--on[disabled].rcn-toggle__indicator {
   background-color: var(--rcn-semantic-color-interaction-background-default-standard);
-  border-color: var(--rcn-semantic-color-interaction-border-disabled);
+  border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
 }
 
 .rcn-buttonGroup {
@@ -156,14 +140,13 @@
 .rcn-buttonGroup__button[selected] {
   background-color: var(--rcn-semantic-color-interaction-background-default-buttongroup_button_selected);
   border-left-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
-  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+  color: var(--rcn-semantic-color-interaction-border-default-onprimary);
 }
 
 .rcn-buttonGroup__button[selected]:hover {
   background-color: var(--rcn-semantic-color-interaction-background-hover-buttongroup_button_selected);
   border-top-color: var(--rcn-semantic-color-interaction-background-hover-buttongroup_button_selected);
   border-bottom-color: var(--rcn-semantic-color-interaction-background-hover-buttongroup_button_selected);
-  color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onprimary);
 }
 
 .rcn-buttonGroup__button:first-of-type[selected] {

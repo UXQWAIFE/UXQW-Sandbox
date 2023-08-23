@@ -1,0 +1,13 @@
+:root{
+--rcn-captcha-gap: var(--rcn-semantic-gap-vertical-500);
+--rcn-captcha-display: flex;
+--rcn-captcha-flex-direction: column;
+--rcn-captcha__image-background-color: var(--rcn-semantic-color-static-background-standard);
+--rcn-captcha__image-min-width: 240px;
+--rcn-captcha__image-min-height: 80px;
+--rcn-captcha__inputZone-align-items: center;
+--rcn-captcha__inputZone-display: flex;
+--rcn-captcha__inputZone-flex-direction: row;
+--rcn-captcha__inputZone-gap: 0;
+
+}

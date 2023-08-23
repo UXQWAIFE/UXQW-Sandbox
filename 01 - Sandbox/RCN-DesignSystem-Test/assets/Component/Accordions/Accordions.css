@@ -21,26 +21,25 @@
 
 .rcn-accordions__heading:hover {
   background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
-  color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard);
 }
 
 .rcn-accordions__heading[aria-expanded='true'] {
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
-  font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
+  font-weight: var(--rcn-semantic-typography-text-component-default-selected-fontweight);
   border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
 }
 
 .rcn-accordions__heading[aria-expanded='true']:hover {
   color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
-  border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
+  border-top: var(--rcn-semantic-color-interaction-border-hover-selected);
 }
 
 .rcn-accordions__headingIcon::before {
-  content: var(--rcn-semantic-typography-content-icon-expand_vertical);
+  content: "\e92f";
 }
 
 .rcn-accordions__heading[aria-expanded='true'] .rcn-accordionSystem__headingIcon::before {
-  content: var(--rcn-semantic-typography-content-icon-collapse_vertical);
+  content: "\e92c";
 }
 
 .rcn-accordions__content {

@@ -17,28 +17,27 @@
       background-color: $rcn-semantic-color-interaction-background-default-standard;
     &:hover {
         background-color: $rcn-semantic-color-interaction-background-hover-standard;
-        color: $rcn-semantic-color-interaction-text_and_icon-hover-onstandard;
     }
   }
   &__heading[aria-expanded='true'] {
       color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
-      font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
+      font-weight: $rcn-semantic-typography-text-component-default-selected-fontweight;
       border-top: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
     .rcn-accordionSystem {
       &__headingIcon {
         &::before {
-            content: $rcn-semantic-typography-content-icon-collapse_vertical;
+            content: "\e92c";
         }
       }
     }
   }
   &__heading[aria-expanded='true']:hover {
       color: $rcn-semantic-color-interaction-text_and_icon-hover-selected;
-      border-top: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-hover-selected;
+      border-top: $rcn-semantic-color-interaction-border-hover-selected;
   }
   &__headingIcon {
     &::before {
-        content: $rcn-semantic-typography-content-icon-expand_vertical;
+        content: "\e92f";
     }
   }
   &__content {
