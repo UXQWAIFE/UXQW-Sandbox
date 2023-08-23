@@ -24,11 +24,7 @@
 }
 
 .rcn-breadcrumb__chevron::before {
-  content: var(--rcn-semantic-typography-icon-rcn_icon-breadcrum_divider-content);
-}
-
-.rcn-breadcrumb__chevron {
-  transform: rotate(45deg);
+  content: var(--rcn-semantic-typography-content-icon-breadcrum_divider);
 }
 
 .rcn-breadcrumb__button {

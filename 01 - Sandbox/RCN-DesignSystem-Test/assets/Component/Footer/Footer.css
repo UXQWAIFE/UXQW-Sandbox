@@ -38,7 +38,8 @@
 }
 
 .rcn-footer__socialMediasIcons {
-  color: var(--rcn-semantic-color-interaction-text_and_icon-dsfr_primary);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
+  text-decoration: none;
 }
 
 .rcn-footer__mainBanners {
@@ -52,16 +53,16 @@
 
 .rcn-footer__productBanner {
   order: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   padding-top: var(--rcn-semantic-padding-vertical-400);
   padding-bottom: var(--rcn-semantic-padding-vertical-400);
   gap: var(--rcn-semantic-gap-horizontal-600);
   color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
 }
 
-.rcn-footer__productBanner-leftZone {
+.rcn-footer__logoZone {
   display: flex;
+  grid-area: logo;
   flex-direction: column;
   align-items: flex-start;
   gap: var(--rcn-semantic-gap-vertical-200);
@@ -71,8 +72,9 @@
   margin-bottom: var(--rcn-semantic-gap-vertical-200);
 }
 
-.rcn-footer__productBanner-rightZone {
+.rcn-footer__descriptionZone {
   display: flex;
+  grid-area: description;
   flex-direction: column;
   gap: var(--rcn-semantic-gap-vertical-400);
   grid-column-start: 2;
@@ -83,7 +85,6 @@
 }
 
 .rcn-footer__institutionalEcosystemLinks {
-  text-decoration: none;
   font-weight: bold;
   order: 2;
   display: flex;
@@ -93,10 +94,16 @@
   flex-wrap: wrap;
 }
 
-.rcn-footer__institutionalEcosystemLinks:hover {
+.rcn-footer__institutionalEcosystemLink {
+  text-decoration: none;
+  font-weight: bold;
   color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+}
+
+.rcn-footer__institutionalEcosystemLink:hover {
   text-decoration: underline;
   font-weight: bold;
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
 }
 
 .rcn-footer__mandatoryLegalLinks {
@@ -156,5 +163,9 @@
   height: auto;
   max-height: 90px;
   max-width: 160px;
+}
+
+.rcn-gridTemplateFooter {
+  grid-template-areas: "logo logo logo logo logo logo description description description description description description";
 }
 

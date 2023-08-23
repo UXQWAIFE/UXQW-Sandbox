@@ -7,7 +7,7 @@
 }
 
 .rcn-tooltip__button::before {
-  content: var(--rcn-semantic-typography-icon-rcn_icon-information-content);
+  content: var(--rcn-semantic-typography-content-icon-information);
 }
 
 .rcn-tooltip__triangle {

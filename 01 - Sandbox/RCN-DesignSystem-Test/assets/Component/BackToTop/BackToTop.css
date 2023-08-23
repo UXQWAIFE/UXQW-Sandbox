@@ -2,23 +2,19 @@
   padding: var(--rcn-semantic-padding-horizontal-400) var(--rcn-semantic-padding-vertical-400);
   border-radius: var(--rcn-semantic-borderradius-300);
   background-color: var(--rcn-semantic-color-interaction-background-default-primary);
-  border-width: var(--rcn-semantic-borderwidth-100);
-  border-color: var(--rcn-semantic-color-interaction-border-back_to_top);
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-back_to_top);
   text-align: center;
   position: fixed;
-  bottom: 1,5vw;
-  right: 1,5vw;
   width: 3rem;
   height: 3rem;
 }
 
 .rcn-backToTop__icon {
-  font-size: var(--rcn-semantic-typography-icon-rcn_icon-default-fontsize);
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
 
 .rcn-backToTop__icon::before {
-  content: var(--rcn-semantic-typography-icon-rcn_icon-up-content);
+  content: var(--rcn-semantic-typography-content-icon-up);
 }
 
 .rcn-backToTop:hover {

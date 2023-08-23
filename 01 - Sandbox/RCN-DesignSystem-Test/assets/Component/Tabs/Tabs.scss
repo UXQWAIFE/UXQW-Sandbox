@@ -26,6 +26,7 @@
       margin-bottom: -1px;
     &:hover {
         background-color: $rcn-semantic-color-interaction-background-hover-standard;
+        color: $rcn-semantic-color-interaction-text_and_icon-hover-onstandard;
     }
   }
   &__label[aria-selected='true'] {
@@ -33,17 +34,18 @@
       padding-top: $rcn-semantic-padding-vertical-150;
       border-top: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
       border-bottom-color: $rcn-semantic-color-interaction-border-default-onprimary;
-      font-weight: $rcn-semantic-typography-text-component-default-selected-fontweight;
+      font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
   }
   &__label[aria-selected='true']:hover {
       border-top-color: $rcn-semantic-color-interaction-border-hover-selected;
-      border-bottom-color: $rcn-semantic-color-interaction-text_and_icon-hover-selected;
+      border-bottom-color: $rcn-semantic-color-interaction-border-default-onprimary;
       color: $rcn-semantic-color-interaction-text_and_icon-hover-selected;
   }
   &__label[disabled] {
       color: $rcn-semantic-color-interaction-text_and_icon-disabled;
       background-color: $rcn-semantic-color-interaction-background-disabled-standard;
-      border-color: $rcn-semantic-color-interaction-border-disabled-standard;
+      border-color: $rcn-semantic-color-interaction-border-disabled;
+      border-bottom-color: $rcn-semantic-color-interaction-border-default-standard;
   }
   &__contentZone {
       padding: $rcn-semantic-padding-vertical-600 $rcn-semantic-padding-horizontal-600;

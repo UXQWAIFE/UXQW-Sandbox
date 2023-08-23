@@ -4,8 +4,10 @@
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
   gap: var(--rcn-semantic-gap-horizontal-200);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   background-color: var(--rcn-semantic-color-static-background-chips);
+  justify-content: space-between;
+  width: fit-content;
 }
 
 .rcn-chips--interactive {
@@ -18,7 +20,7 @@
 }
 
 .rcn-chips__icon::before {
-  content: var(--rcn-semantic-typography-icon-rcn_icon-close_chips-content);
+  content: var(--rcn-semantic-typography-content-icon-close_chips);
 }
 
 .rcn-chips__icon {

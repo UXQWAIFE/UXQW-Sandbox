@@ -29,7 +29,9 @@
 --rcn-header__toolsButtonsZone-justify-content: flex-start;
 --rcn-header__toolsButtonsZone-gap: var(--rcn-semantic-gap-horizontal-400);
 --rcn-header__toolsButtonsZone-font-size: var(--rcn-semantic-typography-fontsize-h3);
---rcn-header__iconButton-color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+--rcn-header__toolsButtonsZone___rcn-iconButton-color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 --rcn-header__searchbar-order: 2;
+--rcn-connexionModule__icon-in_before-content: var(--rcn-semantic-typography-content-icon-user);
+--rcn-connexionModule__icon-order: -1;
 
 }

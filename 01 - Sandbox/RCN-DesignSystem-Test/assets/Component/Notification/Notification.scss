@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     gap: $rcn-semantic-gap-horizontal-300;
-    width: 100%;
+    width: auto;
     border-radius: $rcn-semantic-borderradius-200;
   &--error {
       background-color: $rcn-semantic-color-feedback-background-error;
@@ -11,7 +11,7 @@
     .rcn-notification {
       &__typeIcon {
         &::before {
-            content: $rcn-semantic-typography-icon-rcn_icon-alert-content;
+            content: $rcn-semantic-typography-content-icon-alert;
         }
       }
     }
@@ -22,7 +22,7 @@
     .rcn-notification {
       &__typeIcon {
         &::before {
-            content: $rcn-semantic-typography-icon-rcn_icon-information-content;
+            content: $rcn-semantic-typography-content-icon-information;
         }
       }
     }
@@ -33,7 +33,7 @@
     .rcn-notification {
       &__typeIcon {
         &::before {
-            content: $rcn-semantic-typography-icon-rcn_icon-success-content;
+            content: $rcn-semantic-typography-content-icon-success;
         }
       }
     }
@@ -44,13 +44,13 @@
     .rcn-notification {
       &__typeIcon {
         &::before {
-            content: $rcn-semantic-typography-icon-rcn_icon-warning-content;
+            content: $rcn-semantic-typography-content-icon-warning;
         }
       }
     }
   }
   &__typeIcon {
-      font-size: $rcn-semantic-typography-icon-rcn_icon-h4-fontsize;
+      font-size: $rcn-semantic-typography-fontsize-h4;
   }
   &__textZone {
       display: flex;
@@ -59,12 +59,12 @@
       flex-grow: 1;
   }
   &__title {
-      font-weight: $rcn-semantic-typography-text-component-default-label-fontweight;
+      font-weight: $rcn-semantic-typography-fontweight-label;
   }
   &__closeIcon {
       align-self: flex-start;
     &::before {
-        content: $rcn-semantic-typography-icon-rcn_icon-close -content;
+        content: $rcn-semantic-typography-content-icon-close;
     }
   }
   &--banner {
@@ -73,6 +73,7 @@
       &__textZone {
           flex-direction: row;
           gap: $rcn-semantic-gap-horizontal-300;
+          flex-wrap: wrap;
       }
     }
   }

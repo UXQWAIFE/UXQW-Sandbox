@@ -1,275 +1,247 @@
 .rcn-icon {
-  font-family: var(--rcn-semantic-typography-icon-rcn_icon-body-fontfamily);
-  font-weight: var(--rcn-semantic-typography-icon-rcn_icon-body-fontweight);
-  font-size: var(--rcn-semantic-typography-icon-rcn_icon-default-fontsize);
-  line-height: var(--rcn-semantic-typography-icon-rcn_icon-body-lineheight);
+  font-family: var(--rcn-semantic-typography-fontfamily-icon);
+  font-weight: var(--rcn-semantic-typography-fontweight-body-component);
+  font-size: var(--rcn-semantic-typography-fontsize-body);
+  line-height: var(--rcn-semantic-typography-lineheight-body-component);
 }
 
 .rcn-icon--asH1 {
-  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h1-fontsize);
+  font-size: var(--rcn-semantic-typography-fontsize-h1);
 }
 
 .rcn-icon--asH1bis {
-  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h1bis-fontsize);
+  font-size: var(--rcn-semantic-typography-fontsize-h_alt-xs);
 }
 
 .rcn-icon--asH2 {
-  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h2-fontsize);
+  font-size: var(--rcn-semantic-typography-fontsize-h2);
 }
 
 .rcn-icon--asH3 {
-  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h3-fontsize);
+  font-size: var(--rcn-semantic-typography-fontsize-h3);
 }
 
 .rcn-icon--asH4 {
-  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h4-fontsize);
+  font-size: var(--rcn-semantic-typography-fontsize-h4);
 }
 
 .rcn-icon--asH5 {
-  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h5-fontsize);
+  font-size: var(--rcn-semantic-typography-fontsize-h5);
 }
 
 .rcn-icon--asH6 {
-  font-size: var(--rcn-semantic-typography-icon-rcn_icon-h6-fontsize);
+  font-size: var(--rcn-semantic-typography-fontsize-h6);
 }
 
 .rcn-icon--mdi-dailymotion::before {
-  content: "\e900";
+  content: var(--rcn-semantic-typography-content-icon-dailymotion);
 }
 
 .rcn-icon--mdi-starOutline::before {
-  content: "\e901";
-}
-
-.rcn-icon--mdi-check::before {
-  content: "\e902";
-}
-
-.rcn-icon--mdi-toggleSwitchOutline::before {
-  content: "\e903";
-}
-
-.rcn-icon--mdi-toggleSwitchOffOutline::before {
-  content: "\e904";
+  content: var(--rcn-semantic-typography-content-icon-favorite);
 }
 
 .rcn-icon--mdi-volumeOff::before {
-  content: "\e905";
+  content: var(--rcn-semantic-typography-content-icon-volume_off);
 }
 
 .rcn-icon--mdi-volumeHigh::before {
-  content: "\e906";
+  content: var(--rcn-semantic-typography-content-icon-volume_on);
 }
 
 .rcn-icon--mdi-bellBadgeOutline::before {
-  content: "\e907";
+  content: var(--rcn-semantic-typography-content-icon-notifaction_on);
 }
 
 .rcn-icon--mdi-bellOutline::before {
-  content: "\e908";
+  content: var(--rcn-semantic-typography-content-icon-notification);
 }
 
 .rcn-icon--mdi-instagram::before {
-  content: "\e909";
+  content: var(--rcn-semantic-typography-content-icon-instagram);
 }
 
 .rcn-icon--mdi-youtube::before {
-  content: "\e90a";
+  content: var(--rcn-semantic-typography-content-icon-youtube);
 }
 
 .rcn-icon--mdi-linkedin::before {
-  content: "\e90b";
+  content: var(--rcn-semantic-typography-content-icon-twitter);
 }
 
 .rcn-icon--mdi-facebook::before {
-  content: "\e90c";
+  content: var(--rcn-semantic-typography-content-icon-facebook);
 }
 
 .rcn-icon--mdi-twitter::before {
-  content: "\e90d";
+  content: var(--rcn-semantic-typography-content-icon-twitter);
 }
 
 .rcn-icon--mdi-trashCanOutline::before {
-  content: "\e90e";
+  content: var(--rcn-semantic-typography-content-icon-delete);
 }
 
 .rcn-icon--mdi-calendarBlankOutline::before {
-  content: "\e90f";
+  content: var(--rcn-semantic-typography-content-icon-calendar);
 }
 
 .rcn-icon--mdi-openInNew::before {
-  content: "\e910";
+  content: var(--rcn-semantic-typography-content-icon-external_link);
 }
 
 .rcn-icon--mdi-cogOutline::before {
-  content: "\e911";
+  content: var(--rcn-semantic-typography-content-icon-settings);
 }
 
 .rcn-icon--mdi-messageTextOutline::before {
-  content: "\e912";
+  content: var(--rcn-semantic-typography-content-icon-message);
 }
 
 .rcn-icon--mdi-emailOutline::before {
-  content: "\e913";
-}
-
-.rcn-icon--mdi-cloudArrowUpOutline::before {
-  content: "\e914";
+  content: var(--rcn-semantic-typography-content-icon-email);
 }
 
 .rcn-icon--mdi-closeCircleOutline::before {
-  content: "\e915";
+  content: var(--rcn-semantic-typography-content-icon-close_chips);
 }
 
 .rcn-icon--mdi-accountCircleOutline::before {
-  content: "\e916";
-}
-
-.rcn-icon--mdi-trayArrowUp::before {
-  content: "\e917";
+  content: var(--rcn-semantic-typography-content-icon-user);
 }
 
 .rcn-icon--mdi-trayArrowDown::before {
-  content: "\e918";
-}
-
-.rcn-icon--mdi-arrowCollapseUp::before {
-  content: "\e919";
-}
-
-.rcn-icon--mdi-arrowCollapseDown::before {
-  content: "\e91a";
+  content: var(--rcn-semantic-typography-content-icon-download);
 }
 
 .rcn-icon--mdi-pencilOutline::before {
-  content: "\e91b";
+  content: var(--rcn-semantic-typography-content-icon-edit);
 }
 
 .rcn-icon--mdi-replay::before {
-  content: "\e91c";
+  content: var(--rcn-semantic-typography-content-icon-reset);
 }
 
 .rcn-icon--mdi-magnify::before {
-  content: "\e91d";
+  content: var(--rcn-semantic-typography-content-icon-search);
 }
 
 .rcn-icon--mdi-close::before {
-  content: "\e91e";
+  content: var(--rcn-semantic-typography-content-icon-close);
 }
 
 .rcn-icon--mdi-alertOutline::before {
-  content: "\e91f";
+  content: var(--rcn-semantic-typography-content-icon-warning);
 }
 
 .rcn-icon--mdi-checkCircleOutline::before {
-  content: "\e920";
+  content: var(--rcn-semantic-typography-content-icon-success);
 }
 
 .rcn-icon--mdi-alertCircleOutline::before {
-  content: "\e921";
+  content: var(--rcn-semantic-typography-content-icon-alert);
 }
 
 .rcn-icon--mdi-information-outline::before {
-  content: "\e922";
+  content: var(--rcn-semantic-typography-content-icon-information);
 }
 
 .rcn-icon--mdi-menu::before {
-  content: "\e923";
+  content: var(--rcn-semantic-typography-content-icon-menu);
 }
 
 .rcn-icon--mdi-dots-vertical::before {
-  content: "\e924";
-}
-
-.rcn-icon--mdi-dots-horizontal::before {
-  content: "\e925";
+  content: var(--rcn-semantic-typography-content-icon-actions_menu);
 }
 
 .rcn-icon--mdi-minus::before {
-  content: "\e926";
+  content: var(--rcn-semantic-typography-content-icon-minus);
 }
 
 .rcn-icon--mdi-plus::before {
-  content: "\e927";
+  content: var(--rcn-semantic-typography-content-icon-plus);
 }
 
 .rcn-icon--mdi-arrow-up::before {
-  content: "\e928";
+  content: var(--rcn-semantic-typography-content-icon-up);
 }
 
 .rcn-icon--mdi-arrow-down::before {
-  content: "\e929";
+  content: var(--rcn-semantic-typography-content-icon-down);
 }
 
 .rcn-icon--mdi-eye-off-outline::before {
-  content: "\e92a";
+  content: var(--rcn-semantic-typography-content-icon-hide);
 }
 
 .rcn-icon--mdi-eye-outline::before {
-  content: "\e92b";
+  content: var(--rcn-semantic-typography-content-icon-show);
 }
 
 .rcn-icon--mdi-chevron-up::before {
-  content: "\e92c";
+  content: var(--rcn-semantic-typography-content-icon-collapse_vertical);
 }
 
 .rcn-icon--mdi-chevron-right::before {
-  content: "\e92d";
+  content: var(--rcn-semantic-typography-content-icon-expand_horizontal);
 }
 
 .rcn-icon--mdi-chevron-left::before {
-  content: "\e92e";
+  content: var(--rcn-semantic-typography-content-icon-collapse-horizontal);
 }
 
 .rcn-icon--mdi-chevron-down::before {
-  content: "\e92f";
+  content: var(--rcn-semantic-typography-content-icon-expand_vertical);
 }
 
 .rcn-icon--mdi-filter-remove::before {
-  content: "\e930";
+  content: var(--rcn-semantic-typography-content-icon-filter_remove);
 }
 
 .rcn-icon--mdi-filter::before {
-  content: "\e931";
-}
-
-.rcn-icon--mdi-filter-outline::before {
-  content: "\e932";
+  content: var(--rcn-semantic-typography-content-icon-filter);
 }
 
 .rcn-icon--mdi-microphone::before {
-  content: "\e933";
-}
-
-.rcn-icon--mdi-microphone-outline::before {
-  content: "\e934";
+  content: var(--rcn-semantic-typography-content-icon-microphone);
 }
 
 .rcn-icon--mdi-sort-descending::before {
-  content: "\e935";
+  content: var(--rcn-semantic-typography-content-icon-sort_descending);
 }
 
 .rcn-icon--mdi-sort-ascending::before {
-  content: "\e936";
+  content: var(--rcn-semantic-typography-content-icon-sort_ascending);
 }
 
 .rcn-icon--mdi-sort::before {
-  content: "\e937";
+  content: var(--rcn-semantic-typography-content-icon-sort);
 }
 
 .rcn-icon--mdi-checkbox-marked::before {
-  content: "\e935";
+  content: var(--rcn-semantic-typography-content-icon-checkbox_checked);
 }
 
 .rcn-icon--mdi-checkbox-blank-outline::before {
-  content: "\e936";
+  content: var(--rcn-semantic-typography-content-icon-checkbox_blank);
 }
 
 .rcn-icon--mdi-radiobox-marked::before {
-  content: "\e937";
+  content: var(--rcn-semantic-typography-content-icon-radiobox_checked);
 }
 
 .rcn-icon--mdi-radiobox-blank::before {
-  content: "\e93b";
+  content: var(--rcn-semantic-typography-content-icon-radiobox_blank);
+}
+
+.rcn-icon--mdi-backburger::before {
+  : var(--rcn-semantic-typography-content-icon-expand_collapse_stepper);
+}
+
+.rcn-icon--mdi-arrow-collapse-vertical::before {
+  : var(--rcn-semantic-typography-content-icon-collapse_all);
+}
+
+.rcn-icon--mdi-arrow-expand-vertical::before {
+  : var(--rcn-semantic-typography-content-icon-expand_all);
 }
 

@@ -34,23 +34,25 @@
   padding-top: var(--rcn-semantic-padding-vertical-150);
   border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
   border-bottom-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
-  font-weight: var(--rcn-semantic-typography-text-component-default-selected-fontweight);
+  font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
 }
 
 .rcn-tabs__label:hover {
   background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard);
 }
 
 .rcn-tabs__label[aria-selected='true']:hover {
   border-top-color: var(--rcn-semantic-color-interaction-border-hover-selected);
-  border-bottom-color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
+  border-bottom-color: var(--rcn-semantic-color-interaction-border-default-onprimary);
   color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
 }
 
 .rcn-tabs__label[disabled] {
   color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
   background-color: var(--rcn-semantic-color-interaction-background-disabled-standard);
-  border-color: var(--rcn-semantic-color-interaction-border-disabled-standard);
+  border-color: var(--rcn-semantic-color-interaction-border-disabled);
+  border-bottom-color: var(--rcn-semantic-color-interaction-border-default-standard);
 }
 
 .rcn-tabs__contentZone {

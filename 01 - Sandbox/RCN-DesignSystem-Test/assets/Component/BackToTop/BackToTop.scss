@@ -2,19 +2,15 @@
     padding: $rcn-semantic-padding-horizontal-400 $rcn-semantic-padding-vertical-400;
     border-radius: $rcn-semantic-borderradius-300;
     background-color: $rcn-semantic-color-interaction-background-default-primary;
-    border-width: $rcn-semantic-borderwidth-100;
-    border-color: $rcn-semantic-color-interaction-border-back_to_top;
+    border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-back_to_top;
     text-align: center;
     position: fixed;
-    bottom: 1,5vw;
-    right: 1,5vw;
     width: 3rem;
     height: 3rem;
   &__icon {
-      font-size: $rcn-semantic-typography-icon-rcn_icon-default-fontsize;
       color: $rcn-semantic-color-interaction-text_and_icon-default-onprimary;
     &::before {
-        content: $rcn-semantic-typography-icon-rcn_icon-up-content;
+        content: $rcn-semantic-typography-content-icon-up;
     }
   }
   &:hover {

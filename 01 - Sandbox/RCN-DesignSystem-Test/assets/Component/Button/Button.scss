@@ -6,8 +6,11 @@
     align-items: center;
     justify-content: center;
     gap: $rcn-semantic-gap-horizontal-200;
+    line-height: $rcn-semantic-typography-lineheight-body-component;
+    flex-direction: row;
+    height: fit-content;
   &--primary {
-      color: $rcn-semantic-color-interaction-text_and_icon-default-onprimary;
+      color: $rcn-semantic-color-interaction-text_and_icon-default-onprimary ;
       background-color: $rcn-semantic-color-interaction-background-default-primary;
       border-color: $rcn-semantic-color-interaction-border-default-primary;
     &:hover {
@@ -39,6 +42,11 @@
 
 .rcn-iconButton {
     color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+    line-height: $rcn-semantic-typography-lineheight-body-component;
+    background-color: $rcn-semantic-color-interaction-background-transparent;
+  &:hover {
+      color: $rcn-semantic-color-interaction-text_and_icon-hover-onstandard;
+  }
 }
 
 .rcn-iconButton[disabled] {
@@ -56,6 +64,7 @@
   &__text {
       padding-right: $rcn-semantic-padding-horizontal-150;
       padding-left: $rcn-semantic-padding-horizontal-150;
+      order: 1;
   }
   &__indicator {
       order: 0;
@@ -70,19 +79,24 @@
   }
   &--on[disabled] {
       background-color: $rcn-semantic-color-interaction-background-disabled-button_toggle_on;
-      border-color: $rcn-semantic-color-interaction-border-disabled-standard;
+      border-color: $rcn-semantic-color-interaction-border-disabled;
       color: $rcn-semantic-color-interaction-text_and_icon-disabled;
     .rcn-toggle {
       &__indicator {
           background-color: $rcn-semantic-color-interaction-background-default-standard;
-          border-color: $rcn-semantic-color-interaction-border-disabled-standard;
+          border-color: $rcn-semantic-color-interaction-border-disabled;
       }
     }
+  }
+  &--on[disabled]:hover {
+      border-color: $rcn-semantic-color-interaction-border-disabled;
+      background-color: $rcn-semantic-color-interaction-background-disabled-button_toggle_on;
   }
 }
 
 .rcn-toggle[selected] {
     background-color: $rcn-semantic-color-interaction-background-default-primary;
+    border-color: $rcn-semantic-color-interaction-border-default-onprimary;
   .rcn-toggle {
     &__indicator {
         order: 2;
@@ -92,17 +106,17 @@
 
 .rcn-toggle[selected]:hover {
     background-color: $rcn-semantic-color-interaction-background-hover-primary;
-    border-color: $rcn-semantic-color-interaction-border-hover-primary;
+    border-color: $rcn-semantic-color-interaction-border-default-onprimary;
 }
 
 .rcn-toggle[disabled] {
     background-color: $rcn-semantic-color-interaction-background-disabled-button_toggle_off;
-    border-color: $rcn-semantic-color-interaction-border-disabled-standard;
+    border-color: $rcn-semantic-color-interaction-border-disabled;
     color: $rcn-semantic-color-interaction-text_and_icon-disabled;
   .rcn-toggle {
     &__indicator {
         background-color: $rcn-semantic-color-interaction-background-disabled-standard;
-        border-color: $rcn-semantic-color-interaction-border-disabled-standard;
+        border-color: $rcn-semantic-color-interaction-border-disabled;
     }
   }
 }
@@ -134,12 +148,13 @@
   &__button[selected] {
       background-color: $rcn-semantic-color-interaction-background-default-buttongroup_button_selected;
       border-left-color: $rcn-semantic-color-interaction-border-default-onprimary;
-      color: $rcn-semantic-color-interaction-border-default-onprimary;
+      color: $rcn-semantic-color-interaction-text_and_icon-default-onprimary;
   }
   &__button[selected]:hover {
       background-color: $rcn-semantic-color-interaction-background-hover-buttongroup_button_selected;
       border-top-color: $rcn-semantic-color-interaction-background-hover-buttongroup_button_selected;
       border-bottom-color: $rcn-semantic-color-interaction-background-hover-buttongroup_button_selected;
+      color: $rcn-semantic-color-interaction-text_and_icon-hover-onprimary;
   }
 }
 

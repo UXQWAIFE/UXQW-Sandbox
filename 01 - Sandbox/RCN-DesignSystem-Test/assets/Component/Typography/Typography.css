@@ -1,18 +1,18 @@
 .rcn-html {
-  font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
-  font-weight: var(--rcn-semantic-typography-text-component-default-body-fontweight);
-  font-size: var(--rcn-semantic-typography-text-component-default-body-fontsize);
-  line-height: var(--rcn-semantic-typography-text-component-default-body-lineheight);
+  font-family: var(--rcn-semantic-typography-fontfamily-text);
+  font-weight: var(--rcn-semantic-typography-fontweight-body-component);
+  font-size: var(--rcn-semantic-typography-fontsize-body);
+  line-height: var(--rcn-semantic-typography-lineheight-body-component);
   color: var(--rcn-semantic-color-static-text_and_icon-onstandard);
 }
 
 .rcn-quote {
-  font-weight: var(--rcn-semantic-typography-text-editorial-default-quote-fontweight);
-  line-height: var(--rcn-semantic-typography-text-editorial-default-quote-lineheight);
+  font-weight: var(--rcn-semantic-typography-fontweight-quote);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
 }
 
 .rcn-p {
-  line-height: var(--rcn-semantic-typography-text-editorial-default-body-lineheight);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
   margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
 }
 
@@ -22,79 +22,79 @@
 }
 
 .rcn-h1 {
-  font-size: var(--rcn-semantic-typography-text-component-default-h1-fontsize);
-  line-height: var(--rcn-semantic-typography-text-component-default-title-lineheight);
-  font-weight: var(--rcn-semantic-typography-text-component-default-h1-fontweight);
+  font-size: var(--rcn-semantic-typography-fontsize-h1);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
 }
 
-.rcn-h1--edito {
-  line-height: var(--rcn-semantic-typography-text-editorial-default-title-lineheight);
+.rcn-h1--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
   margin-bottom: var(--rcn-semantic-margin-vertical-title);
 }
 
 .rcn-h1bis {
-  font-size: var(--rcn-semantic-typography-text-component-default-h1bis-fontsize);
-  line-height: var(--rcn-semantic-typography-text-component-default-title-lineheight);
-  font-weight: var(--rcn-semantic-typography-text-component-default-h1bis-fontweight);
+  font-size: var(--rcn-semantic-typography-fontsize-h_alt-xs);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
 }
 
-.rcn-h1bis--edito {
-  line-height: var(--rcn-semantic-typography-text-editorial-default-title-lineheight);
+.rcn-h1bis--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
   margin-bottom: var(--rcn-semantic-margin-vertical-title);
 }
 
 .rcn-h2 {
-  font-size: var(--rcn-semantic-typography-text-component-default-h2-fontsize);
-  line-height: var(--rcn-semantic-typography-text-component-default-title-lineheight);
-  font-weight: var(--rcn-semantic-typography-text-component-default-h2-fontweight);
+  font-size: var(--rcn-semantic-typography-fontsize-h2);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
 }
 
-.rcn-h2--edito {
-  line-height: var(--rcn-semantic-typography-text-editorial-default-title-lineheight);
+.rcn-h2--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
   margin-bottom: var(--rcn-semantic-margin-vertical-title);
 }
 
 .rcn-h3 {
-  font-size: var(--rcn-semantic-typography-text-component-default-h3-fontsize);
-  line-height: var(--rcn-semantic-typography-text-component-default-title-lineheight);
-  font-weight: var(--rcn-semantic-typography-text-component-default-h3-fontweight);
+  font-size: var(--rcn-semantic-typography-fontsize-h3);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
 }
 
-.rcn-h3--edito {
-  line-height: var(--rcn-semantic-typography-text-editorial-default-title-lineheight);
+.rcn-h3--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
   margin-bottom: var(--rcn-semantic-margin-vertical-title);
 }
 
 .rcn-h4 {
-  font-size: var(--rcn-semantic-typography-text-component-default-h4-fontsize);
-  line-height: var(--rcn-semantic-typography-text-component-default-title-lineheight);
-  font-weight: var(--rcn-semantic-typography-text-component-default-h4-fontweight);
+  font-size: var(--rcn-semantic-typography-fontsize-h4);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
 }
 
-.rcn-h4--edito {
-  line-height: var(--rcn-semantic-typography-text-editorial-default-title-lineheight);
+.rcn-h4--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
   margin-bottom: var(--rcn-semantic-margin-vertical-title);
 }
 
 .rcn-h5 {
-  font-size: var(--rcn-semantic-typography-text-component-default-h5-fontsize);
-  line-height: var(--rcn-semantic-typography-text-component-default-title-lineheight);
-  font-weight: var(--rcn-semantic-typography-text-component-default-h5-fontweight);
+  font-size: var(--rcn-semantic-typography-fontsize-h5);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
 }
 
-.rcn-h5--edito {
-  line-height: var(--rcn-semantic-typography-text-editorial-default-title-lineheight);
+.rcn-h5--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
   margin-bottom: var(--rcn-semantic-margin-vertical-title);
 }
 
 .rcn-h6 {
-  font-size: var(--rcn-semantic-typography-text-component-default-h6-fontsize);
-  line-height: var(--rcn-semantic-typography-text-component-default-title-lineheight);
-  font-weight: var(--rcn-semantic-typography-text-component-default-h6-fontweight);
+  font-size: var(--rcn-semantic-typography-fontsize-h6);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
 }
 
-.rcn-h6--edito {
-  line-height: var(--rcn-semantic-typography-text-editorial-default-title-lineheight);
+.rcn-h6--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
   margin-bottom: var(--rcn-semantic-margin-vertical-title);
 }
 

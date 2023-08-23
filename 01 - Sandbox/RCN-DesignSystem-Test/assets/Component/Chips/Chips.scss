@@ -4,8 +4,10 @@
     color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
     gap: $rcn-semantic-gap-horizontal-200;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background-color: $rcn-semantic-color-static-background-chips;
+    justify-content: space-between;
+    width: fit-content;
   &--interactive {
       background-color: $rcn-semantic-color-interaction-background-default-chips;
     &:hover {
@@ -15,7 +17,7 @@
   }
   &__icon {
     &::before {
-        content: $rcn-semantic-typography-icon-rcn_icon-close_chips-content;
+        content: $rcn-semantic-typography-content-icon-close_chips;
     }
       order: 2;
   }

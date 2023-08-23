@@ -4,6 +4,7 @@
 --rcn-card-display: flex;
 --rcn-card-background-color: var(--rcn-semantic-color-static-background-standard);
 --rcn-card--vertical-flex-direction: column;
+--rcn-card--vertical-max-width: 400px;
 --rcn-card--horizontal-flex-direction: row;
 --rcn-card__imgHolder-position: relative;
 --rcn-card__imgHolder-display: flex;
@@ -14,7 +15,7 @@
 --rcn-card--vertical___rcn-card__image-position: absolute;
 --rcn-card--vertical___rcn-card__image-top: calc(48%);
 --rcn-card--vertical___rcn-card__image-left: calc(50%);
---rcn-card--vertical___rcn-card__image-transform: scale(1) translate (-50%,-50%);
+--rcn-card--vertical___rcn-card__image-transform: scale(1) translate(-50%,-50%);
 --rcn-card--vertical___rcn-card__image-min-height: 25%;
 --rcn-card--vertical___rcn-card__image-width: 100%;
 --rcn-card--horizontal___rcn-card__imgHolder-padding-right: calc(0.33 * 100%);

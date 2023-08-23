@@ -9,27 +9,13 @@
     background-color: $rcn-semantic-color-static-background-standard;
     max-height: 90vh;
     box-shadow: $rcn-semantic-dropshadow-static-detached;
-  &--small {
-      width: 25vw;
-  }
-  &--medium {
-      width: 40vw;
-  }
-  &--large {
-      width: 50vw;
-  }
-  &--extraLarge {
-      width: 75vw;
-  }
-  &__behind {
-      background-color: $rcn-semantic-color-static-background-modal_behind_background;
-  }
+    grid-area: modal;
+    height: fit-content;
   &__header {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      border-bottom-width: $rcn-semantic-borderwidth-100;
-      border-bottom-color: $rcn-semantic-color-static-border-divider_regular;
+      border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
       padding: $rcn-semantic-padding-vertical-600 $rcn-semantic-padding-horizontal-700;
       max-width: 100%;
       gap: $rcn-semantic-gap-vertical-200;
@@ -43,10 +29,12 @@
       align-items: center;
       gap: $rcn-semantic-gap-horizontal-200;
       align-self: flex-end;
+      background: none;
+      border: none;
   }
   &__closeIcon {
     &::before {
-        content: $rcn-semantic-typography-icon-rcn_icon-close-content;
+        content: $rcn-semantic-typography-content-icon-close;
     }
   }
   &__topOverlay {
@@ -56,6 +44,8 @@
       height: 0px;
   }
   &__content {
+      padding: $rcn-semantic-padding-vertical-600 $rcn-semantic-padding-horizontal-700;
+      overflow: auto;
     &--with-topOverlay {
         margin-top: -16px;
       .rcn-modal {
@@ -82,13 +72,11 @@
     }
   }
   &__footer {
-      flex-direction: row;
-      display: flex;
-      justify-content: space-between;
-      padding: $rcn-semantic-padding-vertical-600 $rcn-semantic-padding-horizontal-700;
-      border-top-width: $rcn-semantic-borderwidth-100;
-      border-top-color: $rcn-semantic-color-static-border-divider_regular;
-      max-width: 100%;
+      padding: $rcn-semantic-padding-vertical-400 $rcn-semantic-padding-horizontal-700;
+      border-top: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
+    .rcn-bottomActionsBanner {
+        border: unset;
+    }
   }
   &__footer-primaryActions {
       display: flex;
@@ -102,5 +90,18 @@
       justify-content: flex-start;
       gap: $rcn-semantic-gap-horizontal-200;
   }
+}
+
+.rcn-gridOverlayModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    grid-template-areas: """. . modal modal modal modal modal modal modal modal . .""";
+    overflow: hidden;
+    height: auto;
+    align-items: center;
+    margin: 0;
+    background-color: $rcn-semantic-color-static-background-modal_behind_background;
 }
 

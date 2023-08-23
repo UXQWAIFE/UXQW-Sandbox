@@ -77,11 +77,11 @@
 --rcn-stepper__list--horizontal-flex-direction: row;
 --rcn-stepper__list--horizontal-gap: var(--rcn-semantic-gap-horizontal-500);
 --rcn-stepper__list--horizontal-in_before-content: "";
---rcn-stepper__list--horizontal-in_before-width: 100%;
+--rcn-stepper__list--horizontal-in_before-width: calc(100% - calc(calc(100% - calc(calc(rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / rcn-stepper-numberofsteps));
 --rcn-stepper__list--horizontal-in_before-height: var(--rcn-semantic-borderwidth-100);
+--rcn-stepper__list--horizontal-in_before-left: calc(calc(100% - calc(calc(rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / calc(2 *  rcn-stepper-numberofsteps);
 --rcn-stepper__list--horizontal-in_before-background-color: var(--rcn-semantic-color-static-border-divider_strong);
 --rcn-stepper__list--horizontal-in_before-position: absolute;
---rcn-stepper__list--horizontal-in_before-left: 0;
 --rcn-stepper__list--horizontal-in_before-top: calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 2) + var(--rcn-semantic-borderwidth-100));
 --rcn-stepper__list--horizontal-in_before-z-index: -1;
 --rcn-stepper__list--horizontal___rcn-stepper__step-display: flex;
@@ -90,28 +90,5 @@
 --rcn-stepper__list--horizontal___rcn-stepper__step-gap: var(--rcn-semantic-gap-vertical-300);
 --rcn-stepper__list--horizontal___rcn-stepper__step-flex: 1 1 0px;
 --rcn-stepper__list--horizontal___rcn-stepper__step-text-align: center;
---rcn-stepper__list--horizontal___rcn-stepper__step-on_first-align-items: flex-start;
---rcn-stepper__list--horizontal___rcn-stepper__step-on_first-text-align: left;
---rcn-stepper__list--horizontal___rcn-stepper__step-on_last-align-items: flex-end;
---rcn-stepper__list--horizontal___rcn-stepper__step-on_last-text-align: right;
---rcn-stepper__list--horizontal___rcn-stepper__stepTitle-if_disabled-color: var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
---rcn-stepper__list--horizontal___rcn-stepper__stepTitle-if_disabled-text-decoration: none;
---rcn-stepper__list--horizontal2-display: flex;
---rcn-stepper__list--horizontal2-flex-direction: row;
---rcn-stepper__list--horizontal2-gap: var(--rcn-semantic-gap-horizontal-500);
---rcn-stepper__list--horizontal2-in_before-content: "";
---rcn-stepper__list--horizontal2-in_before-width: calc(100% - calc(calc(100% - calc(calc(var(--rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / var(--rcn-stepper-numberofsteps))));
---rcn-stepper__list--horizontal2-in_before-height: var(--rcn-semantic-borderwidth-100);
---rcn-stepper__list--horizontal2-in_before-left: calc(calc(100% - calc(calc(var(--rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / calc(2 *  var(--rcn-stepper-numberofsteps))));
---rcn-stepper__list--horizontal2-in_before-background-color: var(--rcn-semantic-color-static-border-divider_strong);
---rcn-stepper__list--horizontal2-in_before-position: absolute;
---rcn-stepper__list--horizontal2-in_before-top: calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 2) + var(--rcn-semantic-borderwidth-100));
---rcn-stepper__list--horizontal2-in_before-z-index: -1;
---rcn-stepper__list--horizontal2___rcn-stepper__step-display: flex;
---rcn-stepper__list--horizontal2___rcn-stepper__step-flex-direction: column;
---rcn-stepper__list--horizontal2___rcn-stepper__step-align-items: center;
---rcn-stepper__list--horizontal2___rcn-stepper__step-gap: var(--rcn-semantic-gap-vertical-300);
---rcn-stepper__list--horizontal2___rcn-stepper__step-flex: 1 1 0px;
---rcn-stepper__list--horizontal2___rcn-stepper__step-text-align: center;
 
 }

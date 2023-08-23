@@ -1,327 +1,292 @@
 .rcn-icon {
-    font-family: $rcn-semantic-typography-icon-rcn_icon-body-fontfamily;
-    font-weight: $rcn-semantic-typography-icon-rcn_icon-body-fontweight;
-    font-size: $rcn-semantic-typography-icon-rcn_icon-default-fontsize;
-    line-height: $rcn-semantic-typography-icon-rcn_icon-body-lineheight;
+    font-family: $rcn-semantic-typography-fontfamily-icon;
+    font-weight: $rcn-semantic-typography-fontweight-body-component;
+    font-size: $rcn-semantic-typography-fontsize-body;
+    line-height: $rcn-semantic-typography-lineheight-body-component;
   &--asH1 {
-      font-size: $rcn-semantic-typography-icon-rcn_icon-h1-fontsize;
+      font-size: $rcn-semantic-typography-fontsize-h1;
   }
   &--asH1bis {
-      font-size: $rcn-semantic-typography-icon-rcn_icon-h1bis-fontsize;
+      font-size: $rcn-semantic-typography-fontsize-h_alt-xs;
   }
   &--asH2 {
-      font-size: $rcn-semantic-typography-icon-rcn_icon-h2-fontsize;
+      font-size: $rcn-semantic-typography-fontsize-h2;
   }
   &--asH3 {
-      font-size: $rcn-semantic-typography-icon-rcn_icon-h3-fontsize;
+      font-size: $rcn-semantic-typography-fontsize-h3;
   }
   &--asH4 {
-      font-size: $rcn-semantic-typography-icon-rcn_icon-h4-fontsize;
+      font-size: $rcn-semantic-typography-fontsize-h4;
   }
   &--asH5 {
-      font-size: $rcn-semantic-typography-icon-rcn_icon-h5-fontsize;
+      font-size: $rcn-semantic-typography-fontsize-h5;
   }
   &--asH6 {
-      font-size: $rcn-semantic-typography-icon-rcn_icon-h6-fontsize;
+      font-size: $rcn-semantic-typography-fontsize-h6;
   }
   &--mdi-dailymotion {
     &::before {
-        content: "\e900";
+        content: $rcn-semantic-typography-content-icon-dailymotion;
     }
   }
   &--mdi-starOutline {
     &::before {
-        content: "\e901";
-    }
-  }
-  &--mdi-check {
-    &::before {
-        content: "\e902";
-    }
-  }
-  &--mdi-toggleSwitchOutline {
-    &::before {
-        content: "\e903";
-    }
-  }
-  &--mdi-toggleSwitchOffOutline {
-    &::before {
-        content: "\e904";
+        content: $rcn-semantic-typography-content-icon-favorite;
     }
   }
   &--mdi-volumeOff {
     &::before {
-        content: "\e905";
+        content: $rcn-semantic-typography-content-icon-volume_off;
     }
   }
   &--mdi-volumeHigh {
     &::before {
-        content: "\e906";
+        content: $rcn-semantic-typography-content-icon-volume_on;
     }
   }
   &--mdi-bellBadgeOutline {
     &::before {
-        content: "\e907";
+        content: $rcn-semantic-typography-content-icon-notifaction_on;
     }
   }
   &--mdi-bellOutline {
     &::before {
-        content: "\e908";
+        content: $rcn-semantic-typography-content-icon-notification;
     }
   }
   &--mdi-instagram {
     &::before {
-        content: "\e909";
+        content: $rcn-semantic-typography-content-icon-instagram;
     }
   }
   &--mdi-youtube {
     &::before {
-        content: "\e90a";
+        content: $rcn-semantic-typography-content-icon-youtube;
     }
   }
   &--mdi-linkedin {
     &::before {
-        content: "\e90b";
+        content: $rcn-semantic-typography-content-icon-twitter;
     }
   }
   &--mdi-facebook {
     &::before {
-        content: "\e90c";
+        content: $rcn-semantic-typography-content-icon-facebook;
     }
   }
   &--mdi-twitter {
     &::before {
-        content: "\e90d";
+        content: $rcn-semantic-typography-content-icon-twitter;
     }
   }
   &--mdi-trashCanOutline {
     &::before {
-        content: "\e90e";
+        content: $rcn-semantic-typography-content-icon-delete;
     }
   }
   &--mdi-calendarBlankOutline {
     &::before {
-        content: "\e90f";
+        content: $rcn-semantic-typography-content-icon-calendar;
     }
   }
   &--mdi-openInNew {
     &::before {
-        content: "\e910";
+        content: $rcn-semantic-typography-content-icon-external_link;
     }
   }
   &--mdi-cogOutline {
     &::before {
-        content: "\e911";
+        content: $rcn-semantic-typography-content-icon-settings;
     }
   }
   &--mdi-messageTextOutline {
     &::before {
-        content: "\e912";
+        content: $rcn-semantic-typography-content-icon-message;
     }
   }
   &--mdi-emailOutline {
     &::before {
-        content: "\e913";
-    }
-  }
-  &--mdi-cloudArrowUpOutline {
-    &::before {
-        content: "\e914";
+        content: $rcn-semantic-typography-content-icon-email;
     }
   }
   &--mdi-closeCircleOutline {
     &::before {
-        content: "\e915";
+        content: $rcn-semantic-typography-content-icon-close_chips;
     }
   }
   &--mdi-accountCircleOutline {
     &::before {
-        content: "\e916";
-    }
-  }
-  &--mdi-trayArrowUp {
-    &::before {
-        content: "\e917";
+        content: $rcn-semantic-typography-content-icon-user;
     }
   }
   &--mdi-trayArrowDown {
     &::before {
-        content: "\e918";
-    }
-  }
-  &--mdi-arrowCollapseUp {
-    &::before {
-        content: "\e919";
-    }
-  }
-  &--mdi-arrowCollapseDown {
-    &::before {
-        content: "\e91a";
+        content: $rcn-semantic-typography-content-icon-download;
     }
   }
   &--mdi-pencilOutline {
     &::before {
-        content: "\e91b";
+        content: $rcn-semantic-typography-content-icon-edit;
     }
   }
   &--mdi-replay {
     &::before {
-        content: "\e91c";
+        content: $rcn-semantic-typography-content-icon-reset;
     }
   }
   &--mdi-magnify {
     &::before {
-        content: "\e91d";
+        content: $rcn-semantic-typography-content-icon-search;
     }
   }
   &--mdi-close {
     &::before {
-        content: "\e91e";
+        content: $rcn-semantic-typography-content-icon-close;
     }
   }
   &--mdi-alertOutline {
     &::before {
-        content: "\e91f";
+        content: $rcn-semantic-typography-content-icon-warning;
     }
   }
   &--mdi-checkCircleOutline {
     &::before {
-        content: "\e920";
+        content: $rcn-semantic-typography-content-icon-success;
     }
   }
   &--mdi-alertCircleOutline {
     &::before {
-        content: "\e921";
+        content: $rcn-semantic-typography-content-icon-alert;
     }
   }
   &--mdi-information-outline {
     &::before {
-        content: "\e922";
+        content: $rcn-semantic-typography-content-icon-information;
     }
   }
   &--mdi-menu {
     &::before {
-        content: "\e923";
+        content: $rcn-semantic-typography-content-icon-menu;
     }
   }
   &--mdi-dots-vertical {
     &::before {
-        content: "\e924";
-    }
-  }
-  &--mdi-dots-horizontal {
-    &::before {
-        content: "\e925";
+        content: $rcn-semantic-typography-content-icon-actions_menu;
     }
   }
   &--mdi-minus {
     &::before {
-        content: "\e926";
+        content: $rcn-semantic-typography-content-icon-minus;
     }
   }
   &--mdi-plus {
     &::before {
-        content: "\e927";
+        content: $rcn-semantic-typography-content-icon-plus;
     }
   }
   &--mdi-arrow-up {
     &::before {
-        content: "\e928";
+        content: $rcn-semantic-typography-content-icon-up;
     }
   }
   &--mdi-arrow-down {
     &::before {
-        content: "\e929";
+        content: $rcn-semantic-typography-content-icon-down;
     }
   }
   &--mdi-eye-off-outline {
     &::before {
-        content: "\e92a";
+        content: $rcn-semantic-typography-content-icon-hide;
     }
   }
   &--mdi-eye-outline {
     &::before {
-        content: "\e92b";
+        content: $rcn-semantic-typography-content-icon-show;
     }
   }
   &--mdi-chevron-up {
     &::before {
-        content: "\e92c";
+        content: $rcn-semantic-typography-content-icon-collapse_vertical;
     }
   }
   &--mdi-chevron-right {
     &::before {
-        content: "\e92d";
+        content: $rcn-semantic-typography-content-icon-expand_horizontal;
     }
   }
   &--mdi-chevron-left {
     &::before {
-        content: "\e92e";
+        content: $rcn-semantic-typography-content-icon-collapse-horizontal;
     }
   }
   &--mdi-chevron-down {
     &::before {
-        content: "\e92f";
+        content: $rcn-semantic-typography-content-icon-expand_vertical;
     }
   }
   &--mdi-filter-remove {
     &::before {
-        content: "\e930";
+        content: $rcn-semantic-typography-content-icon-filter_remove;
     }
   }
   &--mdi-filter {
     &::before {
-        content: "\e931";
-    }
-  }
-  &--mdi-filter-outline {
-    &::before {
-        content: "\e932";
+        content: $rcn-semantic-typography-content-icon-filter;
     }
   }
   &--mdi-microphone {
     &::before {
-        content: "\e933";
-    }
-  }
-  &--mdi-microphone-outline {
-    &::before {
-        content: "\e934";
+        content: $rcn-semantic-typography-content-icon-microphone;
     }
   }
   &--mdi-sort-descending {
     &::before {
-        content: "\e935";
+        content: $rcn-semantic-typography-content-icon-sort_descending;
     }
   }
   &--mdi-sort-ascending {
     &::before {
-        content: "\e936";
+        content: $rcn-semantic-typography-content-icon-sort_ascending;
     }
   }
   &--mdi-sort {
     &::before {
-        content: "\e937";
+        content: $rcn-semantic-typography-content-icon-sort;
     }
   }
   &--mdi-checkbox-marked {
     &::before {
-        content: "\e935";
+        content: $rcn-semantic-typography-content-icon-checkbox_checked;
     }
   }
   &--mdi-checkbox-blank-outline {
     &::before {
-        content: "\e936";
+        content: $rcn-semantic-typography-content-icon-checkbox_blank;
     }
   }
   &--mdi-radiobox-marked {
     &::before {
-        content: "\e937";
+        content: $rcn-semantic-typography-content-icon-radiobox_checked;
     }
   }
   &--mdi-radiobox-blank {
     &::before {
-        content: "\e93b";
+        content: $rcn-semantic-typography-content-icon-radiobox_blank;
+    }
+  }
+  &--mdi-backburger {
+    &::before {
+        : $rcn-semantic-typography-content-icon-expand_collapse_stepper;
+    }
+  }
+  &--mdi-arrow-collapse-vertical {
+    &::before {
+        : $rcn-semantic-typography-content-icon-collapse_all;
+    }
+  }
+  &--mdi-arrow-expand-vertical {
+    &::before {
+        : $rcn-semantic-typography-content-icon-expand_all;
     }
   }
 }

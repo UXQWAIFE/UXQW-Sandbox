@@ -2,6 +2,10 @@
     gap: $rcn-semantic-gap-vertical-500;
     display: flex;
     flex-direction: column;
+    max-width: 500px;
+  &__title {
+      font-weight: $rcn-semantic-typography-fontweight-label;
+  }
   &__image {
       background-color: $rcn-semantic-color-static-background-standard;
       min-width: 240px;
@@ -12,6 +16,14 @@
       display: flex;
       flex-direction: row;
       gap: 0;
+      width: auto;
+      justify-content: space-between;
+  }
+  &__inputField {
+      flex-grow: 1;
+  }
+  &__button {
+      border-radius: 0px;
   }
 }
 

@@ -21,9 +21,8 @@
   }
   &__chevron {
     &::before {
-        content: $rcn-semantic-typography-icon-rcn_icon-breadcrum_divider-content;
+        content: $rcn-semantic-typography-content-icon-breadcrum_divider;
     }
-      transform: rotate(45deg);
   }
   &__button {
       background: none;

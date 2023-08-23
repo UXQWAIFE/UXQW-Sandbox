@@ -32,7 +32,8 @@
       gap: $rcn-semantic-gap-horizontal-600;
   }
   &__socialMediasIcons {
-      color: $rcn-semantic-color-interaction-text_and_icon-dsfr_primary;
+      color: $rcn-semantic-color-interaction-text_and_icon-default-link;
+      text-decoration: none;
   }
   &__mainBanners {
       order: 1;
@@ -44,15 +45,15 @@
   }
   &__productBanner {
       order: 0;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
       padding-top: $rcn-semantic-padding-vertical-400;
       padding-bottom: $rcn-semantic-padding-vertical-400;
       gap: $rcn-semantic-gap-horizontal-600;
       color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
   }
-  &__productBanner-leftZone {
+  &__logoZone {
       display: flex;
+      grid-area: logo;
       flex-direction: column;
       align-items: flex-start;
       gap: $rcn-semantic-gap-vertical-200;
@@ -60,8 +61,9 @@
   &__productLogo {
       margin-bottom: $rcn-semantic-gap-vertical-200;
   }
-  &__productBanner-rightZone {
+  &__descriptionZone {
       display: flex;
+      grid-area: description;
       flex-direction: column;
       gap: $rcn-semantic-gap-vertical-400;
       grid-column-start: 2;
@@ -70,19 +72,23 @@
       order: 1;
   }
   &__institutionalEcosystemLinks {
-      text-decoration: none;
       font-weight: bold;
-    &:hover {
-        color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
-        text-decoration: underline;
-        font-weight: bold;
-    }
       order: 2;
       display: flex;
       flex-direction: row;
       gap: $rcn-semantic-gap-horizontal-200;
       justify-content: flex-start;
       flex-wrap: wrap;
+  }
+  &__institutionalEcosystemLink {
+      text-decoration: none;
+      font-weight: bold;
+      color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
+    &:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
+    }
   }
   &__mandatoryLegalLinks {
       order: 2;
@@ -135,5 +141,9 @@
       max-height: 90px;
       max-width: 160px;
   }
+}
+
+.rcn-gridTemplateFooter {
+    grid-template-areas: """logo logo logo logo logo logo description description description description description description""";
 }
 
