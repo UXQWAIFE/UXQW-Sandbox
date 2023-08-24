@@ -21,14 +21,14 @@ border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static
 }  */
 /*maj dans l'excel ==> OK*/
 
-/* .rcn-card__imgHolder{
+/* .rcn-card__imageHolder{
     position: relative;
     display:flex;
     overflow:hidden;
 }  */
 /*maj dans l'excel ==> OK*/
 
-/* .rcn-card--vertical .rcn-card__imgHolder {
+/* .rcn-card--vertical .rcn-card__imageHolder {
     padding-bottom: calc( 0.66 * 100% );
     border-top-left-radius: var(--rcn-semantic-borderradius-200);
     border-top-right-radius: var(--rcn-semantic-borderradius-200);
@@ -46,7 +46,7 @@ border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static
 /*maj dans l'excel ==> OK*/
 
 
-/* .rcn-card--horizontal .rcn-card__imgHolder {
+/* .rcn-card--horizontal .rcn-card__imageHolder {
     padding-right: calc(0.33 * 100%);
     border-top-left-radius: var(--rcn-semantic-borderradius-200);
     border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
@@ -150,13 +150,6 @@ box-sizing:border-box;
 
 
 
-
-
-
-
-
-
-
 /*.rcn-iconButton{
     color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
     background-color: transparent;
@@ -190,3 +183,49 @@ box-sizing:border-box;
 /*.rcn-cardCollection--horizontal {
 grid-template-columns: repeat(2, 1fr);
 } ==> Porté par cardsCollection*/
+
+
+.rcn-card{
+    margin-bottom:32px; /*Pour l'exemple, ne pas mettre dans l'Excel*/
+}
+ /*Pour l'exemple, ne pas mettre dans l'Excel*/
+
+.rcn-card--interactive {
+    cursor:pointer;
+}/* Ok Excel */
+
+.rcn-card__selectionInputZone {
+    position: absolute;
+    top: var(--rcn-semantic-padding-vertical-500);
+    right: var(--rcn-semantic-padding-vertical-500);
+}/* Ok Excel */
+
+.rcn-card__selectionInput {
+    font-size: var(--rcn-semantic-typography-fontsize-h4);
+}/* Ok Excel */
+
+.rcn-card--horizontal .rcn-card__image {
+    transform: scale(1) translate(-50%,-50%);
+}/* Ok Excel */
+
+.rcn-card--interactive:hover .rcn-card__title {
+    text-decoration: var(--rcn-semantic-typography-textdecoration-link-hover);
+}/* Ok Excel */
+
+.rcn-card--selected {
+    border-color: var(--rcn-semantic-color-interaction-border-default-selected);
+    border-width: var(--rcn-semantic-borderwidth-300);
+    border-radius: calc(var(--rcn-semantic-borderradius-200) + calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100)));
+}/* Ok Excel */
+
+.rcn-card--vertical .rcn-card__imageHolder {
+    padding-bottom: none;/* Supprimé sur l'Excel */
+    border-top-left-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
+    border-top-right-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
+}/* Ok Excel */
+
+.rcn-card--horizontal .rcn-card__imageHolder {
+    padding-right: none;/* Supprimé sur l'Excel */
+    border-top-left-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
+    border-bottom-left-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
+}/* Ok Excel */

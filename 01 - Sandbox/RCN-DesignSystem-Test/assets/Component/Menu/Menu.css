@@ -46,7 +46,7 @@
   background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
 }
 
-.rcn-menu__submenuIcon::before {
+.rcn-menu__submenuIcon::before{
   content: var(--rcn-semantic-typography-content-icon-expand_vertical);
 }
 

@@ -14,13 +14,13 @@
   flex-direction: row;
 }
 
-.rcn-card__imgHolder {
+.rcn-card__imageHolder {
   position: relative;
   display: flex;
   overflow: hidden;
 }
 
-.rcn-card--vertical .rcn-card__imgHolder {
+.rcn-card--vertical .rcn-card__imageHolder {
   padding-bottom: calc(0.66 * 100%);
   border-top-left-radius: var(--rcn-semantic-borderradius-200);
   border-top-right-radius: var(--rcn-semantic-borderradius-200);
@@ -35,7 +35,7 @@
   width: 100%;
 }
 
-.rcn-card--horizontal .rcn-card__imgHolder {
+.rcn-card--horizontal .rcn-card__imageHolder {
   padding-right: calc(0.33 * 100%);
   border-top-left-radius: var(--rcn-semantic-borderradius-200);
   border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
