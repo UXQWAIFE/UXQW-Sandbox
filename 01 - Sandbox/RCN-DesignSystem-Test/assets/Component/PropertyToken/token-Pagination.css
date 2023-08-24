@@ -24,9 +24,9 @@
 --rcn-pagination__navigationLinks-border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
 --rcn-pagination__navigationLinks-if_visited-color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 --rcn-pagination__navigationLinks-if_hover-background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
---"rcn-pagination__navigationLinks-if_current-""page"""-color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
---"rcn-pagination__navigationLinks-if_current-""page"""-font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
---"rcn-pagination__navigationLinks-if_current-""page"""-border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
+--"rcn-pagination__navigationLinks-if_current-""page"-color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+--"rcn-pagination__navigationLinks-if_current-""page"-font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
+--"rcn-pagination__navigationLinks-if_current-""page"-border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
 --"rcn-pagination__navigationLinks-if_current-""page""-if_hover"-color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
 --"rcn-pagination__navigationLinks-if_current-""page""-if_hover"-border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
 --rcn-pagination__previousIcon-order: -1;

@@ -39,7 +39,7 @@
   content: var(--rcn-semantic-typography-content-icon-expand_vertical);
 }
 
-.rcn-accordions__heading[aria-expanded='true'] .rcn-accordionSystem__headingIcon::before {
+.rcn-accordions__heading[aria-expanded='true'] .rcn-accordions__headingIcon::before {
   content: var(--rcn-semantic-typography-content-icon-collapse_vertical);
 }
 

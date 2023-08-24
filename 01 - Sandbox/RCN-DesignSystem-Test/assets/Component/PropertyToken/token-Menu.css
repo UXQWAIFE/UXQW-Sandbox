@@ -27,7 +27,7 @@
 --"rcn-menu__entry-if_current-""page""-in_after"-height: var(--rcn-semantic-borderwidth-300);
 --rcn-menu__entry-if_hover-background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
 --rcn-menu__submenuIcon-in_before-content: var(--rcn-semantic-typography-content-icon-expand_vertical);
---"rcn-menu__entry-if_expanded-""true""___rcn-menu__submenuIcon"-transform: rotate(180deg);
+--"rcn-menu__entry-if_expanded-""true""___rcn-menu__submenuIcon"-content: var(--rcn-semantic-typography-content-icon-collapse_vertical);
 --rcn-menu__submenu-position: absolute;
 --rcn-menu__submenu-display: flex;
 --rcn-menu__submenu-flex-direction: column;
@@ -35,7 +35,7 @@
 --rcn-menu__submenu-background-color: var(--rcn-semantic-color-interaction-background-default-standard);
 --rcn-menu__submenu-box-shadow: var(--rcn-semantic-dropshadow-static-overlayed);
 --rcn-menu__submenu-cursor: pointer;
---"rcn-menu__submenu-if_hidden-""true"""-display: none;
+--"rcn-menu__submenu-if_hidden-""true"-display: none;
 --rcn-menu__submenu--hidden-display: none;
 --rcn-menu__subentry-display: block;
 --rcn-menu__subentry-color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
@@ -43,8 +43,8 @@
 --rcn-menu__subentry-padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-vertical-400);
 --rcn-menu__subentry-if_hover-background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
 --rcn-menu__subentry-if_hover-color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard);
---"rcn-menu__subentry-if_current-""page"""-border-left: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
---"rcn-menu__subentry-if_current-""page"""-color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
---"rcn-menu__subentry-if_current-""page"""-font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
+--"rcn-menu__subentry-if_current-""page"-border-left: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
+--"rcn-menu__subentry-if_current-""page"-color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+--"rcn-menu__subentry-if_current-""page"-font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
 
 }

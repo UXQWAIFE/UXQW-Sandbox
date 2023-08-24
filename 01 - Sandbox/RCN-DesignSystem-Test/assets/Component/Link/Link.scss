@@ -5,6 +5,7 @@
     color: $rcn-semantic-color-interaction-text_and_icon-default-link;
     text-decoration: $rcn-semantic-typography-textdecoration-link;
     width: fit-content;
+    cursor: pointer;
   &:visited {
       color: $rcn-semantic-color-interaction-text_and_icon-visited-link;
   }
@@ -29,5 +30,6 @@
 
 .rcn-link[disabled] {
     color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+    cursor: not-allowed;
 }
 

@@ -22,7 +22,7 @@
 --rcn-accordions__heading-if_expanded-true-if_hover-color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
 --rcn-accordions__heading-if_expanded-true-if_hover-border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
 --rcn-accordions__headingIcon-in_before-content: var(--rcn-semantic-typography-content-icon-expand_vertical);
---rcn-accordions__heading-if_expanded-true___rcn-accordionSystem__headingIcon-in_before-content: var(--rcn-semantic-typography-content-icon-collapse_vertical);
+--rcn-accordions__heading-if_expanded-true___rcn-accordions__headingIcon-in_before-content: var(--rcn-semantic-typography-content-icon-collapse_vertical);
 --rcn-accordions__content-padding-left: var(--rcn-semantic-padding-horizontal-400);
 --rcn-accordions__content-padding-right: var(--rcn-semantic-padding-horizontal-400);
 --rcn-accordions__content-padding-top: var(--rcn-semantic-padding-vertical-400);

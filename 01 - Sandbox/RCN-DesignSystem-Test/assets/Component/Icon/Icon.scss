@@ -276,17 +276,17 @@
   }
   &--mdi-backburger {
     &::before {
-        : $rcn-semantic-typography-content-icon-expand_collapse_stepper;
+        content: $rcn-semantic-typography-content-icon-expand_collapse_stepper;
     }
   }
   &--mdi-arrow-collapse-vertical {
     &::before {
-        : $rcn-semantic-typography-content-icon-collapse_all;
+        content: $rcn-semantic-typography-content-icon-collapse_all;
     }
   }
   &--mdi-arrow-expand-vertical {
     &::before {
-        : $rcn-semantic-typography-content-icon-expand_all;
+        content: $rcn-semantic-typography-content-icon-expand_all;
     }
   }
 }

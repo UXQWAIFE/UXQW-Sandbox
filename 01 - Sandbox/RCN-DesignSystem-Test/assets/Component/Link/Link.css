@@ -5,6 +5,7 @@
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
   text-decoration: var(--rcn-semantic-typography-textdecoration-link);
   width: fit-content;
+  cursor: pointer;
 }
 
 .rcn-link:visited {
@@ -13,6 +14,7 @@
 
 .rcn-link[disabled] {
   color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+  cursor: not-allowed;
 }
 
 .rcn-link__icon--external::before {

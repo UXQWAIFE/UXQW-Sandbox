@@ -5,8 +5,10 @@
 --rcn-link-color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
 --rcn-link-text-decoration: var(--rcn-semantic-typography-textdecoration-link);
 --rcn-link-width: fit-content;
+--rcn-link-cursor: pointer;
 --rcn-link-if_visited-color: var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
 --rcn-link-if_disabled-color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+--rcn-link-if_disabled-cursor: not-allowed;
 --rcn-link__icon--external-in_before-content: var(--rcn-semantic-typography-content-icon-external_link);
 --rcn-link__icon--external-order: 2;
 --rcn-link__icon--download-in_before-content: var(--rcn-semantic-typography-content-icon-download);

@@ -234,14 +234,14 @@
 }
 
 .rcn-icon--mdi-backburger::before {
-  : var(--rcn-semantic-typography-content-icon-expand_collapse_stepper);
+  content: var(--rcn-semantic-typography-content-icon-expand_collapse_stepper);
 }
 
 .rcn-icon--mdi-arrow-collapse-vertical::before {
-  : var(--rcn-semantic-typography-content-icon-collapse_all);
+  content: var(--rcn-semantic-typography-content-icon-collapse_all);
 }
 
 .rcn-icon--mdi-arrow-expand-vertical::before {
-  : var(--rcn-semantic-typography-content-icon-expand_all);
+  content: var(--rcn-semantic-typography-content-icon-expand_all);
 }
 
