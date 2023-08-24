@@ -348,13 +348,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       }
     }
     $enteteTableau .= '<div class="rcn-preTable__zoneAction">'. $zoneAction .'</div>';
-  
-  
-  
-  
   }
-
-
 
   // Construire le résultat final avec les fonctionnalités sélectionnées
   $resultat = "<h2>Résultat du tableau :</h2>\n";
