@@ -24,6 +24,7 @@
   color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard);
 }
 
+
 .rcn-accordions__heading[aria-expanded='true'] {
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
   font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
@@ -35,11 +36,11 @@
   border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
 }
 
-.rcn-accordions__headingIcon::before {
+.rcn-accordions__headingIcon::before{
   content: var(--rcn-semantic-typography-content-icon-expand_vertical);
 }
 
-.rcn-accordions__heading[aria-expanded='true'] .rcn-accordionSystem__headingIcon::before {
+.rcn-accordions__heading[aria-expanded='true'] .rcn-accordions__headingIcon::before {
   content: var(--rcn-semantic-typography-content-icon-collapse_vertical);
 }
 
