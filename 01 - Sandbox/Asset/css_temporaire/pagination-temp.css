@@ -5,46 +5,51 @@
     display: flex;
     flex-direction: column;
     gap: 100px;
-} /*class à ajouter dans l'excel ==> OK*/
+} 
+/*class à ajouter dans l'excel ==> OK*/
 
 /*=============== PAGINATION ================*/
 
 
 /* ----- Général ----- */
 
-.rcn-pagination__rowContainer {
+/* .rcn-pagination__rowContainer {
 	display: flex;
     flex-direction: row;
 	justify-content: space-between;
 	align-items: baseline;
     flex-wrap: wrap;
     gap: var(--rcn-semantic-margin-vertical-inputfieldblock);
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
-.rcn-pagination__rowContainer .rcn-inputFieldBloc{
+/* .rcn-pagination__rowContainer .rcn-inputFieldBloc{
     margin:unset;
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
-.rcn-pagination__label{
+/* .rcn-pagination__label{
     font-weight :var(--rcn-semantic-typography-text-component-default-body-fontweight);
     flex-wrap : wrap;
     align-items: center;
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 /* ----- Liste des numéros de pages ----- */
 
-.rcn-pagination__navigationList{
+/* .rcn-pagination__navigationList{
 	display: flex;
     align-items: center;
     gap:var(--rcn-semantic-gap-vertical-400);
     flex-direction: row;
     flex-wrap: wrap;
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 
 
 
-.rcn-pagination__navigationLinks{
+/* .rcn-pagination__navigationLinks{
     display:flex;
     flex-direction: row;
 	padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-200);
@@ -53,54 +58,64 @@
     border-radius : var(--rcn-semantic-borderradius-100);
     border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent); 
     border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent); 
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-pagination__navigationLinks:visited{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-pagination__navigationLinks:visited{
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-pagination__navigationLinks:hover{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-pagination__navigationLinks:hover{
     background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-pagination__navigationLinks[aria-current="page"]{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-pagination__navigationLinks[aria-current="page"]{
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
     font-weight: var(--rcn-semantic-typography-text-component-default-selected-fontweight);
     border-bottom:  var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-pagination__navigationLinks[aria-current="page"]:hover{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-pagination__navigationLinks[aria-current="page"]:hover{
     color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
     border-bottom:  var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 
-.rcn-pagination__previousIcon{
+/* .rcn-pagination__previousIcon{
     order:-1;
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-pagination__previousIcon::before{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-pagination__previousIcon::before{
     content: var(--rcn-semantic-typography-icon-rcn_icon-previous-content);
-    content:"\e92e"; /* LIGNE A NE PAS AJOUTER A L'EXCEL : temporaire le temps d'ajouter le semantic token*/
-}
+    content:"\e92e"; 
+} */
 
-.rcn-pagination_nextIcon{
+/* .rcn-pagination_nextIcon{
     order:2;
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-pagination_nextIcon::before{
+}  */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-pagination_nextIcon::before{
     content: var(--rcn-semantic-typography-icon-rcn_icon-next-content);
-    content:"\e92d" /* LIGNE A NE PAS AJOUTER A L'EXCEL : temporaire le temps d'ajouter le semantic token*/
-}
+    content:"\e92d"
+} */
 
 
-.rcn-pagination__goToPageButton{
+/* .rcn-pagination__goToPageButton{
     align-self: stretch;
     padding-left: var(--rcn-semantic-padding-horizontal-200);
     padding-right: var(--rcn-semantic-padding-horizontal-200);
     border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard); 
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-pagination__goToPageButton:hover{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-pagination__goToPageButton:hover{
     background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-pagination__goToPageButton::before{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-pagination__goToPageButton::before{
     content:var(--rcn-semantic-typography-content-icon-goto);
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 
 

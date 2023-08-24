@@ -78,7 +78,7 @@
 }  */
 /*class à ajouter dans l'excel ==> OK*/
 
-.rcn-menu__submenu{
+/* .rcn-menu__submenu{
 	position:absolute;
 	display:flex;
 	flex-direction:column;
@@ -86,28 +86,34 @@
     background-color:var(--rcn-semantic-color-interaction-background-default-standard);
     box-shadow:var(--rcn-semantic-dropshadow-static-overlayed);
     cursor:pointer;
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-menu__submenu[aria-hidden="true"]{
+}  */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-menu__submenu[aria-hidden="true"]{
 	display:none;
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-menu__submenu--hidden{
+}  */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-menu__submenu--hidden{
 	display: none;
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 /*--------Subentry --------*/
 
-.rcn-menu__subentry{
+/* .rcn-menu__subentry{
 	display:block;
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 	border-left:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
 	padding:var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-vertical-400);
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-menu__subentry:hover {
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-menu__subentry:hover {
 	background-color:var(--rcn-semantic-color-interaction-background-hover-standard);
-	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard); /*Ne marche pas > fonctionne c'est juste pas le bon core de selected*/
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-menu__subentry[aria-current="page"] {
+	color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard); 
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-menu__subentry[aria-current="page"] {
 	border-left:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
 	color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
 	font-weight:var(--rcn-semantic-typography-text-component-default-selected-fontweight);
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/

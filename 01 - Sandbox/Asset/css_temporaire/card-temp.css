@@ -184,48 +184,54 @@ box-sizing:border-box;
 grid-template-columns: repeat(2, 1fr);
 } ==> Porté par cardsCollection*/
 
-
+/* 
 .rcn-card{
-    margin-bottom:32px; /*Pour l'exemple, ne pas mettre dans l'Excel*/
-}
+    margin-bottom:32px; 
+} */
  /*Pour l'exemple, ne pas mettre dans l'Excel*/
 
-.rcn-card--interactive {
+/* .rcn-card--interactive {
     cursor:pointer;
-}/* Ok Excel */
+} */
+/* Ok Excel */
 
-.rcn-card__selectionInputZone {
+/* .rcn-card__selectionInputZone {
     position: absolute;
     top: var(--rcn-semantic-padding-vertical-500);
     right: var(--rcn-semantic-padding-vertical-500);
-}/* Ok Excel */
+} */
+/* Ok Excel */
 
-.rcn-card__selectionInput {
+/* .rcn-card__selectionInput {
     font-size: var(--rcn-semantic-typography-fontsize-h4);
-}/* Ok Excel */
+} */
+/* Ok Excel */
 
-.rcn-card--horizontal .rcn-card__image {
+/* .rcn-card--horizontal .rcn-card__image {
     transform: scale(1) translate(-50%,-50%);
-}/* Ok Excel */
+} */
+/* Ok Excel */
 
-.rcn-card--interactive:hover .rcn-card__title {
+/* .rcn-card--interactive:hover .rcn-card__title {
     text-decoration: var(--rcn-semantic-typography-textdecoration-link-hover);
-}/* Ok Excel */
+} */
+/* Ok Excel */
 
-.rcn-card--selected {
+/* .rcn-card--selected {
     border-color: var(--rcn-semantic-color-interaction-border-default-selected);
     border-width: var(--rcn-semantic-borderwidth-300);
     border-radius: calc(var(--rcn-semantic-borderradius-200) + calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100)));
-}/* Ok Excel */
+} */
+/* Ok Excel */
 
-.rcn-card--vertical .rcn-card__imageHolder {
-    padding-bottom: none;/* Supprimé sur l'Excel */
+/* .rcn-card--vertical .rcn-card__imageHolder {
     border-top-left-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
     border-top-right-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
-}/* Ok Excel */
+} */
+/* Ok Excel */
 
-.rcn-card--horizontal .rcn-card__imageHolder {
-    padding-right: none;/* Supprimé sur l'Excel */
+/* .rcn-card--horizontal .rcn-card__imageHolder {
     border-top-left-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
     border-bottom-left-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
-}/* Ok Excel */
+} */
+/* Ok Excel */

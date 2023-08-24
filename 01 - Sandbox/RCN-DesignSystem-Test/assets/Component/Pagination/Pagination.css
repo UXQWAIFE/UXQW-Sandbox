@@ -25,32 +25,32 @@
   flex-wrap: wrap;
 }
 
-.rcn-pagination__navigationLinks {
+.rcn-pagination__navigationLink {
   display: flex;
   flex-direction: row;
   padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-200);
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-  text-decoration: var(--rcn-semantic-typography-textdecoration-pagination_navigationlinks);
+  text-decoration: var(--rcn-semantic-typography-textdecoration-pagination_navigationLink);
   border-radius: var(--rcn-semantic-borderradius-100);
   border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
   border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
 }
 
-.rcn-pagination__navigationLinks:visited {
+.rcn-pagination__navigationLink:visited {
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
 }
 
-.rcn-pagination__navigationLinks:hover {
+.rcn-pagination__navigationLink:hover {
   background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
 }
 
-.rcn-pagination__navigationLinks[aria-current='page'] {
+.rcn-pagination__navigationLink[aria-current='page'] {
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
   font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
   border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
 }
 
-.rcn-pagination__navigationLinks[aria-current='page']:hover {
+.rcn-pagination__navigationLink[aria-current='page']:hover {
   color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
   border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
 }
@@ -63,11 +63,11 @@
   content: var(--rcn-semantic-typography-content-icon-previous);
 }
 
-.rcn-pagination__nextIcon {
+.rcn-pagination__nextIcon{
   order: 2;
 }
 
-.rcn-pagination__nextIcon::before {
+.rcn-pagination__nextIcon::before{
   content: var(--rcn-semantic-typography-content-icon-next);
 }
 
@@ -85,5 +85,7 @@
 
 .rcn-pagination__goToPageButton::before {
   content: var(--rcn-semantic-typography-content-icon-goto);
+  display: inline-block;
+  transform: rotate(90deg);
 }
 

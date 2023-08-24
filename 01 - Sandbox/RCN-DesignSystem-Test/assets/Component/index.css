@@ -8,6 +8,7 @@ Pour voir les règles d'intégrations des éléments <html> veuillez vous referr
 @import url("Icon/Icon.css");/*lot1*/
 @import url("GlobalContainers/GlobalContainers.css");/*lot1*/
 @import url("Link/Link.css");/*lot1*/
+@import url("Grids/Grids.css");/*lot4*/
 @import url("Animations/Animations.css");/*lot2*/
 /*Composants*/
 @import url("FormInputs/FormInputs.css");/*lot3*/
@@ -19,13 +20,14 @@ Pour voir les règles d'intégrations des éléments <html> veuillez vous referr
 @import url("Loader/Loader.css");/*lot1*/
 @import url("Menu/Menu.css");/* Lot 4 */
 /*Modules*/
+@import url("ActionsBanner/ActionsBanner.css");/*lot4*/
 @import url("Notification/Notification.css");/*lot1*/
 @import url("Tooltip/Tooltip.css");/*lot1*/
 @import url("Accordions/Accordions.css");/*lot2*/
 @import url("Tabs/Tabs.css");/*lot2*/
 @import url("Card/Card.css");/*lot1*/
 @import url("Modal/Modal.css");/*lot1*/
-@import url("Pagination/Pagintion.css");/* Lot 4 */
+@import url("Pagination/Pagination.css");/* Lot 4 */
 @import url("Stepper/Stepper.css");/* Lot 4 */
 @import url("Header/Header.css");/*lot2*/
 @import url("Footer/Footer.css");/*lot2*/
