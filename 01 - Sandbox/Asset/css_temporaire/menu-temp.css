@@ -69,12 +69,14 @@
 
 /*------- Submenu -------*/
 
-.rcn-menu__submenuIcon::before{
+/* .rcn-menu__submenuIcon::before{
 	content: var(--rcn-semantic-typography-icon-rcn_icon-expand_vertical-content);
-} /*class à ajouter dans l'excel ==> OK >> n'apparaît pas dans le code*/
-.rcn-menu__entry[aria-expanded="true"] .rcn-menu__submenuIcon{
+} */
+/*class à ajouter dans l'excel ==> OK >> n'apparaît pas dans le code*/
+/* .rcn-menu__entry[aria-expanded="true"] .rcn-menu__submenuIcon{
 	transform: rotate(180deg);
-} /*class à ajouter dans l'excel ==> OK*/
+}  */
+/*class à ajouter dans l'excel ==> OK*/
 
 .rcn-menu__submenu{
 	position:absolute;
