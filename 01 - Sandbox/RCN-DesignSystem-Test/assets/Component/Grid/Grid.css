@@ -1,6 +1,17 @@
- {
-  .rcn-gridMargins: padding-left;
-  .rcn-gridMargins--menu: padding-left;
-  .rcn-grid: grid-column-gap;
+.rcn-gridMargins {
+  padding-right: var(--rcn-semantic-padding-horizontal-500);
+  padding-left: var(--rcn-semantic-padding-horizontal-500);
+}
+
+.rcn-gridMargins--menu {
+  padding-right: var(--rcn-semantic-padding-horizontal-500);
+  padding-left: var(--rcn-semantic-padding-horizontal-500);
+}
+
+.rcn-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: var(--rcn-semantic-gap-horizontal-400);
+  grid-template-rows: auto;
 }
 
