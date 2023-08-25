@@ -74,12 +74,12 @@
 --rcn-core-borderradius-100: var(--rcn-core-fontsize-0125r);
 --rcn-core-borderradius-200: var(--rcn-core-fontsize-0375r);
 --rcn-core-borderradius-300: var(--rcn-core-fontsize-1500r);
---rcn-core-breakpoint-xsmall: 575;
---rcn-core-breakpoint-small: 767;
---rcn-core-breakpoint-medium: 991;
---rcn-core-breakpoint-large: 1247;
---rcn-core-gradient-to_top: ;
---rcn-core-gradient-to_bottom: ;
+--rcn-core-breakpoint-200: 575px;
+--rcn-core-breakpoint-300: 767px;
+--rcn-core-breakpoint-400: 991px;
+--rcn-core-breakpoint-500: 1247px;
+--rcn-core-gradient-to_top: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0));
+--rcn-core-gradient-to_bottom: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0));
 --rcn-core-sizing-600: var(--rcn-core-fontsize-2000r);
 --rcn-core-shadow-100: 0 2px 06px 0 var(--rcn-core-color-shadow-900);
 --rcn-core-shadow-200: 0 4px 12px 0 var(--rcn-core-color-shadow-900);
