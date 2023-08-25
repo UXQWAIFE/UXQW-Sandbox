@@ -23,7 +23,8 @@
 --rcn-footer__socialMediasIconsZone-order: 1;
 --rcn-footer__socialMediasIconsZone-flex-wrap: wrap;
 --rcn-footer__socialMediasIconsZone-gap: var(--rcn-semantic-gap-horizontal-600);
---rcn-footer__socialMediasIcons-color: var(--rcn-semantic-color-interaction-text_and_icon-dsfr_primary);
+--rcn-footer__socialMediasIcons-color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
+--rcn-footer__socialMediasIcons-text-decoration: none;
 --rcn-footer__mainBanners-order: 1;
 --rcn-footer__mainBanners-border-top: var(--rcn-semantic-borderwidth-200) solid var(--rcn-semantic-color-static-border-footer_banner_divider);
 --rcn-footer__mainBanners-border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_element_divider);
@@ -31,23 +32,23 @@
 --rcn-footer__mainBanners-flex-direction: column;
 --rcn-footer__mainBanners-align-items: stretch;
 --rcn-footer__productBanner-order: 0;
---rcn-footer__productBanner-display: grid;
---rcn-footer__productBanner-grid-template-columns: 1fr 1fr;
+--rcn-footer__productBanner-display: flex;
 --rcn-footer__productBanner-padding-top: var(--rcn-semantic-padding-vertical-400);
 --rcn-footer__productBanner-padding-bottom: var(--rcn-semantic-padding-vertical-400);
 --rcn-footer__productBanner-gap: var(--rcn-semantic-gap-horizontal-600);
 --rcn-footer__productBanner-color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
---rcn-footer__productBanner-leftZone-display: flex;
---rcn-footer__productBanner-leftZone-flex-direction: column;
---rcn-footer__productBanner-leftZone-align-items: flex-start;
---rcn-footer__productBanner-leftZone-gap: var(--rcn-semantic-gap-vertical-200);
+--rcn-footer__logoZone-display: flex;
+--rcn-footer__logoZone-grid-area: logo;
+--rcn-footer__logoZone-flex-direction: column;
+--rcn-footer__logoZone-align-items: flex-start;
+--rcn-footer__logoZone-gap: var(--rcn-semantic-gap-vertical-200);
 --rcn-footer__productLogo-margin-bottom: var(--rcn-semantic-gap-vertical-200);
---rcn-footer__productBanner-rightZone-display: flex;
---rcn-footer__productBanner-rightZone-flex-direction: column;
---rcn-footer__productBanner-rightZone-gap: var(--rcn-semantic-gap-vertical-400);
---rcn-footer__productBanner-rightZone-grid-column-start: 2;
+--rcn-footer__descriptionZone-display: flex;
+--rcn-footer__descriptionZone-grid-area: description;
+--rcn-footer__descriptionZone-flex-direction: column;
+--rcn-footer__descriptionZone-gap: var(--rcn-semantic-gap-vertical-400);
+--rcn-footer__descriptionZone-grid-column-start: 2;
 --rcn-footer__productDescription-order: 1;
---rcn-footer__institutionalEcosystemLinks-text-decoration: none;
 --rcn-footer__institutionalEcosystemLinks-font-weight: bold;
 --rcn-footer__institutionalEcosystemLinks-order: 2;
 --rcn-footer__institutionalEcosystemLinks-display: flex;
@@ -55,9 +56,12 @@
 --rcn-footer__institutionalEcosystemLinks-gap: var(--rcn-semantic-gap-horizontal-200);
 --rcn-footer__institutionalEcosystemLinks-justify-content: flex-start;
 --rcn-footer__institutionalEcosystemLinks-flex-wrap: wrap;
---rcn-footer__institutionalEcosystemLinks-if_hover-color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
---rcn-footer__institutionalEcosystemLinks-if_hover-text-decoration: underline;
---rcn-footer__institutionalEcosystemLinks-if_hover-font-weight: bold;
+--rcn-footer__institutionalEcosystemLink-text-decoration: none;
+--rcn-footer__institutionalEcosystemLink-font-weight: bold;
+--rcn-footer__institutionalEcosystemLink-color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+--rcn-footer__institutionalEcosystemLink-if_hover-text-decoration: underline;
+--rcn-footer__institutionalEcosystemLink-if_hover-font-weight: bold;
+--rcn-footer__institutionalEcosystemLink-if_hover-color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
 --rcn-footer__mandatoryLegalLinks-order: 2;
 --rcn-footer__mandatoryLegalLinks-display: flex;
 --rcn-footer__mandatoryLegalLinks-flex-direction: row;
@@ -93,5 +97,6 @@
 --rcn-footer__partnerLogo-height: auto;
 --rcn-footer__partnerLogo-max-height: 90px;
 --rcn-footer__partnerLogo-max-width: 160px;
+--rcn-gridTemplateFooter-grid-template-areas: "logo logo logo logo logo logo description description description description description description";
 
 }

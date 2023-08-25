@@ -2,6 +2,8 @@
 --rcn-captcha-gap: var(--rcn-semantic-gap-vertical-500);
 --rcn-captcha-display: flex;
 --rcn-captcha-flex-direction: column;
+--rcn-captcha-max-width: 500px;
+--rcn-captcha__title-font-weight: var(--rcn-semantic-typography-fontweight-label);
 --rcn-captcha__image-background-color: var(--rcn-semantic-color-static-background-standard);
 --rcn-captcha__image-min-width: 240px;
 --rcn-captcha__image-min-height: 80px;
@@ -9,5 +11,9 @@
 --rcn-captcha__inputZone-display: flex;
 --rcn-captcha__inputZone-flex-direction: row;
 --rcn-captcha__inputZone-gap: 0;
+--rcn-captcha__inputZone-width: auto;
+--rcn-captcha__inputZone-justify-content: space-between;
+--rcn-captcha__inputField-flex-grow: 1;
+--rcn-captcha__button-border-radius: 0px;
 
 }

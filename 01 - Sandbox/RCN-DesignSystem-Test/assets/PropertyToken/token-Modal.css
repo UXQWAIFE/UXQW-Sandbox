@@ -9,16 +9,12 @@
 --rcn-modal-background-color: var(--rcn-semantic-color-static-background-standard);
 --rcn-modal-max-height: 90vh;
 --rcn-modal-box-shadow: var(--rcn-semantic-dropshadow-static-detached);
---rcn-modal--small-width: 25vw;
---rcn-modal--medium-width: 40vw;
---rcn-modal--large-width: 50vw;
---rcn-modal--extraLarge-width: 75vw;
---rcn-modal__behind-background-color: var(--rcn-semantic-color-static-background-modal_behind_background);
+--rcn-modal-grid-area: modal;
+--rcn-modal-height: fit-content;
 --rcn-modal__header-display: flex;
 --rcn-modal__header-flex-direction: column;
 --rcn-modal__header-align-items: flex-start;
---rcn-modal__header-border-bottom-width: var(--rcn-semantic-borderwidth-100);
---rcn-modal__header-border-bottom-color: var(--rcn-semantic-color-static-border-divider_regular);
+--rcn-modal__header-border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
 --rcn-modal__header-padding: var(--rcn-semantic-padding-vertical-600) var(--rcn-semantic-padding-horizontal-700);
 --rcn-modal__header-max-width: 100%;
 --rcn-modal__header-gap: var(--rcn-semantic-gap-vertical-200);
@@ -28,9 +24,13 @@
 --rcn-modal__closeButton-align-items: center;
 --rcn-modal__closeButton-gap: var(--rcn-semantic-gap-horizontal-200);
 --rcn-modal__closeButton-align-self: flex-end;
---rcn-modal__closeIcon-in_before-content: var(--rcn-semantic-typography-icon-rcn_icon-close-content);
+--rcn-modal__closeButton-background: none;
+--rcn-modal__closeButton-border: none;
+--rcn-modal__closeIcon-in_before-content: var(--rcn-semantic-typography-content-icon-close);
 --rcn-modal__topOverlay-height: 0px;
 --rcn-modal__bottomOverlay-height: 0px;
+--rcn-modal__content-padding: var(--rcn-semantic-padding-vertical-600) var(--rcn-semantic-padding-horizontal-700);
+--rcn-modal__content-overflow: auto;
 --rcn-modal__content--with-topOverlay-margin-top: -16px;
 --rcn-modal__content--with-bottomOverlay-margin-bottom: -16px;
 --rcn-modal__content--with-topOverlay___rcn-modal__topOverlay-height: 16px;
@@ -43,13 +43,9 @@
 --rcn-modal__content--with-bottomOverlay___rcn-modal__bottomOverlay-background-image: var(--rcn-semantic-gradient-static-backgroundimage-to_top);
 --rcn-modal__content--with-bottomOverlay___rcn-modal__bottomOverlay-border-bottom: var(--rcn-semantic-borderwidth-100) solid;
 --rcn-modal__content--with-bottomOverlay___rcn-modal__bottomOverlay-border-bottom-color: var(--rcn-semantic-color-static-border-divider_regular);
---rcn-modal__footer-flex-direction: row;
---rcn-modal__footer-display: flex;
---rcn-modal__footer-justify-content: space-between;
---rcn-modal__footer-padding: var(--rcn-semantic-padding-vertical-600) var(--rcn-semantic-padding-horizontal-700);
---rcn-modal__footer-border-top-width: var(--rcn-semantic-borderwidth-100);
---rcn-modal__footer-border-top-color: var(--rcn-semantic-color-static-border-divider_regular);
---rcn-modal__footer-max-width: 100%;
+--rcn-modal__footer-padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-700);
+--rcn-modal__footer-border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+--rcn-modal__footer___rcn-bottomActionsBanner-border: unset;
 --rcn-modal__footer-primaryActions-display: flex;
 --rcn-modal__footer-primaryActions-flex-flow: row wrap;
 --rcn-modal__footer-primaryActions-justify-content: flex-end;
@@ -58,5 +54,15 @@
 --rcn-modal__footer-secondaryActions-flex-flow: row wrap;
 --rcn-modal__footer-secondaryActions-justify-content: flex-start;
 --rcn-modal__footer-secondaryActions-gap: var(--rcn-semantic-gap-horizontal-200);
+--rcn-gridOverlayModal-position: fixed;
+--rcn-gridOverlayModal-top: 0;
+--rcn-gridOverlayModal-left: 0;
+--rcn-gridOverlayModal-display: grid;
+--rcn-gridOverlayModal-grid-template-areas: ". . modal modal modal modal modal modal modal modal . .";
+--rcn-gridOverlayModal-overflow: hidden;
+--rcn-gridOverlayModal-height: auto;
+--rcn-gridOverlayModal-align-items: center;
+--rcn-gridOverlayModal-margin: 0;
+--rcn-gridOverlayModal-background-color: var(--rcn-semantic-color-static-background-modal_behind_background);
 
 }

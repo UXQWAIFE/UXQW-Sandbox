@@ -15,8 +15,7 @@
 --rcn-breadcrumb__item-gap: var(--rcn-semantic-gap-horizontal-100);
 --rcn-breadcrumb__item-flex-wrap: nowrap;
 --rcn-breadcrumb__item-align-items: center;
---rcn-breadcrumb__chevron-in_before-content: var(--rcn-semantic-typography-icon-rcn_icon-breadcrum_divider-content);
---rcn-breadcrumb__chevron-transform: rotate(45deg);
+--rcn-breadcrumb__chevron-in_before-content: var(--rcn-semantic-typography-content-icon-breadcrum_divider);
 --rcn-breadcrumb__button-background: none;
 --rcn-breadcrumb__button-border: none;
 --rcn-breadcrumb__button-padding: 0;

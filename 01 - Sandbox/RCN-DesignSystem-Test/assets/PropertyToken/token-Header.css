@@ -8,13 +8,9 @@
 --rcn-header__productBanner-flex-direction: row;
 --rcn-header__productBanner-justify-content: space-between;
 --rcn-header__productBanner-gap: var(--rcn-semantic-gap-horizontal-600);
---rcn-header__productBanner-padding-top: var(--rcn-semantic-padding-vertical-400);
---rcn-header__productBanner-padding-bottom: var(--rcn-semantic-padding-vertical-400);
 --rcn-header__productBanner-background-color: var(--rcn-semantic-color-static-background-standard);
 --rcn-header__productBanner-align-items: center;
 --rcn-header__logo-order: 0;
---rcn-header__connexionModule-order: 2;
---rcn-header__connexionModule-justify-content: flex-end;
 --rcn-header__menu--portailDeServices-color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
 --rcn-header__menu--portailDeServices-order: 1;
 --rcn-header__mainNavBanner-order: 1;
@@ -22,8 +18,6 @@
 --rcn-header__mainNavBanner-flex-direction: row;
 --rcn-header__mainNavBanner-justify-content: flex-start;
 --rcn-header__mainNavBanner-gap: var(--rcn-semantic-gap-horizontal-600);
---rcn-header__mainNavBanner-padding-top: var(--rcn-semantic-padding-vertical-300);
---rcn-header__mainNavBanner-padding-bottom: var(--rcn-semantic-padding-vertical-300);
 --rcn-header__mainNavBanner-background-color: var(--rcn-semantic-color-static-background-primary);
 --rcn-header__mainNavBanner-align-items: center;
 --rcn-header__menu-order: 0;
@@ -34,8 +28,10 @@
 --rcn-header__toolsButtonsZone-align-items: center;
 --rcn-header__toolsButtonsZone-justify-content: flex-start;
 --rcn-header__toolsButtonsZone-gap: var(--rcn-semantic-gap-horizontal-400);
---rcn-header__toolsButtonsZone-color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
---rcn-header__toolsButtonsZone-font-size: var(--rcn-semantic-typography-icon-rcn_icon-h3-fontsize);
+--rcn-header__toolsButtonsZone-font-size: var(--rcn-semantic-typography-fontsize-h3);
+--rcn-header__toolsButtonsZone___rcn-iconButton-color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 --rcn-header__searchbar-order: 2;
+--rcn-connexionModule__icon-in_before-content: var(--rcn-semantic-typography-content-icon-user);
+--rcn-connexionModule__icon-order: -1;
 
 }
