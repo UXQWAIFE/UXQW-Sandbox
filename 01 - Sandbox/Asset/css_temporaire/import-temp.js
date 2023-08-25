@@ -25,7 +25,7 @@ var cssFiles = [
     'FormInputs',
     'Connexion-module',
     'Cookie',
-    'grid',
+    // 'grid',
     'ActionsBanner',
     'FilterModule' ,
     'SearchResultTemplate',
