@@ -6,165 +6,8 @@
   margin-top:64px;
 }
 
-/*------------- Grid Margins---------------*/
 
-/* .rcn-gridMargins {
-  padding-right:var(--rcn-semantic-padding-horizontal-900);
-  padding-left:var(--rcn-semantic-padding-horizontal-900);
-} */
-/* OK dans Excel */
-/* .rcn-gridMargins--menu {
-  padding-right:var(--rcn-semantic-padding-horizontal-900);
-  padding-left:var(--rcn-semantic-padding-horizontal-800);
-} */
-/* OK dans Excel */
-
-/*=============== GRID ===============*/
-
-/* .rcn-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-  grid-template-rows: auto;
-} */
-
-.rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
-  content:"Top j'ai plein de place ici"
-}
-
-.rcn-gridTemplate--example{/* Class pour démonstration uniquement */
-  grid-template-areas: 
-    "title title title title title title title title title title title title"
-    "side side side side section1 section1 section1 section1 section2 section2 section2 section2";
-}
-
-
-/*-----Breakpoints-------*/
-
-/*--- Large Grid---*/
-
-@media (max-width: 1247px) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-large)*/
- {
-  /* .rcn-grid {
-    grid-template-columns: repeat(12, 1fr);
-    grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-  } */
- 
-  /* .rcn-gridMargins {
-    padding-right:var(--rcn-semantic-padding-horizontal-700);
-    padding-left:var(--rcn-semantic-padding-horizontal-700);
-  } */
-
-  .rcn-gridTemplate--example{/* Class pour démonstration uniquement */
-    grid-template-areas: 
-    "title title title title title title title title title title title title"
-    "side side side side section1 section1 section1 section1 section1 section1 section1 section1"
-    "side side side side section2 section2 section2 section2 section2 section2 section2 section2";
-  } 
-
-  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
-    content:"Oulah ça se rétrécit, qu'est-ce qu'il se passe avec les deux sections d'à côté ?"
-  }
-
-  /* .rcn-gridMargins--menu {
-      padding-right:var(--rcn-semantic-padding-horizontal-700);
-      padding-left:var(--rcn-semantic-padding-horizontal-600);
-  } */
-}
-
-
-
-/*--- Medium Grid---*/
-@media (max-width: 991px) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-medium)*/ {
-  /* .rcn-grid {
-  grid-template-columns: repeat(8, 1fr);
-  grid-column-gap:var(--rcn-semantic-gap-horizontal-500); 
-  }*/
-
-  /* .rcn-gridMargins {
-    padding-right:var(--rcn-semantic-padding-horizontal-600);
-    padding-left:var(--rcn-semantic-padding-horizontal-600);
-
-  } */
-
-  .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
-    grid-template-areas: 
-    "title title title title title title title title"
-    "side side section1 section1 section1 section1 section1 section1"
-    "side side section2 section2 section2 section2 section2 section2";
-  }
-
-  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
-    content:"Je commence à vraiment manquer de place, il va falloir me faire passer au dessus !"
-  }
-
-  /* .rcn-gridMargins--menu {
-      padding-right:var(--rcn-semantic-padding-horizontal-600);
-      padding-left:var(--rcn-semantic-padding-horizontal-400);
-  } */
-}
-
-/*--- Small Grid---*/
-
-@media (max-width: 767px) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-small)*/ {
-  /* .rcn-grid {
-    grid-template-columns: repeat(8, 1fr);
-    grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-  } */
-/* 
-  .rcn-gridMargins {
-    padding-right:var(--rcn-semantic-padding-horizontal-500);
-    padding-left:var(--rcn-semantic-padding-horizontal-500);
-
-  } */
-
-  .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
-    grid-template-areas: 
-    "title title title title title title title title"
-    "section1 section1 section1 section1 section1 section1 section1 section1"
-    "side side side side side side side side"
-    "section2 section2 section2 section2 section2 section2 section2 section2";
-  }
-
-  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
-    content:"Mais qu'est-ce que je fais au milieu ? C'est pas normal, je veux être au dessus !"
-  }
-
-  /* .rcn-gridMargins--menu {
-      padding-right:var(--rcn-semantic-padding-horizontal-500);
-      padding-left:var(--rcn-semantic-padding-horizontal-200);
-  } */
-}
-
-/*--- xSmall Grid---*/
-@media (max-width: 575px) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-xsmall)*/ {
-  /* .rcn-grid {
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap : var(--rcn-semantic-gap-horizontal-400);
-  }
-
-  .rcn-gridMargins {
-    padding-right:var(--rcn-semantic-padding-horizontal-500);
-    padding-left:var(--rcn-semantic-padding-horizontal-500);
-  } */
-
-  .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
-    grid-template-areas: 
-    "title title title title"
-    "side side side side"
-    "section1 section1 section1 section1"
-    "section2 section2 section2 section2";
-  }
-
-  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
-    content:" Ah c'est mieux ici, parfait ! Tiens, le Menu s'est planqué lui"
-  }
-}
-
-
-
-
-/*Composants dedémonstration - TEST ==> Ne pas prendre en compte dans l'excel*/
+/* Composants de démonstration */
 
 .rcn-fakeComponent-a {/* Class pour démonstration uniquement */
   display:flex;
@@ -192,3 +35,90 @@
   height: 100px;
   color:white;
 }
+
+/*=============== GRID ===============*/
+
+
+.rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+  content:"Top j'ai plein de place ici"
+}
+
+.rcn-gridTemplate--example{/* Class pour démonstration uniquement */
+  grid-template-areas: 
+    "title title title title title title title title title title title title"
+    "side side side side section1 section1 section1 section1 section2 section2 section2 section2";
+}
+
+
+/*-----Breakpoints-------*/
+
+
+/*--- Large Grid---*/
+
+@media (max-width: 1247px) {
+
+  .rcn-gridTemplate--example{/* Class pour démonstration uniquement */
+    grid-template-areas: 
+    "title title title title title title title title title title title title"
+    "side side side side section1 section1 section1 section1 section1 section1 section1 section1"
+    "side side side side section2 section2 section2 section2 section2 section2 section2 section2";
+  } 
+
+  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+    content:"Oulah ça se rétrécit, qu'est-ce qu'il se passe avec les deux sections d'à côté ?"
+  }
+}
+
+
+/*--- Medium Grid---*/
+
+@media (max-width: 991px) {
+
+  .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
+    grid-template-areas: 
+    "title title title title title title title title"
+    "side side section1 section1 section1 section1 section1 section1"
+    "side side section2 section2 section2 section2 section2 section2";
+  }
+
+  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+    content:"Je commence à vraiment manquer de place, il va falloir me faire passer au dessus !"
+  }
+}
+
+/*--- Small Grid---*/
+
+@media (max-width: 767px) {
+
+  .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
+    grid-template-areas: 
+    "title title title title title title title title"
+    "section1 section1 section1 section1 section1 section1 section1 section1"
+    "side side side side side side side side"
+    "section2 section2 section2 section2 section2 section2 section2 section2";
+  }
+
+  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+    content:"Mais qu'est-ce que je fais au milieu ? C'est pas normal, je veux être au dessus !"
+  }
+}
+
+/*--- xSmall Grid---*/
+
+@media (max-width: 575px) {
+ 
+  .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
+    grid-template-areas: 
+    "title title title title"
+    "side side side side"
+    "section1 section1 section1 section1"
+    "section2 section2 section2 section2";
+  }
+
+  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+    content:" Ah c'est mieux ici, parfait ! Tiens, le Menu s'est planqué lui"
+  }
+}
+
+
+
