@@ -8,23 +8,25 @@
 
 /*------------- Grid Margins---------------*/
 
-.rcn-gridMargins {
+/* .rcn-gridMargins {
   padding-right:var(--rcn-semantic-padding-horizontal-900);
   padding-left:var(--rcn-semantic-padding-horizontal-900);
-}/* OK dans Excel */
-.rcn-gridMargins--menu {
+} */
+/* OK dans Excel */
+/* .rcn-gridMargins--menu {
   padding-right:var(--rcn-semantic-padding-horizontal-900);
   padding-left:var(--rcn-semantic-padding-horizontal-800);
-}/* OK dans Excel */
+} */
+/* OK dans Excel */
 
 /*=============== GRID ===============*/
 
-.rcn-grid {
+/* .rcn-grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
   grid-template-rows: auto;
-}
+} */
 
 .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
   content:"Top j'ai plein de place ici"
@@ -43,15 +45,15 @@
 
 @media (max-width: var(--rcn-semantic-breakpoint-large)) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-large)*/
  {
-  .rcn-grid {
+  /* .rcn-grid {
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-  }
+  } */
  
-  .rcn-gridMargins {
+  /* .rcn-gridMargins {
     padding-right:var(--rcn-semantic-padding-horizontal-700);
     padding-left:var(--rcn-semantic-padding-horizontal-700);
-  }
+  } */
 
   .rcn-gridTemplate--example{/* Class pour démonstration uniquement */
     grid-template-areas: 
@@ -64,26 +66,26 @@
     content:"Oulah ça se rétrécit, qu'est-ce qu'il se passe avec les deux sections d'à côté ?"
   }
 
-  .rcn-gridMargins--menu {
+  /* .rcn-gridMargins--menu {
       padding-right:var(--rcn-semantic-padding-horizontal-700);
       padding-left:var(--rcn-semantic-padding-horizontal-600);
-  }
+  } */
 }
 
 
 
 /*--- Medium Grid---*/
 @media (max-width: var(--rcn-semantic-breakpoint-medium)) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-medium)*/ {
-  .rcn-grid {
+  /* .rcn-grid {
   grid-template-columns: repeat(8, 1fr);
-  grid-column-gap:var(--rcn-semantic-gap-horizontal-500);
-  }
+  grid-column-gap:var(--rcn-semantic-gap-horizontal-500); 
+  }*/
 
-  .rcn-gridMargins {
+  /* .rcn-gridMargins {
     padding-right:var(--rcn-semantic-padding-horizontal-600);
     padding-left:var(--rcn-semantic-padding-horizontal-600);
 
-  }
+  } */
 
   .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
     grid-template-areas: 
@@ -96,25 +98,25 @@
     content:"Je commence à vraiment manquer de place, il va falloir me faire passer au dessus !"
   }
 
-  .rcn-gridMargins--menu {
+  /* .rcn-gridMargins--menu {
       padding-right:var(--rcn-semantic-padding-horizontal-600);
       padding-left:var(--rcn-semantic-padding-horizontal-400);
-  }
+  } */
 }
 
 /*--- Small Grid---*/
 
 @media (max-width: var(--rcn-semantic-breakpoint-small)) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-small)*/ {
-  .rcn-grid {
+  /* .rcn-grid {
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-  }
-
+  } */
+/* 
   .rcn-gridMargins {
     padding-right:var(--rcn-semantic-padding-horizontal-500);
     padding-left:var(--rcn-semantic-padding-horizontal-500);
 
-  }
+  } */
 
   .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
     grid-template-areas: 
@@ -128,15 +130,15 @@
     content:"Mais qu'est-ce que je fais au milieu ? C'est pas normal, je veux être au dessus !"
   }
 
-  .rcn-gridMargins--menu {
+  /* .rcn-gridMargins--menu {
       padding-right:var(--rcn-semantic-padding-horizontal-500);
       padding-left:var(--rcn-semantic-padding-horizontal-200);
-  }
+  } */
 }
 
 /*--- xSmall Grid---*/
 @media (max-width: var(--rcn-semantic-breakpoint-xsmall)) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-xsmall)*/ {
-  .rcn-grid {
+  /* .rcn-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap : var(--rcn-semantic-gap-horizontal-400);
   }
@@ -144,7 +146,7 @@
   .rcn-gridMargins {
     padding-right:var(--rcn-semantic-padding-horizontal-500);
     padding-left:var(--rcn-semantic-padding-horizontal-500);
-  }
+  } */
 
   .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
     grid-template-areas: 
