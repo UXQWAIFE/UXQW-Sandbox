@@ -29,6 +29,7 @@
 --rcn-semantic-margin-vertical-paragraph: var(--rcn-core-spacing-500);
 --rcn-semantic-margin-vertical-fieldset: var(--rcn-core-spacing-500);
 --rcn-semantic-margin-vertical-inputfieldblock: var(--rcn-core-spacing-500);
+--rcn-semantic-margin-vertical-stepper_sublist: var(--rcn-core-spacing-200);
 --rcn-semantic-gap-vertical-0: var(--rcn-core-spacing-0);
 --rcn-semantic-gap-vertical-50: var(--rcn-core-spacing-50);
 --rcn-semantic-gap-vertical-100: var(--rcn-core-spacing-100);
@@ -64,10 +65,10 @@
 --rcn-semantic-borderradius-300: var(--rcn-core-borderradius-300);
 --rcn-semantic-width-stepper_stepcircle: var(--rcn-core-sizing-600);
 --rcn-semantic-height-stepper_stepcircle: var(--rcn-core-sizing-600);
---rcn-semantic-breakpoint-large: var(--rcn-core-breakpoint-large);
---rcn-semantic-breakpoint-medium: var(--rcn-core-breakpoint-medium);
---rcn-semantic-breakpoint-small: var(--rcn-core-breakpoint-small);
---rcn-semantic-breakpoint-xsmal: var(--rcn-core-breakpoint-xsmall);
+--rcn-semantic-breakpoint-large: var(--rcn-core-breakpoint-200);
+--rcn-semantic-breakpoint-medium: var(--rcn-core-breakpoint-300);
+--rcn-semantic-breakpoint-small: var(--rcn-core-breakpoint-400);
+--rcn-semantic-breakpoint-xsmal: var(--rcn-core-breakpoint-500);
 --rcn-semantic-color-feedback-background-success: var(--rcn-core-color-mint-200);
 --rcn-semantic-color-feedback-background-information: var(--rcn-core-color-sky-200);
 --rcn-semantic-color-feedback-background-warning: var(--rcn-core-color-sun-200);
@@ -113,10 +114,10 @@
 --rcn-semantic-color-interaction-text_and_icon-default-onstandard: var(--rcn-core-color-black);
 --rcn-semantic-color-interaction-text_and_icon-default-selected: var(--rcn-core-color-product-400);
 --rcn-semantic-color-interaction-text_and_icon-default-link: var(--rcn-core-color-dsfr_france-500);
---rcn-semantic-color-interaction-text_and_icon-default-onprimary : var(--rcn-core-color-white);
+--rcn-semantic-color-interaction-text_and_icon-default-onprimary: var(--rcn-core-color-white);
 --rcn-semantic-color-interaction-text_and_icon-hover-primary: var(--rcn-core-color-product-600);
 --rcn-semantic-color-interaction-text_and_icon-hover-onstandard: var(--rcn-core-color-black);
---rcn-semantic-color-interaction-text_and_icon-hover-onprimary : var(--rcn-core-color-white);
+--rcn-semantic-color-interaction-text_and_icon-hover-onprimary: var(--rcn-core-color-white);
 --rcn-semantic-color-interaction-text_and_icon-hover-selected: var(--rcn-core-color-product-600);
 --rcn-semantic-color-interaction-text_and_icon-disabled: var(--rcn-core-color-grey-600);
 --rcn-semantic-color-interaction-text_and_icon-visited-link: var(--rcn-core-color-pine-600);
@@ -176,6 +177,7 @@
 --rcn-semantic-typography-textdecoration-link: var(--rcn-core-textdecoration-underline);
 --rcn-semantic-typography-textdecoration-link-hover: var(--rcn-core-textdecoration-none);
 --rcn-semantic-typography-textdecoration-menu_entry: var(--rcn-core-textdecoration-none);
+--rcn-semantic-typography-textdecoration-pagination_navigationlinks: var(--rcn-core-textdecoration-none);
 --rcn-semantic-typography-content-icon-dailymotion: "\e900";
 --rcn-semantic-typography-content-icon-favorite: "\e901";
 --rcn-semantic-typography-content-icon-volume_off: "\e905";
@@ -211,6 +213,7 @@
 --rcn-semantic-typography-content-icon-up: "\e928";
 --rcn-semantic-typography-content-icon-down: "\e929";
 --rcn-semantic-typography-content-icon-goto: "\e928";
+--rcn-semantic-typography-content-icon-arrow: "\e928";
 --rcn-semantic-typography-content-icon-next: "\e92d";
 --rcn-semantic-typography-content-icon-previous: "\e92e";
 --rcn-semantic-typography-content-icon-hide: "\e92a";
