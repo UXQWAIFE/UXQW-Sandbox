@@ -462,23 +462,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $contextMenuContainer = "<div id='contextMenu-$row' class='rcn-contextMenu' aria-hidden='true'>
                                   <button class='rcn-contextMenu__close rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
-                                    <p>Fermer</p>
+                                    <p class='sr-only'>Fermer</p>
                                   </button>
                                   <ul class='rcn-contextMenu__list'>
-                                    <li>
+                                    <li class='rcn-contextMenu__listItem'>
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
-                                    <li>
+                                    <li class='rcn-contextMenu__listItem'>
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
-                                    <li>
+                                    <li class='rcn-contextMenu__listItem'>
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
-                                    <li>
+                                    <li class='rcn-contextMenu__listItem'>
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button>Supprimer la ligne</button>
+                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
                                 </div>";
     
         $resultat .= $contextMenuContainer;

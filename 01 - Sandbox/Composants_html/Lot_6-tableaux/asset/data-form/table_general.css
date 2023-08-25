@@ -143,6 +143,8 @@
     border-top: 0.5rem solid transparent;
     border-bottom: 0.5rem solid transparent; 
     border-right:0.5rem solid white; 
+    filter: drop-shadow(-2px 0 0 var(--rcn-semantic-color-static-border-standard));
+
 }
 .rcn-contextMenu[aria-hidden="true"] {
     display:none;
@@ -158,12 +160,28 @@
 .rcn-contextMenu__list {
     display: flex;
     flex-direction: column;
-    gap:var(--rcn-semantic-gap-horizontal-100);
 }
 
-.rcn-contextMenu__link {
-    border:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-background-default-standard)
+.rcn-contextMenu__listItem {
+    display: flex;
+    border-width:0 0 0 var(--rcn-semantic-borderwidth-300);
+    border-style:solid; 
+    border-color:var(--rcn-semantic-color-interaction-background-default-standard);
 }
+.rcn-contextMenu__listItem:hover {
+    border-color:var(--rcn-semantic-color-interaction-border-default-primary);
+    background:var(--rcn-semantic-color-interaction-background-hover-standard);
+}
+.rcn-contextMenu__link {
+    padding: var(--rcn-semantic-padding-horizontal-100) var(--rcn-semantic-padding-horizontal-200);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard)
+}
+.rcn-contextMenu__Delete {
+    padding: var(--rcn-semantic-padding-horizontal-200);
+    color:var(--rcn-semantic-color-feedback-text_and_icon-error);
+    border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+}
+
 
 /* Fonctionnalité */
 
@@ -172,6 +190,8 @@
     position: sticky;
     z-index: 10;
     background-color: #fff;
+    filter: drop-shadow(0 0 1px var(--rcn-semantic-color-static-border-standard));
+
 }
 
 .rcn-tableData--sticked:first-child {
@@ -182,7 +202,6 @@
 }
 .rcn-tableData--sticked:nth-of-type(2) {
     left:var(--th__width--offsetLeft-0);
-
 }
 
 .rcn-tableData--sticked:last-child {

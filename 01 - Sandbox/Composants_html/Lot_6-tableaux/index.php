@@ -412,7 +412,7 @@ print_r($_SESSION);
 
 		// Appelez la fonction updateBandeau une première fois pour initialiser l'état du bandeau
 		updateBandeau();
-		if (document.querySelector('.rcn-tableData--sticked').length > 1) {
+		if (document.querySelectorAll('.rcn-tableData--sticked').length > 1) {
 			// Récupérer la largeur du premier <th> de sticky-thead-1
 			const thSelect = document.querySelector('th.rcn-tableData--sticked:first-child');
 			const header1Width = thSelect.scrollWidth;
