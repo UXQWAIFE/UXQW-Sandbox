@@ -43,7 +43,7 @@
 
 /*--- Large Grid---*/
 
-@media (max-width: var(--rcn-semantic-breakpoint-large)) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-large)*/
+@media (max-width: 1247px) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-large)*/
  {
   /* .rcn-grid {
     grid-template-columns: repeat(12, 1fr);
@@ -75,7 +75,7 @@
 
 
 /*--- Medium Grid---*/
-@media (max-width: var(--rcn-semantic-breakpoint-medium)) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-medium)*/ {
+@media (max-width: 991px) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-medium)*/ {
   /* .rcn-grid {
   grid-template-columns: repeat(8, 1fr);
   grid-column-gap:var(--rcn-semantic-gap-horizontal-500); 
@@ -106,7 +106,7 @@
 
 /*--- Small Grid---*/
 
-@media (max-width: var(--rcn-semantic-breakpoint-small)) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-small)*/ {
+@media (max-width: 767px) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-small)*/ {
   /* .rcn-grid {
     grid-template-columns: repeat(8, 1fr);
     grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
@@ -137,7 +137,7 @@
 }
 
 /*--- xSmall Grid---*/
-@media (max-width: var(--rcn-semantic-breakpoint-xsmall)) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-xsmall)*/ {
+@media (max-width: 575px) /*semantic token à intégrer : var(--rcn-semantic-breakpoint-xsmall)*/ {
   /* .rcn-grid {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap : var(--rcn-semantic-gap-horizontal-400);
