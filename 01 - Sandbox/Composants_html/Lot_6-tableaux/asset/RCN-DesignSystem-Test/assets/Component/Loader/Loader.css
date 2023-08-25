@@ -1,0 +1,35 @@
+.rcn-loader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rcn-semantic-gap-vertical-400);
+  align-items: center;
+}
+
+.rcn-loader__animationZone {
+  display: flex;
+  flex-direction: row;
+  gap: var(--rcn-semantic-gap-horizontal-400);
+  align-items: center;
+  justify-content: center;
+}
+
+.rcn-loader__circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: var(--rcn-semantic-color-static-background-primary);
+  animation: grow-shrink 1.5s ease-in-out infinite;
+}
+
+.rcn-loader__circle--first {
+  animation-delay: 0s;
+}
+
+.rcn-loader__circle--second {
+  animation-delay: 0.3s;
+}
+
+.rcn-loader__circle--third {
+  animation-delay: 0.6s;
+}
+

@@ -1,0 +1,30 @@
+.rcn-loader {
+    display: flex;
+    flex-direction: column;
+    gap: $rcn-semantic-gap-vertical-400;
+    align-items: center;
+  &__animationZone {
+      display: flex;
+      flex-direction: row;
+      gap: $rcn-semantic-gap-horizontal-400;
+      align-items: center;
+      justify-content: center;
+  }
+  &__circle {
+      height: 24px;
+      width: 24px;
+      border-radius: 50%;
+      background-color: $rcn-semantic-color-static-background-primary;
+      animation: grow-shrink 1.5s ease-in-out infinite;
+    &--first {
+        animation-delay: 0s;
+    }
+    &--second {
+        animation-delay: 0.3s;
+    }
+    &--third {
+        animation-delay: 0.6s;
+    }
+  }
+}
+

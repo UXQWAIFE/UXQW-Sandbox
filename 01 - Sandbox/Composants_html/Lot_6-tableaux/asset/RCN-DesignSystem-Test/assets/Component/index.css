@@ -1,0 +1,86 @@
+/* 
+Voici les fichiers CSS des Composants du Design System du Référentiel de Conception Numérique
+Pour voir les règles d'intégrations des éléments <html> veuillez vous referrer au https://aife.economie.gouv.fr/referentiel/
+*/
+
+/*Fondamentaux*/
+@import url("Typography/Typography.css");/*lot1*/
+@import url("Icon/Icon.css");/*lot1*/
+@import url("GlobalContainers/GlobalContainers.css");/*lot1*/
+@import url("Link/Link.css");/*lot1*/
+@import url("Grids/Grids.css");/*lot4*/
+@import url("Animations/Animations.css");/*lot2*/
+/*Composants*/
+@import url("FormInputs/FormInputs.css");/*lot3*/
+@import url("Breadcrumb/Breadcrumb.css");/*lot1*/
+@import url("Button/Button.css");/*lot1*/
+@import url("BackToTop/BackToTop.css");/*lot1*/
+@import url("Captcha/Captcha.css");/*lot1*/
+@import url("Chips/Chips.css");/*lot1*/
+@import url("Loader/Loader.css");/*lot1*/
+@import url("Menu/Menu.css");/* Lot 4 */
+/*Modules*/
+@import url("ActionsBanner/ActionsBanner.css");/*lot4*/
+@import url("Notification/Notification.css");/*lot1*/
+@import url("Tooltip/Tooltip.css");/*lot1*/
+@import url("Accordions/Accordions.css");/*lot2*/
+@import url("Tabs/Tabs.css");/*lot2*/
+@import url("Card/Card.css");/*lot1*/
+@import url("Modal/Modal.css");/*lot1*/
+@import url("Pagination/Pagination.css");/* Lot 4 */
+@import url("Stepper/Stepper.css");/* Lot 4 */
+@import url("Header/Header.css");/*lot2*/
+@import url("Footer/Footer.css");/*lot2*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

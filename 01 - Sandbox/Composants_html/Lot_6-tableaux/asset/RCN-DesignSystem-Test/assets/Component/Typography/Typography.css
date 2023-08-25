@@ -1,0 +1,100 @@
+.rcn-html {
+  font-family: var(--rcn-semantic-typography-fontfamily-text);
+  font-weight: var(--rcn-semantic-typography-fontweight-body-component);
+  font-size: var(--rcn-semantic-typography-fontsize-body);
+  line-height: var(--rcn-semantic-typography-lineheight-body-component);
+  color: var(--rcn-semantic-color-static-text_and_icon-onstandard);
+}
+
+.rcn-quote {
+  font-weight: var(--rcn-semantic-typography-fontweight-quote);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+}
+
+.rcn-p {
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
+}
+
+.rcn-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.rcn-h1 {
+  font-size: var(--rcn-semantic-typography-fontsize-h1);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
+}
+
+.rcn-h1--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
+  margin-bottom: var(--rcn-semantic-margin-vertical-title);
+}
+
+.rcn-h1bis {
+  font-size: var(--rcn-semantic-typography-fontsize-h_alt-xs);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
+}
+
+.rcn-h1bis--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
+  margin-bottom: var(--rcn-semantic-margin-vertical-title);
+}
+
+.rcn-h2 {
+  font-size: var(--rcn-semantic-typography-fontsize-h2);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
+}
+
+.rcn-h2--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
+  margin-bottom: var(--rcn-semantic-margin-vertical-title);
+}
+
+.rcn-h3 {
+  font-size: var(--rcn-semantic-typography-fontsize-h3);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
+}
+
+.rcn-h3--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
+  margin-bottom: var(--rcn-semantic-margin-vertical-title);
+}
+
+.rcn-h4 {
+  font-size: var(--rcn-semantic-typography-fontsize-h4);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
+}
+
+.rcn-h4--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
+  margin-bottom: var(--rcn-semantic-margin-vertical-title);
+}
+
+.rcn-h5 {
+  font-size: var(--rcn-semantic-typography-fontsize-h5);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
+}
+
+.rcn-h5--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
+  margin-bottom: var(--rcn-semantic-margin-vertical-title);
+}
+
+.rcn-h6 {
+  font-size: var(--rcn-semantic-typography-fontsize-h6);
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
+}
+
+.rcn-h6--editorial {
+  line-height: var(--rcn-semantic-typography-lineheight-heading);
+  margin-bottom: var(--rcn-semantic-margin-vertical-title);
+}
+

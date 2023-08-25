@@ -1,0 +1,8 @@
+/* 
+Voici les fichiers CSS des Composants du Design System du Référentiel de Conception Numérique pour le produit Chorus
+Pour voir les règles d'intégrations des éléments <html> veuillez vous referrer au https://aife.economie.gouv.fr/referentiel/
+*/
+@import url("Resets.css");
+@import url("Core/Core_chorusPro.css");
+@import url("Semantic/SemanticTokens.css");
+@import url("Component/index.css");

@@ -1,0 +1,39 @@
+.rcn-link {
+  gap: var(--rcn-semantic-gap-horizontal-0);
+  display: flex;
+  align-items: baseline;
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
+  text-decoration: var(--rcn-semantic-typography-textdecoration-link);
+  width: fit-content;
+  cursor: pointer;
+}
+
+.rcn-link:visited {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-visited-link);
+}
+
+.rcn-link[disabled] {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
+  cursor: not-allowed;
+}
+
+.rcn-link__icon--external::before {
+  content: var(--rcn-semantic-typography-content-icon-external_link);
+}
+
+.rcn-link__icon--external {
+  order: 2;
+}
+
+.rcn-link__icon--download::before {
+  content: var(--rcn-semantic-typography-content-icon-download);
+}
+
+.rcn-link__icon--download {
+  order: -1;
+}
+
+.rcn-link:hover {
+  text-decoration: var(--rcn-semantic-typography-textdecoration-link-hover);
+}
+
