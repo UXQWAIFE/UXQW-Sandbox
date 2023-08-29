@@ -1,0 +1,15 @@
+:root{
+$rcn-backToTop-padding: $rcn-semantic-padding-horizontal-400 $rcn-semantic-padding-vertical-400;
+$rcn-backToTop-border-radius: $rcn-semantic-borderradius-300;
+$rcn-backToTop-background-color: $rcn-semantic-color-interaction-background-default-primary;
+$rcn-backToTop-border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-back_to_top;
+$rcn-backToTop-text-align: center;
+$rcn-backToTop-position: fixed;
+$rcn-backToTop-width: 3rem;
+$rcn-backToTop-height: 3rem;
+$rcn-backToTop__icon-color: $rcn-semantic-color-interaction-text_and_icon-default-onprimary;
+$rcn-backToTop__icon-in_before-content: $rcn-semantic-typography-content-icon-up;
+$rcn-backToTop-if_hover-background-color: $rcn-semantic-color-interaction-background-hover-primary;
+$rcn-backToTop-if_active-background-color: $rcn-semantic-color-interaction-background-hover-primary;
+
+}

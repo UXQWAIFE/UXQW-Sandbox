@@ -1,0 +1,42 @@
+.rcn-actionsBanner {
+  display: flex;
+  flex-direction: row;
+  gap: var(--rcn-semantic-gap-horizontal-400);
+  border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+  padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-0);
+  flex-wrap: wrap;
+}
+
+.rcn-actionsBanner .rcn-button--primary {
+  order: 2;
+}
+
+.rcn-actionsBanner .rcn-button--secondary {
+  order: 1;
+}
+
+.rcn-actionsBanner .rcn-link {
+  order: -1;
+}
+
+.rcn-actionsBanner__primaryActions {
+  order: 2;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: var(--rcn-semantic-gap-horizontal-300);
+}
+
+.rcn-actionsBanner__secondaryActions {
+  order: 1;
+  justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  flex-direction: row;
+  gap: var(--rcn-semantic-gap-horizontal-300);
+}
+

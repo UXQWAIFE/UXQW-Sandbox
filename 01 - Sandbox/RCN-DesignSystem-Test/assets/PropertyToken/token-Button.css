@@ -46,7 +46,7 @@
 --rcn-toggle__indicator-border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-button_toggle_off);
 --rcn-toggle__indicator-height: 18px;
 --rcn-toggle__indicator-width: 18px;
---rcn-toggle__indicator-border-radius: 50%;
+--rcn-toggle__indicator-border-radius: 0.5;
 --rcn-toggle-if_hover-background-color: var(--rcn-semantic-color-interaction-background-hover-button_toggle_off);
 --rcn-toggle-if_selected-background-color: var(--rcn-semantic-color-interaction-background-default-primary);
 --rcn-toggle-if_selected-border-color: var(--rcn-semantic-color-interaction-border-default-onprimary);

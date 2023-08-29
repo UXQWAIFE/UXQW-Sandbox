@@ -1,0 +1,17 @@
+:root{
+$rcn-chips-padding: $rcn-semantic-padding-vertical-200 $rcn-semantic-padding-horizontal-300;
+$rcn-chips-border-radius: $rcn-semantic-borderradius-300;
+$rcn-chips-color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+$rcn-chips-gap: $rcn-semantic-gap-horizontal-200;
+$rcn-chips-display: flex;
+$rcn-chips-align-items: flex-start;
+$rcn-chips-background-color: $rcn-semantic-color-static-background-chips;
+$rcn-chips-justify-content: space-between;
+$rcn-chips-width: fit-content;
+$rcn-chips--interactive-background-color: $rcn-semantic-color-interaction-background-default-chips;
+$rcn-chips--interactive-border: none;
+$rcn-chips--interactive-if_hover-background-color: $rcn-semantic-color-interaction-background-hover-chips;
+$rcn-chips__icon-in_before-content: $rcn-semantic-typography-content-icon-close_chips;
+$rcn-chips__icon-order: 2;
+
+}

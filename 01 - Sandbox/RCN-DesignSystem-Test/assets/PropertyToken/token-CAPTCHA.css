@@ -14,6 +14,12 @@
 --rcn-captcha__inputZone-width: auto;
 --rcn-captcha__inputZone-justify-content: space-between;
 --rcn-captcha__inputField-flex-grow: 1;
---rcn-captcha__button-border-radius: 0px;
+--rcn-captcha__button-border-radius: calc(var(--rcn-semantic-borderradius-100) - 1px);
+--rcn-captcha__button-padding-top: var(--rcn-semantic-padding-vertical-300);
+--rcn-captcha__button-padding-bottom: var(--rcn-semantic-padding-vertical-300);
+--rcn-captcha__button-line-height: 1;
+--rcn-captcha__button-border-right: none;
+--rcn-captcha__button-border-top: none;
+--rcn-captcha__button-border-bottom: none;
 
 }

@@ -1,0 +1,33 @@
+:root{
+$rcn-accordions-display: flex;
+$rcn-accordions-flex-direction: column;
+$rcn-accordions-width: 1;
+$rcn-accordions-align-items: stretch;
+$rcn-accordions-border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
+$rcn-accordions__heading-border-top: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
+$rcn-accordions__heading-display: flex;
+$rcn-accordions__heading-flex-direction: row;
+$rcn-accordions__heading-justify-content: space-between;
+$rcn-accordions__heading-align-items: center;
+$rcn-accordions__heading-padding-left: $rcn-semantic-padding-horizontal-400;
+$rcn-accordions__heading-padding-right: $rcn-semantic-padding-horizontal-400;
+$rcn-accordions__heading-padding-top: $rcn-semantic-padding-vertical-300;
+$rcn-accordions__heading-padding-bottom: $rcn-semantic-padding-vertical-400;
+$rcn-accordions__heading-background-color: $rcn-semantic-color-interaction-background-default-standard;
+$rcn-accordions__heading-if_hover-background-color: $rcn-semantic-color-interaction-background-hover-standard;
+$rcn-accordions__heading-if_hover-color: $rcn-semantic-color-interaction-text_and_icon-hover-onstandard;
+$rcn-accordions__heading-if_expanded-true-color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+$rcn-accordions__heading-if_expanded-true-font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
+$rcn-accordions__heading-if_expanded-true-border-top: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
+$rcn-accordions__heading-if_expanded-true-if_hover-color: $rcn-semantic-color-interaction-text_and_icon-hover-selected;
+$rcn-accordions__heading-if_expanded-true-if_hover-border-top: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-hover-selected;
+$rcn-accordions__headingIcon-in_before-content: $rcn-semantic-typography-content-icon-expand_vertical;
+$rcn-accordions__heading-if_expanded-true___rcn-accordions__headingIcon-in_before-content: $rcn-semantic-typography-content-icon-collapse_vertical;
+$rcn-accordions__content-padding-left: $rcn-semantic-padding-horizontal-400;
+$rcn-accordions__content-padding-right: $rcn-semantic-padding-horizontal-400;
+$rcn-accordions__content-padding-top: $rcn-semantic-padding-vertical-400;
+$rcn-accordions__content-padding-bottom: $rcn-semantic-padding-vertical-600;
+$rcn-accordions__content-background-color: $rcn-semantic-color-static-background-standard;
+$rcn-accordions__content-if_hidden-height: 0px !important;
+
+}

@@ -1,0 +1,35 @@
+:root{
+$rcn-gridMargins-padding-right: $rcn-semantic-padding-horizontal-900;
+$rcn-gridMargins-padding-left: $rcn-semantic-padding-horizontal-900;
+$rcn-gridMargins--menu-padding-right: $rcn-semantic-padding-horizontal-900;
+$rcn-gridMargins--menu-padding-left: $rcn-semantic-padding-horizontal-800;
+$rcn-grid-display: grid;
+$rcn-grid-grid-template-columns: repeat(12, 1fr);
+$rcn-grid-grid-column-gap: $rcn-semantic-gap-horizontal-500;
+$rcn-grid-grid-template-rows: auto;
+$rcn-LgridMargins-padding-right: $rcn-semantic-padding-horizontal-700;
+$rcn-LgridMargins-padding-left: $rcn-semantic-padding-horizontal-700;
+$rcn-LgridMargins--menu-padding-right: $rcn-semantic-padding-horizontal-700;
+$rcn-LgridMargins--menu-padding-left: $rcn-semantic-padding-horizontal-600;
+$rcn-Lgrid-grid-template-columns: repeat(12, 1fr);
+$rcn-Lgrid-grid-column-gap: $rcn-semantic-gap-horizontal-500;
+$rcn-MgridMargins-padding-right: $rcn-semantic-padding-horizontal-600;
+$rcn-MgridMargins-padding-left: $rcn-semantic-padding-horizontal-600;
+$rcn-MgridMargins--menu-padding-right: $rcn-semantic-padding-horizontal-600;
+$rcn-MgridMargins--menu-padding-left: $rcn-semantic-padding-horizontal-400;
+$rcn-Mgrid-grid-template-columns: repeat(8, 1fr);
+$rcn-Mgrid-grid-column-gap: $rcn-semantic-gap-horizontal-500;
+$rcn-SgridMargins-padding-right: $rcn-semantic-padding-horizontal-500;
+$rcn-SgridMargins-padding-left: $rcn-semantic-padding-horizontal-500;
+$rcn-SgridMargins--menu-padding-right: $rcn-semantic-padding-horizontal-500;
+$rcn-SgridMargins--menu-padding-left: $rcn-semantic-padding-horizontal-200;
+$rcn-Sgrid-grid-template-columns: repeat(8, 1fr);
+$rcn-Sgrid-grid-column-gap: $rcn-semantic-gap-horizontal-500;
+$rcn-XSgridMargins-padding-right: $rcn-semantic-padding-horizontal-500;
+$rcn-XSgridMargins-padding-left: $rcn-semantic-padding-horizontal-500;
+$rcn-XSgridMargins--menu-padding-right: $rcn-semantic-padding-horizontal-500;
+$rcn-XSgridMargins--menu-padding-left: $rcn-semantic-padding-horizontal-500;
+$rcn-XSgrid-grid-template-columns: repeat(4, 1fr);
+$rcn-XSgrid-grid-column-gap: $rcn-semantic-gap-horizontal-400;
+
+}

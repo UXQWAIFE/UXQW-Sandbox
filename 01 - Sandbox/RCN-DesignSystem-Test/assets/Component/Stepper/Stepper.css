@@ -1,0 +1,151 @@
+.rcn-stepper {
+  grid-area: stepper;
+  margin-bottom: var(--rcn-semantic-margin-vertical-section);
+}
+
+.rcn-stepper__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--rcn-semantic-gap-vertical-400);
+  align-items: flex-start;
+  position: relative;
+}
+
+.rcn-stepper__list::before {
+  content: ;
+  width: var(--rcn-semantic-borderwidth-100);
+  height: calc(100% - var(--rcn-semantic-height-stepper_stepcircle));
+  background-color: var(--rcn-semantic-color-static-border-divider_strong);
+  position: absolute;
+  left: calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 2) + var(--rcn-semantic-borderwidth-100));
+  z-index: -1;
+}
+
+.rcn-stepper__subList {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--rcn-semantic-margin-vertical-stepper_sublist);
+  gap: var(--rcn-semantic-gap-horizontal-400);
+}
+
+.rcn-stepper__step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--rcn-semantic-gap-horizontal-400);
+}
+
+.rcn-stepper__number {
+  width: var(--rcn-semantic-width-stepper_stepcircle);
+  height: var(--rcn-semantic-height-stepper_stepcircle);
+  border-radius: var(--rcn-semantic-borderradius-300);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  min-width: var(--rcn-semantic-width-stepper_stepcircle);
+  background-color: var(--rcn-semantic-color-static-background-standard);
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+  color: var(--rcn-semantic-color-static-text_and_icon-onstandard);
+}
+
+.rcn-stepper__stepTitle {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+
+.rcn-stepper__indicator {
+  width: calc(var(--rcn-semantic-width-stepper_stepcircle) / 3);
+  height: calc(var(--rcn-semantic-height-stepper_stepcircle) / 3);
+  margin-left: calc(var(--rcn-semantic-height-stepper_stepcircle) / 3);
+  margin-right: calc(var(--rcn-semantic-height-stepper_stepcircle) / 3);
+  border-radius: var(--rcn-semantic-borderradius-300);
+  background-color: var(--rcn-semantic-color-static-background-standard);
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+  color: var(--rcn-semantic-color-static-text_and_icon-onstandard);
+}
+
+.rcn-stepper__step--completed .rcn-stepper__number {
+  background-color: var(--rcn-semantic-color-static-background-primary);
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
+  color: var(--rcn-semantic-color-static-text_and_icon-onprimary);
+}
+
+.rcn-stepper__step--completed .rcn-stepper__stepTitle {
+  color: var(--rcn-semantic-color-static-text_and_icon-onstandard);
+}
+
+.rcn-stepper__step--completed .rcn-stepper__indicator {
+  background-color: var(--rcn-semantic-color-static-background-primary);
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
+  color: var(--rcn-semantic-color-static-text_and_icon-onprimary);
+}
+
+.rcn-stepper__step--current .rcn-stepper__number {
+  background-color: var(--rcn-semantic-color-static-background-standard);
+  border: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+  width: calc(var(--rcn-semantic-width-stepper_stepcircle) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))));
+  height: calc(var(--rcn-semantic-height-stepper_stepcircle) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))));
+  min-width: calc(var(--rcn-semantic-width-stepper_stepcircle) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))));
+  font-weight: var(--rcn-semantic-typography-fontweight-label);
+}
+
+.rcn-stepper__step--current .rcn-stepper__stepTitle {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+  font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
+  text-decoration: none;
+}
+
+.rcn-stepper__step--current .rcn-stepper__indicator {
+  background-color: var(--rcn-semantic-color-static-background-standard);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+  font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
+  width: calc(calc(var(--rcn-semantic-width-stepper_stepcircle) / 3) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))));
+  height: calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 3) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))));
+  border: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
+}
+
+.rcn-stepper__step--disabled .rcn-stepper__number {
+  background-color: var(--rcn-semantic-color-static-background-stepper_step_unreachable);
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-stepper_step_unreachable);
+  color: var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
+}
+
+.rcn-stepper__step--disabled .rcn-stepper__stepTitle {
+  color: var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
+  text-decoration: none;
+}
+
+.rcn-stepper__step--disabled .rcn-stepper__indicator {
+  background-color: var(--rcn-semantic-color-static-background-stepper_step_unreachable);
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-stepper_step_unreachable);
+  color: var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
+}
+
+.rcn-stepper__list--horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: var(--rcn-semantic-gap-horizontal-500);
+}
+
+.rcn-stepper__list--horizontal::before {
+  content: ;
+  width: calc(100% - calc(calc(100% - calc(calc(rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / rcn-stepper-numberofsteps));
+  height: var(--rcn-semantic-borderwidth-100);
+  left: calc(calc(100% - calc(calc(rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / calc(2 *  rcn-stepper-numberofsteps);
+  background-color: var(--rcn-semantic-color-static-border-divider_strong);
+  position: absolute;
+  top: calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 2) + var(--rcn-semantic-borderwidth-100));
+  z-index: -1;
+}
+
+.rcn-stepper__list--horizontal .rcn-stepper__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--rcn-semantic-gap-vertical-300);
+  flex: 1 1 0px;
+  text-align: center;
+}
+

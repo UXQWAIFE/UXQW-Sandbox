@@ -1,0 +1,48 @@
+:root{
+$rcn-tabs-display: flex;
+$rcn-tabs-flex-direction: column;
+$rcn-tabs-align-items: stretch;
+$rcn-tabs__labelsGroup-display: flex;
+$rcn-tabs__labelsGroup-flex-direction: row;
+$rcn-tabs__labelsGroup-align-items: flex-end;
+$rcn-tabs__labelsGroup-justify-content: flex-start;
+$rcn-tabs__labelsGroup-gap: $rcn-semantic-gap-horizontal-200;
+$rcn-tabs__labelsGroup-padding-left: $rcn-semantic-padding-horizontal-400;
+$rcn-tabs__labelsGroup-border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+$rcn-tabs__labelsGroup-border-top: none;
+$rcn-tabs__labelsGroup-border-left: none;
+$rcn-tabs__labelsGroup-border-right: none;
+$rcn-tabs__label-display: flex;
+$rcn-tabs__label-flex-direction: row;
+$rcn-tabs__label-align-items: center;
+$rcn-tabs__label-gap: $rcn-semantic-gap-horizontal-200;
+$rcn-tabs__label-padding: $rcn-semantic-padding-vertical-200 $rcn-semantic-padding-horizontal-300;
+$rcn-tabs__label-border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+$rcn-tabs__label-color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+$rcn-tabs__label-background-color: $rcn-semantic-color-interaction-background-default-standard;
+$rcn-tabs__label-margin-bottom: -1px;
+$rcn-tabs__label-if_selected-true-color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+$rcn-tabs__label-if_selected-true-padding-top: $rcn-semantic-padding-vertical-150;
+$rcn-tabs__label-if_selected-true-border-top: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
+$rcn-tabs__label-if_selected-true-border-bottom-color: $rcn-semantic-color-interaction-border-default-onprimary;
+$rcn-tabs__label-if_selected-true-font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
+$rcn-tabs__label-if_hover-background-color: $rcn-semantic-color-interaction-background-hover-standard;
+$rcn-tabs__label-if_hover-color: $rcn-semantic-color-interaction-text_and_icon-hover-onstandard;
+$rcn-tabs__label-if_selected-true-if_hover-border-top-color: $rcn-semantic-color-interaction-border-hover-selected;
+$rcn-tabs__label-if_selected-true-if_hover-border-bottom-color: $rcn-semantic-color-interaction-border-default-onprimary;
+$rcn-tabs__label-if_selected-true-if_hover-color: $rcn-semantic-color-interaction-text_and_icon-hover-selected;
+$rcn-tabs__label-if_disabled-color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+$rcn-tabs__label-if_disabled-background-color: $rcn-semantic-color-interaction-background-disabled-standard;
+$rcn-tabs__label-if_disabled-border-color: $rcn-semantic-color-interaction-border-disabled;
+$rcn-tabs__label-if_disabled-border-bottom-color: $rcn-semantic-color-interaction-border-default-standard;
+$rcn-tabs__contentZone-padding: $rcn-semantic-padding-vertical-600 $rcn-semantic-padding-horizontal-600;
+$rcn-tabs__contentZone-border-top: none;
+$rcn-tabs__contentZone-border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+$rcn-tabs__contentZone-border-right: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+$rcn-tabs__contentZone-border-left: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+$rcn-tabs__contentZone-if_hidden-height: 0px;
+$rcn-tabs--fullPage___rcn-tabs__contentZone-border-right: none;
+$rcn-tabs--fullPage___rcn-tabs__contentZone-border-left: none;
+$rcn-tabs--fullPage___rcn-tabs__contentZone-border-bottom: none;
+
+}

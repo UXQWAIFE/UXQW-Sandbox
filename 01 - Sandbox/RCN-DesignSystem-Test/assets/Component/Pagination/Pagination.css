@@ -1,0 +1,91 @@
+.rcn-pagination__rowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--rcn-semantic-margin-vertical-inputfieldblock);
+}
+
+.rcn-pagination__rowContainer .rcn-inputFieldBloc {
+  margin: unset;
+}
+
+.rcn-pagination__label {
+  font-weight: var(--rcn-semantic-typography-fontweight-body-component);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.rcn-pagination__navigationList {
+  display: flex;
+  align-items: center;
+  gap: var(--rcn-semantic-gap-vertical-400);
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.rcn-pagination__navigationLink {
+  display: flex;
+  flex-direction: row;
+  padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-horizontal-200);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+  text-decoration: var(--rcn-semantic-typography-textdecoration-pagination_navigationlinks);
+  border-radius: var(--rcn-semantic-borderradius-100);
+  border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
+  border-top: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent);
+}
+
+.rcn-pagination__navigationLink:visited {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+
+.rcn-pagination__navigationLink:hover {
+  background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+}
+
+".rcn-pagination__navigationLink[aria-current=""page""]" {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+  font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
+  border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
+}
+
+".rcn-pagination__navigationLink[aria-current=""page""]:hover" {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
+  border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
+}
+
+.rcn-pagination__previousIcon {
+  order: -1;
+}
+
+.rcn-pagination__previousIcon::before {
+  content: var(--rcn-semantic-typography-content-icon-previous);
+}
+
+.rcn-pagination__nextIcon {
+  order: 2;
+}
+
+.rcn-pagination__nextIcon::before {
+  content: var(--rcn-semantic-typography-content-icon-next);
+}
+
+.rcn-pagination__goToPageButton {
+  align-self: stretch;
+  padding-left: var(--rcn-semantic-padding-horizontal-200);
+  padding-right: var(--rcn-semantic-padding-horizontal-200);
+  border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+}
+
+.rcn-pagination__goToPageButton:hover {
+  background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+}
+
+.rcn-pagination__goToPageButton::before {
+  content: var(--rcn-semantic-typography-content-icon-arrow);
+  display: inline-block;
+  transform: rotate(90deg);
+}
+

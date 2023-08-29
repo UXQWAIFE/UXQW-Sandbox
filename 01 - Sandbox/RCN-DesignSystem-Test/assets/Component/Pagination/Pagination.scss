@@ -1,0 +1,81 @@
+.rcn-pagination {
+  &__rowContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: $rcn-semantic-margin-vertical-inputfieldblock;
+    .rcn-inputFieldBloc {
+        margin: unset;
+    }
+  }
+  &__label {
+      font-weight: $rcn-semantic-typography-fontweight-body-component;
+      flex-wrap: wrap;
+      align-items: center;
+  }
+  &__navigationList {
+      display: flex;
+      align-items: center;
+      gap: $rcn-semantic-gap-vertical-400;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+  &__navigationLink {
+      display: flex;
+      flex-direction: row;
+      padding: $rcn-semantic-padding-vertical-200 $rcn-semantic-padding-horizontal-200;
+      color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+      text-decoration: $rcn-semantic-typography-textdecoration-pagination_navigationlinks;
+      border-radius: $rcn-semantic-borderradius-100;
+      border-bottom: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-transparent;
+      border-top: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-transparent;
+    &:visited {
+        color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+    }
+    &:hover {
+        background-color: $rcn-semantic-color-interaction-background-hover-standard;
+    }
+  }
+  &__previousIcon {
+      order: -1;
+    &::before {
+        content: $rcn-semantic-typography-content-icon-previous;
+    }
+  }
+  &__nextIcon {
+      order: 2;
+    &::before {
+        content: $rcn-semantic-typography-content-icon-next;
+    }
+  }
+  &__goToPageButton {
+      align-self: stretch;
+      padding-left: $rcn-semantic-padding-horizontal-200;
+      padding-right: $rcn-semantic-padding-horizontal-200;
+      border-left: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+      color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+    &:hover {
+        background-color: $rcn-semantic-color-interaction-background-hover-standard;
+    }
+    &::before {
+        content: $rcn-semantic-typography-content-icon-arrow;
+        display: inline-block;
+        transform: rotate(90deg);
+    }
+  }
+}
+
+".rcn-pagination {
+  &__navigationLink[aria-current=""page""]" {
+      color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+      font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
+      border-bottom: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
+  }
+  &__navigationLink[aria-current=""page""]:hover" {
+      color: $rcn-semantic-color-interaction-text_and_icon-hover-selected;
+      border-bottom: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-hover-selected;
+  }
+}
+

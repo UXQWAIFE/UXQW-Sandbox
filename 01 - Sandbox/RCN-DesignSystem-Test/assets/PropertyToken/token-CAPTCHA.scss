@@ -1,0 +1,25 @@
+:root{
+$rcn-captcha-gap: $rcn-semantic-gap-vertical-500;
+$rcn-captcha-display: flex;
+$rcn-captcha-flex-direction: column;
+$rcn-captcha-max-width: 500px;
+$rcn-captcha__title-font-weight: $rcn-semantic-typography-fontweight-label;
+$rcn-captcha__image-background-color: $rcn-semantic-color-static-background-standard;
+$rcn-captcha__image-min-width: 240px;
+$rcn-captcha__image-min-height: 80px;
+$rcn-captcha__inputZone-align-items: center;
+$rcn-captcha__inputZone-display: flex;
+$rcn-captcha__inputZone-flex-direction: row;
+$rcn-captcha__inputZone-gap: 0;
+$rcn-captcha__inputZone-width: auto;
+$rcn-captcha__inputZone-justify-content: space-between;
+$rcn-captcha__inputField-flex-grow: 1;
+$rcn-captcha__button-border-radius: calc($rcn-semantic-borderradius-100 - 1px);
+$rcn-captcha__button-padding-top: $rcn-semantic-padding-vertical-300;
+$rcn-captcha__button-padding-bottom: $rcn-semantic-padding-vertical-300;
+$rcn-captcha__button-line-height: 1;
+$rcn-captcha__button-border-right: none;
+$rcn-captcha__button-border-top: none;
+$rcn-captcha__button-border-bottom: none;
+
+}

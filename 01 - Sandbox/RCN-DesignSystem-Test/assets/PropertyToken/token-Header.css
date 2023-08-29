@@ -1,5 +1,5 @@
 :root{
---rcn-header-width: 100%;
+--rcn-header-width: 1;
 --rcn-header-display: flex;
 --rcn-header-flex-direction: column;
 --rcn-header-align-items: stretch;

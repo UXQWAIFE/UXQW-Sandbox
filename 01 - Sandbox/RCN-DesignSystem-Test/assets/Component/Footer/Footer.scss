@@ -136,7 +136,7 @@
       flex-wrap: wrap;
   }
   &__partnerLogo {
-      width: 100%;
+      width: 1;
       height: auto;
       max-height: 90px;
       max-width: 160px;
@@ -144,6 +144,6 @@
 }
 
 .rcn-gridTemplateFooter {
-    grid-template-areas: "logo logo logo logo logo logo description description description description description description";
+    grid-template-areas: """logo logo logo logo logo logo description description description description description description""";
 }
 

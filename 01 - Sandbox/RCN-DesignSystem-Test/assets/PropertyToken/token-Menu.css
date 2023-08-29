@@ -31,7 +31,7 @@
 --rcn-menu__submenu-position: absolute;
 --rcn-menu__submenu-display: flex;
 --rcn-menu__submenu-flex-direction: column;
---rcn-menu__submenu-top: 100%;
+--rcn-menu__submenu-top: 1;
 --rcn-menu__submenu-background-color: var(--rcn-semantic-color-interaction-background-default-standard);
 --rcn-menu__submenu-box-shadow: var(--rcn-semantic-dropshadow-static-overlayed);
 --rcn-menu__submenu-cursor: pointer;

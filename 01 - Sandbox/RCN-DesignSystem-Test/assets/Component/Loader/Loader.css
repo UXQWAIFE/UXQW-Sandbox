@@ -16,7 +16,7 @@
 .rcn-loader__circle {
   height: 24px;
   width: 24px;
-  border-radius: 50%;
+  border-radius: 0.5;
   background-color: var(--rcn-semantic-color-static-background-primary);
   animation: grow-shrink 1.5s ease-in-out infinite;
 }

@@ -1,0 +1,75 @@
+.rcn-gridMargins {
+    padding-right: $rcn-semantic-padding-horizontal-900;
+    padding-left: $rcn-semantic-padding-horizontal-900;
+  &--menu {
+      padding-right: $rcn-semantic-padding-horizontal-900;
+      padding-left: $rcn-semantic-padding-horizontal-800;
+  }
+}
+
+.rcn-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: $rcn-semantic-gap-horizontal-500;
+    grid-template-rows: auto;
+}
+@media (max-width: $rcn-semantic-breakpoint-large) {
+    .rcn-LgridMargins {
+        padding-right: $rcn-semantic-padding-horizontal-700;
+        padding-left: $rcn-semantic-padding-horizontal-700;
+    &--menu {
+        padding-right: $rcn-semantic-padding-horizontal-700;
+        padding-left: $rcn-semantic-padding-horizontal-600;
+    }
+    }
+
+    .rcn-Lgrid {
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: $rcn-semantic-gap-horizontal-500;
+    }
+}
+@media (max-width: $rcn-semantic-breakpoint-medium) {
+    .rcn-MgridMargins {
+        padding-right: $rcn-semantic-padding-horizontal-600;
+        padding-left: $rcn-semantic-padding-horizontal-600;
+    &--menu {
+        padding-right: $rcn-semantic-padding-horizontal-600;
+        padding-left: $rcn-semantic-padding-horizontal-400;
+    }
+    }
+
+    .rcn-Mgrid {
+        grid-template-columns: repeat(8, 1fr);
+        grid-column-gap: $rcn-semantic-gap-horizontal-500;
+    }
+}
+@media (max-width: $rcn-semantic-breakpoint-small) {
+    .rcn-SgridMargins {
+        padding-right: $rcn-semantic-padding-horizontal-500;
+        padding-left: $rcn-semantic-padding-horizontal-500;
+    &--menu {
+        padding-right: $rcn-semantic-padding-horizontal-500;
+        padding-left: $rcn-semantic-padding-horizontal-200;
+    }
+    }
+
+    .rcn-Sgrid {
+        grid-template-columns: repeat(8, 1fr);
+        grid-column-gap: $rcn-semantic-gap-horizontal-500;
+    }
+}
+@media (max-width: $rcn-semantic-breakpoint-xsmall) {
+    .rcn-XSgridMargins {
+        padding-right: $rcn-semantic-padding-horizontal-500;
+        padding-left: $rcn-semantic-padding-horizontal-500;
+    &--menu {
+        padding-right: $rcn-semantic-padding-horizontal-500;
+        padding-left: $rcn-semantic-padding-horizontal-500;
+    }
+    }
+
+    .rcn-XSgrid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: $rcn-semantic-gap-horizontal-400;
+    }
+}
