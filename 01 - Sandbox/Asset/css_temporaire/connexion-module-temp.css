@@ -26,13 +26,13 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
     gap:var(--rcn-semantic-gap-horizontal-500);
     }
 
-Peut être mettre un descendant selecteur avec l'icon plustôt que de l'écrire comme ça?
+Peut être mettre un descendant selecteur avec l'icon plustôt que de l'écrire comme ça? > enfait ça c'était une de nos règles donc on peut laisser comme ça
 
 
 .rcn-connexionModule__iconExpand {
-    order : 2 ;
+    order : 2;
 }
 
-.rcn-connexionModule__iconExpand {
-    order : 2 ;
+.rcn-connexionModule__iconExpand::before {
+    content: var(--rcn-semantic-typography-content-icon-expand_vertical);
 }
