@@ -1,3 +1,8 @@
+.rcn-paddingTest {
+    padding-left: 50px;
+}
+
+
 .rcn-connexionModule {
 display:flex;
 flex-direction:row;
@@ -20,10 +25,7 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
 }
 
 .rcn-connexionModule--on {
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    gap:var(--rcn-semantic-gap-horizontal-500);
+    gap:var(--rcn-semantic-gap-horizontal-400);
     }
 
 Peut être mettre un descendant selecteur avec l'icon plustôt que de l'écrire comme ça? > enfait ça c'était une de nos règles donc on peut laisser comme ça
@@ -35,4 +37,15 @@ Peut être mettre un descendant selecteur avec l'icon plustôt que de l'écrire 
 
 .rcn-connexionModule__iconExpand::before {
     content: var(--rcn-semantic-typography-content-icon-expand_vertical);
+}
+
+.rcn-connexionModule__profile{
+    width: var(--rcn-semantic-width-stepper_stepcircle);
+    height: var(--rcn-semantic-height-stepper_stepcircle);
+    /* width: 24px;
+    height: 24px; */
+    /* Définir la taille souhaitée pour la pastille */
+    border-radius: var(--rcn-semantic-borderradius-300);
+    background-color: rosybrown;
+    order: -1;
 }

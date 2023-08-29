@@ -12,7 +12,7 @@
 }
 
 .rcn-stepper__list::before {
-  content: ;
+  content: "";
   width: var(--rcn-semantic-borderwidth-100);
   height: calc(100% - var(--rcn-semantic-height-stepper_stepcircle));
   background-color: var(--rcn-semantic-color-static-border-divider_strong);
@@ -130,7 +130,7 @@
 }
 
 .rcn-stepper__list--horizontal::before {
-  content: ;
+  content: "";
   width: calc(100% - calc(calc(100% - calc(calc(rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / rcn-stepper-numberofsteps));
   height: var(--rcn-semantic-borderwidth-100);
   left: calc(calc(100% - calc(calc(rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / calc(2 *  rcn-stepper-numberofsteps);
