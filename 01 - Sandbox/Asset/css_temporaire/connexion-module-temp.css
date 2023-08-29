@@ -10,3 +10,29 @@ border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-stati
 padding-top:var(--rcn-semantic-padding-horizontal-500);
 padding-bottom:var(--rcn-semantic-padding-horizontal-500);
 }
+
+.rcn-connexionModule__iconConnect{
+    order: -1;
+}
+
+.rcn-connexionModule__iconConnect::before{
+   content: var(--rcn-semantic-typography-content-icon-user);
+}
+
+.rcn-connexionModule--on {
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:var(--rcn-semantic-gap-horizontal-500);
+    }
+
+Peut être mettre un descendant selecteur avec l'icon plustôt que de l'écrire comme ça?
+
+
+.rcn-connexionModule__iconExpand {
+    order : 2 ;
+}
+
+.rcn-connexionModule__iconExpand {
+    order : 2 ;
+}
