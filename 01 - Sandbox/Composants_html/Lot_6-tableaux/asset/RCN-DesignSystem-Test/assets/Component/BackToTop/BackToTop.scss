@@ -1,0 +1,23 @@
+.rcn-backToTop {
+    padding: $rcn-semantic-padding-horizontal-400 $rcn-semantic-padding-vertical-400;
+    border-radius: $rcn-semantic-borderradius-300;
+    background-color: $rcn-semantic-color-interaction-background-default-primary;
+    border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-back_to_top;
+    text-align: center;
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+  &__icon {
+      color: $rcn-semantic-color-interaction-text_and_icon-default-onprimary;
+    &::before {
+        content: $rcn-semantic-typography-content-icon-up;
+    }
+  }
+  &:hover {
+      background-color: $rcn-semantic-color-interaction-background-hover-primary;
+  }
+  &:active {
+      background-color: $rcn-semantic-color-interaction-background-hover-primary;
+  }
+}
+

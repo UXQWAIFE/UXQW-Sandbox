@@ -1,0 +1,27 @@
+:root{
+--rcn-actionsBanner-display: flex;
+--rcn-actionsBanner-flex-direction: row;
+--rcn-actionsBanner-gap: var(--rcn-semantic-gap-horizontal-400);
+--rcn-actionsBanner-border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+--rcn-actionsBanner-padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-0);
+--rcn-actionsBanner-flex-wrap: wrap;
+--rcn-actionsBanner___rcn-button--primary-order: 2;
+--rcn-actionsBanner___rcn-button--secondary-order: 1;
+--rcn-actionsBanner___rcn-link-order: -1;
+--rcn-actionsBanner__primaryActions-order: 2;
+--rcn-actionsBanner__primaryActions-flex-grow: 1;
+--rcn-actionsBanner__primaryActions-display: flex;
+--rcn-actionsBanner__primaryActions-flex-wrap: wrap;
+--rcn-actionsBanner__primaryActions-align-items: baseline;
+--rcn-actionsBanner__primaryActions-flex-direction: row;
+--rcn-actionsBanner__primaryActions-justify-content: flex-end;
+--rcn-actionsBanner__primaryActions-gap: var(--rcn-semantic-gap-horizontal-300);
+--rcn-actionsBanner__secondaryActions-order: 1;
+--rcn-actionsBanner__secondaryActions-justify-content: flex-start;
+--rcn-actionsBanner__secondaryActions-display: flex;
+--rcn-actionsBanner__secondaryActions-flex-wrap: wrap;
+--rcn-actionsBanner__secondaryActions-align-items: baseline;
+--rcn-actionsBanner__secondaryActions-flex-direction: row;
+--rcn-actionsBanner__secondaryActions-gap: var(--rcn-semantic-gap-horizontal-300);
+
+}

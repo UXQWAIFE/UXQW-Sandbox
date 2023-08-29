@@ -9,31 +9,29 @@
   padding-bottom:50px;
 } /* Pas ajouté à l'excel */
 
-.rcn-form__horizontalStepper{
-  align-self:center;
-} /* A faire porter dans formTemplate*/
-
 /* =========== STEPPER ============ */
 
 
-.rcn-stepper{
+/* .rcn-stepper{
   grid-area: stepper;
   margin-bottom: var(--rcn-semantic-margin-vertical-section);
-}/*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 
 /* ------- Stepper LIST ------- */
 
 
 
-.rcn-stepper__list {
+/* .rcn-stepper__list {
     display: flex;
     flex-direction: column;
     gap:var(--rcn-semantic-gap-vertical-400);
     align-items: flex-start;
     position:relative;
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__list::before{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-stepper__list::before{
   content: "";
   width: 1px;
   height: calc(100% - var(--rcn-semantic-height-stepper_stepcircle));
@@ -41,33 +39,36 @@
   position: absolute;
   left: calc(calc(var(--rcn-semantic-height-stepper_stepcircle)/ 2) + var(--rcn-semantic-borderwidth-100));
   z-index: -1;
-}/*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 /* ---- SUB LIST  */
 
-.rcn-stepper__subList{
+/* .rcn-stepper__subList{
   display: flex;
   flex-direction:column;
-  margin-bottom:8px; /* rcn-semantic-margin-vertical-stepper_sublist > nouveau semantic add */
+  margin-bottom: var(--rcn-semantic-margin-vertical-stepper_sublist); 
   gap:var(--rcn-semantic-gap-horizontal-400);
- }/*class à ajouter dans l'excel ==> OK*/
+ } */
+ /*class à ajouter dans l'excel ==> OK*/
 
 
 /* -------- Stepper STEP -------- */
 
-.rcn-stepper__step{
+/* .rcn-stepper__step{
   display:flex;
   flex-direction:row;
   align-items:center;
   gap:var(--rcn-semantic-gap-horizontal-400);
-}/*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
  
 /* -------- NUMBER / INDICATOR / STEPTITLE -------- */
 
 
 /* ---- DEFAULT (UNCOMPLETED)  */
 
-.rcn-stepper__number {
+/* .rcn-stepper__number {
   width: var(--rcn-semantic-width-stepper_stepcircle);
   height: var(--rcn-semantic-height-stepper_stepcircle);
   border-radius: var(--rcn-semantic-borderradius-300);
@@ -77,18 +78,16 @@
   justify-content: center;
   text-decoration: none;
   min-width: var(--rcn-semantic-width-stepper_stepcircle);
-  /* min-height: var(--rcn-semantic-width-stepper_stepcircle);
-  max-width: var(--rcn-semantic-width-stepper_stepcircle);
-  max-width: var(--rcn-semantic-width-stepper_stepcircle);  */
-
   background-color:var(--rcn-semantic-color-static-background-standard);
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
   color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__stepTitle {
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-stepper__stepTitle {
   color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__indicator{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-stepper__indicator{
   width: calc(var(--rcn-semantic-height-stepper_stepcircle) / 3);
   height: calc(var(--rcn-semantic-height-stepper_stepcircle) / 3);
   margin-left:calc(var(--rcn-semantic-height-stepper_stepcircle) / 3);
@@ -98,31 +97,36 @@
   background-color:var(--rcn-semantic-color-static-background-standard);
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-standard);
   color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
-}/*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 /* ---- COMPLETED  */
 
-.rcn-stepper__step--completed .rcn-stepper__number {
+/* .rcn-stepper__step--completed .rcn-stepper__number {
   background-color:var(--rcn-semantic-color-static-background-primary);
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
   color:var(--rcn-semantic-color-static-text_and_icon-onprimary);
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__step--completed .rcn-stepper__stepTitle {
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-stepper__step--completed .rcn-stepper__stepTitle {
   color:var(--rcn-semantic-color-static-text_and_icon-onstandard);
-} /*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__step--completed .rcn-stepper__indicator{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-stepper__step--completed .rcn-stepper__indicator{
   background-color:var(--rcn-semantic-color-static-background-primary);
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-primary);
   color:var(--rcn-semantic-color-static-text_and_icon-onprimary);
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 /* ---- CURRENT  */
-:root{
+/* :root{
   --rcn-semantic-width-stepper_stepcircle:32px;
   --rcn-semantic-height-stepper_stepcircle:32px;
-} /*valeur à changer dans les semantics ? > OK c'est dans les semantics*/
+} */
+/*valeur à changer dans les semantics ? > OK c'est dans les semantics*/
 
-.rcn-stepper__step--current .rcn-stepper__number {
+/* .rcn-stepper__step--current .rcn-stepper__number {
   background-color:var(--rcn-semantic-color-static-background-standard);
   border:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
   color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
@@ -130,103 +134,64 @@
   height:  calc(var(--rcn-semantic-height-stepper_stepcircle) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))) );
   min-width: calc(var(--rcn-semantic-width-stepper_stepcircle) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))) );
   font-weight:var(--rcn-semantic-typography-text-component-default-label-fontweight);
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
-.rcn-stepper__step--current .rcn-stepper__stepTitle { 
+/* .rcn-stepper__step--current .rcn-stepper__stepTitle { 
   color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
   font-weight:var(--rcn-semantic-typography-text-component-default-selected-fontweight);
   text-decoration:none;
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__step--current .rcn-stepper__indicator{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-stepper__step--current .rcn-stepper__indicator{
   background-color:var(--rcn-semantic-color-static-background-standard);
   color:var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
   font-weight:var(--rcn-semantic-typography-text-component-default-selected-fontweight);
   width: calc(calc(var(--rcn-semantic-width-stepper_stepcircle) / 3) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))) );
   height:  calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 3) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))) );
   border:var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
-}/*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 /* ---- DISABLED  */
 
-.rcn-stepper__step--disabled .rcn-stepper__number{
+/* .rcn-stepper__step--disabled .rcn-stepper__number{
   background-color:var(--rcn-semantic-color-static-background-stepper_step_unreachable);
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-stepper_step_unreachable);
   color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__step--disabled .rcn-stepper__stepTitle{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-stepper__step--disabled .rcn-stepper__stepTitle{
   color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
   text-decoration: none;
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__step--disabled .rcn-stepper__indicator{
+} */
+/*class à ajouter dans l'excel ==> OK*/
+/* .rcn-stepper__step--disabled .rcn-stepper__indicator{
   background-color:var(--rcn-semantic-color-static-background-stepper_step_unreachable);
   border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-stepper_step_unreachable);
   color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
-}/*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 
 
 
-/* ------- Stepper HORIZONTAL 1 ------- */
+/* ------- Stepper HORIZONTAL ------- */
 
 
-.rcn-stepper__list--horizontal{
+/* .rcn-stepper__list--horizontal{
   display: flex;
   flex-direction:row;
   gap:var(--rcn-semantic-gap-horizontal-500);
-}/*class à ajouter dans l'excel ==> OK*/
-
-.rcn-stepper__list--horizontal::before{
-  content: "";
-  width: 100%;
-  height: var(--rcn-semantic-borderwidth-100);
-  background-color: var(--rcn-semantic-color-static-border-divider_strong);
-  position: absolute;
-  left:0;
-  top: calc(calc(var(--rcn-semantic-height-stepper_stepcircle)/ 2) + var(--rcn-semantic-borderwidth-100));
-  z-index: -1;
-}/*class à ajouter dans l'excel ==> OK*/
-
-.rcn-stepper__list--horizontal .rcn-stepper__step{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:var(--rcn-semantic-gap-vertical-300);
-  flex: 1 1 0px;
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__list--horizontal .rcn-stepper__step {
-  text-align: center;
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__list--horizontal .rcn-stepper__step:first-of-type{
-  align-items: flex-start;
-  text-align: left;
-}/*class à ajouter dans l'excel ==> OK*/
-.rcn-stepper__list--horizontal .rcn-stepper__step:last-of-type{
-  align-items: flex-end;
-  text-align: right;
-} /*class à ajouter dans l'excel ==> OK*/
-
-  
-.rcn-stepper__list--horizontal .rcn-stepper__stepTitle[disabled]{
-  color:var(--rcn-semantic-color-static-text_and_icon-stepper_step_unreachable);
-  text-decoration: none; 
-} /*class à ajouter dans l'excel ==> OK*/
-
-
-
-/* ------- Stepper HORIZONTAL 2 ------- */
-
-
-.rcn-stepper__list--horizontal2{
-  display: flex;
-  flex-direction:row;
-  gap:var(--rcn-semantic-gap-horizontal-500);
-} /*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
 :root{
   --rcn-stepper-numberofsteps:5;
-} /*A mettre dans le excel ? Ou à la main des devs ? >> TODO*/
+}
+/*A mettre dans le excel ? Ou à la main des devs ? >> TODO*/
 
-.rcn-stepper__list--horizontal2::before{
+/* .rcn-stepper__list--horizontal::before{
   content: "";
   width: calc(100% - calc(calc(100% - calc(calc(var(--rcn-stepper-numberofsteps) - 1) * var(--rcn-semantic-gap-horizontal-500))) / var(--rcn-stepper-numberofsteps)));
   height: var(--rcn-semantic-borderwidth-100);
@@ -235,16 +200,14 @@
   position: absolute;
   top: calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 2) + var(--rcn-semantic-borderwidth-100));
   z-index: -1;
-}/*class à ajouter dans l'excel ==> OK*/
+} */
+/*class à ajouter dans l'excel ==> OK*/
 
-.rcn-stepper__list--horizontal2 .rcn-stepper__step{
+/* .rcn-stepper__list--horizontal .rcn-stepper__step{
   display:flex;
   flex-direction:column;
   align-items:center;
   gap:var(--rcn-semantic-gap-vertical-300);
   flex: 1 1 0px;
-}
-.rcn-stepper__list--horizontal2 .rcn-stepper__step {
   text-align: center;
-}
-
+} */

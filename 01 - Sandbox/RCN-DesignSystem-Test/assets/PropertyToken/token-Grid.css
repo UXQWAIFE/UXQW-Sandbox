@@ -1,0 +1,10 @@
+:root{
+--rcn-gridMargins-padding-right: var(--rcn-semantic-padding-horizontal-500);
+--rcn-gridMargins-padding-left: var(--rcn-semantic-padding-horizontal-500);
+--rcn-gridMargins--menu-padding-right: var(--rcn-semantic-padding-horizontal-500);
+--rcn-gridMargins--menu-padding-left: var(--rcn-semantic-padding-horizontal-500);
+--rcn-grid-display: grid;
+--rcn-grid-grid-template-columns: repeat(4, 1fr);
+--rcn-grid-grid-column-gap: var(--rcn-semantic-gap-horizontal-400);
+--rcn-grid-grid-template-rows: auto;
+}

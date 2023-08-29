@@ -1,0 +1,351 @@
+.rcn-inputFieldBloc {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: $rcn-semantic-gap-horizontal-200;
+    background-color: $rcn-semantic-color-interaction-background-default-standard;
+    flex-grow: 1;
+    margin-bottom: $rcn-semantic-margin-vertical-inputfieldblock;
+  &__label {
+      display: flex;
+      flex-direction: row;
+      gap: $rcn-semantic-gap-horizontal-100;
+      justify-content: flex-start;
+      font-weight: $rcn-semantic-typography-fontweight-label;
+    &--checkboxOrRadio {
+        font-weight: $rcn-semantic-typography-fontweight-body-component;
+        align-items: flex-start;
+    }
+    &--checkboxOrRadio-checked {
+        color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+        font-weight: $rcn-semantic-typography-fontweight-label;
+    }
+    &--language {
+        font-weight: $rcn-semantic-typography-fontweight-body-component;
+        padding: 0px;
+        color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+    }
+  }
+  &__mandatoryAsterisk {
+    &::before {
+        content: "*";
+        font-size: $rcn-semantic-typography-fontsize-h6;
+        color: $rcn-semantic-color-feedback-text_and_icon-error;
+    }
+  }
+  &__errorZone {
+      display: flex;
+      flex-direction: row;
+      gap: $rcn-semantic-gap-horizontal-200;
+      color: $rcn-semantic-color-feedback-text_and_icon-error;
+  }
+  &__errorIcon {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-alert;
+    }
+  }
+  &__errorZone[hidden] {
+      height: 0px;
+      display: none;
+      width: 0px;
+  }
+  &__successZone {
+      display: flex;
+      flex-direction: row;
+      gap: $rcn-semantic-gap-horizontal-200;
+      color: $rcn-semantic-color-feedback-text_and_icon-success;
+  }
+  &__successIcon {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-success;
+    }
+  }
+  &__successZone[hidden] {
+      height: 0px;
+      display: none;
+      width: 0px;
+  }
+  &--as-Search {
+      margin-bottom: 0px;
+  }
+  &--checkboxOrRadio {
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: unset;
+  }
+  &--horizontal {
+      display: flex;
+      flex-direction: row;
+      gap: $rcn-semantic-gap-horizontal-200;
+      align-items: center;
+      flex-grow: 0;
+  }
+}
+
+.rcn-inputField {
+    display: flex;
+    flex-direction: row;
+    border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+    border-radius: $rcn-semantic-borderradius-100;
+    background-color: $rcn-semantic-color-interaction-background-default-standard;
+    align-items: center;
+  &--error {
+      border-color: $rcn-semantic-color-interaction-border-default-error;
+  }
+  &--disabled {
+      border-color: $rcn-semantic-color-interaction-border-disabled;
+      background-color: $rcn-semantic-color-interaction-background-disabled-standard;
+      color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+  }
+  &__input[disabled] {
+      cursor: not-allowed;
+  }
+  &__input {
+      padding: $rcn-semantic-padding-vertical-200 $rcn-semantic-padding-horizontal-200;
+      background: none;
+      border: none;
+      border-radius: $rcn-semantic-borderradius-100;
+      flex-grow: 1;
+    &::placeholder {
+        color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+    }
+    &--select {
+        padding: calc($rcn-semantic-padding-vertical-200 - 1px) $rcn-semantic-padding-horizontal-200;
+    }
+    &--datepicker {
+        padding: calc($rcn-semantic-padding-vertical-200 + 1px) $rcn-semantic-padding-horizontal-200;
+    }
+    &--textarea {
+        resize: vertical;
+    }
+    &--number {
+        text-align: right;
+    }
+    &--largeSearch {
+        padding: $rcn-semantic-padding-vertical-400 $rcn-semantic-padding-horizontal-400;
+    }
+    &--checkbox {
+        padding: unset;
+        order: -1;
+        font-size: calc(1.25 * $rcn-semantic-typography-fontsize-body);
+        line-height: calc(1.125 * $rcn-semantic-typography-fontsize-body);
+      &::before {
+          content: $rcn-semantic-typography-content-icon-checkbox_blank;
+          color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+      }
+      &:checked {
+        &::before {
+            content: $rcn-semantic-typography-content-icon-checkbox_checked;
+            color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+        }
+      }
+    }
+    &--radio {
+        padding: unset;
+        order: -1;
+        font-size: calc(1.25 * $rcn-semantic-typography-fontsize-body);
+        line-height: calc(1.125 * $rcn-semantic-typography-fontsize-body);
+      &::before {
+          content: $rcn-semantic-typography-content-icon-radiobox_blank;
+          color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+      }
+      &:checked {
+        &::before {
+            content: $rcn-semantic-typography-content-icon-radiobox_checked;
+            color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+        }
+      }
+    }
+    &--file {
+        position : absolute;
+        clip-path: content-box;
+        bottom: $rcn-semantic-padding-horizontal-400;
+        left: $rcn-semantic-padding-horizontal-400;
+        width: calc(100% - (3 * $rcn-semantic-padding-horizontal-400));
+        height: $rcn-semantic-padding-vertical-400;
+        text-indent: -999999px;
+        cursor: pointer;
+    }
+    &--unitSelect {
+        border-right: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+        flex-grow: 0;
+    }
+  }
+  &__unit {
+      display: flex;
+      flex-direction: row;
+      align-self: stretch;
+      align-items: center;
+      order: 0;
+      background-color: $rcn-semantic-color-interaction-background-disabled-standard;
+      color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+      border-top-left-radius: $rcn-semantic-borderradius-50;
+      border-bottom-left-radius: $rcn-semantic-borderradius-50;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+      padding: $rcn-semantic-padding-vertical-200 $rcn-semantic-padding-horizontal-200;
+  }
+  &__option {
+    &:checked {
+        color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+        font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
+    }
+  }
+  &__button {
+      display: flex;
+      align-items: center;
+      order: 5;
+      padding: $rcn-semantic-padding-vertical-50 $rcn-semantic-padding-horizontal-200;
+      cursor: pointer;
+      align-self: stretch;
+    &--secondary {
+        order: 3;
+    }
+    &--hidePassword {
+      &::before {
+          content: $rcn-semantic-typography-content-icon-hide;
+      }
+    }
+    &--showPassword {
+      &::before {
+          content: $rcn-semantic-typography-content-icon-show;
+      }
+    }
+    &--search {
+      &::before {
+          content: $rcn-semantic-typography-content-icon-search;
+      }
+    }
+    &--largeSearch {
+        display: flex;
+        flex-direction: row;
+        gap: $rcn-semantic-gap-horizontal-200;
+        padding-right: $rcn-semantic-padding-horizontal-400;
+        background-color: $rcn-semantic-color-interaction-background-default-standard;
+    }
+    &--reset {
+      &::before {
+          content: $rcn-semantic-typography-content-icon-reset;
+      }
+    }
+    &--delete {
+      &::before {
+          content: $rcn-semantic-typography-content-icon-close;
+      }
+    }
+    &--combobox {
+      &::before {
+          content: $rcn-semantic-typography-content-icon-expand_vertical;
+      }
+    }
+  }
+  &__button[disabled] {
+      cursor: not-allowed;
+      color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+  }
+  &__buttonSeparator {
+      width: 1px;
+      height: $rcn-semantic-typography-fontsize-body;
+      background-color: $rcn-semantic-color-static-border-divider_regular;
+      order: 4;
+  }
+  &__iconButton {
+    &--largeSearch {
+      &::before {
+          content: $rcn-semantic-typography-content-icon-search;
+      }
+    }
+  }
+  &--file {
+      display: flex;
+      flex-direction: column;
+      background-position: 0 0, 0 0, 100% 0, 0 100%;
+      background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
+      background-repeat: no-repeat;
+      background-image: repeating-linear-gradient(0deg, #949494, #949494 10px, transparent 10px, transparent 20px),repeating-linear-gradient(90deg, #949494, #949494 10px, transparent 10px, transparent 20px),repeating-linear-gradient(180deg, #949494, #949494 10px, transparent 10px, transparent 20px),repeating-linear-gradient(270deg, #949494, #949494 10px, transparent 10px, transparent 20px);
+      border-radius: $rcn-semantic-borderradius-200;
+      border: none;
+      background-color: $rcn-semantic-color-interaction-background-default-standard;
+      gap: $rcn-semantic-gap-horizontal-200;
+      align-items: stretch;
+      text-align: center;
+      padding: $rcn-semantic-padding-horizontal-400 $rcn-semantic-padding-vertical-400;
+      position : relative;
+      cursor: pointer;
+  }
+  &__uploadIcon {
+      line-height: $rcn-semantic-typography-lineheight-heading;
+      font-size: $rcn-semantic-typography-fontsize-h1;
+  }
+}
+
+.rcn-fieldset {
+  &__checkboxOrRadioList {
+      display: flex;
+      flex-direction: column;
+      gap: $rcn-semantic-gap-vertical-200;
+      padding-top: $rcn-semantic-padding-vertical-100;
+  }
+    border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
+    padding: $rcn-semantic-padding-vertical-600;
+    margin-bottom: $rcn-semantic-margin-vertical-fieldset;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  &__legend {
+      margin-bottom: unset;
+      font-weight: $rcn-semantic-typography-fontweight-label;
+  }
+  &--as-inputFieldBloc {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      border: none;
+      flex-grow: 1;
+      background-color: $rcn-semantic-color-static-background-standard;
+      padding: $rcn-semantic-padding-vertical-200 $rcn-semantic-padding-horizontal-0 $rcn-semantic-padding-vertical-0 $rcn-semantic-padding-horizontal-0;
+      margin-bottom: $rcn-semantic-margin-vertical-inputfieldblock;
+  }
+  &--as-inputFieldBloc-has-horizontalInputs {
+      gap: $rcn-semantic-gap-vertical-400;
+  }
+  &__horizontalInputs {
+    .rcn-inputFieldBloc {
+        margin-bottom: unset;
+    }
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: $rcn-semantic-gap-horizontal-400;
+  }
+}
+
+.rcn-combobox {
+    display: flex;
+    flex-direction: column;
+    position : relative;
+  &__placeholder {
+      padding: 11px $rcn-semantic-padding-horizontal-200;
+  }
+  &__dropDownList {
+      position : absolute;
+      top: calc(100% - 1px);
+      border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
+      right: 0;
+      left: 0;
+      margin: 0;
+      width: auto;
+      padding: $rcn-semantic-padding-vertical-200 $rcn-semantic-padding-horizontal-200;
+      gap: $rcn-semantic-gap-vertical-200;
+      background-color: $rcn-semantic-color-interaction-background-default-standard;
+  }
+  &__dropDownList[hidden] {
+      height: 0px;
+  }
+  .rcn-fieldset {
+    &--as-inputFieldBloc {
+        margin-bottom: unset;
+    }
+  }
+}
+

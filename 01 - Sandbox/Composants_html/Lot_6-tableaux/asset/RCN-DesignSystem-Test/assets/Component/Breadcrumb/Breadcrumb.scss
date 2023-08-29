@@ -1,0 +1,39 @@
+.rcn-breadcrumb {
+    padding-top: $rcn-semantic-padding-vertical-200;
+    padding-bottom: $rcn-semantic-padding-vertical-200;
+    border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
+    background-color: $rcn-semantic-color-static-background-standard;
+    margin-bottom: $rcn-semantic-margin-vertical-section;
+    display: flex;
+    flex-direction: row;
+  &__list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+  }
+  &__item {
+      display: flex;
+      flex-direction: row;
+      gap: $rcn-semantic-gap-horizontal-100;
+      flex-wrap: nowrap;
+      align-items: center;
+  }
+  &__chevron {
+    &::before {
+        content: $rcn-semantic-typography-content-icon-breadcrum_divider;
+    }
+  }
+  &__button {
+      background: none;
+      border: none;
+      padding: 0;
+      color: $rcn-semantic-color-interaction-text_and_icon-default-link;
+      text-decoration: underline;
+      cursor: pointer;
+    &:hover {
+        text-decoration: none;
+    }
+  }
+}
+

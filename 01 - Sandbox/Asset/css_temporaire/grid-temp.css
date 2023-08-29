@@ -1,159 +1,124 @@
 
-
-/*------------- Grid ---------------*/
-  .rcn-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-  /* background-color: transparent; > CLE : pour moi il faut enlever cette valeur ça empêche les fond d'apparaitre : par exemple sur modale le fond gris n'apparaît pas. De plus, je ne sais pas si cette valeur a une utilité ici. */
-  grid-template-rows: auto;
-  height:100%;
+.demoHeaderMargin{/* Class pour démonstration uniquement */
+  margin-bottom:32px;
 }
-
-.rcn-gridMargins {
-  padding-right:var(--rcn-semantic-padding-horizontal-900);
-  padding-left:var(--rcn-semantic-padding-horizontal-900);
-}
-
-.rcn-gridTemplateExample {
-  grid-template-areas: 
-    "title title title . . . . . . . . . "
-    "main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar";
-}
-
-.rcn-gridMargins--menu {
-    padding-right:var(--rcn-semantic-padding-horizontal-900);
-    padding-left:var(--rcn-semantic-padding-horizontal-800);
-}
-
-/*-----Breakpoints-------*/
-/*--- Large Grid---*/
-
-@media (max-width: 1247px) /*semantic token à intégrer : var(--rcn-core-breakpoint-large)*/
- {
-.rcn-grid {
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-}
-
-.rcn-gridMargins {
-  padding-right:var(--rcn-semantic-padding-horizontal-700);
-  padding-left:var(--rcn-semantic-padding-horizontal-700);
-}
-
-.rcn-gridTemplateExample {
-  grid-template-areas: 
-    "title title title . . . . . . . . . "
-    "main main main main main main sidebar sidebar sidebar sidebar sidebar sidebar";
-}
-
-.rcn-gridMargins--menu {
-    padding-right:var(--rcn-semantic-padding-horizontal-700);
-    padding-left:var(--rcn-semantic-padding-horizontal-600);
-}
+.demoFooterMargin{/* Class pour démonstration uniquement */
+  margin-top:64px;
 }
 
 
+/* Composants de démonstration */
 
-/*--- Medium Grid---*/
-@media (max-width: 991px) /*semantic token à intégrer : var(--rcn-core-breakpoint-medium)*/ {
-  .rcn-grid {
-  grid-template-columns: repeat(8, 1fr);
-  grid-column-gap:var(--rcn-semantic-gap-horizontal-500);
-
-}
-
-.rcn-gridMargins {
-  padding-right:var(--rcn-semantic-padding-horizontal-600);
-  padding-left:var(--rcn-semantic-padding-horizontal-600);
-
-}
-
-.rcn-gridTemplateExample {
-  grid-template-areas: 
-    "title title title . . . . . "
-    "main main main main sidebar sidebar sidebar sidebar";
-}
-
-.rcn-gridMargins--menu {
-    padding-right:var(--rcn-semantic-padding-horizontal-600);
-    padding-left:var(--rcn-semantic-padding-horizontal-400);
-}
-}
-
-/*--- Small Grid---*/
-
-@media (max-width: 767px) /*semantic token à intégrer : var(--rcn-core-breakpoint-small)*/ {
-
-.rcn-grid {
-  grid-template-columns: repeat(8, 1fr);
-  grid-column-gap : var(--rcn-semantic-gap-horizontal-500);
-}
-
-.rcn-gridMargins {
-  padding-right:var(--rcn-semantic-padding-horizontal-500);
-  padding-left:var(--rcn-semantic-padding-horizontal-500);
-
-}
-
-.rcn-gridTemplateExample {
-  grid-template-areas: 
-    "title title title . . . . . "
-    "main main main main sidebar sidebar sidebar sidebar";
-}
-
-.rcn-gridMargins--menu {
-    padding-right:var(--rcn-semantic-padding-horizontal-500);
-    padding-left:var(--rcn-semantic-padding-horizontal-200);
-}
-}
-
-/*--- xSmall Grid---*/
-@media (max-width: 575px) /*semantic token à intégrer : var(--rcn-core-breakpoint-xsmall)*/ {
-
-.rcn-grid {
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap : var(--rcn-semantic-gap-horizontal-400);
-}
-
-.rcn-gridMargins {
-  padding-right:var(--rcn-semantic-padding-horizontal-500);
-  padding-left:var(--rcn-semantic-padding-horizontal-500);
-}
-
-.rcn-gridTemplateExample {
-  grid-template-areas: 
-    "title title. . "
-    "main main sidebar sidebar";
-}
-}
-
-
-
-
-/*Composants de la grille - TEST ==> Ne pas prendre en compte dans l'excel*/
-
-
-.item-b {
-  display: flex;
-  grid-area: main;
-  background-color: #00FF00;
-  height: 400px;
-}
-
-.item-c {
-  display: flex;
-  grid-area: sidebar;
-  background-color: #00BFFF;
-  height: 550px;
-}
-
-
-.item-e {
+.rcn-fakeComponent-a {/* Class pour démonstration uniquement */
   display:flex;
   grid-area: title;
   background-color: black;
   height: 60px;
   color:white;
-
 }
+.rcn-fakeComponent-b {/* Class pour démonstration uniquement */
+  display: flex;
+  grid-area: side;
+  background-color: #00FF00;
+  height: 200px;
+}
+.rcn-fakeComponent-c {/* Class pour démonstration uniquement */
+  display: flex;
+  grid-area: section1;
+  background-color: #00BFFF;
+  height: 100px;
+}
+.rcn-fakeComponent-d {/* Class pour démonstration uniquement */
+  display:flex;
+  grid-area: section2;
+  background-color: blueviolet;
+  height: 100px;
+  color:white;
+}
+
+/*=============== GRID ===============*/
+
+
+.rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+  content:"Top j'ai plein de place ici"
+}
+
+.rcn-gridTemplate--example{/* Class pour démonstration uniquement */
+  grid-template-areas: 
+    "title title title title title title title title title title title title"
+    "side side side side section1 section1 section1 section1 section2 section2 section2 section2";
+}
+
+
+/*-----Breakpoints-------*/
+
+
+/*--- Large Grid---*/
+
+@media (max-width: 1247px) {
+
+  .rcn-gridTemplate--example{/* Class pour démonstration uniquement */
+    grid-template-areas: 
+    "title title title title title title title title title title title title"
+    "side side side side section1 section1 section1 section1 section1 section1 section1 section1"
+    "side side side side section2 section2 section2 section2 section2 section2 section2 section2";
+  } 
+
+  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+    content:"Oulah ça se rétrécit, qu'est-ce qu'il se passe avec les deux sections d'à côté ?"
+  }
+}
+
+
+/*--- Medium Grid---*/
+
+@media (max-width: 991px) {
+
+  .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
+    grid-template-areas: 
+    "title title title title title title title title"
+    "side side section1 section1 section1 section1 section1 section1"
+    "side side section2 section2 section2 section2 section2 section2";
+  }
+
+  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+    content:"Je commence à vraiment manquer de place, il va falloir me faire passer au dessus !"
+  }
+}
+
+/*--- Small Grid---*/
+
+@media (max-width: 767px) {
+
+  .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
+    grid-template-areas: 
+    "title title title title title title title title"
+    "section1 section1 section1 section1 section1 section1 section1 section1"
+    "side side side side side side side side"
+    "section2 section2 section2 section2 section2 section2 section2 section2";
+  }
+
+  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+    content:"Mais qu'est-ce que je fais au milieu ? C'est pas normal, je veux être au dessus !"
+  }
+}
+
+/*--- xSmall Grid---*/
+
+@media (max-width: 575px) {
+ 
+  .rcn-gridTemplate--example {/* Class pour démonstration uniquement */
+    grid-template-areas: 
+    "title title title title"
+    "side side side side"
+    "section1 section1 section1 section1"
+    "section2 section2 section2 section2";
+  }
+
+  .rcn-fakeComponent-b::after{/* Class pour démonstration uniquement */
+    content:" Ah c'est mieux ici, parfait ! Tiens, le Menu s'est planqué lui"
+  }
+}
+
+
+

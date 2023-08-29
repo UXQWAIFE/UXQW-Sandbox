@@ -1,0 +1,5 @@
+:root{
+--rcn-container--primary-padding-left: var(--rcn-semantic-padding-horizontal-900);
+--rcn-container--primary-padding-right: var(--rcn-semantic-padding-horizontal-900);
+
+}

@@ -1,0 +1,27 @@
+.rcn-backToTop {
+  padding: var(--rcn-semantic-padding-horizontal-400) var(--rcn-semantic-padding-vertical-400);
+  border-radius: var(--rcn-semantic-borderradius-300);
+  background-color: var(--rcn-semantic-color-interaction-background-default-primary);
+  border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-back_to_top);
+  text-align: center;
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+}
+
+.rcn-backToTop__icon {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+}
+
+.rcn-backToTop__icon::before {
+  content: var(--rcn-semantic-typography-content-icon-up);
+}
+
+.rcn-backToTop:hover {
+  background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
+}
+
+.rcn-backToTop:active {
+  background-color: var(--rcn-semantic-color-interaction-background-hover-primary);
+}
+

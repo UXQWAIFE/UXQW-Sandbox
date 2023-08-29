@@ -2,8 +2,9 @@
 .rcn-tableContainer {
     display:block;
     width:100%;
-    max-width:80vw;/* Temporaire */
-    min-width: 40vw;
+    max-width:80vw;/* Temporaire // A voire avec les grilles peut être */
+    min-width: 40vw; /* Minimum syndical sinon le tableau s'adapte au contenu */
+    font-family: var(--rcn-semantic-typography-fontfamily-text);
     margin:0 auto;/*2rem temporaire*/
     box-sizing: border-box;
     position:relative;
@@ -18,11 +19,10 @@
     min-width: 100%;
     box-sizing: border-box;
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-    font-family: var(--rcn-semantic-typography-text-component-default-body-fontfamily);
+    font-family: var(--rcn-semantic-typography-fontfamily-text);
     overflow-y: hidden;
     table-layout: auto;
 }
-
 
 /* Pre table */
 .rcn-preTable {
@@ -46,6 +46,7 @@
 
 .rcn-preTable__zoneAction, .rcn-preTable__ActionGlob {
     display: flex;
+    align-items: center;
     gap:var(--rcn-semantic-gap-vertical-400);
 }
 
@@ -54,12 +55,10 @@
     display: flex;
     width: 100%;
     flex-direction: row-reverse;
+    margin-top: var(--rcn-semantic-gap-vertical-400);
 }
 
-
-
 /*=============== PAGINATION ================*/
-
 .rcn-pagination__sortLine {
 	display: flex;
     flex-direction: row;
@@ -127,8 +126,7 @@
     order:-1;
 }
 .rcn-pagination__previousIcon::before{
-    content: var(--rcn-semantic-typography-icon-rcn_icon-previous-content);
-    content:"\e92e"; /* LIGNE A NE PAS AJOUTER A L'EXCEL : temporaire le temps d'ajouter le semantic token*/
+    content: var(--rcn-semantic-typography-content-icon-previous); 
 }
 
 .rcn-pagination_nextIcon{
@@ -136,7 +134,7 @@
 }
 .rcn-pagination_nextIcon::before{
     content: var(--rcn-semantic-typography-icon-rcn_icon-next-content);
-    content:"\e92d" /* LIGNE A NE PAS AJOUTER A L'EXCEL : temporaire le temps d'ajouter le semantic token*/
+    content:var(--rcn-semantic-typography-content-icon-expand_horizontal);
 }
 
 
@@ -151,7 +149,7 @@
     background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
 }
 .rcn-pagination__goToPageButton::before{
-    content:"\e92d"; /*A REMPLACER PAR ICONE FLECHE VERS LA DROITE (->) qui est à ajouter aux icônes avec pour nom "goto" */
+    content:var(--rcn-semantic-typography-content-icon-expand_horizontal); 
 }
 
 
@@ -164,9 +162,10 @@
 .rcn-inputFieldBloc {
     flex-direction: unset;
 }
-.rcn-inputFieldBloc--horizontal {
-    flex-grow: unset;
+td .rcn-inputField__input {
+    flex-grow:unset;
 }
+
 /* Correction Pagination */
 .rcn-pagination__navList {
     list-style: none;

@@ -5,8 +5,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="asset/RCN-DesignSystem-Test/assets/reset.css">
+	
 	<link rel="stylesheet" href="asset/RCN-DesignSystem-Test/assets/styles-ChorusPro.css">
+
 	<link rel="stylesheet" href="asset/data-form/table_general.css">
 	<link rel="stylesheet" href="asset/data-form/table_structure.css">
 	<style>
@@ -21,7 +22,7 @@
         display: inline-flex;
         align-self: center;
     }
-	section:last-child ul {
+	section:not(.table_holder):last-child ul {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		list-style: none;
@@ -243,6 +244,9 @@ print_r($_SESSION);
 			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_action">Colonne Action ?
 			<input <?php echo isset($_SESSION['Col_action']) && $_SESSION['Col_action'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_action" id="Col_action">
 			</label>
+			<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-checked" for="Col_action_menu">Colonne Action avec Menu
+			<input <?php echo isset($_SESSION['Col_action_menu']) && $_SESSION['Col_action_menu'] ? 'checked' : ''; ?> value="" class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox' type="checkbox" name="Col_action_menu" id="Col_action_menu">
+			</label>
 		</fieldset>
 
 		<fieldset class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
@@ -310,7 +314,8 @@ print_r($_SESSION);
 				{ value: "icone", text: "Icône" },
 				{ value: "bouton_selection", text: "Bouton de sélection" },
 				{ value: "bouton_depliable", text: "Bouton dépliable" },
-				{ value: "bouton_action", text: "Bouton d'action" }
+				{ value: "bouton_action", text: "Bouton d'action" },
+				{ value: "bouton_action--withMenu", text: "Bouton d'action avec Menu" }
 				];
 
 				for (var i = 0; i < options.length; i++) {
@@ -407,16 +412,17 @@ print_r($_SESSION);
 
 		// Appelez la fonction updateBandeau une première fois pour initialiser l'état du bandeau
 		updateBandeau();
-		if (document.querySelector('.rcn-tableData--sticked')) {
+		if (document.querySelectorAll('.rcn-tableData--sticked').length > 1) {
 			// Récupérer la largeur du premier <th> de sticky-thead-1
-			const header1Width = document.querySelector('.rcn-tableData--sticked:first-child').offsetWidth;
+			const thSelect = document.querySelector('th.rcn-tableData--sticked:first-child');
+			const header1Width = thSelect.scrollWidth;
 			var headerCount = document.querySelectorAll('th.rcn-tableData--sticked').length;
-			
-			for( var i = 0; i < headerCount; i++ ) {
+			console.log(header1Width);
+			for( var i = 0; i < headerCount - 1; i++ ) {
 				// if( i === 0) {
 				// 	document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${i}px`);
 				// }
-				document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `${header1Width}px`);
+				document.documentElement.style.setProperty(`--th__width--offsetLeft-${i}`, `calc(${header1Width}px - 1px)`);
 			}
 			// Appliquer la largeur comme une variable CSS personnalisée
 		}
@@ -426,22 +432,94 @@ print_r($_SESSION);
 		const filterElement = document.querySelector('.rcn-tableFilter');
 		filterButtons.forEach(buttonf => {
 			buttonf.addEventListener('click', () => {
-				console.log('allo');
-				// filterElement.classList.toggle('sr-only');
-				filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
-			});
-		});
-		const accordBtn = document.querySelectorAll('.rcn-accordions__heading');
-		accordBtn.forEach(btnDepli => {
-			const accordNextElement = accordBtn.nextElementSibling;
-			console.log(accordNextElement);
-			btnDepli.addEventListener('click', () => {
-				console.log('allo');
+				
 				// filterElement.classList.toggle('sr-only');
 				filterElement.setAttribute('aria-hidden', filterElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
 			});
 		});
 
+		// Gestion de l'accordéon avec attributs d'accessibilité
+
+		// Sélectionner tous les boutons de dépliement d'accordéon
+		const accordBtns = document.querySelectorAll('.rcn-accordions__heading');
+
+		// Pour chaque bouton de dépliement d'accordéon sélectionné
+		accordBtns.forEach(accordBtn => {
+		// Récupérer l'élément suivant du bouton (le contenu de l'accordéon)
+		const accordNextElement = accordBtn.nextElementSibling;
+
+		// Ajouter un écouteur d'événement au clic du bouton
+			accordBtn.addEventListener('click', () => {
+				console.log('allo'); // Afficher un message dans la console (pour le débogage)
+
+				// Inverser la valeur de l'attribut aria-expanded (déplié ou non)
+				accordBtn.setAttribute('aria-expanded', accordBtn.getAttribute('aria-expanded') === 'true' ? 'false' : 'true');
+
+				// Inverser la valeur de l'attribut aria-hidden (visible ou non pour les technologies d'assistance)
+				accordNextElement.setAttribute('aria-hidden', accordNextElement.getAttribute('aria-hidden') === 'true' ? 'false' : 'true');
+
+				// Inverser la visibilité de l'élément en utilisant l'attribut hidden
+				accordNextElement.hidden = !accordNextElement.hidden;
+			});
+		});
+
+		const closeFilterMenu = document.querySelector("#CloseTriMenu");
+
+		closeFilterMenu.addEventListener('click', () => {
+			filterElement.setAttribute('aria-hidden', 'true');
+		});
+
+		// Gestion de l'ouverture du menu contextuel au clic sur un bouton
+
+		// Sélectionner tous les boutons ayant la classe .rcn-iconButton
+		// dans les cellules de tableau ayant la classe .rcn-tableCell__action--withMenu
+		const menuContextRows = document.querySelectorAll('.rcn-tableCell__action--withMenu .rcn-iconButton');
+
+		// Pour chaque bouton sélectionné, ajouter un écouteur d'événement au clic
+		menuContextRows.forEach(button => {
+			button.addEventListener('click', () => {
+				// Obtenir l'ID de l'élément cible du menu contextuel
+				var targetId = button.getAttribute('aria-controls');
+				
+				// Rechercher l'élément cible par son ID
+				var targetElement = document.getElementById(targetId);
+				
+				// Vérifier si l'élément cible existe et possède la classe .rcn-contextMenu--closed
+				if (targetElement && targetElement.classList.contains('rcn-contextMenu')) {
+				// Supprimer la classe .rcn-contextMenu--closed pour ouvrir le menu contextuel
+
+				targetElement.setAttribute('aria-hidden', 'false');
+				}
+			});
+		});
+
+
+		// Gestion de la position du menu contextuel en fonction du bouton cliqué
+
+		// Sélectionner tous les boutons ayant la classe .rcn-iconButton
+		// dans les cellules de tableau ayant la classe .rcn-tableCell__action--withMenu
+		const buttonContexts = document.querySelectorAll('.rcn-tableCell__action--withMenu .rcn-iconButton');
+
+		// Pour chaque bouton sélectionné, ajouter un écouteur d'événement au clic
+		buttonContexts.forEach(buttonContext => {
+			buttonContext.addEventListener('click', () => {
+				// Obtenir les coordonnées de l'élément bouton par rapport à la fenêtre
+				const buttonContextMenuPos = buttonContext.getBoundingClientRect();
+
+				// Appliquer les coordonnées comme variables CSS personnalisées
+				document.documentElement.style.setProperty('--rcn-contextMenu-Position-offsetTop', buttonContextMenuPos.top + 'px');
+				document.documentElement.style.setProperty('--rcn-contextMenu-Position-offsetLeft', buttonContextMenuPos.left + 'px');
+			});
+		});
+
+		const CloseContexts = document.querySelectorAll('.rcn-contextMenu__close');
+		CloseContexts.forEach(CloseContext => {
+			CloseContext.addEventListener('click', () => {
+				CloseContext.parentElement.setAttribute('aria-hidden', 'true');
+			});
+		})
+		
+
 	</script>
 </body>
-</html>
+</html> 

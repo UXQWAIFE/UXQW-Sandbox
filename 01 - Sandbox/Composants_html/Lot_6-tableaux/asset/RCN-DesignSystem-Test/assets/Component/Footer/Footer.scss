@@ -1,0 +1,149 @@
+.rcn-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: $rcn-semantic-color-static-background-standard;
+  &__socialMediasBanner {
+      order: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: $rcn-semantic-gap-horizontal-600;
+      padding-top: $rcn-semantic-padding-vertical-400;
+      padding-bottom: $rcn-semantic-padding-vertical-400;
+      background-color: $rcn-semantic-color-static-background-footer_banner;
+  }
+  &__socialMediasTextZone {
+      display: flex;
+      flex-direction: column;
+      order: 0;
+  }
+  &__socialMediasText {
+      font-weight: bold;
+      color: $rcn-semantic-color-static-text_and_icon-dsfr_strong;
+  }
+  &__socialMediasIconsZone {
+      display: flex;
+      flex-direction: row;
+      order: 1;
+      flex-wrap: wrap;
+      gap: $rcn-semantic-gap-horizontal-600;
+  }
+  &__socialMediasIcons {
+      color: $rcn-semantic-color-interaction-text_and_icon-default-link;
+      text-decoration: none;
+  }
+  &__mainBanners {
+      order: 1;
+      border-top: $rcn-semantic-borderwidth-200 solid $rcn-semantic-color-static-border-footer_banner_divider;
+      border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-footer_element_divider;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  }
+  &__productBanner {
+      order: 0;
+      display: flex;
+      padding-top: $rcn-semantic-padding-vertical-400;
+      padding-bottom: $rcn-semantic-padding-vertical-400;
+      gap: $rcn-semantic-gap-horizontal-600;
+      color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
+  }
+  &__logoZone {
+      display: flex;
+      grid-area: logo;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $rcn-semantic-gap-vertical-200;
+  }
+  &__productLogo {
+      margin-bottom: $rcn-semantic-gap-vertical-200;
+  }
+  &__descriptionZone {
+      display: flex;
+      grid-area: description;
+      flex-direction: column;
+      gap: $rcn-semantic-gap-vertical-400;
+      grid-column-start: 2;
+  }
+  &__productDescription {
+      order: 1;
+  }
+  &__institutionalEcosystemLinks {
+      font-weight: bold;
+      order: 2;
+      display: flex;
+      flex-direction: row;
+      gap: $rcn-semantic-gap-horizontal-200;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+  }
+  &__institutionalEcosystemLink {
+      text-decoration: none;
+      font-weight: bold;
+      color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
+    &:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
+    }
+  }
+  &__mandatoryLegalLinks {
+      order: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      border-top: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-footer_banner_divider;
+      padding: $rcn-semantic-padding-vertical-400 0;
+      gap: $rcn-semantic-gap-horizontal-300;
+  }
+  &__mendatoryLegalLink {
+      padding-right: $rcn-semantic-padding-horizontal-300;
+      border-right: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-footer_element_divider;
+      color: $rcn-semantic-color-static-text_and_icon-dsfr_light;
+      text-decoration: none;
+    &:hover {
+        color: $rcn-semantic-color-static-text_and_icon-dsfr_light;
+        text-decoration: underline;
+    }
+  }
+  &__licenseNotice {
+      order: 3;
+      padding: $rcn-semantic-padding-vertical-400 0;
+  }
+  &__partnersBanner {
+      order: 1;
+      display: flex;
+      flex-direction: column;
+      padding: $rcn-semantic-padding-vertical-400 0;
+      border-top: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-footer_banner_divider;
+      gap: $rcn-semantic-gap-vertical-400;
+      color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
+  }
+  &__partnersLogosZone {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: $rcn-semantic-gap-horizontal-700;
+  }
+  &__secondaryPartnersZone {
+      gap: $rcn-semantic-gap-horizontal-200;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      flex-wrap: wrap;
+  }
+  &__partnerLogo {
+      width: 100%;
+      height: auto;
+      max-height: 90px;
+      max-width: 160px;
+  }
+}
+
+.rcn-gridTemplateFooter {
+    grid-template-areas: "logo logo logo logo logo logo description description description description description description";
+}
+

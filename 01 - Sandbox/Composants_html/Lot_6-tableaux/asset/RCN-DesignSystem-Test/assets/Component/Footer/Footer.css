@@ -1,0 +1,171 @@
+.rcn-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: var(--rcn-semantic-color-static-background-standard);
+}
+
+.rcn-footer__socialMediasBanner {
+  order: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--rcn-semantic-gap-horizontal-600);
+  padding-top: var(--rcn-semantic-padding-vertical-400);
+  padding-bottom: var(--rcn-semantic-padding-vertical-400);
+  background-color: var(--rcn-semantic-color-static-background-footer_banner);
+}
+
+.rcn-footer__socialMediasTextZone {
+  display: flex;
+  flex-direction: column;
+  order: 0;
+}
+
+.rcn-footer__socialMediasText {
+  font-weight: bold;
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_strong);
+}
+
+.rcn-footer__socialMediasIconsZone {
+  display: flex;
+  flex-direction: row;
+  order: 1;
+  flex-wrap: wrap;
+  gap: var(--rcn-semantic-gap-horizontal-600);
+}
+
+.rcn-footer__socialMediasIcons {
+  color: var(--rcn-semantic-color-interaction-text_and_icon-default-link);
+  text-decoration: none;
+}
+
+.rcn-footer__mainBanners {
+  order: 1;
+  border-top: var(--rcn-semantic-borderwidth-200) solid var(--rcn-semantic-color-static-border-footer_banner_divider);
+  border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_element_divider);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.rcn-footer__productBanner {
+  order: 0;
+  display: flex;
+  padding-top: var(--rcn-semantic-padding-vertical-400);
+  padding-bottom: var(--rcn-semantic-padding-vertical-400);
+  gap: var(--rcn-semantic-gap-horizontal-600);
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+}
+
+.rcn-footer__logoZone {
+  display: flex;
+  grid-area: logo;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--rcn-semantic-gap-vertical-200);
+}
+
+.rcn-footer__productLogo {
+  margin-bottom: var(--rcn-semantic-gap-vertical-200);
+}
+
+.rcn-footer__descriptionZone {
+  display: flex;
+  grid-area: description;
+  flex-direction: column;
+  gap: var(--rcn-semantic-gap-vertical-400);
+  grid-column-start: 2;
+}
+
+.rcn-footer__productDescription {
+  order: 1;
+}
+
+.rcn-footer__institutionalEcosystemLinks {
+  font-weight: bold;
+  order: 2;
+  display: flex;
+  flex-direction: row;
+  gap: var(--rcn-semantic-gap-horizontal-200);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.rcn-footer__institutionalEcosystemLink {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+}
+
+.rcn-footer__institutionalEcosystemLink:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+}
+
+.rcn-footer__mandatoryLegalLinks {
+  order: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_banner_divider);
+  padding: var(--rcn-semantic-padding-vertical-400) 0;
+  gap: var(--rcn-semantic-gap-horizontal-300);
+}
+
+.rcn-footer__mendatoryLegalLink {
+  padding-right: var(--rcn-semantic-padding-horizontal-300);
+  border-right: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_element_divider);
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_light);
+  text-decoration: none;
+}
+
+.rcn-footer__mendatoryLegalLink:hover {
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_light);
+  text-decoration: underline;
+}
+
+.rcn-footer__licenseNotice {
+  order: 3;
+  padding: var(--rcn-semantic-padding-vertical-400) 0;
+}
+
+.rcn-footer__partnersBanner {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  padding: var(--rcn-semantic-padding-vertical-400) 0;
+  border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_banner_divider);
+  gap: var(--rcn-semantic-gap-vertical-400);
+  color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+}
+
+.rcn-footer__partnersLogosZone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--rcn-semantic-gap-horizontal-700);
+}
+
+.rcn-footer__secondaryPartnersZone {
+  gap: var(--rcn-semantic-gap-horizontal-200);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.rcn-footer__partnerLogo {
+  width: 100%;
+  height: auto;
+  max-height: 90px;
+  max-width: 160px;
+}
+
+.rcn-gridTemplateFooter {
+  grid-template-areas: "logo logo logo logo logo logo description description description description description description";
+}
+
