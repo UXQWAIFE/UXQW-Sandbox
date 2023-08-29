@@ -44,13 +44,13 @@
   background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
 }
 
-".rcn-pagination__navigationLink[aria-current=""page""]" {
+.rcn-pagination__navigationLink[aria-current="page"] {
   color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
   font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
   border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
 }
 
-".rcn-pagination__navigationLink[aria-current=""page""]:hover" {
+.rcn-pagination__navigationLink[aria-current="page"]:hover {
   color: var(--rcn-semantic-color-interaction-text_and_icon-hover-selected);
   border-bottom: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-hover-selected);
 }

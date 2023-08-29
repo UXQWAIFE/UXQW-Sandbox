@@ -12,7 +12,7 @@
 }
 
 .rcn-stepper__list::before {
-  content: ;
+  content: "";
   width: var(--rcn-semantic-borderwidth-100);
   height: calc(100% - var(--rcn-semantic-height-stepper_stepcircle));
   background-color: var(--rcn-semantic-color-static-border-divider_strong);
@@ -130,10 +130,10 @@
 }
 
 .rcn-stepper__list--horizontal::before {
-  content: ;
-  width: calc(100% - calc(calc(100% - calc(calc(rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / rcn-stepper-numberofsteps));
+  content: "";
+  width: calc(100% - calc(calc(100% - calc(calc(var(--rcn-stepper-numberofsteps) - 1) * var(--rcn-semantic-gap-horizontal-500))) / var(--rcn-stepper-numberofsteps)));
   height: var(--rcn-semantic-borderwidth-100);
-  left: calc(calc(100% - calc(calc(rcn-stepper-numberofsteps - 1) * var(--rcn-semantic-gap-horizontal-500))) / calc(2 *  rcn-stepper-numberofsteps);
+  left: calc(calc(100% - calc(calc(var(--rcn-stepper-numberofsteps) - 1) * var(--rcn-semantic-gap-horizontal-500))) / calc(2 *  var(--rcn-stepper-numberofsteps)));
   background-color: var(--rcn-semantic-color-static-border-divider_strong);
   position: absolute;
   top: calc(calc(var(--rcn-semantic-height-stepper_stepcircle) / 2) + var(--rcn-semantic-borderwidth-100));
