@@ -1,3 +1,8 @@
+.rcn-paddingTest {
+    padding-left: 50px;
+}
+
+
 .rcn-connexionModule {
 display:flex;
 flex-direction:row;
@@ -9,4 +14,38 @@ gap:var(--rcn-semantic-gap-horizontal-500);
 border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
 padding-top:var(--rcn-semantic-padding-horizontal-500);
 padding-bottom:var(--rcn-semantic-padding-horizontal-500);
+}
+
+.rcn-connexionModule__iconConnect{
+    order: -1;
+}
+
+.rcn-connexionModule__iconConnect::before{
+   content: var(--rcn-semantic-typography-content-icon-user);
+}
+
+.rcn-connexionModule--on {
+    gap:var(--rcn-semantic-gap-horizontal-400);
+    }
+
+Peut être mettre un descendant selecteur avec l'icon plustôt que de l'écrire comme ça? > enfait ça c'était une de nos règles donc on peut laisser comme ça
+
+
+.rcn-connexionModule__iconExpand {
+    order : 2;
+}
+
+.rcn-connexionModule__iconExpand::before {
+    content: var(--rcn-semantic-typography-content-icon-expand_vertical);
+}
+
+.rcn-connexionModule__profile{
+    width: var(--rcn-semantic-width-stepper_stepcircle);
+    height: var(--rcn-semantic-height-stepper_stepcircle);
+    /* width: 24px;
+    height: 24px; */
+    /* Définir la taille souhaitée pour la pastille */
+    border-radius: var(--rcn-semantic-borderradius-300);
+    background-color: rosybrown;
+    order: -1;
 }

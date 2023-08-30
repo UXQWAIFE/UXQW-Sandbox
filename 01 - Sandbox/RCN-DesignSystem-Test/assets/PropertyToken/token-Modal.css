@@ -16,9 +16,9 @@
 --rcn-modal__header-align-items: flex-start;
 --rcn-modal__header-border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
 --rcn-modal__header-padding: var(--rcn-semantic-padding-vertical-600) var(--rcn-semantic-padding-horizontal-700);
---rcn-modal__header-max-width: 100%;
+--rcn-modal__header-max-width: 1;
 --rcn-modal__header-gap: var(--rcn-semantic-gap-vertical-200);
---rcn-modal__title-width: 100%;
+--rcn-modal__title-width: 1;
 --rcn-modal__closeButton-display: flex;
 --rcn-modal__closeButton-flex-direction: row;
 --rcn-modal__closeButton-align-items: center;

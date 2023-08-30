@@ -17,11 +17,11 @@
       align-items: flex-start;
       border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
       padding: $rcn-semantic-padding-vertical-600 $rcn-semantic-padding-horizontal-700;
-      max-width: 100%;
+      max-width: 1;
       gap: $rcn-semantic-gap-vertical-200;
   }
   &__title {
-      width: 100%;
+      width: 1;
   }
   &__closeButton {
       display: flex;

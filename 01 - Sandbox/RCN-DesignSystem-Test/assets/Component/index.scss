@@ -2,34 +2,36 @@
 Voici les fichiers.scss des Composants du Design System du Référentiel de Conception Numérique
 Pour voir les règles d'intégrations des éléments <html> veuillez vous referrer au https://aife.economie.gouv.fr/referentiel/
 */
-/*lot1*/
-@import "BackToTop/BackToTop.scss";
-@import "Breadcrumb/Breadcrumb.scss";
-@import "Button/Button.scss";
-@import "Captcha/Captcha.scss";
-@import "Card/Card.scss";
-@import "Chips/Chips.scss";
-@import "GlobalContainers/GlobalContainers.scss";
-@import "Icon/Icon.scss";
-@import "Link/Link.scss";
-@import "Loader/Loader.scss";
-@import "Modal/Modal.scss";
-@import "Notification/Notification.scss";
-@import "Tooltip/Tooltip.scss";
-@import "Typography/Typography.scss";
-/*lot2*/
-@import "Accordions/Accordions.scss";
-@import "Animations/Animations.scss";
-@import "Header/Header.scss";
-@import "Footer/Footer.scss";
-@import "Tabs/Tabs.scss";
-/*lot3*/
-@import "FormInputs/FormInputs.scss";
 
-/* Lot 4 */
-@import "Menu/Menu.scss";
-@import "Pagination/Pagintion.scss";
-@import "Stepper/Stepper.scss"; 
+/*Fondamentaux*/
+@import "Typography/Typography.css";/*lot1*/
+@import "Icon/Icon.css";/*lot1*/
+@import "GlobalContainers/GlobalContainers.css";/*lot1*/
+@import "Link/Link.css";/*lot1*/
+@import "Grid/Grid.css";/*lot4*/
+@import "Animations/Animations.css";/*lot2*/
+/*Composants*/
+@import "FormInputs/FormInputs.css";/*lot3*/
+@import "Breadcrumb/Breadcrumb.css";/*lot1*/
+@import "Button/Button.css";/*lot1*/
+@import "BackToTop/BackToTop.css";/*lot1*/
+@import "Captcha/Captcha.css";/*lot1*/
+@import "Chips/Chips.css";/*lot1*/
+@import "Loader/Loader.css";/*lot1*/
+@import "Menu/Menu.css";/* Lot 4 */
+/*Modules*/
+@import "ActionsBanner/ActionsBanner.css";/*lot4*/
+@import "Notification/Notification.css";/*lot1*/
+@import "Tooltip/Tooltip.css";/*lot1*/
+@import "Accordions/Accordions.css";/*lot2*/
+@import "Tabs/Tabs.css";/*lot2*/
+@import "Card/Card.css";/*lot1*/
+@import "Modal/Modal.css";/*lot1*/
+@import "Pagination/Pagination.css";/* Lot 4 */
+@import "Stepper/Stepper.css";/* Lot 4 */
+@import "Header/Header.css";/*lot2*/
+@import "Footer/Footer.css";/*lot2*/
+
 
 
 /* Reset */ 

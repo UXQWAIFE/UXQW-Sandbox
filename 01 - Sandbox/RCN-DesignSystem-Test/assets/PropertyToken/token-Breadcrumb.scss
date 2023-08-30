@@ -1,0 +1,27 @@
+:root{
+$rcn-breadcrumb-padding-top: $rcn-semantic-padding-vertical-200;
+$rcn-breadcrumb-padding-bottom: $rcn-semantic-padding-vertical-200;
+$rcn-breadcrumb-border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
+$rcn-breadcrumb-background-color: $rcn-semantic-color-static-background-standard;
+$rcn-breadcrumb-margin-bottom: $rcn-semantic-margin-vertical-section;
+$rcn-breadcrumb-display: flex;
+$rcn-breadcrumb-flex-direction: row;
+$rcn-breadcrumb__list-display: flex;
+$rcn-breadcrumb__list-flex-direction: row;
+$rcn-breadcrumb__list-justify-content: flex-start;
+$rcn-breadcrumb__list-flex-wrap: wrap;
+$rcn-breadcrumb__item-display: flex;
+$rcn-breadcrumb__item-flex-direction: row;
+$rcn-breadcrumb__item-gap: $rcn-semantic-gap-horizontal-100;
+$rcn-breadcrumb__item-flex-wrap: nowrap;
+$rcn-breadcrumb__item-align-items: center;
+$rcn-breadcrumb__chevron-in_before-content: $rcn-semantic-typography-content-icon-breadcrum_divider;
+$rcn-breadcrumb__button-background: none;
+$rcn-breadcrumb__button-border: none;
+$rcn-breadcrumb__button-padding: 0;
+$rcn-breadcrumb__button-color: $rcn-semantic-color-interaction-text_and_icon-default-link;
+$rcn-breadcrumb__button-text-decoration: underline;
+$rcn-breadcrumb__button-cursor: pointer;
+$rcn-breadcrumb__button-if_hover-text-decoration: none;
+
+}

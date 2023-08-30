@@ -1,7 +1,7 @@
 :root{
 --rcn-accordions-display: flex;
 --rcn-accordions-flex-direction: column;
---rcn-accordions-width: 100%;
+--rcn-accordions-width: 1;
 --rcn-accordions-align-items: stretch;
 --rcn-accordions-border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
 --rcn-accordions__heading-border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);

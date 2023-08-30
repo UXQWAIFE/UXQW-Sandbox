@@ -19,12 +19,12 @@
   align-items: flex-start;
   border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
   padding: var(--rcn-semantic-padding-vertical-600) var(--rcn-semantic-padding-horizontal-700);
-  max-width: 100%;
+  max-width: 1;
   gap: var(--rcn-semantic-gap-vertical-200);
 }
 
 .rcn-modal__title {
-  width: 100%;
+  width: 1;
 }
 
 .rcn-modal__closeButton {

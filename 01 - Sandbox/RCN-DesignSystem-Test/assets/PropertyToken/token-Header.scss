@@ -1,0 +1,37 @@
+:root{
+$rcn-header-width: 1;
+$rcn-header-display: flex;
+$rcn-header-flex-direction: column;
+$rcn-header-align-items: stretch;
+$rcn-header__productBanner-order: 0;
+$rcn-header__productBanner-display: flex;
+$rcn-header__productBanner-flex-direction: row;
+$rcn-header__productBanner-justify-content: space-between;
+$rcn-header__productBanner-gap: $rcn-semantic-gap-horizontal-600;
+$rcn-header__productBanner-background-color: $rcn-semantic-color-static-background-standard;
+$rcn-header__productBanner-align-items: center;
+$rcn-header__logo-order: 0;
+$rcn-header__menu--portailDeServices-color: $rcn-semantic-color-interaction-text_and_icon-default-primary;
+$rcn-header__menu--portailDeServices-order: 1;
+$rcn-header__mainNavBanner-order: 1;
+$rcn-header__mainNavBanner-display: flex;
+$rcn-header__mainNavBanner-flex-direction: row;
+$rcn-header__mainNavBanner-justify-content: flex-start;
+$rcn-header__mainNavBanner-gap: $rcn-semantic-gap-horizontal-600;
+$rcn-header__mainNavBanner-background-color: $rcn-semantic-color-static-background-primary;
+$rcn-header__mainNavBanner-align-items: center;
+$rcn-header__menu-order: 0;
+$rcn-header__menu-flex-grow: 1;
+$rcn-header__toolsButtonsZone-order: 1;
+$rcn-header__toolsButtonsZone-display: flex;
+$rcn-header__toolsButtonsZone-flex-direction: row;
+$rcn-header__toolsButtonsZone-align-items: center;
+$rcn-header__toolsButtonsZone-justify-content: flex-start;
+$rcn-header__toolsButtonsZone-gap: $rcn-semantic-gap-horizontal-400;
+$rcn-header__toolsButtonsZone-font-size: $rcn-semantic-typography-fontsize-h3;
+$rcn-header__toolsButtonsZone___rcn-iconButton-color: $rcn-semantic-color-interaction-text_and_icon-default-onprimary;
+$rcn-header__searchbar-order: 2;
+$rcn-connexionModule__icon-in_before-content: $rcn-semantic-typography-content-icon-user;
+$rcn-connexionModule__icon-order: -1;
+
+}

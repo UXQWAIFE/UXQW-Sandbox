@@ -1,7 +1,7 @@
 .rcn-accordions {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 1;
     align-items: stretch;
     border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
   &__heading {

@@ -33,9 +33,9 @@
 --rcn-card--vertical___rcn-card__image-top: calc(48%);
 --rcn-card--vertical___rcn-card__image-left: calc(50%);
 --rcn-card--vertical___rcn-card__image-transform: scale(1) translate(-50%,-50%);
---rcn-card--vertical___rcn-card__image-min-height: 25%;
---rcn-card--vertical___rcn-card__image-width: 100%;
---rcn-card--vertical___rcn-card__image--fullHeight-height: 100%;
+--rcn-card--vertical___rcn-card__image-min-height: 0.25;
+--rcn-card--vertical___rcn-card__image-width: 1;
+--rcn-card--vertical___rcn-card__image--fullHeight-height: 1;
 --rcn-card--vertical___rcn-card__image--fullHeight-width: auto;
 --rcn-card--vertical___rcn-card__content-overflow: hidden;
 --rcn-card--vertical___rcn-card__content-text-overflow: ellipsis;
@@ -50,9 +50,9 @@
 --rcn-card--horizontal___rcn-card__image-top: calc(50%);
 --rcn-card--horizontal___rcn-card__image-left: calc(48%);
 --rcn-card--horizontal___rcn-card__image-transform: scale(1) translate(-50%,-50%);
---rcn-card--horizontal___rcn-card__image-min-width: 25%;
---rcn-card--horizontal___rcn-card__image-height: 100%;
---rcn-card--horizontal___rcn-card__image--fullWidth-width: 100%;
+--rcn-card--horizontal___rcn-card__image-min-width: 0.25;
+--rcn-card--horizontal___rcn-card__image-height: 1;
+--rcn-card--horizontal___rcn-card__image--fullWidth-width: 1;
 --rcn-card--horizontal___rcn-card__image--fullWidth-height: auto;
 --rcn-card--horizontal___rcn-card__content-overflow: hidden;
 --rcn-card--horizontal___rcn-card__content-text-overflow: ellipsis;

@@ -44,7 +44,7 @@
       position: absolute;
       display: flex;
       flex-direction: column;
-      top: 100%;
+      top: 1;
       background-color: $rcn-semantic-color-interaction-background-default-standard;
       box-shadow: $rcn-semantic-dropshadow-static-overlayed;
       cursor: pointer;
@@ -65,20 +65,20 @@
 }
 
 .rcn-menu {
-  &__entry[aria-current='page']::after {
+  &__entry[aria-current="page"]::after {
       height: $rcn-semantic-borderwidth-300;
   }
-  &__entry[aria-expanded='true'] {
+  &__entry[aria-expanded="true"] {
     .rcn-menu {
       &__submenuIcon {
           content: $rcn-semantic-typography-content-icon-collapse_vertical;
       }
     }
   }
-  &__submenu[aria-hidden='true'] {
+  &__submenu[aria-hidden="true"] {
       display: none;
   }
-  &__subentry[aria-current='page'] {
+  &__subentry[aria-current="page"] {
       border-left: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-primary;
       color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
       font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
