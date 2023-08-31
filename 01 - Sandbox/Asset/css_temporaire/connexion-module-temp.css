@@ -27,6 +27,11 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
 
 .rcn-connexionModule--on {
     gap:var(--rcn-semantic-gap-horizontal-400);
+    /* > a supp pour le remettre dans connexionModule */
+    padding: 16px;
+    border-radius: 6px;
+    background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+    width: fit-content;
   }
 
 .rcn-connexionModule__iconExpand {
@@ -61,7 +66,8 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
     top: 1;
     background-color: var(--rcn-semantic-color-interaction-background-default-standard);
     box-shadow: var(--rcn-semantic-dropshadow-static-overlayed);
-    cursor: pointer;    
+    cursor: pointer;   
+    width: 100%; 
   }
   
   .rcn-connexionModule__submenu[aria-hidden="true"] {
