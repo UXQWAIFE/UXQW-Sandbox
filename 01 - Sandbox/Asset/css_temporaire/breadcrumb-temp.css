@@ -1,0 +1,9 @@
+.rcn-breadcrumb{
+    margin-bottom: var(--rcn-semantic-margin-vertical-breadcrumb);
+}
+
+
+.rcn-breadcrumb--onLandingPage{ /*à ajouter */
+    padding: 0;
+    border:none
+  }

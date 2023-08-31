@@ -11,218 +11,248 @@
 </head>
 <body>
 
-
 <!-- Template formulaire avec stepper vertical -->
 
-
-
-	<div class="rcn-header">
-		<div class="rcn-header__productBanner rcn-grid__margins"> 
-			<div class="rcn-header__logo"> 
-				LOGO 
-			</div>
-			<div class="rcn-connexionModule"> 
-				<a class="rcn-link"> Créer un compte</a>
-				<div class="rcn-connexionModule__separator"> </div>
-				<button class="rcn-button rcn-button--primary"> 
-					Se connecter
-				</button>
-			</div>
+<div class="rcn-header">
+	<div class="rcn-header__productBanner rcn-gridMargins"> 
+		<div class="rcn-header__logo">
+			<img class="rcn-card__image" src="https://placehold.jp/150x100.png" alt="">
 		</div>
-		<div class="rcn-header__mainNavBanner rcn-grid__margins"> 
-			<div class="rcn-header__menu"> 
-				XXXXXXXXXX
-			</div>
-			<div class="rcn-header__toolsButtonsZone">
-				<button class="rcn-iconButton rcn-icon--mdi-check rcn-header__iconButton rcn-icon ">
-				</button>
-			</div>
-			
-			<div class="rcn-header__searchbar">
-				<label class="rcn-inputFieldBloc__label sr-only">Search</label>
-				<div class="rcn-inputField">
-					<input placeholder="Rechercher..." class="rcn-inputField__input">
-					<button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
-						<span class="sr-only"></span>
-					</button>
-				</div>
-			</div>
+		<div class="rcn-connexionModule"> 
+			<a class="rcn-link"> Créer un compte</a>
+			<div class="rcn-connexionModule__separator"> </div>
+			<button class="rcn-button rcn-button--primary">
+			<i class="rcn-icon rcn-connexionModule__icon"></i>
+			 Se connecter
+			</button>
 		</div>
 	</div>
 
+	<nav class="rcn-header__mainNavBanner rcn-gridMargins--menu"> 
+		<ul class="rcn-menu">
+      
+			<!-- Entrée Accueil  -->
+			<li>
+			  <a class="rcn-menu__entry " aria-current='page'  href="#" >
+				Accueil TCO
+			  </a>
+			</li>
+	  
+			<!-- Entrée avec sous-menu  -->
+			<li>
+			  <button class="rcn-menu__entry" aria-expanded="true" href="#" >
+				Avec sous-menu
+				<i class="rcn-icon rcn-menu__submenuIcon"></i>
+			  </button>
+			  <ul class="rcn-menu__submenu" aria-hidden="true">
+				<li><a class="rcn-menu__subentry">Subentry 1 </a></li>
+				<li><a class="rcn-menu__subentry">Subentry 2 </a></li>
+				<li><a class="rcn-menu__subentry">Subentry 3 with a long name, way too long</a></li>
+				<li><a class="rcn-menu__subentry" aria-current='page'> Méthodologie est perspectives</a></li>
+			  </ul>
+			</li>
+	  
+			<!-- Entrée Sans sous-menu  -->
+			<li>
+			  <a class="rcn-menu__entry" aria-current="page" href="#" >
+				Sans sous-menu
+			  </a>
+			</li>
+	  
+			<!-- Entrée Externe  -->
+			<li>
+			  <a class="rcn-menu__entry" href="#" >
+				Externe
+				<i class="rcn-icon rcn-link__icon--external"></i>
+			  </a>
+			</li>
+		</ul>
+		
+  		<!-- Boutons outils  -->
+
+		<div class="rcn-header__toolsButtonsZone">
+			<button class=" rcn-header__iconButton rcn-iconButton rcn-icon--mdi-starOutline  rcn-icon ">
+			</button>
+			<button class=" rcn-header__iconButton rcn-iconButton rcn-icon--mdi-starOutline  rcn-icon ">
+			</button>
+		</div>
+
+		  <!-- Barre de recherche  -->
+		<div class="rcn-header__searchbar">  
+			<div class="rcn-inputFieldBloc__label sr-only">Rechercher</div>
+			<div class="rcn-inputField">
+				<input placeholder="Rechercher..." class="rcn-inputField__input">
+				<button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+				<span class="sr-only"></span>
+				</button> 
+			</div>
+		</div>
+
+	</nav>	
+</div>
+
+<div class="rcn-breadcrumb rcn-breadcrumb--onLandingPage rcn-gridMargins">
+	<ul aria-hidden='true' class="rcn-breadcrumb__list sr-only">
+		<div class="rcn-breadcrumb__item">
+			<button class="rcn-breadcrumb__button"> Accueil
+			</button>
+		</div>
+	</ul>
+</div>
+
 	
-	<div class="rcn-grid rcn-grid--formStepperVerticalTemplate">
+<div class="rcn-grid rcn-grid--formStepperVerticalTemplate rcn-gridMargins">
+		
+	<h1 class="rcn-h1 rcn-h1--editorial rcn-form__headingZone"> Création de facture</h1>
 			
-		<h1 class=" rcn-h1 rcn-h1--edito rcn-form__headingZone"> Titre du formulaire je suis super super long comme titre pour le formulaire de l'état de la france </h1>    
-				
-		<nav class=" rcn-stepper rcn-stepper--navigable">
+	<nav class=" rcn-stepper rcn-stepper--navigable">
 
-			<ol class="rcn-stepper__list rcn-stepper__list--vertical">
+		<ol class="rcn-stepper__list">
 
-				<li class="rcn-stepper__step">
-					<div class="rcn-stepper__number rcn-stepper__number--completed">1</div>
-					
-					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Etape complétée </a>
-					
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">1</div>
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape complétée </a>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--current">
+				<div class="rcn-stepper__number">2</div>
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape en cours </a>
+			</li>
+
+			<ol class="rcn-stepper__subList">
+
+				<li class="rcn-stepper__step rcn-stepper__step--completed">
+					<div class=" rcn-stepper__indicator"></div>
+					<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous étape complétée </a>
 				</li>
-
-				<li class="rcn-stepper__step">
-					<div class="rcn-stepper__number rcn-stepper__number--current">2</div>
-					
-					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Etape en cours </a>
-					
+				<li class="rcn-stepper__step rcn-stepper__step--current">
+					<div class="rcn-stepper__indicator"></div>
+					<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous étape en cours </a>
 				</li>
-
-				<ol class="rcn-stepper__substepZone">
-
-					<li class="rcn-stepper__substep">
-						<div class=" rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--completed"></div>
-						
-						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Sous étape complétée </a>
-						
-					</li>
-
-					<li class="rcn-stepper__substep">
-						<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--subStepCurrent"></div>
-						
-						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Sous étape en cours </a>
-						
-					</li>
-
-					<li class="rcn-stepper__substep">
-						<div class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--uncompleted"></div>
-						
-						<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Sous-étape non complétée </a>
-						
-					</li>
-
-					<li class="rcn-stepper__substep">
-						<div disabled class="rcn-stepper__number rcn-stepper__number--substep rcn-stepper__number--disabled"></div>
-						<a disabled class="rcn-link rcn-stepper__sectionTitle" href="section1"> Sous-étape désactivée </a>
-					</li>
-
-				</ol>
-
 				<li class="rcn-stepper__step">
-					<div class="rcn-stepper__number rcn-stepper__number--uncompleted">3</div>
-					
-					<a class="rcn-link  rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto blanditiis incidunt voluptas quis ducimus recusandae, alias ad ea minus soluta quaerat facere eum aliquam libero modi fuga unde sit sint.</a>
-					
+					<div class="rcn-stepper__indicator"></div>
+					<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous-étape non complétée </a>
 				</li>
-
-				<li class="rcn-stepper__step">
-					<div disabled class="rcn-stepper__number rcn-stepper__number--disabled">4</div>
-					
-					<a disabled class="rcn-link rcn-link rcn-stepper__sectionTitle" href="section1"> Etape désactivée Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eos, voluptatum illum quisquam autem distinctio aut beatae, eius temporibus aliquam laudantium assumenda voluptatibus cupiditate iure libero culpa, quod deserunt velit? </a>
-					
+				<li class="rcn-stepper__step rcn-stepper__step--disabled">
+					<div disabled class="rcn-stepper__indicator"></div>
+					<p disabled class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous-étape désactivée </p>
 				</li>
 
 			</ol>
 
-		</nav>
+			<li class="rcn-stepper__step">
+				<div class="rcn-stepper__number">3</div>
+				<a class="rcn-link  rcn-stepper__stepTitle" href="section1"> Etape non complétée. Lorem ipsum dolor sit, nt.</a>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--disabled">
+				<div disabled class="rcn-stepper__number">4</div>
+				<p disabled class="rcn-link rcn-stepper__stepTitle" href=""> TEST Etape désactivée Lorem ipsum dolor sit ameam autem distinctio aut beatae </p>
+			</li>
 
-		
+		</ol>
 
-		<form class="rcn-form__formZone">
-						
-			<p class="rcn-form__instructionZone"> 
-				Les champs suivi d'un  
-					<span class="rcn-inputFieldBloc__mandatoryAsterisk"> </span> 
-					sont obligatoires
-			</p>
+	</nav>
 
-			<div class="rcn-form__content">
-
-				<!--imput non-obligatoire avec message succes -->
-
-				<div class="rcn-inputFieldBloc">        
-					<label for="x" class="rcn-inputFieldBloc__label">Label input</label>
-					<div class="rcn-inputField" >
-						<input id="x" type="text" col="5" row="5" class="rcn-inputField__input" placeholder="placeholder">
-					</div>
-				</div>
-
-				<!--imput obligatoire avec texte descriptif et message d'erreur -->
-
-				<div class="rcn-inputFieldBloc">
-					<label class="rcn-inputFieldBloc__label">
-						Champ en erreur
-					</label>
-			
-					<div>texte explicatif (si besoin)</div> 
-		
-					<div class="rcn-inputField rcn-inputField--error">
-						<input type="text" class="rcn-inputField__input" required>
-		
-					</div>
-					<div  class="rcn-inputFieldBloc__errorZone" >
-						<i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
-						erreur machin machin
-					</div> 
-				</div>
-
-				<!--imput obligatoire + erreur -->
-
-				<div class="rcn-inputFieldBloc">
-					<label class="rcn-inputFieldBloc__label">
-						Error<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span>
-					</label>
-			
-					<div>texte explicatif (si besoin)</div> 
-
-					<div class="rcn-inputField rcn-inputField--error">
-						<input type="text" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit" required>
-
-					</div>
-					<div  class="rcn-inputFieldBloc__errorZone" >
-						<i class="rcn-inputFieldBloc__errorIcon rcn-icon "><span class="sr-only"></span></i>
-						erreur machin machin
-					</div> 
-				</div>
-
-				<!--input obligatoire + succes  -->
-
-				<div class="rcn-inputFieldBloc">        
-					<label class="rcn-inputFieldBloc__label">Success<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
-					<div class="rcn-inputField" >
-						<input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
-					</div>
-					<div  class="rcn-inputFieldBloc__successZone">
-						<i class="rcn-icon rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
-						bravo clarou t'es la meilleur dev
-					</div> 
-				</div>
-
-				<!--imput désactivé -->
-
-				<div class="rcn-inputFieldBloc">        
-					<label class="rcn-inputFieldBloc__label">Désactivé</label>
-					<div class="rcn-inputField rcn-inputField--disabled" >
-						<input type="text"  value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
-
-						<button disabled class="rcn-iconButton rcn-inputField__button">
-							<span class="sr-only"></span>
-							<i class="mdi mdi-heart"></i>
-						</button>
-					</div>
-				</div>
 	
-			</div>
 
-			<div class="rcn-bottomActionsBanner" >
-				<div class="rcn-bottomActionsBanner__secondaryActions">
-					<button class="rcn-button rcn-button--secondary">Enregistrer</button>
-				</div>
-				<div class="rcn-bottomActionsBanner__primaryActions"> 
-					<button class="rcn-button rcn-button--primary">Suivant</button>
-					<button class="rcn-button rcn-button--secondary">Précédent</button>
+	<form class="rcn-form__formZone">
 					
+		<p class="rcn-form__instructionZone"> 
+			Les champs suivi d'un  
+				<span class="rcn-inputFieldBloc__mandatoryAsterisk"> </span> 
+				sont obligatoires
+		</p>
+
+		<div class="rcn-form__content">
+
+			<!--imput non-obligatoire avec message succes -->
+
+			<div class="rcn-inputFieldBloc">        
+				<label for="x" class="rcn-inputFieldBloc__label">Label input</label>
+				<div class="rcn-inputField" >
+					<input id="x" type="text" col="5" row="5" class="rcn-inputField__input" placeholder="placeholder">
 				</div>
 			</div>
 
-		</form>
+			<!--imput obligatoire avec texte descriptif et message d'erreur -->
 
-	</div> 
+			<div class="rcn-inputFieldBloc">
+				<label class="rcn-inputFieldBloc__label">
+					Champ en erreur
+				</label>
+		
+				<div>texte explicatif (si besoin)</div> 
+	
+				<div class="rcn-inputField rcn-inputField--error">
+					<input type="text" class="rcn-inputField__input" required>
+	
+				</div>
+				<div  class="rcn-inputFieldBloc__errorZone" >
+					<i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+					erreur machin machin
+				</div> 
+			</div>
+
+			<!--imput obligatoire + erreur -->
+
+			<div class="rcn-inputFieldBloc">
+				<label class="rcn-inputFieldBloc__label">
+					Error<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span>
+				</label>
+		
+				<div>texte explicatif (si besoin)</div> 
+
+				<div class="rcn-inputField rcn-inputField--error">
+					<input type="text" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit" required>
+
+				</div>
+				<div  class="rcn-inputFieldBloc__errorZone" >
+					<i class="rcn-inputFieldBloc__errorIcon rcn-icon "><span class="sr-only"></span></i>
+					erreur machin machin
+				</div> 
+			</div>
+
+			<!--input obligatoire + succes  -->
+
+			<div class="rcn-inputFieldBloc">        
+				<label class="rcn-inputFieldBloc__label">Success<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
+				<div class="rcn-inputField" >
+					<input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+				</div>
+				<div  class="rcn-inputFieldBloc__successZone">
+					<i class="rcn-icon rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
+					bravo clarou t'es la meilleur dev
+				</div> 
+			</div>
+
+			<!--imput désactivé -->
+
+			<div class="rcn-inputFieldBloc">        
+				<label class="rcn-inputFieldBloc__label">Désactivé</label>
+				<div class="rcn-inputField rcn-inputField--disabled" >
+					<input type="text"  value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+
+					<button disabled class="rcn-iconButton rcn-inputField__button">
+						<span class="sr-only"></span>
+						<i class="mdi mdi-heart"></i>
+					</button>
+				</div>
+			</div>
+
+		</div>
+
+		<nav class="rcn-actionsBanner" >
+			<div class="rcn-actionsBanner__secondaryActions">
+				<button class=" rcn-button rcn-button--secondary">Retour</button>
+			</div>
+			<div class="rcn-actionsBanner__primaryActions">
+				<button class=" rcn-button rcn-button--secondary">Enregistrer</button>
+				<button class="rcn-button rcn-button--primary">Suivant</button>
+			</div>
+		</nav>	
+
+	</form>
+
+</div> 
 	
 		
 
@@ -307,7 +337,7 @@
  <div class="rcn-header">
 	<div class="rcn-header__productBanner rcn-grid__margins"> 
 		<div class="rcn-header__logo"> 
-			LOGO 
+			<img class="rcn-card__image" src="https://placehold.jp/150x100.png" alt="">
 		</div>
 		<div class="rcn-connexionModule"> 
 			<a class="rcn-link"> Créer un compte</a>
@@ -342,7 +372,7 @@
 	<div class="rcn-grid rcn-grid--formStepperHorizontalTemplate">
 		 
 		
-		<h1 class=" rcn-h1 rcn-h1--edito rcn-form__headingZone"> Titre du formulaire </h1>   
+		<h1 class=" rcn-h1 rcn-h1--editorial rcn-form__headingZone"> Titre du formulaire </h1>   
 
 	
 		

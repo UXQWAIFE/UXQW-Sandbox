@@ -211,3 +211,13 @@
   flex: 1 1 0px;
   text-align: center;
 } */
+
+
+
+.rcn-stepper__indicator {
+  min-width: calc(var(--rcn-semantic-width-stepper_stepcircle) / 3);
+}
+
+.rcn-stepper__step--current .rcn-stepper__indicator {
+  min-width: calc(calc(var(--rcn-semantic-width-stepper_stepcircle) / 3) - calc(2 * calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))));
+}
