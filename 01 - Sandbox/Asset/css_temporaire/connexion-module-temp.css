@@ -8,6 +8,7 @@ display:flex;
 flex-direction:row;
 align-items:center;
 gap:var(--rcn-semantic-gap-horizontal-500);
+position: relative;
 }
 
 .rcn-connexionModule__separator {
@@ -26,10 +27,7 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
 
 .rcn-connexionModule--on {
     gap:var(--rcn-semantic-gap-horizontal-400);
-    }
-
-Peut être mettre un descendant selecteur avec l'icon plustôt que de l'écrire comme ça? > enfait ça c'était une de nos règles donc on peut laisser comme ça
-
+  }
 
 .rcn-connexionModule__iconExpand {
     order : 2;
@@ -40,6 +38,7 @@ Peut être mettre un descendant selecteur avec l'icon plustôt que de l'écrire 
 }
 
 .rcn-connexionModule__profile{
+    display: flex;
     width: var(--rcn-semantic-width-stepper_stepcircle);
     height: var(--rcn-semantic-height-stepper_stepcircle);
     /* width: 24px;
@@ -48,4 +47,51 @@ Peut être mettre un descendant selecteur avec l'icon plustôt que de l'écrire 
     border-radius: var(--rcn-semantic-borderradius-300);
     background-color: rosybrown;
     order: -1;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--rcn-semantic-color-static-text_and_icon-onprimary);
+    /* Mettre le bon token color */
 }
+
+.rcn-connexionModule__submenu{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 1;
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+    box-shadow: var(--rcn-semantic-dropshadow-static-overlayed);
+    cursor: pointer;    
+  }
+  
+  .rcn-connexionModule__submenu[aria-hidden="true"] {
+    display: none;
+  }
+  
+  .rcn-connexionModule__submenu--hidden {
+    display: none;
+  }
+ 
+  .rcn-connexionModule__subentry {
+    display: block;
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+    /* border-left: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent); */
+    padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-vertical-400);
+    width: auto;
+  }
+  
+  .rcn-connexionModule__subentry:hover {
+    background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard);
+  }
+  
+  /* .rcn-connexionModule__subentry[aria-current="page"] {
+    border-left: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
+    font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
+  } */
+
+  .rcn-connexionModule__subentry--action:hover {
+    background-color: white;
+  }
+  
