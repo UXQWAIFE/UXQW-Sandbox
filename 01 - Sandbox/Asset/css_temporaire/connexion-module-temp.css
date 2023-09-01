@@ -8,7 +8,7 @@ display:flex;
 flex-direction:row;
 align-items:center;
 gap:var(--rcn-semantic-gap-horizontal-500);
-position: relative;
+/* position: relative; */
 }
 
 .rcn-connexionModule__separator {
@@ -32,7 +32,12 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
     border-radius: 6px;
     background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
     width: fit-content;
-  }
+}
+
+.rcn-connexionModule__container{
+  position: relative;
+  display: flex;
+}
 
 .rcn-connexionModule__iconExpand {
     order : 2;
@@ -44,8 +49,10 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
 
 .rcn-connexionModule__profile{
     display: flex;
-    width: var(--rcn-semantic-width-stepper_stepcircle);
-    height: var(--rcn-semantic-height-stepper_stepcircle);
+    /* width: var(--rcn-semantic-width-stepper_stepcircle);
+    height: var(--rcn-semantic-height-stepper_stepcircle); */
+    width: calc((40px / 2) * 2);
+    height: calc((40px / 2) * 2);
     /* width: 24px;
     height: 24px; */
     /* Définir la taille souhaitée pour la pastille */
