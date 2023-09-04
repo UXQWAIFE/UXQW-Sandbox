@@ -17,18 +17,50 @@
 			<img class="rcn-card__image" src="https://placehold.jp/151x138.png" alt="">
 		</div>
 
+		<div class="rcn-containerTest">
+
+			<div class="rcn-inputFieldBloc rcn-inputFieldBloc--language">        
+				<!-- <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--language">Langue de l'applicatif :</label> -->
+				<div class="rcn-inputField">
+					<select name="" class="rcn-inputField__input rcn-inputField__input--select">
+						<option class="rcn-inputField__option" value="">- Séléctionner une option -</option>
+						<option class="rcn-inputField__option" value="">FR - Français</option>
+						<option class="rcn-inputField__option" value="">EN - English</option>
+						<option class="rcn-inputField__option" value="" selected>ES - Espanol</option>
+					</select>
+				</div>
+			</div>
+
+			<fieldset class="rcn-fieldset rcn-inputField__input--test rcn-fieldset--as-inputFieldBloc">
+				<!-- <legend class="rcn-inputFieldBloc__label">Label input</legend>        -->
+				<div class="rcn-inputField">
 	
+					<label for="unite" class="sr-only">Label unit select</label>
+					<select name="" id="unite" class="rcn-inputField__input rcn-inputField__input--test rcn-inputField__input--unitSelect"> 
+						<!-- input__unit input__unit--selected"> -->
+						<option class="rcn-inputField__option" value="">£</option>
+						<option class="rcn-inputField__option" value="">$</option>
+						<option class="rcn-inputField__option" value="" selected>€</option>
+					</select>
+	
+					<label for="nombre" class="sr-only">Label number select</label>
+					<input id="nombre" type="number"  class="rcn-inputField__input rcn-inputField__input--number">
+				</div>
+		</fieldset>
+
+			<div class="rcn-connexionModule__separator"> </div> 
+
 			<div class="rcn-connexionModule"> 
 				<a class="rcn-link"> Créer un compte</a>
-				<div class="rcn-connexionModule__separator"> </div>
+				<!-- <div class="rcn-connexionModule__separator"> </div> -->
 				<button class="rcn-button rcn-button--primary">
-				<i class="rcn-icon rcn-connexionModule__icon"></i>
-				Se connecter
-				</button>
+					<i class="rcn-icon rcn-connexionModule__icon"></i>
+					Se connecter
+					</button>
 			</div>
 		</div>
 
-	
+	</div>
 	<nav class="rcn-header__mainNavBanner rcn-gridMargins--menu"> 
 		<ul class="rcn-menu">
       
