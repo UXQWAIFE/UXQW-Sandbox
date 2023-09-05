@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../RCN-DesignSystem-Test/assets/styles-ChorusPro.css" rel="stylesheet">
+    <link href="../../Asset/Resets.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../Asset/css_temporaire/*.css">
+  
+</head>
+<body>
+
+<!-- Template formulaire avec stepper vertical -->
+
+<div class=" rcn-grid rcn-gridMargins rcn-gridOverlayModal">
+	<div class="rcn-modal ">
+			<div class="rcn-modal__header">
+				
+				<button class="rcn-modal__closeButton"> 
+					<div> Fermer
+					</div>
+					<div class="rcn-icon rcn-icon--mdi-close">
+					</div>
+				</button>
+				<div class="rcn-modal__title rcn-h4"> Titre
+				</div>
+			</div>
+			<div class="rcn-modal__content rcn-modal__content--with-topOverlay">
+				<div class=".rcn-modal__topOverlay"></div>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae lacus quis elit vestibulum viverra. Phasellus aliquet neque non est tincidunt blandit. Sed vehicula urna erat, sed fringilla lectus sodales non. Aliquam tristique diam tortor, eu blandit sem commodo ut. Nam elit nisi, pharetra eget nunc eleifend, dapibus eleifend enim. Aenean tincidunt ligula lectus. Donec tempor vestibulum ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ac scelerisque dolor. Praesent quis quam vehicula, luctus sapien et, ornare sem. Etiam ultricies vel urna sed accumsan. Duis faucibus eu nulla quis gravida. Vestibulum suscipit elementum turpis id mollis.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae lacus quis elit vestibulum viverra. Phasellus aliquet neque non est tincidunt blandit. Sed vehicula urna erat, sed fringilla lectus sodales non. Aliquam tristique diam tortor, eu blandit sem commodo ut. Nam elit nisi, pharetra eget nunc eleifend, dapibus eleifend enim. Aenean tincidunt ligula lectus. Donec tempor vestibulum ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ac scelerisque dolor. Praesent quis quam vehicula, luctus sapien et, ornare sem. Etiam ultricies vel urna sed accumsan. Duis faucibus eu nulla quis gravida. Vestibulum suscipit elementum turpis id mollis.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae lacus quis elit vestibulum viverra. Phasellus aliquet neque non est tincidunt blandit. Sed vehicula urna erat, sed fringilla lectus sodales non. Aliquam tristique diam tortor, eu blandit sem commodo ut. Nam elit nisi, pharetra eget nunc eleifend, dapibus eleifend enim. Aenean tincidunt ligula lectus. Donec tempor vestibulum ullamcorper. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ac scelerisque dolor. Praesent quis quam vehicula, luctus sapien et, ornare sem. Etiam ultricies vel urna sed accumsan. Duis faucibus eu nulla quis gravida. Vestibulum suscipit elementum turpis id mollis.
+				<div class=".rcn-modal__bottomOverlay"></div>
+			</div>
+			
+			<!-- <div class="rcn-modal__footer"> -->
+				<div class="rcn-actionsBanner rcn-modal__actionBanner" >
+					<div class="rcn-actionsBanner__secondaryActions">
+						<button class=" rcn-button rcn-button--secondary">Réintialiser</button>
+					</div>
+					<div class="rcn-actionsBanner__primaryActions"> 
+						<button class="rcn-button rcn-button--primary">Appliquer</button>
+					</div>
+				</div>	
+			<!-- </div>	 -->
+		</div>
+	</div>
+</div>
+
+<div class="rcn-header">
+	<div class="rcn-header__productBanner rcn-gridMargins"> 
+		<div class="rcn-header__logo">
+			<img class="rcn-card__image" src="https://placehold.jp/150x100.png" alt="">
+		</div>
+		<div class="rcn-connexionModule"> 
+			<a class="rcn-link"> Créer un compte</a>
+			<div class="rcn-connexionModule__separator"> </div>
+			<button class="rcn-button rcn-button--primary">
+			<i class="rcn-icon rcn-connexionModule__icon"></i>
+			 Se connecter
+			</button>
+		</div>
+	</div>
+
+	<nav class="rcn-header__mainNavBanner rcn-gridMargins--menu"> 
+		<ul class="rcn-menu">
+      
+			<!-- Entrée Accueil  -->
+			<li>
+			  <a class="rcn-menu__entry " aria-current='page'  href="#" >
+				Accueil TCO
+			  </a>
+			</li>
+	  
+			<!-- Entrée avec sous-menu  -->
+			<li>
+			  <button class="rcn-menu__entry" aria-expanded="true" href="#" >
+				Avec sous-menu
+				<i class="rcn-icon rcn-menu__submenuIcon"></i>
+			  </button>
+			  <ul class="rcn-menu__submenu" aria-hidden="true">
+				<li><a class="rcn-menu__subentry">Subentry 1 </a></li>
+				<li><a class="rcn-menu__subentry">Subentry 2 </a></li>
+				<li><a class="rcn-menu__subentry">Subentry 3 with a long name, way too long</a></li>
+				<li><a class="rcn-menu__subentry" aria-current='page'> Méthodologie est perspectives</a></li>
+			  </ul>
+			</li>
+	  
+			<!-- Entrée Sans sous-menu  -->
+			<li>
+			  <a class="rcn-menu__entry" aria-current="page" href="#" >
+				Sans sous-menu
+			  </a>
+			</li>
+	  
+			<!-- Entrée Externe  -->
+			<li>
+			  <a class="rcn-menu__entry" href="#" >
+				Externe
+				<i class="rcn-icon rcn-link__icon--external"></i>
+			  </a>
+			</li>
+		</ul>
+		
+  		<!-- Boutons outils  -->
+
+		<div class="rcn-header__toolsButtonsZone">
+			<button class=" rcn-header__iconButton rcn-iconButton rcn-icon--mdi-starOutline  rcn-icon ">
+			</button>
+			<button class=" rcn-header__iconButton rcn-iconButton rcn-icon--mdi-starOutline  rcn-icon ">
+			</button>
+		</div>
+
+		  <!-- Barre de recherche  -->
+		<div class="rcn-header__searchbar">  
+			<div class="rcn-inputFieldBloc__label sr-only">Rechercher</div>
+			<div class="rcn-inputField">
+				<input placeholder="Rechercher..." class="rcn-inputField__input">
+				<button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+				<span class="sr-only"></span>
+				</button> 
+			</div>
+		</div>
+
+	</nav>	
+</div>
+
+<div class="rcn-breadcrumb rcn-breadcrumb--onLandingPage rcn-gridMargins">
+	<ul aria-hidden='true' class="rcn-breadcrumb__list sr-only">
+		<div class="rcn-breadcrumb__item">
+			<button class="rcn-breadcrumb__button"> Accueil
+			</button>
+		</div>
+	</ul>
+</div>
+
+	
+<div class="rcn-grid rcn-grid--formStepperVerticalTemplate rcn-gridMargins">
+		
+	<h1 class="rcn-h1 rcn-h1--editorial rcn-form__headingZone"> Création de facture</h1>
+			
+	<nav class=" rcn-stepper rcn-stepper--navigable">
+
+		<ol class="rcn-stepper__list">
+
+			<li class="rcn-stepper__step rcn-stepper__step--completed">
+				<div class="rcn-stepper__number">1</div>
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape complétée </a>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--current">
+				<div class="rcn-stepper__number">2</div>
+				<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Etape en cours </a>
+			</li>
+
+			<ol class="rcn-stepper__subList">
+
+				<li class="rcn-stepper__step rcn-stepper__step--completed">
+					<div class=" rcn-stepper__indicator"></div>
+					<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous étape complétée </a>
+				</li>
+				<li class="rcn-stepper__step rcn-stepper__step--current">
+					<div class="rcn-stepper__indicator"></div>
+					<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous étape en cours </a>
+				</li>
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__indicator"></div>
+					<a class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous-étape non complétée </a>
+				</li>
+				<li class="rcn-stepper__step rcn-stepper__step--disabled">
+					<div disabled class="rcn-stepper__indicator"></div>
+					<p disabled class="rcn-link rcn-stepper__stepTitle" href="section1"> Sous-étape désactivée </p>
+				</li>
+
+			</ol>
+
+			<li class="rcn-stepper__step">
+				<div class="rcn-stepper__number">3</div>
+				<a class="rcn-link  rcn-stepper__stepTitle" href="section1"> Etape non complétée. Lorem ipsum dolor sit, nt.</a>
+			</li>
+			<li class="rcn-stepper__step rcn-stepper__step--disabled">
+				<div disabled class="rcn-stepper__number">4</div>
+				<p disabled class="rcn-link rcn-stepper__stepTitle" href=""> TEST Etape désactivée Lorem ipsum dolor sit ameam autem distinctio aut beatae </p>
+			</li>
+
+		</ol>
+
+	</nav>
+
+	
+
+	<form class="rcn-form__formZone">
+					
+		<p class="rcn-form__instructionZone"> 
+			Les champs suivi d'un  
+				<span class="rcn-inputFieldBloc__mandatoryAsterisk"> </span> 
+				sont obligatoires
+		</p>
+
+		<div class="rcn-form__content">
+
+			<!--imput non-obligatoire avec message succes -->
+
+			<div class="rcn-inputFieldBloc">        
+				<label for="x" class="rcn-inputFieldBloc__label">Label input</label>
+				<div class="rcn-inputField" >
+					<input id="x" type="text" col="5" row="5" class="rcn-inputField__input" placeholder="placeholder">
+				</div>
+			</div>
+
+			<!--imput obligatoire avec texte descriptif et message d'erreur -->
+
+			<div class="rcn-inputFieldBloc">
+				<label class="rcn-inputFieldBloc__label">
+					Champ en erreur
+				</label>
+		
+				<div>texte explicatif (si besoin)</div> 
+	
+				<div class="rcn-inputField rcn-inputField--error">
+					<input type="text" class="rcn-inputField__input" required>
+	
+				</div>
+				<div  class="rcn-inputFieldBloc__errorZone" >
+					<i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+					erreur machin machin
+				</div> 
+			</div>
+
+			<!--imput obligatoire + erreur -->
+
+			<div class="rcn-inputFieldBloc">
+				<label class="rcn-inputFieldBloc__label">
+					Error<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span>
+				</label>
+		
+				<div>texte explicatif (si besoin)</div> 
+
+				<div class="rcn-inputField rcn-inputField--error">
+					<input type="text" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit" required>
+
+				</div>
+				<div  class="rcn-inputFieldBloc__errorZone" >
+					<i class="rcn-inputFieldBloc__errorIcon rcn-icon "><span class="sr-only"></span></i>
+					erreur machin machin
+				</div> 
+			</div>
+
+			<!--input obligatoire + succes  -->
+
+			<div class="rcn-inputFieldBloc">        
+				<label class="rcn-inputFieldBloc__label">Success<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
+				<div class="rcn-inputField" >
+					<input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+				</div>
+				<div  class="rcn-inputFieldBloc__successZone">
+					<i class="rcn-icon rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
+					bravo clarou t'es la meilleur dev
+				</div> 
+			</div>
+
+			<!--imput désactivé -->
+
+			<div class="rcn-inputFieldBloc">        
+				<label class="rcn-inputFieldBloc__label">Désactivé</label>
+				<div class="rcn-inputField rcn-inputField--disabled" >
+					<input type="text"  value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+
+					<button disabled class="rcn-iconButton rcn-inputField__button">
+						<span class="sr-only"></span>
+						<i class="mdi mdi-heart"></i>
+					</button>
+				</div>
+			</div>
+
+		</div>
+
+		<nav class="rcn-actionsBanner" >
+			<div class="rcn-actionsBanner__secondaryActions">
+				<button class=" rcn-button rcn-button--secondary">Retour</button>
+			</div>
+			<div class="rcn-actionsBanner__primaryActions">
+				<button class=" rcn-button rcn-button--secondary">Enregistrer</button>
+				<button class="rcn-button rcn-button--primary">Suivant</button>
+			</div>
+		</nav>	
+
+	</form>
+
+</div> 
+	
+		
+
+		
+	
+
+	<footer class="rcn-footer">
+			<div class="rcn-footer__socialMediasBanner rcn-grid__margins">
+				<div class="rcn-footer__socialMediasTextZone">
+					<span class="rcn-footer__socialMediasText">Suivez-nous</span>
+					<span class="rcn-footer__socialMediasText">sur les réseaux sociaux</span>
+				</div>
+				<div class="rcn-footer__socialMediasIconsZone">
+					<a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-dailymotion"></a>
+					<a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-instagram"></a>
+					<a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-youtube"></a>
+				</div>  
+			</div>
+	
+			<div class="rcn-footer__mainBanners rcn-grid__margins"> 
+				<div class="rcn-footer__productBanner">
+					<div class="rcn-footer__productBanner-leftZone">
+						<img class="image rcn-footer__productLogo" src="https://placehold.co/378x140">
+						
+							<div>Meileure version de toi même</div>
+							<div class="rcn-inputFieldBloc rcn-inputFieldBloc--language">        
+								<label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--language">Langue de l'applicatif :</label>
+								<div class="rcn-inputField">
+									<select name="" class="rcn-inputField__input rcn-inputField__input--select">
+										<option class="rcn-inputField__option" value="">- Séléctionner une option -</option>
+										<option class="rcn-inputField__option" value="">FR - Français</option>
+										<option class="rcn-inputField__option" value="">EN - English</option>
+										<option class="rcn-inputField__option" value="" selected>ES - Espanol</option>
+									</select>
+								</div>
+							</div>
+						
+					</div>  
+					<div class="rcn-footer__productBanner-rightZone">
+						<div class="rcn-footer__productDescription"> 
+							lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend egestas ex et eleifend. Etiam id metus sed libero eleifend pretium in at ligula. Vivamus egestas fermentum orci, id posuere orci condimentum a. Duis laoreet auctor rhoncus. Aliquam pretium, enim sed accumsan ultricies, augue lorem aliquam urna, quis cursus magna urna id quam.
+						</div>
+						<div class="rcn-footer__institutionalEcosystemLinks">
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink" href="coucou">Link1</a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink"> Jusqu'à l'infini </a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink"> Et l'au delà </a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+							<a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+						</div>      
+					</div>      
+				</div>
+	
+				<div class="rcn-footer__partnersBanner">
+					<div> 
+					Titre 
+					</div> 
+					<div class="rcn-footer__partnersLogosZone">
+						<img class="partnerImage" src="https://placehold.co/160x90">
+	
+						<div class="rcn-footer__secondaryPartnersZone"> 
+							<img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+							<img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+							<img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+							<img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+						</div>
+					</div>  
+				</div>
+	
+				<div class="rcn-footer__mandatoryLegalLinks">
+					<a class="rcn-footer__mendatoryLegalLink"> Link </a>
+					<a class="rcn-footer__mendatoryLegalLink"> Link </a>
+					<a class="rcn-footer__mendatoryLegalLink"> Link </a>
+				</div>  
+				<div class="rcn-footer__licenseNotice"> Sauf mention contrainte... </div>
+			</div>
+	</footer>
+
+
+ <!-- Template formulaire avec stepper horizontal -->
+
+ <div class="rcn-header">
+	<div class="rcn-header__productBanner rcn-grid__margins"> 
+		<div class="rcn-header__logo"> 
+			<img class="rcn-card__image" src="https://placehold.jp/150x100.png" alt="">
+		</div>
+		<div class="rcn-connexionModule"> 
+			<a class="rcn-link"> Créer un compte</a>
+			<div class="rcn-connexionModule__separator"> </div>
+			<button class="rcn-button rcn-button--primary"> 
+				Se connecter
+			</button>
+		</div>
+	</div>
+	<div class="rcn-header__mainNavBanner rcn-grid__margins"> 
+		<div class="rcn-header__menu"> 
+			XXXXXXXXXX
+		</div>
+		<div class="rcn-header__toolsButtonsZone">
+			<button class="rcn-iconButton rcn-icon--mdi-check rcn-header__iconButton rcn-icon ">
+			</button>
+		</div>
+		
+		<div class="rcn-header__searchbar">
+			<label class="rcn-inputFieldBloc__label sr-only">Search</label>
+			<div class="rcn-inputField">
+				<input placeholder="Rechercher..." class="rcn-inputField__input">
+				<button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+					<span class="sr-only"></span>
+				</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+ 
+	<div class="rcn-grid rcn-grid--formStepperHorizontalTemplate">
+		 
+		
+		<h1 class=" rcn-h1 rcn-h1--editorial rcn-form__headingZone"> Titre du formulaire </h1>   
+
+	
+		
+		<nav class="rcn-stepper  rcn-stepper--navigable">
+
+			<ol class="rcn-stepper__list rcn-stepper__list--horizontal">
+	
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__number rcn-stepper__number--uncompleted">1</div>
+					
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée navigable </a>
+					
+				</li>
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__number rcn-stepper__number--uncompleted ">2</div>				
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--uncompleted" href="section1"> Etape non complétée non navigable </a>
+					
+				</li>
+				<li class="rcn-stepper__step">
+					<div disabled class="rcn-stepper__number rcn-stepper__number--disabled">3</div>				
+					<a disabled class="rcn-link rcn-stepper__sectionTitle" href="section1"> Etape désactivée </a>
+					
+				</li>
+	
+				<li class="rcn-stepper__step">
+					<div class="rcn-stepper__number rcn-stepper__number--current">4</div>				
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--current" href="section1"> Etape en cours navigable </a>
+					
+				</li>
+				<li class="rcn-stepper__step">
+					
+					<div class="rcn-stepper__number rcn-stepper__number--completed">6</div>				
+					<a class="rcn-link rcn-stepper__sectionTitle rcn-stepper__sectionTitle--completed" href="section1"> Etape complétée navigable </a>
+					
+				</li>
+	
+			</ol>
+	
+	
+		</nav>
+
+
+	
+
+
+		<form class="rcn-form__formZone">
+						
+					<p class="rcn-form__instructionZone"> 
+						Les champs suivi d'un  
+							<span class="rcn-inputFieldBloc__mandatoryAsterisk"> </span> 
+							sont obligatoires
+					</p>
+
+					<div class="rcn-form__content">
+
+						<!--imput non-obligatoire avec message succes -->
+
+						<div class="rcn-inputFieldBloc">        
+							<label for="x" class="rcn-inputFieldBloc__label">Label input</label>
+							<div class="rcn-inputField" >
+								<input id="x" type="text" col="5" row="5" class="rcn-inputField__input" placeholder="placeholder">
+							</div>
+						</div>
+
+						<!--imput obligatoire avec texte descriptif et message d'erreur -->
+
+						<div class="rcn-inputFieldBloc">
+							<label class="rcn-inputFieldBloc__label">
+								Champ en erreur
+							</label>
+					
+							<div>texte explicatif (si besoin)</div> 
+				
+							<div class="rcn-inputField rcn-inputField--error">
+								<input type="text" class="rcn-inputField__input" required>
+				
+							</div>
+							<div  class="rcn-inputFieldBloc__errorZone" >
+								<i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+								erreur machin machin
+							</div> 
+						</div>
+						
+					</div>
+					<div class="rcn-bottomActionsBanner" >
+						<div class="rcn-bottomActionsBanner__secondaryActions">
+							<button class="rcn-button rcn-button--secondary">Enregistrer</button>
+						</div>
+						<div class="rcn-bottomActionsBanner__primaryActions"> 
+							<button class="rcn-button rcn-button--primary">Suivant</button>
+							<button class="rcn-button rcn-button--secondary">Précédent</button>
+							
+						</div>
+					</div>
+		</form>
+		
+
+
+         
+
+	 </div>
+ 
+
+	 <footer class="rcn-footer">
+        <div class="rcn-footer__socialMediasBanner rcn-grid__margins">
+            <div class="rcn-footer__socialMediasTextZone">
+                <span class="rcn-footer__socialMediasText">Suivez-nous</span>
+                <span class="rcn-footer__socialMediasText">sur les réseaux sociaux</span>
+            </div>
+            <div class="rcn-footer__socialMediasIconsZone">
+                <a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-dailymotion"></a>
+                <a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-instagram"></a>
+                <a href="rien" class="rcn-icon rcn-icon--asH4 rcn-footer__socialMediasIcons rcn-icon--mdi-youtube"></a>
+            </div>  
+        </div>
+
+        <div class="rcn-footer__mainBanners rcn-grid__margins"> 
+            <div class="rcn-footer__productBanner">
+                <div class="rcn-footer__productBanner-leftZone">
+                    <img class="image rcn-footer__productLogo" src="https://placehold.co/378x140">
+                    
+                        <div>Meileure version de toi même</div>
+                        <div class="rcn-inputFieldBloc rcn-inputFieldBloc--language">        
+                            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--language">Langue de l'applicatif :</label>
+                            <div class="rcn-inputField">
+                                <select name="" class="rcn-inputField__input rcn-inputField__input--select">
+                                    <option class="rcn-inputField__option" value="">- Séléctionner une option -</option>
+                                    <option class="rcn-inputField__option" value="">FR - Français</option>
+                                    <option class="rcn-inputField__option" value="">EN - English</option>
+                                    <option class="rcn-inputField__option" value="" selected>ES - Espanol</option>
+                                </select>
+                            </div>
+                        </div>
+                    
+                </div>  
+                <div class="rcn-footer__productBanner-rightZone">
+                    <div class="rcn-footer__productDescription"> 
+                        lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eleifend egestas ex et eleifend. Etiam id metus sed libero eleifend pretium in at ligula. Vivamus egestas fermentum orci, id posuere orci condimentum a. Duis laoreet auctor rhoncus. Aliquam pretium, enim sed accumsan ultricies, augue lorem aliquam urna, quis cursus magna urna id quam.
+                    </div>
+                    <div class="rcn-footer__institutionalEcosystemLinks">
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink" href="coucou">Link1</a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink"> Jusqu'à l'infini </a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink"> Et l'au delà </a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+                        <a class="rcn-link rcn-footer__institutionalEcosystemLink">Link2</a>
+                    </div>      
+                </div>      
+            </div>
+
+            <div class="rcn-footer__partnersBanner">
+                <div> 
+                Titre 
+                </div> 
+                <div class="rcn-footer__partnersLogosZone">
+                    <img class="partnerImage" src="https://placehold.co/160x90">
+
+                    <div class="rcn-footer__secondaryPartnersZone"> 
+                        <img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+                        <img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+                        <img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+                        <img class="rcn-footer__partnerLogo" src="https://placehold.co/160x90">
+                    </div>
+                </div>  
+            </div>
+
+            <div class="rcn-footer__mandatoryLegalLinks">
+                <a class="rcn-footer__mendatoryLegalLink"> Link </a>
+                <a class="rcn-footer__mendatoryLegalLink"> Link </a>
+                <a class="rcn-footer__mendatoryLegalLink"> Link </a>
+            </div>  
+            <div class="rcn-footer__licenseNotice"> Sauf mention contrainte... </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<footer>
+    <script src="../../Asset/css_temporaire/import-temp.js"></script>
+</footer>
