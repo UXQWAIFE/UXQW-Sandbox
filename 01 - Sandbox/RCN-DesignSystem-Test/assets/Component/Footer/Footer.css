@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: stretch;
   background-color: var(--rcn-semantic-color-static-background-standard);
+  margin-top: var(--rcn-semantic-margin-vertical-footer);
 }
 
 .rcn-footer__socialMediasBanner {
@@ -159,7 +160,7 @@
 }
 
 .rcn-footer__partnerLogo {
-  width: 1;
+  width: 100%;
   height: auto;
   max-height: 90px;
   max-width: 160px;

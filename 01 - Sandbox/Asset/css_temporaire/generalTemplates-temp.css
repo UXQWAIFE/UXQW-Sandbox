@@ -1,0 +1,35 @@
+/* =========== Template génériques ========== */
+
+
+
+/* ----- Page avec un titre centré sur la zone de contenu
+et un side à gauche de la zone de contenu uniquement, sous le titre ---- */
+
+
+.rcn-T-HLSMC{
+  grid-template-areas:
+  ". . . . heading heading heading heading heading heading heading heading"
+ "side side side . mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent";
+}
+.rcn-T-HLSMC__side{
+  grid-area: side;
+}
+.rcn-T-HLSMC__heading{
+  grid-area: heading;
+}
+.rcn-T-HLSMC__mainContent{
+  grid-area:mainContent;
+}
+
+/* ----- Page avec un side à gauche sur toute la hauteur et un main content ---- */
+
+.rcn-T-LSMC{
+    grid-template-areas:
+    "side side side . mainContent mainContent mainContent mainContent mainContent mainContent mainContent mainContent";
+  }
+  .rcn-T-HLSMC__side{
+    grid-area: side;
+  }
+  .rcn-T-HLSMC__mainContent{
+    grid-area:mainContent;
+  }

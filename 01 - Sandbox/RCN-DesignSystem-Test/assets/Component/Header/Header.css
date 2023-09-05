@@ -1,5 +1,5 @@
 .rcn-header {
-  width: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -13,6 +13,8 @@
   gap: var(--rcn-semantic-gap-horizontal-600);
   background-color: var(--rcn-semantic-color-static-background-standard);
   align-items: center;
+  padding-top: var(--rcn-semantic-padding-vertical-500);
+  padding-bottom: var(--rcn-semantic-padding-vertical-500);
 }
 
 .rcn-header__logo {

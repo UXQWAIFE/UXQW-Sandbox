@@ -1,5 +1,4 @@
 .rcn-stepper {
-    grid-area: stepper;
     margin-bottom: $rcn-semantic-margin-vertical-section;
   &__list {
       display: flex;
@@ -13,7 +12,7 @@
         height: calc(100% - $rcn-semantic-height-stepper_stepcircle);
         background-color: $rcn-semantic-color-static-border-divider_strong;
         position: absolute;
-        left: calc(calc($rcn-semantic-height-stepper_stepcircle / 2) + $rcn-semantic-borderwidth-100);
+        left: calc(($rcn-semantic-height-stepper_stepcircle / 2) + $rcn-semantic-borderwidth-100);
         z-index: -1;
     }
     &--horizontal {
@@ -22,12 +21,12 @@
         gap: $rcn-semantic-gap-horizontal-500;
       &::before {
           content: "";
-          width: calc(100% - calc(calc(100% - calc(calc($rcn-stepper-numberofsteps - 1) * $rcn-semantic-gap-horizontal-500)) / $rcn-stepper-numberofsteps));
+          width: calc(100% - ((100% - (($rcn-stepper-numberofsteps - 1) * $rcn-semantic-gap-horizontal-500)) / $rcn-stepper-numberofsteps));
           height: $rcn-semantic-borderwidth-100;
-          left: calc(calc(100% - calc(calc($rcn-stepper-numberofsteps - 1) * $rcn-semantic-gap-horizontal-500)) / calc(2 *  $rcn-stepper-numberofsteps));
+          left: calc((100% - (($rcn-stepper-numberofsteps - 1) * $rcn-semantic-gap-horizontal-500)) / (2 *  $rcn-stepper-numberofsteps));
           background-color: $rcn-semantic-color-static-border-divider_strong;
           position: absolute;
-          top: calc(calc($rcn-semantic-height-stepper_stepcircle / 2) + $rcn-semantic-borderwidth-100);
+          top: calc(($rcn-semantic-height-stepper_stepcircle / 2) + $rcn-semantic-borderwidth-100);
           z-index: -1;
       }
       .rcn-stepper {
@@ -76,9 +75,9 @@
             background-color: $rcn-semantic-color-static-background-standard;
             border: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
             color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
-            width: calc($rcn-semantic-width-stepper_stepcircle - calc(2 * calc($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
-            height: calc($rcn-semantic-height-stepper_stepcircle - calc(2 * calc($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
-            min-width: calc($rcn-semantic-width-stepper_stepcircle - calc(2 * calc($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
+            width: calc($rcn-semantic-width-stepper_stepcircle - (2 * ($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
+            height: calc($rcn-semantic-height-stepper_stepcircle - (2 * ($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
+            min-width: calc($rcn-semantic-width-stepper_stepcircle - (2 * ($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
             font-weight: $rcn-semantic-typography-fontweight-label;
         }
         &__stepTitle {
@@ -90,9 +89,10 @@
             background-color: $rcn-semantic-color-static-background-standard;
             color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
             font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
-            width: calc(calc($rcn-semantic-width-stepper_stepcircle / 3) - calc(2 * calc($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
-            height: calc(calc($rcn-semantic-height-stepper_stepcircle / 3) - calc(2 * calc($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
+            width: calc(($rcn-semantic-width-stepper_stepcircle / 3) - (2 * ($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
+            height: calc(($rcn-semantic-height-stepper_stepcircle / 3) - (2 * ($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
             border: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
+            min-width: calc(--$rcn-semantic-width-stepper_stepcircle - (2 * (--$rcn-semantic-borderwidth-300 - --$rcn-semantic-borderwidth-100)));
         }
       }
     }
@@ -141,6 +141,7 @@
       background-color: $rcn-semantic-color-static-background-standard;
       border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
       color: $rcn-semantic-color-static-text_and_icon-onstandard;
+      min-width: calc(--$rcn-semantic-width-stepper_stepcircle / 3);
   }
 }
 

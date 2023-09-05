@@ -38,6 +38,15 @@
         background-color: $rcn-semantic-color-interaction-background-hover-standard;
     }
   }
+  &__navigationLink[aria-current='page'] {
+      color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
+      font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
+      border-bottom: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
+  }
+  &__navigationLink[aria-current='page']:hover {
+      color: $rcn-semantic-color-interaction-text_and_icon-hover-selected;
+      border-bottom: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-hover-selected;
+  }
   &__previousIcon {
       order: -1;
     &::before {
@@ -60,22 +69,10 @@
         background-color: $rcn-semantic-color-interaction-background-hover-standard;
     }
     &::before {
-        content: $rcn-semantic-typography-content-icon-arrow;
+        content: $rcn-semantic-typography-content-icon-goto;
         display: inline-block;
         transform: rotate(90deg);
     }
-  }
-}
-
-.rcn-pagination {
-  &__navigationLink[aria-current="page"] {
-      color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
-      font-weight: $rcn-semantic-typography-fontweight-body-component-selected;
-      border-bottom: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
-  }
-  &__navigationLink[aria-current="page"]:hover {
-      color: $rcn-semantic-color-interaction-text_and_icon-hover-selected;
-      border-bottom: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-hover-selected;
   }
 }
 

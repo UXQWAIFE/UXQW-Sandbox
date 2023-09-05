@@ -1,9 +1,10 @@
 .rcn-breadcrumb{
     margin-bottom: var(--rcn-semantic-margin-vertical-breadcrumb);
+    margin-bottom: 48px; /*à supprimer après intégration, pour la démo*/
 }
 
 
 .rcn-breadcrumb--onLandingPage{ /*à ajouter */
     padding: 0;
     border:none
-  }
+}

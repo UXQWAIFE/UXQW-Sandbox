@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: stretch;
     background-color: $rcn-semantic-color-static-background-standard;
+    margin-top: $rcn-semantic-margin-vertical-footer;
   &__socialMediasBanner {
       order: 0;
       display: flex;
@@ -136,7 +137,7 @@
       flex-wrap: wrap;
   }
   &__partnerLogo {
-      width: 1;
+      width: 100%;
       height: auto;
       max-height: 90px;
       max-width: 160px;

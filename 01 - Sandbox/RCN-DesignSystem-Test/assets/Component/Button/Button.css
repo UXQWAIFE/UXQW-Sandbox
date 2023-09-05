@@ -82,7 +82,7 @@
   border: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-interaction-border-default-button_toggle_off);
   height: 18px;
   width: 18px;
-  border-radius: 0.5;
+  border-radius: 50%;
 }
 
 .rcn-toggle:hover {

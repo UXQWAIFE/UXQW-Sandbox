@@ -1,4 +1,7 @@
 :root {
+--rcn-core-shadow-100: 0 2px 06px 0 var(--rcn-core-color-shadow-900);
+--rcn-core-shadow-200: 0 4px 12px 0 var(--rcn-core-color-shadow-900);
+--rcn-core-shadow-300: 0 6px 18px 0 var(--rcn-core-color-shadow-900);
 --rcn-core-color-product-100: #F9E3DD;
 --rcn-core-color-product-200: #E99F8C;
 --rcn-core-color-product-400: #D4401B;
@@ -82,7 +85,4 @@
 --rcn-core-gradient-to_top: linear-gradient(to top, rgba(0,0,0,0.2), rgba(0,0,0,0));
 --rcn-core-gradient-to_bottom: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0));
 --rcn-core-sizing-600: var(--rcn-core-fontsize-2000r);
---rcn-core-shadow-100: 0 2px 06px 0 var(--rcn-core-color-shadow-900);
---rcn-core-shadow-200: 0 4px 12px 0 var(--rcn-core-color-shadow-900);
---rcn-core-shadow-300: 0 6px 18px 0 var(--rcn-core-color-shadow-900);
 }

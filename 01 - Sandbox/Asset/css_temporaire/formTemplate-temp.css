@@ -1,154 +1,62 @@
-  /*Template du formulaire */
+ 
+/* ===== Form avec stepper VERTICAL ===== */
+
+.rcn-verticalStepperForm{
+  grid-template-areas:
+    '. . . . heading heading heading heading heading heading heading heading' 'stepper stepper stepper . form form form form form form form form';
+}
+
+.rcn-verticalStepperForm__heading{
+  display: flex;
+  justify-content: center;
+  grid-area: heading;
+  text-align: center;
+}
+
+.rcn-verticalStepperForm__instructions{
+    display: flex;
+    flex-direction: row;
+    width:auto;
+    justify-content: center;
+    margin:0;
+    gap: var(--rcn-semantic-gap-horizontal-200);
+    align-items: center;
+    margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
+}
+
+.rcn-verticalStepperForm__stepper{
+  grid-area: stepper;
+}
+
+.rcn-verticalStepperForm__form{
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  grid-area: form;
+}
+
+/* ===== Form avec stepper HORIZONTAL ===== */
   
-  .rcn-grid--formStepperVerticalTemplate {
-    grid-template-areas:
-     ". . . . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading"
-    "stepper stepper stepper . form form form form form form form form";
-  }
-  
-  .rcn-grid--formStepperHorizontalTemplate {
-
-    grid-template-areas:
-    "formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading"
-    "stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper"
-    "form form form form form form form form form form form form";
-
-  }
-
-/* 
-.rcn-verticalStepperForm
-
-.rcn-horizontalStepperForm */
-
-
-
-
-
-
-<div class="rcn-grid rcn-form__grid--verticalStepper">
-
-  <div class="rcn-form__headingZone">
-
-  <div class="rcn-form__instructionZone">
-
-
-<div class="rcn-grid rcn-grid--verticalStepperForm">
-
-  <div class="rcn-form__headingZone">
-
-  <div class="rcn-form__instructionZone">
-
-
-<div class="rcn-grid rcn-form--verticalStepper">
-
-  <div class="rcn-form__headingZone">
-
-  <div class="rcn-form__instructionZone">
-
-
-<div class="rcn-grid rcn-verticalStepperForm">
-
-  <div class="rcn-verticalStepperForm__headingZone">
-
-  <div class="rcn-verticalStepperForm__instructionZone">
-
-
-
-
-
-
-
-
-<div class="rcn-form"> /*ici */
-
-  <div class="rcn-grid rcn-form__grid--verticalStepper">
-
-    <div class="rcn-form__headingZone">
-
-    <div class="rcn-form__instructionZone">
-
-
-
-
-<div class="rcn-form"> /*ici */
-
-  <div class="rcn-grid rcn-grid--verticalStepperForm">
-
-    <div class="rcn-form__headingZone">
-
-    <div class="rcn-form__instructionZone">
-
-
-
-  <div class="rcn-grid rcn-form rcn-form--verticalStepper"> /*ici */
-
-    <div class="rcn-form__headingZone">
-
-    <div class="rcn-form__instructionZone">
-
-
-
-.rcn-T-sideAndCentralTitle{
+.rcn-horizontalStepperForm {
   grid-template-areas:
-  ". . . . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading"
- "stepper stepper stepper . form form form form form form form form";
-}
-.rcn-T-sideAndCentralTitle__side{
-  grid-area: side;
-}
-.rcn-T-sideAndCentralTitle__title{
-  grid-area: title;
-}
-.rcn-T-sideAndCentralTitle__mainContent{
-  grid-area:mainContent;
+  '. . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading . .'
+  '. . stepper stepper stepper stepper stepper stepper stepper stepper . .'
+  '. . form form form form form form form form . .';
 }
 
-
-
-
-
-.rcn-T-verticalStepperForm{
-  grid-template-areas:
-  ". . . . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading"
- "stepper stepper stepper . form form form form form form form form";
-}
-.rcn-T-verticalStepperForm__stepperZone{
-  grid-area: side;
-}
-.rcn-T-verticalStepperForm__instructionZone{
-  grid-area: headingZone;
-}
-.rcn-T-verticalStepperForm__headingZone{
-  grid-area: headingZone;
-}
-.rcn-T-verticalStepperForm__formZone{
-  grid-area:mainContent;
+.rcn-horizontalStepperForm__stepper{
+  align-self:center;
+  grid-area: stepper;
 }
 
-
-
-
-.rcn-form--verticalStepper{
-  grid-template-areas:
-  ". . . . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading"
- "stepper stepper stepper . form form form form form form form form";
-}
-
-.rcn-form--horizontalStepper{
-  grid-template-areas:
-    "formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading"
-    "stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper stepper"
-    "form form form form form form form form form form form form";
-}
-
-.rcn-form__headingZone{
+.rcn-horizontalStepperForm__heading{
   display: flex;
   justify-content: center;
   grid-area: formHeading;
   text-align: center;
   }
 
-.rcn-form__instructionZone{
+.rcn-horizontalStepperForm__instructions{
     display: flex;
     flex-direction: row;
     width:auto;
@@ -159,29 +67,29 @@
     margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
 }
     
-.rcn-form__formZone{
+.rcn-horizontalStepperForm__form{
   display: flex;
   flex-direction: column;
   align-items: stretch;
   grid-area: form;
-
 }
 
-.rcn-form__horizontalStepper{
-  align-self:center;
+
+/* Classes de démonstration */
+
+.demo-header__productBanner{
+  width:100%;
+  background-color: white;
+  height:148px;
+  border-top: 3px solid black;
 }
-  
-
-
-
-
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
+.demo-header__menu{
+  width:100%;
+  background-color:#5770BE;
+  height:48px;
+}
+.demo-footer{
+  background-color: rgb(245, 245, 254);
+  width:100%;
+  height : 200px;
+}

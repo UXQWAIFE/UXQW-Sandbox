@@ -72,7 +72,7 @@
       border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-button_toggle_off;
       height: 18px;
       width: 18px;
-      border-radius: 0.5;
+      border-radius: 50%;
   }
   &:hover {
       background-color: $rcn-semantic-color-interaction-background-hover-button_toggle_off;

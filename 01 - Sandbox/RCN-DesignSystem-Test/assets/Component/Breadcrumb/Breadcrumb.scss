@@ -3,9 +3,13 @@
     padding-bottom: $rcn-semantic-padding-vertical-200;
     border-bottom: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
     background-color: $rcn-semantic-color-static-background-standard;
-    margin-bottom: $rcn-semantic-margin-vertical-section;
+    margin-bottom: $rcn-semantic-margin-vertical-breadcrumb;
     display: flex;
     flex-direction: row;
+  &--onLandingPage {
+      padding: 0;
+      border: none;
+  }
   &__list {
       display: flex;
       flex-direction: row;

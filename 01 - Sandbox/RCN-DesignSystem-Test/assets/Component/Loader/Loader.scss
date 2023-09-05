@@ -13,7 +13,7 @@
   &__circle {
       height: 24px;
       width: 24px;
-      border-radius: 0.5;
+      border-radius: 50%;
       background-color: $rcn-semantic-color-static-background-primary;
       animation: grow-shrink 1.5s ease-in-out infinite;
     &--first {
