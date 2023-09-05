@@ -2,3 +2,13 @@
     padding-left: var(--rcn-semantic-padding-horizontal-700);
     padding-right: var(--rcn-semantic-padding-horizontal-700);
 }
+
+.rcn-modal{
+    z-index: 999;
+    /* marche pas je sais pas pq */
+    overflow: auto;
+}
+
+.rcn-gridOverlayModal{
+    height: 100%;
+}
