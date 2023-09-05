@@ -1,6 +1,7 @@
 .rcn-modal__actionBanner{
     padding-left: var(--rcn-semantic-padding-horizontal-700);
     padding-right: var(--rcn-semantic-padding-horizontal-700);
+    margin-top: 0px;
 }
 
 .rcn-modal{
@@ -12,3 +13,19 @@
 .rcn-gridOverlayModal{
     height: 100%;
 }
+
+.rcn-modal__content--with-topOverlay{
+    margin-top: 0px;
+}
+
+.rcn-gridOverlayModal--medium {
+
+    grid-template-areas: ". . . modal modal modal modal modal modal . . .";
+ 
+  }
+
+  .rcn-gridOverlayModal--small {
+
+    grid-template-areas: ". . . . modal modal modal modal . . . .";
+ 
+  }

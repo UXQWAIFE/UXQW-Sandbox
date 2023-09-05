@@ -1,7 +1,0 @@
-:root{--rcn-semantic-dropshadow-interaction-elevated:var(--rcn-core-shadow-100);
- --rcn-semantic-dropshadow-interaction-overlayed:var(--rcn-core-shadow-200);
-  --rcn-semantic-dropshadow-interaction-detached:var(--rcn-core-shadow-300);
- --rcn-semantic-dropshadow-static-elevated:var(--rcn-core-shadow-100);
- --rcn-semantic-dropshadow-static-overlayed:var(--rcn-core-shadow-200);
- --rcn-semantic-dropshadow-static-detached:var(--rcn-core-shadow-300);
-}

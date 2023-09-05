@@ -1,12 +1,18 @@
-/* .footer-bannerTest{
-    background-color: white;
-    border-bottom: 1px solid var(--rcn-semantic-color-static-border-footer_element_divider);
-    height: 66px;
-    justify-content: flex-end;
-
+.rcn-footer__banner{
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+    border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_element_divider);
+    /* height: 66px; */
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    padding-top: var(--rcn-semantic-padding-vertical-400);
+    padding-bottom: var(--rcn-semantic-padding-vertical-400);
 }
 
-
+.rcn-footer__inputFieldBloc{
+    margin-bottom: 0px;
+}
 
 .rcn-footer__socialMediasBanner{
     border-bottom: var(--rcn-semantic-borderwidth-200) solid var(--rcn-semantic-color-static-border-footer_banner_divider);
@@ -16,12 +22,5 @@
     border-top: 0px white;
 }
 
-.number-color-test{
-    color: #F0F0F0;
-}
+/* ==> A supprimer au sein du excel > TODO */
 
-.rcn-inputField__unit--test{
-    width: 90px;
-    padding-top: 16px;
-    padding-left: 16px;
-} */
