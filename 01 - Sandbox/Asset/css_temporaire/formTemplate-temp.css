@@ -39,20 +39,15 @@
   
 .rcn-horizontalStepperForm {
   grid-template-areas:
-  '. . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading . .'
+  '. . heading heading heading heading heading heading heading heading . .'
   '. . stepper stepper stepper stepper stepper stepper stepper stepper . .'
   '. . form form form form form form form form . .';
-}
-
-.rcn-horizontalStepperForm__stepper{
-  align-self:center;
-  grid-area: stepper;
 }
 
 .rcn-horizontalStepperForm__heading{
   display: flex;
   justify-content: center;
-  grid-area: formHeading;
+  grid-area: heading;
   text-align: center;
   }
 
@@ -65,6 +60,11 @@
     gap: var(--rcn-semantic-gap-horizontal-200);
     align-items: center;
     margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
+}
+
+.rcn-horizontalStepperForm__stepper{
+  align-self:center;
+  grid-area: stepper;
 }
     
 .rcn-horizontalStepperForm__form{
