@@ -1,0 +1,4 @@
+.rcn-modal__actionBanner{
+    padding-left: var(--rcn-semantic-padding-horizontal-700);
+    padding-right: var(--rcn-semantic-padding-horizontal-700);
+}

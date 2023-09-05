@@ -7,7 +7,7 @@
 display:flex;
 flex-direction:row;
 align-items:center;
-gap:var(--rcn-semantic-gap-horizontal-500);
+gap:var(--rcn-semantic-gap-horizontal-400);
 position: relative;
 }
 
@@ -26,13 +26,18 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
 }
 
 .rcn-connexionModule--on {
-    gap:var(--rcn-semantic-gap-horizontal-400);
-    /* > a supp pour le remettre dans connexionModule */
-    padding: 16px;
-    border-radius: 6px;
+    padding: var(--rcn-semantic-padding-vertical-200)  var(--rcn-semantic-padding-horizontal-300);
+    border-radius: var(--rcn-semantic-borderradius-200);
     background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
     width: fit-content;
-  }
+}
+
+.rcn-connexionModule__container{
+
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+}
 
 .rcn-connexionModule__iconExpand {
     order : 2;
@@ -46,9 +51,6 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
     display: flex;
     width: var(--rcn-semantic-width-stepper_stepcircle);
     height: var(--rcn-semantic-height-stepper_stepcircle);
-    /* width: 24px;
-    height: 24px; */
-    /* Définir la taille souhaitée pour la pastille */
     border-radius: var(--rcn-semantic-borderradius-300);
     background-color: rosybrown;
     order: -1;
@@ -56,18 +58,21 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
     flex-direction: column;
     justify-content: center;
     color: var(--rcn-semantic-color-static-text_and_icon-onprimary);
-    /* Mettre le bon token color */
+    
 }
 
+/* > Modifier les semantics width et height une fois les semantics mis à jours par 
+ width: var(--rcn-semantic-width-profile);
+  height: var(--rcn-semantic-height-profile);
+*/
+
 .rcn-connexionModule__submenu{
-    position: absolute;
     display: flex;
     flex-direction: column;
-    top: 1;
     background-color: var(--rcn-semantic-color-interaction-background-default-standard);
     box-shadow: var(--rcn-semantic-dropshadow-static-overlayed);
     cursor: pointer;   
-    width: 100%; 
+
   }
   
   .rcn-connexionModule__submenu[aria-hidden="true"] {
@@ -81,7 +86,6 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
   .rcn-connexionModule__subentry {
     display: block;
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-    /* border-left: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-transparent); */
     padding: var(--rcn-semantic-padding-vertical-200) var(--rcn-semantic-padding-vertical-400);
     width: auto;
   }
@@ -90,14 +94,21 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
     background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
     color: var(--rcn-semantic-color-interaction-text_and_icon-hover-onstandard);
   }
-  
-  /* .rcn-connexionModule__subentry[aria-current="page"] {
-    border-left: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-primary);
-    color: var(--rcn-semantic-color-interaction-text_and_icon-default-selected);
-    font-weight: var(--rcn-semantic-typography-fontweight-body-component-selected);
-  } */
+
+  /* Modification du tokens de backgroud color par un token spécifique ? */
 
   .rcn-connexionModule__subentry--action:hover {
-    background-color: white;
+    background-color: var(--rcn-semantic-color-interaction-background-default-standard);
   }
+
+  .rcn-connexionModule__separator{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border : none;
+    width: var(--rcn-semantic-borderwidth-100) ;
+    background-color: var(--rcn-semantic-color-static-border-divider_regular);
+    height: var(--rcn-semantic-typography-fontsize-body);
+  }
+
+
   

@@ -37,4 +37,26 @@
 .rcn-header__productBanner {
   padding-top: var(--rcn-semantic-padding-vertical-500); 
   padding-bottom : var(--rcn-semantic-padding-vertical-500);
+
+}
+
+
+/* -----TEST PAR RAPPORT AUX MODIFICATIONS DSFR---------- */
+
+
+
+.rcn-containerTest{
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: baseline;
+
+}
+
+.rcn-inputField__input--test{
+  width: 50px;
+}
+
+.unit-test{
+  color : var(--rcn-semantic-color-interaction-background-disabled-standard);
 }
