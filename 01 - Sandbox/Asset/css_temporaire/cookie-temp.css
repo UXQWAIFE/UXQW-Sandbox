@@ -10,7 +10,8 @@
 .rcn-cookiePanel{
     display: flex;
     flex-direction: column;
-    padding: var(--rcn-semantic-padding-vertical-700) 80px;
+    padding-top: var(--rcn-semantic-padding-vertical-700);
+    padding-bottom: var(--rcn-semantic-padding-vertical-700);
     gap: var(--rcn-semantic-gap-vertical-600);
     box-shadow: var(--rcn-semantic-dropshadow-static-detached);
     background-color: var(--rcn-semantic-color-static-background-standard);

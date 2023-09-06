@@ -42,9 +42,6 @@
 
 
 /* -----TEST PAR RAPPORT AUX MODIFICATIONS DSFR---------- */
-
-
-
 .rcn-containerTest{
   display: flex;
   flex-direction: row;
@@ -60,3 +57,5 @@
 .unit-test{
   color : var(--rcn-semantic-color-interaction-background-disabled-standard);
 }
+
+/* -----Fin de la zone associée aux class de test ---------- */
