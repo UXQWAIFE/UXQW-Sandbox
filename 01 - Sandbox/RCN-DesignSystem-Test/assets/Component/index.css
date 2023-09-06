@@ -31,7 +31,8 @@ Pour voir les règles d'intégrations des éléments <html> veuillez vous referr
 @import url("Stepper/Stepper.css");/* Lot 4 */
 @import url("Header/Header.css");/*lot2*/
 @import url("Footer/Footer.css");/*lot2*/
-
+/* Page */
+@import url("formtemplate/formtemplate.css");/* lot 5*/
 
 
 
