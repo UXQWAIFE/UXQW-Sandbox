@@ -86,5 +86,6 @@
 .rcn-pagination__goToPageButton::before {
   content: var(--rcn-semantic-typography-content-icon-goto);
   display: inline-block;
+  transform: rotate(90deg);
 }
 

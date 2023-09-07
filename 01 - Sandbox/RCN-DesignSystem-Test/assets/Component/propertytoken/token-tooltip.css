@@ -1,0 +1,10 @@
+:root{
+--rcn-tooltip__textBox-max-width: 352px;
+--rcn-tooltip__textBox-color: var(--rcn-semantic-color-static-text_and_icon-ontooltip);
+--rcn-tooltip__textBox-border-radius: var(--rcn-semantic-borderradius-200);
+--rcn-tooltip__textBox-background-color: var(--rcn-semantic-color-static-background-tooltip);
+--rcn-tooltip__textBox-padding: var(--rcn-semantic-padding-horizontal-200) var(--rcn-semantic-padding-horizontal-300);
+--rcn-tooltip__button-in_before-content: var(--rcn-semantic-typography-content-icon-information);
+--rcn-tooltip__triangle-background-color: var(--rcn-semantic-color-static-background-tooltip);
+
+}
