@@ -1,6 +1,6 @@
  
 /* ===== Form avec stepper VERTICAL ===== */
-
+/* 
 .rcn-verticalStepperForm{
   grid-template-areas:
     '. . . . heading heading heading heading heading heading heading heading' 'stepper stepper stepper . form form form form form form form form';
@@ -33,10 +33,10 @@
   flex-direction: column;
   align-items: stretch;
   grid-area: form;
-}
+} */
 
 /* ===== Form avec stepper HORIZONTAL ===== */
-  
+/*   
 .rcn-horizontalStepperForm {
   grid-template-areas:
   '. . heading heading heading heading heading heading heading heading . .'
@@ -72,7 +72,7 @@
   flex-direction: column;
   align-items: stretch;
   grid-area: form;
-}
+} */
 
 
 /* Classes de démonstration */
