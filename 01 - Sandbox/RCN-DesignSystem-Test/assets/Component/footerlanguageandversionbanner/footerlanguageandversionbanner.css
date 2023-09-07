@@ -1,0 +1,16 @@
+.rcn-footerLanguageAndVersionBanner {
+  background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+  border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_element_divider);
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding-top: var(--rcn-semantic-padding-vertical-400);
+  padding-bottom: var(--rcn-semantic-padding-vertical-400);
+  order: 2;
+}
+
+.rcn-footerLanguageAndVersionBanner__inputFieldBloc {
+  margin-bottom: 0px;
+}
+
