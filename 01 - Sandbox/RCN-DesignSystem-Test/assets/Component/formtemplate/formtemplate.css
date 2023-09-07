@@ -1,5 +1,5 @@
 .rcn-verticalStepperForm {
-  grid-template-areas: ". . . . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading stepper stepper stepper . form form form form form form form form";
+  grid-template-areas: ". . . . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading" "stepper stepper stepper . form form form form form form form form";
 }
 
 .rcn-verticalStepperForm__heading {
@@ -32,7 +32,7 @@
 }
 
 .rcn-horizontalStepperForm {
-  grid-template-areas: ". . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading . . . . stepper stepper stepper stepper stepper stepper stepper stepper . . . . form form form form form form form form . .";
+  grid-template-areas: ". . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading . ." ". . stepper stepper stepper stepper stepper stepper stepper stepper . ." ". . form form form form form form form form . .";
 }
 
 .rcn-horizontalStepperForm__heading {
@@ -48,9 +48,9 @@
   width: auto;
   justify-content: center;
   margin: 0;
-  gap:  var(--rcn-semantic-gap-horizontal-200);
+  gap: var(--rcn-semantic-gap-horizontal-200);
   align-items: center;
-  margin-bottom:  var(--rcn-semantic-margin-vertical-paragraph);
+  margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
 }
 
 .rcn-horizontalStepperForm__stepper {

@@ -104,7 +104,7 @@
   width: calc((var(--rcn-semantic-width-stepper_stepcircle) / 3) - (2 * (var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))));
   height: calc((var(--rcn-semantic-height-stepper_stepcircle) / 3) - (2 * (var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))));
   border: var(--rcn-semantic-borderwidth-300) solid var(--rcn-semantic-color-interaction-border-default-selected);
-  min-width: calc( var(--rcn-semantic-width-stepper_stepcircle) / 3 - (2 * ( var(--rcn-semantic-borderwidth-300) -  var(--rcn-semantic-borderwidth-100))));
+  min-width: calc(var(--rcn-semantic-width-stepper_stepcircle) / 3 - (2 * (var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100))));
 }
 
 .rcn-stepper__step--disabled .rcn-stepper__number {
