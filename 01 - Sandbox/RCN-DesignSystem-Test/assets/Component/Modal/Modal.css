@@ -41,44 +41,49 @@
   content: var(--rcn-semantic-typography-content-icon-close);
 }
 
-.rcn-modal__topOverlay {
+/* .rcn-modal__topOverlay {
   height: 0px;
 }
 
 .rcn-modal__bottomOverlay {
   height: 0px;
-}
+} */
 
 .rcn-modal__content {
   padding: var(--rcn-semantic-padding-vertical-600) var(--rcn-semantic-padding-horizontal-700);
   overflow: auto;
 }
 
-.rcn-modal__content--with-topOverlay {
+/* .rcn-modal__content--with-topOverlay {
   margin-top: -16px;
 }
 
 .rcn-modal__content--with-bottomOverlay {
   margin-bottom: -16px;
-}
+} */
 
-.rcn-modal__content--with-topOverlay .rcn-modal__topOverlay {
-  height: 16px;
+
+.rcn-modal__topOverlay {
+  /* height: 24px. */
   display: block;
-  background-image: var(--rcn-semantic-gradient-static-backgroundimage-to_bottom);
-  border-top: var(--rcn-semantic-borderwidth-100) solid;
-  border-top-color: var(--rcn-semantic-color-static-border-divider_regular);
+  /* background-image:linear-gradient(180deg, rgba(206,206,206,1) 0%, rgba(255,255,255,0) 100%); */
+  /* border-top: var(--rcn-semantic-borderwidth-100) solid;
+  border-top-color: var(--rcn-semantic-color-static-border-divider_regular); */
 }
 
-.rcn-modal__content--with-bottomOverlay .rcn-modal__bottomOverlay {
-  height: 16px;
+
+
+.rcn-modal__bottomOverlay {
+  /* height: 24px; */
   display: block;
-  background-image: var(--rcn-semantic-gradient-static-backgroundimage-to_top);
-  border-bottom: var(--rcn-semantic-borderwidth-100) solid;
-  border-bottom-color: var(--rcn-semantic-color-static-border-divider_regular);
+  /* background-image: linear-gradient(0deg, rgba(206,206,206,1) 0%, rgba(255,255,255,0) 100%); */
+  /* border-bottom: var(--rcn-semantic-borderwidth-100) solid;
+  border-bottom-color: var(--rcn-semantic-color-static-border-divider_regular); */
 }
 
-.rcn-modal__footer {
+
+
+/* .rcn-modal__footer {
   padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-700);
   border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
 }
@@ -99,7 +104,7 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   gap: var(--rcn-semantic-gap-horizontal-200);
-}
+} */
 
 .rcn-gridOverlayModal {
   position: fixed;

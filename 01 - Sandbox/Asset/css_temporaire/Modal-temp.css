@@ -5,17 +5,11 @@
 }
 
 .rcn-modal{
-    z-index: 999;
-    /* marche pas je sais pas pq */
     overflow: auto;
 }
 
 .rcn-gridOverlayModal{
     height: 100%;
-}
-
-.rcn-modal__content--with-topOverlay{
-    /* margin-top: 0px; */
 }
 
 .rcn-gridOverlayModal--medium {
@@ -29,3 +23,42 @@
     grid-template-areas: ". . . . modal modal modal modal . . . .";
  
   }
+
+.rcn-modal__content--onScroll{
+    margin-top: var(--rcn-semantic-margin-vertical-modal);
+    margin-bottom: var(--rcn-semantic-margin-vertical-modal);
+  
+  }
+
+  
+  .rcn-modal__topOverlay {
+    min-height: var(--rcn-semantic-height-overlay_modale);
+    height: var(--rcn-semantic-height-overlay_modale);
+    display: block;
+  }
+  
+  .rcn-modal__topOverlay--onScroll {
+  
+    background-image:var(--rcn-semantic-gradient-static-backgroundimage-topOverlay);
+  }
+  
+  .rcn-modal__bottomOverlay {
+    min-height: var(--rcn-semantic-height-overlay_modale);
+    height: var(--rcn-semantic-height-overlay_modale);
+    display: block;
+  }
+  
+  .rcn-modal__bottomOverlay--onScroll{
+    background-image: var(--rcn-semantic-gradient-static-backgroundimage-bottomOverlay);
+  
+  }
+
+  /* .rcn-modal__content--with-topOverlay {
+  margin-top: -16px;
+}
+
+.rcn-modal__content--with-bottomOverlay {
+  margin-bottom: -16px;
+}
+
+A supprimer dans le excel */
