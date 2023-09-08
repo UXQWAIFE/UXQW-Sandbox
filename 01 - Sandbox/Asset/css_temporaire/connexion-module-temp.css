@@ -2,6 +2,11 @@
     padding-left: 50px;
 }
 
+.demo-marginbottom{
+  margin-bottom: 200px;
+}
+
+/* ==== NON CONNECTE ==== */
 
 .rcn-connexionModule {
 display:flex;
@@ -25,11 +30,15 @@ padding-bottom:var(--rcn-semantic-padding-horizontal-500);
    content: var(--rcn-semantic-typography-content-icon-user);
 }
 
+/* ==== CONNECTE ==== */
+
 .rcn-connexionModule--on {
     padding: var(--rcn-semantic-padding-vertical-200)  var(--rcn-semantic-padding-horizontal-300);
     border-radius: var(--rcn-semantic-borderradius-200);
-    background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
     width: fit-content;
+}
+.rcn-connexionModule--on:hover {
+background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
 }
 
 .rcn-connexionModule__container{
