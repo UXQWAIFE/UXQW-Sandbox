@@ -368,7 +368,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   ";
   if($ET_Searchable || $ET_Action ) {
     $resultat .= "
-    <div class='rcn-preTable__fontcionnalite'>
+    <div class='rcn-preTable__function'>
       $enteteTableau
     </div>
     ";
