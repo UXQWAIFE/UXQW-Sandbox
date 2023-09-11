@@ -53,12 +53,41 @@
   
   }
 
+  /* >> tout a été ajouté au excel voir après relecture TCO s'il y a des changements */
+
   /* .rcn-modal__content--with-topOverlay {
   margin-top: -16px;
 }
 
 .rcn-modal__content--with-bottomOverlay {
   margin-bottom: -16px;
+}
+
+.rcn-modal__footer .rcn-bottomActionsBanner {
+  border: unset;
+}
+
+.rcn-modal__footer {
+  padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-700);
+  border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
+}
+
+.rcn-modal__footer .rcn-bottomActionsBanner {
+  border: unset;
+}
+
+.rcn-modal__footer-primaryActions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  gap: var(--rcn-semantic-gap-horizontal-200);
+}
+
+.rcn-modal__footer-secondaryActions {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: var(--rcn-semantic-gap-horizontal-200);
 }
 
 A supprimer dans le excel */
