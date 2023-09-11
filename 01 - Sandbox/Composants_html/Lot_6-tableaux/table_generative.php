@@ -255,57 +255,60 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       </p>
       ';
       $footerPagination = '
-        <div class="rcn-pagination__navLine">
-          <div>
-              1-4 sur 23 résultats
-          </div>
-          <nav>
-              <ol class="rcn-pagination__navList">
-                  <li>
-                      <a title="Retour à la page précédente " class="rcn-link rcn-pagination__navLinks" href="#">
-                          <i class="rcn-icon rcn-pagination__previousIcon"></i>
-                          Précédent
-                      </a>
-                  </li>
-                  <li>
-                      <a aria-current="page" class="rcn-link rcn-pagination__navLinks" title="Naviguer à la page 1" href="#">1</a>
-                  </li>
-                  <li>
-                      <a title="Naviguer à la page 2" class="rcn-link rcn-pagination__navLinks" href="#">2</a>
-                  </li>
-                  <li>
-                      <p>...</p>
-                  </li>
-                  <li>
-                      <a title="Naviguer à la page 4" class="rcn-link rcn-pagination__navLinks" href="#">4</a>
-                  </li>
-                  <li>
-                      <a title="Naviguer à la page 5" class="rcn-link rcn-pagination__navLinks" href="#">5</a>
-                  </li>
-                  <li>
-                      <a title="Aller à la page suivante" href="#" class="rcn-link rcn-pagination__navLinks"> 
-                          Suivant 
-                          <i class="rcn-icon rcn-pagination_nextIcon">
-                          </i>
-                      </a>
-                  </li>
-              </ol>
-          </nav>
-          <div class="rcn-inputFieldBloc rcn-inputFieldBloc--horizontal">        
-              <label for="goToPage" class="rcn-inputFieldBloc__label rcn-pagination__label">Aller à la page</label>
-              <div class="rcn-inputField">
-                  <select name="goToPage" class="rcn-inputField__input rcn-inputField__input--select">
-                      <option class="rcn-inputField__option" value="">1</option>
-                      <option class="rcn-inputField__option" value="">2</option>
-                      <option class="rcn-inputField__option" value="">3</option>
-                      <option class="rcn-inputField__option" value="">4</option>
-                      <option class="rcn-inputField__option" value="">5</option>
-                  </select>
-                  <button type="submit" class="rcn-iconButton rcn-icon rcn-pagination__goToPageButton"></button>
-              </div>
-          </div>
+      <div class="rcn-pagination__rowContainer">
 
+      <div>
+           1-4 sur 23 résultats
       </div>
+
+      <nav>
+          <ul class="rcn-pagination__navigationList">
+              <li>
+                  <a title="Retour à la page précédente " class="rcn-link rcn-pagination__navigationLink" href="#">
+                      <i class="rcn-icon rcn-pagination__previousIcon"></i>
+                      Précédent
+                  </a>
+              </li>
+              <li>
+                  <a aria-current="page" class="rcn-link rcn-pagination__navigationLink" title="Naviguer à la page 1" href="#">1</a>
+              </li>
+              <li>
+                  <a title="Naviguer à la page 2" class="rcn-link rcn-pagination__navigationLink" href="#">2</a>
+              </li>
+              <li>
+                  <p>...</p>
+              </li>
+              <li>
+                  <a title="Naviguer à la page 4" class="rcn-link rcn-pagination__navigationLink" href="#">4</a>
+              </li>
+              <li>
+                  <a title="Naviguer à la page 5" class="rcn-link rcn-pagination__navigationLink" href="#">5</a>
+              </li>
+              <li>
+                  <a title="Aller à la page suivante" href="#" class="rcn-link rcn-pagination__navigationLink"> 
+                      Suivant 
+                      <i class="rcn-icon rcn-pagination__nextIcon">
+                       </i>
+                  </a>
+              </li>
+          </ul>
+      </nav>
+
+      <div class="rcn-inputFieldBloc rcn-inputFieldBloc--horizontal">        
+          <label for="goToPage" class="rcn-inputFieldBloc__label rcn-pagination__label">Aller à la page</label>
+          <div class="rcn-inputField">
+              <select name="goToPage" class="rcn-inputField__input rcn-inputField__input--select">
+                  <option class="rcn-inputField__option" value="">1</option>
+                  <option class="rcn-inputField__option" value="">2</option>
+                  <option class="rcn-inputField__option" value="">3</option>
+                  <option class="rcn-inputField__option" value="">4</option>
+                  <option class="rcn-inputField__option" value="">5</option>
+              </select>
+              <button type="submit" class="rcn-iconButton rcn-icon rcn-pagination__goToPageButton"></button>
+          </div>
+      </div>
+
+  </div>
       ';
     }
     if ($ET_Action || $ET_Searchable) {

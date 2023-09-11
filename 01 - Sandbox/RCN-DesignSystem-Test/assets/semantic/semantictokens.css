@@ -87,8 +87,8 @@
 --rcn-semantic-color-static-text_and_icon-dsfr_medium: var(--rcn-core-color-dsfr_grey-200);
 --rcn-semantic-color-static-text_and_icon-dsfr_light: var(--rcn-core-color-dsfr_grey-425);
 --rcn-semantic-color-static-text_and_icon-dsfr_primary: var(--rcn-core-color-dsfr_france-500);
---rcn-semantic-gradient-static-backgroundimage-topOverlay: var(--rcn-core-gradient-to_top);
---rcn-semantic-gradient-static-backgroundimage-bottomOverlay: var(--rcn-core-gradient-to_bottom);
+--rcn-semantic-gradient-static-backgroundimage-topOverlay: var(--rcn-core-gradient-black10_transparent_to_top);
+--rcn-semantic-gradient-static-backgroundimage-bottomOverlay: var(--rcn-core-gradient-black10_transparent_to_bottom);
 --rcn-semantic-color-static-background-modal_behind_background: var(--rcn-core-color-grey-600-transparent);
 --rcn-semantic-padding-vertical-0: var(--rcn-core-spacing-0);
 --rcn-semantic-padding-vertical-50: var(--rcn-core-spacing-50);
