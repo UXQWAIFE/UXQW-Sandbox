@@ -87,8 +87,8 @@
 --rcn-semantic-color-static-text_and_icon-dsfr_medium: var(--rcn-core-color-dsfr_grey-200);
 --rcn-semantic-color-static-text_and_icon-dsfr_light: var(--rcn-core-color-dsfr_grey-425);
 --rcn-semantic-color-static-text_and_icon-dsfr_primary: var(--rcn-core-color-dsfr_france-500);
---rcn-semantic-gradient-static-backgroundimage-to_top: var(--rcn-core-gradient-to_top);
---rcn-semantic-gradient-static-backgroundimage-to_bottom: var(--rcn-core-gradient-to_bottom);
+--rcn-semantic-gradient-static-backgroundimage-topOverlay: var(--rcn-core-gradient-to_top);
+--rcn-semantic-gradient-static-backgroundimage-bottomOverlay: var(--rcn-core-gradient-to_bottom);
 --rcn-semantic-color-static-background-modal_behind_background: var(--rcn-core-color-grey-600-transparent);
 --rcn-semantic-padding-vertical-0: var(--rcn-core-spacing-0);
 --rcn-semantic-padding-vertical-50: var(--rcn-core-spacing-50);
@@ -121,9 +121,10 @@
 --rcn-semantic-margin-vertical-paragraph: var(--rcn-core-spacing-500);
 --rcn-semantic-margin-vertical-fieldset: var(--rcn-core-spacing-500);
 --rcn-semantic-margin-vertical-inputfieldblock: var(--rcn-core-spacing-500);
---rcn-semantic-margin-vertical-breadcrumb: var(--rcn-core-spacing-800);
+--rcn-semantic-margin-vertical-breadcrumb: var(--rcn-core-spacing-700);
 --rcn-semantic-margin-vertical-stepper_sublist: var(--rcn-core-spacing-200);
 --rcn-semantic-margin-vertical-footer: var(--rcn-core-spacing-800);
+--rcn-semantic-margin-vertical-modal: var(--rcn-core-spacing-minus-400);
 --rcn-semantic-gap-vertical-0: var(--rcn-core-spacing-0);
 --rcn-semantic-gap-vertical-50: var(--rcn-core-spacing-50);
 --rcn-semantic-gap-vertical-100: var(--rcn-core-spacing-100);
@@ -161,6 +162,7 @@
 --rcn-semantic-height-stepper_stepcircle: var(--rcn-core-sizing-600);
 --rcn-semantic-width-profile: var(--rcn-core-sizing-600);
 --rcn-semantic-height-profile: var(--rcn-core-sizing-600);
+--rcn-semantic-height-overlay_modale: var(--rcn-core-sizing-400);
 --rcn-semantic-breakpoint-large: var(--rcn-core-breakpoint-200);
 --rcn-semantic-breakpoint-medium: var(--rcn-core-breakpoint-300);
 --rcn-semantic-breakpoint-small: var(--rcn-core-breakpoint-400);

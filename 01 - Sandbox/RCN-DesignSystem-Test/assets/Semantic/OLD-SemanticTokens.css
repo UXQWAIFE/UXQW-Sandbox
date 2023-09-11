@@ -1,8 +1,0 @@
-/* 
-Import des anciens semantics tokens, ces tokens seront voués à disparaitre
-*/
-
-@import url("OLD/SemanticTokensColor.css");
-@import url("OLD/SemanticTokensShadow.css");
-@import url("OLD/SemanticTokensLayout.css");
-@import url("OLD/SemanticTokensTypography.css");
