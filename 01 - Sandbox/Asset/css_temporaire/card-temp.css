@@ -224,14 +224,14 @@ grid-template-columns: repeat(2, 1fr);
 } */
 /* Ok Excel */
 
-/* .rcn-card--vertical .rcn-card__imageHolder {
-    border-top-left-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
-    border-top-right-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
-} */
-/* Ok Excel */
+.rcn-card--vertical .rcn-card__imageHolder {
 
-/* .rcn-card--horizontal .rcn-card__imageHolder {
-    border-top-left-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
-    border-bottom-left-radius: calc(var(--rcn-semantic-borderradius-200) - var(--rcn-semantic-borderwidth-100));
-} */
-/* Ok Excel */
+    padding-top: 33%;
+}
+/* renommer d'une cretaine manière car pas à prendre dans le excel */
+
+.rcn-card--horizontal .rcn-card__imageHolder {
+  
+    padding-left: 33%;
+}
+/* renommer d'une cretaine manière car pas à prendre dans le excel */
