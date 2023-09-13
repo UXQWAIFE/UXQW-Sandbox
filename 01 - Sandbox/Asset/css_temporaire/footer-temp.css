@@ -1,2 +1,4 @@
-
+.rcn-footer__partnerBanner{
+    border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_element_divider);
+}
 
