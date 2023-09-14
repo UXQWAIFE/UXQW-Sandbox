@@ -25,7 +25,6 @@
 
 
 .rcn-cookiePanel--banner{
-    display: flex;
     flex-direction: row;
     justify-content: space-between; 
     align-items: stretch;   
@@ -85,12 +84,6 @@
 
 }
 
-.rcn-cookiePanel__section--banner{
-
-    border-bottom: none;
-    flex-wrap: wrap;
-
-}
 
 .rcn-cookierPanel__section--last {
     

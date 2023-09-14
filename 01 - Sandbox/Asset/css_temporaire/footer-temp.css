@@ -1,4 +1,10 @@
-.rcn-footer__partnerBanner{
+.rcn-footer__partnersBanner{
     border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_element_divider);
 }
+
+/* Modification à prendre dans le excel > TODO */
+.rcn-footer__mandatoryLegalLinks {
+    border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_element_divider);
+}
+/* Modification à prendre dans le excel > TODO */
 
