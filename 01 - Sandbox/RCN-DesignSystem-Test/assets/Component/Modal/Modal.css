@@ -52,6 +52,8 @@
 .rcn-modal__content {
   padding: var(--rcn-semantic-padding-vertical-600) var(--rcn-semantic-padding-horizontal-700);
   overflow: auto;
+  margin-top: var(--rcn-semantic-margin-vertical-modal);
+  margin-bottom: var(--rcn-semantic-margin-vertical-modal);
 }
 
 /* .rcn-modal__content--with-topOverlay {
@@ -106,7 +108,7 @@
   gap: var(--rcn-semantic-gap-horizontal-200);
 } */
 
-.rcn-gridOverlayModal {
+.rcn-modalOverlayedContainer {
   position: fixed;
   top: 0;
   left: 0;
@@ -118,4 +120,5 @@
   margin: 0;
   background-color: var(--rcn-semantic-color-static-background-modal_behind_background);
 }
+
 

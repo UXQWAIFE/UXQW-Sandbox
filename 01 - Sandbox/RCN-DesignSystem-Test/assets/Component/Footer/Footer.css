@@ -54,11 +54,10 @@
 
 .rcn-footer__productBanner {
   order: 0;
-  display: flex;
   padding-top: var(--rcn-semantic-padding-vertical-400);
   padding-bottom: var(--rcn-semantic-padding-vertical-400);
-  gap: var(--rcn-semantic-gap-horizontal-600);
   color: var(--rcn-semantic-color-static-text_and_icon-dsfr_medium);
+  grid-template-areas: "logo logo logo logo logo logo description description description description description description";
 }
 
 .rcn-footer__logoZone {
@@ -78,7 +77,6 @@
   grid-area: description;
   flex-direction: column;
   gap: var(--rcn-semantic-gap-vertical-400);
-  grid-column-start: 2;
 }
 
 .rcn-footer__productDescription {
@@ -166,7 +164,4 @@
   max-width: 160px;
 }
 
-.rcn-gridTemplateFooter {
-  grid-template-areas: "logo logo logo logo logo logo description description description description description description";
-}
 
