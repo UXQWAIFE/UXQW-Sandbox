@@ -46,11 +46,10 @@
   }
   &__productBanner {
       order: 0;
-      display: flex;
       padding-top: $rcn-semantic-padding-vertical-400;
       padding-bottom: $rcn-semantic-padding-vertical-400;
-      gap: $rcn-semantic-gap-horizontal-600;
       color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
+      grid-template-areas: "logo logo logo logo logo logo description description description description description description";
   }
   &__logoZone {
       display: flex;
@@ -67,7 +66,6 @@
       grid-area: description;
       flex-direction: column;
       gap: $rcn-semantic-gap-vertical-400;
-      grid-column-start: 2;
   }
   &__productDescription {
       order: 1;
@@ -77,7 +75,7 @@
       order: 2;
       display: flex;
       flex-direction: row;
-      gap: $rcn-semantic-gap-horizontal-200;
+      gap: $rcn-semantic-gap-horizontal-500;
       justify-content: flex-start;
       flex-wrap: wrap;
   }
@@ -96,7 +94,7 @@
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      border-top: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-footer_banner_divider;
+      border-top: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-footer_element_divider;
       padding: $rcn-semantic-padding-vertical-400 0;
       gap: $rcn-semantic-gap-horizontal-300;
   }
@@ -119,7 +117,7 @@
       display: flex;
       flex-direction: column;
       padding: $rcn-semantic-padding-vertical-400 0;
-      border-top: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-footer_banner_divider;
+      border-top: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-footer_element_divider;
       gap: $rcn-semantic-gap-vertical-400;
       color: $rcn-semantic-color-static-text_and_icon-dsfr_medium;
   }
@@ -142,9 +140,5 @@
       max-height: 90px;
       max-width: 160px;
   }
-}
-
-.rcn-gridTemplateFooter {
-    grid-template-areas: "logo logo logo logo logo logo description description description description description description";
 }
 

@@ -1,0 +1,88 @@
+.rcn-signupAndLoginModule {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $rcn-semantic-gap-horizontal-400;
+  &__divider {
+      align-self: stretch;
+      background-color: $rcn-semantic-color-static-border-divider_regular;
+      width: $rcn-semantic-borderwidth-100;
+  }
+  &__loginIcon {
+      order: -1;
+    &::before {
+        content: $rcn-semantic-typography-content-icon-user;
+    }
+  }
+}
+
+.rcn-accountMenu {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    position: relative;
+  &__dropdownButton {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: $rcn-semantic-gap-horizontal-200;
+      padding: $rcn-semantic-padding-vertical-300 $rcn-semantic-padding-horizontal-400;
+      border-radius: $rcn-semantic-borderradius-100;
+      width: fit-content;
+    &:hover {
+        background-color: $rcn-semantic-color-interaction-background-hover-standard;
+    }
+  }
+  &__avatar {
+      display: flex;
+      min-width: $rcn-semantic-width-accountMenu_avatar;
+      width: $rcn-semantic-width-accountMenu_avatar;
+      height: $rcn-semantic-height-accountMenu_avatar;
+      border-radius: $rcn-semantic-borderradius-300;
+      background-color: $rcn-semantic-color-static-background-primary;
+      order: -1;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      color: $rcn-semantic-color-static-text_and_icon-onprimary;
+  }
+  &__expandIcon {
+      order: 2;
+    &::before {
+        content: $rcn-semantic-typography-content-icon-expand_vertical;
+    }
+  }
+  &__dropdownMenu {
+      display: flex;
+      flex-direction: column;
+      background-color: $rcn-semantic-color-interaction-background-default-standard;
+      box-shadow: $rcn-semantic-dropshadow-static-overlayed;
+      cursor: pointer;
+      position: absolute;
+      top: calc($rcn-semantic-width-accountMenu_avatar + ($rcn-semantic-padding-vertical-300 * 2) + 1px);
+      width: 100%;
+      right: 0px;
+    &--hidden {
+        display: none;
+    }
+  }
+  &__dropdownMenu[aria-hidden='true'] {
+      display: none;
+  }
+  &__dropdownItem {
+      display: block;
+      color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
+      padding: $rcn-semantic-padding-vertical-200 $rcn-semantic-padding-vertical-400;
+      width: auto;
+    &:hover {
+        background-color: $rcn-semantic-color-interaction-background-hover-standard;
+        color: $rcn-semantic-color-interaction-text_and_icon-hover-onstandard;
+    }
+    &--logout {
+      &:hover {
+          background-color: $rcn-semantic-color-interaction-background-default-standard;
+      }
+    }
+  }
+}
+

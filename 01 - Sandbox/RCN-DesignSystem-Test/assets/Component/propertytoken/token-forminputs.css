@@ -173,9 +173,6 @@
 --rcn-inputFieldBloc--horizontal-gap: var(--rcn-semantic-gap-horizontal-200);
 --rcn-inputFieldBloc--horizontal-align-items: center;
 --rcn-inputFieldBloc--horizontal-flex-grow: 0;
---rcn-inputFieldBloc__label--language-font-weight: var(--rcn-semantic-typography-fontweight-body-component);
---rcn-inputFieldBloc__label--language-padding: 0px;
---rcn-inputFieldBloc__label--language-color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
 --rcn-combobox-display: flex;
 --rcn-combobox-flex-direction: column;
 --rcn-combobox-position : relative;

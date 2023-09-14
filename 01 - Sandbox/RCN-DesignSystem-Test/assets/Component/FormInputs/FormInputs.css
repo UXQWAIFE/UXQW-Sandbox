@@ -340,12 +340,6 @@
   flex-grow: 0;
 }
 
-.rcn-inputFieldBloc__label--language {
-  font-weight: var(--rcn-semantic-typography-fontweight-body-component);
-  padding: 0px;
-  color: var(--rcn-semantic-color-interaction-text_and_icon-disabled);
-}
-
 .rcn-combobox {
   display: flex;
   flex-direction: column;

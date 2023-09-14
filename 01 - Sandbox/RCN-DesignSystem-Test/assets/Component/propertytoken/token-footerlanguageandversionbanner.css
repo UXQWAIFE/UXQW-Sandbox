@@ -1,0 +1,13 @@
+:root{
+--rcn-footerLanguageAndVersionBanner-background-color: var(--rcn-semantic-color-interaction-background-default-standard);
+--rcn-footerLanguageAndVersionBanner-border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-footer_element_divider);
+--rcn-footerLanguageAndVersionBanner-justify-content: space-between;
+--rcn-footerLanguageAndVersionBanner-display: flex;
+--rcn-footerLanguageAndVersionBanner-flex-direction: row;
+--rcn-footerLanguageAndVersionBanner-align-items: baseline;
+--rcn-footerLanguageAndVersionBanner-padding-top: var(--rcn-semantic-padding-vertical-400);
+--rcn-footerLanguageAndVersionBanner-padding-bottom: var(--rcn-semantic-padding-vertical-400);
+--rcn-footerLanguageAndVersionBanner-order: 2;
+--rcn-footerLanguageAndVersionBanner__inputFieldBloc-margin-bottom: 0px;
+
+}

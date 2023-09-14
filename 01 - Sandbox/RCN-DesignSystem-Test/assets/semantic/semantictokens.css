@@ -71,7 +71,7 @@
 --rcn-semantic-color-static-border-standard: var(--rcn-core-color-grey-200);
 --rcn-semantic-color-static-border-primary: var(--rcn-core-color-product-400);
 --rcn-semantic-color-static-border-stepper_step_unreachable: var(--rcn-core-color-grey-200);
---rcn-semantic-color-static-border-footer_element_divider: var(--rcn-core-color-dsfr_grey-925);
+--rcn-semantic-color-static-border-footer_element_divider: var(--rcn-core-color-dsfr_grey-900);
 --rcn-semantic-color-static-border-footer_banner_divider: var(--rcn-core-color-dsfr_france-500);
 --rcn-semantic-color-static-border-table_child_row: var(--rcn-core-color-grey-400);
 --rcn-semantic-color-static-border-divider_regular: var(--rcn-core-color-grey-200);
@@ -160,6 +160,8 @@
 --rcn-semantic-borderradius-300: var(--rcn-core-borderradius-300);
 --rcn-semantic-width-stepper_stepcircle: var(--rcn-core-sizing-600);
 --rcn-semantic-height-stepper_stepcircle: var(--rcn-core-sizing-600);
+--rcn-semantic-width-accountMenu_avatar: var(--rcn-core-sizing-600);
+--rcn-semantic-height-accountMenu_avatar: var(--rcn-core-sizing-600);
 --rcn-semantic-width-profile: var(--rcn-core-sizing-600);
 --rcn-semantic-height-profile: var(--rcn-core-sizing-600);
 --rcn-semantic-height-overlay_modale: var(--rcn-core-sizing-400);

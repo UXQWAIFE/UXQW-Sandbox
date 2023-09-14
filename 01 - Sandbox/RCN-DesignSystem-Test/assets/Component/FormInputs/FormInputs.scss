@@ -20,11 +20,6 @@
         color: $rcn-semantic-color-interaction-text_and_icon-default-selected;
         font-weight: $rcn-semantic-typography-fontweight-label;
     }
-    &--language {
-        font-weight: $rcn-semantic-typography-fontweight-body-component;
-        padding: 0px;
-        color: $rcn-semantic-color-interaction-text_and_icon-disabled;
-    }
   }
   &__mandatoryAsterisk {
     &::before {

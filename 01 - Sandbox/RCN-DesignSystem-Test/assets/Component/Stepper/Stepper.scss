@@ -92,7 +92,7 @@
             width: calc(($rcn-semantic-width-stepper_stepcircle / 3) - (2 * ($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
             height: calc(($rcn-semantic-height-stepper_stepcircle / 3) - (2 * ($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
             border: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-selected;
-            min-width: calc(--$rcn-semantic-width-stepper_stepcircle / 3 - (2 * (--$rcn-semantic-borderwidth-300 - --$rcn-semantic-borderwidth-100)));
+            min-width: calc($rcn-semantic-width-stepper_stepcircle / 3 - (2 * ($rcn-semantic-borderwidth-300 - $rcn-semantic-borderwidth-100)));
         }
       }
     }
@@ -141,7 +141,7 @@
       background-color: $rcn-semantic-color-static-background-standard;
       border: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-interaction-border-default-standard;
       color: $rcn-semantic-color-static-text_and_icon-onstandard;
-      min-width: calc(--$rcn-semantic-width-stepper_stepcircle / 3);
+      min-width: calc($rcn-semantic-width-stepper_stepcircle / 3);
   }
 }
 

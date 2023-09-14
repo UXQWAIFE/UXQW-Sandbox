@@ -1,5 +1,5 @@
 .rcn-verticalStepperForm {
-  grid-template-areas: ". . . . heading heading heading heading heading heading heading heading" "stepper stepper stepper . form form form form form form form form";
+  grid-template-areas: ". . . . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading" "stepper stepper stepper . form form form form form form form form";
 }
 
 .rcn-verticalStepperForm__heading {

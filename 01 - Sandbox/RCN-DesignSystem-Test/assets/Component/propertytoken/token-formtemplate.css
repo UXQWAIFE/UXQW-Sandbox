@@ -17,7 +17,7 @@
 --rcn-verticalStepperForm__form-flex-direction: column;
 --rcn-verticalStepperForm__form-align-items: stretch;
 --rcn-verticalStepperForm__form-grid-area: form;
---rcn-horizontalStepperForm-grid-template-areas: ". . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading . . . . stepper stepper stepper stepper stepper stepper stepper stepper . . . . form form form form form form form form . .";
+--rcn-horizontalStepperForm-grid-template-areas: ". . heading heading heading heading heading heading heading heading . . . . stepper stepper stepper stepper stepper stepper stepper stepper . . . . form form form form form form form form . .";
 --rcn-horizontalStepperForm__heading-display: flex;
 --rcn-horizontalStepperForm__heading-justify-content: center;
 --rcn-horizontalStepperForm__heading-grid-area: heading;
@@ -27,9 +27,9 @@
 --rcn-horizontalStepperForm__instructions-width: auto;
 --rcn-horizontalStepperForm__instructions-justify-content: center;
 --rcn-horizontalStepperForm__instructions-margin: 0;
---rcn-horizontalStepperForm__instructions-gap:  var(--rcn-semantic-gap-horizontal-200);
+--rcn-horizontalStepperForm__instructions-gap: var(--rcn-semantic-gap-horizontal-200);
 --rcn-horizontalStepperForm__instructions-align-items: center;
---rcn-horizontalStepperForm__instructions-margin-bottom:  var(--rcn-semantic-margin-vertical-paragraph);
+--rcn-horizontalStepperForm__instructions-margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
 --rcn-horizontalStepperForm__stepper-grid-area: stepper;
 --rcn-horizontalStepperForm__stepper-align-self: center;
 --rcn-horizontalStepperForm__form-display: flex;
