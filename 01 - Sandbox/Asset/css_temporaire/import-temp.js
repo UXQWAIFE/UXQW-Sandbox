@@ -23,7 +23,7 @@ var cssFiles = [
     'Footer', 
     'Tabs',
     'FormInputs',
-    'Connexion-module',
+    'Connexionmodule',
     'Cookie',
     'Grid',
     'ActionsBanner',

@@ -32,6 +32,7 @@ Pour voir les règles d'intégrations des éléments <html> veuillez vous referr
 @import url("Header/Header.css");/*lot2*/
 @import url("Footer/Footer.css");/*lot2*/
 @import url("footerlanguageandversionbanner/footerlanguageandversionbanner.css");/* lot 5*/
+@import url("connexionmodule/connexionmodule.css");
 /* Page */
 @import url("formtemplate/formtemplate.css");/* lot 5*/
 
