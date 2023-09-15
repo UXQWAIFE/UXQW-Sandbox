@@ -60,8 +60,8 @@
 --rcn-icon--mdi-checkbox-blank-outline-in_before-content: var(--rcn-semantic-typography-content-icon-checkbox_blank);
 --rcn-icon--mdi-radiobox-marked-in_before-content: var(--rcn-semantic-typography-content-icon-radiobox_checked);
 --rcn-icon--mdi-radiobox-blank-in_before-content: var(--rcn-semantic-typography-content-icon-radiobox_blank);
---rcn-icon--mdi-backburger-in_before-: var(--rcn-semantic-typography-content-icon-expand_collapse_stepper);
---rcn-icon--mdi-arrow-collapse-vertical-in_before-: var(--rcn-semantic-typography-content-icon-collapse_all);
---rcn-icon--mdi-arrow-expand-vertical-in_before-: var(--rcn-semantic-typography-content-icon-expand_all);
+--rcn-icon--mdi-backburger-in_before-content: var(--rcn-semantic-typography-content-icon-expand_collapse_stepper);
+--rcn-icon--mdi-arrow-collapse-vertical-in_before-content: var(--rcn-semantic-typography-content-icon-collapse_all);
+--rcn-icon--mdi-arrow-expand-vertical-in_before-content: var(--rcn-semantic-typography-content-icon-expand_all);
 
 }

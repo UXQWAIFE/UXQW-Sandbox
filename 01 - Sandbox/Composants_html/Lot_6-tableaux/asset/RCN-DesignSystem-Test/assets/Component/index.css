@@ -8,7 +8,7 @@ Pour voir les règles d'intégrations des éléments <html> veuillez vous referr
 @import url("Icon/Icon.css");/*lot1*/
 @import url("GlobalContainers/GlobalContainers.css");/*lot1*/
 @import url("Link/Link.css");/*lot1*/
-@import url("Grids/Grids.css");/*lot4*/
+@import url("Grid/Grid.css");/*lot4*/
 @import url("Animations/Animations.css");/*lot2*/
 /*Composants*/
 @import url("FormInputs/FormInputs.css");/*lot3*/
@@ -31,7 +31,10 @@ Pour voir les règles d'intégrations des éléments <html> veuillez vous referr
 @import url("Stepper/Stepper.css");/* Lot 4 */
 @import url("Header/Header.css");/*lot2*/
 @import url("Footer/Footer.css");/*lot2*/
-
+@import url("footerlanguageandversionbanner/footerlanguageandversionbanner.css");/* lot 5*/
+@import url("connexionmodule/connexionmodule.css");
+/* Page */
+@import url("formtemplate/formtemplate.css");/* lot 5*/
 
 
 

@@ -29,7 +29,7 @@
   left: var(--rcn-semantic-padding-horizontal-400);
   bottom: var(--rcn-semantic-padding-vertical-200);
   background-color: var(--rcn-semantic-color-interaction-background-default-standard);
-  width: calc(100% - calc(2 * var(--rcn-semantic-padding-horizontal-400)));
+  width: calc(100% - (2 * var(--rcn-semantic-padding-horizontal-400)));
   content: "";
 }
 

@@ -11,6 +11,8 @@
       gap: $rcn-semantic-gap-horizontal-600;
       background-color: $rcn-semantic-color-static-background-standard;
       align-items: center;
+      padding-top: $rcn-semantic-padding-vertical-500;
+      padding-bottom: $rcn-semantic-padding-vertical-500;
   }
   &__logo {
       order: 0;

@@ -3,9 +3,11 @@
 --rcn-breadcrumb-padding-bottom: var(--rcn-semantic-padding-vertical-200);
 --rcn-breadcrumb-border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
 --rcn-breadcrumb-background-color: var(--rcn-semantic-color-static-background-standard);
---rcn-breadcrumb-margin-bottom: var(--rcn-semantic-margin-vertical-section);
+--rcn-breadcrumb-margin-bottom: var(--rcn-semantic-margin-vertical-breadcrumb);
 --rcn-breadcrumb-display: flex;
 --rcn-breadcrumb-flex-direction: row;
+--rcn-breadcrumb--onLandingPage-padding: 0;
+--rcn-breadcrumb--onLandingPage-border: none;
 --rcn-breadcrumb__list-display: flex;
 --rcn-breadcrumb__list-flex-direction: row;
 --rcn-breadcrumb__list-justify-content: flex-start;

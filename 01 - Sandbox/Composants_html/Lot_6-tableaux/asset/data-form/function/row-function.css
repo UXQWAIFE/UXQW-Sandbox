@@ -20,7 +20,9 @@
     align-items: center;
     gap:var(--rcn-semantic-gap-horizontal-200);
 }
-
+.rcn-preTable__rowSelected--count {
+    color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
+}
 /* Ligne depliable */
 .rcn-tableRow__cell--unfolded {
     border-left:var(--rcn-semantic-borderwidth-300) solid #000;

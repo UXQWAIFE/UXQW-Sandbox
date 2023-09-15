@@ -29,6 +29,12 @@
 }
 
 .rcn-captcha__button {
-  border-radius: 0px;
+  border-radius: calc(var(--rcn-semantic-borderradius-100) - 1px);
+  padding-top: var(--rcn-semantic-padding-vertical-300);
+  padding-bottom: var(--rcn-semantic-padding-vertical-300);
+  line-height: 1;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
 }
 

@@ -74,7 +74,7 @@
 --rcn-card--interactive-if_hover___rcn-card__title-text-decoration: var(--rcn-semantic-typography-textdecoration-link-hover);
 --rcn-card--selected-border-color: var(--rcn-semantic-color-interaction-border-default-selected);
 --rcn-card--selected-border-width: var(--rcn-semantic-borderwidth-300);
---rcn-card--selected-border-radius: calc(var(--rcn-semantic-borderradius-200) + calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100)));
+--rcn-card--selected-border-radius: calc(var(--rcn-semantic-borderradius-200) + (var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100)));
 --rcn-card--selected___rcn-card__title-color: var(--rcn-semantic-color-interaction-text_and_icon-default-primary);
 
 }

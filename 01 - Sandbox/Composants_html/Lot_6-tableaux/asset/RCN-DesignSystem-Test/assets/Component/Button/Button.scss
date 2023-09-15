@@ -9,6 +9,7 @@
     line-height: $rcn-semantic-typography-lineheight-body-component;
     flex-direction: row;
     height: fit-content;
+    text-decoration: none;
   &--primary {
       color: $rcn-semantic-color-interaction-text_and_icon-default-onprimary ;
       background-color: $rcn-semantic-color-interaction-background-default-primary;

@@ -28,16 +28,26 @@
         left: $rcn-semantic-padding-horizontal-400;
         bottom: $rcn-semantic-padding-vertical-200;
         background-color: $rcn-semantic-color-interaction-background-default-standard;
-        width: calc(100% - calc(2 * $rcn-semantic-padding-horizontal-400));
+        width: calc(100% - (2 * $rcn-semantic-padding-horizontal-400));
         content: "";
     }
     &:hover {
         background-color: $rcn-semantic-color-interaction-background-hover-primary;
     }
   }
+  &__entry[aria-current='page']::after {
+      height: $rcn-semantic-borderwidth-300;
+  }
   &__submenuIcon {
     &::before {
         content: $rcn-semantic-typography-content-icon-expand_vertical;
+    }
+  }
+  &__entry[aria-expanded='true'] {
+    .rcn-menu {
+      &__submenuIcon {
+          content: $rcn-semantic-typography-content-icon-collapse_vertical;
+      }
     }
   }
   &__submenu {
@@ -52,6 +62,9 @@
         display: none;
     }
   }
+  &__submenu[aria-hidden='true'] {
+      display: none;
+  }
   &__subentry {
       display: block;
       color: $rcn-semantic-color-interaction-text_and_icon-default-onstandard;
@@ -61,22 +74,6 @@
         background-color: $rcn-semantic-color-interaction-background-hover-standard;
         color: $rcn-semantic-color-interaction-text_and_icon-hover-onstandard;
     }
-  }
-}
-
-.rcn-menu {
-  &__entry[aria-current='page']::after {
-      height: $rcn-semantic-borderwidth-300;
-  }
-  &__entry[aria-expanded='true'] {
-    .rcn-menu {
-      &__submenuIcon {
-          content: $rcn-semantic-typography-content-icon-collapse_vertical;
-      }
-    }
-  }
-  &__submenu[aria-hidden='true'] {
-      display: none;
   }
   &__subentry[aria-current='page'] {
       border-left: $rcn-semantic-borderwidth-300 solid $rcn-semantic-color-interaction-border-default-primary;

@@ -28,6 +28,6 @@
 --rcn-accordions__content-padding-top: var(--rcn-semantic-padding-vertical-400);
 --rcn-accordions__content-padding-bottom: var(--rcn-semantic-padding-vertical-600);
 --rcn-accordions__content-background-color: var(--rcn-semantic-color-static-background-standard);
---rcn-accordions__content-if_hidden-height: 0px !important;
+--rcn-accordions__content-if_hidden-height: 0px ;
 
 }

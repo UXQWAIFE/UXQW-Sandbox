@@ -9,6 +9,7 @@
   line-height: var(--rcn-semantic-typography-lineheight-body-component);
   flex-direction: row;
   height: fit-content;
+  text-decoration: none;
 }
 
 .rcn-button--primary {

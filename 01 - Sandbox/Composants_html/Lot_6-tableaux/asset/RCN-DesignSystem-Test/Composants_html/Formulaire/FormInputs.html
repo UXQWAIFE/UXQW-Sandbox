@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/styles-ChorusPro.css">    
+    
+    <title>Document</title>
+</head>
+
+<body>
+
+	<h1 class="rcn-h1 rcn-h1--editorial"> FORMULAIRE </h1>
+
+    <h2 class="rcn-h2 rcn-h2--editorial"> Champs simples</h2>
+
+ <!--imput obligatoire + erreur -->
+
+    <div class="rcn-inputFieldBloc">
+        <label class="rcn-inputFieldBloc__label">
+            Error<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span>
+        </label>
+   
+        <div>texte explicatif (si besoin)</div> 
+
+        <div class="rcn-inputField rcn-inputField--error">
+            <input type="text" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit" required>
+
+        </div>
+        <div  class="rcn-inputFieldBloc__errorZone" >
+            <i class="rcn-inputFieldBloc__errorIcon rcn-icon "><span class="sr-only"></span></i>
+            Ceci est un message d'erreur
+        </div> 
+    </div>
+
+    <!--input obligatoire + succes  -->
+
+    <div class="rcn-inputFieldBloc">        
+        <label class="rcn-inputFieldBloc__label">Success<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
+        <div class="rcn-inputField" >
+            <input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+        </div>
+        <div  class="rcn-inputFieldBloc__successZone">
+            <i class="rcn-icon rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
+            Ceci est un message de succès
+        </div> 
+    </div>
+
+    <!--imput désactivé -->
+
+    <div class="rcn-inputFieldBloc">        
+        <label class="rcn-inputFieldBloc__label">Désactivé</label>
+        <div class="rcn-inputField rcn-inputField--disabled" >
+            <input type="text"  value="Valeur champ désactivé" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+
+            <button disabled class="rcn-iconButton rcn-inputField__button">
+                <span class="sr-only"></span>
+                <i class="mdi mdi-heart"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- inputs Search-->
+
+    <div class="rcn-inputFieldBloc">  
+        <label class="rcn-inputFieldBloc__label">Search</label>
+
+        <div class="rcn-inputField">
+
+            <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                <span class="sr-only"></span>
+            </button>
+        </div>
+    </div>
+
+
+       
+    <div class="rcn-inputFieldBloc"> 
+        <label class="rcn-inputFieldBloc__label">Search and reset</label>
+
+        <div class="rcn-inputField">
+
+            <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+                <span class="sr-only"></span>
+            </button>
+
+            <div class="rcn-inputField__buttonSeparator"></div>
+
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                <span class="sr-only"></span>
+            </button> 
+        </div>
+    </div>
+
+    <div class="rcn-inputFieldBloc"> 
+        <label class="rcn-inputFieldBloc__label">Search and delete</label>
+
+        <div class="rcn-inputField">
+
+            <input placeholder="Rechercher..." class="rcn-inputField__input">
+
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
+                <span class="sr-only"></span>
+            </button>
+
+            <div class="rcn-inputField__buttonSeparator"></div>
+
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+                <span class="sr-only"></span>
+            </button>
+        </div>
+    </div>
+
+
+<!-- Test searchbar large 2 : test en créant une nouvelle classe spécifique-->
+
+     <div class="rcn-inputFieldBloc">       
+
+            <label class="rcn-inputFieldBloc__label">Large search</label>
+
+            <div class="rcn-inputField" >
+
+                <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
+
+                <button class="rcn-inputField__button rcn-inputField__button--largeSearch"> 
+                <i class="rcn-icon rcn-inputField__iconButton--largeSearch"> </i>
+                Rechercher            
+                </button>
+                
+            </div>
+    </div>
+
+
+    <div class="rcn-inputFieldBloc">       
+
+        <label class="rcn-inputFieldBloc__label">Large search and reset</label>
+
+        <div class="rcn-inputField" >
+
+            <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
+
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+                <span class="sr-only"></span>
+            </button>
+
+            <div class="rcn-inputField__buttonSeparator"></div>
+
+            <button class="rcn-inputField__button rcn-inputField__button--largeSearch"> 
+                <i class="rcn-icon rcn-inputField__iconButton--largeSearch"> </i>
+                Rechercher            
+            </button>
+
+            
+        </div>
+    </div>
+
+    <div class="rcn-inputFieldBloc">       
+
+        <label class="rcn-inputFieldBloc__label">Large search and delete</label>
+
+        <div class="rcn-inputField" >
+
+            <input placeholder="Rechercher..." class="rcn-inputField__input rcn-inputField__input--largeSearch">
+
+            <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--delete">
+                <span class="sr-only"></span>
+            </button>
+
+            <div class="rcn-inputField__buttonSeparator"></div>
+
+            <button class="rcn-inputField__button rcn-inputField__button--largeSearch"> 
+                <i class="rcn-icon rcn-inputField__iconButton--largeSearch"> </i>
+                Rechercher            
+            </button>
+        </div>
+    </div>
+
+
+    <!-- input password -->
+
+    <div class="rcn-inputFieldBloc">       
+
+        <label class="rcn-inputFieldBloc__label">Password - show button</label>
+
+        <div class="rcn-inputField">
+
+            <input placeholder="Ex : Lorem ipsum sit" type="password" class="rcn-inputField__input">
+
+            <button class="rcn-iconButton rcn-inputField__button rcn-icon rcn-inputField__button--showPassword">
+                <span class="sr-only"></span>
+            </button>
+            
+        </div>
+    </div>
+
+    <div class="rcn-inputFieldBloc">       
+
+        <label class="rcn-inputFieldBloc__label">Password - hide button</label>
+
+        <div class="rcn-inputField">
+
+            <input placeholder="Ex : Lorem ipsum sit" class="rcn-inputField__input">
+
+            <button class="rcn-iconButton rcn-inputField__button  rcn-icon rcn-inputField__button--hidePassword">
+                <span class="sr-only"></span>
+            </button>
+            
+        </div>
+    </div>
+
+
+    <!--imput date picker -->
+
+    <div class="rcn-inputFieldBloc">        
+        <label class="rcn-inputFieldBloc__label">Datepicker</label>
+        <div class="rcn-inputField">
+            <input type="date" class="rcn-inputField__input rcn-inputField__input--datepicker">
+        </div>
+    </div>
+
+    <!--imput price -->
+
+    <div class="rcn-inputFieldBloc">        
+        <label class="rcn-inputFieldBloc__label">Number w/unit</label>
+        <div class="rcn-inputField">
+            <div class="rcn-inputField__unit">
+                <div>€</div>
+            </div>
+            <input type="number" class="rcn-inputField__input rcn-inputField__input--number" placeholder="Ex : 12 450">
+        </div>
+    </div>
+
+  
+    <!--imput sélection unique -->
+
+    <div class="rcn-inputFieldBloc">        
+    <label class="rcn-inputFieldBloc__label">Select</label>
+        <div class="rcn-inputField">
+            <select name="" class="rcn-inputField__input rcn-inputField__input--select">
+                <option class="rcn-inputField__option" value="">- Séléctionner une option -</option>
+                <option class="rcn-inputField__option" value="">Choix 1</option>
+                <option class="rcn-inputField__option" value="">Choix 2</option>
+                <option class="rcn-inputField__option" value="" selected>Choix 3</option>
+            </select>
+        </div>
+    </div>
+
+    <!--imput text-area-->
+
+    <div class="rcn-inputFieldBloc">        
+        <label class="rcn-inputFieldBloc__label">
+            Text area 
+        </label>
+        <div class="rcn-inputField">
+            <textarea rows="3" placeholder="Ex : Lorem ipsum sit dolor amet" type="text" class="rcn-inputField__input rcn-inputField__input--textArea"></textarea>
+        </div>
+    </div>
+
+  <!--imput date multi-champs-->
+
+    <div class="rcn-fieldset--as-inputFieldBloc rcn-fieldset--as-inputFieldBloc-has-horizontalInputs "> 
+        <legend class="rcn-inputFieldBloc__label">Date de naissance</legend>
+        <div class="rcn-fieldset__horizontalInputs">
+            <div class="rcn-inputFieldBloc">        
+                <label class="rcn-inputFieldBloc__label">Jours</label>
+                <div class="rcn-inputField">
+                    <select class="rcn-inputField__input">
+                        <option class="rcn-inputField__option"value="">- Séléctionner un jour -</option>
+                        <option class="rcn-inputField__option"value="">1</option>
+                        <option class="rcn-inputField__option"value="">2</option>
+                        <option class="rcn-inputField__option"value="" selected>3</option>
+                        <option class="rcn-inputField__option"value="">4</option>
+                        <option class="rcn-inputField__option"value="">5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="rcn-inputFieldBloc">        
+                <label class="rcn-inputFieldBloc__label">Mois</label>
+                <div class="rcn-inputField">
+                     <select class="rcn-inputField__input">
+                        <option class="rcn-inputField__option"value="">- Séléctionner un mois -</option>
+                        <option class="rcn-inputField__option"value="">janvier</option>
+                        <option class="rcn-inputField__option"value="">février</option>
+                        <option class="rcn-inputField__option"value="" selected>mars</option>
+                      </select>
+                </div>
+            </div>
+
+            <div class="rcn-inputFieldBloc">        
+                <label class="rcn-inputFieldBloc__label">Année</label>
+                <div class="rcn-inputField">
+                    <select class="rcn-inputField__input">
+                        <option class="rcn-inputField__option"value="">- Séléctionner une année -</option>
+                        <option class="rcn-inputField__option"value="">1995</option>
+                        <option class="rcn-inputField__option"value="">1997</option>
+                        <option class="rcn-inputField__option"value="" selected>1998</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="rcn-h2 rcn-h2--editorial"> Champs complexes </h2>
+
+
+    <!--imput selection checkbox -->
+
+    
+	<fieldset class="rcn-fieldset rcn-fieldset--as-inputFieldBloc">
+	    <legend class="rcn-inputFieldBloc__label">Liste de checkboxes</legend>
+
+	    <ul id="list" class="rcn-fieldset__checkboxOrRadioList">
+	        
+	        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+                    Checkbox 1
+                </label>
+            </li>
+	        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+	            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+	                Checkbox 2
+	            </label>
+	        </li>
+	        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+	            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+	                Checkbox 3
+	            </label>
+	        </li>
+	        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+	            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+	                Checkbox 4 super longue je ne sais pas ce que je vais écrire tellement c'est long wow c'est incroyable peut être lorem ipsum sit dolor amet
+	            </label>
+	        </li>
+	        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+	            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+	                Checkbox 5
+	            </label>
+	        </li>
+	    </ul>
+	</fieldset>
+
+         
+    
+
+    <!--imput selection radiobox-->
+
+    <fieldset class="rcn-fieldset rcn-fieldset--as-inputFieldBloc">
+        <legend class="rcn-inputFieldBloc__label">Liste de radio buttons</legend>
+
+        <ul id="list" class="rcn-fieldset__checkboxOrRadioList">
+            
+            <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio rcn-inputFieldBloc__label--checkboxOrRadio-has-input-checked">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Radio 1
+                </label>
+            </li>
+            <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Radio 2
+                </label>
+            </li>
+            <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Radio 3
+                </label>
+            </li>
+            <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Radio 4
+                </label>
+            </li>
+            <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+                <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+                    <input name="choix" type="radio" id="radio" class="rcn-icon rcn-inputField__input rcn-inputField__input--radio">
+                    Radio 5
+                </label>
+            </li>
+        </ul>
+    </fieldset>
+
+
+
+    <!--Fieldset 1-->
+
+
+	<fieldset class="rcn-fieldset">
+	    <legend class="rcn-h3 rcn-fieldset__legend">Titre du fieldset</legend>
+	     <!--imput obligatoire avec texte descriptif et message d'erreur -->
+
+	        <div class="rcn-inputFieldBloc">
+	            <label class="rcn-inputFieldBloc__label">
+	                Error
+	            </label>
+	       
+	            <div>texte explicatif (si besoin)</div> 
+
+	            <div class="rcn-inputField rcn-inputField--error">
+	                <input type="text" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit" required>
+
+	            </div>
+	            <div  class="rcn-inputFieldBloc__errorZone" >
+	                <i class="rcn-icon rcn-inputFieldBloc__errorIcon"><span class="sr-only"></span></i>
+	                Ceci est un message d'erreur
+	            </div> 
+	        </div>
+
+	        <!--input obligatoire + succes  -->
+
+	        <div class="rcn-inputFieldBloc">        
+	            <label class="rcn-inputFieldBloc__label">Success<span class="rcn-inputFieldBloc__mandatoryAsterisk"></span></label>
+	            <div class="rcn-inputField" >
+	                <input type="text" value="Valeur champ" class="rcn-inputField__input" placeholder="Ex : Lorem ipsum sit">
+	            </div>
+	            <div  class="rcn-inputFieldBloc__successZone">
+	                <i class="rcn-icon rcn-inputFieldBloc__successIcon"><span class="sr-only"></span></i>
+	                Ceci est un message de succès
+	            </div> 
+	        </div>
+	</fieldset>
+
+
+
+    <!--imput import de fichier-->
+        
+
+    <label class="rcn-inputFieldBloc">
+            <p class="rcn-inputFieldBloc__label">
+                Carte nationale d'identité ou passeport
+            </p>
+            <div class="rcn-inputField--file"> 
+                <i class="mdi mdi-tray-arrow-up rcn-inputField__uploadIcon"></i>
+                <p class="">Glisser - déposer un fichier ou</p>
+                <div class="rcn-button rcn-button--secondary">
+                    Importer un fichier
+                    <input class="rcn-inputField__input rcn-inputField__input--file" type="file" accept="image/gif, image/jpeg, image/png" id="FileZone" name="" multiple>
+                </div>
+                
+                
+            </div>
+    </label>       
+
+
+
+        <!--imput price-select-->
+    <fieldset class="rcn-fieldset rcn-fieldset--as-inputFieldBloc">
+            <legend class="rcn-inputFieldBloc__label">Label input</legend>       
+            <div class="rcn-inputField">
+
+                <label for="unite" class="sr-only">Label unit select</label>
+                <select name="" id="unite" class="rcn-inputField__input rcn-inputField__input--unitSelect"> 
+                    <!-- input__unit input__unit--selected"> -->
+                    <option class="rcn-inputField__option" value="">£</option>
+                    <option class="rcn-inputField__option" value="">$</option>
+                    <option class="rcn-inputField__option" value="" selected>€</option>
+                </select>
+
+                <label for="nombre" class="sr-only">Label number select</label>
+                <input id="nombre" type="number"  class="rcn-inputField__input rcn-inputField__input--number">
+            </div>
+    </fieldset>
+   
+
+   <!--imput Langue -->
+
+    <div class="rcn-inputFieldBloc rcn-inputFieldBloc--horizontal">        
+        <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--language ">Langue de l'applicatif :</label>
+        <div class="rcn-inputField">
+            <select name="" class="rcn-inputField__input rcn-inputField__input--select">
+                <option class="rcn-inputField__option" value="">- Séléctionner une option -</option>
+                <option class="rcn-inputField__option" value="">FR - Français</option>
+                <option class="rcn-inputField__option" value="">EN - English</option>
+                <option class="rcn-inputField__option" value="" selected>ES - Espanol</option>
+            </select>
+        </div>
+    </div>
+
+
+    <!--Input combobox sélection multiple -->  
+	<div class="rcn-inputFieldBloc">
+
+	    <fieldset class="rcn-fieldset rcn-fieldset--as-inputFieldBloc">  
+
+	        <legend class="rcn-inputFieldBloc__label">Combobox</legend>
+        
+	        <div class="rcn-combobox">
+
+	            <div class="rcn-inputField">
+	                <p class="rcn-inputField__input rcn-combobox__placeholder">
+	                    0 option(s) sélectionnés
+	                </p>
+	                <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--combobox">
+	                        <span class="sr-only">
+	                            Déplier la liste d'options
+	                        </span>
+	                </button>
+	            </div>
+
+	            <div id="list" class="rcn-combobox__dropDownList">
+
+	                <div>
+	                    <label for="sx" class="sr-only">Recherchez</label>
+	                    <div class="rcn-inputField">
+	                        <input id="sx" type="text" class="rcn-inputField__input" placeholder="Filtrer la liste d'option..." value="Opt">
+	                        
+	                        <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--secondary rcn-inputField__button--reset">
+	                            <p class="sr-only">Déplier la liste d'options</p>
+	                        </button>
+
+	                        <button class="rcn-icon rcn-iconButton rcn-inputField__button rcn-inputField__button--search">
+	                            <p class="sr-only">Déplier la liste d'options</p>
+	                        </button>
+	                    </div>
+	                </div>
+
+	                <fieldset class="rcn-fieldset rcn-fieldset--as-inputFieldBloc">
+	                    <legend class="sr-only">Liste de checkboxes</legend>
+
+	                    <ul id="list" class="rcn-fieldset__checkboxOrRadioList">
+	                        
+	                        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+	                            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                                <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+	                                Option 1
+	                            </label>
+	                        </li>
+	                        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+	                            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                                <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+	                                Option 2
+	                            </label>
+	                        </li>
+	                        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+	                            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                                <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+	                                Option 3
+	                            </label>
+	                        </li>
+	                        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+	                            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                                <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+	                                Option 4
+	                            </label>
+	                        </li>
+	                        <li class="rcn-inputFieldBloc rcn-inputFieldBloc--checkboxOrRadio">
+	                            <label class="rcn-inputFieldBloc__label rcn-inputFieldBloc__label--checkboxOrRadio">
+	                                <input name="choix" type="checkbox" id="checkbox" class="rcn-icon rcn-inputField__input rcn-inputField__input--checkbox">
+	                                Option 5
+	                            </label>
+	                        </li>
+	                    </ul>
+	                </fieldset>
+	        	</div>
+        	</div>
+    	</fieldset>
+	</div>
+
+    <!--module de langue -->
+
+    <div class="rcn-inputFieldBloc rcn-inputFieldBloc--as-languageModule">        
+    	<label class="rcn-inputFieldBloc__label--as-languageModule">Langue</label>
+        <div class="rcn-input">
+            <select name="" class="rcn-content rcn-input__content">
+                <option class="rcn-input__option" value="">- Séléctionner une option -</option>
+                <option class="rcn-input__option" value="">Choix 1</option>
+                <option class="rcn-input__option" value="">Choix 2</option>
+                <option class="rcn-input__option" value="" selected>Choix 3</option>
+            </select>
+        </div>
+    </div>
+
+</body>
+<footer>
+    
+</footer>

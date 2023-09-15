@@ -1,0 +1,135 @@
+/* Reset global */
+
+@font-face {
+    font-family: 'RCNicon';
+    src: url('Font/Font_icon/RCNicon.ttf');
+
+}
+
+@font-face {
+    font-family: "Marianne";
+    src: url('Font/Font_Marianne/Marianne/fontes web/Marianne-Regular.woff');
+}
+
+body, p, button, input, option, select, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body, legend {
+  font-family:$rcn-semantic-typography-fontfamily-text, Arial;
+  font-size:1rem;
+  line-height: 1;
+}
+
+i {
+  font-style:normal;
+}
+
+a {
+  background-color: transparent;
+  text-decoration:none;
+}
+
+button {
+  line-height: 1rem;
+  background:none;
+}
+
+select, option {
+  line-height:1rem;
+}
+
+pre {
+  font-family: monospace;
+  font-size: 1em;
+}
+
+b, strong {
+  font-weight: $rcn-semantic-typography-text-editorial-default-reset-fontweight; 
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+img {
+  border-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after, q::before, q::after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset {
+    display: block;
+    margin-inline-start: 0 ;
+    margin-inline-end: 0px;
+    border: none;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    min-inline-size: min-content;
+  }
+
+input {
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+}
+
+option {
+  -webkit-appearance: unset;
+  -moz-appearance: unset;
+  -ms-appearance: unset;
+}
+
+[hidden] {
+  display: none;
+  visibility: hidden;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0); 
+  border: 0;
+}
+

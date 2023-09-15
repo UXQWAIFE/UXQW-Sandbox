@@ -9,6 +9,7 @@
 --rcn-button-line-height: var(--rcn-semantic-typography-lineheight-body-component);
 --rcn-button-flex-direction: row;
 --rcn-button-height: fit-content;
+--rcn-button-text-decoration: none;
 --rcn-button--primary-color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary) ;
 --rcn-button--primary-background-color: var(--rcn-semantic-color-interaction-background-default-primary);
 --rcn-button--primary-border-color: var(--rcn-semantic-color-interaction-border-default-primary);

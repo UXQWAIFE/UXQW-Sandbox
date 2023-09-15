@@ -11,6 +11,7 @@
     box-shadow: $rcn-semantic-dropshadow-static-detached;
     grid-area: modal;
     height: fit-content;
+    overflow: auto;
   &__header {
       display: flex;
       flex-direction: column;
@@ -37,71 +38,51 @@
         content: $rcn-semantic-typography-content-icon-close;
     }
   }
-  &__topOverlay {
-      height: 0px;
-  }
-  &__bottomOverlay {
-      height: 0px;
-  }
   &__content {
       padding: $rcn-semantic-padding-vertical-600 $rcn-semantic-padding-horizontal-700;
       overflow: auto;
-    &--with-topOverlay {
-        margin-top: -16px;
-      .rcn-modal {
-        &__topOverlay {
-            height: 16px;
-            display: block;
-            background-image: $rcn-semantic-gradient-static-backgroundimage-to_bottom;
-            border-top: $rcn-semantic-borderwidth-100 solid;
-            border-top-color: $rcn-semantic-color-static-border-divider_regular;
-        }
-      }
-    }
-    &--with-bottomOverlay {
-        margin-bottom: -16px;
-      .rcn-modal {
-        &__bottomOverlay {
-            height: 16px;
-            display: block;
-            background-image: $rcn-semantic-gradient-static-backgroundimage-to_top;
-            border-bottom: $rcn-semantic-borderwidth-100 solid;
-            border-bottom-color: $rcn-semantic-color-static-border-divider_regular;
-        }
-      }
+      margin-top: $rcn-semantic-margin-vertical-modal;
+      margin-bottom: $rcn-semantic-margin-vertical-modal;
+  }
+  &__topOverlay {
+      min-height: $rcn-semantic-height-overlay_modale;
+      height: $rcn-semantic-height-overlay_modale;
+      display: block;
+    &--onOverflow {
+        background-image: $rcn-semantic-gradient-static-backgroundimage-topOverlay;
     }
   }
-  &__footer {
-      padding: $rcn-semantic-padding-vertical-400 $rcn-semantic-padding-horizontal-700;
-      border-top: $rcn-semantic-borderwidth-100 solid $rcn-semantic-color-static-border-divider_regular;
-    .rcn-bottomActionsBanner {
-        border: unset;
+  &__bottomOverlay {
+      min-height: $rcn-semantic-height-overlay_modale;
+      height: $rcn-semantic-height-overlay_modale;
+      display: block;
+    &--onOverflow {
+        background-image: $rcn-semantic-gradient-static-backgroundimage-bottomOverlay;
     }
   }
-  &__footer-primaryActions {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-end;
-      gap: $rcn-semantic-gap-horizontal-200;
-  }
-  &__footer-secondaryActions {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-start;
-      gap: $rcn-semantic-gap-horizontal-200;
+  &__actionBanner {
+      padding-left: $rcn-semantic-padding-horizontal-700;
+      padding-right: $rcn-semantic-padding-horizontal-700;
+      margin-top: 0px;
   }
 }
 
-.rcn-gridOverlayModal {
+.rcn-modalOverlayedContainer {
     position: fixed;
     top: 0;
     left: 0;
     display: grid;
     grid-template-areas: ". . modal modal modal modal modal modal modal modal . .";
     overflow: hidden;
-    height: auto;
+    height: 100%;
     align-items: center;
     margin: 0;
     background-color: $rcn-semantic-color-static-background-modal_behind_background;
+  &--medium {
+      grid-template-areas: ". . . modal modal modal modal modal modal . . .";
+  }
+  &--small {
+      grid-template-areas: ". . . . modal modal modal modal . . . .";
+  }
 }
 

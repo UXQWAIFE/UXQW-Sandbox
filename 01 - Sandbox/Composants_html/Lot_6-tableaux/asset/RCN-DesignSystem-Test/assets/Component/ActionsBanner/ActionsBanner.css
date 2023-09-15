@@ -5,6 +5,7 @@
   border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
   padding: var(--rcn-semantic-padding-vertical-400) var(--rcn-semantic-padding-horizontal-0);
   flex-wrap: wrap;
+  margin-top: var(--rcn-semantic-margin-vertical-section);
 }
 
 .rcn-actionsBanner .rcn-button--primary {

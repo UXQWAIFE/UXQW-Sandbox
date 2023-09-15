@@ -1,0 +1,18 @@
+:root{
+$rcn-link-gap: $rcn-semantic-gap-horizontal-0;
+$rcn-link-display: flex;
+$rcn-link-align-items: baseline;
+$rcn-link-color: $rcn-semantic-color-interaction-text_and_icon-default-link;
+$rcn-link-text-decoration: $rcn-semantic-typography-textdecoration-link;
+$rcn-link-width: fit-content;
+$rcn-link-cursor: pointer;
+$rcn-link-if_visited-color: $rcn-semantic-color-interaction-text_and_icon-visited-link;
+$rcn-link-if_disabled-color: $rcn-semantic-color-interaction-text_and_icon-disabled;
+$rcn-link-if_disabled-cursor: not-allowed;
+$rcn-link__icon--external-in_before-content: $rcn-semantic-typography-content-icon-external_link;
+$rcn-link__icon--external-order: 2;
+$rcn-link__icon--download-in_before-content: $rcn-semantic-typography-content-icon-download;
+$rcn-link__icon--download-order: -1;
+$rcn-link-if_hover-text-decoration: $rcn-semantic-typography-textdecoration-link-hover;
+
+}

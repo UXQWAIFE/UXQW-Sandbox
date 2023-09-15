@@ -3,9 +3,14 @@
   padding-bottom: var(--rcn-semantic-padding-vertical-200);
   border-bottom: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_regular);
   background-color: var(--rcn-semantic-color-static-background-standard);
-  margin-bottom: var(--rcn-semantic-margin-vertical-section);
+  margin-bottom: var(--rcn-semantic-margin-vertical-breadcrumb);
   display: flex;
   flex-direction: row;
+}
+
+.rcn-breadcrumb--onLandingPage {
+  padding: 0;
+  border: none;
 }
 
 .rcn-breadcrumb__list {

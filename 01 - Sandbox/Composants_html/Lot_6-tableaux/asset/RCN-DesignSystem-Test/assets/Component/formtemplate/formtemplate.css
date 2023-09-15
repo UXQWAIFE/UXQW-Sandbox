@@ -1,0 +1,67 @@
+.rcn-verticalStepperForm {
+  grid-template-areas: ". . . . formHeading formHeading formHeading formHeading formHeading formHeading formHeading formHeading" "stepper stepper stepper . form form form form form form form form";
+}
+
+.rcn-verticalStepperForm__heading {
+  display: flex;
+  justify-content: center;
+  grid-area: heading;
+  text-align: center;
+}
+
+.rcn-verticalStepperForm__instructions {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: center;
+  margin: 0;
+  gap: var(--rcn-semantic-gap-horizontal-200);
+  align-items: center;
+  margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
+}
+
+.rcn-verticalStepperForm__stepper {
+  grid-area: stepper;
+}
+
+.rcn-verticalStepperForm__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  grid-area: form;
+}
+
+.rcn-horizontalStepperForm {
+  grid-template-areas: ". . heading heading heading heading heading heading heading heading . ." ". . stepper stepper stepper stepper stepper stepper stepper stepper . ." ". . form form form form form form form form . .";
+}
+
+.rcn-horizontalStepperForm__heading {
+  display: flex;
+  justify-content: center;
+  grid-area: heading;
+  text-align: center;
+}
+
+.rcn-horizontalStepperForm__instructions {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  justify-content: center;
+  margin: 0;
+  gap: var(--rcn-semantic-gap-horizontal-200);
+  align-items: center;
+  margin-bottom: var(--rcn-semantic-margin-vertical-paragraph);
+}
+
+.rcn-horizontalStepperForm__stepper {
+  grid-area: stepper;
+  align-self: center;
+}
+
+.rcn-horizontalStepperForm__form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  grid-area: form;
+}
+

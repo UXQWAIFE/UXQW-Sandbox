@@ -23,7 +23,13 @@
       flex-grow: 1;
   }
   &__button {
-      border-radius: 0px;
+      border-radius: calc($rcn-semantic-borderradius-100 - 1px);
+      padding-top: $rcn-semantic-padding-vertical-300;
+      padding-bottom: $rcn-semantic-padding-vertical-300;
+      line-height: 1;
+      border-right: none;
+      border-top: none;
+      border-bottom: none;
   }
 }
 
