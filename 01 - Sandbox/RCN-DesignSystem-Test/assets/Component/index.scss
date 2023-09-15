@@ -3,36 +3,40 @@ Voici les fichiers.sscss des Composants du Design System du Référentiel de Con
 Pour voir les règles d'intégrations des éléments <html> veuillez vous referrer au https://aife.economie.gouv.fr/referentiel/
 */
 
+
 /*Fondamentaux*/
-@import "Typography/Typography.scss";/*lot1*/
-@import "Icon/Icon.scss";/*lot1*/
-@import "GlobalContainers/GlobalContainers.scss";/*lot1*/
-@import "Link/Link.scss";/*lot1*/
-@import "Grid/Grid.scss";/*lot4*/
-@import "Animations/Animations.scss";/*lot2*/
+@import "Typography/Typography.css";/*lot1*/
+@import "Icon/Icon.css";/*lot1*/
+@import "GlobalContainers/GlobalContainers.css";/*lot1*/
+@import "Link/Link.css";/*lot1*/
+@import "Grid/Grid.css";/*lot4*/
+@import "Animations/Animations.css";/*lot2*/
 /*Composants*/
-@import "FormInputs/FormInputs.scss";/*lot3*/
-@import "Breadcrumb/Breadcrumb.scss";/*lot1*/
-@import "Button/Button.scss";/*lot1*/
-@import "BackToTop/BackToTop.scss";/*lot1*/
-@import "Captcha/Captcha.scss";/*lot1*/
-@import "Chips/Chips.scss";/*lot1*/
-@import "Loader/Loader.scss";/*lot1*/
-@import "Menu/Menu.scss";/* Lot 4 */
+@import "FormInputs/FormInputs.css";/*lot3*/
+@import "Breadcrumb/Breadcrumb.css";/*lot1*/
+@import "Button/Button.css";/*lot1*/
+@import "BackToTop/BackToTop.css";/*lot1*/
+@import "Captcha/Captcha.css";/*lot1*/
+@import "Chips/Chips.css";/*lot1*/
+@import "Loader/Loader.css";/*lot1*/
+@import "Menu/Menu.css";/* Lot 4 */
 /*Modules*/
-@import "ActionsBanner/ActionsBanner.scss";/*lot4*/
-@import "Notification/Notification.scss";/*lot1*/
-@import "Tooltip/Tooltip.scss";/*lot1*/
-@import "Accordions/Accordions.scss";/*lot2*/
-@import "Tabs/Tabs.scss";/*lot2*/
-@import "Card/Card.scss";/*lot1*/
-@import "Modal/Modal.scss";/*lot1*/
-@import "Pagination/Pagination.scss";/* Lot 4 */
-@import "Stepper/Stepper.scss";/* Lot 4 */
-@import "Header/Header.scss";/*lot2*/
-@import "Footer/Footer.scss";/*lot2*/
+@import "ActionsBanner/ActionsBanner.css";/*lot4*/
+@import "Notification/Notification.css";/*lot1*/
+@import "Tooltip/Tooltip.css";/*lot1*/
+@import "Accordions/Accordions.css";/*lot2*/
+@import "Tabs/Tabs.css";/*lot2*/
+@import "Card/Card.css";/*lot1*/
+@import "Modal/Modal.css";/*lot1*/
+@import "Pagination/Pagination.css";/* Lot 4 */
+@import "Stepper/Stepper.css";/* Lot 4 */
+@import "Header/Header.css";/*lot2*/
+@import "Footer/Footer.css";/*lot2*/
+@import "footerlanguageandversionbanner/footerlanguageandversionbanner.css";/* lot 5*/
+@import "connexionmodule/connexionmodule.css";
 /* Page */
-@import "formtemplate/formtemplate.sscss";/* lot 5*/
+@import "formtemplate/formtemplate.css";/* lot 5*/
+
 
 
 /* Reset */ 

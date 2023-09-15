@@ -48,7 +48,7 @@
       min-height: $rcn-semantic-height-overlay_modale;
       height: $rcn-semantic-height-overlay_modale;
       display: block;
-    &--onOverlay {
+    &--onOverflow {
         background-image: $rcn-semantic-gradient-static-backgroundimage-topOverlay;
     }
   }
@@ -56,7 +56,7 @@
       min-height: $rcn-semantic-height-overlay_modale;
       height: $rcn-semantic-height-overlay_modale;
       display: block;
-    &--onOverlay {
+    &--onOverflow {
         background-image: $rcn-semantic-gradient-static-backgroundimage-bottomOverlay;
     }
   }
@@ -67,7 +67,7 @@
   }
 }
 
-.rcn-gridOverlayModal {
+.rcn-modalOverlayedContainer {
     position: fixed;
     top: 0;
     left: 0;

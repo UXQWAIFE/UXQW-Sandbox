@@ -55,7 +55,7 @@
   display: block;
 }
 
-.rcn-modal__topOverlay--onOverlay {
+.rcn-modal__topOverlay--onOverflow {
   background-image: var(--rcn-semantic-gradient-static-backgroundimage-topOverlay);
 }
 
@@ -65,7 +65,7 @@
   display: block;
 }
 
-.rcn-modal__bottomOverlay--onOverlay {
+.rcn-modal__bottomOverlay--onOverflow {
   background-image: var(--rcn-semantic-gradient-static-backgroundimage-bottomOverlay);
 }
 
@@ -75,7 +75,7 @@
   margin-top: 0px;
 }
 
-.rcn-gridOverlayModal {
+.rcn-modalOverlayedContainer {
   position: fixed;
   top: 0;
   left: 0;
@@ -88,11 +88,11 @@
   background-color: var(--rcn-semantic-color-static-background-modal_behind_background);
 }
 
-.rcn-gridOverlayModal--medium {
+.rcn-modalOverlayedContainer--medium {
   grid-template-areas: ". . . modal modal modal modal modal modal . . .";
 }
 
-.rcn-gridOverlayModal--small {
+.rcn-modalOverlayedContainer--small {
   grid-template-areas: ". . . . modal modal modal modal . . . .";
 }
 
