@@ -29,14 +29,16 @@ var cssFiles = [
     'ActionsBanner',
     'FilterModule' ,
     'SearchResultTemplate',
-    'cardsCollection',
+    'cardHorizontalCollection',
     'formTemplate',
     'searchResultModule',
     'filterModulePage',
     'menu',
     'Typography',
+    'CardCollectionPage',
     'Pagination',
-    'Stepper'
+    'Stepper',
+    'cardVerticalCollection'
   ];
   
   var headElement = document.head;

@@ -19,6 +19,7 @@ grid-template-columns: repeat(2, 1fr);
 
 /* ---------------------- TEST ------------- */
 
-.rcn-cardVerticalCollection{
+.rcn-cardCollection .rcn-cardCollection--vertical{
+  width: 100%;
   
 }

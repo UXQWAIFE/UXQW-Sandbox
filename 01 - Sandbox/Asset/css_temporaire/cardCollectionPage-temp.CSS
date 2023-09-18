@@ -1,0 +1,23 @@
+
+   .rcn-gridTestCollectionCard {
+    grid-template-areas: 
+      "cc cc cc cc cc cc cc cc cc cc cc cc"
+      "main main main main main main form form form form form form";
+  }
+  
+  /*Composants de la grille - TEST*/
+  
+.item-test {
+    grid-area: main ;
+    background-color: hotpink;
+    max-width: 100%;
+    height: 400px;
+}
+    
+.rcn-cardCollection {
+    grid-area: cc;
+}
+
+.rcn-verticalStepperForm__form {
+    grid-area: form;
+}
