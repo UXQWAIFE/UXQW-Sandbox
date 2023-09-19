@@ -1,6 +1,6 @@
 /* Ligne Selectionnable & bandeau */
 
-.rcn-preTable__rowSelected {
+.rcn-preTable-function__rowSelect {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -12,7 +12,7 @@
     border-color: var(--rcn-semantic-color-static-border-standard);
     padding:var(--rcn-semantic-padding-vertical-200);
 }
-.rcn-preTable__rowSelected--action {
+.rcn-preTable-function__rowSelect--action {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -20,7 +20,7 @@
     align-items: center;
     gap:var(--rcn-semantic-gap-horizontal-200);
 }
-.rcn-preTable__rowSelected--count {
+.rcn-preTable-function__rowSelect--count {
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
 /* Ligne depliable */
