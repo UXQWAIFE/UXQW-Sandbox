@@ -1,9 +1,11 @@
 
-   .rcn-gridTestCollectionCard {
+   .rcn-gridTestCollectionCardForm {
     grid-template-areas: 
       "cc cc cc cc cc cc cc cc cc cc cc cc"
       "main main main main main main form form form form form form";
   }
+
+  /* A ne pas prendre en compte dans le excel > permet de tester l'élément au sein d'une grille avec d'autres composants */
   
   /*Composants de la grille - TEST*/
   
@@ -18,6 +20,10 @@
     grid-area: cc;
 }
 
+/* A ne pas prendre en compte dans le excel  */
+
 .rcn-verticalStepperForm__form {
     grid-area: form;
 }
+
+/* A ne pas prendre en compte dans le excel  */

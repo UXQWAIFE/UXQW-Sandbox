@@ -74,7 +74,14 @@
   grid-area: form;
 } */
 
+.rcn-horizontalStepperForm__heading{
+  grid-area: heading;
+}
 
+.rcn-verticalStepperForm{
+  grid-template-areas:
+    '. . . . heading heading heading heading heading heading heading heading' 'stepper stepper stepper . form form form form form form form form';
+}
 /* Classes de démonstration */
 
 .demo-header__productBanner{

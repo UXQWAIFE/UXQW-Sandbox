@@ -1,25 +1,17 @@
 .rcn-cardCollection {
   display: grid;
   gap : var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
-  /*grid-template-columns: repeat(2, 1fr);*/ /*supprimer de cette class*/
   grid-template-rows: auto;
   background-color: transparent;
-  justify-items:center; /*ajouter à l'excel*/
+  justify-items:center; 
 }
 
-.rcn-cardCollection--vertical {
-grid-template-columns: repeat(3, 1fr);
-} /*ajouter à l'excel*/
-
+/* A ajouter à l'excel : TODO */
 
 .rcn-cardCollection--horizontal {
 grid-template-columns: repeat(2, 1fr);
-} /*ajouter à l'excel*/
+} 
+
+/* A ajouter à l'excel : TODO */
 
 
-/* ---------------------- TEST ------------- */
-
-.rcn-cardCollection .rcn-cardCollection--vertical{
-  width: 100%;
-  
-}

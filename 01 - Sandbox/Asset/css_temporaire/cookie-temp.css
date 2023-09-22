@@ -1,11 +1,13 @@
 
-
-
 .espacement_test{
     display: flex;
     flex-direction: column;
     gap:48px;
 }
+
+/* A ne pas prendre en compte  */
+
+/* ------------------- Cookie ------------------------ */
 
 .rcn-cookiePanel{
     display: flex;
