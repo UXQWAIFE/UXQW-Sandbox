@@ -35,14 +35,15 @@
   border-right:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
  }
 
-.rcn-grid--sideOverlayFilterTemplate {
+/* .rcn-grid--sideOverlayFilterTemplate {
   position:absolute;
   top:0;
   left:0;
   display: grid;
   grid-template-areas: "filter filter filter fiter . . . . . . . .";
-  overflow: auto;
-  margin: 0;    
-}
+  overflow: none;
+  margin: 0; 
+     
+} */
 
 
