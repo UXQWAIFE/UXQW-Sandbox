@@ -1,5 +1,6 @@
 @import url("function/row-function.css");
 @import url("function/thead-filter_order.css");
+@import url("function/preTable-function.css");
 
 /* Ligne Cellule Titre */
 .rcn-tableRow__head {
@@ -72,7 +73,7 @@
 .rcn-tableHead__container--checkable {
     justify-content: center;
     width:3rem;
-    margin-right: -8px;
+    /* margin-right: -8px; */
 }
 
 /* Cellules de données */
@@ -87,6 +88,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    vertical-align: middle;
 }
 
 .rcn-tableRow__cell .rcn-tableCell:first-child {
@@ -100,7 +102,7 @@
 .rcn-tableCell__action, 
 .rcn-tableCell__unfold, 
 .rcn-tableCell__select,
-.rcn-tableCell__texte,
+.rcn-tableCell__text,
 .rcn-tableCell__number,
 .rcn-tableCell__link,
 .rcn-tableCell__icon,
@@ -124,14 +126,15 @@
 
 
 /* Fonctionnalité */
+.rcn-tableCell__select .rcn-inputField__input--checkbox {
+    flex-grow: inherit;
+}
 
 /* Colonne Fixe */
 .rcn-tableData--sticked {
     position: sticky;
     z-index: 10;
     background-color: #fff;
-    filter: drop-shadow(0 0 1px var(--rcn-semantic-color-static-border-standard));
-
 }
 
 .rcn-tableData--sticked:first-child {
@@ -150,7 +153,16 @@
     border-style: solid;
     border-color: var(--rcn-semantic-color-static-border-standard);
 }
-
+.rcn-tableRow__cell--unfolded .rcn-tableCell:first-child {
+    border-left-color:#949494;
+    border-left-style:solid;
+    border-left-width:var(--rcn-semantic-border-vertical-300);
+}
+.rcn-tableSubRow__cell--unfolded .rcn-tableCell:first-child {
+    border-left-color:var(--rcn-semantic-color-interaction-border-default-standard);
+    border-left-style:solid;
+    border-left-width:var(--rcn-semantic-border-vertical-300);
+}
 
 
 

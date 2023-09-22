@@ -2,8 +2,8 @@
 <p>Fonctionnalités de l'en-tête :  Recherche Actions globales (dont export) Pagination</p>
 <p>Fonctionnalités de colonne :  Colonne Fixe Colonne Filtrable Colonne Action</p>
 <p>Fonctionnalités de ligne :  Ligne dépliable Ligne Sélectionnable</p>
-<div class='rcn-tableContainer'>
-  <div class='rcn-preTable'>
+<div class='rcn-containerTable'>
+  <div class='rcn-containerTable__heading'>
     <h1 id='TitreTable'>Tableau de donnée  - Général</h1> 
     <a title='Aller au pied du tableau' id='#RetourHTable' href='#RetourBTable'>
       Aller au bas du tableau 
@@ -11,17 +11,17 @@
     </a>
   </div>
   
-    <div class='rcn-preTable__function'>
+    <div class='rcn-tableBannerFunctionZone'>
       
-      <p class="rcn-preTable__paginationTop" aria-live="polite">
+      <p class="rcn-preTable-function__paginationTop" aria-live="polite">
         <span>1-3</span>
         sur 
         <span>32</span>
         <span>entités</span> 
         affichées
       </p>
-      <div class="rcn-preTable__zoneAction">
-          <div class="rcn-preTable__ActionGlob">
+      <div class="rcn-tableBannerFunctionZone__actionZone">
+          <div class="rcn-tableBannerFunctionZone__buttonsZone">
             <button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
               <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
               Réinitialiser les filtres
@@ -32,7 +32,7 @@
             </button>
           </div>
         
-        <div id="tableRecherche" class="rcn-preTable__search ">
+        <div id="tableRecherche" class="rcn-preTable-function__search ">
             <form action="" role="search">
               <label class="rcn-inputFieldBloc__label sr-only">Search and reset</label>
               <div class="rcn-inputField">
@@ -50,18 +50,18 @@
         </div>
     </div>
     
-    <div class="rcn-preTable__rowSelected sr-only" aria-hidden="false">
-				<div class="rcn-preTable__rowSelected--count">
+    <div class="rcn-tableBannerSelectedZone sr-only" aria-hidden="false">
+				<div class="rcn-tableBannerSelectedZone__countZone">
 					<p aria-owns=""><span>1</span> Ligne(s) séléctionnée(s)</p>				</div>
 				<div>
-					<div class="rcn-preTable__rowSelected--action">
+					<div class="rcn-tableBannerSelectedZone__actionZone">
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 1</button>
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 2</button>
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 3</button>
 					</div>
 				</div>
 			</div>
-    <div class='rcn-tableContent'>
+    <div class='rcn-contentTable'>
 <table class='rcn-table'>
 <thead class='rcn-tableRow'>
 <tr class='rcn-tableRow__head'>
@@ -195,12 +195,12 @@
 <tr class='rcn-tableRow__cell rcn-tableRow__cell--folded'>
  <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button id='Lig_depliable' class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 1, Colonne 8</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 1, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 1, Colonne 4</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 1, Colonne 5</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 1, Colonne 6</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 1, Colonne 7</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 1, Colonne 8</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 1, Colonne 9 (Nombre)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 1, Colonne 10 (Icône)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
@@ -213,12 +213,12 @@
 <tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>
 <td class='rcn-tableCell rcn-tableData--sticked '></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 2, Colonne 8</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 2, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 2, Colonne 4</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 2, Colonne 5</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 2, Colonne 6</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 2, Colonne 7</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 2, Colonne 8</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 2, Colonne 9 (Nombre)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 2, Colonne 10 (Icône)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
@@ -231,12 +231,12 @@
 <tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>
 <td class='rcn-tableCell rcn-tableData--sticked '></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 3, Colonne 8</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 3, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 3, Colonne 4</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 3, Colonne 5</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 3, Colonne 6</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 3, Colonne 7</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 3, Colonne 8</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 3, Colonne 9 (Nombre)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 3, Colonne 10 (Icône)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
@@ -249,12 +249,12 @@
 <tr class='rcn-tableSubRow__cell rcn-tableSubRow__cell--folded sr-only'>
 <td class='rcn-tableCell rcn-tableData--sticked '></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 4, Colonne 8</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 4, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 4, Colonne 4</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 4, Colonne 5</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 4, Colonne 6</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 4, Colonne 7</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 4, Colonne 8</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 4, Colonne 9 (Nombre)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 4, Colonne 10 (Icône)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
@@ -267,12 +267,12 @@
 <tr class='rcn-tableRow__cell'>
 <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 5, Colonne 8</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 5, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 5, Colonne 4</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 5, Colonne 5</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 5, Colonne 6</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 5, Colonne 7</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 5, Colonne 8</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 5, Colonne 9 (Nombre)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 5, Colonne 10 (Icône)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
@@ -285,12 +285,12 @@
 <tr class='rcn-tableRow__cell'>
 <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 6, Colonne 8</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 6, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 6, Colonne 4</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 6, Colonne 5</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 6, Colonne 6</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 6, Colonne 7</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 6, Colonne 8</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 6, Colonne 9 (Nombre)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 6, Colonne 10 (Icône)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
@@ -303,12 +303,12 @@
 <tr class='rcn-tableRow__cell'>
 <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 7, Colonne 8</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 7, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 7, Colonne 4</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 7, Colonne 5</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 7, Colonne 6</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 7, Colonne 7</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 7, Colonne 8</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 7, Colonne 9 (Nombre)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 7, Colonne 10 (Icône)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
@@ -321,12 +321,12 @@
 <tr class='rcn-tableRow__cell'>
 <td class='rcn-tableCell rcn-tableData--sticked '><div class='rcn-tableCell__unfold'><button class='rcn-iconButton rcn-icon rcn-icon--mdi-chevron-down'></button></div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__select'><input type='checkbox' class='rcn-icon rcn-inputField__input rcn-inputField__input--checkbox'></div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 3</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 4</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 5</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 6</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 7</div></td>
-<td class='rcn-tableCell  '><div class='rcn-tableCell__texte'>Ligne 8, Colonne 8</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 8, Colonne 3</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 8, Colonne 4</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 8, Colonne 5</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 8, Colonne 6</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 8, Colonne 7</div></td>
+<td class='rcn-tableCell  '><div class='rcn-tableCell__text'>Ligne 8, Colonne 8</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__number'>Ligne 8, Colonne 9 (Nombre)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__icon'> texte avec de la longeueuru lorem ipsum Ligne 8, Colonne 10 (Icône)</div></td>
 <td class='rcn-tableCell  '><div class='rcn-tableCell__action'><button class='rcn-button rcn-button--primary'>hola</button></div></td>
@@ -952,7 +952,7 @@
  </div>
       </div>
     </div></div><div id='contextMenu-1' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -970,9 +970,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-2' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -990,9 +990,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-3' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1010,9 +1010,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-4' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1030,9 +1030,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-5' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1050,9 +1050,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-6' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1070,9 +1070,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-7' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1090,9 +1090,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-8' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1110,7 +1110,7 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div>
   <div id='RetourBTable' class='rcn-postTable'>
     <a title='Retour en haut du tableau' href='#RetourHTable'>Aller au sommet du tableau 

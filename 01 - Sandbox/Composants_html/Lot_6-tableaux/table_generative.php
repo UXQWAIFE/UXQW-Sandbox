@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   // Variables pour les positions des fonctionnalités
 
   // Générer le code HTML du tableau avec les fonctionnalités sélectionnées et leurs positions
-  $tableHTML = "<div class='rcn-tableContent'>\n";
+  $tableHTML = "<div class='rcn-contentTable'>\n";
   $tableHTML .= "<table class='rcn-table'>\n";
   $tableHTML .= "<thead class='rcn-tableRow'>\n";
   $tableHTML .= "<tr class='rcn-tableRow__head'>\n";
@@ -183,7 +183,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         switch ($typeDonnee) {
           case "texte":
             // Aucune fonctionnalité supplémentaire pour le texte
-            $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
+            $rowData = "<div class='rcn-tableCell__text'>$rowData</div>";
             break;
           case "nombre":
             $rowData .= " (Nombre)";
@@ -226,7 +226,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
               break;
         }
         if (!$typeDonnee) {
-          $rowData = "<div class='rcn-tableCell__texte'>$rowData</div>";
+          $rowData = "<div class='rcn-tableCell__text'>$rowData</div>";
         }
         $tableHTML .= "<td class='rcn-tableCell ". $stickedClass ." '>$rowData</td>\n";
       }
@@ -246,7 +246,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Add Pagination
     if($ET_Pagination) {
       $enteteTableau .= '
-      <p class="rcn-preTable__paginationTop" aria-live="polite">
+      <p class="rcn-preTable-function__paginationTop" aria-live="polite">
         <span>1-3</span>
         sur 
         <span>32</span>
@@ -316,7 +316,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       // Add Action
       if($ET_Action) {
         $zoneAction .= '
-          <div class="rcn-preTable__ActionGlob">
+          <div class="rcn-tableBannerFunctionZone__buttonsZone">
             <button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
               <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
               Réinitialiser les filtres
@@ -332,7 +332,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       // Add Search
       if($ET_Searchable) {
         $zoneAction .= '
-        <div id="tableRecherche" class="rcn-preTable__search ">
+        <div id="tableRecherche" class="rcn-preTable-function__search ">
             <form action="" role="search">
               <label class="rcn-inputFieldBloc__label sr-only">Search and reset</label>
               <div class="rcn-inputField">
@@ -350,7 +350,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ';
       }
     }
-    $enteteTableau .= '<div class="rcn-preTable__zoneAction">'. $zoneAction .'</div>';
+    $enteteTableau .= '<div class="rcn-tableBannerFunctionZone__actionZone">'. $zoneAction .'</div>';
   }
 
   // Construire le résultat final avec les fonctionnalités sélectionnées
@@ -359,7 +359,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   $resultat .= "<p>Fonctionnalités de colonne : $fonctionnalitesColonne</p>\n";
   $resultat .= "<p>Fonctionnalités de ligne : $fonctionnalitesLigne</p>\n";
 
-  $resultat .= "<div class='rcn-tableContainer'>"; 
+  $resultat .= "<div class='rcn-containerTable'>"; 
   $resultat .= "
   <div class='rcn-preTable'>
     <h1 id='TitreTable'>Tableau de donnée  - Général</h1> 
@@ -371,18 +371,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   ";
   if($ET_Searchable || $ET_Action ) {
     $resultat .= "
-    <div class='rcn-preTable__function'>
+    <div class='rcn-tableBannerFunctionZone'>
       $enteteTableau
     </div>
     ";
   }
   if($Lig_select) {
     $resultat .= '
-    <div class="rcn-preTable__rowSelected sr-only" aria-hidden="false">
-				<div class="rcn-preTable__rowSelected--count">
+    <div class="rcn-tableBannerSelectedZone sr-only" aria-hidden="false">
+				<div class="rcn-tableBannerSelectedZone__countZone">
 					<p aria-owns=""><span>1</span> Ligne(s) séléctionnée(s)</p>				</div>
 				<div>
-					<div class="rcn-preTable__rowSelected--action">
+					<div class="rcn-tableBannerSelectedZone__actionZone">
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 1</button>
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 2</button>
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 3</button>
@@ -463,7 +463,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if($Col_action_menu) {
     for ($row = 1; $row <= $nombreLignes; $row++) {
         $contextMenuContainer = "<div id='contextMenu-$row' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -481,7 +481,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div>";
     
         $resultat .= $contextMenuContainer;

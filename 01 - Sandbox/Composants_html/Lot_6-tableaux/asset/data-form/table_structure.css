@@ -1,5 +1,5 @@
 /* Structure de la table */
-.rcn-tableContainer {
+.rcn-containerTable {
     display:block;
     width:100%;
     max-width:80vw;/* Temporaire // A voire avec les grilles peut être */
@@ -9,7 +9,7 @@
     box-sizing: border-box;
     position:relative;
 }
-.rcn-tableContent {
+.rcn-contentTable {
     display: flex;
     overflow-x: auto;
     border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
@@ -22,16 +22,17 @@
     font-family: var(--rcn-semantic-typography-fontfamily-text);
     overflow-y: hidden;
     table-layout: auto;
+    border-collapse: separate;
 }
 
 /* Pre table */
-.rcn-preTable {
+.rcn-containerTable__heading {
     display: flex;
     margin-bottom: var(--rcn-semantic-gap-vertical-400);
     justify-content: space-between;
 }
 
-.rcn-preTable__function {
+.rcn-tableBannerFunctionZone {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +45,7 @@
     border-color: var(--rcn-semantic-color-static-border-standard);
 }
 
-.rcn-preTable__zoneAction, .rcn-preTable__ActionGlob {
+.rcn-tableBannerFunctionZone__actionZone, .rcn-tableBannerFunctionZone__buttonsZone {
     display: flex;
     align-items: center;
     gap:var(--rcn-semantic-gap-vertical-400);
@@ -65,7 +66,7 @@
 /*      correction      */
 /* ==================== */
 
-/* Correction formulaire */
+/* 
 .rcn-inputFieldBloc {
     flex-direction: unset;
 }
@@ -73,7 +74,7 @@ td .rcn-inputField__input {
     flex-grow:unset;
 }
 
-/* Correction Pagination */
+
 .rcn-pagination__navList {
     list-style: none;
-}
+} */

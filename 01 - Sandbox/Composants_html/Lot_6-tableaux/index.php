@@ -386,7 +386,7 @@ print_r($_SESSION);
 		const cochables = document.querySelectorAll('.rcn-tableCell__select .rcn-inputField__input--checkbox');
 
 		// Récupérez le bandeau
-		const bandeau = document.querySelector('.rcn-preTable__rowSelected');
+		const bandeau = document.querySelector('.rcn-tableBannerSelectedZone');
 
 		// Fonction pour mettre à jour le nombre de cases cochées et afficher/masquer le bandeau
 		function updateBandeau() {
@@ -512,7 +512,7 @@ print_r($_SESSION);
 			});
 		});
 
-		const CloseContexts = document.querySelectorAll('.rcn-contextMenu__close');
+		const CloseContexts = document.querySelectorAll('.rcn-contextMenu__closeButton');
 		CloseContexts.forEach(CloseContext => {
 			CloseContext.addEventListener('click', () => {
 				CloseContext.parentElement.setAttribute('aria-hidden', 'true');
