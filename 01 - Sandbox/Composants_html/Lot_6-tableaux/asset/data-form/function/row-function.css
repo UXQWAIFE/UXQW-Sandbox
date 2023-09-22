@@ -1,6 +1,6 @@
 /* Ligne Selectionnable & bandeau */
 
-.rcn-preTable-function__rowSelect {
+.rcn-tableBannerSelectedZone {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -12,7 +12,7 @@
     border-color: var(--rcn-semantic-color-static-border-standard);
     padding:var(--rcn-semantic-padding-vertical-200);
 }
-.rcn-preTable-function__rowSelect--action {
+.rcn-tableBannerSelectedZone__actionZone {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -20,7 +20,7 @@
     align-items: center;
     gap:var(--rcn-semantic-gap-horizontal-200);
 }
-.rcn-preTable-function__rowSelect--count {
+.rcn-tableBannerSelectedZone__countZone {
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onprimary);
 }
 /* Ligne depliable */
@@ -73,7 +73,7 @@
     display:none;
 }
 
-.rcn-contextMenu__close {
+.rcn-contextMenu__closeButton {
     display: flex;
     flex-direction: row-reverse;
     gap:var(--rcn-semantic-gap-horizontal-200);
@@ -98,7 +98,7 @@
     padding: var(--rcn-semantic-padding-horizontal-100) var(--rcn-semantic-padding-vertical-200);
     color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard)
 }
-.rcn-contextMenu__Delete {
+.rcn-contextMenu__deleteButton {
     padding: var(--rcn-semantic-padding-horizontal-200);
     color:var(--rcn-semantic-color-feedback-text_and_icon-error);
     border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);

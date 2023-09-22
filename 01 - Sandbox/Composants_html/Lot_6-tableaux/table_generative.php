@@ -316,7 +316,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       // Add Action
       if($ET_Action) {
         $zoneAction .= '
-          <div class="rcn-preTable-function__globalAction">
+          <div class="rcn-tableBannerFunctionZone__buttonsZone">
             <button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
               <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
               Réinitialiser les filtres
@@ -350,7 +350,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         ';
       }
     }
-    $enteteTableau .= '<div class="rcn-preTable-function__actionContainer">'. $zoneAction .'</div>';
+    $enteteTableau .= '<div class="rcn-tableBannerFunctionZone__actionZone">'. $zoneAction .'</div>';
   }
 
   // Construire le résultat final avec les fonctionnalités sélectionnées
@@ -371,18 +371,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   ";
   if($ET_Searchable || $ET_Action ) {
     $resultat .= "
-    <div class='rcn-preTable__function'>
+    <div class='rcn-tableBannerFunctionZone'>
       $enteteTableau
     </div>
     ";
   }
   if($Lig_select) {
     $resultat .= '
-    <div class="rcn-preTable-function__rowSelect sr-only" aria-hidden="false">
-				<div class="rcn-preTable-function__rowSelect--count">
+    <div class="rcn-tableBannerSelectedZone sr-only" aria-hidden="false">
+				<div class="rcn-tableBannerSelectedZone__countZone">
 					<p aria-owns=""><span>1</span> Ligne(s) séléctionnée(s)</p>				</div>
 				<div>
-					<div class="rcn-preTable-function__rowSelect--action">
+					<div class="rcn-tableBannerSelectedZone__actionZone">
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 1</button>
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 2</button>
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 3</button>
@@ -463,7 +463,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   if($Col_action_menu) {
     for ($row = 1; $row <= $nombreLignes; $row++) {
         $contextMenuContainer = "<div id='contextMenu-$row' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -481,7 +481,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div>";
     
         $resultat .= $contextMenuContainer;

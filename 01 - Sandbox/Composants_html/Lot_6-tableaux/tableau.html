@@ -3,7 +3,7 @@
 <p>Fonctionnalités de colonne :  Colonne Fixe Colonne Filtrable Colonne Action</p>
 <p>Fonctionnalités de ligne :  Ligne dépliable Ligne Sélectionnable</p>
 <div class='rcn-containerTable'>
-  <div class='rcn-preTable'>
+  <div class='rcn-containerTable__heading'>
     <h1 id='TitreTable'>Tableau de donnée  - Général</h1> 
     <a title='Aller au pied du tableau' id='#RetourHTable' href='#RetourBTable'>
       Aller au bas du tableau 
@@ -11,7 +11,7 @@
     </a>
   </div>
   
-    <div class='rcn-preTable__function'>
+    <div class='rcn-tableBannerFunctionZone'>
       
       <p class="rcn-preTable-function__paginationTop" aria-live="polite">
         <span>1-3</span>
@@ -20,8 +20,8 @@
         <span>entités</span> 
         affichées
       </p>
-      <div class="rcn-preTable-function__actionContainer">
-          <div class="rcn-preTable-function__globalAction">
+      <div class="rcn-tableBannerFunctionZone__actionZone">
+          <div class="rcn-tableBannerFunctionZone__buttonsZone">
             <button class="rcn-button rcn-button--secondary" aria-controls="table" title="Réinitialiser les filtres et tri de toutes les colonnes" >
               <i class="mdi mdi-filter-remove" aria-hidden="true"></i>
               Réinitialiser les filtres
@@ -50,11 +50,11 @@
         </div>
     </div>
     
-    <div class="rcn-preTable-function__rowSelect sr-only" aria-hidden="false">
-				<div class="rcn-preTable-function__rowSelect--count">
+    <div class="rcn-tableBannerSelectedZone sr-only" aria-hidden="false">
+				<div class="rcn-tableBannerSelectedZone__countZone">
 					<p aria-owns=""><span>1</span> Ligne(s) séléctionnée(s)</p>				</div>
 				<div>
-					<div class="rcn-preTable-function__rowSelect--action">
+					<div class="rcn-tableBannerSelectedZone__actionZone">
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 1</button>
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 2</button>
 						<button class="rcn-button rcn-button--secondary" aria-controls="ID" title="Action sur les lignes Séléctionner">Bouton 3</button>
@@ -952,7 +952,7 @@
  </div>
       </div>
     </div></div><div id='contextMenu-1' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -970,9 +970,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-2' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -990,9 +990,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-3' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1010,9 +1010,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-4' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1030,9 +1030,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-5' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1050,9 +1050,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-6' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1070,9 +1070,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-7' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1090,9 +1090,9 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div><div id='contextMenu-8' class='rcn-contextMenu' aria-hidden='true'>
-                                  <button class='rcn-contextMenu__close rcn-iconButton' >
+                                  <button class='rcn-contextMenu__closeButton rcn-iconButton' >
                                     <i class='rcn-icon rcn-icon--mdi-close'></i>
                                     <p class='sr-only'>Fermer</p>
                                   </button>
@@ -1110,7 +1110,7 @@
                                       <a class='rcn-contextMenu__link' href='#commande1'>Action 1</a>
                                     </li>
                                   </ul>
-                                  <button class='rcn-contextMenu__Delete'>Supprimer</button>
+                                  <button class='rcn-contextMenu__deleteButton'>Supprimer</button>
                                 </div>
   <div id='RetourBTable' class='rcn-postTable'>
     <a title='Retour en haut du tableau' href='#RetourHTable'>Aller au sommet du tableau 

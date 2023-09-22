@@ -1,18 +1,18 @@
 .rcn-containerTable 
 
-.rcn-preTable 
+.rcn-containerTable__heading 
 
 .rcn-icon 
 
 .rcn-icon--mdi-arrow-down 
 
-.rcn-preTable__function 
+.rcn-tableBannerFunctionZone 
 
 .rcn-preTable-function__paginationTop 
 
-.rcn-preTable-function__actionContainer 
+.rcn-tableBannerFunctionZone__actionZone 
 
-.rcn-preTable-function__globalAction 
+.rcn-tableBannerFunctionZone__buttonsZone 
 
 .rcn-button 
 
@@ -48,11 +48,11 @@
 
 .rcn-inputField__button--search 
 
-.rcn-preTable-function__rowSelect 
+.rcn-tableBannerSelectedZone 
 
-.rcn-preTable-function__rowSelect--count 
+.rcn-tableBannerSelectedZone__countZone 
 
-.rcn-preTable-function__rowSelect--action 
+.rcn-tableBannerSelectedZone__actionZone 
 
 .rcn-contentTable 
 
@@ -162,7 +162,7 @@
 
 .rcn-contextMenu 
 
-.rcn-contextMenu__close 
+.rcn-contextMenu__closeButton 
 
 .rcn-contextMenu__list 
 
@@ -170,7 +170,7 @@
 
 .rcn-contextMenu__link 
 
-.rcn-contextMenu__Delete 
+.rcn-contextMenu__deleteButton 
 
 .rcn-postTable 
 
