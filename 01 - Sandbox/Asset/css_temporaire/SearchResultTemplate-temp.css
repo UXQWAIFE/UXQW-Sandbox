@@ -9,6 +9,12 @@
   /* Pour que le module de résultat de recherche s'inclu dans la grille */
   }
 
+  .rcn-searchResult__title{
+    grid-area: searchHeading;
+    height: auto;
+  }
+
+
 /* ---------------------Ajout du bandeau de cookies pour tester ------------- */
 
 .rcn-cookiePanel{ 

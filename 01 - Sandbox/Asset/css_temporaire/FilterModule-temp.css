@@ -9,8 +9,6 @@
     border-left: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
     border-right: var(--rcn-semantic-borderwidth-100) solid transparent;
     background-color: var(--rcn-semantic-color-interaction-background-default-standard);
-    /* width: 100%; */
-    /* est ce qu'on a besoin de mettre cette propriété ? */
     /* grid-area : filter;  > si mise au sein d'une grille sans overlay */
   }
 
@@ -19,7 +17,9 @@
     border-right : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
    
    }
-
+   /* Le module de filtre peut être présent à droite ou à gauche de la page. La droite est sa position "par défaut" et la gauche le modifer à ajouter dans certains cas.  */
+   
+   
    .rcn-filter--partiel{
      /* Lié à la déclinaison module de filtre partiel */    
     flex-direction: row;
@@ -72,17 +72,12 @@
     align-items: baseline;
     gap: var(--rcn-semantic-gap-horizontal-200);
     align-self : flex-end;
-    /* Definir si ces propriétés sont portées au sein du reset ou non */
     background: none;
     border:none;
 
    }
 
-   .rcn-filter__iconClose::before{
-    content: var(--rcn-semantic-typography-icon-rcn_icon-close-content);
-  }
-
-  .rcn-filter__iconClose{
+    .rcn-filter__iconClose{
    order:2;
 
   }
@@ -107,7 +102,7 @@
     align-self:flex-end;
    }
 
-   /*------Cas pratique : le module de filtre se supperpose au contenu de la page------------*/
+   /*------Cas pratique [disponible au sein de la page : SearchResultTemplate] : le module de filtre se supperpose au contenu de la page------------*/
 
    .rcn-grid--mainContentOverlayed{
     position : relative;
@@ -116,7 +111,6 @@
   .rcn-filter--overlay{
     grid-area: filter;
     overflow-y: scroll;
-    /* background-color: aliceblue; */
     border-right:var(--rcn-semantic-borderwidth-100) solid transparent;
     border-left : var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-divider_strong);
     max-height: 100%;

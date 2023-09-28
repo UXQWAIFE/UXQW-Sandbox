@@ -74,14 +74,18 @@
   grid-area: form;
 } */
 
-.rcn-horizontalStepperForm__heading{
+/* .rcn-horizontalStepperForm__heading{
   grid-area: heading;
-}
+} */
+
+/* Ajouter au excel > OK  */
 
 .rcn-verticalStepperForm{
   grid-template-areas:
     '. . . . heading heading heading heading heading heading heading heading' 'stepper stepper stepper . form form form form form form form form';
 }
+
+/* Ajouter au excel > OK  */
 /* Classes de démonstration */
 
 .demo-header__productBanner{
