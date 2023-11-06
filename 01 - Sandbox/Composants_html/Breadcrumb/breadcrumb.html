@@ -13,36 +13,77 @@
 
 	<!-- Breadcrumb par défaut : -->
 
-	<div class="rcn-breadcrumb rcn-grid__margins">
-		<ul class="rcn-breadcrumb__list">
-			<div class="rcn-breadcrumb__item">
-				<button class="rcn-breadcrumb__button"> Accueil
-				</button>
-				<div class="rcn-icon rcn-breadcrumb__chevron">
-				</div>
-				<button class="rcn-breadcrumb__button"> Page 1
-				</button>
-				<div class="rcn-icon rcn-breadcrumb__chevron">
-				</div>
-				<button class="rcn-breadcrumb__button"> Page 2
-				</button>
-				<div class="rcn-icon rcn-breadcrumb__chevron">
-				</div>
-			</div>
+	<div class="rcn-breadcrumb rcn-gridMargins">
+		<ul class="rcn-breadcrumb__list rcn-grid__margins">
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Accueil</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron">	</div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Page 1</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron"></div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Page 1.1</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron"></div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Page 1.1.1</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron"></div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				Page 1.1.1.1 (actuelle)
+			</li>
+		</ul>
+	</div>
+
+	<!-- Breadcrumb responsive: -->
+
+	<div class="rcn-breadcrumb rcn-gridMargins">
+		<button class="rcn-breadcrumb__button"> Voir le fil d'Ariane
+		</button>
+		<ul aria-hidden='true' class="rcn-breadcrumb__list sr-only">
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Accueil</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron">	</div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Page 1</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron"></div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Page 1.1</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron"></div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				Page 1.1.1 (actuelle)
+			</li>
 		</ul>
 	</div>
 
 	<!-- Breadcrumb sur la page d'accueil : -->
-
-	<div class="rcn-breadcrumb rcn-breadcrumb--onLandingPage rcn-gridMargins">
+	<div class="rcn-breadcrumb rcn-gridMargins">
+		<button class="rcn-breadcrumb__button"> Voir le fil d'Ariane
+		</button>
 		<ul aria-hidden='true' class="rcn-breadcrumb__list sr-only">
-			<div class="rcn-breadcrumb__item">
-				<button class="rcn-breadcrumb__button"> Accueil
-				</button>
-			</div>
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Accueil</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron">	</div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Page 1</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron"></div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				<a class="rcn-link">Page 1.1</a> 
+				<div class="rcn-icon rcn-breadcrumb__chevron"></div>
+			</li>
+			<li class="rcn-breadcrumb__item">
+				Page 1.1.1 (actuelle)
+			</li>
 		</ul>
-	</div>
-	
+
+
 </body>
 <footer>
     <script src="../../Asset/css_temporaire/import-temp.js"></script>
