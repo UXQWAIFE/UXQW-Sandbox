@@ -10,65 +10,21 @@
 </head>
 <body>
 	<div class="container">
-
-		<!-- Infobulle - cas d'information supplémentaire -->
 		<h2>Infobulle - cas d'information supplémentaire</h2>
 		<button class="rcn-tooltip"  				
-				aria-describedby="tooltip-button"  
+				aria-describedby="tooltip-textbox"  
 				aria-label="Afficher des infos supplementaires">
 				<span   class="rcn-tooltip__textbox" 
 						role="tooltip" 
-						id="tooltip-button" 
+						id="tooltip-textbox" 
 						aria-hidden="true">
 						Informations supplémentaires cachées ici dans le tooltip
 				</span>
-			</button>
-		
-		<!-- Infobulle - cas des formulaires (spécificité des champs, formats, ...) -->
-		<h2>Infobulle - cas des formulaires</h2>
-		<label  class=""
-				for="input-tooltip">
-				Champs a remplir :
-				<button class="rcn-tooltip"  				
-				aria-describedby="tooltip-button"  
-				aria-label="Afficher des infos supplementaires">
-					<span   class="rcn-tooltip__textbox"
-							role="tooltip" 
-							id="tooltip-input" 
-							aria-hidden="true">
-						Informations supplémentaires pour la complétion de l'input cachées ici dans le tooltip
-					</span>
-				</button>
-		</label>
-		<input type="text" id="input-tooltip" placeholder="Ex : Licorne">
-
-
-		<!-- Infobulle - cas d'une définition -->
-		<h2>Infobulle - cas d'une définition</h2>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorem eveniet expedita maiores exercitationem quasi, 
-			<a class="rcn-tooltip__definition" title="accèder à la définition" href="#dfn-list">
-				maxime
-			</a>
-			omnis excepturi error ipsum similique recusandae minima optio dolorum provident, adipisci tempora quidem dolores cupiditate.
-		</p>
-
-		<dl>
-			<dt id="dfn-list"></dt>
-			<dd>Définition cachée ici dans ce tooltip</dd>
-			<a href="#">Retourner à la lecture</a>
-		</dl>
+		</button>
 	</div>
-	
 	<footer>
 		<script src="../../Asset/css_temporaire/import-temp.js"></script>
 		<script src="./tooltip-test.js"></script>
 	</footer>
 </body>
 </html>
-
-<!-- 
-Points a voir : 
-- focus sur label ? 
-- focus sur definition ? 
--->

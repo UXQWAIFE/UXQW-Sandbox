@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------------*/
-/*----------------------- CSS for Display purposes  ------------------*/
-/*--------------------------------------------------------------------*/
+/*----------------------------------------------------------*/
+/*------------- CSS for Display purposes  ------------------*/
+/*----------------------------------------------------------*/
 body{
 	display: flex;
   	align-items: center;
@@ -17,16 +17,11 @@ h2{
 	margin: 2rem 0;
 	text-decoration: underline;
 }
-input{
-	outline: solid 1px black;
-}
-p{
-	line-height: 1.3rem;
-}
 
-/*--------------------------------------------------------------------*/
-/*-------------------------- Tooltip CSS button ----------------------*/
-/*--------------------------------------------------------------------*/
+/*----------------------------------------------------------*/
+/*------------------ Tooltip CSS button --------------------*/
+/*----------------------------------------------------------*/
+
 .rcn-tooltip{
 	position: relative;	
 }
@@ -41,15 +36,10 @@ p{
 	line-height: var(--rcn-semantic-typography-lineheight-body-component);
 	font-weight: var(--rcn-semantic-typography-fontweight-body-component);
 	font-size: var(--rcn-semantic-typography-fontsize-body);
-
-	/* 
-	text-decoration: var(--rcn-semantic-typography-icon-rcn_icon-body-textdecoration); 
-	*/
 }
 
 .rcn-tooltip__textbox{
 	display: none;
-	/* width: 35.2rem; */
 	width: 300%;
 	max-width: 35.2rem;
 	position: absolute;
@@ -76,41 +66,5 @@ p{
 
 .rcn-tooltip:hover .rcn-tooltip__textbox,
 .rcn-tooltip:focus .rcn-tooltip__textbox {
-	display: block;
-}
-
-/*--------------------------------------------------------------------*/
-/*--------------------------- Tooltip CSS form------------------------*/
-/*--------------------------------------------------------------------*/
-.rcn-tooltip__label{
-	position: relative;
-}
-
-.rcn-tooltip__label:hover .rcn-tooltip__textbox,
-.rcn-tooltip__label:focus .rcn-tooltip__textbox 
-{
-	display: block;
-}
-
-
-/*--------------------------------------------------------------------*/
-/*---------------------- Tooltip CSS definition-----------------------*/
-/*--------------------------------------------------------------------*/
-/* p{
-	position: relative;
-} */
-
-.rcn-tooltip__definition{
-	position: relative;
-	text-decoration: var(--rcn-core-textdecoration-underline);
-	color: var(--rcn-core-color-dsfr_france-500);
-}
-
-.rcn-tooltip__definition:hover{
-	font-weight: var(--rcn-core-fontweight-600);
-}
-
-.rcn-tooltip__definition:hover .rcn-tooltip__textbox,
-.rcn-tooltip__definition:focus .rcn-tooltip__textbox{
 	display: block;
 }
