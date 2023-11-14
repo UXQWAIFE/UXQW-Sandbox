@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../../RCN-DesignSystem-Test/assets/styles-ChorusPro.css" rel="stylesheet">
+    <link href="../../Asset/Resets.css" rel="stylesheet">
+    <link rel="stylesheet" href="./tooltip-test-temp.css">
+	<title>Tooltip-test</title>
+</head>
+<body>
+	<div class="container">
+		<h2>Infobulle - cas d'information supplémentaire</h2>
+		<button class="rcn-tooltip"  				
+				aria-describedby="tooltip-textbox"  
+				aria-label="Afficher des infos supplementaires">
+				<span   class="rcn-tooltip__textbox" 
+						role="tooltip" 
+						id="tooltip-textbox" 
+						aria-hidden="true">
+						Informations supplémentaires cachées ici dans le tooltip
+				</span>
+		</button>
+	</div>
+	<footer>
+		<script src="../../Asset/css_temporaire/import-temp.js"></script>
+		<script src="./tooltip-test.js"></script>
+	</footer>
+</body>
+</html>

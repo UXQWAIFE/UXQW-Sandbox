@@ -1,0 +1,70 @@
+/*----------------------------------------------------------*/
+/*------------- CSS for Display purposes  ------------------*/
+/*----------------------------------------------------------*/
+body{
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	height: 100vh;
+}
+.container{
+	width: 50%;
+	height: 50%;
+	text-align: center;
+}
+
+h2{
+	margin: 2rem 0;
+	text-decoration: underline;
+}
+
+/*----------------------------------------------------------*/
+/*------------------ Tooltip CSS button --------------------*/
+/*----------------------------------------------------------*/
+
+.rcn-tooltip{
+	position: relative;	
+}
+
+.rcn-tooltip::before{
+	content: "\e922";
+	padding: 1rem;
+	border-radius: var(--rcn-semantic-borderradius-100);
+	border: var(--rcn-semantic-borderwidth-100);
+	font-family: var(--rcn-semantic-typography-fontfamily-icon);
+	color: var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
+	line-height: var(--rcn-semantic-typography-lineheight-body-component);
+	font-weight: var(--rcn-semantic-typography-fontweight-body-component);
+	font-size: var(--rcn-semantic-typography-fontsize-body);
+}
+
+.rcn-tooltip__textbox{
+	display: none;
+	width: 300%;
+	max-width: 35.2rem;
+	position: absolute;
+	bottom: 150%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: var(--rcn-semantic-color-static-text_and_icon-ontooltip);
+	border-radius: var(--rcn-semantic-borderradius-200);
+	background-color: var(--rcn-semantic-color-static-background-tooltip);
+	padding: var(--rcn-semantic-padding-horizontal-200) var(--rcn-semantic-padding-horizontal-300);
+	line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+}
+
+.rcn-tooltip__textbox::after{ /*arrow*/
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: var(--rcn-semantic-color-static-background-tooltip) var(--rcn-core-color-transparent) var(--rcn-core-color-transparent) var(--rcn-core-color-transparent); 
+}
+
+.rcn-tooltip:hover .rcn-tooltip__textbox,
+.rcn-tooltip:focus .rcn-tooltip__textbox {
+	display: block;
+}
