@@ -57,7 +57,7 @@ h2{
 .rcn-definition-sidebar__title{
 	text-align: center;
 	text-transform: uppercase;
-	padding: 2rem 0;
+	/* padding: 2rem 0; */
 }
 
 .rcn-definition-sidebar__close-button{
@@ -94,4 +94,14 @@ h2{
 	margin-top: 2rem;
 	border-top: 1px solid black ;
 	padding-top: 1rem;
+}
+
+
+/* Add Modif - def sidebar */
+.rcn-definition-sidebarHeadZone {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
 }
