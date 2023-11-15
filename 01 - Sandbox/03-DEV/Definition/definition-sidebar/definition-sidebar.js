@@ -23,15 +23,25 @@ wordsToDefineEl.forEach(element => {
 	});
 });
 
+//close sidebar on icon click
 closeButton.addEventListener('click', (event) => {
 	hideSidebar();
+});
+
+//close sidebar on Esc
+sidebar.addEventListener('keydown', (event) => {
+	if(event.key === 'Escape'){
+		hideSidebar();
+	}
 });
 
 //Functions
 function displaySidebar(){
 	sidebar.classList.add('rcn-definition-sidebar--opened');
 	sidebar.classList.remove('rcn-definition-sidebar--closed');
-	sidebar.setAttribute('aria-hidden', 'false');
+	if(!sidebar.classList.contains('sr-only')){
+		sidebar.setAttribute('aria-hidden', 'false');
+	}
 }
 
 function hideSidebar(){
