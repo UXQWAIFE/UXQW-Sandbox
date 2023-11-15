@@ -1,0 +1,97 @@
+/*----------------------------------------------------------*/
+/*------------- CSS for Display purposes  ------------------*/
+/*----------------------------------------------------------*/
+body{
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	height: 100vh;
+	line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+}
+.container{
+	width: 50%;
+	height: 90%;
+}
+
+h2{
+	text-align: center;
+	margin: 2rem 0;
+	text-decoration: underline;
+}
+.rcn-button{
+	margin-top: 1rem;
+}
+
+
+/*----------------------------------------------------------*/
+/*----------------------- Definition -----------------------*/
+/*----------------------------------------------------------*/
+
+.rcn-definition-sidebar{
+	margin: 2rem 0;
+	padding: 1rem;
+	position: fixed;
+	top: 10%;
+	right: 0;
+	height: 80%;
+	width: 20%;
+	border: 1px solid black;
+	background-color: white;
+	z-index:1;
+	overflow: scroll;
+	visibility: hidden; 
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s linear;
+}
+
+.rcn-definition-sidebar--opened{
+	visibility: visible;
+	opacity: 1;
+}
+
+.rcn-definition-sidebar--closed{
+	visibility: hidden;
+	opacity: 0;
+}
+
+.rcn-definition-sidebar__title{
+	text-align: center;
+	text-transform: uppercase;
+	padding: 2rem 0;
+}
+
+.rcn-definition-sidebar__close-button{
+	position: absolute;
+	top: 1.5rem;
+	right: 1.5rem;
+}
+
+.rcn-definition-sidebar__close-button::before{
+	content: var(--rcn-semantic-typography-content-icon-close);
+	font-family: var(--rcn-semantic-typography-fontfamily-icon);
+	font-size: var(--rcn-semantic-typography-fontsize-h3);
+	z-index: 2;
+}
+
+.rcn-definition__link{
+	color: var(--rcn-core-color-dsfr_france-500);
+	text-decoration: var(--rcn-semantic-typography-textdecoration-link);
+}
+
+.rcn-definition__list-title{
+	font-weight: var(--rcn-semantic-typography-fontweight-heading);
+}
+
+.rcn-definition__list-content{
+	padding: .2rem 0 1rem 0;
+}
+
+.rcn-definition__def-title{
+	margin-top: 1rem;
+}
+
+.rcn-definition-footnotes{
+	margin-top: 2rem;
+	border-top: 1px solid black ;
+	padding-top: 1rem;
+}
