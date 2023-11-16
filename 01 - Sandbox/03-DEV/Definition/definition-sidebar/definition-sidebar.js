@@ -1,6 +1,7 @@
 let wordsToDefineEl = document.querySelectorAll('[data-def]');
 let sidebar = document.querySelector('.rcn-definition-sidebar');
-let closeButton = document.querySelector('.rcn-definition-sidebar__close-button')
+let closeButton = document.querySelector('.rcn-button');
+let overlay = document.querySelector('.definition-overlay');
 
 //get all defintions on page & generate ID and random dev defintion
 window.addEventListener('load', (event) => {
@@ -11,6 +12,7 @@ window.addEventListener('load', (event) => {
 		el.setAttribute('data-def', id);
 		el.setAttribute('href', `#def-${id}`);
 		el.setAttribute('title', 'Accèder à la définition');
+		el.setAttribute('id', `word-${id}`);
 		el.classList.add('rcn-definition__link');
 		generateDef(id, word);
 	});
@@ -35,19 +37,24 @@ sidebar.addEventListener('keydown', (event) => {
 	}
 });
 
+// close sidebar on click anywhere in the page
+overlay.addEventListener('click', (event) => {
+	hideSidebar();
+});
+
 //Functions
 function displaySidebar(){
 	sidebar.classList.add('rcn-definition-sidebar--opened');
 	sidebar.classList.remove('rcn-definition-sidebar--closed');
-	if(!sidebar.classList.contains('sr-only')){
-		sidebar.setAttribute('aria-hidden', 'false');
-	}
+	overlay.classList.remove('definition-overlay--invisible');
+	overlay.classList.add('definition-overlay--visible');
 }
 
 function hideSidebar(){
 	sidebar.classList.add('rcn-definition-sidebar--closed');
 	sidebar.classList.remove('rcn-definition-sidebar--opened');
-	sidebar.setAttribute('aria-hidden', 'true');
+	overlay.classList.add('definition-overlay--invisible');
+	overlay.classList.remove('definition-overlay--visible');
 }
 
 //generate unique id
@@ -62,7 +69,7 @@ function generateDef(id, word) {
 	definitionTitle.classList.add('rcn-definition__list-title');
 	definitionTitle.setAttribute('id', `def-${id}`);
 	definitionTitle.innerHTML = word;
-	
+
 	//def text
 	let definition = document.createElement('dd');
 	definition.classList.add('rcn-definition__list-content');
@@ -72,6 +79,19 @@ function generateDef(id, word) {
 	const sidebarContent = document.querySelector('.rcn-definition__list');
 	sidebarContent.appendChild(definitionTitle); 
 	sidebarContent.appendChild(definition); 
+
+	//Append for SR
+	const defList = document.querySelector('.rcn-definition-footnotes');
+	let currentDef = document.querySelector(`#def-${id}`).nextElementSibling;
+	let goBackLink = document.createElement('a');
+	goBackLink.setAttribute('href', `#word-${id}`);
+	goBackLink.setAttribute('title', 'Retourner à la lecture');
+	goBackLink.classList.add('rcn-definition__link');
+	goBackLink.innerHTML = '  Retourner à la lecture ';
+	currentDef.appendChild(goBackLink);
+
+	defList.appendChild(definitionTitle.cloneNode(true));
+	defList.appendChild(currentDef);
 }
 
 //generate lorem definition
