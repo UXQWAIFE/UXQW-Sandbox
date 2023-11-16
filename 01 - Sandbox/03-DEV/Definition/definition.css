@@ -115,3 +115,11 @@ h2{
 .definition-overlay--visible{
 	display: block;
 }
+
+.rcn-modal--hidden{
+	display: none;
+}
+
+.rcn-modal--visible{
+	display: grid;
+}
