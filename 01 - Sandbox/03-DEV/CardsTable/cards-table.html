@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Cards Table</title>
+		<link
+			href="../../RCN-DesignSystem-Test/assets/styles-ChorusPro.css"
+			rel="stylesheet" />
+		<link
+			href="../../Asset/Resets.css"
+			rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			href="cards-table.css" />
+		<style>
+			body {
+				padding: 2rem !important;
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<h2 class="rcn-h2 rcn-h2--editorial">
+				Card en mode Donnée - DataCards ?
+			</h2>
+
+			<div
+				class="rcn-card rcn-card--cardsTable"
+				role="group"
+				aria-labelledby="taskTitle"
+				aria-describedby="taskDesc">
+				<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+					<div
+						class="rcn-card__contentZone rcn-card__contentZone--titleCardTable">
+						<input
+							type="checkbox"
+							id="taskCheckbox"
+							class="rcn-icon rcn-inputField__input rcn-inputField__input--cardTable rcn-inputField__input--checkbox"
+							aria-label="Select task 00010" />
+						<label
+							id=""
+							class="sr-only"
+							for="taskCheckbox">
+							Séléctionner la ligne
+						</label>
+
+						<h2
+							class="rcn-h4 rcn-card__title"
+							id="taskTitle"
+							for="taskCheckbox">
+							00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit
+						</h2>
+					</div>
+					<div
+						id="taskDesc"
+						class="rcn-card__content">
+						<p class="rcn-card__textDescription">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto
+							perspiciatis rem perferendis ad, laborum culpa at ipsum similique
+							rerum necessitatibus natus eveniet eaque distinctio aliquam dicta
+							non tempore nam modi.
+						</p>
+						<button
+							class="rcn-buttonAsLink"
+							aria-controls="fullTaskDesc"
+							aria-expanded="false">
+							Afficher plus
+							<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+						</button>
+					</div>
+					<div class="rcn-card__dateInfo">
+						<p><span>Reçue le :</span> 16/12/2023</p>
+						<p><span>Due le :</span> 16/12/2025</p>
+					</div>
+				</div>
+
+				<div class="rcn-card__sideZone">
+					<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+						<p
+							class="rcn-chips rcn-chips--success"
+							aria-label="Status:">
+							Acceptée
+						</p>
+						<p
+							class="rcn-chips"
+							aria-label="Montant :">
+							12,000 €
+						</p>
+					</div>
+					<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+						<button
+							class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical"
+							title="Ouvrir le menu d'action"></button>
+
+						<button
+							class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down"
+							aria-label="Déplier le contenu"></button>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
