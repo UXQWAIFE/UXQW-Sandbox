@@ -42,10 +42,10 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	/* flex-basis:fit-content;
-	flex-shrink: 0;
-	flex-grow: 0;
-	max-width: 100%; */
+	width: max-content;	
+}
+.rcn-card__textDescription--expanded {
+	white-space: unset;
 }
 .rcn-card__dateInfo {
 	display: flex;
@@ -69,7 +69,8 @@
 	gap: var(--rcn-semantic-gap-horizontal-700);
 	flex-wrap: nowrap;
 	align-items: center;
-	justify-content: space-between;
+	text-align: right;
+    justify-content: space-between;
 	flex: 1;
 }
 .rcn-card__chipsZone--inline {
