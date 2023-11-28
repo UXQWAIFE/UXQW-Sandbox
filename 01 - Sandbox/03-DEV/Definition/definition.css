@@ -1,125 +1,85 @@
 /*----------------------------------------------------------*/
 /*------------- CSS for Display purposes  ------------------*/
 /*----------------------------------------------------------*/
-body{
-	display: flex;
-  	align-items: center;
-  	justify-content: center;
-  	height: 100vh;
-	line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  line-height: var(--rcn-semantic-typography-lineheight-body-editorial);
+  position: relative;
 }
-.container{
-	width: 50%;
-	height: 90%;
+.container,
+main {
+  width: 50%;
+  height: 90%;
 }
 
-h2{
-	text-align: center;
-	margin: 2rem 0;
-	text-decoration: underline;
+h2 {
+  text-align: center;
+  margin: 2rem 0;
+  text-decoration: underline;
+}
+
+.body-for-modal {
+  align-items: normal;
 }
 
 /*----------------------------------------------------------*/
 /*----------------------- Definition -----------------------*/
 /*----------------------------------------------------------*/
 
-.rcn-definition-sidebar{
-	margin: 2rem 0;
-	padding: 1rem;
-	position: fixed;
-	top: 10%;
-	right: 0;
-	height: 80%;
-	width: 20%;
-	border: 1px solid black;
-	background-color: white;
-	z-index:1;
-	overflow: scroll;
-	visibility: hidden; 
-	opacity: 0;
-	transition: visibility 0s, opacity 0.5s linear;
+.rcn-definition__link {
+  color: var(--rcn-core-color-dsfr_france-500);
+  text-decoration: var(--rcn-semantic-typography-textdecoration-link);
 }
 
-.rcn-definition-sidebar--opened{
-	visibility: visible;
-	opacity: 1;
+.rcn-definition__list-title {
+  font-weight: var(--rcn-semantic-typography-fontweight-heading);
 }
 
-.rcn-definition-sidebar--closed{
-	visibility: hidden;
-	opacity: 0;
+.rcn-definition__list-content {
+  padding: 0.2rem 0 1rem 0;
 }
 
-.rcn-definition-sidebar__title{
-	text-align: center;
-	text-transform: uppercase;
+.rcn-definition__def-title {
+  margin-top: 1rem;
 }
 
-.rcn-definition-sidebar__close-button{
-	position: absolute;
-	top: 1.5rem;
-	right: 1.5rem;
+.rcn-definition-footnotes {
+  margin-top: 2rem;
+  border-top: 1px solid black;
+  padding-top: 1rem;
 }
 
-.rcn-definition-sidebar__close-button::before{
-	content: var(--rcn-semantic-typography-content-icon-close);
-	font-family: var(--rcn-semantic-typography-fontfamily-icon);
-	font-size: var(--rcn-semantic-typography-fontsize-h3);
-	z-index: 2;
+/* Modal */
+.rcn-modalOverlayedContainer--invisible {
+  display: none;
 }
 
-.rcn-definition__link{
-	color: var(--rcn-core-color-dsfr_france-500);
-	text-decoration: var(--rcn-semantic-typography-textdecoration-link);
+.rcn-modalOverlayedContainer--visible {
+  display: grid;
 }
 
-.rcn-definition__list-title{
-	font-weight: var(--rcn-semantic-typography-fontweight-heading);
+/* Open modal button */
+.rcn-definition-modalButton {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: white;
+  position: sticky;
+  top: 15%;
+  left: 95%;
+  box-shadow: -10px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.rcn-definition__list-content{
-	padding: .2rem 0 1rem 0;
+.rcn-icon--mdi-messageTextOutline {
+  font-size: 2rem;
+  color: black;
 }
 
-.rcn-definition__def-title{
-	margin-top: 1rem;
-}
-
-.rcn-definition-footnotes{
-	margin-top: 2rem;
-	border-top: 1px solid black ;
-	padding-top: 1rem;
-}
-
-.rcn-definition-sidebarHeadZone {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.definition-overlay{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	background-color: transparent;
-}
-
-.definition-overlay--invisible{
-	display: none;
-}
-
-.definition-overlay--visible{
-	display: block;
-}
-
-.rcn-modal--hidden{
-	display: none;
-}
-
-.rcn-modal--visible{
-	display: grid;
+.rcn-definitionUnderlined {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: blueviolet;
 }
