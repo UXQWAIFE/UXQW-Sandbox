@@ -1,237 +1,147 @@
-/* Card */ 
+/* Cards */
 
-/* .rcn-card {
-border-radius:var(--rcn-semantic-borderradius-200);
-border:var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
-/*border-width:var(--rcn-semantic-borderwidth-100);*/
-/* display:flex; */
-/*border-color:var(--rcn-semantic-color-static-border-standard);*/
-/*border-style:solid;*/
-/* background-color:var(--rcn-semantic-color-static-background-standard);
-} maj dans l'excel ==> OK */ 
-
-.rcn-card--vertical{
-    /* flex-direction: column; */
-    max-width:400px; /*pour l'exemple à ne pas ajoutre au excel*/
-} 
-/*maj dans l'excel ==> OK*/
-
-/* .rcn-card--horizontal{
-    flex-direction: row;   
-}  */
-/*maj dans l'excel ==> OK*/
-
-/* .rcn-card__imageHolder{
-    position: relative;
-    display:flex;
-    overflow:hidden;
-}  */
-/*maj dans l'excel ==> OK*/
-
-/* .rcn-card--vertical .rcn-card__imageHolder {
-    padding-bottom: calc( 0.66 * 100% );
-    border-top-left-radius: var(--rcn-semantic-borderradius-200);
-    border-top-right-radius: var(--rcn-semantic-borderradius-200);
-} */
-/*maj dans l'excel ==> OK*/
-
-/* .rcn-card--vertical .rcn-card__image{
-    position: absolute;
-    top: calc(48%);
-    left: calc(50%);
-    transform: scale(1) translate(-50%,-50%);
-    min-height: 25%;
-    width: 100%;
-}  */
-/*maj dans l'excel ==> OK*/
-
-
-/* .rcn-card--horizontal .rcn-card__imageHolder {
-    padding-right: calc(0.33 * 100%);
-    border-top-left-radius: var(--rcn-semantic-borderradius-200);
-    border-bottom-left-radius: var(--rcn-semantic-borderradius-200);
-} */
-/*maj dans l'excel ==> OK*/
-
-
-
-/* .rcn-card--horizontal .rcn-card__image{
-    position: absolute;
-    top: calc(50%);
-    left: calc(48%);
-    transform: scale(1) translate(-50%,-50%);
-    min-width: 25%;
-    height:100%; 
-} */
-/*maj dans l'excel ==> OK*/
-
-
-/* .rcn-card--horizontal .rcn-card__image--fullWidth {
-    width:100%;
-    height:auto;
-} */
-
-/*maj dans l'excel ==> OK*/
-
-
-/* .rcn-card--vertical .rcn-card__image--fullheight {
-    height:100%;
-    width:auto;
-} */
-
-/*maj dans l'excel ==> OK*/
-
-
-/* .rcn-card__contentZone{
-padding:var(--rcn-semantic-padding-vertical-500) var(--rcn-semantic-padding-horizontal-500);
-display:flex;
-flex-direction:column;
-align-items: stretch; 
-flex-grow: 1; 
-gap: var(--rcn-semantic-gap-vertical-200);
- Valeur à modifier ensuite 
-padding-right: var(--rcn-semantic-padding-horizontal-700);
-position: relative;
-}  */
-/*maj dans l'excel ==> OK*/
-
-
-/* .rcn-card--vertical .rcn-card__content {
-overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
-  -webkit-line-clamp: 6; Limite le contenu à 6 lignes
-  -webkit-box-orient: vertical;
-flex-grow:100;
-}  */
-/*class à ajouter dans l'excel ==> OK*/
-
-/* .rcn-card--horizontal .rcn-card__content {
-overflow: hidden;
-text-overflow: ellipsis;
-display: -webkit-box;
-  -webkit-line-clamp: 3; Limite le contenu à 3 lignes
-  -webkit-box-orient: vertical;
- flex-grow:100;
-}  */
-/*class à ajouter dans l'excel ==> OK*/
-
-
-/* .rcn-card__input{
-    position : absolute;
-    top : var(--rcn-semantic-padding-vertical-500);
-    right: var(--rcn-semantic-padding-horizontal-500);
-}  */
-/*maj dans l'excel ==> OK*/
-
-
-/* .rcn-card--interactive{
-border-color: var(--rcn-semantic-color-interaction-border-default-standard);
-background-color: var(--rcn-semantic-color-interaction-background-default-standard);
-box-shadow: var(--rcn-semantic-dropshadow-interaction-elevated);
-box-sizing:border-box; 
-} */
-
-/*maj dans l'excel ==> OK*/
-
-
-/* .rcn-card--interactive .rcn-card__title{
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard)
-} */
-/*maj dans l'excel ==> OK*/
-
-/* .rcn-card__chipsZone {
-    flex-wrap:wrap;
-} */
- /*maj dans l'excel ==> OK*/
-
-
-
-
-
-
-/*.rcn-iconButton{
-    color:var(--rcn-semantic-color-interaction-text_and_icon-default-onstandard);
-    background-color: transparent;
+.rcn-card--cardsTable{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: var(--rcn-semantic-gap-horizontal-500);
+	padding: var(--rcn-semantic-padding-vertical-500)
+	var(--rcn-semantic-padding-horizontal-500);
+	padding-right: var(--rcn-semantic-padding-vertical-700);
+	width: 90%;
 }
 
-.rcn-inputField__input--checkbox{
-    appearance: unset;
+.rcn-card--expanded{
+	flex-direction: column;
 }
 
-.rcn-inputField__input--radio{
-    appearance: unset;
-}
-*/
-
-
-
-
-/*Grille pour la collection de cards*/
-/*.rcn-cardCollection {
-    display: grid;
-    gap: var(--rcn-semantic-gap-vertical-400) var(--rcn-semantic-gap-horizontal-400);
-    grid-template-rows: auto;
-    background-color: transparent;
+.rcn-card__contentContainerForExpandableCard{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	gap: var(--rcn-semantic-gap-horizontal-500);
 }
 
-.rcn-cardCollection--vertical {
-    grid-template-columns: repeat(3, 1fr);
-} ==> Porté par cardsCollection*/
-
-/*Grille pour la collection de cards horizontales*/
-/*.rcn-cardCollection--horizontal {
-grid-template-columns: repeat(2, 1fr);
-} ==> Porté par cardsCollection*/
-
-/* 
-.rcn-card{
-    margin-bottom:32px; 
-} */
- /*Pour l'exemple, ne pas mettre dans l'Excel*/
-
-/* .rcn-card--interactive {
-    cursor:pointer;
-} */
-/* Ok Excel */
-
-/* .rcn-card__selectionInputZone {
-    position: absolute;
-    top: var(--rcn-semantic-padding-vertical-500);
-    right: var(--rcn-semantic-padding-vertical-500);
-} */
-/* Ok Excel */
-
-/* .rcn-card__selectionInput {
-    font-size: var(--rcn-semantic-typography-fontsize-h4);
-} */
-/* Ok Excel */
-
-/* .rcn-card--horizontal .rcn-card__image {
-    transform: scale(1) translate(-50%,-50%);
-} */
-/* Ok Excel */
-
-/* .rcn-card--interactive:hover .rcn-card__title {
-    text-decoration: var(--rcn-semantic-typography-textdecoration-link-hover);
-} */
-/* Ok Excel */
-
-/* .rcn-card--selected {
-    border-color: var(--rcn-semantic-color-interaction-border-default-selected);
-    border-width: var(--rcn-semantic-borderwidth-300);
-    border-radius: calc(var(--rcn-semantic-borderradius-200) + calc(var(--rcn-semantic-borderwidth-300) - var(--rcn-semantic-borderwidth-100)));
-} */
-/* Ok Excel */
-
-.rcn-card--vertical .rcn-card__imageHolder {
-
-    padding-top: 33%;
+.rcn-card__dragAndDropZone{
+	display: flex;
+	gap: var(--rcn-semantic-padding-horizontal-500);
+	width: 1.5rem;
 }
-/* renommer d'une cretaine manière car pas à prendre dans le excel */
 
-.rcn-card--horizontal .rcn-card__imageHolder {
-  
-    padding-left: 33%;
+.rcn-card__dragAndDropButton::before{ /* icon not found */
+	content: var(--rcn-semantic-typography-content-icon-drag_and_drop);
+	font-size: var(--rcn-semantic-typography-fontsize-h2);
 }
-/* renommer d'une cretaine manière car pas à prendre dans le excel */
+
+.rcn-card__contentZone--cardsTable{
+	padding: unset;
+	align-items: flex-start;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 65%;
+}
+
+.rcn-card__imageHolder--cardsTable{
+	max-width: 20rem;
+	margin: calc(var(--rcn-semantic-padding-vertical-500) * -1) 0 calc(var(--rcn-semantic-padding-vertical-500) * -1) calc(var(--rcn-semantic-padding-horizontal-500) * -1);
+}
+
+.rcn-card__image{
+	width: 100%;
+	object-fit: cover;
+}
+
+.rcn-card__titleFieldBlock{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: var(--rcn-semantic-gap-vertical-200);
+}
+
+.rcn-card__content{
+	max-width: 100%;
+}
+.rcn-card__textDescription{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.rcn-card__textDescription--expanded {
+	white-space: unset;
+}
+
+.rcn-card__showMoreButton{
+	border: none;
+	margin-top: var(--rcn-semantic-gap-vertical-200);
+}
+
+.rcn-card__showMoreButton:hover{
+	background-color: var(--rcn-semantic-color-interaction-background-hover-standard);
+}
+
+.rcn-card__dateInfo{
+	display: flex;
+	flex-direction: row;
+	gap: var(--rcn-semantic-gap-horizontal-200);
+}
+
+.rcn-card__dateInfo span{
+	font-weight: 700;
+}
+
+.rcn-card__chipsAndActionsZone{
+	display: flex;
+	flex-direction: row;
+	gap: var(--rcn-semantic-gap-horizontal-600);
+	justify-content: space-between;
+}
+
+.rcn-card__chipsZone--inline{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-wrap: nowrap;
+	width: max-content;
+}
+
+.rcn-chips--success {
+	background-color: var(--rcn-semantic-color-feedback-background-success);
+}
+
+.rcn-card__actionsZone--cardsTable{
+	gap: var(--rcn-semantic-gap-horizontal-600);
+	align-items: center;
+}
+
+.rcn-card__sidebarIcon::before{ /* icon not found */
+	content: var(--rcn-semantic-typography-content-icon-expand_left);
+	font-size: var(--rcn-semantic-typography-fontsize-h4);
+}
+
+.rcn-card__dropDownContent{
+	padding-top: var(--rcn-semantic-padding-vertical-400);
+	padding-bottom: var(--rcn-semantic-padding-vertical-200);
+	border-top: var(--rcn-semantic-borderwidth-100) solid var(--rcn-semantic-color-static-border-standard);
+	display: none;
+}
+
+.rcn-card__dropDownContent--expanded{
+	display: block;
+}
+
+
+@media (max-width: 991px) {
+	.rcn-card--cardsTable, 
+	.rcn-card__contentContainerForExpandableCard {
+		flex-direction: column;
+	}
+	
+}
+@media (max-width: 575px) {
+	.rcn-card__chipsAndActionsZone{
+		flex-direction: column;
+		align-items: flex-start;
+		gap: var(--rcn-semantic-gap-horizontal-400);
+	}
+}
