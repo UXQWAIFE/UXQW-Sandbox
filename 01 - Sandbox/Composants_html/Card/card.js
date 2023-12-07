@@ -1,8 +1,6 @@
 const moreButton = document.querySelectorAll('.rcn-card__showMoreButton');
 const checkbox = document.querySelectorAll('.rcn-inputField__input--checkbox');
 const chevron = document.querySelectorAll('.rcn-card__actionsZone .rcn-icon--mdi-chevron-down , .rcn-card__actionsZone .rcn-icon--mdi-chevron-up');
-console.log(chevron)
-
 
 //expands description on button click
 moreButton.forEach(button => {
@@ -10,10 +8,12 @@ moreButton.forEach(button => {
 	button.addEventListener('click', event => {
 		if(txtDescription.classList.contains('rcn-card__textDescription--expanded')){
 			txtDescription.classList.remove('rcn-card__textDescription--expanded');
-			button.innerHTML = `Afficher plus <i class="rcn-icon rcn-icon--mdi-chevron-down"></i>`
+			button.innerHTML = `Afficher plus <i class="rcn-icon rcn-icon--mdi-chevron-down"></i>`;
+			button.setAttribute('aria-expanded', 'false');
 		}else{
 			txtDescription.classList.add('rcn-card__textDescription--expanded');
-			button.innerHTML = `Afficher moins <i class="rcn-icon rcn-icon--mdi-chevron-up"></i>`
+			button.innerHTML = `Afficher moins <i class="rcn-icon rcn-icon--mdi-chevron-up"></i>`;
+			button.setAttribute('aria-expanded', 'true');
 		}
 	});
 });
@@ -38,10 +38,13 @@ chevron.forEach(icon => {
 			dropdown.classList.remove('rcn-card__dropDownContent--expanded');
 			icon.classList.remove('rcn-icon--mdi-chevron-up');
 			icon.classList.add('rcn-icon--mdi-chevron-down');
+			icon.setAttribute('aria-expanded', 'false');
 		}else{
 			dropdown.classList.add('rcn-card__dropDownContent--expanded');
 			icon.classList.remove('rcn-icon--mdi-chevron-down');
 			icon.classList.add('rcn-icon--mdi-chevron-up');
+			icon.setAttribute('aria-expanded', 'true');
+
 		}
 	});
 });

@@ -5,27 +5,39 @@
 	flex-direction: row;
 	justify-content: space-between;
 	gap: var(--rcn-semantic-gap-horizontal-500);
-	padding: var(--rcn-semantic-padding-vertical-500)
-	var(--rcn-semantic-padding-horizontal-500);
+	padding: var(--rcn-semantic-padding-vertical-500) var(--rcn-semantic-padding-horizontal-500);
 	padding-right: var(--rcn-semantic-padding-vertical-700);
-	width: 90%;
 }
 
 .rcn-card--expanded{
 	flex-direction: column;
 }
 
-.rcn-card__contentContainerForExpandableCard{
+.rcn-card__container{
 	display: flex;
 	flex-direction: row;
+}
+
+.rcn-card__container--expandableCard{
 	justify-content: space-between;
+	gap: var(--rcn-semantic-gap-horizontal-500);
+}
+
+.rcn-card__container--whenDragable{
+	display: flex;
+	flex-direction: row;
+	padding: var(--rcn-semantic-padding-vertical-500) var(--rcn-semantic-padding-horizontal-700) var(--rcn-semantic-padding-horizontal-500) 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	gap: var(--rcn-semantic-gap-horizontal-500);
 }
 
 .rcn-card__dragAndDropZone{
 	display: flex;
-	gap: var(--rcn-semantic-padding-horizontal-500);
-	width: 1.5rem;
+}
+
+.rcn-card__dragAndDropButton{
+	padding: var(--rcn-semantic-padding-vertical-500) var(--rcn-semantic-padding-horizontal-500);
 }
 
 .rcn-card__dragAndDropButton::before{ /* icon not found */
@@ -38,15 +50,15 @@
 	align-items: flex-start;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	max-width: 65%;
 }
 
 .rcn-card__imageHolder--cardsTable{
 	max-width: 20rem;
+	min-width: 15rem;
 	margin: calc(var(--rcn-semantic-padding-vertical-500) * -1) 0 calc(var(--rcn-semantic-padding-vertical-500) * -1) calc(var(--rcn-semantic-padding-horizontal-500) * -1);
 }
 
-.rcn-card__image{
+.rcn-card__image--cardsTable{
 	width: 100%;
 	object-fit: cover;
 }
@@ -55,12 +67,13 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	gap: var(--rcn-semantic-gap-vertical-200);
+	gap: var(--rcn-semantic-gap-horizontal-200);
 }
 
-.rcn-card__content{
+.rcn-card__content--cardsTable{
 	max-width: 100%;
 }
+
 .rcn-card__textDescription{
 	white-space: nowrap;
 	overflow: hidden;
@@ -73,7 +86,7 @@
 
 .rcn-card__showMoreButton{
 	border: none;
-	margin-top: var(--rcn-semantic-gap-vertical-200);
+	margin: var(--rcn-semantic-gap-vertical-200) var(--rcn-semantic-gap-horizontal-300);
 }
 
 .rcn-card__showMoreButton:hover{
@@ -130,14 +143,20 @@
 	display: block;
 }
 
-
 @media (max-width: 991px) {
 	.rcn-card--cardsTable, 
-	.rcn-card__contentContainerForExpandableCard {
+	.rcn-card__container--expandableCard,
+	.rcn-card__container--whenDragable {
 		flex-direction: column;
 	}
-	
+	.rcn-card__imageHolder--cardsTable{
+		max-width: unset;
+		width: calc( 100% + var(--rcn-semantic-padding-vertical-500) + var(--rcn-semantic-padding-vertical-700));
+		height: 15rem;
+		padding-bottom: var(--rcn-semantic-padding-vertical-200);
+	}
 }
+
 @media (max-width: 575px) {
 	.rcn-card__chipsAndActionsZone{
 		flex-direction: column;

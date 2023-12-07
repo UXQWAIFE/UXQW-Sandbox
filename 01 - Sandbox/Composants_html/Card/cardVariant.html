@@ -1,46 +1,253 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="../../RCN-DesignSystem-Test/assets/styles-ChorusPro.css"
-      rel="stylesheet"
-    />
-    <link href="../../Asset/Resets.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../Asset/css_temporaire/*.css" />
-    <title>Cards Variantes</title>
-	<style>
-		body {
-			padding: 2rem !important;
-		}
-		.rcn-card{
-			margin-bottom: 2rem;
-		}
-		hr{
-			border-top: 3px solid #bbb;
-			margin-bottom: 1rem;
-		}
-	</style>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+		href="../../RCN-DesignSystem-Test/assets/styles-ChorusPro.css"
+		rel="stylesheet"
+		/>
+		<link href="../../Asset/Resets.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../Asset/css_temporaire/*.css" />
+		<title>Cards Variantes</title>
+		<style>
+			body {
+				padding: 2rem !important;
+			}
+			.rcn-card{
+				margin-bottom: 2rem;
+			}
+			hr{
+				border-top: 3px solid #bbb;
+				margin-bottom: 1rem;
+			}
+		</style>
+	</head>
 
-  <body>
+	<body>
+		<main>
+			<!-- Card non sélectionnable -->
+			<h2 class="rcn-h2 rcn-h2--editorial">Card non sélectionnable</h2>
+			<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
+				<div class="rcn-card__container rcn-card__container--expandableCard">
+					<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+						<div class="rcn-card__titleFieldBlock">
+							<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+						</div>
+		
+						<div class="rcn-card__content--cardsTable">
+							<p class="rcn-card__textDescription">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero commodi minima enim quaerat error tenetur, quia accusamus, voluptas ea aperiam quam hic! Molestiae ipsa sequi quia ullam inventore magni totam.
+							</p>
+							<button class="rcn-button rcn-card__showMoreButton" aria-label="Afficher plus" aria-expanded="false">
+								Afficher plus 
+								<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+							</button>
+						</div>
+						<div class="rcn-card__dateInfo">
+							<p><span>Reçue le : </span>16/12/2023</p>
+							<p><span>Due le : </span>16/12/2025</p>
+						</div>
+					</div>
+					<div class="rcn-card__chipsAndActionsZone">
+						<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+							<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
+								Acceptée
+							</p>
+							<p class="rcn-chips" aria-label="Montant :">
+								12,000 €
+							</p>
+						</div>
+						<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" aria-label="Ouvrir le menu d'actions"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" aria-label="Afficher le contenu" aria-expanded="false"></button>
+						</div>
+					</div>
+				</div>
+				<div class="rcn-card__dropDownContent">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ut consequatur iusto, itaque adipisci eum ad iste a at quos nostrum iure. Quis ipsam provident iste veniam ab placeat at sed quod officiis velit animi eligendi esse, excepturi totam neque dolor earum! Fugit exercitationem repudiandae vero labore ipsum officiis error?
+				</div>
+			</div>
 
-	  
-	  <main>
-		<!-- Card non sélectionnable -->
-		<h2 class="rcn-h2 rcn-h2--editorial">Card non sélectionnable</h2>
-		<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
-			<div class="rcn-card__contentContainerForExpandableCard">
+			<!-- Card sélectionnable - non sélectionnée -->
+			<h2 class="rcn-h2 rcn-h2--editorial">Card sélectionnable - non sélectionnée</h2>
+			<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
+				<div class="rcn-card__container rcn-card__container--expandableCard">
+
+					<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+						<div class="rcn-card__titleFieldBlock">
+							<input  class="rcn-icon rcn-inputField__input 			
+									rcn-inputField__input--checkbox"
+									type="checkbox" 
+									id="cardCheckbox" 
+									aria-label="Selectionner la card 00010"
+									>
+							<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
+							<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+						</div>
+		
+						<div class="rcn-card__content--cardsTable">
+							<p class="rcn-card__textDescription">
+								Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur dignissimos sunt fuga minima alias in libero voluptas! Neque voluptate aliquam similique beatae eius dolores mollitia illum aperiam ipsam, voluptas deserunt officia accusantium fuga, totam saepe dolorem? Fugit reiciendis ea, odit rerum impedit, laborum dolor dolores, sapiente totam mollitia vel. Mollitia.
+							</p>
+							<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
+								Afficher plus 
+								<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+							</button>
+						</div>
+						<div class="rcn-card__dateInfo">
+							<p><span>Reçue le : </span>16/12/2023</p>
+							<p><span>Due le : </span>16/12/2025</p>
+						</div>
+					</div>
+					<div class="rcn-card__chipsAndActionsZone">
+						<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+							<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
+								Acceptée
+							</p>
+							<p class="rcn-chips" aria-label="Montant :">
+								12,000 €
+							</p>
+						</div>
+						<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" aria-label="Ouvrir le menu d'actions"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" aria-label="Afficher le contenu" aria-expanded="false"></button>
+						</div>
+					</div>
+				</div>
+				<div class="rcn-card__dropDownContent">
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam dolores sit quibusdam animi, deserunt omnis reiciendis ex facilis, labore et, iure ut quia non!
+				</div>
+			</div>
+
+
+			<!-- Card sélectionnable - sélectionnée -->
+			<h2 class="rcn-h2 rcn-h2--editorial">Card sélectionnable - sélectionnée</h2>
+			<div class="rcn-card rcn-card--cardsTable rcn-card--expanded rcn-card--selected">
+				<div class="rcn-card__container rcn-card__container--expandableCard">
+					<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+						<div class="rcn-card__titleFieldBlock">
+							<input  class="rcn-icon rcn-inputField__input 			
+									rcn-inputField__input--checkbox"
+									type="checkbox" 
+									id="cardCheckbox" 
+									aria-label="Selectionner la card 00010"
+									checked
+									>
+							<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
+							<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+						</div>
+		
+						<div class="rcn-card__content--cardsTable">
+							<p class="rcn-card__textDescription">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam numquam commodi beatae quidem ad dolores eius molestiae veritatis in cupiditate laboriosam quas sed esse, maxime eum fugiat corrupti deserunt incidunt obcaecati officia? Nulla quisquam tenetur, illo temporibus eius assumenda, ut minus veniam et veritatis atque quaerat placeat nesciunt beatae?
+							</p>
+							<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
+								Afficher plus 
+								<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+							</button>
+						</div>
+						<div class="rcn-card__dateInfo">
+							<p><span>Reçue le : </span>16/12/2023</p>
+							<p><span>Due le : </span>16/12/2025</p>
+						</div>
+					</div>
+					<div class="rcn-card__chipsAndActionsZone">
+						<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+							<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
+								Acceptée
+							</p>
+							<p class="rcn-chips" aria-label="Montant :">
+								12,000 €
+							</p>
+						</div>
+						<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" aria-label="Ouvrir le menu d'actions"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" aria-label="Afficher le contenu" aria-expanded="false"></button>
+						</div>
+					</div>
+				</div>
+				<div class="rcn-card__dropDownContent">
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita libero ab necessitatibus quis nesciunt nobis eaque explicabo accusamus, neque eum blanditiis consequuntur inventore porro exercitationem illo voluptates vel. Excepturi incidunt nihil eum voluptate in placeat atque numquam laboriosam amet expedita?
+				</div>
+			</div>
+
+			<!-- Card avec image -->
+			<h2 class="rcn-h2 rcn-h2--editorial">Card avec image</h2>
+			<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
+				<div class="rcn-card__container rcn-card__container--expandableCard">
+					<div class="rcn-card__imageHolder rcn-card__imageHolder--cardsTable">
+						<img class="rcn-card__image--cardsTable" src="https://placehold.jp/1400x500.png" alt="">
+					</div>
+					<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+						<div class="rcn-card__titleFieldBlock">
+							<input  class="rcn-icon rcn-inputField__input 			
+									rcn-inputField__input--checkbox"
+									type="checkbox" 
+									id="cardCheckbox" 
+									aria-label="Selectionner la card 00010"
+									>
+							<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
+							<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+						</div>
+		
+						<div class="rcn-card__content--cardsTable">
+							<p class="rcn-card__textDescription">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium esse adipisci quisquam amet id nobis tempora voluptate officiis magnam a explicabo tenetur, non perferendis libero perspiciatis sint consectetur eum! Repellat facere ex, corporis ratione quisquam sunt magni porro reiciendis aperiam culpa voluptatum sit rem laboriosam dignissimos perspiciatis numquam provident molestiae.
+							</p>
+							<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
+								Afficher plus 
+								<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+							</button>
+						</div>
+						<div class="rcn-card__dateInfo">
+							<p><span>Reçue le : </span>16/12/2023</p>
+							<p><span>Due le : </span>16/12/2025</p>
+						</div>
+					</div>
+					<div class="rcn-card__chipsAndActionsZone">
+						<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+							<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
+								Acceptée
+							</p>
+							<p class="rcn-chips" aria-label="Montant :">
+								12,000 €
+							</p>
+						</div>
+						<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" aria-label="Ouvrir le menu d'actions"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" aria-label="Afficher le contenu" aria-expanded="false"></button>
+						</div>
+					</div>
+				</div>
+				<div class="rcn-card__dropDownContent">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perferendis numquam nihil velit odit voluptatem vitae alias maxime culpa odio?
+				</div>
+			</div>
+
+			<hr>
+			<!-- Actions -->
+			<h2 class="rcn-h2 rcn-h2--editorial">Actions</h2>
+
+			<!-- Card sans action -->
+			<h2 class="rcn-h2 rcn-h2--editorial">Card sans action</h2>
+			<div class="rcn-card rcn-card--cardsTable">
 				<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
 					<div class="rcn-card__titleFieldBlock">
+						<input  class="rcn-icon rcn-inputField__input 			
+								rcn-inputField__input--checkbox"
+								type="checkbox" 
+								id="cardCheckbox" 
+								aria-label="Selectionner la card 00010"
+								>
+						<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
 						<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
 					</div>
-	
-					<div class="rcn-card__content">
+
+					<div class="rcn-card__content--cardsTable">
 						<p class="rcn-card__textDescription">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero commodi minima enim quaerat error tenetur, quia accusamus, voluptas ea aperiam quam hic! Molestiae ipsa sequi quia ullam inventore magni totam.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias dolore praesentium hic quia asperiores officia nulla autem voluptatem, nemo harum atque deleniti. Iure, odit! Deleniti, dolorum doloribus maxime porro earum harum corporis amet ullam magnam corrupti vitae. Quas possimus debitis reiciendis labore architecto necessitatibus praesentium vel qui distinctio? Recusandae!
 						</p>
 						<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
 							Afficher plus 
@@ -61,22 +268,12 @@
 							12,000 €
 						</p>
 					</div>
-					<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" title="Ouvrir le menu d'actions"></button>
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" title="Afficher le contenu"></button>
-					</div>
 				</div>
 			</div>
-			<div class="rcn-card__dropDownContent">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ut consequatur iusto, itaque adipisci eum ad iste a at quos nostrum iure. Quis ipsam provident iste veniam ab placeat at sed quod officiis velit animi eligendi esse, excepturi totam neque dolor earum! Fugit exercitationem repudiandae vero labore ipsum officiis error?
-			</div>
-		</div>
 
-		<!-- Card sélectionnable - non sélectionnée -->
-		<h2 class="rcn-h2 rcn-h2--editorial">Card sélectionnable - non sélectionnée</h2>
-		<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
-			<div class="rcn-card__contentContainerForExpandableCard">
-
+			<!-- Card avec une action -->
+			<h2 class="rcn-h2 rcn-h2--editorial">Card avec une action</h2>
+			<div class="rcn-card rcn-card--cardsTable">
 				<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
 					<div class="rcn-card__titleFieldBlock">
 						<input  class="rcn-icon rcn-inputField__input 			
@@ -88,252 +285,8 @@
 						<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
 						<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
 					</div>
-	
-					<div class="rcn-card__content">
-						<p class="rcn-card__textDescription">
-							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur dignissimos sunt fuga minima alias in libero voluptas! Neque voluptate aliquam similique beatae eius dolores mollitia illum aperiam ipsam, voluptas deserunt officia accusantium fuga, totam saepe dolorem? Fugit reiciendis ea, odit rerum impedit, laborum dolor dolores, sapiente totam mollitia vel. Mollitia.
-						</p>
-						<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
-							Afficher plus 
-							<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
-						</button>
-					</div>
-					<div class="rcn-card__dateInfo">
-						<p><span>Reçue le : </span>16/12/2023</p>
-						<p><span>Due le : </span>16/12/2025</p>
-					</div>
-				</div>
-				<div class="rcn-card__chipsAndActionsZone">
-					<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
-						<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
-							Acceptée
-						</p>
-						<p class="rcn-chips" aria-label="Montant :">
-							12,000 €
-						</p>
-					</div>
-					<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" title="Ouvrir le menu d'actions"></button>
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" title="Afficher le contenu"></button>
-					</div>
-				</div>
-			</div>
-			<div class="rcn-card__dropDownContent">
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia veniam dolores sit quibusdam animi, deserunt omnis reiciendis ex facilis, labore et, iure ut quia non!
-			</div>
-		</div>
 
-
-		<!-- Card sélectionnable - sélectionnée -->
-		<h2 class="rcn-h2 rcn-h2--editorial">Card sélectionnable - sélectionnée</h2>
-		<div class="rcn-card rcn-card--cardsTable rcn-card--expanded rcn-card--selected">
-			<div class="rcn-card__contentContainerForExpandableCard">
-				<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
-					<div class="rcn-card__titleFieldBlock">
-						<input  class="rcn-icon rcn-inputField__input 			
-								rcn-inputField__input--checkbox"
-								type="checkbox" 
-								id="cardCheckbox" 
-								aria-label="Selectionner la card 00010"
-								checked
-								>
-						<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
-						<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-					</div>
-	
-					<div class="rcn-card__content">
-						<p class="rcn-card__textDescription">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ipsam numquam commodi beatae quidem ad dolores eius molestiae veritatis in cupiditate laboriosam quas sed esse, maxime eum fugiat corrupti deserunt incidunt obcaecati officia? Nulla quisquam tenetur, illo temporibus eius assumenda, ut minus veniam et veritatis atque quaerat placeat nesciunt beatae?
-						</p>
-						<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
-							Afficher plus 
-							<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
-						</button>
-					</div>
-					<div class="rcn-card__dateInfo">
-						<p><span>Reçue le : </span>16/12/2023</p>
-						<p><span>Due le : </span>16/12/2025</p>
-					</div>
-				</div>
-				<div class="rcn-card__chipsAndActionsZone">
-					<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
-						<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
-							Acceptée
-						</p>
-						<p class="rcn-chips" aria-label="Montant :">
-							12,000 €
-						</p>
-					</div>
-					<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" title="Ouvrir le menu d'actions"></button>
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" title="Afficher le contenu"></button>
-					</div>
-				</div>
-			</div>
-			<div class="rcn-card__dropDownContent">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita libero ab necessitatibus quis nesciunt nobis eaque explicabo accusamus, neque eum blanditiis consequuntur inventore porro exercitationem illo voluptates vel. Excepturi incidunt nihil eum voluptate in placeat atque numquam laboriosam amet expedita?
-			</div>
-		</div>
-
-		<!-- Card avec image -->
-		<h2 class="rcn-h2 rcn-h2--editorial">Card avec image</h2>
-		<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
-			<div class="rcn-card__contentContainerForExpandableCard">
-				<div class="rcn-card__imageHolder rcn-card__imageHolder--cardsTable">
-					<img class="rcn-card__image" src="https://placehold.jp/1400x500.png" alt="">
-				</div>
-				<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
-					<div class="rcn-card__titleFieldBlock">
-						<input  class="rcn-icon rcn-inputField__input 			
-								rcn-inputField__input--checkbox"
-								type="checkbox" 
-								id="cardCheckbox" 
-								aria-label="Selectionner la card 00010"
-								>
-						<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
-						<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-					</div>
-	
-					<div class="rcn-card__content">
-						<p class="rcn-card__textDescription">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium esse adipisci quisquam amet id nobis tempora voluptate officiis magnam a explicabo tenetur, non perferendis libero perspiciatis sint consectetur eum! Repellat facere ex, corporis ratione quisquam sunt magni porro reiciendis aperiam culpa voluptatum sit rem laboriosam dignissimos perspiciatis numquam provident molestiae.
-						</p>
-						<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
-							Afficher plus 
-							<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
-						</button>
-					</div>
-					<div class="rcn-card__dateInfo">
-						<p><span>Reçue le : </span>16/12/2023</p>
-						<p><span>Due le : </span>16/12/2025</p>
-					</div>
-				</div>
-				<div class="rcn-card__chipsAndActionsZone">
-					<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
-						<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
-							Acceptée
-						</p>
-						<p class="rcn-chips" aria-label="Montant :">
-							12,000 €
-						</p>
-					</div>
-					<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" title="Ouvrir le menu d'actions"></button>
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" title="Afficher le contenu"></button>
-					</div>
-				</div>
-			</div>
-			<div class="rcn-card__dropDownContent">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit perferendis numquam nihil velit odit voluptatem vitae alias maxime culpa odio?
-			</div>
-		</div>
-
-		<hr>
-		<!-- Actions -->
-		<h2 class="rcn-h2 rcn-h2--editorial">Actions</h2>
-
-		<!-- Card sans action -->
-		<h2 class="rcn-h2 rcn-h2--editorial">Card sans action</h2>
-		<div class="rcn-card rcn-card--cardsTable">
-			<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
-				<div class="rcn-card__titleFieldBlock">
-					<input  class="rcn-icon rcn-inputField__input 			
-							rcn-inputField__input--checkbox"
-							type="checkbox" 
-							id="cardCheckbox" 
-							aria-label="Selectionner la card 00010"
-							>
-					<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
-					<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-				</div>
-
-				<div class="rcn-card__content">
-					<p class="rcn-card__textDescription">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias dolore praesentium hic quia asperiores officia nulla autem voluptatem, nemo harum atque deleniti. Iure, odit! Deleniti, dolorum doloribus maxime porro earum harum corporis amet ullam magnam corrupti vitae. Quas possimus debitis reiciendis labore architecto necessitatibus praesentium vel qui distinctio? Recusandae!
-					</p>
-					<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
-						Afficher plus 
-						<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
-					</button>
-				</div>
-				<div class="rcn-card__dateInfo">
-					<p><span>Reçue le : </span>16/12/2023</p>
-					<p><span>Due le : </span>16/12/2025</p>
-				</div>
-			</div>
-			<div class="rcn-card__chipsAndActionsZone">
-				<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
-					<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
-						Acceptée
-					</p>
-					<p class="rcn-chips" aria-label="Montant :">
-						12,000 €
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- Card avec une action -->
-		<h2 class="rcn-h2 rcn-h2--editorial">Card avec une action</h2>
-		<div class="rcn-card rcn-card--cardsTable">
-			<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
-				<div class="rcn-card__titleFieldBlock">
-					<input  class="rcn-icon rcn-inputField__input 			
-							rcn-inputField__input--checkbox"
-							type="checkbox" 
-							id="cardCheckbox" 
-							aria-label="Selectionner la card 00010"
-							>
-					<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
-					<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-				</div>
-
-				<div class="rcn-card__content">
-					<p class="rcn-card__textDescription">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias dolore praesentium hic quia asperiores officia nulla autem voluptatem, nemo harum atque deleniti. Iure, odit! Deleniti, dolorum doloribus maxime porro earum harum corporis amet ullam magnam corrupti vitae. Quas possimus debitis reiciendis labore architecto necessitatibus praesentium vel qui distinctio? Recusandae!
-					</p>
-					<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
-						Afficher plus 
-						<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
-					</button>
-				</div>
-				<div class="rcn-card__dateInfo">
-					<p><span>Reçue le : </span>16/12/2023</p>
-					<p><span>Due le : </span>16/12/2025</p>
-				</div>
-			</div>
-			<div class="rcn-card__chipsAndActionsZone">
-				<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
-					<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
-						Acceptée
-					</p>
-					<p class="rcn-chips" aria-label="Montant :">
-						12,000 €
-					</p>
-				</div>
-				<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-					<button class="rcn-icon rcn-iconButton rcn-icon--mdi-pencilOutline" title="Modifier la card"></button>
-				</div>
-			</div>
-		</div>
-
-		<!-- Card avec une action (avec chevron) -->
-		<h2 class="rcn-h2 rcn-h2--editorial">Card avec une action (avec chevron)</h2>
-		<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
-			<div class="rcn-card__contentContainerForExpandableCard">
-				<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
-					<div class="rcn-card__titleFieldBlock">
-						<input  class="rcn-icon rcn-inputField__input 			
-								rcn-inputField__input--checkbox"
-								type="checkbox" 
-								id="cardCheckbox" 
-								aria-label="Selectionner la card 00010"
-								>
-						<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
-						<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-					</div>
-	
-					<div class="rcn-card__content">
+					<div class="rcn-card__content--cardsTable">
 						<p class="rcn-card__textDescription">
 							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias dolore praesentium hic quia asperiores officia nulla autem voluptatem, nemo harum atque deleniti. Iure, odit! Deleniti, dolorum doloribus maxime porro earum harum corporis amet ullam magnam corrupti vitae. Quas possimus debitis reiciendis labore architecto necessitatibus praesentium vel qui distinctio? Recusandae!
 						</p>
@@ -357,73 +310,79 @@
 						</p>
 					</div>
 					<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-pencilOutline" title="Modifier la card"></button>
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" title="Afficher le contenu"></button>
+						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-pencilOutline" aria-label="Modifier la card"></button>
 					</div>
 				</div>
 			</div>
-			<div class="rcn-card__dropDownContent">
-				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui earum quo architecto, nemo doloribus reiciendis expedita reprehenderit ex ipsam in consequatur alias obcaecati deserunt. Quo exercitationem dolorum suscipit perspiciatis minima?
-			</div>
-		</div>
 
-		<!-- Card avec deux actions -->
-		<h2 class="rcn-h2 rcn-h2--editorial">Card avec deux actions</h2>
-		<div class="rcn-card rcn-card--cardsTable">
-			<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
-				<div class="rcn-card__titleFieldBlock">
-					<input  class="rcn-icon rcn-inputField__input 			
-							rcn-inputField__input--checkbox"
-							type="checkbox" 
-							id="cardCheckbox" 
-							aria-label="Selectionner la card 00010"
-							>
-					<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
-					<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+			<!-- Card avec une action (avec chevron) -->
+			<h2 class="rcn-h2 rcn-h2--editorial">Card avec une action (avec chevron)</h2>
+			<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
+				<div class="rcn-card__container rcn-card__container--expandableCard">
+					<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+						<div class="rcn-card__titleFieldBlock">
+							<input  class="rcn-icon rcn-inputField__input 			
+									rcn-inputField__input--checkbox"
+									type="checkbox" 
+									id="cardCheckbox" 
+									aria-label="Selectionner la card 00010"
+									>
+							<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
+							<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+						</div>
+		
+						<div class="rcn-card__content--cardsTable">
+							<p class="rcn-card__textDescription">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias dolore praesentium hic quia asperiores officia nulla autem voluptatem, nemo harum atque deleniti. Iure, odit! Deleniti, dolorum doloribus maxime porro earum harum corporis amet ullam magnam corrupti vitae. Quas possimus debitis reiciendis labore architecto necessitatibus praesentium vel qui distinctio? Recusandae!
+							</p>
+							<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
+								Afficher plus 
+								<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+							</button>
+						</div>
+						<div class="rcn-card__dateInfo">
+							<p><span>Reçue le : </span>16/12/2023</p>
+							<p><span>Due le : </span>16/12/2025</p>
+						</div>
+					</div>
+					<div class="rcn-card__chipsAndActionsZone">
+						<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+							<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
+								Acceptée
+							</p>
+							<p class="rcn-chips" aria-label="Montant :">
+								12,000 €
+							</p>
+						</div>
+						<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-pencilOutline" aria-label="Modifier la card"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-down" aria-label="Afficher le contenu" aria-expanded="false"></button>
+						</div>
+					</div>
 				</div>
-
-				<div class="rcn-card__content">
-					<p class="rcn-card__textDescription">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias dolore praesentium hic quia asperiores officia nulla autem voluptatem, nemo harum atque deleniti. Iure, odit! Deleniti, dolorum doloribus maxime porro earum harum corporis amet ullam magnam corrupti vitae. Quas possimus debitis reiciendis labore architecto necessitatibus praesentium vel qui distinctio? Recusandae!
-					</p>
-					<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
-						Afficher plus 
-						<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
-					</button>
-				</div>
-				<div class="rcn-card__dateInfo">
-					<p><span>Reçue le : </span>16/12/2023</p>
-					<p><span>Due le : </span>16/12/2025</p>
+				<div class="rcn-card__dropDownContent">
+					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui earum quo architecto, nemo doloribus reiciendis expedita reprehenderit ex ipsam in consequatur alias obcaecati deserunt. Quo exercitationem dolorum suscipit perspiciatis minima?
 				</div>
 			</div>
-			<div class="rcn-card__chipsAndActionsZone">
-				<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
-					<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
-						Acceptée
-					</p>
-					<p class="rcn-chips" aria-label="Montant :">
-						12,000 €
-					</p>
-				</div>
-				<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-					<button class="rcn-icon rcn-iconButton rcn-icon--mdi-pencilOutline" title="Modifier la card"></button>
-					<button class="rcn-icon rcn-iconButton rcn-icon--mdi-trashCanOutline" title="Supprimer la card"></button>
-				</div>
-			</div>
-		</div>
 
-		<!-- Card dépliable -- Dépliée -->
-		<h2 class="rcn-h2 rcn-h2--editorial"> Card dépliable</h2>
-		<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
-			<div class="rcn-card__contentContainerForExpandableCard">
+			<!-- Card avec deux actions -->
+			<h2 class="rcn-h2 rcn-h2--editorial">Card avec deux actions</h2>
+			<div class="rcn-card rcn-card--cardsTable">
 				<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
 					<div class="rcn-card__titleFieldBlock">
+						<input  class="rcn-icon rcn-inputField__input 			
+								rcn-inputField__input--checkbox"
+								type="checkbox" 
+								id="cardCheckbox" 
+								aria-label="Selectionner la card 00010"
+								>
+						<label for="cardCheckbox" class="sr-only">Sélectionner la card</label>
 						<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
 					</div>
-	
-					<div class="rcn-card__content">
+
+					<div class="rcn-card__content--cardsTable">
 						<p class="rcn-card__textDescription">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero commodi minima enim quaerat error tenetur, quia accusamus, voluptas ea aperiam quam hic! Molestiae ipsa sequi quia ullam inventore magni totam.
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure molestias dolore praesentium hic quia asperiores officia nulla autem voluptatem, nemo harum atque deleniti. Iure, odit! Deleniti, dolorum doloribus maxime porro earum harum corporis amet ullam magnam corrupti vitae. Quas possimus debitis reiciendis labore architecto necessitatibus praesentium vel qui distinctio? Recusandae!
 						</p>
 						<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
 							Afficher plus 
@@ -445,108 +404,68 @@
 						</p>
 					</div>
 					<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" title="Ouvrir le menu d'actions"></button>
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-up" title="Afficher le contenu"></button>
+						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-pencilOutline" aria-label="Modifier la card"></button>
+						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-trashCanOutline" aria-label="Supprimer la card"></button>
 					</div>
 				</div>
 			</div>
-			<div class="rcn-card__dropDownContent rcn-card__dropDownContent--expanded">
-				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium iure laboriosam doloribus rem officia amet fugit, molestias deserunt odit in vero nemo molestiae quasi veniam rerum quidem iusto quia ipsa.
-			</div>
-		</div>
 
-	
-		<!-- Card avec panneau latéral -->
-		<h2 class="rcn-h2 rcn-h2--editorial"> Card avec panneau latéral</h2>
-		<div class="rcn-card rcn-card--cardsTable">
-			<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
-				<div class="rcn-card__titleFieldBlock">
-					<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+			<!-- Card dépliable -- Dépliée -->
+			<h2 class="rcn-h2 rcn-h2--editorial"> Card dépliable -- dépliée</h2>
+			<div class="rcn-card rcn-card--cardsTable rcn-card--expanded">
+				<div class="rcn-card__container rcn-card__container--expandableCard">
+					<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+						<div class="rcn-card__titleFieldBlock">
+							<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+						</div>
+		
+						<div class="rcn-card__content--cardsTable">
+							<p class="rcn-card__textDescription">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero commodi minima enim quaerat error tenetur, quia accusamus, voluptas ea aperiam quam hic! Molestiae ipsa sequi quia ullam inventore magni totam.
+							</p>
+							<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
+								Afficher plus 
+								<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+							</button>
+						</div>
+						<div class="rcn-card__dateInfo">
+							<p><span>Reçue le : </span>16/12/2023</p>
+							<p><span>Due le : </span>16/12/2025</p>
+						</div>
+					</div>
+					<div class="rcn-card__chipsAndActionsZone">
+						<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+							<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
+								Acceptée
+							</p>
+							<p class="rcn-chips" aria-label="Montant :">
+								12,000 €
+							</p>
+						</div>
+						<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" aria-label="Ouvrir le menu d'actions"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-chevron-up" aria-label="Afficher le contenu" aria-expanded="true"></button>
+						</div>
+					</div>
 				</div>
-
-				<div class="rcn-card__content">
-					<p class="rcn-card__textDescription">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sunt voluptas quo facilis exercitationem eligendi, ullam nemo quidem et autem enim. Perferendis, qui repellat? Quisquam id possimus iste ducimus facere officiis, placeat eaque aliquid exercitationem culpa, similique fugiat deserunt praesentium?
-					</p>
-					<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
-						Afficher plus 
-						<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
-					</button>
-				</div>
-				<div class="rcn-card__dateInfo">
-					<p><span>Reçue le : </span>16/12/2023</p>
-					<p><span>Due le : </span>16/12/2025</p>
-				</div>
-			</div>
-			<div class="rcn-card__chipsAndActionsZone">
-				<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
-					<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
-						Acceptée
-					</p>
-					<p class="rcn-chips" aria-label="Montant :">
-						12,000 €
-					</p>
-				</div>
-				<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-					<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" title="Ouvrir le menu d'actions"></button>
-					<button class="rcn-icon rcn-iconButton rcn-card__sidebarIcon">&lsaquo;=</button> <!-- Icone pas trouvée -->
-				</div>
-			</div>
-		</div>
-
-
-		<!-- Card avec lien vers une page -->
-		<h2 class="rcn-h2 rcn-h2--editorial"> Card avec lien vers une page</h2>
-		<div class="rcn-card rcn-card--cardsTable">
-			<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
-				<div class="rcn-card__titleFieldBlock">
-					<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
-				</div>
-
-				<div class="rcn-card__content">
-					<p class="rcn-card__textDescription">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima enim inventore eum repudiandae cupiditate quaerat sapiente, aut sunt perferendis, iste quo ratione. Praesentium dolor tenetur eum dicta quidem. Placeat eveniet delectus aspernatur porro cum fugit, officiis soluta maiores tempora eius aut minus, voluptate iste facere nostrum provident non reprehenderit aliquid.
-					<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
-						Afficher plus 
-						<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
-					</button>
-				</div>
-				<div class="rcn-card__dateInfo">
-					<p><span>Reçue le : </span>16/12/2023</p>
-					<p><span>Due le : </span>16/12/2025</p>
+				<div class="rcn-card__dropDownContent rcn-card__dropDownContent--expanded">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium iure laboriosam doloribus rem officia amet fugit, molestias deserunt odit in vero nemo molestiae quasi veniam rerum quidem iusto quia ipsa.
 				</div>
 			</div>
-			<div class="rcn-card__chipsAndActionsZone">
-				<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
-					<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
-						Acceptée
-					</p>
-					<p class="rcn-chips" aria-label="Montant :">
-						12,000 €
-					</p>
-				</div>
-				<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-					<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" title="Ouvrir le menu d'actions"></button>
-					<a href="" class="rcn-link">voir details</a>
-				</div>
-			</div>
-		</div>
 
-
-		<!-- Card avec changement d'ordre  dans un liste -->
-		<h2 class="rcn-h2 rcn-h2--editorial"> Card avec changement d'ordre  dans un liste</h2>
-		<div class="rcn-card rcn-card--cardsTable card--interactive">
-			<div class="rcn-card__dragAndDropZone">
-				<button class="rcn-card__dragAndDropButton">ICI</button>
-			</div>
+		
+			<!-- Card avec panneau latéral -->
+			<h2 class="rcn-h2 rcn-h2--editorial"> Card avec panneau latéral</h2>
+			<div class="rcn-card rcn-card--cardsTable">
 				<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
 					<div class="rcn-card__titleFieldBlock">
 						<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
 					</div>
-	
-					<div class="rcn-card__content">
+
+					<div class="rcn-card__content--cardsTable">
 						<p class="rcn-card__textDescription">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi nobis blanditiis aperiam temporibus! Corrupti sunt natus vero enim repellat eum dolorum ipsum vel est rerum deleniti tenetur, cupiditate nihil ratione perspiciatis quae facilis temporibus quas? Omnis earum exercitationem ducimus enim architecto blanditiis in consectetur veritatis consequatur, nulla libero qui unde?
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sunt voluptas quo facilis exercitationem eligendi, ullam nemo quidem et autem enim. Perferendis, qui repellat? Quisquam id possimus iste ducimus facere officiis, placeat eaque aliquid exercitationem culpa, similique fugiat deserunt praesentium?
+						</p>
 						<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
 							Afficher plus 
 							<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
@@ -567,18 +486,150 @@
 						</p>
 					</div>
 					<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" title="Ouvrir le menu d'actions"></button>
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-arrow-down" title="Redescendre la card d'un cran"></button>
-						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-arrow-up" title="Remonter la card d'un cran"></button>
+						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" aria-label="Ouvrir le menu d'actions"></button>
+						<button class="rcn-icon rcn-iconButton rcn-card__sidebarIcon" aria-label="Ouvrir le panneau latéral">&lsaquo;=</button> <!-- Icone pas trouvée -->
 					</div>
 				</div>
-		</div>
+			</div>
 
-	</main>
-  </body>
 
-  <footer>
-    <script src="../../Asset/css_temporaire/import-temp.js"></script>
-	<script src="card.js"></script>
-  </footer>
+			<!-- Card avec lien vers une page -->
+			<h2 class="rcn-h2 rcn-h2--editorial"> Card avec lien vers une page</h2>
+			<div class="rcn-card rcn-card--cardsTable">
+				<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+					<div class="rcn-card__titleFieldBlock">
+						<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+					</div>
+
+					<div class="rcn-card__content--cardsTable">
+						<p class="rcn-card__textDescription">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam odio eaque mollitia corrupti error ab natus, amet explicabo nulla fugit aliquam omnis ipsum repudiandae voluptates est laboriosam dolores ipsa, id adipisci aut dolorem nihil. Aliquid?
+						</p>
+						<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
+							Afficher plus 
+							<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+						</button>
+					</div>
+					<div class="rcn-card__dateInfo">
+						<p><span>Reçue le : </span>16/12/2023</p>
+						<p><span>Due le : </span>16/12/2025</p>
+					</div>
+				</div>
+				<div class="rcn-card__chipsAndActionsZone">
+					<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+						<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
+							Acceptée
+						</p>
+						<p class="rcn-chips" aria-label="Montant :">
+							12,000 €
+						</p>
+					</div>
+					<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+						<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" aria-label="Ouvrir le menu d'actions"></button>
+						<a href="" class="rcn-link">voir details</a>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- Card avec changement d'ordre dans un liste -->
+			<h2 class="rcn-h2 rcn-h2--editorial"> Card avec changement d'ordre  dans un liste</h2>
+			
+			<div class="rcn-card rcn-card__container rcn-card--interactive">
+				<div class="rcn-card__dragAndDropZone" aria-hidden>
+					<button class="rcn-card__dragAndDropButton">ICI</button>
+				</div>
+
+				<div class="rcn-card__container rcn-card__container--whenDragable">
+					<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+						<div class="rcn-card__titleFieldBlock">
+							<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+						</div>
+		
+						<div class="rcn-card__content--cardsTable">
+							<p class="rcn-card__textDescription">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere beatae quas inventore reiciendis illum animi, at perferendis, magni debitis nostrum quae natus nisi minus nemo nihil, perspiciatis libero recusandae! Dignissimos consequuntur necessitatibus inventore pariatur, esse ut laboriosam provident illum porro, at eius vel eum tempore quos, reprehenderit ratione debitis! Expedita.
+							</p>
+							<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
+								Afficher plus 
+								<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+							</button>
+						</div>
+						<div class="rcn-card__dateInfo">
+							<p><span>Reçue le : </span>16/12/2023</p>
+							<p><span>Due le : </span>16/12/2025</p>
+						</div>
+					</div>
+					<div class="rcn-card__chipsAndActionsZone">
+						<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+							<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
+								Acceptée
+							</p>
+							<p class="rcn-chips" aria-label="Montant :">
+								12,000 €
+							</p>
+						</div>
+						<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" aria-label="Ouvrir le menu d'actions"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-arrow-down" aria-label="Redescendre la card d'un cran"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-arrow-up" aria-label="Remonter la card d'un cran"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Card avec image et changement d'ordre  dans un liste -->
+			<h2 class="rcn-h2 rcn-h2--editorial"> Card avec image et changement d'ordre  dans un liste</h2>
+			<div class="rcn-card rcn-card__container rcn-card--interactive">
+				<div class="rcn-card__dragAndDropZone" aria-hidden>
+					<button class="rcn-card__dragAndDropButton">ICI</button>
+				</div>
+
+				<div class="rcn-card__container rcn-card__container--whenDragable">
+					<div class="rcn-card__imageHolder rcn-card__imageHolder--cardsTable">
+						<img class="rcn-card__image--cardsTable" src="https://placehold.jp/1400x500.png" alt="">
+					</div>
+					<div class="rcn-card__contentZone rcn-card__contentZone--cardsTable">
+						<div class="rcn-card__titleFieldBlock">
+							<h2 class="rcn-h4">00010 - Lorem ipsum dolor sit amet, consectetur adipiscing elit</h2>
+						</div>
+		
+						<div class="rcn-card__content--cardsTable">
+							<p class="rcn-card__textDescription">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere beatae quas inventore reiciendis illum animi, at perferendis, magni debitis nostrum quae natus nisi minus nemo nihil, perspiciatis libero recusandae! Dignissimos consequuntur necessitatibus inventore pariatur, esse ut laboriosam provident illum porro, at eius vel eum tempore quos, reprehenderit ratione debitis! Expedita.
+							</p>
+							<button class="rcn-button rcn-card__showMoreButton" aria-expanded="false">
+								Afficher plus 
+								<i class="rcn-icon rcn-icon--mdi-chevron-down"></i>
+							</button>
+						</div>
+						<div class="rcn-card__dateInfo">
+							<p><span>Reçue le : </span>16/12/2023</p>
+							<p><span>Due le : </span>16/12/2025</p>
+						</div>
+					</div>
+					<div class="rcn-card__chipsAndActionsZone">
+						<div class="rcn-card__chipsZone rcn-card__chipsZone--inline">
+							<p class="rcn-chips rcn-chips--success" aria-label="Statut : ">
+								Acceptée
+							</p>
+							<p class="rcn-chips" aria-label="Montant :">
+								12,000 €
+							</p>
+						</div>
+						<div class="rcn-card__actionsZone rcn-card__actionsZone--cardsTable">
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-dots-vertical" aria-label="Ouvrir le menu d'actions"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-arrow-down" aria-label="Redescendre la card d'un cran"></button>
+							<button class="rcn-icon rcn-iconButton rcn-icon--mdi-arrow-up" aria-label="Remonter la card d'un cran"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+
+	<footer>
+		<script src="../../Asset/css_temporaire/import-temp.js"></script>
+		<script src="card.js"></script>
+	</footer>
 </html>
